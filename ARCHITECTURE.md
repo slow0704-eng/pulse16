@@ -129,13 +129,25 @@ mcp/pulse-audit/       계측 MCP 서버 (harness · render_wav · audio_measure
 1. `core/engines.js` 에 파라미터표를 넣습니다.
 2. `core/config.js` 의 `ENGINES` 에 표시 이름을 등록합니다.
 3. `audio/voice-*.js` 에 합성 코드를 씁니다.
-4. `tools/measure-tonal.html` 에 같은 코드를 옮겨 배음 구조를 실측하고,
-   실제 악기 기준값과 대조합니다. **귀로 판단하지 말고 수치로 확인하세요** —
-   기타 기음이 27dB 죽어 있던 것도 측정으로만 드러났습니다.
+4. `tools/measure-tonal.html` 을 열어 배음 구조를 실측하고 실제 악기
+   기준값과 대조합니다. 하네스가 `src/` 를 직접 로드하므로 **옮겨 적을 것은
+   없습니다** — 1·2 번을 했으면 새 음색이 목록에 저절로 나타납니다.
+   **귀로 판단하지 말고 수치로 확인하세요** — 기타 기음이 27dB 죽어 있던 것도
+   측정으로만 드러났습니다.
 
 ## 주의
 
-`tools/` 의 하네스는 앱 코드를 **복사해서** 씁니다(오프라인 렌더가 목적이라
-앱의 라이브 그래프를 못 씁니다). 보이스 코드를 고치면 하네스도 같이 고쳐야
-측정이 유효합니다. 지금은 `measure-tonal.html` 이 `voice-gtr.js`·`voice-bass.js`·
-`voice-keys.js` 를, `measure-voices.html` 이 `voice-drum.js` 를 따라갑니다.
+`tools/` 의 하네스는 예전에 앱 코드를 **복사해서** 썼습니다. 그래서 앱이
+바뀌면 하네스가 뒤처졌고, 실제로 오래 틀린 값을 재고 있었습니다 —
+`keys/piano`·`vibes`·`marimba` 는 앱이 `struck.js` 로 옮겨간 뒤에도
+하네스가 옛 FM 경로를 재고 있었으므로, 표에 적힌 배음이 **앱에서 나는 소리가
+아니었습니다.** `perc/scratch`·`gtr/fuzz`·`keys/vocoder` 등은 아예 빠져 있었습니다.
+
+지금은 `tools/_app-harness.js` 가 `src/` 를 **직접 로드**합니다.
+`dom.js`·`ui/*`·`main.js` 자리를 메우고 `boot()` 이 만드는 AudioContext 를
+`OfflineAudioContext` 로 바꿔치기해, 앰프·캐비닛·몸통 필터를 포함한
+**앱의 진짜 그래프**를 오프라인에서 돌립니다. 노브 기본값도
+`pulse16-mk16.html` 에서 읽습니다. 그래서 **복사도, 동기화도 필요 없습니다** —
+`ENGINES` 에 등록만 하면 하네스가 알아서 훑습니다.
+
+측정 결과는 `tools/측정결과-신규음색.md` 에 남깁니다.

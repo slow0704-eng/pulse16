@@ -45,7 +45,7 @@ function fiddleVoice(t,dur,hz,v){
   /* 활은 어택이 느리다 — 30ms 는 줘야 켜는 소리가 된다 */
   g.gain.setValueAtTime(0,t);
   g.gain.linearRampToValueAtTime(v*0.62,t+0.030);
-  hold(g.gain,t+dur);
+  hold(g.gain,t+dur,v*0.62);
   g.gain.linearRampToValueAtTime(0,t+dur+rel);
 }
 
@@ -98,7 +98,7 @@ function guitarVoice(t,deg,dur,e){
     const eB=t+0.06, gB=G('gtr',eB), fB=BQ('bandpass',150,1.4,eB);
     env(gB,t,v*0.18,0.040,0.0008); fB.connect(gB); tapNoise(fB,eB);
   }else{
-    hold(g.gain,t+dur);
+    hold(g.gain,t+dur,v);
     g.gain.exponentialRampToValueAtTime(Math.max(v*0.02,1e-5),t+dur+rel);
     g.gain.linearRampToValueAtTime(0,t+dur+rel+0.02);
   }
@@ -141,7 +141,7 @@ function guitarVoice2(t,deg,dur,e){
 
   g.gain.setValueAtTime(0,t);
   g.gain.linearRampToValueAtTime(v, t + (S.swell || 0.0015));
-  hold(g.gain,t+dur);
+  hold(g.gain,t+dur,v);
   g.gain.exponentialRampToValueAtTime(Math.max(v*0.02,1e-5),t+dur+rel);
   g.gain.linearRampToValueAtTime(0,t+dur+rel+0.02);
 

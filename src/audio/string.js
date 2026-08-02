@@ -89,7 +89,10 @@ function ksInto(out,off,f,S,amp,SR){
 /** 한 번 튕긴 음(코드·복현·공명현 포함)을 통째로 버퍼로 */
 function ksRender(hz,S){
   const SR=ctx.sampleRate;
-  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15, 3.2);
+  /* 상한 3.2초는 페달 스틸(설계 T60 8.49s)을 −22.6dB 지점에서 잘랐다.
+     서스테인이 정체성인 악기라 9초까지 열어 둔다 — 캐시가 커지지만
+     엔진별 24개 상한(makeStringCache)이 있어 메모리는 유계다. */
+  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15, 9.0);
   const buf=ctx.createBuffer(1,Math.ceil(SR*sec),SR);
   const out=buf.getChannelData(0);
 

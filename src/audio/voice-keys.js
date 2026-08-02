@@ -38,7 +38,7 @@ function adsr(p,t,dur,A,D,S,R,peak){
   p.setValueAtTime(0,t);
   p.linearRampToValueAtTime(peak,t+A);
   p.setTargetAtTime(peak*S, t+A, Math.max(D,0.005)/3);
-  hold(p,off);
+  hold(p,off,peak*S);
   p.setTargetAtTime(0, off, Math.max(R,0.01)/3);
   p.linearRampToValueAtTime(0, off+R*1.6);
   return off+R*1.6;

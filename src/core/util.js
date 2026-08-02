@@ -31,7 +31,13 @@ function applyGtrFx(name){
 }
 
 /** Tone 노드와 네이티브 노드를 안전하게 연결 */
-const link = (a,b) => { if(HAS_TONE && (a.output||b.input)) Tone.connect(a,b); else a.connect(b); };
+const link = (a,b) => {
+  if(HAS_TONE && (a.output||b.input)) return Tone.connect(a,b);
+  /* ⚠ Tone 이 없을 때 nativeWidener() 는 {input,output} 평범한 객체다.
+     그대로 a.connect(b) 하면 TypeError 로 boot() 이 죽어
+     "Tone.js를 불러오지 못했습니다" 폴백 경로가 실제로는 동작하지 않았다. */
+  (a.output || a).connect(b.input || b);
+};
 
 /** 팬·리버브 센드를 가진 전체 채널 목록.
     기타는 킥과 대역이 겹치지 않고(150Hz 하이패스) 덕킹하면 리프 리듬이 뭉개지므로
@@ -126,10 +132,27 @@ function sweep(){
 }
 
 /* ── AudioParam 헬퍼 ── */
-function hold(param,t){
+/** 예약된 자동화를 t 에서 끊고 **그 지점의 값을 앵커로 남긴다.**
+
+    ⚠ cancelAndHoldAtTime 만으로는 앵커가 안 남는다. 뒤따르는
+    exponentialRampToValueAtTime 이 t 가 아니라 **직전 이벤트**(대개 어택 끝)
+    부터 보간해, 서스테인이 통째로 사라지고 어택 직후부터 감쇠한다.
+    격리 재현(OfflineAudioContext, dur 0.5s): 0.49초까지 1.0 이어야 할 게인이
+    0.05초에 0.789, 0.30초에 0.232, 0.49초에 0.091. 현 악기가 전부 이 경로다.
+
+    ⚠ val 은 **t 시점의 값**이다. 보이스는 앞당겨 예약하므로 param.value
+    (지금 값)는 t 시점 값이 아니다 — 아는 자리는 반드시 넘길 것.
+    안 넘기면 예전 동작 그대로 둔다(덕킹처럼 값이 진짜 동적인 자리). */
+function hold(param,t,val){
   if(param.cancelAndHoldAtTime) param.cancelAndHoldAtTime(t);
-  else { param.cancelScheduledValues(t); param.setValueAtTime(param.value,t); }
+  else param.cancelScheduledValues(t);
+  if(val!=null) param.setValueAtTime(val,t);
+  else if(!param.cancelAndHoldAtTime) param.setValueAtTime(param.value,t);
 }
+
+/** setTargetAtTime 이 dt 초 뒤에 가 있는 값. hold 앵커를 정확히 박기 위한 것 —
+    setTargetAtTime 은 점근이라 목표값을 그대로 앵커로 쓰면 단차가 생긴다. */
+const expAt = (v0,target,tau,dt) => target + (v0-target)*Math.exp(-Math.max(dt,0)/tau);
 function fadeOut(param,t,sec){ hold(param,t); param.linearRampToValueAtTime(0,t+sec); }
 
 /** 1회용 오실레이터 */

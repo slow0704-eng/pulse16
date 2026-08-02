@@ -90,6 +90,17 @@ function hPatchApp(){
     const w = orig();
     return Object.assign(w.input, {input:w.input, output:w.output, setWidth:w.setWidth});
   };
+  /* boot() 은 부를 때마다 리버브 IR 3개(합 5.6초 스테레오 = 4.3MB)를 새로 굽는다.
+     하네스는 boot() 을 100번 넘게 부르므로 그대로 두면 수백 MB 를 태우고
+     탭이 죽는다. AudioBuffer 는 컨텍스트 독립이라 같은 인자면 재사용해도
+     결과가 한 샘플도 안 달라진다. (측정 대상도 아니다 — 리버브 경로는
+     probeTrack 이 chan 을 떼는 순간 신호가 안 흐른다) */
+  const origIR = makeIR, irCache = new Map();
+  window.makeIR = function(sec,decay,pre,damp){
+    const k = sec+'|'+decay+'|'+pre+'|'+damp;
+    if(!irCache.has(k)) irCache.set(k, origIR(sec,decay,pre,damp));
+    return irCache.get(k);
+  };
 }
 
 /** 앱의 boot() 을 OfflineAudioContext 위에서 통째로 돌린다.
@@ -136,7 +147,11 @@ const hHz = m => 440*Math.pow(2, (m-69)/12);
 /* ── 측정 ─────────────────────────────────────────────────── */
 const hdB = x => (x < 1e-9 ? -Infinity : 20*Math.log10(x));
 
+/** AudioBuffer → 모노 Float32Array. 이미 Float32Array 면 그대로 돌려준다
+    (하네스가 렌더 결과를 모노로만 들고 있게 해서 메모리를 반으로 줄인다 —
+     안 그러면 렌더 100번에 탭이 죽는다) */
 function hMono(buf){
+  if(buf instanceof Float32Array) return buf;
   const L = buf.getChannelData(0);
   const R = buf.numberOfChannels > 1 ? buf.getChannelData(1) : L;
   const d = new Float32Array(L.length);
@@ -230,30 +245,92 @@ function hAnalyze(buf, f0, opt={}){
   return r;
 }
 
-/** n 번째 배음의 **실제** 주파수를 ±range cent 안에서 찾아 비조화도를 잰다.
-    f_n = n·f0·√(1+B·n²) 이므로 B 를 최소제곱으로 역산한다. */
-function hInharmonicity(d, f0, nMax, a, b, range=60){
+/** 감쇠율을 dB/s 로 잰다 — 어택 과도를 피해 t0 이후만 회귀한다.
+    hAnalyze 의 T20/T60est 는 "포락선 피크" 기준이라 픽 어택이 뾰족한 악기에서
+    현의 감쇠가 아니라 어택 과도의 감쇠를 재게 된다. 지속부는 이쪽으로 잰다. */
+function hDecay(d, t0, t1){
+  const W = Math.round(HARNESS_SR*0.01), pts = [];
+  const iEnd = Math.min(d.length, Math.round(t1*HARNESS_SR));
+  for(let i=Math.round(t0*HARNESS_SR); i+W<iEnd; i+=W){
+    let s=0; for(let k=0;k<W;k++) s += d[i+k]*d[i+k];
+    pts.push([i/HARNESS_SR, hdB(Math.sqrt(s/W))]);
+  }
+  if(pts.length < 5) return {slope:null, t60:null, n:0, ref:null};
+  const mx = Math.max(...pts.map(p=>p[1]));
+  /* 최댓값에서 −45dB 위까지만 — 그 아래는 잡음·꼬리라 기울기를 흐린다 */
+  const use = pts.filter(p => isFinite(p[1]) && p[1] > mx-45);
+  if(use.length < 5) return {slope:null, t60:null, n:use.length, ref:mx};
+  let sx=0,sy=0,sxy=0,sxx=0;
+  use.forEach(([x,y])=>{ sx+=x; sy+=y; sxy+=x*y; sxx+=x*x; });
+  const n=use.length, den=n*sxx-sx*sx;
+  const slope = den!==0 ? (n*sxy-sx*sy)/den : null;
+  return {slope, t60: (slope!=null && slope<-0.5) ? -60/slope : null, n, ref:mx,
+          span: use[use.length-1][0]-use[0][0]};
+}
+
+/** 특정 주파수 성분만의 감쇠율.
+    광대역 포락선(hDecay)은 고배음이 죽는 속도에 끌려가 현의 t60 보다 2~3배
+    빠르게 나온다. string.js·struck.js 의 t60 은 **기음 기준** 정의이므로
+    설계값과 견주려면 이쪽으로 재야 한다. */
+function hDecayAt(d, f, t0, t1, win=0.12){
+  const pts = [], tEnd = Math.min(t1, d.length/HARNESS_SR);
+  for(let t=t0; t+win<tEnd; t+=win/2) pts.push([t+win/2, hdB(hGoertzel(d,f,t,t+win))]);
+  if(pts.length < 5) return {slope:null, t60:null, n:0};
+  const mx = Math.max(...pts.map(p=>p[1]));
+  const use = pts.filter(p => isFinite(p[1]) && p[1] > mx-40);
+  if(use.length < 5) return {slope:null, t60:null, n:use.length};
+  let sx=0,sy=0,sxy=0,sxx=0;
+  use.forEach(([x,y])=>{ sx+=x; sy+=y; sxy+=x*y; sxx+=x*x; });
+  const n=use.length, den=n*sxx-sx*sx;
+  const slope = den ? (n*sxy-sx*sy)/den : null;
+  return {slope, t60:(slope!=null && slope<-0.5) ? -60/slope : null, n};
+}
+
+/** 배음 기울기 dB/oct — log2(n) 대 dB 회귀 */
+function hTilt(hRel){
+  let sx=0,sy=0,sxy=0,sxx=0,n=0;
+  hRel.forEach((v,i)=>{ if(!isFinite(v) || v < -60) return;
+    const x=Math.log2(i+1); sx+=x; sy+=v; sxy+=x*v; sxx+=x*x; n++; });
+  return n>2 ? (n*sxy-sx*sy)/(n*sxx-sx*sx) : NaN;
+}
+
+/** n 번째 배음의 **실제** 주파수를 찾아 비조화도 B 를 잰다.
+    f_n = n·f0·√(1+B·n²)  ⇒  (f_n/(n·f0))² − 1 = B·n²
+    · 스캔 폭은 옆 배음까지 거리의 45% 로 제한한다(옆 배음을 잡으면 값이 튄다)
+    · B 는 최소제곱이 아니라 **중앙값**으로 — 배음 하나만 잘못 잡혀도
+      최소제곱은 통째로 끌려간다(실제로 harpsi 가 절반으로 나왔다) */
+function hInharmonicity(d, f0, nMax, a, b, maxRange=120){
   const parts = [];
   for(let n=1;n<=nMax;n++){
     const base = f0*n;
     if(base > HARNESS_SR*0.45) break;
+    const range = Math.min(maxRange, 0.45*1200*Math.log2((n+1)/n));
     let best=0, bestF=base;
-    for(let c=-range;c<=range;c++){
+    for(let c=-range;c<=range;c+=0.5){
       const f = base*Math.pow(2,c/1200);
       const v = hGoertzel(d,f,a,b);
       if(v>best){ best=v; bestF=f; }
     }
-    parts.push({n, f:bestF, amp:best, cents:1200*Math.log2(bestF/base)});
+    parts.push({n, f:bestF, amp:best, cents:1200*Math.log2(bestF/base), range});
   }
-  /* 진폭이 충분한 배음만 써서 B 추정: (f_n/(n f0))² − 1 = B n² */
-  const strong = parts.filter(p => p.amp > (parts[0]?parts[0].amp:1)*0.02 && p.n>1);
-  let num=0, den=0;
-  strong.forEach(p => {
-    const y = Math.pow(p.f/(p.n*f0),2) - 1;
-    const x = p.n*p.n;
-    num += x*y; den += x*x;
-  });
-  return {parts, B: den>0 ? num/den : null, used: strong.length};
+  const ref = parts.length ? Math.max(...parts.map(p=>p.amp)) : 1;
+  /* 비조화 악기는 n·f0 자리에 배음이 없다 — H16 이 26cent(=63Hz) 어긋나면
+     100ms 창의 Goertzel 빈(≈10Hz) 밖이라 통째로 못 잡는다. 그래서 기울기는
+     **찾아낸 실제 주파수의 진폭**으로 재야 한다. */
+  const tilt = (() => {
+    const r = parts[0] ? parts[0].amp : 0;
+    let sx=0,sy=0,sxy=0,sxx=0,n=0;
+    parts.forEach(p => { if(p.amp<=0 || r<=0) return;
+      const y = hdB(p.amp/r); if(!isFinite(y) || y < -60) return;
+      const x = Math.log2(p.n); sx+=x; sy+=y; sxy+=x*y; sxx+=x*x; n++; });
+    return n>2 ? (n*sxy-sx*sy)/(n*sxx-sx*sx) : NaN;
+  })();
+  const est = parts.filter(p => p.n>1 && p.amp > ref*0.02)
+                   .map(p => (Math.pow(p.f/(p.n*f0),2)-1)/(p.n*p.n))
+                   .sort((x,y)=>x-y);
+  const B = est.length ? (est.length%2 ? est[(est.length-1)/2]
+                          : (est[est.length/2-1]+est[est.length/2])/2) : null;
+  return {parts, B, used: est.length, tilt};
 }
 
 /** 배음 포락선(주파수, dB) — 포먼트가 서 있는지 보는 데 쓴다 */

@@ -45,7 +45,7 @@ function stringBass(t,midi,dur,e){
      자리를 칠 때 둘이 겹쳐 0 dBFS 를 넘겼습니다.(측정 확인) */
   g.gain.setValueAtTime(0,t);
   g.gain.linearRampToValueAtTime(v,t+0.006);
-  hold(g.gain,t+dur);
+  hold(g.gain,t+dur,v);
   g.gain.exponentialRampToValueAtTime(Math.max(v*0.02,1e-5),t+dur+rel);
   g.gain.linearRampToValueAtTime(0,t+dur+rel+0.02);
 
@@ -89,7 +89,7 @@ function windBass(t,midi,dur){
   const v=0.62*rnd(0.07*H());
   g.gain.setValueAtTime(0,t);
   g.gain.linearRampToValueAtTime(v,t+atk);
-  hold(g.gain,t+dur);
+  hold(g.gain,t+dur,v);
   g.gain.setTargetAtTime(0,t+dur,rel/3);       // 숨이 빠지듯
   g.gain.linearRampToValueAtTime(0,t+dur+rel);
 
@@ -168,7 +168,8 @@ function bassVoice(t,deg,dur,e){
     gsub.gain.setValueAtTime(0,t);
     gsub.gain.linearRampToValueAtTime(pS,t+0.007);
     gsub.gain.setTargetAtTime(pS*0.82,t+0.05,0.17);
-    hold(gsub.gain,t+dur*0.90); gsub.gain.linearRampToValueAtTime(0,t+dur*0.90+0.05);
+    hold(gsub.gain,t+dur*0.90, expAt(pS,pS*0.82,0.17,dur*0.90-0.05));
+    gsub.gain.linearRampToValueAtTime(0,t+dur*0.90+0.05);
   }
   const so=osc('sine',t,dur+0.6); setPitch(so.frequency,1); so.connect(gsub); oscs.push(so);
 
@@ -179,7 +180,8 @@ function bassVoice(t,deg,dur,e){
   gh.gain.setValueAtTime(0,t);
   gh.gain.linearRampToValueAtTime(pH,t+0.006);
   gh.gain.setTargetAtTime(pH*(is808?0.35:0.58),t+0.03,is808?0.06:0.10);
-  hold(gh.gain,t+hDur); gh.gain.linearRampToValueAtTime(0,t+hDur+0.04);
+  hold(gh.gain,t+hDur, expAt(pH, pH*(is808?0.35:0.58), is808?0.06:0.10, hDur-0.03));
+  gh.gain.linearRampToValueAtTime(0,t+hDur+0.04);
 
   const mixIn=acqGain(); mixIn.gain.value=1; retire(mixIn,'gain',end+0.05);
   const preLP=BQ('lowpass',3600,0.707,end);

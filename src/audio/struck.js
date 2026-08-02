@@ -25,12 +25,18 @@ const STRUCK = {
      tilt   배음 감쇠 기울기 1/n^tilt
      t60    C4 에서의 감쇠   t60n   배음별 감쇠 차이 (클수록 고역이 빨리 죽음)
      unison 현 여러 줄의 어긋남(cent)
-     hammer 때리는 순간의 잡음 */
+     hammer 때리는 순간의 잡음
+     vsens  벨로시티 민감도 0~1. 1 이면 세게 칠수록 밝고 커진다.
+            하프시코드는 플렉트럼이 현을 튕기는 구조라 **세기가 소리를 못 바꾼다** —
+            건반을 아무리 세게 눌러도 같은 힘으로 뜯긴다. 0 에 가깝게 둔다. */
   piano :{parts:16, B:0.00042, tilt:1.15, t60:5.5, t60n:0.55,
           unison:[0,-1.4,1.8], hammer:{f:2400,q:0.8,dec:0.007,amp:0.20}},
 
-  /* 하프시코드는 뜯는 악기라 배음이 더 많고 밝으며 비조화성이 작습니다 */
-  harpsi:{parts:20, B:0.00012, tilt:0.80, t60:1.3, t60n:0.40,
+  /* 하프시코드는 뜯는 악기라 배음이 더 많고 밝으며 비조화성이 작습니다.
+     계측(tools/측정결과-신규음색.md)에서 비조화도 B 와 감쇠는 합격이었지만
+     **기울기가 −7.9 dB/oct 로 피아노(−7.6)보다 밝지 않았습니다** — 설계 의도와 반대.
+     tilt 0.80→0.55(배음이 덜 죽음) · t60n 0.40→0.22(고역이 더 오래 남음)로 고칩니다. */
+  harpsi:{parts:20, B:0.00012, tilt:0.55, t60:1.3, t60n:0.22, vsens:0.15,
           unison:[0,2.2], hammer:{f:4400,q:1.4,dec:0.004,amp:0.34}},
 
   /* 비브라폰·마림바는 막대라 배음이 정수배가 아닙니다.
@@ -102,8 +108,13 @@ function struckVoice(t, midi, dur, vel, name){
 
   const vca = G('keys', end);
 
+  /* 벨로시티 민감도. 0 이면 세기를 무시하고 고정 세기로 친다 —
+     플렉트럼으로 뜯는 하프시코드가 그렇다. */
+  const vs = S.vsens ?? 1;
+  const ve = vel*vs + 0.85*(1-vs);
+
   /* 발음체 → 몸통 공명 → VCA. 세게 칠수록 밝아지도록 로우패스를 연다. */
-  const lp = BQ('lowpass', Math.min(1800 + 9000*vel*vel, 16000), Q_BUTTER, end);
+  const lp = BQ('lowpass', Math.min(1800 + 9000*ve*ve, 16000), Q_BUTTER, end);
   let node = lp;
   if(X.body) X.body.forEach(([bh,bq,bd]) => {
     const b = BQ('peaking', bh, bq, end, bd);
@@ -124,13 +135,14 @@ function struckVoice(t, midi, dur, vel, name){
   if(S.hammer){
     const K = S.hammer, he = t + K.dec + 0.02;
     const hg = G('keys', he), hf = BQ('bandpass', K.f, K.q, he);
-    env(hg, t, K.amp*vel*vel, K.dec, 0.0005);
+    env(hg, t, K.amp*ve*ve, K.dec, 0.0005);
     hf.connect(hg); tapNoise(hf, he);
   }
 
   vca.gain.setValueAtTime(0, t);
-  vca.gain.linearRampToValueAtTime(0.62*(0.30+0.70*vel), t+0.002);
-  hold(vca.gain, t+dur);
+  const vpk = 0.62*(0.30+0.70*ve);
+  vca.gain.linearRampToValueAtTime(vpk, t+0.002);
+  hold(vca.gain, t+dur, vpk);
   vca.gain.setTargetAtTime(0, t+dur, rel/3);
   vca.gain.linearRampToValueAtTime(0, t+dur+rel);
 }
