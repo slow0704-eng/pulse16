@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>기타 기음 실종 원인 분리</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">…</pre>
+<script type="module">
+/* measure-tonal.html 에서 gtr/clean 의 H1 이 최강 배음보다 35dB 낮게 나왔다.
+   A2(110Hz) 를 쳤는데 550Hz 가 제일 크게 들린다는 뜻 — 기타로 안 들리는 이유.
+   용의자가 셋이라 하나씩 끄고 켜 본다.
+     ① 여기(excitation) 대역제한  eL-eH → exF*0.55 아래를 버린다
+     ② 여기 콤             ex[i] -= ex[i-pk]*0.85
+     ③ 픽업 콤             out[i] -= out[i-pd]*0.75
+   앰프는 빼고 현 자체만 본다(앰프는 결과를 가릴 뿐 원인이 아니다). */
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+document.getElementById('out').textContent='';
+const SR=48000;
+
+const GTR={
+  clean :{exF:3200,exLen:0.0028,beta:0.11,lpF:7000,shDb:-0.35,t60:6.0,t60k:0.30,
+          chord:[0],strum:0.008,det:2.5,lvl:0.32,puBeta:0.11},
+  steel :{exF:2500,exLen:0.0045,beta:0.16,lpF:6500,shDb:-0.55,t60:4.5,t60k:0.35,
+          chord:[0],strum:0.012,det:3.5,lvl:0.34},
+  nylon :{exF:1200,exLen:0.0080,beta:0.22,lpF:3200,shDb:-1.40,t60:2.8,t60k:0.40,
+          chord:[0],strum:0.015,det:4.5,lvl:0.36},
+};
+
+/* V = 변형 스위치.  exMode:'bp'(현재) | 'lp'(저역 유지) ,  exComb , puComb */
+function ksInto(out,off,f,S,amp,V){
+  const P=SR/f, Di=Math.max(3,Math.floor(P)-1), fr=P-Di, ap=(1-fr)/(1+fr);
+  const T60=S.t60*Math.pow(82.41/f,S.t60k);
+  const g=Math.min(Math.pow(10,-3/(f*T60)),0.9975);
+  const a=1-Math.exp(-2*Math.PI*S.lpF/SR);
+  const b=1-Math.pow(10,S.shDb/20);
+  const bl=Math.max(4,Math.min(Di,Math.round(SR*S.exLen)));
+  const pk=Math.max(1,Math.round(P*S.beta));
+  const ex=new Float32Array(bl+pk);
+  const eA=1-Math.exp(-2*Math.PI*(S.exF*1.7)/SR);
+  const eB=1-Math.exp(-2*Math.PI*(S.exF*0.55)/SR);
+  let eL=0,eH=0;
+  for(let i=0;i<bl;i++){
+    const w=(Math.random()*2-1)*(0.5-0.5*Math.cos(2*Math.PI*i/bl));
+    eL+=(w-eL)*eA; eH+=(eL-eH)*eB;
+    ex[i] = V.exMode==='bp' ? (eL-eH) : eL;      /* lp = 저역을 버리지 않는다 */
+  }
+  if(V.exComb>0) for(let i=ex.length-1;i>=pk;i--) ex[i]-=ex[i-pk]*V.exComb;
+  const line=new Float32Array(Di);
+  for(let i=0;i<Di;i++) line[i]=(ex[i]||0)*amp;
+  let wp=0,aX=0,aY=0,lp=0,dX=0,dY=0;
+  const M=Math.min(out.length-off,Math.ceil(SR*(T60*1.05+0.1)));
+  for(let n=0;n<M;n++){
+    const v0=line[wp];
+    const y=ap*v0+aX-ap*aY; aX=v0; aY=y;
+    lp+=(y-lp)*a;
+    let v=g*(y-b*(y-lp));
+    dY=v-dX+0.999*dY; dX=v; v=dY;
+    line[wp]=v; wp=(wp+1)%Di;
+    out[off+n]+=y;
+  }
+}
+function ksRender(hz,S,V){
+  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15,3.2);
+  const out=new Float32Array(Math.ceil(SR*sec));
+  S.chord.forEach((iv,si)=>{
+    const det=((si*7)%5-2)*S.det;
+    const f=hz*Math.pow(2,(iv+det/100)/12);
+    ksInto(out,Math.round(SR*S.strum*si),f,S,Math.pow(0.88,si),V);
+  });
+  const pu = V.puComb!=null ? V.puComb : (S.puBeta?0.75:0);
+  if(S.puBeta && pu>0){
+    const pd=Math.max(1,Math.round(SR/hz*S.puBeta));
+    for(let i=out.length-1;i>=pd;i--) out[i]-=out[i-pd]*pu;
+  }
+  let p=0; for(let i=0;i<out.length;i++){const x=Math.abs(out[i]); if(x>p)p=x;}
+  if(p>1e-6){const k=S.lvl/p; for(let i=0;i<out.length;i++) out[i]*=k;}
+  return out;
+}
+function goertzel(d,f,a,b){
+  const i0=Math.floor(a*SR), i1=Math.min(d.length,Math.floor(b*SR)), N=i1-i0;
+  if(N<32) return 0;
+  const w=2*Math.PI*f/SR,c=2*Math.cos(w); let s0=0,s1=0,s2=0;
+  for(let i=i0;i<i1;i++){s0=d[i]+c*s1-s2;s2=s1;s1=s0;}
+  return 2*Math.sqrt(Math.max(s1*s1+s2*s2-c*s1*s2,0))/N;
+}
+const dB=x=>x<1e-9?-99:20*Math.log10(x);
+function spec(d,f0){
+  const H=[]; for(let n=1;n<=10;n++) H.push(goertzel(d,f0*n,0.02,0.22));
+  const mx=Math.max(...H)||1e-9;
+  const bands=[80,160,320,640,1280,2560,5120,10240];
+  const m=bands.map(f=>goertzel(d,f,0.02,0.22));
+  const tot=m.reduce((x,y)=>x+y,0)||1;
+  let c=0; bands.forEach((f,i)=>c+=f*m[i]/tot);
+  return {H:H.map(h=>dB(h/mx)), top:H.indexOf(mx)+1, cent:c};
+}
+function row(lbl,d,f0){
+  const s=spec(d,f0);
+  return lbl.padEnd(30)+('H'+s.top).padStart(4)+s.cent.toFixed(0).padStart(8)+'  │ '
+       + s.H.map(h=>(h<=-99?' -∞':h.toFixed(0)).padStart(4)).join('');
+}
+
+/* ══ 새 모델 ══
+   현재 여기는 "짧은 대역제한 노이즈 버스트" — 뜯은 현이 아니라 두드린 물체다.
+   실제로 뜯은 현의 초기 상태는 β 지점에서 꺾인 삼각 변위이고,
+   마그네틱 픽업은 변위가 아니라 속도를 읽는다. 그 속도파는 2단 사각파이고
+   푸리에 계수가 sin(nπβ)/n — 기음이 최강이고 6dB/oct 로 떨어진다.
+   픽업 콤도 P*β 가 아니라 2*P*β 여야 mode shape sin(nπβ) 와 맞는다. */
+function ksInto2(out,off,f,S,amp){
+  const P=SR/f, Di=Math.max(3,Math.floor(P)-1), fr=P-Di, ap=(1-fr)/(1+fr);
+  const T60=S.t60*Math.pow(82.41/f,S.t60k);
+  const g=Math.min(Math.pow(10,-3/(f*T60)),0.9975);
+  const a=1-Math.exp(-2*Math.PI*S.lpF/SR);
+  const b=1-Math.pow(10,S.shDb/20);
+  const B=S.beta;
+
+  /* ① 삼각 변위의 미분 = 2단 사각 속도파 (평균 0) */
+  const line=new Float32Array(Di);
+  for(let i=0;i<Di;i++) line[i] = (i/Di < B) ? (1-B) : -B;
+
+  /* ② 픽 폭 — 양방향 1차 저역통과로 모서리를 둥글린다(위상 0 유지).
+        exF 가 낮을수록 손가락, 높을수록 단단한 픽. */
+  const c=1-Math.exp(-2*Math.PI*S.exF/SR);
+  let z=line[Di-1];
+  for(let r=0;r<(S.exPass||1);r++){
+    for(let i=0;i<Di;i++){ z+=(line[i]-z)*c; line[i]=z; }        // 앞으로
+    for(let i=Di-1;i>=0;i--){ z+=(line[i]-z)*c; line[i]=z; }     // 뒤로
+  }
+  /* ③ 픽 긁힘 — 짧은 해닝 노이즈를 소량 얹는다 */
+  const bl=Math.max(4,Math.min(Di,Math.round(SR*S.exLen)));
+  const nz=(S.exNz!=null?S.exNz:0.25);
+  for(let i=0;i<bl;i++)
+    line[i]+=(Math.random()*2-1)*(0.5-0.5*Math.cos(2*Math.PI*i/bl))*nz;
+
+  /* 진폭 정규화 후 amp */
+  let pk=0; for(let i=0;i<Di;i++){const x=Math.abs(line[i]); if(x>pk)pk=x;}
+  if(pk>1e-9) for(let i=0;i<Di;i++) line[i]*=amp/pk;
+
+  let wp=0,aX=0,aY=0,lp=0,dX=0,dY=0;
+  const M=Math.min(out.length-off,Math.ceil(SR*(T60*1.05+0.1)));
+  for(let n=0;n<M;n++){
+    const v0=line[wp];
+    const y=ap*v0+aX-ap*aY; aX=v0; aY=y;
+    lp+=(y-lp)*a;
+    let v=g*(y-b*(y-lp));
+    dY=v-dX+0.999*dY; dX=v; v=dY;
+    line[wp]=v; wp=(wp+1)%Di;
+    out[off+n]+=y;
+  }
+}
+function ksRender2(hz,S){
+  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15,3.2);
+  const out=new Float32Array(Math.ceil(SR*sec));
+  S.chord.forEach((iv,si)=>{
+    const det=((si*7)%5-2)*S.det;
+    const f=hz*Math.pow(2,(iv+det/100)/12);
+    ksInto2(out,Math.round(SR*S.strum*si),f,S,Math.pow(0.88,si));
+  });
+  if(S.puBeta){
+    /* mode shape 2|sin(nπβ)| = |1 - e^(-jθ)|, θ=2πnβ.
+       ω=2πn·f0/SR 이므로 지연 d = β·SR/f0 = βP — 원래 값이 맞다.
+       널은 n = 1/β 에 선다(β=0.26 → 3.8번째). */
+    const pd=Math.max(1,Math.round(SR/hz*S.puBeta));
+    const k=S.puK!=null?S.puK:0.92, nrm=1/(1+k);
+    for(let i=out.length-1;i>=pd;i--) out[i]=(out[i]-out[i-pd]*k)*nrm;
+  }
+  let p=0; for(let i=0;i<out.length;i++){const x=Math.abs(out[i]); if(x>p)p=x;}
+  if(p>1e-6){const k=S.lvl/p; for(let i=0;i<out.length;i++) out[i]*=k;}
+  return out;
+}
+
+log('=== 기타 기음 실종 — 용의자 분리 (앰프 전, 현 자체) ===');
+log('최강 = 제일 큰 배음 번호. 기타라면 H1~H2 여야 한다.\n');
+const HDR='변형                          최강   중심Hz  │  H1  H2  H3  H4  H5  H6  H7  H8  H9 H10';
+
+for(const [name,f0] of [['clean A2',110],['clean E2',82.41],['clean G3',196]]){
+  log('── '+name+' ──'); log(HDR); log('─'.repeat(92));
+  const S=GTR.clean;
+  log(row('① 현재 (bp / .85 / .75)',      ksRender(f0,S,{exMode:'bp',exComb:0.85}),f0));
+  log(row('② 여기만 저역 유지 (lp)',       ksRender(f0,S,{exMode:'lp',exComb:0.85}),f0));
+  log(row('③ ② + 픽업콤 .75→.45',          ksRender(f0,S,{exMode:'lp',exComb:0.85,puComb:0.45}),f0));
+  log(row('④ ③ + 여기콤 .85→.50',          ksRender(f0,S,{exMode:'lp',exComb:0.50,puComb:0.45}),f0));
+  log(row('⑤ 여기콤·픽업콤 완전 제거',      ksRender(f0,S,{exMode:'lp',exComb:0,   puComb:0}),f0));
+  log(row('⑥ 대역제한만 되돌림(콤 유지)',   ksRender(f0,S,{exMode:'lp',exComb:0.85,puComb:0.75}),f0));
+  log('');
+}
+
+log('── steel A2 (픽업콤 없음 — 여기 대역제한 단독 효과) ──');
+log(HDR); log('─'.repeat(92));
+log(row('① 현재 (bp)', ksRender(110,GTR.steel,{exMode:'bp',exComb:0.85}),110));
+log(row('② 저역 유지 (lp)', ksRender(110,GTR.steel,{exMode:'lp',exComb:0.85}),110));
+log(row('④ lp + 여기콤 .50', ksRender(110,GTR.steel,{exMode:'lp',exComb:0.50}),110));
+
+log('\n── nylon A2 ──');
+log(HDR); log('─'.repeat(92));
+log(row('① 현재 (bp)', ksRender(110,GTR.nylon,{exMode:'bp',exComb:0.85}),110));
+log(row('② 저역 유지 (lp)', ksRender(110,GTR.nylon,{exMode:'lp',exComb:0.85}),110));
+log(row('④ lp + 여기콤 .50', ksRender(110,GTR.nylon,{exMode:'lp',exComb:0.50}),110));
+
+/* ══ 새 모델 검증 ══
+   β = 뜯는 지점(브리지 기준 현 길이 비). 0.11 은 브리지 바로 위 = 얇고 앵앵거린다.
+   실제 연주는 픽이 픽업 위(0.18~0.25), 어쿠스틱 핑거는 사운드홀 위(0.25~0.33).
+   puBeta = 픽업 위치. 브리지 픽업 0.11~0.13, 넥 픽업 0.24~0.27. */
+const NEW={
+  clean :{exF:2600,exLen:0.0016,exNz:0.22,beta:0.23,lpF:7000,shDb:-0.35,
+          t60:6.0,t60k:0.30,chord:[0],strum:0.008,det:2.5,lvl:0.32,puBeta:0.26,puK:0.88},
+  crunch:{exF:3000,exLen:0.0016,exNz:0.26,beta:0.20,lpF:6000,shDb:-0.50,
+          t60:5.0,t60k:0.30,chord:[0,7],strum:0.006,det:2.5,lvl:0.26,puBeta:0.17,puK:0.90},
+  hi    :{exF:3400,exLen:0.0014,exNz:0.28,beta:0.17,lpF:5000,shDb:-0.70,
+          t60:4.0,t60k:0.28,chord:[0,7,12],strum:0.005,det:2.0,lvl:0.22,puBeta:0.12,puK:0.92},
+  steel :{exF:2200,exLen:0.0020,exNz:0.30,beta:0.28,lpF:6500,shDb:-0.55,
+          t60:4.5,t60k:0.35,chord:[0],strum:0.012,det:3.5,lvl:0.34},
+  nylon :{exF:1100,exLen:0.0030,exNz:0.14,beta:0.33,lpF:3200,shDb:-1.40,
+          t60:2.8,t60k:0.40,chord:[0],strum:0.015,det:4.5,lvl:0.36},
+};
+
+log('\n\n=== 새 모델 (뜯은 현의 속도파 + 픽업 mode shape) ===');
+for(const e of ['clean','crunch','hi','steel','nylon']){
+  log('── '+e+' ──'); log(HDR); log('─'.repeat(92));
+  for(const [nm,f0] of [['E2',82.41],['A2',110],['G3',196],['E4',329.6]])
+    log(row('  '+nm, ksRender2(f0,NEW[e]), f0));
+  log('');
+}
+
+log('── clean 밝기 스윕 (A2, 중심 700~1500Hz 를 노린다) ──');
+log(HDR); log('─'.repeat(92));
+for(const exF of [1800,2600,3600,5000])
+  for(const p of [1,2]){
+    const S={...NEW.clean,exF,exPass:p};
+    log(row(`  exF ${exF} · ${p}패스`, ksRender2(110,S), 110));
+  }
+log('');
+log('── clean 뜯는 위치 β 스윕 (A2, exF 3600 · 1패스) ──');
+log(HDR); log('─'.repeat(92));
+for(const b of [0.13,0.18,0.23,0.28])
+  log(row(`  β ${b}`, ksRender2(110,{...NEW.clean,exF:3600,exPass:1,beta:b}), 110));
+log('');
+log('── clean 픽업 위치 puBeta 스윕 (A2, exF 3600 · 1패스 · β 0.20) ──');
+log(HDR); log('─'.repeat(92));
+for(const pb of [0.11,0.17,0.22,0.27])
+  log(row(`  puβ ${pb}`, ksRender2(110,{...NEW.clean,exF:3600,exPass:1,beta:0.20,puBeta:pb}), 110));
+log('');
+
+log('── clean 픽 잡음량 exNz 스윕 (A2, β 0.20 · puβ 0.27 — 널이 겹치지 않게) ──');
+log(HDR); log('─'.repeat(92));
+for(const nz of [0.15,0.35,0.6,1.0,1.6])
+  log(row(`  exNz ${nz}`, ksRender2(110,{...NEW.clean,beta:0.20,puBeta:0.27,exNz:nz}), 110));
+log('');
+log('※ β 널은 n=1/β, 픽업 널은 n=1/puβ. 둘이 겹치면 그 배음이 두 번 깎여 구멍이 난다.');
+log(`   β 0.20 → 널 n=5.0 / puβ 0.27 → 널 n=3.7  (겹치지 않음)`);
+log('');
+
+log('이론값 sin(nπβ)/n (β=0.23, 픽업 없음):');
+{
+  const B=0.23, A=[]; for(let n=1;n<=10;n++) A.push(Math.abs(Math.sin(n*Math.PI*B))/n);
+  const mx=Math.max(...A);
+  log('  '.padEnd(30)+'  H1'.padStart(4)+'      │ '+A.map(x=>dB(x/mx).toFixed(0).padStart(4)).join(''));
+}
+
+log('\n판정: 실제 기타 A2 는 H1 최강, H2~H6 이 -3~-12dB, 중심 700~1500Hz.');
+log('측정 완료');
+</script>

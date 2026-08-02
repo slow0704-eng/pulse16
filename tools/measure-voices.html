@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 드럼 실측</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">측정 준비 중…</pre>
+
+<!-- ⚠ 앱 코드를 복사하지 않습니다.
+     src/ 를 그대로 로드하고 _app-harness.js 가 dom·ui·main 자리를 메웁니다.
+     그래서 src/core/config.js 의 ENGINES 에 엔진을 추가하면
+     이 하네스는 **고치지 않아도** 그 엔진을 잡아 잽니다.
+     Tone.js 는 일부러 안 싣습니다 — HAS_TONE 이 켜지면 boot() 이
+     Tone 의 컨텍스트를 잡아 오프라인 렌더가 안 됩니다. -->
+<script src="../src/core/config.js"></script>
+<script src="../src/core/scale.js"></script>
+<script src="_app-harness.js"></script>
+<script src="../src/core/state.js"></script>
+<script src="../src/core/util.js"></script>
+<script src="../src/audio/graph.js"></script>
+<script src="../src/audio/params.js"></script>
+<script src="../src/audio/voice-drum.js"></script>
+
+<script>
+(async () => {
+const outEl = document.getElementById('out');
+const log = m => { outEl.textContent += '\n' + m; };
+outEl.textContent = '';
+
+try{
+await loadKnobDefaults();
+/* 재현 가능하게: 휴머나이즈 0(랜덤 제거), 튠 0(표에 적힌 공칭값 그대로).
+   앱 기본값은 ktune −3 / stune −3 / ttune −4 / htune −1 이지만
+   그 상태로 재면 "conga 330Hz" 같은 표의 값과 대조를 못 합니다. */
+KNOB.hum='0'; KNOB.ktune='0'; KNOB.stune='0'; KNOB.ttune='0'; KNOB.htune='0';
+
+const DUR = {kick:1.8, snare:1.0, clap:1.2, chat:0.6, ohat:1.0, tom:1.6, perc:1.2};
+
+async function shot(track, engine){
+  const ctx0 = offlineBoot(DUR[track] || 1.2);
+  probeTrack(track);
+  FIRE[track](0.01, 1.0, engine);       // 앱의 디스패치표를 그대로 쓴다
+  return await ctx0.startRendering();
+}
+
+log('=== 드럼 실측 — 앱 코드 직접 로드 (OfflineAudioContext 48kHz, 단독 렌더링) ===');
+log('measure-voices.html 은 더 이상 voice-drum.js 를 복사하지 않습니다.');
+log('src/core/config.js 의 ENGINES 를 그대로 훑으므로 새 엔진이 자동으로 잡힙니다.');
+log('조건: velocity 1.0 · Hum 0 · 모든 튠 노브 0 · Sub ' + KNOB.sub + ' · Punch ' + KNOB.punch);
+
+const DRUMS = ['kick','snare','clap','chat','ohat','tom','perc'];
+let nEng = 0; DRUMS.forEach(t => nEng += Object.keys(ENGINES[t]).length);
+log('대상: ' + DRUMS.map(t => t+' '+Object.keys(ENGINES[t]).length).join(' · ')
+    + '  = 총 ' + nEng + '종\n');
+
+log('악기            피크dB   RMSdB    DC오프셋   첫샘플   최대점프  꼬리dB  감쇠T60  중심Hz');
+log('─'.repeat(96));
+
+const cache = {};
+for(const track of DRUMS){
+  for(const e of Object.keys(ENGINES[track])){
+    const buf = await shot(track, e);
+    const a = hAnalyze(buf);
+    cache[track+'/'+e] = a;
+    log((track+'/'+e).padEnd(14)
+      + hdB(a.peak).toFixed(1).padStart(7)
+      + hdB(a.rms).toFixed(1).padStart(8)
+      + a.dc.toExponential(1).padStart(11)
+      + a.first.toExponential(1).padStart(9)
+      + a.maxJump.toFixed(3).padStart(10)
+      + hdB(a.tail).toFixed(0).padStart(8)
+      + (a.t60==null ? '    ─' : a.t60.toFixed(3)).padStart(9)
+      + a.cent.toFixed(0).padStart(9));
+  }
+  log('');
+}
+log('판정 기준: DC>1e-3 문제 · 첫샘플>1e-3 클릭위험 · 꼬리>-60dB 컷오프위험');
+
+log('\n=== 대역 분포 (%) — 실물과 대조할 것 ===');
+const bandRow = k => k.padEnd(14) + cache[k].bands.map(([f,m]) =>
+  `${f}:${(m*100).toFixed(0)}`.padStart(9)).join('');
+log('악기'.padEnd(14) + H_BANDS.map(f=>String(f).padStart(9)).join(''));
+log('─'.repeat(104));
+for(const k of Object.keys(cache)) if(/^(tom|perc)\//.test(k)) log(bandRow(k));
+log('');
+for(const k of Object.keys(cache)) if(/^(kick|snare)\//.test(k)) log(bandRow(k));
+
+log('\n=== 톤 타악기 기음 확인 (tom 은 음정이 있는 트랙) ===');
+log('TOM 표의 f0 가 실제로 서 있는지 본다. 측정은 어택 직후 0~40ms.');
+log('엔진        표 f0   실측 최강  오차   표 f1(감쇠 끝)  후반 실측');
+log('─'.repeat(72));
+for(const e of Object.keys(ENGINES.tom)){
+  const S = TOM[e];
+  const a = cache['tom/'+e];
+  const scan = (lo,hi,t0,t1) => {
+    let best=0,bf=lo;
+    for(let c=0;c<=1200;c+=4){        // 반음 1/25 해상도로 1옥타브 스캔
+      const f=lo*Math.pow(2,c/1200); if(f>hi) break;
+      const v=hGoertzel(a.d,f,t0,t1); if(v>best){best=v;bf=f;}
+    }
+    return bf;
+  };
+  if(S.bell){
+    const f=scan(300,1400,0.012,0.10);
+    log(e.padEnd(11) + ('벨 '+S.bell.join('/')).padStart(9)
+      + f.toFixed(0).padStart(10) + '        ─');
+    continue;
+  }
+  const early = scan(S.f1*0.7, S.f0*1.6, 0.012, 0.045);
+  const late  = scan(S.f1*0.6, S.f0*1.2, S.dec*0.7, S.dec*0.7+0.08);
+  log(e.padEnd(11) + S.f0.toFixed(0).padStart(7) + early.toFixed(0).padStart(10)
+    + (1200*Math.log2(early/S.f0)).toFixed(0).padStart(7) + 'ct'
+    + S.f1.toFixed(0).padStart(12) + late.toFixed(0).padStart(11));
+}
+
+log('\n기준(실물): 콩가 저 190~230 / 중 250~300 / 고 300~360Hz · 봉고 400~700Hz');
+log('            팀발레 250~400Hz + 금속 셸 링 · 로그드럼 100~250Hz 급강하');
+log('            카우벨 2~3kHz 대역 · 셰이커·탬버린 6~12kHz');
+log('            클라베 2.5kHz 단일 공진 · 우드블록 1~2kHz · 아고고 800~1700Hz');
+log('            아이언(브레이크 드럼) 1.5~4kHz · 스크래치 600Hz↔4kHz 왕복');
+
+log('\n측정 완료');
+window.__done = true;
+}catch(err){
+  log('\n!! 측정 실패: ' + (err && err.stack ? err.stack : err));
+  window.__done = 'error';
+}
+})();
+</script>

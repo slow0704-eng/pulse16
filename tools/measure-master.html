@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 마스터 체인 측정</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out"></pre>
+<script type="module">
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+const SR=48000, dB=x=>x<1e-9?-Infinity:20*Math.log10(x);
+
+/* 실제 마스터 체인을 재현해 밀집 패턴을 통과시킨다.
+   목적: 새추레이션 전 피크 / 리미터 후 피크 / 게인리덕션 확인 */
+function mkCurve(k){const n=8192,c=new Float32Array(n),norm=Math.tanh(k);
+  for(let i=0;i<n;i++){const x=i/(n/2)-1;c[i]=Math.tanh(x*k)/norm;}return c;}
+function env2(g,t,peak,knee,kneeT,dec,atk=0.002){
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(peak,t+atk);
+  g.gain.exponentialRampToValueAtTime(Math.max(peak*knee,1e-5),t+atk+kneeT);
+  g.gain.exponentialRampToValueAtTime(Math.max(peak*0.0006,1e-5),t+atk+kneeT+dec);
+  g.gain.linearRampToValueAtTime(0,t+atk+kneeT+dec+0.01);}
+function env(g,t,peak,dec,atk=0.002){
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(peak,t+atk);
+  g.gain.exponentialRampToValueAtTime(Math.max(peak*0.0008,1e-5),t+atk+dec);
+  g.gain.linearRampToValueAtTime(0,t+atk+dec+0.008);}
+
+const KICK={punch:{sub:{f0:135,f1:50,drop:0.055,dec:0.46},body:{f0:250,f1:96,drop:0.028,dec:0.15,amp:0.62},
+  atk:{f:420,dec:0.014,amp:0.52},click:{f:3200,q:0.7,dec:0.012,amp:0.42,bp:0}}};
+
+/* tapPoint: 'preSat' | 'postSat' | 'postLimit' */
+async function run(tapPoint, bpm=124, bars=2){
+  const spb=60/bpm, six=spb*0.25, dur=spb*4*bars+1;
+  const ctx=new OfflineAudioContext(1,Math.ceil(SR*dur),SR);
+  const CURVES=[mkCurve(1.1),mkCurve(1.8),mkCurve(2.8),mkCurve(4.0)];
+
+  /* 마스터 체인 (pulse16 §6 재현) */
+  const masterGain=ctx.createGain(); masterGain.gain.value=0.74/1*0.9;   // vol 74
+  const satIn=ctx.createGain(), satOut=ctx.createGain();
+  const shaper=ctx.createWaveShaper(); shaper.curve=CURVES[1]; shaper.oversample='4x';
+  const satLP=ctx.createBiquadFilter(); satLP.type='lowpass'; satLP.frequency.value=15000;
+  const rumble=ctx.createBiquadFilter(); rumble.type='highpass'; rumble.frequency.value=20; rumble.Q.value=0.6;
+  const sumBus=ctx.createGain(), mixBus=ctx.createGain();
+  const busTrim=ctx.createGain(); busTrim.gain.value=Math.pow(10,-6/20);  // trim -6
+  const glue=ctx.createDynamicsCompressor();
+  glue.knee.value=9; glue.release.value=0.19; glue.attack.value=0.030;
+  glue.ratio.value=1+0.40*3.0; glue.threshold.value=-4-0.40*13;
+  const lim=ctx.createDynamicsCompressor();
+  lim.threshold.value=-2; lim.knee.value=1; lim.ratio.value=16; lim.attack.value=0.004; lim.release.value=0.110;
+
+  mixBus.connect(busTrim); busTrim.connect(rumble); rumble.connect(glue); glue.connect(sumBus);
+  /* 병렬 저역 새추레이션 */
+  const lp1=ctx.createBiquadFilter(); lp1.type='lowpass'; lp1.frequency.value=110;
+  const lp2=ctx.createBiquadFilter(); lp2.type='lowpass'; lp2.frequency.value=110;
+  const lowSat=ctx.createWaveShaper(); lowSat.curve=CURVES[0]; lowSat.oversample='4x';
+  const lowGain=ctx.createGain(); lowGain.gain.value=0.62*0.80;
+  busTrim.connect(lp1).connect(lp2).connect(lowSat).connect(lowGain).connect(sumBus);
+  /* 병렬 익사이터 */
+  const elp=ctx.createBiquadFilter(); elp.type='lowpass'; elp.frequency.value=150;
+  const epre=ctx.createGain(); epre.gain.value=2.4;
+  const esh=ctx.createWaveShaper(); esh.curve=CURVES[2]; esh.oversample='4x';
+  const eh1=ctx.createBiquadFilter(); eh1.type='highpass'; eh1.frequency.value=190;
+  const eh2=ctx.createBiquadFilter(); eh2.type='highpass'; eh2.frequency.value=190;
+  const elp2=ctx.createBiquadFilter(); elp2.type='lowpass'; elp2.frequency.value=3800;
+  const excGain=ctx.createGain(); excGain.gain.value=0.36*0.26;
+  busTrim.connect(elp).connect(epre).connect(esh).connect(eh1).connect(eh2).connect(elp2).connect(excGain).connect(sumBus);
+
+  sumBus.connect(satIn).connect(shaper).connect(satLP).connect(satOut).connect(masterGain);
+  masterGain.connect(lim);
+
+  /* 탭 지점 */
+  const tap = tapPoint==='preSat' ? sumBus : tapPoint==='postSat' ? masterGain : lim;
+  tap.connect(ctx.destination);
+
+  /* 채널 */
+  const chK=ctx.createGain(); chK.gain.value=1.00; chK.connect(mixBus);
+  const chS=ctx.createGain(); chS.gain.value=0.68; chS.connect(mixBus);
+  const chH=ctx.createGain(); chH.gain.value=0.38; chH.connect(mixBus);
+  const nb=ctx.createBuffer(1,SR*2,SR), nd=nb.getChannelData(0);
+  for(let i=0;i<nd.length;i++) nd[i]=Math.random()*2-1;
+  const noiseBus=ctx.createGain();
+  const ns=ctx.createBufferSource(); ns.buffer=nb; ns.loop=true; ns.connect(noiseBus); ns.start(0);
+
+  const G=(ch)=>{const g=ctx.createGain(); g.gain.value=0; g.connect(ch); return g;};
+  const osc=(ty,st,d)=>{const o=ctx.createOscillator(); o.type=ty; o.start(st); o.stop(st+d); return o;};
+
+  function kick(t,v){
+    const S=KICK.punch, sw=0.55+0.62*0.85, pw=0.45+0.60*1.05, sdec=S.sub.dec;
+    const gs=G(chK), os=osc('sine',t,sdec+0.25);
+    os.frequency.setValueAtTime(S.sub.f0*2.1,t);
+    os.frequency.exponentialRampToValueAtTime(S.sub.f0,t+0.012);
+    os.frequency.exponentialRampToValueAtTime(S.sub.f1,t+S.sub.drop);
+    env2(gs,t,v*sw,0.42,0.07,sdec,0.0015); os.connect(gs);
+    const gb=G(chK), ob=osc('sine',t,S.body.dec+0.15);
+    ob.frequency.setValueAtTime(S.body.f0,t);
+    ob.frequency.exponentialRampToValueAtTime(S.body.f1,t+S.body.drop);
+    env2(gb,t,v*S.body.amp*(0.7+0.62*0.5),0.35,0.03,S.body.dec,0.001);
+    const ws=ctx.createWaveShaper(); ws.curve=CURVES[1]; ws.oversample='4x';
+    const blp=ctx.createBiquadFilter(); blp.type='lowpass'; blp.frequency.value=6000;
+    ob.connect(ws).connect(blp).connect(gb);
+    const ga=G(chK), oa=osc('triangle',t,S.atk.dec+0.08);
+    oa.frequency.setValueAtTime(S.atk.f,t);
+    oa.frequency.exponentialRampToValueAtTime(S.atk.f*0.45,t+S.atk.dec);
+    env(ga,t,v*S.atk.amp*pw,S.atk.dec,0.0006); oa.connect(ga);
+    const gc=G(chK), f=ctx.createBiquadFilter(); f.type='lowpass';
+    f.frequency.value=S.click.f; f.Q.value=S.click.q;
+    env(gc,t,v*S.click.amp*pw*0.5,S.click.dec,0.0005); f.connect(gc); noiseBus.connect(f);
+  }
+  function snare(t,v){
+    const g=G(chS), hp=ctx.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=2050;
+    const pk=ctx.createBiquadFilter(); pk.type='peaking'; pk.frequency.value=4200; pk.Q.value=1.1; pk.gain.value=5;
+    env(g,t,v*0.88,0.16,0.0012); hp.connect(pk).connect(g); noiseBus.connect(hp);
+    [188,272].forEach((hz,i)=>{const og=G(chS), o=osc('triangle',t,0.07+0.12);
+      o.frequency.setValueAtTime(hz,t); o.frequency.exponentialRampToValueAtTime(hz*0.76,t+0.07);
+      env(og,t,v*0.26*(i?0.55:1)*(0.7+0.60*0.5),0.07,0.002); o.connect(og);});
+  }
+  function hat(t,v){
+    const g=G(chH), hp=ctx.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=7200;
+    const pk=ctx.createBiquadFilter(); pk.type='peaking'; pk.frequency.value=11500; pk.Q.value=1.2; pk.gain.value=4;
+    hp.connect(pk).connect(g); noiseBus.connect(hp);
+    env(g,t,v*0.55,0.048,0.0008);
+  }
+  /* 하우스 밀집 패턴: 킥 4온플로어 + 스네어 2·4 + 햇 8분 */
+  for(let bar=0;bar<bars;bar++) for(let i=0;i<16;i++){
+    const t=0.05+ (bar*16+i)*six;
+    if(i%4===0) kick(t,1);
+    if(i===4||i===12) snare(t,1);
+    if(i%2===0) hat(t,1);
+  }
+  const buf=await ctx.startRendering();
+  const d=buf.getChannelData(0);
+  let peak=0,sum=0,over=0;
+  for(let i=0;i<d.length;i++){const a=Math.abs(d[i]); if(a>peak)peak=a; sum+=d[i]*d[i]; if(a>1)over++;}
+  return {peak:dB(peak), rms:dB(Math.sqrt(sum/d.length)), overPct:over/d.length*100};
+}
+
+log('=== 마스터 체인 통과 측정 (하우스 밀집 패턴, 124 BPM, 벨로시티 1.0) ===');
+log('   킥 4온플로어 + 스네어 2·4 + 햇 8분 · Master 74 · Trim −6dB · Limit −2dB\n');
+log('탭 지점                        피크dB    RMSdB   |x|>1 샘플');
+log('─'.repeat(62));
+for(const [tp,label] of [['preSat','새추레이션 직전 (sumBus)'],
+                         ['postSat','새추레이션+마스터게인 후'],
+                         ['postLimit','리미터 후 (최종 출력)']]){
+  const r=await run(tp);
+  log(label.padEnd(30)+r.peak.toFixed(1).padStart(7)+r.rms.toFixed(1).padStart(9)+(r.overPct.toFixed(2)+'%').padStart(11));
+}
+log('\n※ 새추레이션 직전에서 0dB를 넘으면 waveshaper 가 의도치 않은 왜곡을 만듭니다.');
+log('   tanh 커브는 소프트클립이라 잘리진 않지만, 설계된 "드라이브" 이상으로 눌립니다.');
+log('\n측정 완료');
+</script>

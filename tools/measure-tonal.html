@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 톤 악기 측정</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">측정 준비 중…</pre>
+
+<script type="module">
+/* 베이스 · 건반 · 기타를 OfflineAudioContext 로 단독 렌더링해 실측한다.
+   목적: 배음 구조를 실제 악기의 알려진 배음 구조와 대조한다.
+   measure-voices.html 이 드럼을 맡고, 이 파일이 음정 악기를 맡는다. */
+
+const log = m => { document.getElementById('out').textContent += '\n' + m; };
+document.getElementById('out').textContent = '';
+const SR = 48000;
+
+/* ── pulse16 유틸 이식 ── */
+const Q_DB = q => 20*Math.log10(q);
+const Q_BUTTER = Q_DB(Math.SQRT1_2);
+const CURVE_K = [1.1,1.8,2.8,4.0];
+const CURVE_GAIN = CURVE_K.map(k=>k/Math.tanh(k));
+function mkCurve(k){
+  const n=8192,c=new Float32Array(n),norm=Math.tanh(k);
+  for(let i=0;i<n;i++){ const x=i/(n/2)-1; c[i]=Math.tanh(x*k)/norm; }
+  return c;
+}
+function mkTube(k,bias){
+  const n=8192,c=new Float32Array(n),off=Math.tanh(bias*k);
+  const norm=Math.max(Math.abs(Math.tanh((1+bias)*k)-off),
+                      Math.abs(Math.tanh((-1+bias)*k)-off));
+  for(let i=0;i<n;i++){ const x=i/(n/2)-1; c[i]=(Math.tanh((x+bias)*k)-off)/norm; }
+  return c;
+}
+
+/* 렌더 컨텍스트 — 스테레오(패너를 쓰는 엔진이 있다) */
+async function render(dur, build){
+  const ctx = new OfflineAudioContext(2, Math.ceil(SR*dur), SR);
+  const out = ctx.createGain(); out.gain.value=1; out.connect(ctx.destination);
+  const CURVES = CURVE_K.map(mkCurve);
+  const nb=ctx.createBuffer(1,SR*2,SR), nd=nb.getChannelData(0);
+  for(let i=0;i<nd.length;i++) nd[i]=Math.random()*2-1;
+  const noiseBus=ctx.createGain();
+  const ns=ctx.createBufferSource(); ns.buffer=nb; ns.loop=true; ns.connect(noiseBus); ns.start(0);
+
+  const g=(v)=>{const x=ctx.createGain(); x.gain.value=(v==null?0:v); return x;};
+  const bq=(ty,f,q,db)=>{const b=ctx.createBiquadFilter(); b.type=ty; b.frequency.value=f;
+    b.Q.value=(q==null?0.707:q); b.gain.value=db||0; return b;};
+  const osc=(ty,t,d)=>{const o=ctx.createOscillator(); o.type=ty; o.start(t); o.stop(t+d); return o;};
+  const shp=c=>{const w=ctx.createWaveShaper(); w.curve=c; w.oversample='4x'; return w;};
+  const wire=a=>{ for(let i=0;i<a.length-1;i++) a[i].connect(a[i+1]); return a[0]; };
+  const env=(gn,t,peak,dec,atk=0.002)=>{
+    gn.gain.setValueAtTime(0,t);
+    gn.gain.linearRampToValueAtTime(peak,t+atk);
+    gn.gain.exponentialRampToValueAtTime(Math.max(peak*0.0008,1e-5),t+atk+dec);
+    gn.gain.linearRampToValueAtTime(0,t+atk+dec+0.008);
+  };
+  const hold=(p,t)=>{ if(p.cancelAndHoldAtTime) p.cancelAndHoldAtTime(t);
+                      else { p.cancelScheduledValues(t); p.setValueAtTime(p.value,t); } };
+
+  build({ctx,out,CURVES,noiseBus,g,bq,osc,shp,wire,env,hold});
+  return await ctx.startRendering();
+}
+
+/* ── 분석 ── */
+const dB = x => x<1e-9 ? -Infinity : 20*Math.log10(x);
+
+/** 구간 [a,b) 초에서 주파수 f 의 크기 (Goertzel) */
+function goertzel(d,f,a,b){
+  const i0=Math.floor(a*SR), i1=Math.min(d.length,Math.floor(b*SR));
+  const N=i1-i0; if(N<32) return 0;
+  const w=2*Math.PI*f/SR, c=2*Math.cos(w);
+  let s0=0,s1=0,s2=0;
+  for(let i=i0;i<i1;i++){ s0=d[i]+c*s1-s2; s2=s1; s1=s0; }
+  return 2*Math.sqrt(Math.max(s1*s1+s2*s2-c*s1*s2,0))/N;
+}
+
+function analyze(buf,f0,opt={}){
+  /* 모노 합 */
+  const L=buf.getChannelData(0);
+  const R=buf.numberOfChannels>1?buf.getChannelData(1):L;
+  const d=new Float32Array(L.length);
+  for(let i=0;i<d.length;i++) d[i]=(L[i]+R[i])*0.5;
+
+  let peak=0,pAt=0,sum=0,dc=0;
+  for(let i=0;i<d.length;i++){
+    const a=Math.abs(d[i]); if(a>peak){peak=a;pAt=i;}
+    sum+=d[i]*d[i]; dc+=d[i];
+  }
+  const rms=Math.sqrt(sum/d.length); dc/=d.length;
+
+  /* 어택 — 피크의 90% 에 처음 닿는 시각 */
+  let atk=0;
+  for(let i=0;i<d.length;i++){ if(Math.abs(d[i])>=peak*0.9){ atk=i/SR; break; } }
+
+  /* 포락선(2ms RMS)으로 T60 추정 — 피크 이후 -60dB 까지 */
+  const W=Math.round(SR*0.002), envArr=[];
+  for(let i=0;i+W<d.length;i+=W){
+    let s=0; for(let k=0;k<W;k++) s+=d[i+k]*d[i+k];
+    envArr.push(Math.sqrt(s/W));
+  }
+  const pIdx=Math.floor(pAt/W); let t60=null;
+  for(let i=pIdx;i<envArr.length;i++){
+    if(envArr[i] < peak*0.001){ t60=(i*W-pAt)/SR; break; }
+  }
+
+  /* 배음 — 지속부에서 측정 */
+  const a0=opt.hStart!=null?opt.hStart:0.03, a1=opt.hEnd!=null?opt.hEnd:0.23;
+  const NH=opt.nh||10;
+  const H=[]; for(let n=1;n<=NH;n++) H.push(goertzel(d,f0*n,a0,a1));
+  const hMax=Math.max(...H)||1e-9;
+
+  /* 광대역 중심 — 배음이 아닌 성분까지 포함 */
+  const bands=[40,80,160,320,640,1280,2560,5120,10240,16000];
+  const mag=bands.map(f=>goertzel(d,f,a0,Math.min(a1,a0+0.2)));
+  const tot=mag.reduce((x,y)=>x+y,0)||1;
+  let cent=0; bands.forEach((f,i)=>cent+=f*mag[i]/tot);
+
+  /* 배음 대비 비배음(노이즈·인하모닉) 비율 */
+  const hSum=H.reduce((x,y)=>x+y,0);
+  const inter=[]; for(let n=1;n<NH;n++) inter.push(goertzel(d,f0*(n+0.5),a0,a1));
+  const iSum=inter.reduce((x,y)=>x+y,0);
+
+  /* 어택 20ms 의 중심 — 슬랩·픽의 밝기는 지속부가 아니라 여기 있다 */
+  const magA=bands.map(f=>goertzel(d,f,0,0.020));
+  const totA=magA.reduce((x,y)=>x+y,0)||1;
+  let centA=0; bands.forEach((f,i)=>centA+=f*magA[i]/totA);
+
+  return {peak,rms,crest:dB(peak/Math.max(rms,1e-9)),dc,atk,t60,cent,centA,
+          H:H.map(h=>dB(h/hMax)), hAbs:H, noise:iSum/Math.max(hSum,1e-9)};
+}
+
+/* ═══════════════ 베이스 ═══════════════ */
+const BASS_KNOB = {blend:0.38, drive:0.34, xover:105, tone:3600};
+
+async function bass(e,K=BASS_KNOB,hz=55,dur=0.40){
+  return await render(1.6, ({ctx,out,CURVES,noiseBus,g,bq,osc,shp,env,hold})=>{
+    const t=0.01, is808=(e==='s808'), blend=K.blend, bd=K.drive, vel=1;
+    const xo=Math.max(K.xover,hz*1.15), end=t+dur+0.7;
+
+    const gsub=g(0); gsub.connect(out);
+    const pS=(is808?0.88:0.70)*(1-blend*(is808?0.40:0.55))*vel;
+    if(is808){
+      gsub.gain.setValueAtTime(0,t);
+      gsub.gain.linearRampToValueAtTime(pS,t+0.005);
+      gsub.gain.exponentialRampToValueAtTime(Math.max(pS*0.0015,1e-5),t+dur);
+      gsub.gain.linearRampToValueAtTime(0,t+dur+0.03);
+    }else{
+      gsub.gain.setValueAtTime(0,t);
+      gsub.gain.linearRampToValueAtTime(pS,t+0.007);
+      gsub.gain.setTargetAtTime(pS*0.82,t+0.05,0.17);
+      hold(gsub.gain,t+dur*0.90); gsub.gain.linearRampToValueAtTime(0,t+dur*0.90+0.05);
+    }
+    const so=osc('sine',t,dur+0.6); so.frequency.setValueAtTime(hz,t); so.connect(gsub);
+
+    const hDur=is808?Math.min(dur*0.35,0.26):dur*0.84;
+    const gh=g(0); gh.connect(out);
+    const pH=(is808?0.34:0.42)*(0.28+blend*1.05)*vel;
+    gh.gain.setValueAtTime(0,t);
+    gh.gain.linearRampToValueAtTime(pH,t+0.006);
+    gh.gain.setTargetAtTime(pH*(is808?0.35:0.58),t+0.03,is808?0.06:0.10);
+    hold(gh.gain,t+hDur); gh.gain.linearRampToValueAtTime(0,t+hDur+0.04);
+
+    const mixIn=g(1);
+    const preLP=bq('lowpass',3600,0.707);
+    const dGain=g(0.75+bd*1.6);
+    const shIdx=bd<0.15?0:bd<0.40?1:bd<0.70?2:3;
+    const sh=shp(CURVES[shIdx]);
+    const mk=g(1/(CURVE_GAIN[shIdx]*(1+bd*0.9)));
+    const dc=bq('highpass',20,0.707);
+    const xh1=bq('highpass',xo,0.707), xh2=bq('highpass',xo,0.707);
+    const tone=bq('lowpass',K.tone,0.707);
+    mixIn.connect(preLP).connect(dGain).connect(sh).connect(mk)
+         .connect(dc).connect(xh1).connect(xh2).connect(tone).connect(gh);
+
+    if(is808){
+      [[2,0.55,'sine'],[3,0.26,'sine'],[4,0.12,'triangle']].forEach(([m,a,ty])=>{
+        const o=osc(ty,t,dur+0.6); o.frequency.setValueAtTime(hz*m,t);
+        o.connect(g(a)).connect(mixIn);
+      });
+      const cg=g(0); cg.connect(out);
+      const cf=bq('bandpass',1700,1.2);
+      env(cg,t,0.16*vel,0.018,0.0006); cf.connect(cg); noiseBus.connect(cf);
+    }else if(e==='sub'){
+      [[2,0.50,'triangle'],[3,0.20,'sine'],[4,0.10,'sine'],[6,0.04,'sine']].forEach(([m,a,ty])=>{
+        if(hz*m>12000) return;
+        const o=osc(ty,t,dur+0.6); o.frequency.setValueAtTime(hz*m,t);
+        o.connect(g(a)).connect(mixIn);
+      });
+    }else if(e==='acid'){
+      const o=osc('sawtooth',t,dur+0.6); o.frequency.setValueAtTime(hz,t);
+      const top=Math.min(hz*54,5200), bot=Math.max(hz*4,240);
+      const tau=Math.min(dur*0.30,0.35);
+      const f1=bq('lowpass',top,Q_DB(8.0)), f2=bq('lowpass',top,Q_BUTTER);
+      [f1,f2].forEach(f=>{ f.frequency.setValueAtTime(top,t); f.frequency.setTargetAtTime(bot,t,tau); });
+      o.connect(f1).connect(f2).connect(g(0.16)).connect(mixIn);
+    }else if(e==='fm'){
+      const car=osc('sine',t,dur+0.6), mod=osc('square',t,dur+0.6);
+      const mg=g(0);
+      car.frequency.setValueAtTime(hz*2,t); mod.frequency.setValueAtTime(hz*3.01,t);
+      mg.gain.setValueAtTime(hz*6.0,t);
+      mg.gain.exponentialRampToValueAtTime(hz*0.40,t+Math.min(dur*0.55,0.6));
+      mod.connect(mg).connect(car.frequency); car.connect(mixIn);
+    }else{
+      const top=Math.min(hz*72,6500), bot=Math.max(hz*12,700);
+      const f=bq('lowpass',top,Q_DB(4.0));
+      f.frequency.setValueAtTime(top,t); f.frequency.setTargetAtTime(bot,t,Math.min(dur*0.35,0.4));
+      const beat=3.0, c=Math.min(1200*Math.log2(1+beat/hz),60);
+      const mixg=g(0.34);
+      [[1,0,0],[1,c,-0.75],[2,-c*0.6,0.75]].forEach(([m,det,pan])=>{
+        const o=osc('sawtooth',t,dur+0.6);
+        o.frequency.setValueAtTime(hz*m,t); o.detune.value=det;
+        if(pan){ const p=ctx.createStereoPanner(); p.pan.value=pan; o.connect(p).connect(mixg); }
+        else o.connect(mixg);
+      });
+      mixg.connect(f).connect(mixIn);
+    }
+  });
+}
+
+/* ═══════════════ 건반 ═══════════════ */
+const KENG = {
+  pad:{ poly:8, mixG:0.62, hp:60, peak:0.40, drift:5, chorus:0.62,
+    osc:[[0,'sawtooth',0.45,0,-0.35],[0,'sawtooth',0.42,7,0.35],[-12,'sine',0.30,0,0]],
+    f:{hz:900,R:2.2,env:1800,ea:0.90,ed:1.40,es:0.30},
+    a:{a:0.70,d:1.20,s:0.75,r:1.60}, flfo:{hz:0.28,depth:180} },
+
+  /* ⚠ FM 의 I1(인덱스 종착값)을 너무 낮게 잡으면 지속부가 순수 사인이 된다.
+     예전 값(타인 0.12 / 몸통 0.04)으로는 100ms 뒤에 배음이 전멸해
+     A3 에서 H2 −24dB, H3 이상 −∞ 로 측정됐다 — 로즈가 아니라 사인파였다.
+     실제 로즈는 타인(tine)이 음 내내 울린다. */
+  ep:{ poly:8, mixG:0.75, hp:90, peak:0.62, chorus:0.25,
+    fm:[[1,14,3.2,0.22,0.50,0.50],[1,1,0.9,0.45,0.60,0.62]],
+    f:{hz:6500,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.002,d:2.20,s:0.00,r:0.35} },
+
+  pluck:{ poly:8, mixG:0.66, hp:120, peak:0.60, click:[3000,1.5,0.008,0.126],
+    osc:[[0,'sawtooth',0.50,-7,-0.25],[0,'sawtooth',0.50,7,0.25],[12,'triangle',0.22,0,0]],
+    f:{hz:400,R:3.16,env:5200,ea:0.0015,ed:0.13,es:0.02},
+    a:{a:0.0015,d:0.26,s:0.00,r:0.12} },
+
+  supersaw:{ poly:4, mixG:0.632, hp:180, peak:0.55, drift:3,
+    osc:[[0,'sawtooth',1.000,0,0],[0,'sawtooth',0.501,-22,-0.90],
+         [0,'sawtooth',0.501,-14.7,-0.50],[0,'sawtooth',0.501,-6.3,-0.20],
+         [0,'sawtooth',0.501,6.3,0.20],[0,'sawtooth',0.501,14.7,0.50],
+         [0,'sawtooth',0.501,22,0.90]],
+    f:{hz:8000,R:1.0,env:2400,ea:0.008,ed:0.25,es:0.45},
+    a:{a:0.008,d:0.30,s:0.80,r:0.18}, vib:{hz:5.2,cent:12,dly:0.35,ramp:0.25} },
+
+  organ:{ poly:8, mixG:0.40, hp:70, peak:0.42, click:[2200,2.0,0.003,0.079],
+    osc:[[-12,'sine',0.55,0,0],[0,'sine',1.00,0,0],[7,'sine',0.35,0,0],
+         [12,'sine',0.62,0,0],[19,'sine',0.28,0,0],[24,'sine',0.20,0,0]],
+    f:{hz:7000,R:1.0,env:0,ea:0.004,ed:0.1,es:1},
+    a:{a:0.004,d:0.001,s:1.00,r:0.06} },
+
+  poly:{ poly:6, mixG:0.62, hp:110, peak:0.50, drift:4,
+    osc:[[0,'sawtooth',0.50,-9,-0.30],[0,'sawtooth',0.50,9,0.30],[-12,'square',0.30,0,0]],
+    f:{hz:320,R:2.5,env:3400,ea:0.025,ed:0.42,es:0.35},
+    a:{a:0.018,d:0.50,s:0.70,r:0.26}, flfo:{hz:5.0,depth:120,dly:0.60} },
+
+  bell:{ poly:6, mixG:0.80, hp:150, peak:0.50,
+    fm:[[1,3.5,4.5,0.30,0.35,1.0]],
+    f:{hz:9000,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.002,d:1.80,s:0.00,r:0.90} },
+
+  /* ══ 아래 6종은 장르 문서가 요구하는데 없던 악기들 ══
+     스트링 15회 · 혼 13회 · 아코디언 10회 · 피아노 5회 언급됐는데
+     각각 pad · poly · organ 으로 대신 쓰고 있었습니다. */
+
+  /* 어쿠스틱 피아노 — 지금까지는 Salamander 샘플러뿐이라 네트워크가 없으면
+     소리가 아예 안 났습니다. FM 1:1 이 기음 최강 + 6dB/oct 배음열을 만들고,
+     1:2 를 얕게 겹쳐 낮은 음의 두께를 냅니다.
+
+     ⚠ ep 와 같은 함정에 빠지기 쉽습니다. I1 을 0.09 로 두니 100ms 뒤에
+     배음이 전멸해 H2 −26dB, H3 이상 −∞ 로 측정됐습니다 — 사인파였습니다.
+     피아노 현은 음이 끝날 때까지 배음을 유지합니다. I1 을 크게 둡니다. */
+  piano:{ poly:8, mixG:0.70, hp:55, peak:0.60, click:[4200,1.6,0.005,0.10],
+    fm:[[1,1,3.2,0.85,0.35,0.60],[1,2,1.6,0.32,0.22,0.28]],
+    f:{hz:7000,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.002,d:2.60,s:0.00,r:0.28} },
+
+  /* 클라비넷 — 사실은 뜯은 현을 마그네틱 픽업으로 받는 악기라
+     저역이 거의 없고(hp 180) 어택이 딱딱합니다. 펑크의 그 '깽깽'.
+     필터 엔벨로프가 90ms 만에 닫히는 게 핵심 — 안 닫으면 그냥 신스 리드입니다. */
+  clav:{ poly:6, mixG:0.66, hp:180, peak:0.55, click:[3600,1.4,0.005,0.16],
+    osc:[[0,'square',0.55,0,0],[0,'sawtooth',0.40,4,0.15],[12,'square',0.18,0,-0.15]],
+    f:{hz:1400,R:2.6,env:5200,ea:0.002,ed:0.09,es:0.22},
+    a:{a:0.002,d:0.42,s:0.06,r:0.10} },
+
+  /* 스트링 앙상블 — Solina 계열. 활을 켜는 악기가 아니라
+     '디튠한 톱니 여러 개 + 코러스' 가 그 소리의 정체입니다.
+     느린 스웰(어택 220ms)과 드리프트가 없으면 앙상블로 안 들립니다. */
+  strings:{ poly:6, mixG:0.52, hp:90, peak:0.40, drift:6, chorus:0.75,
+    osc:[[0,'sawtooth',0.44,-14,-0.55],[0,'sawtooth',0.44,14,0.55],
+         [0,'sawtooth',0.38,-5,-0.20],[0,'sawtooth',0.38,5,0.20],
+         [-12,'sawtooth',0.26,0,0]],
+    f:{hz:3400,R:1.1,env:1200,ea:0.35,ed:0.90,es:0.60},
+    a:{a:0.22,d:0.50,s:0.85,r:0.55}, vib:{hz:5.0,cent:7,dly:0.40,ramp:0.50} },
+
+  /* 혼 섹션 — 금관은 세게 불수록 밝아집니다. 그 '립(rip)' 을 내는 건
+     55ms 만에 열렸다가 220ms 에 걸쳐 반쯤 닫히는 필터 엔벨로프입니다.
+     스카·소카·모타운·살사·아프로비트의 스탭. */
+  horns:{ poly:6, mixG:0.58, hp:130, peak:0.50, drift:3,
+    osc:[[0,'sawtooth',0.55,-6,-0.28],[0,'sawtooth',0.55,6,0.28],
+         [12,'sawtooth',0.22,0,0]],
+    f:{hz:600,R:1.6,env:4200,ea:0.055,ed:0.22,es:0.55},
+    a:{a:0.035,d:0.16,s:0.85,r:0.14} },
+
+  /* 아코디언 — 자유황(free reed) 이라 어택·감쇠가 거의 없고 눌린 동안 그대로 웁니다.
+     뮈제트 조율(같은 음을 내는 리드 둘을 ±12cent 벌림)의 맥놀이가 음색의 전부라
+     디튠을 빼면 그냥 오르간이 됩니다. 컴비아·바예나토·자이데코·발칸. */
+  accordion:{ poly:8, mixG:0.46, hp:120, peak:0.44, chorus:0.30,
+    osc:[[0,'sawtooth',0.42,-12,-0.30],[0,'sawtooth',0.42,12,0.30],
+         [0,'square',0.30,0,0],[12,'sawtooth',0.20,6,0.15]],
+    f:{hz:2600,R:1.4,env:0,ea:0.02,ed:0.1,es:1},
+    a:{a:0.045,d:0.10,s:0.92,r:0.12} },
+
+  /* ══ 2차 보강 6종 ══
+     genres/ · patterns/ 를 다시 훑어 나온 공백입니다.
+     신스리드 6회 · 색소폰 5 · 하모니카 2 · 비브라폰 2 · 마림바 1 · 스틸팬 1 언급. */
+
+  /* 모노 신스 리드 — poly:1 이라 보이스 스틸로 단선율이 됩니다.
+     팝·신스웨이브·EDM 의 훅, 록의 신스 솔로.
+     필터 엔벨로프가 깊게 열렸다 반쯤 닫히는 것이 리드의 생명입니다 —
+     supersaw(패드성)·pluck(감쇠형)과 그 점이 다릅니다. */
+  lead:{ poly:1, mixG:0.70, hp:120, peak:0.58, drift:2,
+    osc:[[0,'sawtooth',0.60,-4,-0.15],[0,'sawtooth',0.60,4,0.15],[12,'sawtooth',0.20,0,0]],
+    f:{hz:900,R:2.8,env:5200,ea:0.012,ed:0.30,es:0.42},
+    a:{a:0.008,d:0.25,s:0.85,r:0.14}, vib:{hz:5.6,cent:14,dly:0.25,ramp:0.30} },
+
+  /* 비브라폰 — 금속 막대라 기음과 4배음(2옥타브+장3도)이 강합니다.
+     회전 원판이 만드는 6Hz 흔들림이 정체성이라 flfo 로 넣었습니다.
+     그게 없으면 그냥 FM 벨입니다. 재즈·로파이·라틴. */
+  vibes:{ poly:6, mixG:0.72, hp:120, peak:0.52,
+    fm:[[1,4,2.2,0.55,0.45,0.85]],
+    f:{hz:7000,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.003,d:1.60,s:0.00,r:0.70}, flfo:{hz:6.0,depth:900} },
+
+  /* 마림바 — 나무 막대. 비브라폰과 같은 4배음에 10배음이 더 실리고,
+     흔들림이 없으며 훨씬 빨리 죽습니다. 라틴·아프리카·팝. */
+  marimba:{ poly:6, mixG:0.74, hp:120, peak:0.56, click:[2600,1.4,0.004,0.10],
+    fm:[[1,4,1.8,0.25,0.10,0.70],[1,10,1.0,0.05,0.05,0.22]],
+    f:{hz:6000,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.002,d:0.50,s:0.00,r:0.18} },
+
+  /* 색소폰 — 홑리드라 홀수 배음이 셉니다. 숨을 불어 넣는 악기라
+     어택이 30ms 로 느리고, 비브라토가 늦게 걸립니다.
+     ⚠ 이 엔진 구조에는 포먼트(peaking)가 없어 성대 공명을 못 냅니다.
+        그래서 "색소폰처럼 들리는 관악" 이지 색소폰 모델은 아닙니다. */
+  sax:{ poly:2, mixG:0.62, hp:150, peak:0.52, click:[3200,1.0,0.020,0.09],
+    osc:[[0,'sawtooth',0.50,0,0],[0,'square',0.34,3,0.12],[12,'sawtooth',0.16,0,-0.12]],
+    f:{hz:1500,R:1.8,env:5200,ea:0.045,ed:0.30,es:0.50},
+    a:{a:0.030,d:0.20,s:0.88,r:0.16}, vib:{hz:5.2,cent:12,dly:0.30,ramp:0.35} },
+
+  /* 하모니카 — 아코디언과 같은 자유황이지만 훨씬 밝고 홀수 배음이 셉니다.
+     비브라토가 빠르고 깊은 것(6.2Hz / 16cent)이 손으로 감싸 흔드는 주법입니다.
+     블루스·컨트리·포크. */
+  harmonica:{ poly:4, mixG:0.54, hp:200, peak:0.48, chorus:0.20,
+    osc:[[0,'square',0.46,-8,-0.20],[0,'square',0.46,8,0.20],[0,'sawtooth',0.26,0,0]],
+    f:{hz:2200,R:1.6,env:1200,ea:0.03,ed:0.18,es:0.70},
+    a:{a:0.025,d:0.12,s:0.90,r:0.12}, vib:{hz:6.2,cent:16,dly:0.20,ramp:0.25} },
+
+  /* 스틸팬 — 드럼통을 두드려 만든 악기. 기음·옥타브·12도를 일부러 조율해
+     맞춘 것이라 배음이 정수배에 가깝습니다. 카리브(소카·칼립소). */
+  steelpan:{ poly:6, mixG:0.70, hp:150, peak:0.54, click:[3000,1.2,0.004,0.12],
+    fm:[[1,2,2.6,0.30,0.25,0.60],[1,3,1.4,0.15,0.18,0.35]],
+    f:{hz:7500,R:1.0,env:0,ea:0.002,ed:0.1,es:1},
+    a:{a:0.002,d:1.10,s:0.00,r:0.40} },
+
+  /* 반도네온 — 같은 자유황이지만 아코디언보다 어둡고 느립니다.
+     주름상자를 밀고 당기는 힘이 음색을 바꾸므로 필터 엔벨로프를 얕게 겁니다.
+     탱고. */
+  bandoneon:{ poly:6, mixG:0.50, hp:80, peak:0.46,
+    osc:[[0,'sawtooth',0.45,-7,-0.25],[0,'sawtooth',0.45,7,0.25],
+         [-12,'sawtooth',0.28,0,0],[0,'square',0.18,3,0]],
+    f:{hz:1900,R:1.2,env:900,ea:0.10,ed:0.30,es:0.55},
+    a:{a:0.075,d:0.18,s:0.88,r:0.20}, vib:{hz:4.2,cent:8,dly:0.50,ramp:0.40} },
+};
+
+const KEYS_TEX = {
+  /*                kt    kd   body:[[Hz, Q, dB], …]  */
+  piano    :{kt:0.42,kd:0.78,body:[[120,1.6,3.5],[260,2.0,2.5],[1500,1.0,2.0]]},
+  ep       :{kt:0.45,kd:0.50,body:[[800,1.2,2.5],[2400,1.4,3.0]]},
+  clav     :{kt:0.70,kd:0.40,body:[[900,1.6,3.0],[2200,1.8,3.5]]},
+  marimba  :{kt:0.55,kd:0.70,body:[[300,2.2,4.0],[900,1.6,2.5]]},
+  vibes    :{kt:0.28,kd:0.50,body:[[400,2.0,3.5],[1200,1.4,2.0]]},
+  steelpan :{kt:0.50,kd:0.50,body:[[250,1.8,3.0],[700,1.6,3.5]]},
+  sax      :{kt:0.55,kd:0.20,body:[[700,1.4,4.5],[1400,1.6,3.5],[2800,1.2,2.5]]},
+  harmonica:{kt:0.60,kd:0.20,body:[[1200,1.6,3.5],[2400,1.4,2.5]]},
+  accordion:{kt:0.50,kd:0.15,body:[[500,1.4,3.0],[1600,1.2,2.0]]},
+  bandoneon:{kt:0.45,kd:0.15,body:[[350,1.6,3.5],[1100,1.2,2.0]]},
+  strings  :{kt:0.45,kd:0.30,body:[[300,1.6,2.5],[800,1.2,2.0],[2400,1.0,1.5]]},
+  horns    :{kt:0.55,kd:0.25,body:[[500,1.4,3.0],[1200,1.2,2.5],[2500,1.0,2.0]]},
+  /* 오르간은 몸통이 없습니다 — 전기 신호가 스피커로 바로 갑니다.
+     음역 보정도 거의 없습니다(드로바는 음역과 무관하게 같은 배음). */
+  organ    :{kt:0.10,kd:0.05},
+  /* 신스는 원래 음역 보정이 약한 것이 정체성입니다 */
+  pad      :{kt:0.30,kd:0.20},
+  supersaw :{kt:0.30,kd:0.20},
+  lead     :{kt:0.35,kd:0.20},
+  poly     :{kt:0.35,kd:0.25},
+  pluck    :{kt:0.50,kd:0.55},
+  bell     :{kt:0.40,kd:0.55},
+};
+const TEX_DEFAULT={kt:0.40,kd:0.35};
+
+async function keys(name,hz=220,dur=0.8,velIn=0.9){
+  const E=KENG[name];
+  const X=KEYS_TEX[name]||TEX_DEFAULT;
+  const midi=69+12*Math.log2(hz/440);
+  const kt=Math.pow(2,(midi-60)/12);
+  const ktF=Math.pow(kt,X.kt), ktD=Math.pow(kt,-X.kd);
+  const fHz=Math.min(E.f.hz*ktF,16000);
+  const dcy=E.a.d*ktD, rel=E.a.r*ktD;
+  const life=dur+rel*1.6+0.15;
+  return await render(life+0.6, ({ctx,out,noiseBus,g,bq,osc,shp,env,hold})=>{
+    const t=0.01, vel=velIn;
+    /* 위상 랜덤 파형 — 앱과 동일 */
+    const wave=kind=>{
+      const n=64, re=new Float32Array(n+1), im=new Float32Array(n+1);
+      for(let k=1;k<=n;k++){
+        const a = kind==='square' ? (k%2?1/k:0) : 1/k;
+        const p = Math.random()*Math.PI*2;
+        re[k]=a*Math.sin(p); im[k]=a*Math.cos(p);
+      }
+      return ctx.createPeriodicWave(re,im);
+    };
+    const oscW=(kind,st,d)=>{
+      const o=ctx.createOscillator();
+      if(kind==='sine'||kind==='triangle') o.type=kind; else o.setPeriodicWave(wave(kind));
+      o.start(st); o.stop(st+d); return o;
+    };
+    const vca=g(0); vca.connect(out);
+    const mix=g(E.mixG);
+    const hp=bq('highpass',E.hp,Q_BUTTER);
+    const fa=bq('lowpass',fHz,Q_DB(0.5412));
+    const fb=bq('lowpass',fHz,Q_DB(1.3066*Math.max(E.f.R,0.1)));
+    fa.connect(fb);
+    mix.connect(hp).connect(fa);
+    let node=fb;
+    if(X.body) X.body.forEach(([bh,bq2,bd])=>{
+      const b=bq('peaking',bh,bq2,bd); node.connect(b); node=b;
+    });
+    node.connect(vca);
+    const fp=[fa.frequency,fb.frequency];
+
+    if(E.f.env>0) fp.forEach(p=>{
+      p.setValueAtTime(fHz,t);
+      p.linearRampToValueAtTime(fHz+E.f.env*ktF*(0.35+0.65*vel),t+E.f.ea);
+      p.setTargetAtTime(fHz+E.f.env*ktF*E.f.es*(0.55+0.45*vel),t+E.f.ea,E.f.ed/3);
+    });
+    if(E.flfo){
+      const l=osc('sine',t,life); l.frequency.value=E.flfo.hz;
+      const lg=g(0);
+      lg.gain.setValueAtTime(0,t);
+      lg.gain.linearRampToValueAtTime(E.flfo.depth,t+(E.flfo.dly||0)+0.2);
+      fp.forEach(p=>lg.connect(p)); l.connect(lg);
+    }
+    const detunables=[];
+    if(E.fm){
+      E.fm.forEach(([cr,mr,I0,I1,tau,gn])=>{
+        const car=oscW('sine',t,life), mod=oscW('sine',t,life);
+        car.frequency.setValueAtTime(hz*cr,t);
+        mod.frequency.setValueAtTime(hz*mr,t);
+        const mg=g(0);
+        const I=I0*(0.25+0.75*vel*vel);
+        mg.gain.setValueAtTime(I*hz*mr,t);
+        mg.gain.exponentialRampToValueAtTime(Math.max(I1*(0.45+0.55*vel)*hz*mr,1),t+tau);
+        mod.connect(mg).connect(car.frequency);
+        car.connect(g(gn)).connect(mix);
+        detunables.push(car);
+      });
+    }else{
+      E.osc.forEach(([semi,kind,gn,cent,pan])=>{
+        const o=oscW(kind,t,life);
+        o.frequency.setValueAtTime(hz*Math.pow(2,semi/12),t);
+        o.detune.setValueAtTime(cent,t);
+        const og=g(gn); o.connect(og);
+        if(pan){ const p=ctx.createStereoPanner(); p.pan.value=pan; og.connect(p).connect(mix); }
+        else og.connect(mix);
+        if(E.drift){
+          const d=osc('sine',t,life);
+          d.frequency.value=0.09+Math.random()*0.21;
+          d.connect(g(E.drift)).connect(o.detune);
+        }
+        detunables.push(o);
+      });
+    }
+    if(E.click){
+      const [f,q,dec,amp]=E.click;
+      const cg=g(0); cg.connect(out);
+      const cf=bq('bandpass',f,q);
+      env(cg,t,amp*vel,dec,0.0008); cf.connect(cg); noiseBus.connect(cf);
+    }
+    if(E.vib){
+      const l=osc('sine',t,life); l.frequency.value=E.vib.hz;
+      const vg=g(0);
+      vg.gain.setValueAtTime(0,t);
+      vg.gain.setValueAtTime(0,t+E.vib.dly);
+      vg.gain.linearRampToValueAtTime(E.vib.cent,t+E.vib.dly+E.vib.ramp);
+      l.connect(vg); detunables.forEach(o=>{ if(o.detune) vg.connect(o.detune); });
+    }
+    /* ADSR */
+    const A=Math.max(E.a.a,0.0015), off=t+Math.max(dur,A+0.01);
+    const peak=E.peak*(0.35+0.65*vel), p=vca.gain;
+    p.setValueAtTime(0,t);
+    p.linearRampToValueAtTime(peak,t+A);
+    p.setTargetAtTime(peak*E.a.s,t+A,Math.max(dcy,0.005)/3);
+    hold(p,off);
+    p.setTargetAtTime(0,off,Math.max(rel,0.01)/3);
+    p.linearRampToValueAtTime(0,off+rel*1.6);
+  });
+}
+
+/* ═══════════════ 기타 ═══════════════ */
+const GTR = {
+  clean :{exF:3000,exLen:0.0016,exNz:0.9,beta:0.21,lpF:7000,shDb:-0.35,
+          t60:6.0,t60k:0.30,chord:[0],strum:0.008,det:2.5,lvl:0.32,amp:'amp_cln',
+          puBeta:0.27,puK:0.88},
+  crunch:{exF:3000,exLen:0.0016,exNz:1.0,beta:0.19,lpF:6000,shDb:-0.50,
+          t60:5.0,t60k:0.30,chord:[0,7],strum:0.006,det:2.5,lvl:0.26,amp:'amp_cru',
+          puBeta:0.24,puK:0.90},
+  hi    :{exF:3400,exLen:0.0014,exNz:1.2,beta:0.17,lpF:5000,shDb:-0.70,
+          t60:4.0,t60k:0.28,chord:[0,7,12],strum:0.005,det:2.0,lvl:0.22,amp:'amp_hi',
+          puBeta:0.12,puK:0.92},
+  mute  :{exF:3400,exLen:0.0012,exNz:1.4,beta:0.15,lpF:2400,shDb:-2.5,
+          t60:0.16,t60k:0.15,chord:[0,7],strum:0.003,det:2.0,lvl:0.30,amp:'amp_hi',
+          puBeta:0.12,puK:0.92,palm:1},
+  steel :{exF:2200,exLen:0.0020,exNz:0.6,beta:0.28,lpF:6500,shDb:-0.55,
+          t60:4.5,t60k:0.35,chord:[0],strum:0.012,det:3.5,lvl:0.34,amp:'body_steel'},
+  nylon :{exF:1100,exLen:0.0030,exNz:0.25,beta:0.33,lpF:3200,shDb:-1.40,
+          t60:2.8,t60k:0.40,chord:[0],strum:0.015,det:4.5,lvl:0.36,amp:'body_nyl'},
+  banjo   :{exF:4200,exLen:0.0012,exNz:1.3,beta:0.13,lpF:7500,shDb:-0.30,
+            t60:1.3,t60k:0.22,chord:[0],strum:0.006,det:2.0,lvl:0.30,amp:'body_banjo'},
+  mandolin:{exF:3600,exLen:0.0011,exNz:1.0,beta:0.19,lpF:6800,shDb:-0.45,
+            t60:1.1,t60k:0.28,chord:[0],strum:0.005,det:2.0,course:8,
+            lvl:0.32,amp:'body_steel'},
+  sitar   :{exF:2800,exLen:0.0020,exNz:0.7,beta:0.24,lpF:5200,shDb:-0.55,
+            t60:3.6,t60k:0.30,chord:[0],strum:0.010,det:2.0,
+            buzz:0.30,symp:[12,7,5,0,-5],lvl:0.34,amp:'body_sitar'},
+};
+
+/* 현 베이스 — src/core/engines.js 의 BSTR 과 같아야 한다 */
+const BSTR = {
+  finger :{exF:1400,exLen:0.0028,exNz:0.35,beta:0.13,lpF:3400,shDb:-0.9,
+           t60:5.0,t60k:0.32,chord:[0],strum:0,det:0,lvl:0.44,
+           puBeta:0.19,puK:0.85,amp:'bass_amp'},
+  pick   :{exF:3400,exLen:0.0014,exNz:1.2,beta:0.11,lpF:4200,shDb:-0.6,
+           t60:4.2,t60k:0.30,chord:[0],strum:0,det:0,lvl:0.40,
+           puBeta:0.16,puK:0.88,amp:'bass_amp'},
+  slap   :{exF:5200,exLen:0.0022,exNz:3.2,beta:0.24,lpF:7000,shDb:-0.25,
+           t60:2.6,t60k:0.26,chord:[0],strum:0,det:0,lvl:0.37,buzz:0.50,
+           puBeta:0.13,puK:0.92,amp:'bass_amp'},
+  upright:{exF:600, exLen:0.0060,exNz:0.30,beta:0.17,lpF:1300,shDb:-2.2,
+           t60:2.0,t60k:0.38,chord:[0],strum:0,det:0,lvl:0.47,
+           amp:'bass_upright'},
+};
+
+function ksInto(out,off,f,S,amp){
+  const P=SR/f, Di=Math.max(3,Math.floor(P)-1), fr=P-Di, ap=(1-fr)/(1+fr);
+  const T60=S.t60*Math.pow(82.41/f,S.t60k);
+  const g=Math.min(Math.pow(10,-3/(f*T60)),0.9975);
+  const a=1-Math.exp(-2*Math.PI*S.lpF/SR);
+  const b=1-Math.pow(10,S.shDb/20);
+  const B=S.beta;
+  const line=new Float32Array(Di);
+  for(let i=0;i<Di;i++) line[i]=(i/Di<B)?(1-B):-B;
+  const c=1-Math.exp(-2*Math.PI*S.exF/SR);
+  let z=line[Di-1];
+  for(let i=0;i<Di;i++){ z+=(line[i]-z)*c; line[i]=z; }
+  for(let i=Di-1;i>=0;i--){ z+=(line[i]-z)*c; line[i]=z; }
+  let ep=0; for(let i=0;i<Di;i++){ const x=Math.abs(line[i]); if(x>ep) ep=x; }
+  if(ep>1e-9){ const k=amp/ep; for(let i=0;i<Di;i++) line[i]*=k; }
+  const bl=Math.max(4,Math.min(Di,Math.round(SR*S.exLen)));
+  const nz=(S.exNz!=null?S.exNz:0.9)*amp;
+  for(let i=0;i<bl;i++)
+    line[i]+=(Math.random()*2-1)*(0.5-0.5*Math.cos(2*Math.PI*i/bl))*nz;
+  const thr = S.buzz ? amp*S.buzz : 0;
+  let wp=0,aX=0,aY=0,lp=0,dX=0,dY=0;
+  const M=Math.min(out.length-off, Math.ceil(SR*(T60*1.05+0.1)));
+  for(let n=0;n<M;n++){
+    const v0=line[wp];
+    const y=ap*v0+aX-ap*aY; aX=v0; aY=y;
+    lp+=(y-lp)*a;
+    let v=g*(y-b*(y-lp));
+    if(thr){
+      if(v> thr) v= thr+(v-thr)*0.30;
+      else if(v<-thr) v=-thr+(v+thr)*0.30;
+    }
+    dY=v-dX+0.999*dY; dX=v; v=dY;
+    line[wp]=v; wp=(wp+1)%Di;
+    out[off+n]+=y;
+  }
+}
+function ksBuf(ctx,hz,S){
+  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15,3.2);
+  const buf=ctx.createBuffer(1,Math.ceil(SR*sec),SR);
+  const out=buf.getChannelData(0);
+  S.chord.forEach((iv,si)=>{
+    const det=((si*7)%5-2)*S.det;
+    const f=hz*Math.pow(2,(iv+det/100)/12);
+    const off=Math.round(SR*S.strum*si), amp=Math.pow(0.88,si);
+    ksInto(out,off,f,S,amp);
+    if(S.course)
+      ksInto(out,Math.min(off+Math.round(SR*0.0013),out.length-1),
+             f*Math.pow(2,S.course/1200),S,amp*0.85);
+  });
+  if(S.symp) S.symp.forEach((iv,i)=>{
+    ksInto(out,0,hz*Math.pow(2,iv/12),{...S,exNz:0.05,buzz:0,t60:S.t60*1.4},
+           0.13*Math.pow(0.85,i));
+  });
+  if(S.puBeta){
+    const pd=Math.max(1,Math.round(SR/hz*S.puBeta));
+    const k=S.puK!=null?S.puK:0.88, nrm=1/(1+k);
+    for(let i=out.length-1;i>=pd;i--) out[i]=(out[i]-out[i-pd]*k)*nrm;
+  }
+  const skip=Math.round(SR*0.008);
+  let pk=0,pkSus=0;
+  for(let i=0;i<out.length;i++){
+    const x=Math.abs(out[i]);
+    if(x>pk) pk=x;
+    if(i>=skip && x>pkSus) pkSus=x;
+  }
+  const ref=Math.max(pkSus,pk*0.5);
+  if(ref>1e-6){ const k=S.lvl/ref; for(let i=0;i<out.length;i++) out[i]*=k; }
+  return buf;
+}
+
+/** raw = true 면 앰프 체인을 건너뛰고 현 자체만 본다.
+    tbl 로 GTR 대신 BSTR(현 베이스)을 넘길 수 있다 — 신호 경로가 같기 때문 */
+async function gtr(e,hz=110,dur=0.5,raw=false,tbl=null){
+  const S=(tbl||GTR)[e];
+  return await render(3.6, ({ctx,out,noiseBus,g,bq,osc,shp,wire,env,hold})=>{
+    const t=0.01, v=0.9;
+    const TUBE={cln:mkTube(1.15,0.06),cru:mkTube(2.4,0.22),
+                hi1:mkTube(2.2,0.26),hi2:mkTube(5.0,0.08)};
+    const bqf=(ty,f,q,db)=>bq(ty,f,(ty==='lowpass'||ty==='highpass')?Q_DB(q):q,db);
+    const cab=(lpF,hpF,dip,pk,mk)=>[
+      bqf('highpass',hpF,0.8), bqf('highpass',hpF,0.8),
+      bqf('peaking',105,1.6,4.0), bqf('peaking',400,1.2,dip),
+      bqf('peaking',2000,1.5,pk), bqf('peaking',3500,2.5,-5.0),
+      bqf('lowpass',lpF,0.707), bqf('lowpass',lpF,0.707), g(mk)];
+
+    let head;
+    if(raw){ head=g(1); head.connect(out); }
+    else if(S.amp==='body_steel') head=wire([bqf('highpass',75,0.7),
+      bqf('peaking',100,3.5,5.0),bqf('peaking',205,2.5,3.5),
+      bqf('peaking',400,2.0,2.0),bqf('peaking',2600,1.0,3.0),
+      bqf('lowpass',12000,0.707),out]);
+    else if(S.amp==='body_nyl') head=wire([bqf('highpass',80,0.7),
+      bqf('peaking',115,3.0,4.5),bqf('peaking',210,2.2,3.0),
+      bqf('peaking',430,1.8,1.5),bqf('lowshelf',300,0.7,1.5),
+      bqf('lowpass',5500,0.707),out]);
+    else if(S.amp==='body_banjo') head=wire([bqf('highpass',160,0.7),bqf('highpass',160,0.7),
+      bqf('peaking',370,2.6,4.5),bqf('peaking',1200,1.4,2.0),
+      bqf('peaking',3000,1.2,5.0),bqf('lowpass',9000,0.707),out]);
+    else if(S.amp==='body_sitar') head=wire([bqf('highpass',110,0.7),
+      bqf('peaking',180,2.2,4.0),bqf('peaking',540,1.6,2.0),
+      bqf('peaking',2600,1.0,5.5),bqf('peaking',4200,1.4,3.0),
+      bqf('lowpass',8000,0.707),out]);
+    else if(S.amp==='bass_amp') head=wire([bqf('highpass',35,0.7),
+      bqf('peaking',80,1.2,3.5),bqf('peaking',400,1.0,-2.5),
+      bqf('peaking',800,1.2,1.5),bqf('peaking',2500,1.1,2.5),
+      bqf('lowpass',5000,0.707),out]);
+    else if(S.amp==='bass_upright') head=wire([bqf('highpass',40,0.7),
+      bqf('peaking',70,2.0,4.5),bqf('peaking',180,1.6,2.5),
+      bqf('peaking',400,1.4,-2.0),bqf('peaking',1100,1.0,1.5),
+      bqf('lowpass',2600,0.707),out]);
+    else if(S.amp==='amp_cln') head=wire([bqf('peaking',5800,2.2,5.0),bqf('lowpass',8500,0.707),
+      bqf('highpass',90,0.7),bqf('peaking',250,1.2,-2.0),
+      g(1.15),shp(TUBE.cln),g(0.92),
+      bqf('highpass',90,0.8),bqf('peaking',160,1.2,2.0),
+      bqf('peaking',3000,1.4,2.5),bqf('lowpass',6500,0.707),out]);
+    else if(S.amp==='amp_cru') head=wire([bqf('peaking',3000,1.8,4.0),bqf('lowpass',6000,0.707),
+      bqf('highpass',120,0.7),bqf('peaking',700,0.9,-3.0),bqf('peaking',2000,0.8,3.5),
+      g(3.5),shp(TUBE.cru),bqf('highpass',70,0.7),g(0.42),
+      ...cab(5500,85,-3.5,3.5,1.6),out]);
+    else head=wire([
+      bqf('highpass',100,0.7),bqf('highpass',100,0.7),
+      bqf('peaking',720,0.8,6.0),bqf('peaking',240,1.0,-4.0),
+      g(4.0),shp(TUBE.hi1),
+      bqf('lowpass',8000,0.707),bqf('highpass',110,0.7),
+      g(6.0),shp(TUBE.hi2),
+      bqf('lowpass',6000,0.707),bqf('highpass',70,0.7),g(0.30),
+      ...cab(5000,80,-5.0,4.5,1.78),out]);
+
+    const buf=ksBuf(ctx,hz,S);
+    const rel=S.palm?0.06:0.30;
+    const end=t+Math.min(buf.duration,dur+rel)+0.08;
+    const gn=g(0); gn.connect(head);
+    const s=ctx.createBufferSource(); s.buffer=buf; s.connect(gn); s.start(t); s.stop(end);
+    gn.gain.setValueAtTime(0,t);
+    gn.gain.linearRampToValueAtTime(v,t+0.0015);
+    if(S.palm){
+      const gt=Math.min(dur*0.55,0.14);
+      gn.gain.exponentialRampToValueAtTime(Math.max(v*0.02,1e-5),t+gt);
+      gn.gain.linearRampToValueAtTime(0,t+gt+0.02);
+      const gT=g(0); gT.connect(out);
+      const oT=osc('sine',t,0.075);
+      oT.frequency.setValueAtTime(hz,t);
+      oT.frequency.exponentialRampToValueAtTime(hz*0.88,t+0.06);
+      env(gT,t,v*0.38,0.055,0.001); oT.connect(gT);
+      const gB=g(0); gB.connect(out);
+      const fB=bq('bandpass',150,1.4);
+      env(gB,t,v*0.18,0.040,0.0008); fB.connect(gB); noiseBus.connect(fB);
+    }else{
+      hold(gn.gain,t+dur);
+      gn.gain.exponentialRampToValueAtTime(Math.max(v*0.02,1e-5),t+dur+rel);
+      gn.gain.linearRampToValueAtTime(0,t+dur+rel+0.02);
+    }
+  });
+}
+
+/* ═══════════════ 실행 ═══════════════ */
+const hdr = '엔진        피크dB  크레스트 어택ms  T60s  중심Hz 노이즈비 │ ' +
+            '어택중심 │ H1  H2  H3  H4  H5  H6  H7  H8  H9  H10  (dB, 최대배음=0)';
+function row(name,a){
+  const t60 = a.t60==null ? '  ─ ' : a.t60.toFixed(2).padStart(5);
+  return name.padEnd(11)
+    + dB(a.peak).toFixed(1).padStart(6)
+    + a.crest.toFixed(1).padStart(8)
+    + (a.atk*1000).toFixed(1).padStart(8)
+    + t60
+    + a.cent.toFixed(0).padStart(8)
+    + a.noise.toFixed(2).padStart(8)
+    + a.centA.toFixed(0).padStart(9)
+    + ' │ '
+    + a.H.map(h=>(h<-60?' -∞':h.toFixed(0))).map(s=>s.padStart(4)).join('');
+}
+
+log('=== 톤 악기 실측 (OfflineAudioContext, 48kHz, 단독 렌더링) ===');
+log('배음은 지속부 30~230ms 구간의 Goertzel. 노이즈비 = 반배음 합/배음 합.\n');
+
+log('── 베이스 (A1 = 55Hz, Blend 38 / Drive 34 / X-Over 105 / Tone 3600) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['s808','sub','acid','fm','reese'])
+  log(row('bass/'+e, analyze(await bass(e), 55)));
+
+log('\n── 건반 (A3 = 220Hz, vel 0.9, dur 0.8s) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['pad','ep','pluck','supersaw','organ','poly','bell'])
+  log(row('keys/'+e, analyze(await keys(e), 220, {hStart:0.05,hEnd:0.35})));
+
+log('\n── 건반 신규 6종 (A3 = 220Hz) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['piano','clav','strings','horns','accordion','bandoneon'])
+  log(row('keys/'+e, analyze(await keys(e), 220, {hStart:0.05,hEnd:0.35,nh:12})));
+
+log('\n── 건반 신규 6종 (C2 = 65.4Hz — 낮은 음역 확인) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['piano','clav','strings','horns','accordion','bandoneon'])
+  log(row('keys/'+e, analyze(await keys(e,65.4,0.8), 65.4, {hStart:0.05,hEnd:0.35,nh:12})));
+
+log('\n── 기타 (A2 = 110Hz, 앰프·캐비닛 통과) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['clean','crunch','hi','mute','steel','nylon'])
+  log(row('gtr/'+e, analyze(await gtr(e), 110, {hStart:0.02,hEnd:0.22})));
+
+log('\n── 기타 (앰프 전 — 현 자체) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['clean','crunch','hi','steel','nylon'])
+  log(row('raw/'+e, analyze(await gtr(e,110,0.5,true), 110, {hStart:0.02,hEnd:0.22})));
+
+log('\n── 현 베이스 신규 4종 (E1 = 41.2Hz, 베이스 앰프 통과) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['finger','pick','slap','upright'])
+  log(row('bass/'+e, analyze(await gtr(e,41.2,0.45,false,BSTR), 41.2,
+                             {hStart:0.02,hEnd:0.30,nh:12})));
+
+log('\n── 현 베이스 (A1 = 55Hz — 기존 합성 베이스와 같은 음정) ──');
+log(hdr); log('─'.repeat(120));
+for(const e of ['finger','pick','slap','upright'])
+  log(row('bass/'+e, analyze(await gtr(e,55,0.45,false,BSTR), 55,
+                             {hStart:0.02,hEnd:0.30,nh:12})));
+
+log('\n── 발현 민속악기 신규 3종 ──');
+log(hdr); log('─'.repeat(120));
+log(row('banjo D3',    analyze(await gtr('banjo',146.8),   146.8,{hStart:0.02,hEnd:0.22})));
+log(row('mandolin A3', analyze(await gtr('mandolin',220),  220,  {hStart:0.02,hEnd:0.22})));
+log(row('sitar C3',    analyze(await gtr('sitar',130.8),   130.8,{hStart:0.02,hEnd:0.22})));
+
+log('\n── 질감 보정 검증: 음역 응답 (C2 65Hz / C4 262Hz / C6 1047Hz) ──');
+log('실제 악기는 높은 음이 밝고 짧다. 중심Hz 비와 T60 비로 확인한다.');
+log('엔진          중심C2  중심C4  중심C6   밝기비   T60 C2   T60 C6   감쇠비');
+log('─'.repeat(96));
+for(const e of ['piano','ep','marimba','vibes','clav','sax','organ','pad']){
+  const a=analyze(await keys(e,65.4,0.8),65.4,{hStart:0.05,hEnd:0.35});
+  const b=analyze(await keys(e,261.6,0.8),261.6,{hStart:0.05,hEnd:0.35});
+  const c=analyze(await keys(e,1046.5,0.8),1046.5,{hStart:0.05,hEnd:0.35});
+  const br=(c.cent/Math.max(a.cent,1)).toFixed(2);
+  const t2=a.t60==null?null:a.t60, t6=c.t60==null?null:c.t60;
+  const dr=(t2&&t6)?(t2/t6).toFixed(2):'─';
+  log(e.padEnd(12)
+    + a.cent.toFixed(0).padStart(7) + b.cent.toFixed(0).padStart(8) + c.cent.toFixed(0).padStart(8)
+    + br.padStart(9)
+    + (t2==null?'  ─':t2.toFixed(2)).padStart(9) + (t6==null?'  ─':t6.toFixed(2)).padStart(9)
+    + dr.padStart(9));
+}
+log('\n기준: 밝기비 > 1 (높은 음이 밝음) · 감쇠비 > 1 (높은 음이 짧음)');
+log('      피아노는 밝기비 2~4, 감쇠비 3~8 이 실물에 가깝다');
+
+log('\n── 질감 보정 검증: 벨로시티 응답 (A3, vel 0.35 vs 1.0) ──');
+log('타건 악기는 밝기 변화가 어택에 있다 — 지속부만 재면 놓친다. 둘 다 잰다.');
+log('엔진        지속(약) 지속(강)  지속비 │ 어택(약) 어택(강)  어택비 │ 피크차dB');
+log('─'.repeat(88));
+for(const e of ['piano','ep','clav','lead','sax','pluck','vibes','marimba','organ']){
+  /* 같은 조건을 3회 평균 — 위상이 매번 랜덤이라 1회로는 흔들린다 */
+  const avg = async (v,k) => {
+    let c=0; for(let i=0;i<3;i++){
+      const a=analyze(await keys(e,220,0.8,v),220,{hStart:0.05,hEnd:0.35});
+      c += a[k];
+    } return c/3;
+  };
+  const ws=await avg(0.35,'cent'), ss=await avg(1.0,'cent');
+  const wa=await avg(0.35,'centA'), sa=await avg(1.0,'centA');
+  const wp=await avg(0.35,'peak'),  sp=await avg(1.0,'peak');
+  log(e.padEnd(11)
+    + ws.toFixed(0).padStart(8) + ss.toFixed(0).padStart(9)
+    + (ss/Math.max(ws,1)).toFixed(2).padStart(8) + ' │'
+    + wa.toFixed(0).padStart(8) + sa.toFixed(0).padStart(9)
+    + (sa/Math.max(wa,1)).toFixed(2).padStart(8) + ' │'
+    + (dB(sp)-dB(wp)).toFixed(1).padStart(9));
+}
+log('\n기준: 세게 칠수록 밝아져야 한다(비 > 1). 오르간만 예외 — 실물도 벨로시티가 없다');
+
+log('\n── 실제 악기 기준값 (문헌·측정 통설) ──');
+log('일렉베이스 핑거 E1  : H2 ≥ H1, H3~H5 -6~-15dB, 중심 300~700Hz, 어택 8~20ms');
+log('일렉기타 클린 A2    : H1 최강, H2~H6 -3~-12dB, 중심 700~1500Hz, 어택 2~6ms');
+log('일렉기타 하이게인   : H2~H8 이 H1 과 ±6dB 안, 중심 1200~2500Hz');
+log('로즈 EP A3          : H1 최강, H2 -12~-20, 배음 6~9번째에 타인(tine) 봉우리');
+log('드로바 오르간       : 드로바 배음만 (1,2,3,4,6,8) — 그 사이 배음은 -40dB 이하');
+log('\n측정 완료');
+</script>

@@ -1,0 +1,13 @@
+{
+  "name": "pulse-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PULSE·16 전용 MCP — 사운드 품질 계측과 UI/UX 점검",
+  "bin": { "pulse-audit": "server.js" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "axe-core": "^4.12.1",
+    "playwright": "^1.62.1"
+  }
+}

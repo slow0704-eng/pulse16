@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>감사 주장 검증</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}b{color:#e8a33d}</style>
+<pre id="out"></pre>
+<script type="module">
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+const SR=48000, dB=x=>x<1e-12?-Infinity:20*Math.log10(x);
+const peakOf=d=>{let p=0;for(let i=0;i<d.length;i++){const a=Math.abs(d[i]);if(a>p)p=a;}return p;};
+
+function mkCurve(k){const n=8192,c=new Float32Array(n),norm=Math.tanh(k);
+  for(let i=0;i<n;i++){const x=i/(n/2)-1;c[i]=Math.tanh(x*k)/norm;}return c;}
+
+/* ── 검증 1: WaveShaper 출력이 정말 ±1 로 한정되는가? oversample 영향은? ── */
+async function shaperBound(oversample){
+  const ctx=new OfflineAudioContext(1,SR*0.2,SR);
+  /* 큰 진폭의 사인을 넣어 커브 양끝을 확실히 때린다 */
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=110;
+  const g=ctx.createGain(); g.gain.value=8;           // 8배 과입력
+  const ws=ctx.createWaveShaper(); ws.curve=mkCurve(1.8); ws.oversample=oversample;
+  o.connect(g).connect(ws).connect(ctx.destination); o.start(0);
+  const b=await ctx.startRendering();
+  return peakOf(b.getChannelData(0));
+}
+
+/* ── 검증 2: 실제 마스터 체인 최대 도달 피크 (meterOut 위치) ── */
+async function chainMax(vol, drv, overdrive){
+  const ctx=new OfflineAudioContext(1,SR*0.5,SR);
+  const CURVES=[mkCurve(1.1),mkCurve(1.8),mkCurve(2.8),mkCurve(4.0)];
+  const satIn=ctx.createGain(); satIn.gain.value=1+drv*1.1;
+  const satOut=ctx.createGain(); satOut.gain.value=1/(1+drv*0.85);
+  const shaper=ctx.createWaveShaper(); shaper.curve=CURVES[1]; shaper.oversample='4x';
+  const satLP=ctx.createBiquadFilter(); satLP.type='lowpass'; satLP.frequency.value=15000;
+  const masterGain=ctx.createGain(); masterGain.gain.value=vol/100*0.9;
+  const lim=ctx.createDynamicsCompressor();
+  lim.threshold.value=-2; lim.knee.value=1; lim.ratio.value=16; lim.attack.value=0.004; lim.release.value=0.110;
+  /* 극단 과입력 소스 */
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=110;
+  const src=ctx.createGain(); src.gain.value=overdrive;
+  o.connect(src).connect(satIn).connect(shaper).connect(satLP).connect(satOut).connect(masterGain);
+  masterGain.connect(lim); lim.connect(ctx.destination);
+  o.start(0);
+  const b=await ctx.startRendering();
+  return peakOf(b.getChannelData(0));
+}
+
+/* ── 검증 3: 병렬 저역 새추 경로가 20Hz 럼블 컷을 우회하는가 ── */
+async function subsonicLeak(){
+  const ctx=new OfflineAudioContext(1,SR*0.5,SR);
+  const CURVES=[mkCurve(1.1)];
+  const busTrim=ctx.createGain(); busTrim.gain.value=1;
+  const rumble=ctx.createBiquadFilter(); rumble.type='highpass'; rumble.frequency.value=20; rumble.Q.value=0.6;
+  const sumBus=ctx.createGain();
+  /* 본선 */
+  busTrim.connect(rumble); rumble.connect(sumBus);
+  /* 병렬 저역 새추 — 실제 코드처럼 busTrim(럼블 앞)에서 분기 */
+  const lp1=ctx.createBiquadFilter(); lp1.type='lowpass'; lp1.frequency.value=110;
+  const lp2=ctx.createBiquadFilter(); lp2.type='lowpass'; lp2.frequency.value=110;
+  const lowSat=ctx.createWaveShaper(); lowSat.curve=CURVES[0]; lowSat.oversample='4x';
+  const lowGain=ctx.createGain(); lowGain.gain.value=0.62*0.80;
+  busTrim.connect(lp1).connect(lp2).connect(lowSat).connect(lowGain).connect(sumBus);
+  sumBus.connect(ctx.destination);
+  /* 18.5Hz 서브소닉 주입 (deep 킥 + ktune -12 상황) */
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=18.5;
+  o.connect(busTrim); o.start(0);
+  const b=await ctx.startRendering();
+  return peakOf(b.getChannelData(0).slice(SR*0.2));   // 과도상태 제외
+}
+async function subsonicFixed(){
+  const ctx=new OfflineAudioContext(1,SR*0.5,SR);
+  const CURVES=[mkCurve(1.1)];
+  const busTrim=ctx.createGain(); busTrim.gain.value=1;
+  const rumble=ctx.createBiquadFilter(); rumble.type='highpass'; rumble.frequency.value=20; rumble.Q.value=0.6;
+  const sumBus=ctx.createGain();
+  busTrim.connect(rumble); rumble.connect(sumBus);
+  const lp1=ctx.createBiquadFilter(); lp1.type='lowpass'; lp1.frequency.value=110;
+  const lp2=ctx.createBiquadFilter(); lp2.type='lowpass'; lp2.frequency.value=110;
+  const lowSat=ctx.createWaveShaper(); lowSat.curve=CURVES[0]; lowSat.oversample='4x';
+  const lowGain=ctx.createGain(); lowGain.gain.value=0.62*0.80;
+  rumble.connect(lp1).connect(lp2).connect(lowSat).connect(lowGain).connect(sumBus);  // ← 럼블 뒤에서 분기
+  sumBus.connect(ctx.destination);
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=18.5;
+  o.connect(busTrim); o.start(0);
+  const b=await ctx.startRendering();
+  return peakOf(b.getChannelData(0).slice(SR*0.2));
+}
+
+/* ── 검증 4: 110Hz 부근 위상 상쇄 ── */
+async function phaseAt(freq){
+  const mk=async(withParallel)=>{
+    const ctx=new OfflineAudioContext(1,SR*0.5,SR);
+    const CURVES=[mkCurve(1.1)];
+    const busTrim=ctx.createGain();
+    const rumble=ctx.createBiquadFilter(); rumble.type='highpass'; rumble.frequency.value=20; rumble.Q.value=0.6;
+    const sumBus=ctx.createGain();
+    busTrim.connect(rumble); rumble.connect(sumBus);
+    if(withParallel){
+      const lp1=ctx.createBiquadFilter(); lp1.type='lowpass'; lp1.frequency.value=110;
+      const lp2=ctx.createBiquadFilter(); lp2.type='lowpass'; lp2.frequency.value=110;
+      const lowSat=ctx.createWaveShaper(); lowSat.curve=CURVES[0]; lowSat.oversample='4x';
+      const lowGain=ctx.createGain(); lowGain.gain.value=0.62*0.80;
+      busTrim.connect(lp1).connect(lp2).connect(lowSat).connect(lowGain).connect(sumBus);
+    }
+    sumBus.connect(ctx.destination);
+    const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=freq;
+    const g=ctx.createGain(); g.gain.value=0.3;   // 새추 선형 구간 유지
+    o.connect(g).connect(busTrim); o.start(0);
+    const b=await ctx.startRendering();
+    return peakOf(b.getChannelData(0).slice(SR*0.25));
+  };
+  return {off:await mk(false), on:await mk(true)};
+}
+
+log('<b>=== 검증 1: WaveShaper 출력 한계 (8배 과입력) ===</b>');
+for(const os of ['none','2x','4x']){
+  const p=await shaperBound(os);
+  log(`  oversample=${os.padEnd(5)} 피크 ${p.toFixed(4)}  (${dB(p).toFixed(2)} dBFS)`);
+}
+log('  → oversample 보간 링잉으로 커브 상한(1.0)을 넘는지 확인');
+
+log('\n<b>=== 검증 2: 마스터 체인 최대 도달 피크 (meterOut 위치) ===</b>');
+log('  Master=100, Drive=0, 소스 과입력 8배 (최악 조건)');
+for(const [vol,drv,od] of [[100,0,8],[100,1,8],[74,0.14,8],[100,0,1]]){
+  const p=await chainMax(vol,drv,od);
+  log(`  vol=${String(vol).padStart(3)} drv=${String(drv).padEnd(4)} 과입력×${od} → 피크 ${p.toFixed(4)} (${dB(p).toFixed(2)} dBFS)`);
+}
+log('  → 클립 경고 임계 -0.3 dBFS 에 도달 가능한가?');
+
+log('\n<b>=== 검증 3: 서브소닉(18.5Hz) 누출 ===</b>');
+const leak=await subsonicLeak(), fixed=await subsonicFixed();
+log(`  현재 구조 (busTrim 에서 분기) : ${leak.toFixed(4)}  (${dB(leak).toFixed(1)} dBFS)`);
+log(`  수정 구조 (rumble 뒤에서 분기): ${fixed.toFixed(4)}  (${dB(fixed).toFixed(1)} dBFS)`);
+log(`  → 차이 ${(dB(leak)-dB(fixed)).toFixed(1)} dB`);
+
+log('\n<b>=== 검증 4: 병렬 경로 합산 시 주파수별 이득 ===</b>');
+log('  주파수   본선만    본선+병렬   차이');
+for(const f of [30,50,80,110,160,250]){
+  const r=await phaseAt(f);
+  log(`  ${String(f).padStart(4)}Hz  ${r.off.toFixed(4)}   ${r.on.toFixed(4)}   ${(dB(r.on)-dB(r.off)>=0?'+':'')}${(dB(r.on)-dB(r.off)).toFixed(2)} dB`);
+}
+log('  → Sub 노브가 저역을 더하는가, 상쇄시키는가');
+
+log('\n검증 완료');
+</script>

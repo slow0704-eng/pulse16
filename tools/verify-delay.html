@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>DelayNode 피드백 루프 제약 검증</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}b{color:#e8a33d}</style>
+<pre id="out"></pre>
+<script type="module">
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+const SR=48000;
+/* 자기상관으로 실제 울린 기본주파수를 역산 */
+function detectF0(d,from,SR){
+  const N=Math.min(d.length-from, SR*0.3);
+  let best=0,bestLag=0;
+  for(let lag=Math.floor(SR/1500); lag<Math.floor(SR/60); lag++){
+    let s=0; for(let i=0;i<N-lag;i++) s+=d[from+i]*d[from+i+lag];
+    if(s>best){best=s;bestLag=lag;}
+  }
+  return bestLag? SR/bestLag : 0;
+}
+
+/* Karplus-Strong 라이브 루프 — 목표 주파수로 지연을 세팅하고 실제 나온 음정을 잰다 */
+async function ksLive(targetHz){
+  const ctx=new OfflineAudioContext(1,SR*0.5,SR);
+  const dly=ctx.createDelay(0.05);
+  dly.delayTime.value = 1/targetHz;
+  const lp=ctx.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=6000; lp.Q.value=-3;
+  const fb=ctx.createGain(); fb.gain.value=0.99;
+  dly.connect(lp).connect(fb).connect(dly);          // 사이클
+  lp.connect(ctx.destination);
+  /* 짧은 노이즈 버스트로 여기 */
+  const bl=Math.max(4,Math.round(SR/targetHz));
+  const nb=ctx.createBuffer(1,bl,SR), nd=nb.getChannelData(0);
+  for(let i=0;i<bl;i++) nd[i]=(Math.random()*2-1)*(0.5-0.5*Math.cos(2*Math.PI*i/bl));
+  const src=ctx.createBufferSource(); src.buffer=nb; src.connect(dly); src.start(0);
+  const b=await ctx.startRendering();
+  return detectF0(b.getChannelData(0), Math.floor(SR*0.15), SR);
+}
+
+/* 사이클 밖 딜레이는 제약이 없는지 확인 */
+async function delayNoCycle(sec){
+  const ctx=new OfflineAudioContext(1,SR*0.2,SR);
+  const d=ctx.createDelay(0.05); d.delayTime.value=sec;
+  const imp=ctx.createBuffer(1,1,SR); imp.getChannelData(0)[0]=1;
+  const s=ctx.createBufferSource(); s.buffer=imp; s.connect(d).connect(ctx.destination); s.start(0);
+  const b=await ctx.startRendering();
+  const arr=b.getChannelData(0);
+  let at=-1; for(let i=0;i<arr.length;i++) if(Math.abs(arr[i])>0.5){at=i;break;}
+  return at;
+}
+
+const RQ=128/SR;
+log('<b>=== 검증 1: 피드백 루프 안의 DelayNode 최소 지연 ===</b>');
+log(`  렌더 퀀텀 128샘플 = ${(RQ*1000).toFixed(3)} ms → 이론 상한 ${(1/RQ).toFixed(1)} Hz\n`);
+log('  목표 Hz   목표 지연(ms)   실제 울린 Hz   판정');
+log('  ──────────────────────────────────────────────');
+for(const f of [82.41,110,146.83,196,246.94,329.63,349.23,440,587.33,880]){
+  const got=await ksLive(f);
+  const ok=Math.abs(got-f)/f < 0.03;
+  log(`  ${String(f.toFixed(2)).padStart(7)}   ${(1000/f).toFixed(3).padStart(11)}   ${got.toFixed(1).padStart(11)}   ${ok?'일치':'★ 클램프됨'}`);
+}
+
+log('\n<b>=== 검증 2: 사이클 밖 DelayNode 는 제약이 있는가 ===</b>');
+log('  임펄스를 넣고 실제 지연 샘플 수를 측정');
+log('  요청(샘플)   실제(샘플)   판정');
+for(const s of [1,10,64,128,256]){
+  const got=await delayNoCycle(s/SR);
+  log(`  ${String(s).padStart(9)}   ${String(got).padStart(9)}   ${got===s?'정확':(got>=128?'128 클램프':'근사')}`);
+}
+
+log('\n<b>=== 검증 3: 사이클에 DelayNode 가 없으면 무음인가 ===</b>');
+{
+  const ctx=new OfflineAudioContext(1,SR*0.2,SR);
+  const g1=ctx.createGain(), g2=ctx.createGain();
+  g2.gain.value=0.5;
+  g1.connect(g2); g2.connect(g1);                    // 딜레이 없는 사이클
+  g1.connect(ctx.destination);
+  const imp=ctx.createBuffer(1,1,SR); imp.getChannelData(0)[0]=1;
+  const s=ctx.createBufferSource(); s.buffer=imp; s.connect(g1); s.start(0);
+  const b=await ctx.startRendering();
+  let p=0; const a=b.getChannelData(0);
+  for(let i=0;i<a.length;i++) p=Math.max(p,Math.abs(a[i]));
+  log(`  딜레이 없는 게인 사이클의 출력 피크: ${p.toFixed(6)}  → ${p<1e-6?'무음 (주장 맞음)':'소리 남'}`);
+}
+log('\n검증 완료');
+</script>

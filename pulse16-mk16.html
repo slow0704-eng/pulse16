@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PULSE·16 MK XVI — Verified Presets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+
+<link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/layout.css">
+<link rel="stylesheet" href="styles/rack.css">
+<link rel="stylesheet" href="styles/sequencer.css">
+<link rel="stylesheet" href="styles/controls.css">
+
+<div class="unit">
+  <div class="plate">
+    <div class="brand">PULSE<span>·</span>16</div>
+    <div class="mk">MK XVI</div>
+    <div class="tagline">Verified&nbsp;Presets</div>
+    <div class="stat" id="stat">엔진 대기 중</div>
+  </div>
+
+  <div class="warn" id="warn"></div>
+
+  <div class="library">
+    <span class="lbl">Pattern Library — 208종 · <span id="libcount">208종 표시</span>
+      · <i style="font-style:normal;color:#6f767f">·붙은 칩은 규칙 파생(청감 미검증) · 붉은 칩은 Tone.js 예제</i></span>
+    <div class="chips" id="cats" style="margin-bottom:7px"></div>
+    <div class="chips" id="subs" style="margin-bottom:9px" hidden></div>
+    <div class="chips" id="chips" style="max-height:220px;overflow-y:auto"></div>
+  </div>
+
+  <div class="bankbar">
+    <div class="brow">
+      <div class="knob"><label class="lbl" for="kit">Kit 일괄 적용</label>
+        <select id="kit" style="min-width:190px"></select></div>
+      <div class="knob"><span class="lbl">Bank</span>
+        <div class="slots">
+          <button class="util" id="preload">전체 받기</button>
+          <button class="util" id="allsyn">전부 합성</button>
+        </div></div>
+      <div class="knob"><label class="lbl" for="ktrim">Sample Trim</label>
+        <input type="range" id="ktrim" min="-18" max="6" value="-4" style="width:96px">
+        <div class="read tiny"><span id="ktrimv">-4</span><i> dB</i></div></div>
+      <div class="kstat" id="kstat">합성 엔진 사용 중 — 샘플은 필요할 때만 내려받습니다</div>
+    </div>
+    <div class="brow">
+      <div class="knob" style="flex:1">
+        <span class="lbl">Loop Deck — 배경 루프 (박자 동기는 아님)</span>
+        <div class="loops" id="loops"></div></div>
+      <div class="knob"><label class="lbl" for="lvol">Loop Vol</label>
+        <input type="range" id="lvol" min="0" max="100" value="40" style="width:90px">
+        <div class="read tiny"><span id="lvolv">40</span><i> %</i></div></div>
+      <div class="knob"><label class="lbl" for="lrate">Loop Rate</label>
+        <input type="range" id="lrate" min="50" max="200" value="100" style="width:90px">
+        <div class="read tiny"><span id="lratev">100</span><i> %</i></div></div>
+    </div>
+    <div class="brow">
+      <div class="knob" style="flex:1;min-width:300px">
+        <label class="lbl" for="curl">직접 URL — tonejs.github.io/audio/ 안의 어떤 파일이든</label>
+        <input type="text" id="curl" placeholder="berklee/gurgling_theremin_1.mp3"></div>
+      <div class="knob"><label class="lbl" for="cdst">배정 대상</label>
+        <select id="cdst" style="width:120px"></select></div>
+      <div class="knob"><span class="lbl">&nbsp;</span>
+        <button class="util" id="cload">불러오기</button></div>
+    </div>
+  </div>
+
+  <div class="transport">
+    <button class="play" id="play" data-on="0">Play</button>
+    <div class="knob"><label class="lbl" for="bpm">Tempo</label>
+      <input type="range" id="bpm" min="60" max="250" value="88">
+      <div class="read"><span id="bpmv">88</span><i> BPM</i></div></div>
+    <div class="knob"><label class="lbl" for="swing">Swing</label>
+      <input type="range" id="swing" min="0" max="100" value="38">
+      <div class="read"><span id="swingv">38</span><i> 노브 · <span id="swingpct">62% 스윙</span></i></div></div>
+    <div class="knob"><label class="lbl" for="chance">Chance</label>
+      <input type="range" id="chance" min="0" max="100" value="100">
+      <div class="read"><span id="chancev">100</span><i> %</i></div></div>
+    <div class="knob"><label class="lbl" for="vol">Master</label>
+      <input type="range" id="vol" min="0" max="100" value="74">
+      <div class="read"><span id="volv">74</span><i> %</i></div></div>
+    <div class="knob"><span class="lbl">Pattern Bank</span><div class="slots" id="slots"></div></div>
+    <div class="knob"><span class="lbl">Edit</span>
+      <div class="slots">
+        <button class="util" id="undo" title="실행취소 (Ctrl+Z)" disabled>↶</button>
+        <button class="util" id="redo" title="다시하기 (Ctrl+Shift+Z)" disabled>↷</button>
+        <button class="util" id="rand">Seed</button>
+        <button class="util" id="clear">Clear</button>
+      </div></div>
+    <div class="knob"><span class="lbl">Help</span>
+      <div class="slots"><button class="util" id="helpbtn" title="단축키 (?)">?</button></div></div>
+  </div>
+
+  <div class="varbar">
+    <span class="lbl">Variation — 루프가 돌 때 스스로 바뀌는 것들</span>
+    <div class="vrow">
+    <div class="knob"><span class="lbl">Kit 셔플</span>
+      <div class="slots">
+        <button class="util" id="shuf" data-on="0">꺼짐</button>
+        <select id="shufn" aria-label="킷 셔플 주기" style="width:78px">
+          <option value="1">1 루프</option>
+          <option value="2">2 루프</option>
+          <option value="4" selected>4 루프</option>
+          <option value="8">8 루프</option>
+        </select>
+      </div></div>
+    <div class="knob"><span class="lbl">패턴 셔플</span>
+      <div class="slots">
+        <button class="util" id="pshuf" data-on="0">꺼짐</button>
+        <select id="pshufn" aria-label="패턴 셔플 주기" style="width:78px">
+          <option value="1">1 루프</option>
+          <option value="2">2 루프</option>
+          <option value="4" selected>4 루프</option>
+          <option value="8">8 루프</option>
+          <option value="16">16 루프</option>
+        </select>
+        <select id="pshufmode" aria-label="패턴 셔플 모드" style="width:104px">
+          <option value="seq" selected>뱅크 순차</option>
+          <option value="rand">뱅크 무작위</option>
+          <option value="genre">장르 프리셋</option>
+        </select>
+        <select id="pshufbpm" aria-label="패턴 셔플 템포 처리" style="width:96px">
+          <option value="keep" selected>템포 유지</option>
+          <option value="follow">템포 따라감</option>
+        </select>
+      </div></div>
+    <div class="knob"><span class="lbl">필인 — 작은 것과 큰 것을 따로 돌립니다</span>
+      <div class="slots">
+        <button class="util" id="fill" data-on="0">꺼짐</button>
+        <span class="tag2">작은</span>
+        <select id="filln" aria-label="작은 필인 주기" style="width:76px">
+          <option value="0">안 씀</option>
+          <option value="2">2 루프</option>
+          <option value="4" selected>4 루프</option>
+          <option value="8">8 루프</option>
+        </select>
+        <select id="fillmode" aria-label="작은 필인 종류" style="width:122px"></select>
+        <span class="tag2">큰</span>
+        <select id="fillnL" aria-label="큰 필인 주기" style="width:76px">
+          <option value="0">안 씀</option>
+          <option value="8">8 루프</option>
+          <option value="16" selected>16 루프</option>
+          <option value="32">32 루프</option>
+        </select>
+        <select id="fillmodeL" aria-label="큰 필인 종류" style="width:122px"></select>
+      </div></div>
+    <div class="knob"><span class="lbl">선율 · 기타 리프 — 길이는 루프 개수로 셉니다</span>
+      <div class="slots">
+        <button class="util" id="mel" data-on="0">꺼짐</button>
+        <select id="melmode" aria-label="선율 종류" style="width:150px"></select>
+        <span class="tag2">길이</span>
+        <select id="mellen" aria-label="선율 길이" style="width:96px">
+          <option value="auto" selected>자동</option>
+          <option value="16">16 루프</option>
+          <option value="32">32 루프</option>
+          <option value="64">64 루프</option>
+        </select>
+        <span class="tag2">겹침</span>
+        <select id="mellayer" aria-label="선율 겹침" style="width:104px">
+          <option value="off" selected>없음</option>
+          <option value="octave">옥타브 위</option>
+          <option value="third">3도 화성</option>
+          <option value="fifth">5도 화성</option>
+          <option value="counter">대선율</option>
+        </select>
+        <select id="mellayereng" aria-label="겹칠 음색" style="width:132px"></select>
+      </div></div>
+    </div>
+    <div class="varstat kstat" id="varstat"></div>
+  </div>
+
+  <div class="rackbar">
+    <span class="lbl">Panels</span>
+    <button class="pbtn" data-panel="tun"  data-on="0"><span class="car">▸</span> Tune</button>
+    <button class="pbtn" data-panel="low"  data-on="0"><span class="car">▸</span> Bass</button>
+    <button class="pbtn" data-panel="key"  data-on="0"><span class="car">▸</span> Keys·Gtr</button>
+    <button class="pbtn" data-panel="mst"  data-on="0"><span class="car">▸</span> Master</button>
+    <button class="pbtn" data-panel="std"  data-on="0"><span class="car">▸</span> Studio</button>
+    <span class="kstat" id="savestat" style="text-align:right">자동 저장 대기</span>
+    <button class="util" id="wipe" title="저장된 상태를 지우고 공장 초기화">저장 초기화</button>
+  </div>
+
+  <div class="fx tun" hidden>
+    <div class="tag">Tune</div>
+    <div class="knob sm"><label class="lbl" for="ktune">Kick</label>
+      <input type="range" id="ktune" min="-12" max="12" value="-3">
+      <div class="read tiny"><span id="ktunev">-3</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="stune">Snare</label>
+      <input type="range" id="stune" min="-12" max="12" value="-3">
+      <div class="read tiny"><span id="stunev">-3</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="ttune">Tom</label>
+      <input type="range" id="ttune" min="-12" max="12" value="-4">
+      <div class="read tiny"><span id="ttunev">-4</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="htune">Hat</label>
+      <input type="range" id="htune" min="-12" max="12" value="-1">
+      <div class="read tiny"><span id="htunev">-1</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="bsemi">Bass Semi</label>
+      <input type="range" id="bsemi" min="-12" max="12" value="0">
+      <div class="read tiny"><span id="bsemiv">0</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="oct">Bass Oct</label>
+      <select id="oct" style="height:26px;width:76px"></select></div>
+    <div class="knob sm"><label class="lbl" for="root">Root</label>
+      <select id="root" style="height:26px;width:64px"></select></div>
+    <div class="knob sm"><label class="lbl" for="scale">Scale</label>
+      <select id="scale" style="height:26px;width:132px"></select></div>
+  </div>
+
+  <div class="fx low" hidden>
+    <div class="tag">Bass</div>
+    <div class="knob sm"><label class="lbl" for="gate">Length</label>
+      <input type="range" id="gate" min="20" max="800" value="95">
+      <div class="read tiny"><span id="gatev">95</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="bglide">Glide</label>
+      <input type="range" id="bglide" min="0" max="100" value="0">
+      <div class="read tiny"><span id="bglidev">0</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="bmix">Blend</label>
+      <input type="range" id="bmix" min="0" max="100" value="38">
+      <div class="read tiny"><span id="bmixv">38</span><i> harm</i></div></div>
+    <div class="knob sm"><label class="lbl" for="bdrv">Drive</label>
+      <input type="range" id="bdrv" min="0" max="100" value="34">
+      <div class="read tiny"><span id="bdrvv">34</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="xover">X-Over</label>
+      <input type="range" id="xover" min="60" max="300" value="105">
+      <div class="read tiny"><span id="xoverv">105</span><i> Hz</i></div></div>
+    <div class="knob sm"><label class="lbl" for="btone">Tone</label>
+      <input type="range" id="btone" min="1200" max="8000" value="3600">
+      <div class="read tiny"><span id="btonev">3600</span><i> Hz</i></div></div>
+    <div class="knob sm"><label class="lbl" for="sub">Sub</label>
+      <input type="range" id="sub" min="0" max="100" value="62">
+      <div class="read tiny"><span id="subv">62</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="harm">Exciter</label>
+      <input type="range" id="harm" min="0" max="100" value="36">
+      <div class="read tiny"><span id="harmv">36</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="punch">Punch</label>
+      <input type="range" id="punch" min="0" max="100" value="60">
+      <div class="read tiny"><span id="punchv">60</span><i> %</i></div></div>
+  </div>
+
+  <div class="fx key" hidden>
+    <div class="tag">Keys</div>
+    <div class="knob sm"><label class="lbl" for="ksemi">Keys Semi</label>
+      <input type="range" id="ksemi" min="-12" max="12" value="0">
+      <div class="read tiny"><span id="ksemiv">0</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="koct">Keys Oct</label>
+      <select id="koct" style="height:26px;width:76px"></select></div>
+    <div class="knob sm"><label class="lbl" for="kgate">Keys Length</label>
+      <input type="range" id="kgate" min="20" max="800" value="380">
+      <div class="read tiny"><span id="kgatev">380</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="gsemi">Gtr Semi</label>
+      <input type="range" id="gsemi" min="-12" max="12" value="0">
+      <div class="read tiny"><span id="gsemiv">0</span><i> st</i></div></div>
+    <div class="knob sm"><label class="lbl" for="goct">Gtr Oct</label>
+      <select id="goct" style="height:26px;width:76px"></select></div>
+    <div class="knob sm"><label class="lbl" for="ggate">Gtr Length</label>
+      <input type="range" id="ggate" min="20" max="800" value="240">
+      <div class="read tiny"><span id="ggatev">240</span><i> %</i></div></div>
+  </div>
+
+  <div class="fx mst" hidden>
+    <div class="tag">Master</div>
+    <div class="meters">
+      <div class="mrow" id="mOutRow"><em>Out</em><div class="bar" id="mOut"><i></i><b style="left:88%"></b></div>
+        <span class="mval" id="mOutV">-∞</span><span id="clipTag">CLIP</span></div>
+      <div class="mrow"><em>G.R.</em><div class="bar" id="mGr"><i></i><b style="left:50%"></b></div>
+        <span class="mval" id="mGrV">0.0</span></div>
+      <div class="mrow"><em>Bass</em><div class="bar" id="mBas"><i></i><b style="left:80%"></b></div>
+        <span class="mval" id="mBasV">-∞</span></div>
+    </div>
+    <div class="knob sm"><label class="lbl" for="trim">Bus Trim</label>
+      <input type="range" id="trim" min="-18" max="6" value="-6">
+      <div class="read tiny"><span id="trimv">-6</span><i> dB</i></div></div>
+    <div class="knob sm"><label class="lbl" for="lthr">Limit Thr</label>
+      <input type="range" id="lthr" min="-18" max="0" value="-2">
+      <div class="read tiny"><span id="lthrv">-2</span><i> dB</i></div></div>
+    <div class="knob sm"><label class="lbl" for="lrel">Limit Rel</label>
+      <input type="range" id="lrel" min="20" max="400" value="110">
+      <div class="read tiny"><span id="lrelv">110</span><i> ms</i></div></div>
+    <div class="knob sm"><label class="lbl" for="gatk">Glue Atk</label>
+      <input type="range" id="gatk" min="1" max="40" value="30">
+      <div class="read tiny"><span id="gatkv">30</span><i> ms</i></div></div>
+    <div class="knob sm"><label class="lbl" for="grat">Glue Amt</label>
+      <input type="range" id="grat" min="0" max="100" value="40">
+      <div class="read tiny"><span id="gratv">40</span><i> %</i></div></div>
+  </div>
+
+  <div class="fx std" hidden>
+    <div class="tag">Studio</div>
+    <div class="knob sm"><label class="lbl" for="rev">Reverb</label>
+      <input type="range" id="rev" min="0" max="100" value="26">
+      <div class="read tiny"><span id="revv">26</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="space">Space</label>
+      <select id="space" style="height:26px;width:72px">
+        <option value="room">Room</option><option value="plate" selected>Plate</option><option value="hall">Hall</option>
+      </select></div>
+    <div class="knob sm"><label class="lbl" for="rwid">Rev Width</label>
+      <input type="range" id="rwid" min="0" max="200" value="130">
+      <div class="read tiny"><span id="rwidv">130</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="duck">Sidechain</label>
+      <input type="range" id="duck" min="0" max="100" value="30">
+      <div class="read tiny"><span id="duckv">30</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="drv">Drive</label>
+      <input type="range" id="drv" min="0" max="100" value="14">
+      <div class="read tiny"><span id="drvv">14</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="hum">Human</label>
+      <input type="range" id="hum" min="0" max="100" value="28">
+      <div class="read tiny"><span id="humv">28</span><i> %</i></div></div>
+    <div class="knob sm"><label class="lbl" for="width">Width</label>
+      <input type="range" id="width" min="0" max="100" value="60">
+      <div class="read tiny"><span id="widthv">60</span><i> %</i></div></div>
+  </div>
+
+  <div class="scroller">
+    <div class="rack">
+      <div class="ruler" id="ruler"></div>
+      <div class="playfield">
+        <div id="head"></div>
+        <div id="drums"></div>
+        <div class="roll">
+          <div class="rollhead">
+            <div class="strip" style="--tone:var(--t-bass)">
+              <div class="top">
+                <div class="mute" id="bmute" role="button" tabindex="0" aria-label="베이스 음소거"></div>
+                <span>Bass</span>
+                <input type="range" id="bvol" min="0" max="100" value="72" aria-label="베이스 볼륨"></div>
+              <div class="bot">
+                <select class="eng" id="beng" aria-label="베이스 음색"></select>
+                <select id="bsrc" aria-label="베이스 패턴 출처"></select></div>
+            </div>
+            <div><span class="lbl" id="keyinfo">—</span></div>
+          </div>
+          <div id="rolls"></div>
+        </div>
+
+        <div class="roll k">
+          <div class="rollhead">
+            <div class="strip" style="--tone:var(--t-keys)">
+              <div class="top">
+                <div class="mute" id="kmute" role="button" tabindex="0" aria-label="건반 음소거"></div>
+                <span>Keys</span>
+                <input type="range" id="kvol" min="0" max="100" value="58" aria-label="건반 볼륨"></div>
+              <div class="bot">
+                <select class="eng" id="keng" aria-label="건반 음색"></select>
+                <button class="util" id="kclr">비우기</button></div>
+            </div>
+            <div><span class="lbl">한 스텝에 여러 음 = 화음</span></div>
+          </div>
+          <div id="krolls"></div>
+        </div>
+
+        <div class="roll g">
+          <div class="rollhead">
+            <div class="strip" style="--tone:var(--t-gtr)">
+              <div class="top">
+                <div class="mute" id="gmute" role="button" tabindex="0" aria-label="기타 음소거"></div>
+                <span>Guitar</span>
+                <input type="range" id="gvol" min="0" max="100" value="50" aria-label="기타 볼륨"></div>
+              <div class="bot">
+                <select class="eng" id="geng" aria-label="기타 음색"></select>
+                <button class="util" id="gclr">비우기</button></div>
+            </div>
+            <div><span class="lbl">근음 = 코드 스트럼</span></div>
+          </div>
+          <div id="grolls"></div>
+        </div>
+
+        <!-- 2번 트랙 — 1번과 따로 도는 별개 트랙입니다.
+             16마디 선율 모드에서 라이브러리가 1번과 다른 선율/리프를 배정합니다.
+             팬이 반대쪽이라 스테레오에서 자리가 나뉩니다. -->
+        <div class="roll k2">
+          <div class="rollhead">
+            <div class="strip" style="--tone:var(--t-keys)">
+              <div class="top">
+                <div class="mute" id="kmute2" role="button" tabindex="0" aria-label="건반2 음소거"></div>
+                <span>Keys 2</span>
+                <input type="range" id="kvol2" min="0" max="100" value="44" aria-label="건반2 볼륨"></div>
+              <div class="bot">
+                <select class="eng" id="keng2" aria-label="건반2 음색"></select></div>
+            </div>
+            <div><span class="lbl">2번 트랙 — 1번과 다른 선율</span></div>
+          </div>
+        </div>
+
+        <div class="roll g2">
+          <div class="rollhead">
+            <div class="strip" style="--tone:var(--t-gtr)">
+              <div class="top">
+                <div class="mute" id="gmute2" role="button" tabindex="0" aria-label="기타2 음소거"></div>
+                <span>Guitar 2</span>
+                <input type="range" id="gvol2" min="0" max="100" value="40" aria-label="기타2 볼륨"></div>
+              <div class="bot">
+                <select class="eng" id="geng2" aria-label="기타2 음색"></select></div>
+            </div>
+            <div><span class="lbl">2번 트랙 — 1번과 다른 리프</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div><b>Trap</b> 킥은 짧고 높습니다 — 저역은 808이 전담하는 정석 구성입니다</div>
+    <div><b>Drum &amp; Bass</b> 스네어 7·15번 칸이 에이먼 브레이크의 고스트입니다</div>
+    <div><b>Swing</b> 노브 50이 완전 셔플(셋잇단)입니다 — 백분율이 아닙니다</div>
+    <div><b>패드를 끌면</b> 여러 칸을 한 번에 칠합니다 · <b>?</b> 단축키</div>
+  </div>
+</div>
+
+<div id="help" role="dialog" aria-modal="true" aria-labelledby="helptitle">
+  <div class="card">
+    <h2 id="helptitle">단축키</h2>
+    <dl>
+      <dt>Space</dt><dd>재생 / 정지</dd>
+      <dt>1 · 2 · 3 · 4</dt><dd>패턴 뱅크 A~D 전환 — 곡의 구간을 따로 담는 독립 슬롯입니다.
+        프리셋은 <b>현재 선택된 뱅크에만</b> 들어가므로, B·C·D 를 채우려면 먼저 그 슬롯을 누르세요.
+        점(●)이 찍힌 슬롯이 내용이 있는 뱅크입니다.</dd>
+      <dt>Ctrl + Z</dt><dd>실행취소</dd>
+      <dt>Ctrl + Shift + Z</dt><dd>다시하기</dd>
+      <dt>드래그</dt><dd>패드·노트를 끌어서 연속 입력 / 지우기</dd>
+      <dt>?</dt><dd>이 도움말 열기</dd>
+      <dt>Esc</dt><dd>닫기</dd>
+    </dl>
+    <button class="util close" id="helpclose">닫기</button>
+  </div>
+</div>
+
+<!-- 스크립트는 로드 순서가 곧 의존 순서다. 최상위 const/let 은
+     전역 렉시컬 스코프를 공유하므로 앞 파일의 선언을 뒤 파일이 그대로 쓴다.
+     src/main.js 만 실제로 무언가를 실행한다 — 나머지는 선언뿐이다. -->
+<script src="src/core/config.js"></script>
+<script src="src/core/engines.js"></script>
+<script src="src/core/scale.js"></script>
+<script src="src/data/preset-index.js"></script>
+<script src="src/data/pattern-codec.js"></script>
+<script src="src/data/presets/_raw.js"></script>
+<script src="src/data/presets/01-rock.js"></script>
+<script src="src/data/presets/02-pop.js"></script>
+<script src="src/data/presets/03-hiphop.js"></script>
+<script src="src/data/presets/04-rnb-funk.js"></script>
+<script src="src/data/presets/05-electronic.js"></script>
+<script src="src/data/presets/06-jazz.js"></script>
+<script src="src/data/presets/07-roots.js"></script>
+<script src="src/data/presets/08-latin.js"></script>
+<script src="src/data/presets/09-caribbean.js"></script>
+<script src="src/data/presets/10-african.js"></script>
+<script src="src/data/presets/11-world.js"></script>
+<script src="src/data/presets/12-example.js"></script>
+<script src="src/data/presets/_build.js"></script>
+<script src="src/data/fills.js"></script>
+<script src="src/data/melody.js"></script>
+<script src="src/core/dom.js"></script>
+<script src="src/core/state.js"></script>
+<script src="src/core/util.js"></script>
+<script src="src/audio/graph.js"></script>
+<script src="src/audio/sampler.js"></script>
+<script src="src/audio/params.js"></script>
+<script src="src/audio/voice-drum.js"></script>
+<script src="src/audio/string.js"></script>
+<script src="src/audio/voice-bass.js"></script>
+<script src="src/audio/struck.js"></script>
+<script src="src/audio/voice-keys.js"></script>
+<script src="src/audio/voice-gtr.js"></script>
+<script src="src/seq/sequencer.js"></script>
+<script src="src/ui/meters.js"></script>
+<script src="src/ui/build.js"></script>
+<script src="src/ui/edit.js"></script>
+<script src="src/ui/events.js"></script>
+<script src="src/main.js"></script>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 선율 검사</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">검사 준비 중…</pre>
+
+<!-- ⚠ 다른 하네스와 달리 데이터를 복사하지 않고 **앱 파일을 직접 불러옵니다.**
+     선율 데이터는 오디오 그래프가 없어도 읽히므로 복사할 이유가 없고,
+     복사하면 앱과 어긋나 검사가 거짓말을 하게 됩니다. -->
+<script src="../src/core/config.js"></script>
+<script src="../src/data/pattern-codec.js"></script>
+<script src="../src/data/preset-index.js"></script>
+<script src="../src/data/melody.js"></script>
+
+<script>
+/* melody/02-melody-theory.md §9 의 지표로 선율 데이터를 검사한다.
+   "위반" 이 아니라 "표에서 벗어남" 으로 보고한다 — 장르에 따라
+   일부러 어기는 것이 맞는 지표가 있기 때문(같은 문서 §10). */
+const log = m => { document.getElementById('out').textContent += '\n' + m; };
+document.getElementById('out').textContent = '';
+
+/* ── 마디 문자열 → 도수 열 ──
+   a~h = 단음(0~7), 0~7 = 3화음(근음을 대표음으로), - = 쉼 */
+function pitches(bar){
+  const out=[];
+  for(const c of bar){
+    if(c==='-') continue;
+    if(c>='a' && c<='h') out.push(c.charCodeAt(0)-97);
+    else if(c>='0' && c<='7') out.push(+c);      // 화음은 근음으로 대표
+  }
+  return out;
+}
+/* 리듬 자리(온/오프)만 뽑는다 */
+const rhythm = bar => [...bar].map(c => c==='-' ? '.' : 'x').join('');
+
+function analyze(bars){
+  const seq = bars.flatMap(pitches);
+  if(seq.length < 4) return null;
+
+  /* ① 순차 비율 · ② 도약 후 복귀 · ⑨ 같은 음 연속 */
+  let step=0, move=0, leap=0, gapfill=0, run=1, maxRun=1;
+  for(let i=1;i<seq.length;i++){
+    const d = seq[i]-seq[i-1];
+    if(d===0){ run++; maxRun=Math.max(maxRun,run); continue; }
+    run=1; move++;
+    if(Math.abs(d)<=1) step++;
+    else{
+      leap++;
+      /* 도약 다음 이동이 반대 방향 순차인가 */
+      let j=i+1;
+      while(j<seq.length && seq[j]===seq[i]) j++;
+      if(j<seq.length){
+        const d2 = seq[j]-seq[i];
+        if(Math.abs(d2)<=1 && Math.sign(d2)===-Math.sign(d)) gapfill++;
+      }
+    }
+  }
+  const hi = Math.max(...seq), lo = Math.min(...seq);
+  const hiCount = seq.filter(v=>v===hi).length;
+  const hiPos = seq.indexOf(hi)/Math.max(seq.length-1,1);
+
+  /* ⑥ 서로 다른 마디 · ⑩ 리듬 반복 */
+  const uniq = new Set(bars).size;
+  const rh = bars.map(rhythm);
+  let same=0, pairs=0;
+  for(let a=0;a<rh.length;a++) for(let b=a+1;b<rh.length;b++){ pairs++; if(rh[a]===rh[b]) same++; }
+
+  /* ⑦ 끝음 안정도 — 마지막으로 소리 난 음 */
+  const last = seq[seq.length-1];
+  return {
+    n:bars.length,
+    stepRatio: move ? step/move : 0,
+    gapfill:  leap ? gapfill/leap : null,
+    leaps: leap,
+    hiCount, hiPos, range: hi-lo,
+    uniqRatio: uniq/bars.length,
+    endStable: [0,2,4].includes(last),
+    endDeg: last,
+    maxRun,
+    rhythmRep: pairs ? same/pairs : 0,
+    notes: seq.length,
+  };
+}
+
+/* 목표 범위 (02-melody-theory.md §9) */
+const T = {
+  stepRatio:[0.55,0.80], gapfill:[0.50,1.01], hiCount:[0,3],
+  hiPos:[0.40,0.90], range:[4,7], uniqRatio:[0.40,0.75],
+  maxRun:[0,4], rhythmRep:[0.35,1.01],
+};
+const ok = (k,v) => v==null ? true : (v>=T[k][0] && v<=T[k][1]);
+const mark = (k,v,fmt) => (v==null?'  —':fmt(v)) + (ok(k,v)?' ':'*');
+
+const f2 = v => v.toFixed(2).padStart(5);
+const i0 = v => String(v).padStart(5);
+
+function report(title, tbl, keyOf){
+  log('\n── ' + title + ' ──');
+  log('이름            마디 음수 순차   복귀   최고횟수 정점  음역  다른마디 끝음 연속 리듬반복  벗어남');
+  log('─'.repeat(108));
+  const bad = {};
+  const names = Object.keys(tbl);
+  for(const n of names){
+    const a = analyze(tbl[n].bars);
+    if(!a){ log(n.padEnd(15)+' (음이 너무 적음)'); continue; }
+    const miss = [];
+    if(!ok('stepRatio',a.stepRatio)) miss.push('①순차');
+    if(!ok('gapfill',a.gapfill))     miss.push('②복귀');
+    if(!ok('hiCount',a.hiCount))     miss.push('③정점중복');
+    if(!ok('hiPos',a.hiPos))         miss.push('④정점위치');
+    if(!ok('range',a.range))         miss.push('⑤음역');
+    if(!ok('uniqRatio',a.uniqRatio)) miss.push('⑥반복');
+    if(!a.endStable)                 miss.push('⑦끝음');
+    if(!ok('maxRun',a.maxRun))       miss.push('⑨연속');
+    if(!ok('rhythmRep',a.rhythmRep)) miss.push('⑩리듬');
+    miss.forEach(m => { bad[m]=(bad[m]||0)+1; });
+    log((tbl[n].label||n).padEnd(15)
+      + String(a.n).padStart(4) + String(a.notes).padStart(4)
+      + mark('stepRatio',a.stepRatio,f2)
+      + mark('gapfill',a.gapfill,f2)
+      + mark('hiCount',a.hiCount,i0)
+      + mark('hiPos',a.hiPos,f2)
+      + mark('range',a.range,i0)
+      + mark('uniqRatio',a.uniqRatio,f2)
+      + (a.endStable?'   안정':'   불안') + String(a.endDeg).padStart(2)
+      + mark('maxRun',a.maxRun,i0)
+      + mark('rhythmRep',a.rhythmRep,f2)
+      + '  ' + miss.join(' '));
+  }
+  log('\n벗어난 지표 집계: ' + (Object.keys(bad).length
+      ? Object.entries(bad).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k} ${v}건`).join(' · ')
+      : '없음'));
+  return bad;
+}
+
+log('=== 선율 검사 — melody/02-melody-theory.md §9 지표 ===');
+log('* 표시는 목표 범위를 벗어난 값. 장르에 따라 의도적일 수 있음(§10).');
+log('목표: 순차 0.55~0.80 · 복귀 ≥0.50 · 최고횟수 ≤3 · 정점위치 0.40~0.90');
+log('      음역 4~7 · 다른마디 0.40~0.75 · 끝음 안정(0·2·4) · 연속 ≤4 · 리듬반복 ≥0.35');
+
+report('건반 선율 ' + MELODY_NAMES.length + '종', MELODY);
+report('기타 리프 ' + RIFF_NAMES.length + '종', RIFF);
+report('베이스 라인 ' + BLINE_NAMES.length + '종', BLINE);
+
+log('\n── 프레이즈 단위 검사 (4마디) ──');
+log('선율의 재료 자체가 문제인지, 잇는 방식이 문제인지 가르기 위해');
+log('프레이즈 22개를 따로 잽니다.');
+const P = {};
+Object.keys(PHRASE).forEach(k => { P[k] = {label:k, bars:PHRASE[k]}; });
+report('프레이즈 ' + Object.keys(PHRASE).length + '개', P);
+
+log('\n검사 완료');
+</script>

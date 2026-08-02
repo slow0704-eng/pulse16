@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>Sub 경로 수정안 비교</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}b{color:#e8a33d}</style>
+<pre id="out"></pre>
+<script type="module">
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+const SR=48000, dB=x=>x<1e-12?-Infinity:20*Math.log10(x);
+const peakOf=d=>{let p=0;for(let i=0;i<d.length;i++){const a=Math.abs(d[i]);if(a>p)p=a;}return p;};
+
+/* 기본파 성분만 추출 (Goertzel).
+   새추레이션이 배음을 만들므로 피크로는 이득을 잴 수 없다. */
+function magAt(d,freq,from){
+  const N=d.length-from;
+  const w=2*Math.PI*freq/SR, c=2*Math.cos(w);
+  let s1=0,s2=0;
+  for(let i=from;i<d.length;i++){ const s0=d[i]+c*s1-s2; s2=s1; s1=s0; }
+  return 2*Math.sqrt(s1*s1+s2*s2-c*s1*s2)/N;
+}
+/* 총 고조파 왜곡 근사 — 2~5차 배음 합 / 기본파 */
+function thd(d,freq,from){
+  const f=magAt(d,freq,from);
+  let h=0; for(let k=2;k<=5;k++){ const hf=freq*k; if(hf<SR/2) h+=Math.pow(magAt(d,hf,from),2); }
+  return f>1e-9 ? Math.sqrt(h)/f : 0;
+}
+function mkCurve(k){const n=8192,c=new Float32Array(n),norm=Math.tanh(k);
+  for(let i=0;i<n;i++){const x=i/(n/2)-1;c[i]=Math.tanh(x*k)/norm;}return c;}
+
+/* variant: 병렬 저역 경로 구성 방식 */
+async function measure(variant, freq, subKnob=0.62){
+  const ctx=new OfflineAudioContext(1,SR*0.6,SR);
+  const CURVE=mkCurve(1.1);
+  const busTrim=ctx.createGain();
+  const rumble=ctx.createBiquadFilter(); rumble.type='highpass'; rumble.frequency.value=20; rumble.Q.value=0.6;
+  const sumBus=ctx.createGain();
+  busTrim.connect(rumble); rumble.connect(sumBus);
+
+  if(variant!=='off'){
+    const lowSat=ctx.createWaveShaper(); lowSat.curve=CURVE; lowSat.oversample='4x';
+    const lowGain=ctx.createGain(); lowGain.gain.value=subKnob*0.80;
+    let head, tail=lowSat;
+    if(variant==='current'){                       // 현재: busTrim 분기 + LP110 2단
+      const a=ctx.createBiquadFilter(); a.type='lowpass'; a.frequency.value=110;
+      const b=ctx.createBiquadFilter(); b.type='lowpass'; b.frequency.value=110;
+      busTrim.connect(a).connect(b).connect(lowSat); head=a;
+    } else if(variant==='agentFix'){               // 에이전트 제안: rumble 뒤 분기
+      const a=ctx.createBiquadFilter(); a.type='lowpass'; a.frequency.value=110;
+      const b=ctx.createBiquadFilter(); b.type='lowpass'; b.frequency.value=110;
+      rumble.connect(a).connect(b).connect(lowSat); head=a;
+    } else if(variant==='1pole'){                  // LP 1단만 (위상 절반)
+      const a=ctx.createBiquadFilter(); a.type='lowpass'; a.frequency.value=110; a.Q.value=0.5;
+      rumble.connect(a).connect(lowSat); head=a;
+    } else if(variant==='1pole+hp'){               // LP 1단 + 서브소닉 HP 30Hz
+      const hp=ctx.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=30; hp.Q.value=0.7;
+      const a=ctx.createBiquadFilter(); a.type='lowpass'; a.frequency.value=110; a.Q.value=0.5;
+      rumble.connect(hp).connect(a).connect(lowSat); head=hp;
+    } else if(variant==='shelf'){                  // 로우셸프로 대체 (위상 왜곡 최소)
+      const sh=ctx.createBiquadFilter(); sh.type='lowshelf'; sh.frequency.value=110; sh.gain.value=0;
+      rumble.connect(sh).connect(lowSat); head=sh;
+    } else if(variant==='null'){
+      /* 널 합산: sat(LP(x)) − LP(x) 만 더한다.
+         드라이브가 0에 가까우면 sat(y)≈y 라 기여가 0 → 콤필터 없음.
+         실제로 더해지는 것은 새추레이션이 만든 배음뿐. */
+      const a=ctx.createBiquadFilter(); a.type='lowpass'; a.frequency.value=110;
+      const b=ctx.createBiquadFilter(); b.type='lowpass'; b.frequency.value=110;
+      const dry=ctx.createGain(); dry.gain.value=-1;      // 위상 반전한 원본 저역
+      const nullSum=ctx.createGain();
+      rumble.connect(a).connect(b);
+      b.connect(lowSat); lowSat.connect(nullSum);          // 새추레이션된 저역
+      b.connect(dry).connect(nullSum);                     // 원본 저역 (반전)
+      nullSum.connect(lowGain).connect(sumBus);
+      head=a; tail=null;
+    }
+    if(tail) lowSat.connect(lowGain).connect(sumBus);
+  }
+  sumBus.connect(ctx.destination);
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=freq;
+  const g=ctx.createGain(); g.gain.value=0.3;
+  o.connect(g).connect(busTrim); o.start(0);
+  const b=await ctx.startRendering();
+  const d=b.getChannelData(0), from=Math.floor(SR*0.3);
+  return {mag:magAt(d,freq,from), thd:thd(d,freq,from)};
+}
+
+const FREQS=[18.5,30,50,80,110,160,250];
+const VARIANTS=[
+  ['off','병렬 없음 (기준선)'],
+  ['current','현재 구조'],
+  ['agentFix','에이전트 제안'],
+  ['1pole','LP 1단 (rumble 뒤)'],
+  ['1pole+hp','LP 1단 + HP30 (rumble 뒤)'],
+  ['shelf','로우셸프 (rumble 뒤)'],
+  ['null','널 합산 — 배음만 더함'],
+];
+
+log('<b>=== Sub 노브(62) — 기본파 이득 (기준선 대비, dB) ===</b>');
+log('  Goertzel 로 기본파만 추출. 새추레이션 배음은 THD 열에 따로 표시.');
+log('  Sub 노브는 "저역을 더한다"이므로 저역이 고르게 +되어야 정상\n');
+const base={};
+for(const f of FREQS) base[f]=(await measure('off',f)).mag;
+log('구성                      '+FREQS.map(f=>String(f).padStart(7)).join('')+'   스윙폭   저역THD');
+log('─'.repeat(90));
+for(const [v,label] of VARIANTS){
+  if(v==='off') continue;
+  const cells=[], vals=[]; let thd50=0;
+  for(const f of FREQS){
+    const r=await measure(v,f);
+    const d=dB(r.mag)-dB(base[f]);
+    vals.push(d);
+    cells.push(((d>=0?'+':'')+d.toFixed(1)).padStart(7));
+    if(f===50) thd50=r.thd;
+  }
+  const swing=Math.max(...vals)-Math.min(...vals);
+  log(label.padEnd(26)+cells.join('')+swing.toFixed(1).padStart(8)+'dB'+(thd50*100).toFixed(1).padStart(8)+'%');
+}
+log('\n※ 스윙폭 = 최대−최소 이득. 작을수록 "고르게 더해짐" (평탄도)');
+log('※ 저역THD = 50Hz 에서 만들어진 2~5차 배음 비율 (새추레이션이 일하는 정도)');
+log('※ 18.5Hz 열 = 서브소닉 누출. 낮을수록 좋음');
+log('\n검증 완료');
+</script>

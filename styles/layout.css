@@ -1,0 +1,30 @@
+/* ── 2. 레이아웃 뼈대 ───────────────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(120% 90% at 50% -10%,#3a414c 0%,#23272e 55%,#16191d 100%);
+  font-family:'Barlow',system-ui,sans-serif;color:var(--silk);
+  padding:22px 14px 40px;display:flex;justify-content:center;-webkit-font-smoothing:antialiased}
+.unit{width:100%;max-width:1020px;
+  background:linear-gradient(180deg,var(--panel-hi),var(--panel) 18%,#262b32);
+  border:1px solid var(--edge);border-radius:6px;
+  box-shadow:0 1px 0 rgba(255,255,255,.07) inset,0 24px 60px rgba(0,0,0,.55);overflow:hidden}
+
+/* ── 3. 헤더 · 경고 ─────────────────────────────────────────── */
+.plate{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;padding:16px 20px 14px;
+  border-bottom:1px solid var(--edge);background:linear-gradient(180deg,rgba(255,255,255,.045),transparent)}
+.brand{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:600;
+  letter-spacing:.16em;line-height:.9;text-transform:uppercase}
+.brand span{color:var(--t-kick)}
+.mk{font-family:'Space Mono',monospace;font-size:11px;color:var(--t-kick);letter-spacing:.1em;padding-bottom:5px}
+.tagline{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--silk-dim);padding-bottom:4px}
+.stat{margin-left:auto;font-family:'Space Mono',monospace;font-size:10px;color:#5e646d;
+  padding-bottom:6px;text-align:right;line-height:1.5}
+.stat b{color:var(--t-bass);font-weight:400}
+.warn{display:none;padding:12px 20px;background:#3a2a2a;border-bottom:1px solid var(--edge);
+  font-size:12.5px;color:#e8b9b9;line-height:1.6}
+.warn.on{display:block}
+
+
+/* ── 11. 반응형 · 접근성 ────────────────────────────────────── */
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:560px){.tagline,.stat{display:none}.brand{font-size:27px}.fx .tag{width:auto}}

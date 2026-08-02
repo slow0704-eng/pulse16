@@ -1,0 +1,134 @@
+/* ── 4. 패턴 라이브러리 · 샘플 뱅크 ─────────────────────────── */
+.library{padding:14px 20px;border-bottom:1px solid var(--edge);background:#242930}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+.chip{cursor:pointer;padding:6px 11px;border-radius:3px;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#3b424c,#2c323a);color:var(--silk-dim);
+  font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.chip:hover{color:var(--silk)}
+.chip[data-on="1"]{color:#20242a;font-weight:600;background:linear-gradient(180deg,#f0b757,var(--t-kick))}
+.chip.tone{border-color:#5c3a3a;color:#dfa4a2}
+.chip.tone[data-on="1"]{background:linear-gradient(180deg,#f79b98,var(--t-tone));color:#2a1d1d}
+.chip[hidden]{display:none}
+/* 규칙으로 파생된 프리셋 — 손으로 쓴 것과 구분되게 앞에 점을 붙임 */
+.chip.gen{opacity:.82}
+.chip.gen::before{content:"·";margin-right:5px;opacity:.55}
+.chip.gen[data-on="1"]{opacity:1}
+/* 계열 필터 칩 — 선택된 계열은 청록으로 구분 */
+.cat{cursor:pointer;padding:4px 10px;border-radius:3px;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#2f353d,#252a31);color:#6f767f;
+  font-family:'Barlow Condensed',sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.cat:hover{color:var(--silk)}
+.cat[data-on="1"]{background:linear-gradient(180deg,#4a5560,#39424b);color:var(--live);
+  box-shadow:0 0 0 1px var(--t-chat) inset}
+.cat b{font-weight:400;opacity:.5;margin-left:5px}
+/* 2단계 — 하위 분기 칩 (계열을 고르면 나타남) */
+#subs[hidden]{display:none}
+.sub{cursor:pointer;padding:3px 9px;border-radius:3px;border:1px solid #23272d;
+  background:#22262c;color:#767d87;
+  font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.1em}
+.sub:hover{color:var(--silk)}
+.sub[data-on="1"]{background:linear-gradient(180deg,#3f4852,#323a43);color:var(--live);
+  box-shadow:0 0 0 1px var(--t-ohat) inset}
+.sub b{font-weight:400;opacity:.5;margin-left:4px}
+.bankbar{padding:13px 20px;border-bottom:1px solid var(--edge);background:#262c34}
+.brow{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:10px}
+.brow:last-child{margin-bottom:0}
+.bankbar select{height:28px}
+.kstat{font-family:'Space Mono',monospace;font-size:11px;color:var(--silk-dim);padding-bottom:6px;flex:1;min-width:200px}
+.kstat.ok{color:var(--t-bass)} .kstat.err{color:#e0868a} .kstat.load{color:var(--t-kick)}
+.loops{display:flex;gap:5px;flex-wrap:wrap}
+.lbtn{cursor:pointer;padding:5px 10px;border-radius:3px;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#3b424c,#2c323a);color:var(--silk-dim);
+  font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.lbtn[data-on="1"]{background:linear-gradient(180deg,#9fc0e8,var(--t-loop));color:#1c222b;font-weight:600}
+.lbtn[data-dead="1"]{opacity:.3;text-decoration:line-through;cursor:not-allowed}
+
+/* ── 5. 트랜스포트 · FX 랙 ──────────────────────────────────── */
+.transport{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;
+  padding:15px 20px;border-bottom:1px solid var(--edge);background:var(--recess)}
+/* 패널 토글 바 — FX 랙 4개를 개별로 열고 닫음 */
+.rackbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;
+  padding:9px 20px;border-bottom:1px solid var(--edge);background:#1a1f25}
+.rackbar .lbl{margin:0 8px 0 0}
+.pbtn{cursor:pointer;padding:5px 12px;border-radius:3px;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#343b45,#282e35);color:var(--silk-dim);
+  font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.pbtn:hover{color:var(--silk)}
+.pbtn[data-on="1"]{background:linear-gradient(180deg,#4d5560,#3a414a);color:var(--live);
+  box-shadow:0 0 0 1px var(--t-chat) inset}
+.pbtn .car{display:inline-block;width:8px;opacity:.6}
+.fx[hidden]{display:none}
+.fx{display:flex;gap:15px;flex-wrap:wrap;align-items:flex-end;
+  padding:12px 20px;border-bottom:1px solid var(--edge);background:#20252b}
+.fx.low{background:#1e242b;box-shadow:0 0 0 1px rgba(232,163,61,.10) inset}
+.fx.tun{background:#221f1b;box-shadow:0 0 0 1px rgba(232,163,61,.18) inset}
+.fx.key{background:#1b1f25;box-shadow:0 0 0 1px rgba(201,142,201,.14) inset}
+.fx.key .tag{color:var(--t-clap)}
+.fx.mst{background:#1d2228;box-shadow:0 0 0 1px rgba(111,191,214,.10) inset}
+.fx .tag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--t-chat);padding-bottom:7px;align-self:center;width:60px}
+.fx.low .tag{color:var(--t-kick)}
+.fx.tun .tag{color:#f0b757}
+.fx.mst .tag{color:var(--t-ohat)}
+.lbl{display:block;font-family:'Barlow Condensed',sans-serif;font-size:10px;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--silk-dim);margin-bottom:6px}
+.play{width:92px;height:52px;border-radius:4px;cursor:pointer;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#414852,#2f353d);color:var(--silk);
+  font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:.2em;text-transform:uppercase;
+  box-shadow:0 1px 0 rgba(255,255,255,.09) inset,0 3px 0 #14171b;transition:transform .06s,box-shadow .06s}
+.play:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 1px 0 #14171b}
+.play[data-on="1"]{background:linear-gradient(180deg,#f0b757,var(--t-kick));color:#20242a;font-weight:600}
+.knob{display:flex;flex-direction:column}
+.knob input[type=range]{width:100px}
+.knob.sm input[type=range]{width:72px}
+.read{font-family:'Space Mono',monospace;font-size:18px;color:var(--live);margin-top:5px}
+.read.tiny{font-size:13.5px}
+.read i{font-style:normal;font-size:10px;color:var(--silk-dim);letter-spacing:.1em}
+.slots{display:flex;gap:5px}
+.slot,.util{min-width:34px;height:30px;padding:0 9px;cursor:pointer;border:1px solid var(--edge);
+  border-radius:3px;background:linear-gradient(180deg,#3b424c,#2c323a);color:var(--silk-dim);
+  font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.slot{position:relative}
+.slot[data-on="1"]{background:linear-gradient(180deg,#4d5560,#3a414a);color:var(--live);
+  box-shadow:0 0 0 1px var(--t-kick) inset}
+/* 뱅크에 패턴이 들어있으면 점을 찍어 빈 슬롯과 구분 */
+.slot[data-filled="1"]::after{content:"";position:absolute;left:50%;bottom:3px;
+  width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--t-bass)}
+.slot[data-filled="0"]{color:#5b626b}
+.util:hover,.slot:hover{color:var(--silk)}
+.util:disabled{opacity:.4;cursor:not-allowed}
+
+/* ── 6. 마스터 미터 ─────────────────────────────────────────── */
+.meters{display:flex;flex-direction:column;gap:6px;min-width:186px;padding-bottom:2px}
+.mrow{display:flex;align-items:center;gap:8px}
+.mrow em{font-style:normal;font-family:'Barlow Condensed',sans-serif;font-size:10px;
+  letter-spacing:.18em;color:var(--silk-dim);width:26px}
+.bar{flex:1;height:9px;background:#14171b;border-radius:2px;overflow:hidden;position:relative;
+  box-shadow:0 1px 0 rgba(255,255,255,.05)}
+.bar i{position:absolute;inset:0;transform-origin:left center;transform:scaleX(0);will-change:transform}
+#mOut i{background:linear-gradient(90deg,#3daea3 0%,#8fbf5f 62%,#e8a33d 84%,#d45d79 100%)}
+#mGr i{background:linear-gradient(90deg,#6fbfd6,#d45d79)}
+#mBas i{background:linear-gradient(90deg,#8fbf5f,#e8a33d)}
+.bar b{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,255,255,.28)}
+.mval{font-family:'Space Mono',monospace;font-size:10px;color:var(--silk-dim);width:42px;text-align:right}
+/* 클리핑 경고 — Out 이 -0.3dB 를 넘으면 2초간 점등 */
+.mval.clip{color:#ff6b6b;font-weight:700}
+.mrow.clip .bar{box-shadow:0 0 0 1px #ff6b6b}
+#clipTag{display:none;font-family:'Space Mono',monospace;font-size:9px;color:#ff6b6b;
+  letter-spacing:.12em;margin-left:4px}
+#clipTag.on{display:inline}
+
+/* ── Variation — 루프가 돌 때 스스로 바뀌는 것들 ──
+   킷 셔플·패턴 셔플·필인·선율 넷은 같은 loopNo 격자를 공유하는 한 묶음이다.
+   샘플 뱅크 안에 얹어 뒀더니 "필인 켜기가 안 보인다"는 말이 나왔다.
+   재생 중에 만지는 것들이므로 트랜스포트 바로 아래에 둔다. */
+.varbar{background:var(--panel);border:1px solid var(--edge);border-radius:5px;
+  padding:9px 12px 11px;margin-bottom:9px}
+.varbar > .lbl{display:block;margin-bottom:8px}
+.varbar .vrow{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end}
+
+.varbar .varstat{margin-top:9px;text-align:left}
+
+/* 필인 2단의 작은/큰 구분 라벨 */
+.slots .tag2{font-size:10px;letter-spacing:.06em;color:var(--silk-dim);
+  padding:0 2px 0 6px;align-self:center}

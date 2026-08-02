@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>mkCurve 숨은 게인 검증</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}b{color:#e8a33d}</style>
+<pre id="out"></pre>
+<script type="module">
+const log=m=>{document.getElementById('out').textContent+='\n'+m;};
+const SR=48000, dB=x=>x<1e-12?-Infinity:20*Math.log10(x);
+function magAt(d,f,from){const N=d.length-from,w=2*Math.PI*f/SR,c=2*Math.cos(w);
+  let s1=0,s2=0;for(let i=from;i<d.length;i++){const s0=d[i]+c*s1-s2;s2=s1;s1=s0;}
+  return 2*Math.sqrt(s1*s1+s2*s2-c*s1*s2)/N;}
+
+/* 현재 구현 */
+function mkCurveOld(k){const n=8192,c=new Float32Array(n),norm=Math.tanh(k);
+  for(let i=0;i<n;i++){const x=i/(n/2)-1;c[i]=Math.tanh(x*k)/norm;}return c;}
+/* 기울기 정규화 (제안) */
+function mkCurveNew(k){const n=8192,c=new Float32Array(n);
+  for(let i=0;i<n;i++){const x=i/(n/2)-1;c[i]=Math.tanh(x*k)/k;}return c;}
+
+/* 소신호(진폭 0.02) 를 넣어 통과 이득만 측정 — 왜곡 거의 없는 구간 */
+async function gain(curveFn,k,amp){
+  const ctx=new OfflineAudioContext(1,SR*0.4,SR);
+  const o=ctx.createOscillator(); o.type='sine'; o.frequency.value=200;
+  const g=ctx.createGain(); g.gain.value=amp;
+  const ws=ctx.createWaveShaper(); ws.curve=curveFn(k); ws.oversample='4x';
+  o.connect(g).connect(ws).connect(ctx.destination); o.start(0);
+  const b=await ctx.startRendering();
+  return magAt(b.getChannelData(0),200,Math.floor(SR*0.2))/amp;
+}
+
+log('<b>=== mkCurve 소신호 통과 이득 (진폭 0.02 사인, 200Hz) ===</b>');
+log('  이론값: tanh(kx)/tanh(k) 의 원점 기울기 = k/tanh(k)\n');
+log('  k     이론 k/tanh(k)   실측(현재)     실측(기울기정규화)');
+log('  ─────────────────────────────────────────────────────');
+for(const k of [1.1,1.8,2.8,4.0]){
+  const theory=k/Math.tanh(k);
+  const gOld=await gain(mkCurveOld,k,0.02);
+  const gNew=await gain(mkCurveNew,k,0.02);
+  log(`  ${k.toFixed(1)}    ${theory.toFixed(3)} (${dB(theory).toFixed(1)}dB)   ${gOld.toFixed(3)} (${dB(gOld).toFixed(1)}dB)   ${gNew.toFixed(3)} (${dB(gNew).toFixed(1)}dB)`);
+}
+
+log('\n<b>=== 베이스 Drive 노브 스윕 시 커브 전환 계단 ===</b>');
+log('  현재 코드: bd<0.34→CURVES[1], bd<0.67→CURVES[2], 그 외→CURVES[3]');
+log('  보상 게인: mk = 1/(1+bd*0.9)\n');
+log('  Drive   커브   커브이득   보상    순이득     전환계단');
+log('  ──────────────────────────────────────────────────────');
+let prev=null;
+for(const bd of [0.20,0.33,0.34,0.50,0.66,0.67,0.80]){
+  const idx = bd<0.34?1:bd<0.67?2:3;
+  const k=[1.1,1.8,2.8,4.0][idx];
+  const cg=await gain(mkCurveOld,k,0.02);
+  const mk=1/(1+bd*0.9);
+  const net=cg*mk;
+  const step = prev===null?'':((dB(net)-prev>=0?'+':'')+(dB(net)-prev).toFixed(1)+'dB');
+  log(`  ${bd.toFixed(2)}    [${idx}]   ${dB(cg).toFixed(1)}dB   ${mk.toFixed(3)}   ${dB(net).toFixed(1)}dB   ${step}`);
+  prev=dB(net);
+}
+
+log('\n<b>=== 마스터 셰이퍼: Drive 0 에서도 압축이 걸리는가 ===</b>');
+log('  Drive=0 이면 satIn=1.0, satOut=1.0 → 셰이퍼만 통과\n');
+log('  입력진폭   출력/입력    → 소신호와 대신호의 이득차 = 압축량');
+const g002=await gain(mkCurveOld,1.8,0.02);
+for(const a of [0.02,0.1,0.3,0.6,0.9]){
+  const g=await gain(mkCurveOld,1.8,a);
+  log(`  ${a.toFixed(2)}      ${g.toFixed(3)} (${dB(g).toFixed(1)}dB)   ${(dB(g)-dB(g002)).toFixed(1)}dB`);
+}
+log('\n검증 완료');
+</script>

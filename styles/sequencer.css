@@ -1,0 +1,72 @@
+/* ── 7. 시퀀서 그리드 ───────────────────────────────────────── */
+.scroller{overflow-x:auto;padding:18px 20px 4px}
+.rack{min-width:calc(var(--strip) + 16 * (var(--cell) + var(--gap)));contain:layout style}
+.ruler{display:grid;grid-template-columns:var(--strip) repeat(16,var(--cell));gap:var(--gap);margin-bottom:8px}
+.ruler b{font-family:'Space Mono',monospace;font-size:10px;font-weight:400;text-align:center;color:#5c626c}
+.ruler b.beat{color:var(--silk)}
+.row{display:grid;grid-template-columns:var(--strip) repeat(16,var(--cell));gap:var(--gap);
+  margin-bottom:6px;align-items:center}
+.strip{padding-right:10px}
+.strip .top{display:flex;align-items:center;gap:8px}
+.mute{width:9px;height:9px;border-radius:50%;flex:none;cursor:pointer;position:relative;
+  border:1px solid rgba(0,0,0,.5);background:var(--tone);box-shadow:0 0 7px var(--tone)}
+/* 겉모습은 9px 점 그대로, 클릭 영역만 상하좌우 10px 확장 */
+.mute::after{content:"";position:absolute;inset:-10px;border-radius:50%}
+.mute[data-off="1"]{background:#3c424b;box-shadow:none}
+.strip .top span{font-family:'Barlow Condensed',sans-serif;font-size:12.5px;
+  letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.strip .top input{width:52px;margin-left:auto}
+.strip .bot{display:flex;gap:4px;margin-top:4px}
+.strip select{flex:1;min-width:0}
+.strip select.smp{color:var(--t-loop)}
+.pad{height:var(--cell);cursor:pointer;position:relative;border:1px solid #14171b;border-radius:3px;
+  background:linear-gradient(180deg,#333a43,#262c33);box-shadow:0 1px 0 rgba(255,255,255,.05) inset;
+  transition:background .08s;touch-action:none;-webkit-user-select:none;user-select:none}
+.pad.q{background:linear-gradient(180deg,#39404a,#2b323a)}
+.pad[data-v="1"]{background:linear-gradient(180deg,color-mix(in srgb,var(--tone) 62%,#000),color-mix(in srgb,var(--tone) 34%,#000))}
+.pad[data-v="2"]{background:linear-gradient(180deg,var(--tone),color-mix(in srgb,var(--tone) 58%,#000))}
+/* 벨로시티를 명도만이 아니라 형태로도 구분 — 흑백에서도 3단계가 보이게 */
+.pad[data-v="1"]::after{content:"";position:absolute;left:9px;right:9px;bottom:4px;height:1px;
+  background:#fff;opacity:.42;border-radius:1px}
+.pad[data-v="2"]::after{content:"";position:absolute;left:5px;right:5px;top:4px;height:3px;
+  background:#fff;opacity:.92;border-radius:2px}
+/* 재생 표시는 즉시 반응해야 함 — 174 BPM 이면 16분이 86ms */
+.pad.hit{background:var(--live)!important;transition:none}
+.pad.skip{opacity:.35}
+.playfield{position:relative}
+#head{position:absolute;top:-4px;left:0;width:var(--cell);border-radius:3px;pointer-events:none;opacity:0;
+  background:linear-gradient(180deg,rgba(244,239,227,.16),rgba(244,239,227,.05));
+  box-shadow:inset 0 0 0 1px rgba(244,239,227,.45);will-change:transform;transform:translate3d(0,0,0)}
+#head.on{opacity:1}
+
+/* ── 8. 베이스 피아노롤 ─────────────────────────────────────── */
+.roll{margin-top:14px;padding-top:14px;border-top:1px dashed #3c434d}
+.rollhead{display:grid;grid-template-columns:var(--strip) 1fr;gap:var(--gap);align-items:center;margin-bottom:9px}
+.rollhead .strip .top span{color:var(--t-bass)}
+.rrow{display:grid;grid-template-columns:var(--strip) repeat(16,var(--cell));gap:var(--gap);
+  margin-bottom:3px;align-items:center}
+.rrow small{font-family:'Space Mono',monospace;font-size:10px;color:#666d78;text-align:right;padding-right:12px}
+.note{height:22px;cursor:pointer;border-radius:2px;border:1px solid #14171b;background:#252b32;
+  touch-action:none;-webkit-user-select:none;user-select:none}
+.rrow.acc .note{background:#2b323a}
+.note[data-on="1"]{background:var(--t-bass);box-shadow:0 0 9px rgba(143,191,95,.4)}
+.note.hit{background:var(--live)!important;transition:none}
+
+/* 건반·기타 롤은 같은 뼈대를 쓰되 트랙 색만 갈아끼운다.
+   --tone 을 롤 컨테이너에 걸고 셀이 그걸 상속받는 구조. */
+.roll.k .rollhead .strip .top span{color:var(--t-keys)}
+.roll.g .rollhead .strip .top span{color:var(--t-gtr)}
+.roll.k .note[data-on="1"]{background:var(--t-keys);box-shadow:0 0 9px rgba(157,142,222,.4)}
+.roll.g .note[data-on="1"]{background:var(--t-gtr);box-shadow:0 0 9px rgba(224,137,74,.4)}
+/* 화음 롤은 한 스텝에 여러 음이 겹치므로 세로 구분선을 넣어 마디를 읽기 쉽게 */
+.roll.k .rrow .note:nth-child(4n+2){border-left-color:#3c434d}
+
+
+/* ── 필인 구간 표시 ──
+   이번 루프의 마지막 몇 칸이 평소 패턴 대신 필인으로 울린다는 뜻.
+   칸 자체를 덮지 않고 위아래 선으로만 표시해 원래 값이 계속 보이게 한다. */
+.pad.fillzone{box-shadow:inset 0 2px 0 var(--t-tone),inset 0 -2px 0 var(--t-tone)}
+
+/* 선율 모드의 건반 롤 — 사용자가 찍은 패턴이 아니라 16마디 선율이라는 표시.
+   테두리를 점선으로 바꿔 "읽기 전용" 임을 알린다. */
+.note.mel[data-on="1"]{border-style:dashed;border-color:var(--live)}
