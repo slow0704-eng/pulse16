@@ -6,7 +6,7 @@
 
    ── 구조 ──
    PHRASE : 4마디 단위. 실제 작곡이 4마디로 사고하므로 그 단위로 씁니다.
-   FORM   : 프레이즈를 잇는 방식. AABA · ABAC 처럼 대중음악의 16마디 틀.
+   FORM   : 프레이즈를 잇는 방식. AABA · AABB 처럼 대중음악의 16마디 틀.
    MELODY : label + 프레이즈 4개 = 16마디.
 
    표기는 patterns/README.md §1 의 건반 트랙과 같습니다.
@@ -117,7 +117,10 @@ const FORM = {
   AABA:[0,0,1,0],   // 가장 흔한 32마디 팝 폼의 절반
   AABB:[0,0,1,1],   // 절-후렴
   ABAB:[0,1,0,1],   // 교대
-  ABAC:[0,1,0,1],   // (C 자리는 B 의 변형으로 대신)
+  /* ABAC 를 두었었지만 값이 ABAB 와 같고 아무 프레이즈쌍도 쓰지 않았다.
+     프레이즈가 A·B 둘뿐이라 C 자리에 넣을 재료가 없었던 것이다 —
+     이름만 다른 항목은 표를 읽는 사람을 속이므로 지운다.
+     긴 선율(LONG_FORMS)은 이 문제를 모방진행으로 푼다. */
   AAAB:[0,0,0,1],   // 반복 후 전환 — 힙합·일렉트로닉
 };
 
@@ -355,14 +358,20 @@ const MELODY_KIT = {
   '남아시아'               :['wor_aaba','wor_aabb','afr_aaab'],
   '동유럽 · 발칸'          :['wor_aabb','wor_abab','cin_aaba'],
   '북아프리카'             :['wor_aaba','lat_abab'],
-  'Metalcore'              :[],
+  /* 'Metalcore' 항목이 있었지만 PRESET_SUB['Metalcore'] 가 'Metal' 이라
+     이 키로는 조회되지 않는다. 'Metal' 이 이미 [] 라 결과도 같았다 —
+     닿지 않는 줄은 "메탈코어는 따로 정했다"는 착각만 준다. */
 };
 
 /** 지금 걸린 프리셋에 어울리는 선율 이름 목록 */
 function melodyPoolFor(name){
   const sub=MELODY_KIT[PRESET_SUB[name]];
   if(sub) return sub;                                   // 빈 배열이면 "선율 없음"
-  return MELODY_KIT_CAT[PRESET_CAT[name]] || ['pop_arch'];
+  /* ⚠ 'pop_arch' 는 키가 아니라 **라벨**('팝 아치')이었다.
+     MELODY 의 키는 프레이즈쌍_폼 규칙이라 실제 이름은 pop_aabb 다.
+     하위분기·계열 둘 다 안 걸리는 프리셋 69개(355개 중)가 이 자리로 떨어져
+     선율이 통째로 안 나왔다. riff·bline 의 기본값은 원래 정상이었다. */
+  return MELODY_KIT_CAT[PRESET_CAT[name]] || ['pop_aabb'];
 }
 
 

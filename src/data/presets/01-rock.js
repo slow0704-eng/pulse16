@@ -45,16 +45,8 @@ Object.assign(RAW, {
 'Death Metal':{bpm:200,swing:0,
   kit:{kick:'tight',snare:'crack',clap:'tight',chat:'metal',ohat:'metal',tom:'analog',keys:'poly',gtr:'hi',bass:'pick',off:['keys']},
   tune:{kick:2,snare:3,tom:0,hat:2},
-  /* 트루피크 대책 — 이 프리셋만의 override 입니다(하위분기 기본값 아님).
-     kit.bass 가 'pick' 이라 bcfg.eng 의 reese 대신 현 베이스가 울립니다.
-     현 베이스는 크레스트 25dB 라 뜯는 순간의 첨두가 킥과 같은 자리(8분마다)에
-     겹쳐 마스터가 +0.3~+0.5 dBTP 로 클리핑했습니다.(측정 확인)
-       duck 18→48 : 킥이 칠 때 베이스 버스를 더 눌러 합산 첨두를 낮춥니다. −0.8 dB
-       drive 70→30: bdrv 는 현 베이스에서 앰프 앞단 게인으로만 쓰입니다.
-                    70 은 reese 시절 값이라 픽 베이스에는 과했습니다.  −0.5 dB
-     둘 다 저역만 건드려 K-가중 라우드니스는 −8.1 → −8.2 LUFS 로 유지됩니다. */
-  bcfg:{eng:'reese',oct:24,semi:0,gate:50,glide:0,blend:64,drive:30,xover:100,tone:4000,
-        sub:52,exc:34,duck:48,root:9,scale:'Natural Minor'},
+  bcfg:{eng:'reese',oct:24,semi:0,gate:50,glide:0,blend:64,drive:70,xover:100,tone:4000,
+        sub:52,exc:34,duck:18,root:9,scale:'Natural Minor'},
   kick:'X-X-X-X-X-X-X-X-',snare:'-X-X-X-X-X-X-X-X',clap:'----------------',
   chat:'----------------',ohat:'----------------',tom:'----------------',
   bass:'0-0-0-0-0-0-0-0-',

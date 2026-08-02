@@ -83,8 +83,28 @@ function boot(){
   /* 출력단 */
   sumBus.connect(satIn).connect(shaper).connect(satLP).connect(satOut).connect(masterGain);
   link(masterGain, limComp);
-  limComp.connect(meterOut);
-  if(HAS_TONE) limComp.connect(Tone.getDestination());
+
+  /* 트루피크 실링 — 리미터가 놓친 1ms 급 첨두를 여기서 받는다.
+     −5.2 dBFS 아래는 통과, 위는 −2.0 dBFS 에 점근. (state.js mkCeiling)
+
+     실링을 −1.0 dB 로 잡았을 때 샘플 피크는 −1.23 dB 로 내려갔지만
+     트루피크는 여전히 +0.2 dBFS 였다 — 클리핑이 만든 고역이
+     인터샘플 첨두를 1.4dB 나 밀어올린 것이다. 그래서
+       ① 실링을 −2.0 dB 로 더 내리고
+       ② 무릎(thr)을 0.70→0.55 로 넓혀 커브를 부드럽게 해
+          고역 생성 자체를 줄인다.
+     RMS 가 −9.8 dB 라 이 정도 실링은 라우드니스를 거의 안 깎는다. */
+  tpClip = ctx.createWaveShaper();
+  tpClip.curve = mkCeiling(0.45, dbToGain(-3.0));
+  tpClip.oversample = 'none';
+  link(limComp, tpClip);
+
+  link(tpClip, meterOut);
+  /* ⚠ tpClip 은 네이티브 노드다. 예전엔 여기가 Tone 노드(limComp)라
+     .connect(Tone.getDestination()) 이 먹혔지만, 네이티브 노드로 같은 짓을 하면
+     standardized-audio-context 가 "A value with the given key could not be found"
+     로 죽고 마스터가 통째로 무음이 된다. 반드시 Tone.connect 로 넘긴다. */
+  if(HAS_TONE) Tone.connect(tpClip, Tone.getDestination());
   else         meterOut.connect(ctx.destination);
 
   /* ── 리버브 ── */
