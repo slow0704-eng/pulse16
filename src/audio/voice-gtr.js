@@ -51,6 +51,7 @@ function fiddleVoice(t,dur,hz,v){
 
 function guitarVoice(t,deg,dur,e){
   const S=GTR[e]||GTR.clean;
+  applyGtrFx(e);                    // 버스 이펙트 — 엔진이 바뀔 때만 실제로 움직인다
   const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg];
   const hz=440*Math.pow(2,(midi-69)/12);
 

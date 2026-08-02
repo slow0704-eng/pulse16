@@ -39,7 +39,8 @@ let rootNote = 9, scaleName = 'Minor Pentatonic', baseOct = 24;
 
 /* ── 오디오 노드 (boot 에서 생성) ── */
 let ctx=null, mixBus=null, sumBus=null, busTrim=null, masterGain=null, satIn=null, satOut=null,
-    noiseBus=null, metalBus=null, metalBP=null, CURVES=null,
+    noiseBus=null, pinkBus=null, metalBus=null, metalBP=null, CURVES=null,
+    gtrFX=null,                       // Tone.js 페이저·와·코러스 (기타 버스)
     convolver=null, revReturn=null, duckNode=null, lowGain=null, excGain=null,
     glueComp=null, limComp=null, meterOut=null, meterBass=null, widener=null,
     sendMono=null;

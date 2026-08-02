@@ -133,6 +133,34 @@ function boot(){
   const nsrc=ctx.createBufferSource(); nsrc.buffer=nb; nsrc.loop=true;
   nsrc.connect(noiseBus); nsrc.start(0);
 
+  /* ── 상시 구동 소스: 핑크 노이즈 ──
+     화이트를 넓은 대역으로 통과시키면 옥타브당 +3dB 로 기울어져
+     실물보다 늘 쨍합니다. 브러시 스네어·셰이커처럼 대역이 넓은 보이스가
+     그렇습니다. 좁은 Q 로 때리는 clave·agogo 계열은 화이트와 차이가
+     없으니 그대로 둡니다.
+
+     Paul Kellett 7탭 IIR 근사. Tone.js `Tone/source/Noise.ts` 의
+     `_noiseBuffers.pink` 에서 가져왔습니다 (Tone.js MIT,
+     Tone.js 자신은 zacharydenton/noise.js 를 출처로 밝혀 두었습니다). */
+  const pb=ctx.createBuffer(1,len,ctx.sampleRate);
+  const pd=pb.getChannelData(0);
+  {
+    let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+    for(let i=0;i<len;i++){
+      const w=Math.random()*2-1;
+      b0=0.99886*b0 + w*0.0555179;  b1=0.99332*b1 + w*0.0750759;
+      b2=0.96900*b2 + w*0.1538520;  b3=0.86650*b3 + w*0.3104856;
+      b4=0.55000*b4 + w*0.5329522;  b5=-0.7616*b5 - w*0.0168980;
+      pd[i]=(b0+b1+b2+b3+b4+b5+b6 + w*0.5362)*0.11;
+      b6=w*0.115926;
+    }
+  }
+  pinkBus=ctx.createGain();
+  /* ⚠ ×0.11 게인 보정 탓에 핑크는 화이트보다 RMS 가 낮습니다.
+     쓰는 쪽 amp 를 그대로 두면 소리가 작아집니다 — 보정값은 실측으로 정합니다. */
+  const psrc=ctx.createBufferSource(); psrc.buffer=pb; psrc.loop=true;
+  psrc.connect(pinkBus); psrc.start(0);
+
   /* ── 상시 구동 소스: 909식 6-오실레이터 메탈 ── */
   const RATIOS=[2,3,4.16,5.43,6.79,8.21];
   const mhp=ctx.createBiquadFilter(); mhp.type='highpass'; mhp.frequency.value=7000;
@@ -257,6 +285,48 @@ function boot(){
        트루피크가 +0.2 dBFS 로 클리핑했다.(측정 확인) 6dB 내린다. */
     bqf('lowpass',6000,0.707), bqf('highpass',70,0.7), gnn(0.22),
     ...cab(5000,80,-5.0,4.5,1.78), chan.gtr]);
+
+  /* ── 기타 버스 이펙트 (Tone.js 를 그대로 씀) ──
+     와·페이저·코러스는 장르 정체성인데 우리에게 통째로 없었습니다.
+     셋 다 AudioWorklet 을 안 쓰는 네이티브 노드 조합이라 file:// 에서도 돕니다.
+     보이스마다 만들지 않고 **버스에 한 번만** 답니다 — 앰프 체인과 같은 원칙입니다.
+
+     직렬로 걸고 wet=0 으로 재워 둡니다(Tone 의 wet 0 은 드라이 통과).
+     쓰는 엔진이 나타나면 그 하나만 깨웁니다.
+
+     ⚠ 함정 셋 (docs/tone-js-차용.md ★1 — 전부 실측 확인된 것):
+       ① Tone.Chorus 는 생성자가 LFO 를 안 켠다. .start() 를 빠뜨리면
+          코러스가 아니라 고정 딜레이(콤 필터 착색)가 된다.
+       ② Phaser·AutoWah 의 기본 wet 은 1 인데, 올패스는 진폭이 평탄해서
+          드라이와 섞여야 노치가 생긴다. wet=1 이면 효과가 거의 없다.
+          (화이트노이즈 실측: wet 1.0 편차 9.5dB vs wet 0.5 편차 18.1dB)
+       ③ 셋 다 StereoEffect 라 내부에서 2채널을 쓴다.
+          panner.gtr **앞**에 넣어야 팬이 안 무너진다. */
+  if(HAS_TONE){
+    try{
+      gtrFX = {
+        phaser: new Tone.Phaser({frequency:0.45, octaves:3, stages:10,
+                                 Q:10, baseFrequency:350, wet:0}),
+        wah   : new Tone.AutoWah({baseFrequency:110, octaves:5, sensitivity:-8,
+                                  Q:2.4, gain:2, follower:0.18, wet:0}),
+        chorus: new Tone.Chorus({frequency:1.2, delayTime:3.5, depth:0.62,
+                                 spread:180, feedback:0, wet:0}),
+      };
+      gtrFX.chorus.start();                     // ① LFO 를 손으로 켠다
+      chan.gtr.disconnect(panner.gtr);
+      Tone.connect(chan.gtr, gtrFX.phaser);
+      gtrFX.phaser.connect(gtrFX.wah);
+      gtrFX.wah.connect(gtrFX.chorus);
+      gtrFX.chorus.connect(panner.gtr);         // ③ 팬 앞
+    }catch(err){
+      /* Tone 판이 달라 못 만들면 이펙트만 포기하고 원래 배선으로 돌아간다 —
+         기타가 통째로 안 들리는 것보다 낫다. */
+      gtrFX=null;
+      try{ chan.gtr.disconnect(); }catch(e){}
+      chan.gtr.connect(panner.gtr);      // 센드는 panner 에서 갈라지므로 건드릴 게 없다
+      console.warn('기타 이펙트를 못 걸었습니다 — 드라이로 갑니다', err);
+    }
+  }
 
   /* ── 건반 버스 코러스 (Juno BBD 근사) ── */
   const kdL=ctx.createDelay(0.05), kdR=ctx.createDelay(0.05);

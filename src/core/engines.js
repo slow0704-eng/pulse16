@@ -217,6 +217,27 @@ const GTR = {
   nylon :{exF:1100,exLen:0.0030,exNz:0.25,beta:0.33,lpF:3200,shDb:-1.40,
           t60:2.8,t60k:0.40,chord:[0],strum:0.015,det:4.5,lvl:0.36,amp:'body_nyl'},
 
+  /* ── 이펙트를 쓰는 기타 ──
+     현 모델은 clean·crunch 와 같습니다. 다른 것은 버스 이펙트뿐입니다.
+     기존 엔진에 fx 를 얹지 않고 따로 만든 이유는, clean 을 고치면
+     그것을 쓰는 프리셋 전체가 같이 변하기 때문입니다.
+     fxWet 은 0.5 근처가 기본입니다 — docs/tone-js-차용.md ★1 함정 ②. */
+
+  /* 와 — 펑크·디스코 커팅. 페달을 밟는 대신 연주 세기가 필터를 연다(오토와). */
+  wah   :{exF:3000,exLen:0.0016,exNz:0.9,beta:0.21,lpF:7000,shDb:-0.35,
+          t60:6.0,t60k:0.30,chord:[0],strum:0.008,det:2.5,lvl:0.32,amp:'amp_cln',
+          puBeta:0.27,puK:0.88, fx:'wah', fxWet:0.62},
+
+  /* 페이저 — 사이키델릭 록·70년대. 올패스 10단이 훑고 지나간다. */
+  phase :{exF:3000,exLen:0.0016,exNz:1.0,beta:0.19,lpF:6000,shDb:-0.50,
+          t60:5.0,t60k:0.30,chord:[0,7],strum:0.006,det:2.5,lvl:0.26,amp:'amp_cru',
+          puBeta:0.24,puK:0.90, fx:'phaser', fxWet:0.5},
+
+  /* 코러스 — 서프·스카·80년대 클린. 살짝 어긋난 복사본이 폭을 만든다. */
+  chorus:{exF:3000,exLen:0.0016,exNz:0.8,beta:0.23,lpF:7200,shDb:-0.35,
+          t60:6.2,t60k:0.32,chord:[0],strum:0.010,det:3.0,lvl:0.32,amp:'amp_cln',
+          puBeta:0.27,puK:0.88, fx:'chorus', fxWet:0.55},
+
   /* 퍼즈 — 하이게인과 다른 악기입니다.
      하이게인은 앰프 프리앰프를 여러 단 거쳐 배음이 정연하게 쌓이지만,
      퍼즈는 기타 신호를 페달에서 통째로 뭉개 거의 사각파로 만듭니다.

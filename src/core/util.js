@@ -17,6 +17,19 @@ const PUN = () => knob('punch')/100;
 const spb = () => 60/knob('bpm');       // 한 박의 초
 const effProb = id => 1 - (1-(probT[id] ?? 1)) * (knob('chance')/100);
 
+/** 기타 버스 이펙트를 엔진이 시키는 대로 켠다.
+    직렬로 걸려 있으므로 **안 쓰는 것은 반드시 0 으로 되돌려야** 한다 —
+    안 그러면 앞 엔진의 와가 다음 엔진까지 따라간다.
+    바뀔 때만 건드린다. 노트마다 AudioParam 을 흔들면 지퍼 잡음이 난다. */
+let gtrFxNow='';
+function applyGtrFx(name){
+  if(!gtrFX || name===gtrFxNow) return;
+  gtrFxNow=name;
+  const want=(GTR[name]||{}).fx || null;
+  for(const k of ['phaser','wah','chorus'])
+    gtrFX[k].wet.value = (k===want) ? ((GTR[name]||{}).fxWet ?? 0.5) : 0;
+}
+
 /** Tone 노드와 네이티브 노드를 안전하게 연결 */
 const link = (a,b) => { if(HAS_TONE && (a.output||b.input)) Tone.connect(a,b); else a.connect(b); };
 
@@ -153,6 +166,13 @@ function shaperNode(idx,end){
 function tapNoise(node,end){
   noiseBus.connect(node);
   retire({disconnect:()=>{ try{ noiseBus.disconnect(node); }catch(e){} }},'x',end+0.06);
+}
+/** 핑크 노이즈를 물렸다 뗀다. 대역이 넓은 보이스 전용 —
+    좁은 Q 밴드패스 안에서는 화이트와 구분이 안 되므로 쓸 이유가 없다. */
+function tapPink(node,end){
+  if(!pinkBus) return tapNoise(node,end);        // 아직 안 구웠으면 화이트로
+  pinkBus.connect(node);
+  retire({disconnect:()=>{ try{ pinkBus.disconnect(node); }catch(e){} }},'x',end+0.06);
 }
 function tapMetal(node,end){
   metalBus.connect(node);

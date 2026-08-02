@@ -82,5 +82,6 @@ const ENGINES = {
   gtr  :{clean:'Electric Clean',crunch:'Crunch',hi:'Hi-Gain',mute:'Palm Mute',
          steel:'Acoustic Steel',nylon:'Nylon',
          fuzz:'Fuzz',twelve:'12-String',pedal:'Pedal Steel',
-         banjo:'Banjo',mandolin:'Mandolin',fiddle:'Fiddle',sitar:'Sitar',saz:'Saz'},
+         banjo:'Banjo',mandolin:'Mandolin',fiddle:'Fiddle',sitar:'Sitar',saz:'Saz',
+         wah:'Wah (Auto)',phase:'Phaser',chorus:'Chorus'},
 };

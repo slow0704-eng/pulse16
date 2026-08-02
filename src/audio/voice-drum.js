@@ -158,8 +158,10 @@ function tom(t,v,e){
 const PERC = {
   /* 셰이커는 씨앗이 통 안에서 튀는 소리라 어택이 뭉툭합니다.
      어택을 0 으로 두면 하이햇과 구분이 안 갑니다 — 6ms 를 줍니다. */
-  shaker   :{bp:[6800,1.1], dec:0.062, atk:0.006, amp:0.42},
-  cabasa   :{bp:[4200,0.9], dec:0.085, atk:0.004, amp:0.40, hp:2600},
+  /* pink 로 바꾸며 14.8dB(×5.50) 보정 — 중심 8095 → 7068 Hz (실측) */
+  shaker   :{bp:[6800,1.1], dec:0.062, atk:0.006, amp:2.31, pink:1},
+  /* pink 로 바꾸며 8.8dB(×2.76) 보정 — 중심 6936 → 6458 Hz (실측) */
+  cabasa   :{bp:[4200,0.9], dec:0.085, atk:0.004, amp:1.11, hp:2600, pink:1},
   /* 탬버린 = 노이즈 + 징글(금속 원반)의 고역 */
   tamb     :{bp:[7600,1.4], dec:0.13,  atk:0.002, amp:0.44, jingle:[9200,11800,14100]},
 
@@ -224,7 +226,7 @@ function perc(t,v,e){
   const head=BQ('bandpass',S.bp[0]*rnd(0.05*H()),S.bp[1],end);
   let node=head;
   if(S.hp){ const h=BQ('highpass',S.hp,0.707,end); node.connect(h); node=h; }
-  node.connect(g); tapNoise(head,end);
+  node.connect(g); (S.pink?tapPink:tapNoise)(head,end);
   env(g,t,amp,S.dec,S.atk);
 
   if(S.jingle) S.jingle.forEach((hz,i) => {   /* 징글의 금속 성분 */
@@ -245,7 +247,12 @@ const SNARE = {
   /* 브러시는 때리는 게 아니라 쓸어내는 것이라 어택이 뭉툭하고 꼬리가 깁니다.
      저역 하이패스 + 고역 로우패스로 좁혀야 '치익' 소리가 나고,
      몸통을 거의 빼야 스틱 스네어로 안 들립니다. (혼키통크·재즈 브러시) */
-  brush:{hp:900, dec:0.34, tone:0.10,tdec:0.05, bp:0,crush:0, lp:5200, atk:0.011, amp:0.52},
+  /* pink — 900~5200Hz 로 대역이 넓어 화이트의 옥타브당 +3dB 기울기가 그대로 드러납니다.
+     브러시는 '치익' 이 정체성이라 여기가 가장 크게 달라집니다.
+     amp 는 핑크의 낮은 RMS 를 실측으로 보정한 값입니다 —
+     화이트 RMS −18.7dB 가 핑크로 −27.0dB 가 되어 9.6dB(×3.02) 올렸습니다.
+     스펙트럼 중심은 4781 → 3743 Hz 로 내려갔습니다. 이게 노린 변화입니다. */
+  brush:{hp:900, dec:0.34, tone:0.10,tdec:0.05, bp:0,crush:0, lp:5200, atk:0.011, amp:1.57, pink:1},
 
   /* 림샷은 테를 때리는 소리 — 와이어가 거의 안 울고 나무 '톡' 이 지배합니다.
      몸통 주파수를 1.9배로 올려야 스네어가 아니라 림으로 들립니다.
@@ -265,7 +272,7 @@ function snare(t,v,e){
     node.connect(pre).connect(w).connect(lp); node=lp;
   }
   env(g,t,v*(S.amp??0.88)*rnd(0.08*H()),S.dec,S.atk??0.0012);
-  node.connect(g); tapNoise(hp,end);
+  node.connect(g); (S.pink?tapPink:tapNoise)(hp,end);
 
   /* 몸통 = 두 개의 삼각파 */
   const te=t+S.tdec+0.15, tm=S.tmul||1;
