@@ -355,3 +355,72 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 | Norteño · Banda | — | — | **아코디언 + 튜바** · 나일론 |
 | Mariachi | — | — | 나일론 · 혼 · 업라이트 |
 | Cumbia | — | — | **아코디언 + 귀로** |
+
+### 쿠바 — 룸바 세 갈래
+
+셋 다 **콩가 + 클라베**만 씁니다. 건반과 기타를 `off` 로 꺼 두었습니다 —
+룸바는 타악기와 목소리만으로 하는 음악이라 이것이 옳습니다.
+갈리는 것은 **템포**이고, 그것이 곧 갈래의 이름입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Rumba (Guaguancó)** | Los Muñequitos de Matanzas | (확인 필요) | 콩가 · 클라베 · **110 BPM** · 건반·기타 없음 |
+| Rumba Yambú | Los Muñequitos de Matanzas | (확인 필요) | 같은 편성 · **85 BPM**(가장 느림, «늙은이의 룸바») |
+| Rumba Columbia | Clave y Guaguancó | (확인 필요) | 같은 편성 · **140 BPM**(가장 빠름, 독무) |
+| **Mozambique** | Pello el Afrokán | (확인 필요) | 콩가 · 클라베 · **혼 + 업라이트** · 115 BPM |
+
+### 푸에르토리코 · 도미니카
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Bomba** | Los Pleneros de la 21 | (확인 필요) | 콩가 · 클라베 · **건반·기타 없음** · 120 BPM |
+| Plena | Plena Libre | (확인 필요) | **혼 + 콩가** · 귀로 · 115 BPM |
+| **Merengue** | Juan Luis Guerra · Wilfrido Vargas | (확인 필요) | **혼 + 팀발레** · 귀로 · **145 BPM** · tight 킥/스네어 |
+| **Bachata** | Aventura · Romeo Santos · Juan Luis Guerra | (확인 필요) | **나일론 기타(레킨토) + 봉고** · EP · 130 BPM |
+| **Reggaeton** | Daddy Yankee · Don Omar · Bad Bunny | (확인 필요) | 벨 · **808** · 귀로 · 96 BPM · **swing 8**(뎀보우) |
+| Dembow | El Alfa · Rochy RD | (확인 필요) | 벨 · 808 · 귀로 · **122 BPM**(레게톤보다 빠름) · deep 킥 |
+
+> Reggaeton 과 Dembow 는 같은 뿌리에서 갈렸습니다. 자메이카 뎀보우 리딤이
+> 파나마·푸에르토리코로 건너가 레게톤이 되고, 도미니카에서 템포를 올린 것이
+> 지금의 Dembow 입니다. **96 대 122** 라는 숫자가 그 차이입니다.
+
+### 브라질
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Forró** | Luiz Gonzaga · Trio Nordestino | (확인 필요) | **아코디언 + 나일론 기타** · 아고고 · wood 킥/톰 · 125 BPM |
+| Baião | Luiz Gonzaga | (확인 필요) | 같은 편성 · **115 BPM** · 포호의 뿌리가 되는 리듬형 |
+| **Pagode** | Zeca Pagodinho · Fundo de Quintal | (확인 필요) | EP · 나일론 기타 · **탬버린(판데이루) + 콩가** · 100 BPM |
+| Partido Alto | Martinho da Vila | (확인 필요) | 같은 편성 · 100 BPM · 삼바의 응답형 갈래 |
+| **Baile Funk** | MC Fioti · Anitta ※1 | (확인 필요) | 벨 · **808** · 셰이커 · deep 킥 · 130 BPM |
+| Funk Mandelão | MC GW · DJ Arana | (확인 필요) | 벨 · 808 · **punch 킥** · 130 BPM |
+| Bruxaria | DJ Blakes · MC Gw | (확인 필요) | 벨 · 808 · **wood 킥/톰** · 140 BPM · 가장 어두운 갈래 |
+
+> ※1 바일리 펑키는 리우 파벨라의 **파티 문화**가 곧 장르라서, 이름난
+> 아티스트보다 DJ·MC 가 수없이 갈립니다. 위는 국제적으로 알려진 쪽입니다.
+>
+> 셋의 차이는 킥입니다 — deep(정통) / punch(만델랑) / wood(브루샤리아).
+> 브루샤리아는 «마법»이라는 뜻으로, 어둡고 뒤틀린 소리가 정체성입니다.
+
+### 멕시코
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Norteño** | Los Tigres del Norte | (확인 필요) | **아코디언 + 바호 섹스토** · wood 킥/톰 · 140 BPM |
+| **Banda** | Banda El Recodo | (확인 필요) | 관악 합주 · wood 킥/톰 · 140 BPM |
+| Cumbia Sonidera | Los Ángeles Azules | (확인 필요) | **hall 클랩**(소니데로의 에코) · 93 BPM |
+
+> Banda 는 **금관·목관 합주단**이 곧 편성입니다 — 기타도 베이스도 없고
+> 투바가 베이스를 맡습니다. 지금 프리셋에는 관악 합주를 낼 음색이
+> 마땅치 않아 하위분기 기본값에 기대고 있습니다.
+>
+> Cumbia Sonidera 의 `hall` 클랩은 **소니데로(길거리 사운드시스템)** 가 거는
+> 깊은 에코를 흉내 낸 것입니다. 이 잔향이 곧 장르의 표식입니다.
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Banda | 하위분기 기본 건반 | **투바 베이스 + 금관 합주**. 관악 합주 음색이 없습니다 |
+| Norteño | `accordion` 은 맞음 | **바호 섹스토**(12현 저음 기타)가 빠졌습니다. `twelve` 로 근사할 수 있습니다 |
+| Merengue | `wood` 톰 + `timbale` | 실제 주역은 **탐보라**(양면 북)입니다 |

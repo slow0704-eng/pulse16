@@ -411,3 +411,56 @@ snare  -X-X-X-X-X-X-X-X
 | New Wave | Talking Heads · Blondie | (확인 필요) | 신스 리드 · 클린 기타 |
 | Gothic Rock | The Cure · Bauhaus | (확인 필요) | 패드 · 코러스 클린 기타 |
 | Screamo | — | — | 하이게인 · 건반 없음 |
+
+### Psychedelic · Krautrock
+
+다섯 프리셋이 **오르간 + 크런치 기타 + 핑거 베이스**를 공유합니다.
+갈리는 것은 템포와 드럼 골격입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Psychedelic Rock** | Jefferson Airplane · The 13th Floor Elevators | Surrealistic Pillow (확인 필요) | 오르간 · 크런치 기타 · 115 BPM · analog 톰 |
+| Acid Rock | Blue Cheer · Iron Butterfly | (확인 필요) | 같은 편성 · 120 BPM · 더 무거운 쪽 |
+| **Krautrock** | Can · Faust | Tago Mago (확인 필요) | 오르간 · **synth 톰** · 135 BPM |
+| **Motorik** | Neu! · Kraftwerk(초기) | Neu! (확인 필요) | **tight 킥 + crack 스네어** · 142 BPM · 기계적 4/4 |
+| Space Rock | Hawkwind · Pink Floyd(초기) | (확인 필요) | 오르간 · synth 톰 · **105 BPM**(가장 느림) |
+
+> **Motorik** 은 리듬 형식의 이름입니다 — «앞으로만 가는» 8분 4/4 골격이
+> 곧 장르입니다. 그래서 킥·스네어를 가장 단단한 `tight`/`crack` 으로 잡았습니다.
+> 사이키델릭 계열에는 **페이저**가 정체성인데, 이번에 `phase` 기타 엔진을
+> 만들었으므로 프리셋에 반영할 수 있습니다(아직 안 했습니다).
+
+### Punk
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Punk** · Punk Rock | Ramones · Sex Pistols · The Clash | Ramones (1976) | **크런치 기타 · 픽 베이스 · 건반 없음** · 180 BPM · tight 킥 |
+| **Hardcore Punk** | Black Flag · Minor Threat | Damaged (확인 필요) | **하이게인 기타** · 200 BPM |
+| **D-beat** | Discharge | Hear Nothing See Nothing Say Nothing (확인 필요) | 하이게인 · 200 BPM · 이름이 곧 드럼 패턴 |
+| **Powerviolence** | Man Is the Bastard · Infest | (확인 필요) | 하이게인 · **250 BPM**(이 라이브러리에서 가장 빠름) |
+| Pop Punk | Green Day · blink-182 | Dookie (확인 필요) | **크런치**(하이게인 아님) · 픽 베이스 · 170 BPM |
+| Proto-punk | The Stooges · MC5 · The Velvet Underground | Fun House (확인 필요) | 오르간 · 크런치 · 픽 베이스 · 150 BPM |
+
+> Punk 하위분기는 `off:['keys']` 로 건반을 꺼 둡니다 — 펑크에 건반이 없는 것은
+> 의도입니다. **Proto-punk 만 예외**로 오르간을 직접 지정합니다
+> (Stooges·Velvet Underground 에는 오르간이 있었습니다).
+>
+> D-beat 은 Discharge 의 드럼 패턴에서 이름을 딴 장르입니다 —
+> **밴드 이름이 곧 리듬형이 된** 드문 경우입니다.
+
+### Hard Rock · 그 밖
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Rock** | — ※1 | — | 오르간 · 하이게인 · 픽 베이스 · 130 BPM · **wood 톰** |
+| Glam Rock | T. Rex · Slade · Sweet | Electric Warrior (확인 필요) | 오르간 · 하이게인 · **spread 클랩**(스탠딩 박수) · 135 BPM |
+| **Southern Rock** | Lynyrd Skynyrd · The Allman Brothers Band | (확인 필요) | 오르간 · 하이게인 · **swing 30**(셔플) · 120 BPM |
+| Country Rock | The Byrds · Eagles | Sweetheart of the Rodeo (확인 필요) | 120 BPM · analog 톰 |
+| **Stoner** · Stoner Rock | Kyuss · Sleep · Fu Manchu | Blues for the Red Sun (확인 필요) | 오르간 · **퍼즈 기타** · 핑거 베이스 · 100 BPM |
+
+> ※1 «Rock» 은 특정 씬이 아니라 **계열의 기본값**으로 둔 프리셋입니다.
+> 대표를 세우는 것이 맞지 않아 비웁니다.
+>
+> Southern Rock 의 **swing 30** 이 이 계열을 다른 하드록과 가르는 값입니다 —
+> 셔플이 빠지면 그냥 하드록이 됩니다.
+> Stoner 와 Stoner Rock 은 값이 완전히 같습니다 — 이름만 둘입니다.

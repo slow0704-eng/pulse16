@@ -254,3 +254,49 @@
 | 90s R&B · Hip Hop Soul | — | — | 로즈 · 부드러운 드럼 |
 | Alternative R&B | — | — | 패드 · 성긴 드럼 |
 | Trap Soul | — | — | 벨 · 808 |
+
+### Contemporary R&B
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **90s R&B** | Mary J. Blige · TLC · Jodeci | (확인 필요) | **EP** · 클린 기타 · 핑거 베이스 · 95 BPM · **swing 30** |
+| Hip Hop Soul | Mary J. Blige · Faith Evans | What's the 411? (확인 필요) | 같은 편성 · 96 BPM · swing 30 |
+
+> 둘은 사실상 같은 값입니다. 실제로도 «힙합 소울» 은 90년대 R&B 에서
+> 힙합 드럼을 쓴 갈래를 가리키는 말이라 경계가 흐립니다.
+> **swing 30** 이 이 계열을 매끈한 팝 R&B 와 가르는 값입니다.
+
+### Boogie · Post-disco
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Boogie** | Kashif · The Whispers · Zapp | (확인 필요) | **리드 신스 + 무그 베이스** · 클린 기타 · 112 BPM · synth 톰 |
+| Post-disco | D Train · Change | (확인 필요) | 같은 편성 · 113 BPM · analog 톰 |
+
+> 디스코가 꺼진 뒤 **밴드를 신시사이저로 갈아 끼운** 자리가 부기입니다.
+> 그래서 스트링(디스코) 대신 `lead`, 핑거 베이스 대신 `moog` 를 씁니다.
+
+### Disco 갈래
+
+넷 다 **punch 킥 + body 스네어 + 4/4** 입니다. 갈리는 것은 템포와 클랩입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Disco** | Chic · Donna Summer · Bee Gees | Saturday Night Fever (확인 필요) | **스트링 + 커팅 클린 기타** · 핑거 베이스 · 탬버린 · 118 BPM · **spread 클랩** |
+| **Italo Disco** | Ryan Paris · Den Harrow | (확인 필요) | 스트링 · **synth 톰** · 124 BPM |
+| Euro Disco | Boney M. · Modern Talking | (확인 필요) | 스트링 · synth 톰 · 124 BPM |
+| **Hi-NRG** | Patrick Cowley · Divine | (확인 필요) | 스트링 · **134 BPM**(가장 빠름) · synth 톰 |
+
+> Disco 의 `spread` 클랩은 **여러 사람이 동시에 치는 박수**를 흉내 낸 것입니다 —
+> 디스코 프로덕션의 표식입니다. 나머지 셋은 `tight`(기계 클랩)를 씁니다.
+> 이것이 «사람이 친 디스코» 와 «기계로 만든 유럽 디스코» 의 차이입니다.
+>
+> Hi-NRG 는 이름 그대로 **템포가 정체성**입니다. 134 라는 숫자가 곧 장르입니다.
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Disco | `finger` 베이스 | 디스코 베이스의 표식은 **옥타브 점프**입니다. 음색이 아니라 패턴 문제라 프리셋 패턴 쪽을 봐야 합니다 |
+| Boogie | `moog` 베이스 | 잽(Zapp) 계열은 **토크박스**가 정체성입니다 — 이번에 만든 `vocoder` 건반이 가장 가깝습니다 |
+| 90s R&B · Hip Hop Soul | 값이 완전히 같음 | 실제로도 경계가 흐리지만, 프리셋 둘을 유지할 이유가 있는지 볼 만합니다 |
