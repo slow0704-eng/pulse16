@@ -85,9 +85,20 @@ const KEYS_TEX = {
   horns    :{kt:0.55,kd:0.25,body:[[500,1.4,3.0],[1200,1.2,2.5],[2500,1.0,2.0]]},
   /* 보코더의 포먼트. 음정을 안 따라가는 것이 핵심입니다 —
      모음은 성도(聲道) 모양이 정하는 것이라 음높이와 무관합니다.
-     kt 를 0 으로 두어 필터도 안 따라가게 합니다. 'ah~oh' 사이 모음. */
-  vocoder  :{kt:0.05,kd:0.10,body:[[620,6.0,9.0],[1100,5.0,7.0],
-                                   [2600,4.0,5.0],[3400,3.0,3.0]]},
+     kt 를 0 으로 두어 필터도 안 따라가게 합니다. 'ah~oh' 사이 모음.
+
+     ⚠ formant 는 body 와 **다른 회로**입니다. body 는 peaking 을 직렬로 잇는데,
+     직렬 peaking 은 기울기만 바꿔서 **포먼트 사이의 골을 못 만듭니다.**
+     계측에서 부스트가 +3.5~+8.7dB 뿐이라 톱니의 −6dB/oct 경사를 못 이기고
+     봉우리가 아예 안 섰습니다. 병렬 밴드패스를 가중합해야 골이 생깁니다.
+     (Plaits `naive_speech_synth.cc` 가 Q≈20 밴드패스를 병렬로 씁니다.
+      docs/mutable-차용.md ★1) */
+  vocoder  :{kt:0.05,kd:0.10, dry:0.18,
+             formant:[[ 350, 6.0,0.55],   // 기음을 실어 나르는 낮은 대역
+                      [ 650,14.0,1.00],   // F1
+                      [1000,16.0,0.80],   // F2
+                      [2450,18.0,0.70],   // F3
+                      [3400,16.0,0.45]]}, // F4
   /* 하프시코드는 얕은 나무 상자 — 저역 공명이 거의 없고 중고역만 */
   harpsi   :{kt:0.65,kd:0.55,body:[[700,1.6,2.5],[2000,1.4,3.5]]},
   /* 오르간은 몸통이 없습니다 — 전기 신호가 스피커로 바로 갑니다.
@@ -137,7 +148,22 @@ function keysVoice(t,midi,dur,vel,name){
      몸통은 음정을 따라가지 않습니다 — 통의 크기는 고정이니까요.
      이 점이 필터(음정을 따라감)와 몸통(고정)의 결정적 차이입니다. */
   let node=F.out;
-  if(X.body) X.body.forEach(([bh,bq,bd])=>{
+  if(X.formant){
+    /* 포먼트는 **병렬**이라야 합니다 — 직렬로 이으면 골이 안 생깁니다.
+       dry 를 조금 섞는 것은 좁은 밴드패스만 남으면 콤 필터처럼
+       속이 비기 때문입니다. 실제 보코더도 밴드 수가 유한해 원음이 샙니다. */
+    const sum=acqGain(); sum.gain.value=1; retire(sum,'gain',end+0.05);
+    X.formant.forEach(([fh,fq,fa])=>{
+      const b=BQ('bandpass',fh,fq,end);
+      const fg=acqGain(); fg.gain.value=fa; retire(fg,'gain',end+0.05);
+      node.connect(b); b.connect(fg); fg.connect(sum);
+    });
+    if(X.dry){
+      const dg=acqGain(); dg.gain.value=X.dry; retire(dg,'gain',end+0.05);
+      node.connect(dg); dg.connect(sum);
+    }
+    node=sum;
+  }else if(X.body) X.body.forEach(([bh,bq,bd])=>{
     const b=BQ('peaking',bh,bq,end,bd);
     node.connect(b); node=b;
   });

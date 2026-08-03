@@ -284,3 +284,80 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 | Indie Pop | — | — | 오르간 · **12현 기타** |
 | Bedroom Pop | — | — | 로즈 · 클린 기타 · 로파이 |
 | Teen Pop · Bubblegum | — | — | 피아노/오르간 · 밝은 프로덕션 |
+
+### Soft Rock · AOR 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Soft Rock | The Carpenters · Fleetwood Mac | Rumours | 피아노 · 클린 기타 · 핑거 베이스 · **wood 킥 + noise 햇**(작은 룸) |
+| AOR | Toto · Journey · Foreigner | Toto IV | 피아노 · 클린 기타 · 핑거 베이스 · 정교한 백비트 |
+| **City Pop** | Tatsuro Yamashita · Mariya Takeuchi | For You | 피아노 · **커팅 클린 기타** · 핑거 베이스 · 4/4 킥 + 오프비트 오픈햇 |
+
+> City Pop 은 하위분기가 준 `finger` 베이스를 씁니다. 문서 §2 의 제작 노트가
+> 말하는 **슬랩**은 아직 프리셋에 반영돼 있지 않습니다.
+
+### Synth-pop 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Electropop | La Roux · Robyn · Goldfrapp | (확인 필요) | 신스 리드 · **무그 베이스** · drive 62(왜곡) · 기타 비어 있음 |
+| New Romantic | Duran Duran · Spandau Ballet · Visage | Rio (확인 필요) | 신스 리드 · 무그 베이스 · **wood 킥 + noise 햇** |
+| Retrowave | Kavinsky · Com Truise | OutRun (확인 필요) | 신스 리드 · 무그 베이스 · 99 BPM 정박 · Synthwave 와 같은 자리 |
+| **Hyperpop** | 100 gecs · SOPHIE · Charli XCX | 1000 gecs | **tick 햇 + crack 스네어** · 신스 리드 · 무그 베이스 · 155 BPM |
+| Digicore | glaive · ericdoa · Jane Remover | Frailty | 하이퍼팝 + 트랩 · 신스 리드 · 무그 베이스 · 160 BPM |
+
+### Dance-pop 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Dance-pop** | Madonna · Kylie Minogue | True Blue | **신스 리드** · 4/4 킥 + 클랩 · 서브 베이스 · **기타 비어 있음** |
+| Eurodance | 2 Unlimited · Haddaway · Corona | No Limits | 신스 리드 · 오프비트 오픈햇 · drive 46 서브 · Natural Minor · 140 BPM |
+| Euro-pop | ABBA · Ace of Base · Roxette | (확인 필요) | 밝은 신스 리드 · 단순한 4/4 · **Major** |
+| EDM-pop | Avicii · Calvin Harris · David Guetta | True | 페스티벌 신스 리드 · 4/4 · 서브 베이스 · 기타 비어 있음 |
+| Freestyle | Shannon · Lisa Lisa & Cult Jam · Exposé | Let the Music Play | **808 롱 서브** · deep 킥 · 신스 리드 · 일렉트로 신콥 |
+
+### 지역 팝
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **J-pop** | Utada Hikaru | First Love | 피아노 · 클린 기타 · 핑거 베이스 · 135 BPM 백비트 |
+| **Shibuya-kei** | Pizzicato Five · Cornelius | Fantasma | **비브라폰 + 12현 기타** · 업라이트 · wood 킥 + tick 햇 |
+| Kayōkyoku | Hibari Misora · Momoe Yamaguchi | (확인 필요) | **스트링** · 클린 기타 · 핑거 베이스 · wood 킥/톰 |
+| Enka | Hibari Misora · Saburō Kitajima | (확인 필요) | 스트링 · **나일론 기타** · 업라이트 · 느린 2박 · 킥 튠 -5 |
+| Mandopop | Teresa Teng · Jay Chou | (확인 필요) | 스트링 · 클린 기타 · 핑거 베이스 · 발라드 템포(95) |
+| Cantopop | Leslie Cheung · Anita Mui | (확인 필요) | 피아노 · 클린 기타 · 핑거 베이스 · Mandopop 과 같은 골격 |
+| Latin Pop | Gloria Estefan · Ricky Martin | (확인 필요) | **혼 섹션 + 나일론 기타** · 귀로 · 핑거 베이스 |
+| Schlager | Helene Fischer · Roy Black | (확인 필요) | **아코디언** · 클린 기타 · 단순한 4/4 · Major |
+
+### Disco
+
+디스코 3종은 하위분기가 `Disco`(D 계열)라 편성 표는
+[04-rnb-soul-funk.md](04-rnb-soul-funk.md) 쪽이지만, 트리에서는
+B 계열 §4 에 함께 놓여 있어 여기 적습니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Disco | Chic · Donna Summer · Bee Gees | Saturday Night Fever | **스트링** · 커팅 클린 기타 · 핑거 베이스 · 탬버린 · 4/4 킥 |
+| Hi-NRG | Patrick Cowley · Sylvester · Bobby Orlando | Step II | 스트링 · 클린 기타 · 핑거 베이스 · 빠른 4/4(134) |
+| Italo Disco | Gazebo · Righeira · Den Harrow | (확인 필요) | 스트링 · 클린 기타 · 핑거 베이스 · 124 BPM · **멜로디 우선** |
+
+> Italo Disco 는 앨범보다 싱글로 남은 장르라 대표 앨범을 하나로 못 좁혔습니다.
+
+### Electro
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Electro | Afrika Bambaataa & Soulsonic Force · Cybotron · Egyptian Lover | (확인 필요) | **deep 킥** · 신스 리드 · 무그 베이스 · 4/4 + 오프비트 오픈햇 |
+
+> "Planet Rock"·"Clear"·"Egypt, Egypt" 처럼 **싱글이 곧 정전(正典)**인 장르라
+> 대표 앨범을 비웠습니다.
+
+### Downtempo · Ambient · Retro
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Synthwave | Kavinsky · College · Perturbator | (확인 필요) | **신스 리드 + 무그 베이스** · hall 클랩(게이트 감각) · 100 BPM 정박 |
+
+> Synthwave 는 [05-electronic.md](05-electronic.md) 의 표에도 한 줄이 있습니다.
+> 프리셋이 `keys:'lead'` 와 `bass:'moog'` 를 직접 적어 하위분기 기본값(`pad`)을
+> 덮고 있어, 같은 하위분기의 Vaporwave·Chillout 과 소리가 갈립니다.

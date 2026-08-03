@@ -290,8 +290,11 @@ log('   설계 t60 이 그보다 길면 그 지점에서 소리가 뚝 끊깁니
 /* ── ③ vocoder: 포먼트가 서 있는가 ── */
 log('\n【3】 keys/vocoder — 보코더');
 log('실물 기준: 모음 포먼트는 **음높이를 안 따라간다**. 성도 모양이 정하기 때문.');
-log('설계값 KEYS_TEX.vocoder.body = ' +
-    KEYS_TEX.vocoder.body.map(b=>b[0]+'Hz Q'+b[1]+' +'+b[2]+'dB').join(' · '));
+/* 병렬 밴드패스(formant)로 바뀌었습니다. 옛 직렬 peaking(body)도 계속 읽습니다. */
+log('설계값 KEYS_TEX.vocoder = ' + (KEYS_TEX.vocoder.formant
+    ? '병렬 밴드패스 ' + KEYS_TEX.vocoder.formant.map(b=>b[0]+'Hz Q'+b[1]+' ×'+b[2]).join(' · ')
+      + (KEYS_TEX.vocoder.dry ? ' · dry '+KEYS_TEX.vocoder.dry : '')
+    : '직렬 peaking ' + KEYS_TEX.vocoder.body.map(b=>b[0]+'Hz Q'+b[1]+' +'+b[2]+'dB').join(' · ')));
 log('검증: 세 음정에서 배음 포락선을 재고, 봉우리가 같은 **주파수**에 서는지 본다.');
 log('     (음정을 따라가면 포먼트가 아니라 그냥 필터입니다)');
 log('\n음정별 배음 포락선 — 각 배음의 주파수(Hz)와 최대배음 대비 dB');
@@ -308,8 +311,8 @@ for(const midi of [A2, 52, A3]){          // A2 110 · E3 165 · A3 220
                 .sort((x,y)=>y[1]-x[1]).slice(0,4).sort((x,y)=>x[0]-y[0]);
   log('   봉우리: ' + top.map(([f,v])=>f.toFixed(0)+'Hz('+v.toFixed(1)+'dB)').join(' · '));
 }
-log('\n포먼트 필터의 실제 응답 — **같은 엔진에서 body 만 빼고** 다시 재서 나눈다');
-log('(KEYS_TEX.vocoder.body 를 런타임에서만 잠시 떼어낸다. 발음체·필터·ADSR 이');
+log('\n포먼트 필터의 실제 응답 — **같은 엔진에서 포먼트만 빼고** 다시 재서 나눈다');
+log('(formant(병렬 밴드패스)·body(직렬 peaking) 중 있는 쪽을 런타임에서만 뗀다. 발음체·필터·ADSR 이');
 log(' 완전히 같으므로 차이가 곧 포먼트 필터의 전달함수다 — 이보다 깨끗한 대조군은 없다)');
 log('음정을 바꿔도 같은 주파수에서 봉우리가 서면 진짜 포먼트다.');
 log('⚠ 오실레이터가 ±5cent 로 디튠돼 있어 배음마다 맥놀이가 있습니다.');
@@ -319,19 +322,28 @@ for(const midi of [A2, 52, A3]){
   const f0 = hHz(midi);
   const on  = hAnalyze(await renderKeys('vocoder',midi,3.0,0.9,0.5), f0, HW);
   const save = KEYS_TEX.vocoder;
-  KEYS_TEX.vocoder = {kt:save.kt, kd:save.kd};          // body 만 제거
+  KEYS_TEX.vocoder = {kt:save.kt, kd:save.kd};          // formant·body·dry 를 제거
   const off = hAnalyze(await renderKeys('vocoder',midi,3.0,0.9,0.5,'nobody'), f0, HW);
   KEYS_TEX.vocoder = save;
   const N=Math.min(on.hAbs.length, off.hAbs.length), fs=[], ds=[];
   for(let i=0;i<N;i++){ fs.push(f0*(i+1)); ds.push(hdB(on.hAbs[i]/Math.max(off.hAbs[i],1e-12))); }
-  log('\n  f0=' + f0.toFixed(1) + 'Hz  (body 있음 ÷ body 없음)');
+  log('\n  f0=' + f0.toFixed(1) + 'Hz  (포먼트 있음 ÷ 없음)');
   log('   Hz  : ' + fs.map(f=>f.toFixed(0).padStart(6)).join(''));
   log('   차dB: ' + ds.map(d=>d.toFixed(1).padStart(6)).join(''));
   /* 설계 포먼트 4개 자리에서 실제로 얼마가 올랐는지 — 가장 가까운 배음으로 */
   const near = t => { let bi=0; fs.forEach((f,i)=>{ if(Math.abs(f-t)<Math.abs(fs[bi]-t)) bi=i; });
     return fs[bi].toFixed(0)+'Hz '+ds[bi].toFixed(1)+'dB'; };
-  log('   설계 포먼트 자리 실측: ' +
-      KEYS_TEX.vocoder.body.map(b=>b[0]+'Hz(+'+b[2]+') → '+near(b[0])).join(' · '));
+  /* ⚠ 여기서는 이미 KEYS_TEX.vocoder 를 되돌린 뒤다. save 가 아니라
+     현재 값을 읽어야 하고, formant(병렬)·body(직렬) 중 있는 쪽을 봐야 한다. */
+  const spec = KEYS_TEX.vocoder.formant || KEYS_TEX.vocoder.body || [];
+  log('   설계 포먼트 자리 실측: ' + spec.map(b=>b[0]+'Hz → '+near(b[0])).join(' · '));
+  /* 봉우리가 **섰는가** = 포먼트 자리와 그 사이 골의 차.
+     직렬 peaking 은 원리상 골을 못 만들어 이 값이 안 벌어진다. */
+  const at = t => { let bi=0; fs.forEach((f,i)=>{ if(Math.abs(f-t)<Math.abs(fs[bi]-t)) bi=i; }); return ds[bi]; };
+  const pk = spec.map(b=>at(b[0]));
+  const mids=[]; for(let i=0;i<spec.length-1;i++) mids.push(at((spec[i][0]+spec[i+1][0])/2));
+  if(mids.length) log('   봉우리−골 = ' + (Math.max(...pk)-Math.min(...mids)).toFixed(1) +
+      ' dB  (봉우리 최대 ' + Math.max(...pk).toFixed(1) + ' · 골 최소 ' + Math.min(...mids).toFixed(1) + ')');
 }
 
 /* ── ④ harpsi: 비조화도 B · 감쇠 · 배음 기울기 ── */

@@ -157,3 +157,71 @@
 | ·Bossa Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Samba Jazz | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
 
+> 위 **베이스** 표의 엔진 칸은 프리셋이 적어 둔 `bcfg.eng` 입니다.
+> 재즈 계열은 `TONE_KIT` 이 하위분기 단위로 `upright`(퓨전만 `slap`)를
+> 덮어쓰므로, 실제로 울리는 것은 전부 업라이트입니다.
+> 우선순위는 `src/data/presets/_build.js` 참조.
+
+---
+
+## 레퍼런스 — 대표 아티스트 · 대표 앨범
+
+편성을 정할 때 쓴 판단 근거입니다. 표기 규칙과 주의사항은
+[00-reference.md](00-reference.md) 를 먼저 보십시오 —
+**이 목록을 AI 프롬프트에 그대로 넣으면 안 됩니다.**
+앨범명은 미검증이며 `(확인 필요)` 표시가 있습니다.
+
+### Bebop 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Soul Jazz | Jimmy Smith · Grant Green | Back at the Chicken Shack | 피아노 · 클린 기타 · **업라이트** · 스윙 50 · 그루브 중심 |
+| West Coast Jazz | Gerry Mulligan · Chet Baker | (확인 필요) | 피아노 · 클린 기타 · 업라이트 · **스윙 0** · 낮은 다이내믹 |
+
+> Soul Jazz 의 실제 정체성은 **해먼드 오르간**이고, Mulligan–Baker 쿼텟은
+> 아예 **피아노가 없는** 편성이었습니다. 지금 두 프리셋은 하위분기 기본값인
+> `piano` 를 함께 쓰고 있어 이 차이가 소리로 안 나옵니다.
+
+### Latin Jazz
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Latin Jazz | Tito Puente · Cal Tjader | Dance Mania | 피아노 몬투노 · 나일론 기타 · 업라이트 · **클라베** · wood 톰 · 170 BPM |
+| **Afro-Cuban Jazz** | Machito · Mario Bauzá · Dizzy Gillespie | (확인 필요) | 상동 + 190 BPM · **클라베 방향 유지가 규칙** |
+| **Bossa Jazz** | Stan Getz · João Gilberto · Antônio Carlos Jobim | Getz/Gilberto | **나일론 기타** · 피아노 · 업라이트 · wood 킥 · 130 BPM(체감 65) |
+| Samba Jazz | Zimbo Trio · Tamba Trio · Sérgio Mendes | (확인 필요) | 피아노 트리오 중심 · 나일론 · 업라이트 · wood 킥/톰 · 103 BPM |
+
+> Afro-Cuban Jazz 의 출발점은 Bauzá 의 "Tanga"(1943)와
+> Gillespie–Chano Pozo 의 "Manteca"(1947)로, **곡** 단위로 남은 계보입니다.
+> 대표 앨범을 하나로 좁히지 못해 비웠습니다.
+
+### Fusion 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Jazz Fusion** | Weather Report · Mahavishnu Orchestra · Miles Davis | Heavy Weather | **색소폰** · 클린 기타 · **슬랩 베이스** · 스트레이트 16분 · 130 BPM |
+
+> 퓨전만 하위분기가 `slap` 을 줍니다 — 재즈 계열에서 업라이트가 아닌 유일한 자리이고,
+> 이것이 §5 제작 노트의 "스윙하지 않는 재즈"와 짝을 이룹니다.
+
+### 현대 갈래
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Smooth Jazz | Grover Washington Jr. · Kenny G | Winelight | 피아노 · 클린 기타 · 업라이트 · 부드러운 백비트 · 105 BPM |
+| Acid Jazz | The Brand New Heavies · Incognito · Jamiroquai | Travelling Without Moving | 피아노 · 클린 기타 · 업라이트 · **스윙 30** 브레이크비트 · 110 BPM |
+
+> 둘 다 §6 표가 적은 편성(스무스=소프라노 색소폰·신스 패드, 애시드=오르간·와우 기타)과
+> 어긋납니다. 하위분기 `현대 갈래` 하나가 두 장르에 `piano` + `upright` 를
+> 똑같이 주고 있습니다.
+
+### Blues (교차)
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Jump Blues | Louis Jordan | (확인 필요) | **혼 섹션** · 클린 기타 · 업라이트 · 스윙 50 · 160 BPM |
+
+> Jump Blues 는 하위분기가 `Blues`(G 계열)라 편성 표와 같은 줄이
+> [07-roots.md](07-roots.md) 에도 있습니다. §1 에서 스윙의 갈래로 다루기 때문에
+> 여기에도 적어 둡니다.
+
