@@ -274,6 +274,21 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 **이 목록을 AI 프롬프트에 그대로 넣으면 안 됩니다.**
 앨범명은 미검증이며 `(확인 필요)` 표시가 있습니다.
 
+### 뿌리
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Traditional Pop** | Frank Sinatra · Nat King Cole · Ella Fitzgerald | In the Wee Small Hours (Sinatra, 1955) | **스트링** · 클린 기타 · **업라이트 베이스** · swing 50 · 90 BPM · 탬버린 |
+| Brill Building | The Shirelles · The Ronettes · Carole King | Tapestry (King, 1971) | **피아노** · 클린 기타 · 업라이트 베이스 · swing 0 · 125 BPM · 강한 백비트 |
+
+> Traditional Pop 은 크루너 시대의 편성입니다 — 노래를 오케스트라가 받칩니다.
+> 그래서 하위분기 기본값 `piano` 를 쓰지 않고 프리셋이 직접 `strings` 를 지정하고,
+> 베이스도 `upright` 로 바꿔 둡니다. swing 50 이 이 계열의 정체성입니다.
+>
+> Brill Building 은 **작곡 분업 시스템**의 이름이지 사운드의 이름이 아닙니다.
+> 그래서 «대표 앨범» 자리에 곡 모음이 아니라 그 시스템에서 나온 작곡가의
+> 솔로 앨범을 적었습니다. 실제 사운드의 본보기는 개별 싱글 쪽입니다.
+
 ### Teen Pop · Indie Pop
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
@@ -283,7 +298,12 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 | Twee Pop | — | — | **비브라폰** · 12현 기타 |
 | Indie Pop | — | — | 오르간 · **12현 기타** |
 | Bedroom Pop | — | — | 로즈 · 클린 기타 · 로파이 |
-| Teen Pop · Bubblegum | — | — | 피아노/오르간 · 밝은 프로덕션 |
+| Teen Pop | Britney Spears · NSYNC · Backstreet Boys | (확인 필요) | **피아노** · 클린 기타 · 118 BPM · spread 클랩 |
+| Bubblegum | The Archies · 1910 Fruitgum Company | (확인 필요) | **오르간** · 클린 기타 · 125 BPM · 단순 반복 훅 |
+
+> Teen Pop 과 Bubblegum 은 **다른 프리셋**입니다. 예전에 한 행으로 묶어 두었는데,
+> 실제로는 건반이 갈립니다 — Teen Pop 은 `piano`, Bubblegum 은 `organ` 입니다.
+> BPM 도 118 대 125 로 다릅니다.
 
 ### Soft Rock · AOR 계보
 

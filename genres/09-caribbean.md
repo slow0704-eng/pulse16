@@ -217,10 +217,73 @@
 |---|---|---|---|
 | Reggae One Drop | Bob Marley | (확인 필요) | **림샷** · 오르간 버블 · 성긴 베이스 |
 | Ska | The Skatalites | (확인 필요) | **혼 섹션** · 업비트 기타 |
-| Rocksteady · Lovers Rock | — | — | 오르간 · 느린 스킹크 |
-| Dancehall · Ragga | — | — | 벨/리드 · 808 · 신스 |
+| Rocksteady | Alton Ellis · The Paragons | (확인 필요) | 혼 · 클린 기타 · 핑거 베이스 · 90 BPM · body 스네어 |
+| Mento | Stanley Beckford · The Jolly Boys | (확인 필요) | 혼 · 클린 기타 · **wood 킥/톰**(룸바 박스) · 115 BPM |
 | Reggaeton · Dembow | Daddy Yankee | (확인 필요) | 벨 · 808 · **귀로** |
 | Bachata | Aventura | (확인 필요) | **레킨토(나일론) + 봉고** |
 | Merengue | Juan Luis Guerra | (확인 필요) | **팀발레 + 혼** · 귀로 |
 | Bomba · Plena | — | — | **콩가 중심** · 건반 없음(Bomba) |
 | Soca · Calypso | — | — | **스틸팬** · 아이언 |
+
+
+### Reggae 갈래 — 원드롭에서 갈라진 것들
+
+넷 다 75~80 BPM 에 오르간·클린 기타·핑거 베이스를 씁니다. 갈리는 것은
+**킥이 어디에 떨어지는가** 입니다. 이 차이가 곧 갈래의 이름입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Roots Reggae** | Burning Spear · Culture | Marcus Garvey (확인 필요) | 오르간 · 클린 기타 · 핑거 베이스 · 75 BPM · punch 킥 |
+| **Steppers** | Sly & Robbie · Black Uhuru | (확인 필요) | 같은 편성 · 80 BPM · **킥이 네 박 모두**(그래서 «걸어가는» 느낌) |
+| Rockers | The Revolutionaries | (확인 필요) | **tight 킥**(가장 단단함) · 80 BPM |
+| Lovers Rock | Janet Kay · Gregory Isaacs | (확인 필요) | 오르간 · 80 BPM · 부드러운 body 스네어 |
+
+### Dancehall 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Dancehall** | Shabba Ranks · Sean Paul | (확인 필요) | **벨 + 808** · deep 킥 · 98 BPM |
+| Ragga | Cutty Ranks · Super Cat | (확인 필요) | 벨 · **sub 베이스** · synth 톰 · 100 BPM |
+| **Digital Dancehall** | Wayne Smith ※1 | (확인 필요) | **리드 신스** · sub 베이스 · 100 BPM |
+| Bashment | Vybz Kartel · Elephant Man | (확인 필요) | 리드 신스 · **808** · 100 BPM |
+| Dembow riddim | Shabba Ranks ※2 | (확인 필요) | 벨 · 808 · **wood 킥/톰** · 100 BPM |
+| Afro-dancehall | Popcaan · Burna Boy | (확인 필요) | **오르간** · 핑거 베이스 · 103 BPM |
+
+> ※1 «Sleng Teng»(1985) 이 디지털 댄스홀의 시작으로 널리 인정됩니다 —
+> 사람보다 **그 리딤 하나**가 장르를 열었습니다.
+> ※2 뎀보우는 리딤(반주 트랙)의 이름입니다. 특정 아티스트의 것이 아니라
+> 자메이카에서 나와 푸에르토리코로 건너가 레게톤의 뼈대가 됐습니다.
+
+### 트리니다드 · 바베이도스
+
+넷 다 **스틸팬 + 아이언 16분**이 기본입니다. 갈리는 것은 템포입니다 —
+소카는 템포가 곧 하위장르입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Calypso** | Mighty Sparrow · Lord Kitchener | (확인 필요) | 스틸팬 · 아이언 · 125 BPM · 가사 중심 |
+| **Soca** | Machel Montano · Arrow | (확인 필요) | 스틸팬 · 아이언 · **155 BPM** · metal 햇 |
+| Groovy Soca | Kes · Destra Garcia | (확인 필요) | 스틸팬 · **125 BPM**(느린 소카) |
+| Power Soca | Iwer George · Superblue | (확인 필요) | 스틸팬 · **168 BPM**(가장 빠름) · wood 킥/톰 |
+| Chutney Soca | Sundar Popo · Rikki Jai | (확인 필요) | 스틸팬 · 145 BPM · 인도계 트리니다드 |
+
+> Chutney Soca 는 **인도계 이주민의 음악과 소카가 섞인 것**입니다.
+> 실제로는 돌락·하모늄이 들어가는데 지금 편성에는 없습니다 —
+> 아래 «편성과 어긋나는 것» 에 적었습니다.
+
+### 프랑스어권 카리브
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Zouk** | Kassav' | (확인 필요) | EP · 클린 기타 · 핑거 베이스 · 셰이커 · 120 BPM · **swing 12** |
+| Zouk Love | Édith Lefel · Jocelyne Béroard | (확인 필요) | 같은 편성 · **100 BPM**(느린 러브송 갈래) |
+| **Kompa** | Nemours Jean-Baptiste · Tabou Combo | (확인 필요) | EP · 셰이커 · 115 BPM · 아이티 |
+| Bouyon | WCK · Triple Kay | (확인 필요) | **wood 킥/톰** · 135 BPM · 도미니카(연방) |
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Chutney Soca | 스틸팬 + 아이언 (하위분기 기본값) | **돌락 · 하모늄**. 인도계 악기가 정체성인데 하나도 없습니다 |
+| Steppers | 프리셋 킥 패턴 | 이름 그대로 **네 박 모두 킥**이라야 하는데 패턴이 원드롭과 같습니다 |
+| Mento | 혼 (하위분기 «자메이카» 기본값) | **밴조 · 룸바 박스**. 멘토는 어쿠스틱 음악입니다 |

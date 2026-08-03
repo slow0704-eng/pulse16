@@ -268,3 +268,72 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 | Soukous · Ndombolo | — | — | 빠른 클린 기타 · 콩가 |
 | Amapiano | — | — | **로그드럼** · 로즈 |
 | Gqom · Kwaito | — | — | 성긴 킥 · 셰이커 |
+
+### 서아프리카
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Afrobeats** ※1 | Burna Boy · Wizkid · Davido | African Giant (확인 필요) | **벨** · 클린 기타 · 핑거 베이스 · 110 BPM · **swing 26** · wood 킥/톰 |
+| Coupé-décalé | DJ Arafat · Douk Saga | (확인 필요) | **리드 신스** · 핑거 베이스 · 122 BPM · 코트디부아르 |
+
+> ※1 **Afrobeats(복수형)** 와 Fela Kuti 의 **Afrobeat(단수형)** 은 다른 장르입니다.
+> 앞은 2010년대 나이지리아·가나 팝, 뒤는 1970년대 롱폼 펑크입니다.
+> 이 파일의 다른 자리에 있는 Afrobeat 과 혼동하지 마십시오.
+> swing 26 이 Afrobeats 의 «흐느적거리는» 느낌을 만드는 값입니다.
+
+### 동아프리카
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Ethio-jazz** | Mulatu Astatke | (확인 필요) | 오르간 · 클린 기타 · **swing 50** · 110 BPM · 에티오피아 음계 |
+| Bongo Flava | Diamond Platnumz · Ali Kiba | (확인 필요) | 오르간 · 핑거 베이스 · 105 BPM · 탄자니아 |
+| Gengetone | Ethic Entertainment · Sailors | (확인 필요) | 오르간 · **hall 클랩** · synth 톰 · 110 BPM · 케냐 |
+
+> Ethio-jazz 의 정체성은 **에티오피아 5음 음계(티지타 등)** 인데, 지금 프리셋은
+> 스케일 노브로만 흉내 냅니다. swing 50 은 잘 잡혀 있습니다.
+
+### 중앙아프리카
+
+세 프리셋이 **마림바 + 클린 기타 + 핑거 베이스**를 공유합니다.
+갈리는 것은 템포와 킥입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Congolese Rumba** | Franco · Le Grand Kallé · Tabu Ley Rochereau | (확인 필요) | 마림바 · 클린 기타 · 115 BPM · **wood 킥/톰** |
+| **Soukous** | Kanda Bongo Man · Papa Wemba | (확인 필요) | 마림바 · **145 BPM** · tight 킥 + crack 스네어(빠른 세베네) |
+| Ndombolo | Koffi Olomide · Werrason | (확인 필요) | 마림바 · 145 BPM · synth 톰 · 90년대 이후 |
+
+> 셋은 한 계보입니다 — 쿠바 손(son)이 콩고로 건너가 룸바가 되고,
+> 거기서 기타 솔로 구간(세베네)을 늘린 것이 수쿠스, 더 빠르고 춤 중심으로
+> 간 것이 은돔볼로입니다. **실제 주역은 기타 두세 대의 얽힘**인데
+> 지금 편성은 하위분기가 준 `marimba` 가 앞에 나옵니다.
+
+### 남아프리카
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Gqom** | DJ Lag · Rudeboyz | (확인 필요) | **pluck** · 127 BPM · **swing 28** · 더반 |
+| **Kwaito** | Arthur Mafokate · Mandoza | (확인 필요) | pluck · **105 BPM**(느린 하우스) · swing 18 · deep 킥 |
+| Mbaqanga | Mahlathini and the Mahotella Queens | (확인 필요) | pluck · 115 BPM · 60~70년대 타운십 |
+| Marabi | — ※2 | — | pluck · 105 BPM · 20~40년대 셔빈 음악 |
+| Afro Tech | Black Coffee · Culoe De Song | (확인 필요) | pluck · **wood 킥 + metal 햇** · 124 BPM |
+| Afro House | Black Coffee · Da Capo | (확인 필요) | **pluck + 콩가 톰** · 셰이커 · 122 BPM · swing 16 |
+
+> ※2 마라비는 1920~40년대 요하네스버그 셔빈에서 자란 **집단적 형식**입니다.
+> 녹음이 거의 남지 않았고 한 인물로 대표되지 않습니다.
+>
+> Kwaito 는 «BPM 을 늦춘 하우스» 가 정의입니다 — 105 라는 숫자 자체가 장르입니다.
+
+### 북아프리카
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Mahraganat | Oka Wi Ortega · Sadat El Alamy | (확인 필요) | EP · **나일론 기타** · 셰이커 · **wood 킥/톰** · 115 BPM · 이집트 |
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Congolese Rumba · Soukous · Ndombolo | `marimba` 가 주역 (하위분기 «중앙아프리카» 기본값) | **얽히는 전기 기타 두세 대**. 마림바는 이 계보의 악기가 아닙니다 |
+| Afrobeats | `bell` | 실제로는 **로그 드럼(log drum)** 베이스가 2020년대 이후의 표식입니다 |
+| Ethio-jazz | 일반 스케일 | **에티오피아 5음 음계**. 스케일 목록에 아직 없습니다 |
