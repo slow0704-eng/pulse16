@@ -387,3 +387,108 @@ PULSE·16의 Trap 프리셋은 1번 방식으로 되어 있습니다
 | Jazz Rap | A Tribe Called Quest | The Low End Theory | 로즈 · **업라이트 베이스** |
 | Conscious Hip Hop | — | — | 스트링 · 차분한 톤 |
 | Horrorcore | — | — | 어두운 벨 · 불협 |
+
+### 뿌리 · 골든에이지
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Golden Age** | A Tribe Called Quest · Nas · Public Enemy | Illmatic (확인 필요) | **EP** · punch 킥 · body 스네어 · 93 BPM · swing 0 |
+| Hardcore Hip Hop | Wu-Tang Clan · Mobb Deep | Enter the Wu-Tang (확인 필요) | 같은 편성 · 95 BPM · **swing 30** |
+
+### Southern · West Coast
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **G-Funk** | Dr. Dre · Warren G · Snoop Dogg | The Chronic (확인 필요) | 95 BPM · **swing 30** · deep 킥 · wood 톰 |
+| **Miami Bass** | 2 Live Crew · MC A.D.E. | (확인 필요) | **리드 신스** · 138 BPM · spread 클랩 · metal 햇 |
+| Booty Bass | DJ Magic Mike | (확인 필요) | 리드 신스 · 140 BPM |
+| **Hyphy** | E-40 · Mac Dre | (확인 필요) | 110 BPM · crack 스네어 · synth 톰 |
+| Jerk | New Boyz · Audio Push | (확인 필요) | 103 BPM · synth 톰 |
+
+### Phonk
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Phonk** | DJ Screw ※1 · SpaceGhostPurrp | (확인 필요) | 벨 · **lofi 스네어 + 카우벨** · tick 햇 · 140 BPM |
+| **Drift Phonk** | Kordhell · Freddie Dredd | (확인 필요) | 벨 · **카우벨**(이 갈래의 표식) · deep 킥 · 150 BPM |
+| Brazilian Phonk | MC GW ※2 | (확인 필요) | deep 킥 · synth 톰 · 140 BPM |
+
+> ※1 폰크는 90년대 멤피스 언더그라운드 테이프와 휴스턴 촙트앤스크루드에서
+> 자란 것이라 «대표 앨범» 이 성립하기 어렵습니다 — 카세트와 믹스테이프가
+> 매체였습니다.
+> ※2 브라질리안 폰크는 바일리 펑키와 섞인 갈래라 두 계보에 걸칩니다.
+>
+> **카우벨**이 드리프트 폰크의 표식입니다. 이것이 없으면 그냥 어두운 트랩입니다.
+
+### Trap 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Trap** | T.I. · Gucci Mane · Young Jeezy | (확인 필요) | tight 킥 · **crack 스네어 + tick 햇**(롤) · 140 BPM |
+| Melodic Trap | Travis Scott · Future | (확인 필요) | 같은 골격 · 140 BPM · 선율 중심 |
+| Mumble Rap | Lil Uzi Vert · Playboi Carti | (확인 필요) | 같은 골격 · 140 BPM |
+| **Plugg** | MexikoDro · Pi'erre Bourne | (확인 필요) | **hall 클랩**(넓은 잔향) · 140 BPM |
+| Pluggnb | Summrs · Autumn! | (확인 필요) | **deep 킥 + noise 햇** · 133 BPM · R&B 쪽으로 부드러움 |
+| **Rage** | Playboi Carti · Yeat | Whole Lotta Red (확인 필요) | deep 킥 · **155 BPM**(가장 빠름) · synth 톰 |
+| Trap Metal | Scarlxrd · City Morgue | (확인 필요) | 145 BPM · 왜곡된 보컬이 정체성 |
+
+> 이 일곱은 드럼 골격이 거의 같습니다 — **tick 햇 롤 + crack 스네어**.
+> 갈리는 것은 템포와 클랩의 잔향, 그리고 위에 얹는 선율입니다.
+> Plugg 의 `hall` 클랩과 Rage 의 155 BPM 이 각각의 표식입니다.
+
+### Drill
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Chicago Drill** | Chief Keef · Lil Durk | Finally Rich (확인 필요) | tight 킥 · crack 스네어 · **spread 클랩** · 138 BPM |
+| **UK Drill** | Headie One · Central Cee | (확인 필요) | 142 BPM · **noise 오픈햇** · spread 클랩 |
+| NY / Bronx Drill | Pop Smoke · Fivio Foreign | (확인 필요) | 142 BPM · tick 햇 · tight 클랩 |
+| Jersey Drill | Bandmanrill · Sha EK | (확인 필요) | 142 BPM · 저지 클럽 킥 패턴과 섞임 |
+| Sample Drill | Cash Cobain ※3 | (확인 필요) | 142 BPM · 샘플 루프가 정체성 |
+
+> ※3 샘플 드릴은 «무엇을 샘플했는가» 가 곡을 정하는 갈래라
+> 프로듀서 쪽이 대표가 됩니다.
+>
+> 드릴은 **슬라이딩 808 베이스**가 정체성인데, 지금 다섯 프리셋 모두
+> 베이스 글라이드 값이 그 특징을 충분히 내지 못합니다 — 아래에 적었습니다.
+
+### UK 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Grime** | Dizzee Rascal · Wiley · Skepta | Boy in da Corner (확인 필요) | **140 BPM** · punch 킥 · crack 스네어 · tick 햇 · synth 톰 |
+| Road Rap | Giggs · K Koke | (확인 필요) | **93 BPM**(가장 느림) · tight 킥 · spread 클랩 |
+| UK Rap | — ※4 | — | 118 BPM · 계열의 기본값 |
+| **Afroswing** | J Hus · NSG | Common Sense (확인 필요) | **deep 킥** · 105 BPM · 아프로비츠와 UK 랩의 교차 |
+
+> ※4 «UK Rap» 은 특정 씬이 아니라 묶음 이름입니다 — 대표를 세우지 않습니다.
+
+### Lo-fi
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Lo-fi** | Nujabes · J Dilla | (확인 필요) | **wood 킥 + lofi 스네어** · 74 BPM · **swing 44** |
+| Jazzhop | Nujabes · Uyama Hiroto | (확인 필요) | wood 킥 · 85 BPM · **swing 50**(가장 강한 셔플) |
+| Chillhop | — ※5 | — | wood 킥/톰 · 82 BPM · swing 30 |
+
+> ※5 칠홉은 유튜브 스트림 문화에서 자란 묶음 이름이라 대표가 흐립니다.
+>
+> 이 셋은 **swing 값이 곧 성격**입니다 — 30/44/50 순으로 늘어질수록
+> «사람이 친 것 같은» 느낌이 강해집니다.
+
+### Cloud · Emo 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Cloud Rap** | Lil B · Clams Casino | (확인 필요) | **hall 클랩** · **70 BPM**(가장 느림) · 잔향이 정체성 |
+| **Emo Rap** | Lil Peep · XXXTentacion | (확인 필요) | tight 킥 · crack 스네어 · 140 BPM |
+| SoundCloud Rap | Lil Pump · Smokepurpp | (확인 필요) | deep 킥 · 145 BPM |
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Drill 5종 | 808 글라이드가 얕음 | **미끄러지는 808**이 드릴의 표식입니다. `glide` 값을 올려야 그 소리가 납니다 |
+| G-Funk | 하위분기 기본 건반 | **높은 신스 리드 휘파람**이 정체성입니다. `lead` 를 직접 지정하는 편이 맞습니다 |
+| Grime | synth 톰 | 실제로는 **에스키 사운드**(차가운 벨·스트링)가 표식입니다 |
+| Trap 계열 7종 | 드럼 골격이 사실상 동일 | 갈래를 가르는 것이 선율·보컬이라 이 도구로는 구분이 잘 안 납니다 |

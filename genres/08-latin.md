@@ -364,7 +364,8 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Rumba (Guaguancó)** | Los Muñequitos de Matanzas | (확인 필요) | 콩가 · 클라베 · **110 BPM** · 건반·기타 없음 |
+| **Rumba** | Los Muñequitos de Matanzas | (확인 필요) | 과과응코 형 · 콩가 · 클라베 · **110 BPM** · 건반·기타 없음 |
+| **Songo** | Los Van Van · Changuito | (확인 필요) | 콩가 · 클라베 · 혼 · 드럼셋과 타악기를 합친 70년대 쿠바 형식 |
 | Rumba Yambú | Los Muñequitos de Matanzas | (확인 필요) | 같은 편성 · **85 BPM**(가장 느림, «늙은이의 룸바») |
 | Rumba Columbia | Clave y Guaguancó | (확인 필요) | 같은 편성 · **140 BPM**(가장 빠름, 독무) |
 | **Mozambique** | Pello el Afrokán | (확인 필요) | 콩가 · 클라베 · **혼 + 업라이트** · 115 BPM |
@@ -424,3 +425,42 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 | Banda | 하위분기 기본 건반 | **투바 베이스 + 금관 합주**. 관악 합주 음색이 없습니다 |
 | Norteño | `accordion` 은 맞음 | **바호 섹스토**(12현 저음 기타)가 빠졌습니다. `twelve` 로 근사할 수 있습니다 |
 | Merengue | `wood` 톰 + `timbale` | 실제 주역은 **탐보라**(양면 북)입니다 |
+
+### 콜롬비아
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Vallenato** | Carlos Vives · Diomedes Díaz | (확인 필요) | **아코디언**(이 장르의 주역) · wood 킥/톰 · 105 BPM |
+| **Champeta** | Viviano Torres · Charles King | (확인 필요) | wood 킥/톰 · 115 BPM · 콩고 수쿠스가 카르타헤나로 건너온 것 |
+| **Chicha** | Los Mirlos · Juaneco y Su Combo | (확인 필요) | 103 BPM · analog 톰 · 페루 아마존의 쿰비아 ※1 |
+| Cumbia Villera | Damas Gratis · Pibes Chorros | (확인 필요) | 100 BPM · synth 톰 · 부에노스아이레스 |
+
+> ※1 치차는 페루 음악이지만 쿰비아 계보라 이 파일에 함께 둡니다.
+> **서프 기타의 스프링 리버브**가 정체성인데 지금 편성에 그 소리가 없습니다.
+
+### 아르헨티나 · 남미 남부
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Tango** | Carlos Gardel · Aníbal Troilo | (확인 필요) | **tight 킥/스네어/클랩** · wood 톰 · 120 BPM |
+| **Nuevo Tango** | Ástor Piazzolla | (확인 필요) | 120 BPM · analog 톰 · 재즈·클래식과 섞은 것 |
+| Electrotango | Gotan Project · Bajofondo | (확인 필요) | 115 BPM · synth 톰 · 전자 프로덕션 |
+
+> 탱고의 주역은 **반도네온**입니다. 우리에게 `bandoneon` 음색이 있으므로
+> 세 프리셋 모두 그것을 직접 지정하는 편이 맞습니다 — 아래에 적었습니다.
+
+### 현대 크로스오버
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Latin Trap** | Bad Bunny · Anuel AA | (확인 필요) | tight 킥 · crack 스네어 · **tick 햇**(트랩 롤) · 138 BPM |
+| **Neoperreo** | Tomasa del Real · Ms Nina | (확인 필요) | 98 BPM · synth 톰 · 레게톤을 언더그라운드로 되가져온 것 |
+| Sad Perreo | Mora · Jhayco | (확인 필요) | 93 BPM · analog 톰 · 느리고 어두운 레게톤 |
+
+### 편성과 어긋나는 것 (추가) — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Tango · Nuevo Tango · Electrotango | 하위분기 기본 건반 | **반도네온**이 주역입니다. `bandoneon` 음색이 이미 있는데 안 쓰고 있습니다 |
+| Vallenato | 하위분기 기본 건반 | **아코디언**이 주역입니다. `accordion` 을 직접 지정해야 합니다 |
+| Chicha | 일반 클린 기타 | **스프링 리버브를 건 서프 기타**가 정체성입니다 |

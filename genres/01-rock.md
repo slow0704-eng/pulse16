@@ -434,7 +434,8 @@ snare  -X-X-X-X-X-X-X-X
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Punk** · Punk Rock | Ramones · Sex Pistols · The Clash | Ramones (1976) | **크런치 기타 · 픽 베이스 · 건반 없음** · 180 BPM · tight 킥 |
+| **Punk** | Ramones · Sex Pistols · The Clash | Ramones (1976) | **크런치 기타 · 픽 베이스 · 건반 없음** · 180 BPM · **crack 스네어** |
+| Punk Rock | The Damned · Buzzcocks | (확인 필요) | 같은 편성 · 180 BPM · body 스네어(조금 더 무딤) |
 | **Hardcore Punk** | Black Flag · Minor Threat | Damaged (확인 필요) | **하이게인 기타** · 200 BPM |
 | **D-beat** | Discharge | Hear Nothing See Nothing Say Nothing (확인 필요) | 하이게인 · 200 BPM · 이름이 곧 드럼 패턴 |
 | **Powerviolence** | Man Is the Bastard · Infest | (확인 필요) | 하이게인 · **250 BPM**(이 라이브러리에서 가장 빠름) |
@@ -456,7 +457,8 @@ snare  -X-X-X-X-X-X-X-X
 | Glam Rock | T. Rex · Slade · Sweet | Electric Warrior (확인 필요) | 오르간 · 하이게인 · **spread 클랩**(스탠딩 박수) · 135 BPM |
 | **Southern Rock** | Lynyrd Skynyrd · The Allman Brothers Band | (확인 필요) | 오르간 · 하이게인 · **swing 30**(셔플) · 120 BPM |
 | Country Rock | The Byrds · Eagles | Sweetheart of the Rodeo (확인 필요) | 120 BPM · analog 톰 |
-| **Stoner** · Stoner Rock | Kyuss · Sleep · Fu Manchu | Blues for the Red Sun (확인 필요) | 오르간 · **퍼즈 기타** · 핑거 베이스 · 100 BPM |
+| **Stoner** | Kyuss · Sleep · Fu Manchu | Blues for the Red Sun (확인 필요) | 오르간 · **퍼즈 기타** · 핑거 베이스 · 100 BPM |
+| Stoner Rock | Queens of the Stone Age · Monster Magnet | (확인 필요) | Stoner 와 값이 완전히 같습니다 — 이름만 둘입니다 |
 
 > ※1 «Rock» 은 특정 씬이 아니라 **계열의 기본값**으로 둔 프리셋입니다.
 > 대표를 세우는 것이 맞지 않아 비웁니다.
@@ -464,3 +466,15 @@ snare  -X-X-X-X-X-X-X-X
 > Southern Rock 의 **swing 30** 이 이 계열을 다른 하드록과 가르는 값입니다 —
 > 셔플이 빠지면 그냥 하드록이 됩니다.
 > Stoner 와 Stoner Rock 은 값이 완전히 같습니다 — 이름만 둘입니다.
+
+### Post-punk 계보
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Dance-punk** | LCD Soundsystem · The Rapture · !!! | (확인 필요) | **리드 신스 + 클린 기타** · 핑거 베이스 · **wood 킥** · 130 BPM |
+| **Post-punk Revival** | Interpol · The Strokes · Franz Ferdinand | Turn On the Bright Lights (확인 필요) | 오르간 · **크런치 기타 + 픽 베이스** · tight 킥/스네어 · 135 BPM |
+| **Emo** | Sunny Day Real Estate · American Football · My Chemical Romance | (확인 필요) | **패드** · 크런치 기타 · 픽 베이스 · 145 BPM |
+
+> 댄스펑크는 이름 그대로 **춤출 수 있는 포스트펑크**입니다 — 그래서 혼자
+> `lead` 신스와 `clean` 기타를 쓰고 킥도 `wood` 로 가볍습니다.
+> 나머지 둘은 크런치 기타 + 픽 베이스라는 록 편성을 지킵니다.

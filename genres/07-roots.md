@@ -219,3 +219,25 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 | Country Blues | Robert Johnson | (확인 필요) | 하모니카 · **어쿠스틱 스틸** · 업라이트 |
 | Jump Blues | Louis Jordan | (확인 필요) | **혼 섹션** · 피아노 · 업라이트 |
 | Blues Rock · Electric Blues | — | — | 오르간 · 크런치 |
+
+### Blues
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Electric Blues** | Muddy Waters · Howlin' Wolf · B.B. King | (확인 필요) | 오르간 · **크런치 기타** · 핑거 베이스 · wood 킥/톰 · 115 BPM · **swing 30** |
+| **Blues Rock** | Cream · The Allman Brothers Band · Stevie Ray Vaughan | (확인 필요) | 같은 편성 · **125 BPM · swing 0** · analog 톰 |
+
+> 둘을 가르는 것은 **셔플입니다.** 일렉트릭 블루스는 swing 30 으로 늘어지고,
+> 블루스 록은 0 으로 곧게 갑니다 — 록 드럼이 들어온 자리입니다.
+
+### Folk
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Folk Revival** | Bob Dylan · Joan Baez · Peter, Paul and Mary | The Freewheelin' Bob Dylan (확인 필요) | **wood 킥/톰 + tick 햇**(작고 조용한 킷) · 115 BPM |
+| **Folk Rock** | The Byrds · Simon & Garfunkel | (확인 필요) | **punch 킥 + noise 햇**(록 킷) · 130 BPM |
+| **Indie Folk** | Fleet Foxes · Bon Iver · Sufjan Stevens | For Emma, Forever Ago (확인 필요) | wood 킥 · **hall 클랩**(넓은 잔향) · 105 BPM |
+
+> 셋의 차이는 **드럼을 얼마나 세게 치는가** 입니다. 포크 리바이벌은 거의
+> 안 치고(wood + tick), 포크 록은 록 킷을 그대로 쓰고(punch + noise),
+> 인디 포크는 다시 작아지되 잔향을 크게 겁니다(hall 클랩).

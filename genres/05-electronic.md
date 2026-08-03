@@ -581,3 +581,161 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 | Future Garage · Wave | — | — | 패드 · 서브 · 흐릿함 |
 | EDM Trap · Festival Trap | — | — | 벨/리드 · 808 |
 | Jersey Club · Baltimore Club | — | — | 벨 · 808 · 킥 연타 |
+
+### House 계열
+
+이 계열은 대부분 **punch 킥 + spread 클랩 + metal 햇 4/4** 를 공유합니다.
+갈리는 것은 **베이스 엔진과 건반**, 그리고 템포입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **House** | Frankie Knuckles · Marshall Jefferson | (확인 필요) | **피아노** · 124 BPM · **swing 12** |
+| **Chicago House** | Frankie Knuckles · Larry Heard | (확인 필요) | 피아노 · **lofi 스네어 + 무그** · 122 BPM |
+| **Acid House** | Phuture · A Guy Called Gerald | (확인 필요) | 리드 · **acid 베이스**(TB-303) · 125 BPM |
+| **French House** | Daft Punk · Cassius | Homework (확인 필요) | **스트링 + 무그** · 124 BPM · 필터 스윕 |
+| Filter House | Stardust · Modjo | (확인 필요) | 스트링 · 무그 · 124 BPM · 프렌치 하우스와 같은 자리 |
+| **Tech House** | Green Velvet · Hot Since 82 | (확인 필요) | **pluck + 무그** · **tight 킥** · 126 BPM |
+| Progressive House | Sasha · Deadmau5 | (확인 필요) | **슈퍼소** · 128 BPM |
+| **Electro House** | Justice · Wolfgang Gartner | Cross (확인 필요) | 리드 · **reese 베이스** · 128 BPM |
+| Bass House | Jauz · AC Slater | (확인 필요) | 리드 · reese · 128 BPM |
+| Complextro | Porter Robinson · Wolfgang Gartner | (확인 필요) | 리드 · reese · 128 BPM · 잘게 썬 신스 |
+| **Big Room** | Martin Garrix · Hardwell | (확인 필요) | 리드 · reese · 129 BPM · 페스티벌용 |
+| Future House | Oliver Heldens · Tchami | (확인 필요) | 리드 · 무그 · 126 BPM |
+| **Melodic House & Techno** | Tale of Us · Ólafur Arnalds ※1 | (확인 필요) | **패드 + 무그** · 122 BPM |
+| **Tribal House** | — ※2 | — | **콩가 + 셰이커 · wood 킥** · 125 BPM |
+| **Afro House** | Black Coffee · Da Capo | (확인 필요) | pluck · 콩가 · 셰이커 · 122 BPM · **swing 16** |
+| **UK Garage** | MJ Cole · Artful Dodger | (확인 필요) | EP · **sub 베이스** · 134 BPM · **swing 34** |
+| **2-step Garage** | Craig David · El-B | (확인 필요) | EP · sub · **deep 킥** · 134 BPM · swing 30 |
+| Speed Garage | Double 99 · Armand Van Helden | (확인 필요) | 134 BPM · 베이스 워블 |
+| Bassline | T2 · DJ Q | (확인 필요) | 리드 · reese · 139 BPM |
+| **UK Funky** | Crazy Cousinz · Roska | (확인 필요) | pluck · **콩가 + 셰이커** · 131 BPM |
+
+> ※1 «멜로딕 하우스 & 테크노» 는 레이블(Afterlife 등)이 곧 장르로 굳은 경우입니다.
+> ※2 트라이벌 하우스는 특정 인물보다 **타악기 편성**이 정의라 비웁니다.
+>
+> 하우스 계열에서 **swing 이 0 이 아닌 것은 넷뿐**입니다 —
+> House(12) · Afro House(16) · 2-step(30) · UK Garage(34).
+> 개러지 계열의 «절뚝거리는» 느낌이 전부 이 값에서 나옵니다.
+
+### Techno 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Techno** | Juan Atkins · Jeff Mills · Robert Hood | (확인 필요) | pluck · 134 BPM · **tight 클랩**(하우스와 다름) |
+| **Acid Techno** | Hardfloor · Chris Liberator | (확인 필요) | 리드 · **acid 베이스** · 137 BPM |
+| **Hard Techno** | — ※3 | — | 리드 · reese · **deep 킥** · 155 BPM |
+| Schranz | Chris Liebing | (확인 필요) | 리드 · reese · 155 BPM · 왜곡된 루프 |
+| Hardgroove | Ben Sims · Surgeon | (확인 필요) | pluck · 무그 · 140 BPM · 그루브 중심 |
+| **Microhouse** | Ricardo Villalobos · Akufen | (확인 필요) | pluck · 124 BPM · **베이스 없음**(잘게 썬 소리만) |
+
+> ※3 «하드 테크노» 는 씬 전체의 이름이라 한 사람으로 대표되지 않습니다.
+
+### Trance 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Trance** | Paul van Dyk · Armin van Buuren | (확인 필요) | **슈퍼소** · 138 BPM · analog 톰 |
+| Progressive Trance | Above & Beyond | (확인 필요) | **패드** · 132 BPM |
+| Hard Trance | — | — | 슈퍼소 · reese · 145 BPM |
+| **Goa** | Astral Projection · Juno Reactor | (확인 필요) | 리드 · **acid 베이스** · 140 BPM |
+| **Psytrance** | Infected Mushroom · Hallucinogen | (확인 필요) | 리드 · acid · 145 BPM · **tight 클랩** |
+| Full-on | Vini Vici · Astrix | (확인 필요) | 리드 · acid · 144 BPM |
+| Forest | — ※4 | — | **벨** · acid · 153 BPM |
+| Hi-tech | — ※4 | — | 리드 · acid · **173 BPM**(가장 빠름) |
+| **Hardstyle** | Headhunterz · Showtek | (확인 필요) | 리드 · reese · **deep 킥 + crack 스네어** · 150 BPM |
+| Rawstyle | Radical Redemption · Ran-D | (확인 필요) | 리드 · reese · 155 BPM |
+
+> ※4 포레스트·하이테크는 사이트랜스의 지역·인터넷 하위갈래라
+> 대표 인물이 흐립니다. 템포(153 / 173)가 곧 구분입니다.
+>
+> 사이트랜스 계열 다섯이 전부 **acid 베이스(TB-303)** 를 씁니다 —
+> 이것이 트랜스 본류(슈퍼소)와 갈리는 지점입니다.
+
+### Breakbeat 계열
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Techstep** | Ed Rush & Optical · Bad Company | (확인 필요) | 리드 · **reese 베이스** · **174 BPM** |
+| Neurofunk | Noisia · Phace | (확인 필요) | 벨 · reese · tight 킥 |
+| Nu Skool Breaks | Adam Freeland · Rennie Pilgrem | (확인 필요) | 리드 · 무그 · 135 BPM · **swing 28** |
+
+### Hardcore 계열
+
+다섯 다 **4/4 를 한계까지 밀어붙인** 것들입니다. 갈리는 것은 템포와 킥입니다.
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Breakbeat Hardcore | The Prodigy(초기) · Altern-8 | (확인 필요) | 140 BPM · 브레이크비트 + 레이브 스탭 |
+| **Happy Hardcore** | Scooter · DJ Hixxy | (확인 필요) | 172 BPM · tight 킥 · 밝은 선율 |
+| Hardcore Techno | — | — | 180 BPM · tight 킥 |
+| **Gabber** | Rotterdam Terror Corps · Neophyte | (확인 필요) | **180 BPM · deep 킥 + crack 스네어**(왜곡된 킥) |
+| **Frenchcore** | Dr. Peacock · Sefa | (확인 필요) | **205 BPM**(이 라이브러리에서 가장 빠름) |
+
+### Downtempo · Ambient · Retro
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Chillout** | Air · Zero 7 | Moon Safari (확인 필요) | **패드 + 나일론 기타** · wood 킥 · tick 햇 · 100 BPM |
+| **Future Funk** | Yung Bae · Macross 82-99 | (확인 필요) | 리드 · 클린 기타 · 무그 · 118 BPM · 시티팝 샘플 |
+| **Mallsoft** | 猫 シ Corp. | (확인 필요) | 패드 · 클린 기타 · **hall 클랩** · **73 BPM** · 쇼핑몰 잔향 |
+| Nu-disco | Todd Terje · Lindstrøm | (확인 필요) | 118 BPM · 디스코를 신스로 다시 만든 것 |
+
+### Electro
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Electro** | Kraftwerk · Afrika Bambaataa | Trans-Europe Express (확인 필요) | 리드 · 무그 · **deep 킥** · 120 BPM |
+| Electroclash | Miss Kittin · Fischerspooner | (확인 필요) | 리드 · 무그 · 128 BPM |
+
+### 편성과 어긋나는 것 — 고치지 않고 기록만
+
+| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
+|---|---|---|
+| Microhouse | 베이스 지정 없음 | 의도한 것이라면 맞습니다 — 마이크로하우스는 저역을 비우는 것이 미학입니다. 다만 문서에 그렇게 적혀 있지 않았습니다 |
+| Mallsoft | `hall` 클랩만으로 잔향 표현 | **리버브 자체가 장르**입니다. 프리셋이 space 노브를 안 건드립니다 |
+| Gabber · Frenchcore | `deep`/`tight` 킥 | 실제로는 **왜곡시켜 음정이 생긴 킥**이 정체성입니다. 지금 킥 엔진으로는 안 납니다 |
+| French House · Filter House | 값이 사실상 동일 | 실제로도 겹치지만, 필터 하우스는 **필터 스윕**이 이름의 근거입니다 |
+
+### Dubstep · Bass Music
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Dubstep** | Skream · Benga · Digital Mystikz | (확인 필요) | 패드 · **reese 베이스** · **140 BPM** · crack 스네어 · noise 햇 |
+| **Deep Dubstep** | Mala · Kode9 | (확인 필요) | 패드 · **sub 베이스** · **hall 클랩** · 140 BPM |
+| Meditative Dubstep | Ital Tek · Vaccine | (확인 필요) | 패드 · sub · 140 BPM |
+| **Brostep** | Skrillex · Excision | Scary Monsters and Nice Sprites (확인 필요) | 리드 · reese · **145 BPM** |
+| **Riddim** | Getter · Virtual Riot | (확인 필요) | **벨** · reese · 144 BPM · 세 음 반복 베이스 |
+| Melodic Dubstep | Seven Lions · Illenium | (확인 필요) | **슈퍼소** · reese · 145 BPM |
+| **Future Bass** | Flume · San Holo | (확인 필요) | 슈퍼소 · reese · **150 BPM** · tick 햇 |
+| **Future Garage** | Burial ※1 | Untrue (확인 필요) | 패드 · sub · **hall 클랩** · 135 BPM |
+| Wave | Plastician · Klimeks | (확인 필요) | 패드 · sub · 150 BPM |
+| Hardwave | — ※2 | — | 리드 · reese · 150 BPM |
+| **EDM Trap** | RL Grime · Baauer | (확인 필요) | 벨 · **808** · tick 햇 · 145 BPM |
+| Festival Trap | Yellow Claw · DJ Snake | (확인 필요) | 리드 · 808 · 145 BPM · metal 햇 |
+| **Moombahton** | Dave Nada · Diplo | (확인 필요) | 리드 · reese · **110 BPM · swing 10**(레게톤 템포의 하우스) |
+| **Jersey Club** | DJ Sliink · UNIIQU3 | (확인 필요) | 벨 · 808 · 135 BPM · 다섯 번 치는 킥 패턴 |
+| Baltimore Club | Rod Lee · DJ Class | (확인 필요) | 벨 · 808 · 134 BPM · 저지 클럽의 뿌리 |
+| Philly Club | DJ Crazy · Bandmanrill ※3 | (확인 필요) | 135 BPM · 볼티모어·저지와 한 계보 |
+
+> ※1 퓨처 개러지는 Burial 한 사람이 사실상 형식을 세웠습니다 —
+> 드문 경우라 «대표 앨범» 이 그대로 성립합니다.
+> ※2 하드웨이브는 인터넷에서 자란 묶음이라 대표가 흐립니다.
+> ※3 필리 클럽은 저지 클럽과 인물이 겹칩니다.
+>
+> **볼티모어 → 저지 → 필리** 는 한 계보입니다. 셋 다 «클럽» 계열로,
+> 킥을 다섯 번 치는 패턴이 공통 뼈대입니다. 지금은 셋의 값이 거의 같아
+> 소리로는 잘 안 갈립니다.
+
+### Breakbeat — DnB 갈래
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Jump-up** | DJ Hazard ·Sub Zero | (확인 필요) | 리드 · reese · 174 BPM · 통통 튀는 베이스 |
+| **Halftime DnB** | Ivy Lab · Alix Perez | (확인 필요) | 패드 · reese · 174 BPM · **드럼만 반 박자**(그래서 87처럼 들림) |
+| **Drumfunk** | Paradox · Fanu | (확인 필요) | 벨 · **sub 베이스** · 173 BPM · 잘게 썬 브레이크 |
+
+### Vaporwave
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Vaporwave** | Macintosh Plus · Chuck Person | (확인 필요) | EP · 클린 기타 · **75 BPM**(늦춘 재생) · spread 클랩 |

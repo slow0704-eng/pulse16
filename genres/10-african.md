@@ -337,3 +337,13 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 | Congolese Rumba · Soukous · Ndombolo | `marimba` 가 주역 (하위분기 «중앙아프리카» 기본값) | **얽히는 전기 기타 두세 대**. 마림바는 이 계보의 악기가 아닙니다 |
 | Afrobeats | `bell` | 실제로는 **로그 드럼(log drum)** 베이스가 2020년대 이후의 표식입니다 |
 | Ethio-jazz | 일반 스케일 | **에티오피아 5음 음계**. 스케일 목록에 아직 없습니다 |
+
+### 북아프리카 (추가)
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| **Raï** | Cheb Khaled · Cheb Mami · Rachid Taha | (확인 필요) | EP · **나일론 기타** · 셰이커 · wood 킥 · **synth 톰** · 120 BPM · 알제리 |
+| **Shaabi** | Ahmed Adaweyah · Hakim | (확인 필요) | 같은 편성 · **wood 톰** · 115 BPM · 이집트 |
+
+> 라이의 정체성은 **갈랄(galal) 북과 가스바(갈대 피리)** 입니다.
+> 지금 편성에는 둘 다 없고 wood 킥/톰이 그 자리를 대신합니다.
