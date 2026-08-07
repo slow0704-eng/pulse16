@@ -200,6 +200,8 @@ UI.mel.onclick = () => {
   UI.mel.textContent = melOn?'켜짐':'꺼짐';
   melNow=null; riffNow=null; blineNow=null; melBar=0;
   melNow2=null; melNowB=null; riffNowB=null;   // 2번 트랙도 같이 비운다
+  /* melAnchor 는 여기서 건드리지 않는다 — 다음 onLoopWrap 이 격자에 맞춰 다시 잡는다.
+     여기서 loopNo 로 바꿔 버리면 선율만 격자를 벗어나 셔플·필인과 어긋난다. */
   syncVariation();
   if(melOn && melMode==='genre'){
     const pool=melodyPoolFor(src.keys);
@@ -239,6 +241,8 @@ UI.mellen.onchange = e => {
 UI.melmode.onchange = e => {
   melMode=e.target.value; melNow=null; riffNow=null; blineNow=null; melBar=0;
   melNow2=null; melNowB=null; riffNowB=null;   // 2번 트랙도 같이 비운다
+  /* melAnchor 는 여기서 건드리지 않는다 — 다음 onLoopWrap 이 격자에 맞춰 다시 잡는다.
+     여기서 loopNo 로 바꿔 버리면 선율만 격자를 벗어나 셔플·필인과 어긋난다. */
   syncVariation(); markDirty();
 };
 UI.fillmode.onchange = e => {

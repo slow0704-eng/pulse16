@@ -50,6 +50,9 @@ let melNowB=null, riffNowB=null;
    'auto' 는 장르 풀에 짧은 것과 긴 것을 함께 놓아 섞이게 한다. */
 const MEL_BARS=16;                    // 아무것도 안 걸렸을 때의 기본 길이
 let melLen=MEL_BARS, melLenPref='auto';
+/* 선율 한 바퀴가 시작된 loopNo. 늘 MEL_BARS 의 배수다 —
+   이것이 선율을 셔플·필인과 같은 격자에 묶어 두는 고리다. */
+let melAnchor=0;
 
 /** 지금 루프에 해당하는 마디. 길이가 다른 라인은 자기 길이로 되풀이된다. */
 function barOf(o){ return o.rows[melBar % o.rows.length]; }
@@ -349,27 +352,11 @@ function onLoopWrap(){
   else if(smallDue){ fillNow = pickFill('S', fillMode);  fillTier = '작은'; }
   else{              fillNow = null;                     fillTier = ''; }
 
-  /* 선율 — 한 루프가 한 마디다. 16마디를 돌고 나면 다음 선율을 뽑는다
-     (셔플 모드일 때). 그래서 16마디가 곧 셔플 주기가 된다. */
-  if(melOn){
-    if(!melNow && !riffNow && !blineNow){
-      melNow=pickMelody(); riffNow=pickRiff(); blineNow=pickBline(); melBar=0;
-      melNow2 = layerMode==='counter' ? pickMelody2() : null;
-      melNowB = pickMelody2(); riffNowB = pickRiff2();
-      calcMelLen();
-    }else{
-      melBar++;
-      if(melBar>=melLen){
-        melBar=0; melNow=pickMelody(); riffNow=pickRiff(); blineNow=pickBline();
-        melNow2 = layerMode==='counter' ? pickMelody2() : null;
-        melNowB = pickMelody2(); riffNowB = pickRiff2();
-        calcMelLen();
-      }
-    }
-  }else{ melNow=null; riffNow=null; blineNow=null; melNow2=null;
-       melNowB=null; riffNowB=null; melBar=0; melLen=MEL_BARS; }
-
-  syncVariation();          // 필인 구간 · 선율 마디를 화면에 반영
+  /* ⚠ 셔플을 **선율보다 먼저** 돌린다.
+     shufflePattern() 은 src.keys·src.gtr·src.bass 를 새 프리셋 이름으로 바꾸는데,
+     선율 풀은 그 값을 보고 고른다(melodyPoolFor(src.keys)). 순서를 뒤집으면
+     같은 루프에서 패턴은 새 장르로 바뀌는데 선율은 **직전 장르**에서 뽑혀
+     둘이 어긋난다. 먼저 바꾸고 나서 뽑아야 한 장르로 맞는다. */
   if(shufOn && loopNo % shufEvery === 0) shuffleKit();
   if(patOn  && loopNo % patEvery  === 0){
     if(patMode==='genre'){
@@ -381,6 +368,39 @@ function onLoopWrap(){
       else  setStat('뱅크 셔플 — 내용이 있는 뱅크가 하나뿐입니다','err');
     }
   }
+
+  /* ── 선율도 같은 격자 위에 올린다 ──
+     한 루프가 한 마디다. 예전에는 melBar 라는 **자기 카운터**를 따로 세서,
+     선율을 켠 시점이 곧 선율 주기의 시작점이었다. 그래서 주기가 같아도
+     (선율 16마디 · 패턴 셔플 16루프) 시작점이 달라 서로 다른 박에서 바뀌었다.
+
+     이제 melAnchor 를 격자(MEL_BARS=16 의 배수)에 맞춰 두고
+     melBar = loopNo − melAnchor 로 센다. 긴 선율(32·64)도 전부 16의 배수라
+     경계가 늘 16격자 위에 떨어진다 — 킷 셔플·패턴 셔플·필인과 같은 자리다.
+
+     대가: 선율을 격자 중간(예: 7루프째)에 켜면 첫 바퀴는 7마디째부터
+     들어간다. 한 바퀴 안에 저절로 맞춰지고, 그 뒤로는 계속 붙어 있다.
+     (ARCHITECTURE.md 의 «스위치를 켤 때 카운터를 0 으로 되돌리지 말 것» 과 같은 원칙) */
+  if(melOn){
+    const pickAll = () => {
+      melNow=pickMelody(); riffNow=pickRiff(); blineNow=pickBline();
+      melNow2 = layerMode==='counter' ? pickMelody2() : null;
+      melNowB = pickMelody2(); riffNowB = pickRiff2();
+      calcMelLen();
+    };
+    if(!melNow && !riffNow && !blineNow){
+      melAnchor = loopNo - (loopNo % MEL_BARS);   // 격자에 붙여서 시작
+      pickAll();
+    }else if(loopNo - melAnchor >= melLen){
+      melAnchor = loopNo;                          // 이 자리도 16의 배수다
+      pickAll();
+    }
+    melBar = loopNo - melAnchor;
+    if(melBar >= melLen) melBar = melLen - 1;      // 안전장치 (풀이 비어 melLen 이 안 바뀐 경우)
+  }else{ melNow=null; riffNow=null; blineNow=null; melNow2=null;
+       melNowB=null; riffNowB=null; melBar=0; melLen=MEL_BARS; melAnchor=0; }
+
+  syncVariation();          // 필인 구간 · 선율 마디를 화면에 반영
 }
 
 function onTick(time){
