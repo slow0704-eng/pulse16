@@ -398,6 +398,8 @@ LIB_NAMES.forEach(name => {
         setStat(`${name} — 지정 샘플 ${Object.keys(L.smp).length}개 적용 시도`,'ok');
       })();
     }
+    /* 장르를 골랐으니 곡을 처음부터 — 필인·선율·리프도 이 장르에 맞춰 새로 잡는다 */
+    restartSong();
     syncAll(); markDirty();
   };
   UI.chips.appendChild(b);

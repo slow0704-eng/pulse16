@@ -420,6 +420,38 @@ function fbLoop(){
     if(fbStep===0) onLoopWrap();
   }
 }
+/** 장르를 바꿨을 때 **곡을 처음부터** 다시 시작한다.
+
+    장르가 바뀌면 어울리는 필인·선율·리프도 같이 바뀌어야 하는데,
+    루프 카운터가 이어지면 새 장르가 남의 곡 한가운데에 얹힌다 —
+    선율은 9마디째부터 들어가고 큰 필인은 3루프 뒤에 오는 식이다.
+
+    그래서 장르 전환은 «구간의 시작» 으로 다룬다. 카운터를 0 으로 되돌리고
+    선율·리프·베이스를 비워, 다음 루프에서 **새 장르 풀** 로 다시 뽑게 한다.
+    (셔플이 스스로 장르를 바꿀 때는 부르지 않는다 — 그건 흘러가는 전개다) */
+function restartSong(){
+  loopNo=0; melAnchor=0; melBar=0;
+  melNow=null; riffNow=null; blineNow=null;
+  melNow2=null; melNowB=null; riffNowB=null;
+  fillNow=null; fillTier='';
+  melLen=MEL_BARS;
+
+  if(playing){
+    step=0;
+    if(HAS_TONE){ Tone.Transport.position=0; }
+    else{ fbStep=0; fbNext=(ctx?ctx.currentTime:0)+0.08; }
+  }
+  /* 선율 모드가 켜져 있으면 지금 바로 새 장르에서 뽑아 둔다 —
+     다음 루프 경계까지 기다리면 한 바퀴 동안 선율이 비어 있다. */
+  if(melOn){
+    melNow=pickMelody(); riffNow=pickRiff(); blineNow=pickBline();
+    melNow2 = layerMode==='counter' ? pickMelody2() : null;
+    melNowB = pickMelody2(); riffNowB = pickRiff2();
+    calcMelLen();
+  }
+  if(typeof syncVariation==='function') syncVariation();
+}
+
 function start(){
   wake();
   playing=true; step=0;
