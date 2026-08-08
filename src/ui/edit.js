@@ -19,6 +19,27 @@ function fillTracks(drums){
   return out;
 }
 
+/** 저장본 한 뱅크를 **온전한 뱅크로** 만들어 돌려준다.
+
+    ⚠ 예전에는 drums 만 fillTracks() 로 메우고 `banks[i].bass = b.bass` 는
+    맨몸으로 대입했다. bass 가 없거나 배열이 아닌 저장본을 물면
+    "복원했습니다" 라고 알리고 나서 몇 초마다 TypeError 를 25번씩 던졌다.
+    게다가 그 깨진 상태가 **다시 저장돼** 새로 고쳐도 살아남았다 —
+    사용자가 «저장 지움» 을 스스로 찾아내야 벗어날 수 있었다.
+    복원은 «믿을 수 없는 입력을 받는 자리» 이므로 트랙마다 형태를 확인한다. */
+function fillBank(b){
+  const src = b || {};
+  const arr = (v, fill) => Array.isArray(v) && v.length===STEPS ? v : new Array(STEPS).fill(fill);
+  return {
+    drums: fillTracks(src.drums),
+    bass : arr(src.bass, -1),
+    keys : arr(src.keys,  0),      // 건반·기타가 없던 시절의 저장본과도 호환
+    gtr  : arr(src.gtr , -1),
+    keys2: arr(src.keys2, 0),
+    gtr2 : arr(src.gtr2,-1),
+  };
+}
+
 function snapshot(){
   return JSON.stringify({
     banks: banks.map(b => ({drums:b.drums, bass:b.bass, keys:b.keys, gtr:b.gtr,
@@ -28,14 +49,7 @@ function snapshot(){
 }
 function restoreSnap(sn){
   const o = JSON.parse(sn);
-  o.banks.forEach((b,i) => {
-    banks[i].drums=fillTracks(b.drums); banks[i].bass=b.bass;
-    /* 구버전 스냅샷에는 keys·gtr 이 없다 — 빈 배열로 메운다 */
-    banks[i].keys=b.keys || new Array(STEPS).fill(0);
-    banks[i].gtr =b.gtr  || new Array(STEPS).fill(-1);
-    banks[i].keys2=b.keys2 || new Array(STEPS).fill(0);
-    banks[i].gtr2 =b.gtr2  || new Array(STEPS).fill(-1);
-  });
+  o.banks.forEach((b,i) => { if(banks[i]) Object.assign(banks[i], fillBank(b)); });
   bank = o.bank; P = banks[bank];
   Object.assign(src,o.src); Object.assign(eng,o.eng); Object.assign(probT,o.probT);
   syncAll(); syncTrackUI();
@@ -99,19 +113,16 @@ function loadState(){
   try{ o=JSON.parse(localStorage.getItem(SAVE_KEY)||'null'); }catch(e){ return false; }
   if(!o || o.v!==1) return false;
   try{
-    o.banks.forEach((b,i) => {
-      if(!banks[i]) return;
-      banks[i].drums=fillTracks(b.drums); banks[i].bass=b.bass;
-      /* 건반·기타가 없던 시절의 저장본과도 호환 */
-      banks[i].keys=b.keys || new Array(STEPS).fill(0);
-      banks[i].gtr =b.gtr  || new Array(STEPS).fill(-1);
-      banks[i].keys2=b.keys2 || new Array(STEPS).fill(0);
-      banks[i].gtr2 =b.gtr2  || new Array(STEPS).fill(-1);
+    (Array.isArray(o.banks) ? o.banks : []).forEach((b,i) => {
+      if(banks[i]) Object.assign(banks[i], fillBank(b));
     });
     bank=o.bank||0; P=banks[bank];
     Object.assign(src,o.src); Object.assign(eng,o.eng); Object.assign(probT,o.probT);
     Object.assign(mute,o.mute); Object.assign(lvl,o.lvl);
-    rootNote=o.rootNote; scaleName=o.scaleName; baseOct=o.baseOct;
+    /* 바로 아래 keysOct 는 가드가 있는데 이 셋은 없었다 — 같은 자리에서 갈린다 */
+    if(o.rootNote !=null) rootNote =o.rootNote;
+    if(o.baseOct  !=null) baseOct  =o.baseOct;
+    if(o.scaleName && SCALES[o.scaleName]) scaleName=o.scaleName;
     if(o.keysOct!=null) keysOct=o.keysOct;
     if(o.gtrOct !=null) gtrOct =o.gtrOct;
     if(o.shufOn){
