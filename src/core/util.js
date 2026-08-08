@@ -126,7 +126,11 @@ function sweep(){
     if(retireQ[i].at>now) continue;
     const {node,kind}=retireQ[i]; retireQ.splice(i,1);
     try{ node.disconnect(); }catch(e){}
-    liveNodes--;
+    /* ⚠ 센 것만 뺀다. liveNodes++ 는 acqGain('gain')·BQ('bq') 에서만 하는데
+       retire 는 tapNoise 의 가짜 객체나 모노 참조 해제용 sentinel('x')까지
+       받는다. 무조건 빼면 카운터가 음수로 흘러 — 180초 재생 뒤 −10,318 로
+       측정됐다. 화면의 «nodes N» 표시가 그동안 거짓말을 하고 있었다. */
+    if(kind==='gain' || kind==='bq') liveNodes--;
     if(pool[kind] && pool[kind].length<64) pool[kind].push(node);
   }
 }

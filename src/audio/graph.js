@@ -18,6 +18,28 @@ function boot(){
 
   /* ── 컨텍스트 ── */
   if(HAS_TONE){
+    /* ⚠ 여기를 네이티브 AudioContext 로 바꾸려는 시도를 하지 마세요 — 해 봤고 실패했습니다.
+
+       사실관계는 맞습니다. Tone 이 주는 rawContext 는 네이티브가 아니라
+       standardized-audio-context(SAC) **래퍼**이고, 우리가 부르는
+       createX·connect·AudioParam 예약이 전부 그 래퍼를 지나가면서 비쌉니다.
+       실측 단가 (SAC vs 네이티브):
+         connect() → ampIn.amp_hi   8,157~12,082 µs vs 9.5 µs  (약 1000배)
+         cancelAndHoldAtTime           107 µs vs 2.2 µs
+         disconnect                    245 µs vs 0.5 µs
+       BPM 200 최악 조건에서 onTick p90 79.6ms(스텝 간격 75ms)로 24/277 이 지각.
+
+       그래서 `Tone.setContext(new Tone.Context(new AudioContext(...)))` 을
+       여기에 넣어 봤는데 — **재생이 통째로 죽습니다.**
+       ctx.state 는 running 이 되고 playing 도 true 가 되는데
+       Tone.Transport.state 가 'stopped' 에 머물고 step·loopNo 가 0 에서
+       움직이지 않습니다. Transport 가 라이브러리 로드 시점의 컨텍스트에
+       매여 있어서, 컨텍스트를 갈아치우면 스케줄러가 따라오지 않습니다.
+       «앱은 재생 중이라고 믿는데 소리는 하나도 안 나는» 최악의 상태입니다.
+
+       고치려면 컨텍스트 교체가 아니라 **호출 횟수를 줄이는** 쪽이어야 합니다 —
+       보이스마다 새로 connect 하는 대신 버스에 상주시키는 식으로.
+       (근거와 대안은 docs/perf/01-오디오런타임.md) */
     ctx = Tone.getContext().rawContext;
     Tone.getContext().lookAhead = 0.08;
   }else{

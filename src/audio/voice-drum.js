@@ -354,7 +354,10 @@ function playSample(id,t,v){
   }catch(e){ return false; }
 }
 function fireTrack(id,t,v,e){
-  if(id==='kick') duckSidechain(t);
+  /* ⚠ 덕킹은 «있으면 좋은» 것이지 소리의 조건이 아니다.
+     duckSidechain 안의 hold() 가 예외를 던지면(AudioParam 구현에 따라 난다)
+     그 스텝의 **드럼 전체가 무음**이 됐다. 덕킹만 건너뛰고 소리는 낸다. */
+  if(id==='kick'){ try{ duckSidechain(t); }catch(err){} }
   if(smpSel[id]!=='synth' && playSample(id,t,v)) return;
   FIRE[id](t,v,e);
 }
