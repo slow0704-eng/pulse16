@@ -21,11 +21,12 @@ const CASIO_STEP = ['A1','Cs2','E2','Fs2'];
 const KIT_MAP    = {kick:'kick',snare:'snare',chat:'hihat',ohat:'hihat',tom:'tom1',clap:'tom3',
                     perc:'tom2'};
 
+/* ⚠ chorus · drums · breakbeat 은 뺐습니다 — 상류(tonejs.github.io)에 파일이
+   자체가 없어 **항상 404** 입니다. 일곱 개 중 셋이 눌러도 안 되고, 게다가
+   그 실패가 «미리보기 창이 차단했다» 는 엉뚱한 경고를 띄우고 있었습니다.
+   실제로 받아지는 것만 남깁니다. (2026-08-08 확인: ominous 200, 나머지 셋 404) */
 const LOOP_CANDIDATES = [
   {n:'ominous',   u:'drum-samples/loops/ominous.mp3'},
-  {n:'chorus',    u:'drum-samples/loops/chorus.mp3'},
-  {n:'drums',     u:'drum-samples/loops/drums.mp3'},
-  {n:'breakbeat', u:'drum-samples/loops/breakbeat.mp3'},
   {n:'handdrum',  u:'drum-samples/handdrum-loop.mp3'},
   {n:'conga',     u:'drum-samples/conga-rhythm.mp3'},
   {n:'theremin',  u:'berklee/gurgling_theremin_1.mp3'},

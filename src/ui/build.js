@@ -372,6 +372,10 @@ LIB_NAMES.forEach(name => {
   b.title = `${name} — ${L.bpm} BPM · swing ${L.swing}`
           + (L.gen ? '\n(파생 프리셋 — 규칙으로 유도, 청감 미검증)' : '');
   b.onclick=()=>{
+    /* 첫 화면에서 가장 크게 보이는 것이 이 칩인데, 예전에는 눌러도 오디오가
+       안 깨어났습니다 — 클릭 600ms 뒤에도 ctx.state 가 suspended 였습니다.
+       사용자 제스처 안에서 깨워 두면 다음 Play 가 즉시 울립니다. */
+    wake();
     pushUndo();
     TRACKS.forEach(t => {
       P.drums[t.id]=L.drums[t.id].slice();
