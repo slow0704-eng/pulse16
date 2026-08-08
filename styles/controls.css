@@ -6,7 +6,11 @@ select{background:#232830;color:var(--silk-dim);border:1px solid var(--edge);bor
   height:21px;cursor:pointer}
 select:hover{color:var(--silk)}
 select:disabled{opacity:.4;cursor:not-allowed}
-select.eng{color:var(--tone)}
+/* 트랙 색으로 물들이되 흰색을 섞어 밝힌다 — snare 색(#d45d79) 원본을
+   select 배경(#232830)에 그대로 쓰면 대비가 3.97:1 로 WCAG AA(4.5:1)에 못
+   미친다(axe-core). 패드·미터 등 다른 곳의 --tone 은 안 건드리고 이
+   select 텍스트만 밝힌다. */
+select.eng{color:color-mix(in srgb, var(--tone) 82%, white 18%)}
 input[type=range]{-webkit-appearance:none;appearance:none;height:4px;border-radius:2px;
   background:#171a1f;box-shadow:0 1px 0 rgba(255,255,255,.06);outline:none}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:19px;border-radius:2px;

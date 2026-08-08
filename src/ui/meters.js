@@ -144,6 +144,26 @@ function syncVarState(){
     const a=melNow?melNow.label:'—', b=riffNow?riffNow.label:'—', c=blineNow?blineNow.label:'—';
     parts.push(`선율 ${a} · 리프 ${b} · 베이스 ${c} — ${melBar+1}/${melLen}루프`);
   }
+  /* 곡 구조 (D) — sectionLabel() 은 인자 없이 "지금 섹션" 을 돌려주도록
+     과제 지시에 나와 있어 화면 표시용으로 그대로 씀. 없으면 표시하지 않는다. */
+  if(typeof formOn!=='undefined' && formOn && typeof sectionLabel==='function'){
+    try{
+      const sl=sectionLabel();
+      if(sl) parts.push(`곡 구조 ${sl}`);
+    }catch(err){ /* D 쪽 준비가 덜 됐을 수 있다 — 화면 표시만 건너뛴다 */ }
+  }
+  /* 화성 진행 (C: harmony.js, D 가 sequencer.js 에서 진행·화음을 계산) —
+     progNow(현재 진행 객체) · chordRoot(지금 화음의 근음 도수, sequencer.js
+     의 onLoopWrap/restartSong 이 chordDegAt 으로 미리 계산해 둠) 를 그대로
+     읽는다. 여기서 chordDegAt 을 다시 부르지 않는다 — bar 기준(loopNo−
+     progAnchor)을 다시 맞춰야 해서 어긋나기 쉽다. */
+  if(typeof progOn!=='undefined' && progOn && typeof progNow!=='undefined' && progNow){
+    try{
+      let chordTxt = progNow.label || null;
+      if(chordTxt && typeof chordRoot!=='undefined' && chordRoot!=null) chordTxt += ` · ${chordRoot+1}도`;
+      if(chordTxt) parts.push(`화성 ${chordTxt}`);
+    }catch(err){ /* D·C 쪽 준비가 덜 됐을 수 있다 — 화면 표시만 건너뛴다 */ }
+  }
   UI.varstat.textContent = parts.length ? parts.join('  ·  ') : '';
 }
 

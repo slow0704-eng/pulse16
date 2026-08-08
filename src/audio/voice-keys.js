@@ -74,9 +74,23 @@ const KEYS_TEX = {
   piano    :{kt:0.42,kd:0.78,body:[[120,1.6,3.5],[260,2.0,2.5],[1500,1.0,2.0]]},
   ep       :{kt:0.45,kd:0.50,body:[[800,1.2,2.5],[2400,1.4,3.0]]},
   clav     :{kt:0.70,kd:0.40,body:[[900,1.6,3.0],[2200,1.8,3.5]]},
-  marimba  :{kt:0.55,kd:0.70,body:[[300,2.2,4.0],[900,1.6,2.5]]},
-  vibes    :{kt:0.28,kd:0.50,body:[[400,2.0,3.5],[1200,1.4,2.0]]},
-  steelpan :{kt:0.50,kd:0.50,body:[[250,1.8,3.0],[700,1.6,3.5]]},
+  /* marimba·vibes 는 struck.js 로 빠진다(STRUCK[name] 존재 — keysVoice() 첫 줄에서
+     리턴). struckVoice() 는 X.body(직렬 peaking)만 읽고 X.bodyModal 은 모른다 —
+     struck.js 는 다른 담당자 소유라 여기서 회로를 못 바꾼다. bodyModal 은
+     "공명관을 병렬 모달로 바꾸면 이런 값" 을 문서화해 둔 것이고, 아직 안 쓰인다
+     (struck.js 쪽에 X.bodyModal 분기를 추가해야 실제로 켜진다 — 최종 보고서의
+     "다른 담당자 파일에 필요한 변경 제안" 참고). body(직렬)는 그대로 살아 있다. */
+  marimba  :{kt:0.55,kd:0.70,body:[[300,2.2,4.0],[900,1.6,2.5]],
+             bodyModal:[[300,0.18,1.00],[900,0.10,0.60]]},   // ⚠ 미사용 — struck.js 수정 필요
+  vibes    :{kt:0.28,kd:0.50,body:[[400,2.0,3.5],[1200,1.4,2.0]],
+             bodyModal:[[400,0.30,1.00],[1200,0.15,0.55]]},  // ⚠ 미사용 — struck.js 수정 필요
+  /* 스틸팬 몸통(드럼통 공명) — 병렬 모달 뱅크로 실제 전환(과제①, 우선순위 3번).
+     steelpan 은 STRUCK 에 없어 keysVoice() 를 그대로 통과하므로 여기서 바로
+     켤 수 있다. body(직렬, 아래)는 대조 측정을 위해 남겨 둔다 — bodyModal 이
+     있으면 keysVoice() 가 body 보다 우선해 쓴다. */
+  steelpan :{kt:0.50,kd:0.50,body:[[250,1.8,3.0],[700,1.6,3.5]],
+             bodyModal:[[250,0.20,1.00],[700,0.12,0.60]], bodyModalTrim:-9.6},
+             // 트림 −9.6dB : tools/measure-body.html 실측(RMS차 +3.6dB → 이만큼 내리니 목표 안)
   sax      :{kt:0.55,kd:0.20,body:[[700,1.4,4.5],[1400,1.6,3.5],[2800,1.2,2.5]]},
   harmonica:{kt:0.60,kd:0.20,body:[[1200,1.6,3.5],[2400,1.4,2.5]]},
   accordion:{kt:0.50,kd:0.15,body:[[500,1.4,3.0],[1600,1.2,2.0]]},
@@ -163,6 +177,35 @@ function keysVoice(t,midi,dur,vel,name){
       node.connect(dg); dg.connect(sum);
     }
     node=sum;
+  }else if(X.bodyModal){
+    /* 몸통(공명관)을 병렬 모달 뱅크로 — docs/mutable-차용.md ★2, modal.js modeQ().
+       graph.js 의 ampIn.body_* 와 원리는 같지만(병렬 bandpass·게인에 Q 를 곱함)
+       여기는 **보이스마다** 만든다 — X.formant(vocoder) 와 같은 이유다: 건반은
+       poly:6 로 동시에 여러 음이 울리고 음마다 길이(dur·rel)가 다르므로,
+       악기당 한 번 만들어 버스에 상주시키는 graph.js 식은 여기엔 안 맞는다
+       (몸통이 다음 노트를 위해 자기 노트가 끝나기도 전에 재사용돼야 하는데
+       상주 노드는 게인이 하나뿐이라 노트끼리 서로의 엔벨로프를 덮어쓴다).
+       대신 pool 로 노드를 회수하는 BQ()/acqGain() 를 쓰고 retire() 로 걷는다 —
+       formant 와 완전히 같은 패턴이라 노드 수 부담도 같은 실측 전례가 있다. */
+    const sum=acqGain(); sum.gain.value=1; retire(sum,'gain',end+0.05);
+    X.bodyModal.forEach(([bh,bt60,ba])=>{
+      const Q=modeQ(bh,bt60,ctx.sampleRate);      // Q_DB() 는 쓰지 않는다 — bandpass Q 는 선형
+      const b=BQ('bandpass',bh,Q,end);
+      const g=acqGain(); g.gain.value=ba*Q;       // 중심 0dB 정규화 보정(문서 ★2)
+      retire(g,'gain',end+0.05);
+      node.connect(b); b.connect(g); g.connect(sum);
+    });
+    /* 좁은 밴드패스만 남으면 콤 필터처럼 속이 빈다 — formant/graph.js 모달 뱅크와
+       같은 이유로 발음체 직접음을 조금 섞는다. */
+    const dg=acqGain(); dg.gain.value=0.25; retire(dg,'gain',end+0.05);
+    node.connect(dg); dg.connect(sum);
+    /* 트림 — 병렬 고Q 뱅크는 레벨이 오른다(graph.js 모달 뱅크와 같은 이유).
+       X.bodyModalTrim(dB, 기본 −6)으로 악기별로 맞춘다 — tools/measure-body.html
+       로 실측해 정한 값(steelpan −6dB). */
+    const trim=acqGain(); trim.gain.value=dbToGain(X.bodyModalTrim ?? -6);
+    retire(trim,'gain',end+0.05);
+    sum.connect(trim);
+    node=trim;
   }else if(X.body) X.body.forEach(([bh,bq,bd])=>{
     const b=BQ('peaking',bh,bq,end,bd);
     node.connect(b); node=b;

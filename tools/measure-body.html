@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 몸통 모달 뱅크 · 퍼즈 실측</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">측정 준비 중…</pre>
+
+<!-- 과제① 모달 공진 뱅크(graph.js) · 과제② 퍼즈(graph.js amp_fuzz) 전용 하네스.
+     measure-tonal.html 과 같은 원칙 — src/ 를 <script src> 로 그대로 로드하고
+     복사하지 않는다. modal.js 가 새로 생겼으므로 util.js 다음 · graph.js 앞에 끼운다
+     (pulse16-mk16.html · measure-tonal.html 에도 같은 자리에 넣어야 한다 — 보고서 참고). -->
+<script src="../src/core/config.js"></script>
+<script src="../src/core/engines.js"></script>
+<script src="../src/core/scale.js"></script>
+<script src="_app-harness.js"></script>
+<script src="../src/core/state.js"></script>
+<script src="../src/core/util.js"></script>
+<script src="../src/audio/modal.js"></script>
+<script src="../src/audio/graph.js"></script>
+<script src="../src/audio/params.js"></script>
+<script src="../src/audio/string.js"></script>
+<script src="../src/audio/struck.js"></script>
+<script src="../src/audio/voice-bass.js"></script>
+<script src="../src/audio/voice-keys.js"></script>
+<script src="../src/audio/voice-gtr.js"></script>
+
+<script>
+(async () => {
+const outEl = document.getElementById('out');
+const log = m => { outEl.textContent += '\n' + m; };
+outEl.textContent = '';
+
+try{
+await loadKnobDefaults();
+KNOB.hum = '0';
+
+/* ── 임펄스 하나를 ampIn[key] 에 직접 물려 몸통만 잰다 ──
+   (guitarVoice 를 거치지 않는다 — 픽/현의 여기 특성이 아니라 "몸통 필터 자체"의
+   임펄스 응답을 보는 것이 목적이다)
+
+   soloIdx 를 주면 modalBank() 이 노드에 붙여 둔 input._modalBank.modes[i].g
+   (모드별 게인)를 빼고 전부 0 으로 죽여 그 모드 **하나만** 울리게 한다.
+   이웃 모드끼리 주파수가 가까우면(밴조 370·520Hz 처럼) 서로의 꼬리가 섞여
+   T60 측정이 오염된다 — 실측에서 520Hz 가 설계 0.11s 대신 0.17s(+52%)로
+   나온 것이 이 크로스토크였다. 솔로 렌더로 그 오염을 없앤다. */
+async function renderImpulse(key, dur, soloIdx){
+  const ctx0 = offlineBoot(dur);
+  probeTrack('gtr');
+  const bank = ampIn[key]._modalBank;
+  if(soloIdx!=null && bank){
+    bank.modes.forEach((m,i)=>{ if(i!==soloIdx) m.g.gain.value=0; });
+    if(bank.dryGain) bank.dryGain.gain.value=0;
+  }
+  const buf = ctx0.createBuffer(1,1,ctx0.sampleRate);
+  buf.getChannelData(0)[0] = 1;
+  const src = ctx0.createBufferSource(); src.buffer = buf;
+  src.connect(ampIn[key]);
+  src.start(0.005);
+  const out = hMono(await ctx0.startRendering());
+  return out;
+}
+
+/** 모드 하나의 T60 을 그 모드의 설계 t60 규모에 맞는 창으로 잰다.
+   hDecayAt 의 기본 win(0.12s)은 t60 이 0.06~0.09s 인 짧은 모드에서
+   −40dB 문턱까지 점(≥5개)을 못 채워 "감쇠가 짧아 못 잼"이 나왔다 —
+   win 을 t60 규모에 맞춰 줄이고, 관측 구간도 t60 의 배수로 잡는다. */
+/* ⚠ hDecayAt(범용, _app-harness.js) 는 "피크 대비 −40dB 까지" 를 회귀에 쓴다.
+   짧은 T60(0.05~0.15s)의 고Q 모드를 이 문턱까지 재면, 신호가 이미
+   부동소수점 정밀도 바닥(대략 −85~−105dB, 실측 debug 로 확인됨 — Q 가 커서
+   극점이 단위원에 바짝 붙은 2차 IIR 은 신호가 작아질수록 재귀식의 상쇄오차가
+   커진다)에 걸쳐 있어 회귀가 "감쇠가 아니라 잡음 바닥"을 잰다. 실제로 420Hz
+   모드에서 회귀 구간 뒤쪽 점이 앞쪽 점보다 더 커지는(=잡음) 게 debug 로 잡혔다.
+   그래서 여기서는 문턱을 −25dB(피크 대비)로 좁혀 잡음 바닥에 안 닿는
+   앞부분만 쓴다 — 실제 청감상 의미 있는 구간도 어차피 그쪽이다.
+
+   ⚠ 이 측정은 실행마다 조금씩(수~수십 %) 흔들린다 — 고Q(20~90) 2차 IIR 을
+   −80~−100dB 근처까지 밀어붙이는 회귀라 뜨는 잡음 바닥의 정확한 위치가
+   부동소수점 반올림 차수에 민감하다. **하나만 재지 말고 여러 번 재서 범위로
+   보고할 것.** (측정결과 문서의 다른 항목들도 같은 이유로 범위로 적는다) */
+function fitT60(d, hz, t60Guess, t0=0.02){
+  const win = Math.max(t60Guess/10, 0.0015);
+  const t1  = Math.min(t0 + Math.max(t60Guess*10, win*10), d.length/HARNESS_SR - 0.01);
+  const pts = [];
+  for(let t=t0; t+win<t1; t+=win/2) pts.push([t+win/2, hdB(hGoertzel(d,hz,t,t+win))]);
+  if(pts.length < 5) return {slope:null, t60:null, n:pts.length};
+  const mx = pts[0][1];
+  const use = pts.filter(p => isFinite(p[1]) && p[1] > mx-25);
+  if(use.length < 5) return {slope:null, t60:null, n:use.length};
+  let sx=0,sy=0,sxy=0,sxx=0;
+  use.forEach(([x,y])=>{ sx+=x; sy+=y; sxy+=x*y; sxx+=x*x; });
+  const n=use.length, den=n*sxx-sx*sx;
+  const slope = den!==0 ? (n*sxy-sx*sy)/den : null;
+  return {slope, t60:(slope!=null && slope<-0.5)?-60/slope:null, n};
+}
+
+/** 봉우리−골(모드 사이 dB 차) — **모든 모드가 같이 우는** 전체 뱅크 응답에서 잰다.
+   (T60 은 솔로로, 봉우리−골은 합주로 — 실제로 귀에 들리는 것은 합주다) */
+function peakTrough(d, modes, t0=0.02){
+  const t1 = Math.min(t0+0.20, d.length/HARNESS_SR-0.02);
+  const at = f => hGoertzel(d, f, t0, t1);
+  const peaks = modes.map(([hz])=>at(hz));
+  const mids = []; for(let i=0;i<modes.length-1;i++) mids.push(at((modes[i][0]+modes[i+1][0])/2));
+  const ref = Math.max(...peaks);
+  const pkDb = peaks.map(v=>hdB(v/ref));
+  const midDb = mids.map(v=>hdB(v/ref));
+  return mids.length ? Math.max(...pkDb) - Math.min(...midDb) : null;
+}
+
+log('=== 몸통 모달 뱅크 실측 (OfflineAudioContext 48kHz) — docs/mutable-차용.md ★2 ===');
+log('임펄스(단일 샘플=1)를 ampIn[키] 에 직접 물려 몸통 필터 자체의 응답만 본다.');
+log('T60 판정: 설계값 ±20% 안. 봉우리−골 판정: 12dB 이상 (성공 기준).\n');
+
+/* graph.js 는 모드 표를 boot() 지역변수로만 갖고 있어 밖에서 못 읽는다.
+   여기서 같은 값을 다시 적어 "설계값" 으로 쓴다(그래프 배선 자체는 src 를 그대로 씀 —
+   숫자만 문서화 목적으로 중복. graph.js 를 고치면 이 표도 같이 고칠 것). */
+const BANJO_MODES = [[370,0.22,1.00],[520,0.11,0.35],[1200,0.09,0.45],[3000,0.06,0.55]];
+const SITAR_MODES = [[180,0.35,1.00],[420,0.19,0.40],[2600,0.08,0.55],[4200,0.05,0.35]];
+
+for(const [label, oldKey, neoKey, modes] of [
+  ['밴조', 'body_banjo', 'body_banjo_modal', BANJO_MODES],
+  ['시타르', 'body_sitar', 'body_sitar_modal', SITAR_MODES],
+]){
+  log('── ' + label + ' — ' + neoKey + ' (모달) vs ' + oldKey + ' (직렬 peaking, 대조군) ──');
+
+  log('모드별 T60 — 그 모드만 솔로로 울려서 잰다(이웃 모드 크로스토크 제거)');
+  log('  Hz     설계t60  실측t60  오차%   판정');
+  for(let i=0;i<modes.length;i++){
+    const [hz,t60d] = modes[i];
+    const dSolo = await renderImpulse(neoKey, Math.max(t60d*12, 0.3), i);
+    const fit = fitT60(dSolo, hz, t60d);
+    const err = fit.t60==null ? null : (fit.t60-t60d)/t60d*100;
+    const ok = err!=null && Math.abs(err)<=20;
+    log('  ' + String(hz).padStart(5) + '  ' + t60d.toFixed(2).padStart(7)
+      + '  ' + (fit.t60==null?'   ─':fit.t60.toFixed(3)).padStart(7)
+      + '  ' + (err==null?'  ─':err.toFixed(0)).padStart(5)
+      + '  ' + (fit.t60==null?'？(못 잼)':(ok?'✅':'❌')));
+  }
+
+  const dNeo = await renderImpulse(neoKey, 1.0, null);   // 전체 뱅크가 같이 우는 상태
+  const spreadNeo = peakTrough(dNeo, modes);
+  log('봉우리−골(모달, 전체 뱅크) = ' + (spreadNeo==null?'─':spreadNeo.toFixed(1)+' dB')
+    + '  (기준 ≥12dB → ' + (spreadNeo>=12?'✅':'❌') + ')');
+
+  /* 대조군 — 같은 임펄스를 직렬 peaking 에 물려 같은 방식으로 잰다.
+     직렬 peaking 은 원리상 스스로 안 울리므로 봉우리−골이 훨씬 얕아야 한다. */
+  const dOld = await renderImpulse(oldKey, 1.0, null);
+  const spreadOld = peakTrough(dOld, modes);
+  log('봉우리−골(직렬 peaking, 대조군) = ' + (spreadOld==null?'─':spreadOld.toFixed(1)+' dB')
+    + '  → 모달이 ' + (spreadNeo-spreadOld).toFixed(1) + 'dB 더 깊음');
+  log('');
+}
+
+/* ── 실제 노트 하나로 라우드니스(RMS) 비교 ──
+   GTR.*.amp 는 다른 담당자 소유(core/engines.js)라 파일은 안 건드리고,
+   렌더 도중에만 런타임으로 스위치한다(measure-tonal.html 이 vocoder formant/body
+   를 뗄 때 쓴 것과 같은 패턴). 진짜 EBU R128 은 audio_measure(MCP) 가 실제 프리셋을
+   재생해야 나오는데, 모달 경로는 아직 어느 프리셋에서도 안 쓰이므로(스위치 전)
+   그 방법이 안 통한다 — 그래서 여기서는 같은 음 하나를 신·구 경로로 렌더해
+   RMS·피크 dB 차이를 라우드니스의 대리 지표로 쓴다. */
+async function renderNote(eng, midi, dur, ampOverride){
+  const S = GTR[eng];
+  const save = S.amp;
+  if(ampOverride) S.amp = ampOverride;
+  const ctx0 = offlineBoot(dur+1.6);
+  probeTrack('gtr');
+  gtrOct = midi; rootNote = 0; UI.gsemi.value = 0;
+  scaleName = 'Minor Pentatonic';
+  guitarVoice(0.01, 0, dur, eng);
+  const out = hMono(await ctx0.startRendering());
+  S.amp = save;
+  return out;
+}
+
+log('── 실음 렌더 — 라우드니스 대리 지표(RMS/피크 dB) ──');
+log('판정 기준: 신·구 경로 차이가 ±1.0dB 안(=대략 ±1 LU 대응)이면 ✅');
+for(const [label, eng, neoKey] of [['밴조','banjo','body_banjo_modal'], ['시타르','sitar','body_sitar_modal']]){
+  const A2 = 45;
+  const dOld = await renderNote(eng, A2, 0.6, null);
+  const dNeo = await renderNote(eng, A2, 0.6, neoKey);
+  const rms = d => { let s=0; for(let i=0;i<d.length;i++) s+=d[i]*d[i]; return Math.sqrt(s/d.length); };
+  const pk  = d => { let m=0; for(let i=0;i<d.length;i++) m=Math.max(m,Math.abs(d[i])); return m; };
+  const dRms = hdB(rms(dNeo)/Math.max(rms(dOld),1e-12));
+  const dPk  = hdB(pk(dNeo)/Math.max(pk(dOld),1e-12));
+  log(label + '(' + eng + ')  RMS차 ' + dRms.toFixed(2) + 'dB   피크차 ' + dPk.toFixed(2) + 'dB   '
+    + (Math.abs(dRms)<=1.0 ? '✅' : '❌'));
+}
+
+/* ── keys/steelpan — 몸통 모달 뱅크(voice-keys.js, 실제 전환됨) ──
+   graph.js 의 ampIn 처럼 "임펄스를 직접 물릴 노드"가 밖에 없다(보이스마다
+   만들어졌다가 retire 로 사라진다) — 대신 vocoder formant 검증과 같은 방법을
+   쓴다: KEYS_TEX.steelpan.bodyModal 을 런타임에서 뗐다 붙였다 하며 같은 노트를
+   다시 렌더해 비율을 본다. 그 차이가 곧 모달 뱅크의 전달함수다. */
+log('\n── keys/steelpan — 몸통 모달 뱅크 (bodyModal, 실제 전환) ──');
+{
+  const A3 = 57;
+  const save = KEYS_TEX.steelpan.bodyModal;
+  const onBuf  = hMono(await (async()=>{ const c=offlineBoot(1.0); probeTrack('keys');
+    keysVoice(0.01, A3, 0.5, 0.9, 'steelpan'); return c.startRendering(); })());
+  KEYS_TEX.steelpan.bodyModal = null;                      // body(직렬)로 폴백
+  const offBuf = hMono(await (async()=>{ const c=offlineBoot(1.0); probeTrack('keys');
+    keysVoice(0.01, A3, 0.5, 0.9, 'steelpan'); return c.startRendering(); })());
+  KEYS_TEX.steelpan.bodyModal = save;
+
+  const rms = d => { let s=0; for(let i=0;i<d.length;i++) s+=d[i]*d[i]; return Math.sqrt(s/d.length); };
+  log('라우드니스 대리(RMS차, 모달 vs 직렬 body) = ' + hdB(rms(onBuf)/Math.max(rms(offBuf),1e-12)).toFixed(2)
+    + 'dB  (판정 ±1.0dB → ' + (Math.abs(hdB(rms(onBuf)/Math.max(rms(offBuf),1e-12)))<=1.0?'✅':'❌') + ')');
+
+  const t0=0.05, t1=0.20;
+  const modes = save;
+  const at = (d,f) => hGoertzel(d,f,t0,t1);
+  const peaks = modes.map(([hz])=>at(onBuf,hz));
+  const mids  = []; for(let i=0;i<modes.length-1;i++) mids.push(at(onBuf,(modes[i][0]+modes[i+1][0])/2));
+  const ref = Math.max(...peaks);
+  const spread = mids.length ? hdB(ref/Math.max(...mids.map(v=>v))) - 0 : null;
+  /* mids 가 하나뿐이라(2모드) 봉우리−골을 "봉우리(dB) − 그 사이 골(dB)" 로 직접 잰다 */
+  const pkDb = peaks.map(v=>hdB(v/ref));
+  const midDb = mids.map(v=>hdB(v/ref));
+  const sp = Math.max(...pkDb) - Math.min(...midDb);
+  log('봉우리−골(모달) = ' + sp.toFixed(1) + 'dB  (기준 ≥12dB → ' + (sp>=12?'✅':'❌') + ')');
+}
+
+/* ══════════════════════════════════════════════════════════
+   과제② 퍼즈 — 서스테인 폭주 · 홀/짝 배음비 · 4단 클리핑 실험
+   ══════════════════════════════════════════════════════════ */
+log('\n\n=== 퍼즈 재측정 (tools/측정결과-신규음색.md 미해결분) ===');
+
+async function renderGtr(e, midi, dur, chordOverride){
+  const S = GTR[e];
+  const saveChord = S.chord;
+  if(chordOverride) S.chord = chordOverride;
+  const ctx0 = offlineBoot(dur + 1.6);
+  probeTrack('gtr');
+  gtrOct = midi; rootNote = 0; UI.gsemi.value = 0;
+  scaleName = 'Minor Pentatonic';
+  guitarVoice(0.01, 0, dur, e);
+  const out = hMono(await ctx0.startRendering());
+  S.chord = saveChord;
+  return out;
+}
+
+const A2 = 45;
+log('단음(chord=[0])으로 홀/짝·크레스트·중심주파수 측정');
+log('엔진      홀/짝dB  크레스트dB  중심Hz  H1대비');
+log('─'.repeat(50));
+for(const e of ['clean','hi','fuzz']){
+  const d = await renderGtr(e, A2, 0.5, [0]);
+  const a = hAnalyze(d, 110, {hStart:0.02,hEnd:0.22,nh:12});
+  log(('gtr/'+e).padEnd(10) + a.oddEven.toFixed(1).padStart(7)
+    + a.crest.toFixed(1).padStart(11) + a.cent.toFixed(0).padStart(8)
+    + a.H[0].toFixed(1).padStart(9));
+}
+
+log('\n서스테인 — 기음(110Hz) 레벨을 시간별로 (0.05s=0dB 기준)');
+log('엔진      0.5s   1.0s   2.0s   기음T60s');
+log('─'.repeat(48));
+for(const e of ['clean','hi','fuzz']){
+  const d = await renderGtr(e, A2, 2.5, [0]);
+  const df = hDecayAt(d, 110, 0.15, 2.4);
+  const rmsAt = s => {
+    const i0=Math.round((0.01+s)*HARNESS_SR), W=Math.round(HARNESS_SR*0.03);
+    let x=0; for(let i=i0;i<i0+W && i<d.length;i++) x+=d[i]*d[i];
+    return Math.sqrt(x/W);
+  };
+  const ref = rmsAt(0.05);
+  log(('gtr/'+e).padEnd(10) + [0.5,1.0,2.0].map(s=>hdB(rmsAt(s)/ref).toFixed(1).padStart(7)).join('')
+    + '  ' + (df.t60==null?'─':df.t60.toFixed(2)));
+}
+log('설계 t60(fuzz, A2 환산) = ' + (GTR.fuzz.t60*Math.pow(82.41/110,GTR.fuzz.t60k)).toFixed(2) + 's');
+
+log('\n중역 파임 확인 (clean 대비 dB, 150~5000Hz)');
+{
+  const F=[150,250,400,600,800,1200,1600,2400,3200,5000];
+  const dClean = await renderGtr('clean', A2, 0.5, [0]);
+  const val = (d,f) => hGoertzel(d,f,0.02,0.22);
+  const base = F.map(f=>val(dClean,f));
+  log('주파수'.padEnd(11)+F.map(f=>String(f).padStart(7)).join(''));
+  for(const e of ['clean','hi','fuzz']){
+    const d = e==='clean' ? dClean : await renderGtr(e, A2, 0.5, [0]);
+    log(('gtr/'+e).padEnd(11)+F.map((f,i)=>hdB(val(d,f)/Math.max(base[i],1e-12)).toFixed(1).padStart(7)).join(''));
+  }
+}
+
+log('\n측정 완료');
+window.__done = true;
+}catch(err){
+  log('\n!! 측정 실패: ' + (err && err.stack ? err.stack : err));
+  window.__done = 'error';
+}
+})();
+</script>

@@ -359,7 +359,11 @@ CATS.forEach(c => {
   UI.cats.appendChild(b);
 });
 
-/* ── 패턴 라이브러리 칩 ── */
+/* ── 패턴 라이브러리 칩 ──
+   전체 개수는 하드코딩하지 않는다 — 프리셋이 늘 때마다 라벨을 손으로
+   맞춰야 하면 잊어버리기 마련이다(실제로 208 → 357 로 늘어난 뒤에도
+   라벨은 208 에 머물러 있었다). LIB_NAMES.length 를 그대로 읽는다. */
+if(UI.libtotal) UI.libtotal.textContent = `${LIB_NAMES.length}종`;
 LIB_NAMES.forEach(name => {
   const L=LIB[name];
   const b=document.createElement('button');
@@ -404,6 +408,10 @@ LIB_NAMES.forEach(name => {
   };
   UI.chips.appendChild(b);
 });
+/* 칩을 만들기만 하고 한 번도 걸러 보이지 않으면 #libcount 가 초기 문구
+   ("…종 표시")에 계속 머문다 — 실제로 208종에서 늘어난 뒤에도 이 자리는
+   숫자를 한 번도 새로 안 세고 있었다. 시작할 때 한 번 걸어 둔다. */
+applyCatFilter();
 
 /* ── 뱅크 슬롯 A~D ── */
 ['A','B','C','D'].forEach((n,i) => {

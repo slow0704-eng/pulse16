@@ -8,7 +8,11 @@
 /* ── 1. 디자인 토큰 ─────────────────────────────────────────── */
 :root{
   --panel:#2b3038; --panel-hi:#353b45; --recess:#1c2026; --edge:#171a1f;
-  --silk:#e6e1d6; --silk-dim:#8b9099; --live:#f4efe3;
+  --silk:#e6e1d6; --silk-dim:#9aa1ab; --live:#f4efe3;
+  /* --silk-dim 은 원래 #8b9099 였습니다. --panel(#2b3038) 위에서 대비가
+     4.14:1 로 WCAG AA(4.5:1)에 못 미쳐 axe-core 가 라벨 22곳을 걸었습니다
+     (mcp__pulse-audit__a11y). #9aa1ab 로 올려 --panel·#242930 배경 모두에서
+     5:1 이상을 확보했습니다. */
   --t-kick:#e8a33d; --t-snare:#d45d79; --t-clap:#c98ec9;
   --t-chat:#3daea3; --t-ohat:#6fbfd6; --t-tom:#c9b896; --t-perc:#b58fd0;
   --t-bass:#8fbf5f; --t-loop:#7fa8d9; --t-tone:#f2726f;

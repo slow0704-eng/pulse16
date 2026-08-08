@@ -355,3 +355,88 @@ UI.rand.onclick = () => {   // 트랙마다 서로 다른 프리셋에서 무작
   });
   syncAll(); markDirty();
 };
+
+/* ── 곡 구조 · 화성 진행 · 그루브 ──
+   담당 D(src/seq/arrange.js)·C(src/data/harmony.js)의 전역을 씁니다.
+   typeof 로 방어하고, 없으면 해당 줄을 통째로 숨깁니다.
+   (ARCHITECTURE.md: "id 가 같은 이름의 암묵 전역을 만든다" — form·prg·grv 처럼
+   짧고 겹치지 않는 id 를 썼습니다. src/ 전체에 이 이름의 최상위 선언이 없음을
+   grep 으로 확인했습니다.)
+
+   세 파일이 실제로 만들어진 뒤 이름을 다시 확인했습니다(과제 지시의 가정과
+   달랐던 것 하나 있음):
+     - formOn / formMode  — 그대로. 단, 상수는 FORM 이 아니라 SONG_FORM 이다.
+       arrange.js 의 주석: melody.js 가 이미 최상위 const FORM(AABA 류 프레이즈
+       결합 폼)을 선언해 두고 있어 이름이 겹쳐 SONG_FORM/SONG_FORM_NAMES 로
+       바꿨다고 D 가 직접 남겨 뒀다.
+     - progOn — 있다(sequencer.js). progMode 는 **없다** — harmony.js 의
+       pickProg() 는 모드 개념 없이 항상 progPoolFor(src.keys) 로만 고른다.
+       그래서 prgmode select 는 채우지 않고 숨긴다(존재하지 않는 전역에
+       대입하면 strict 모드에서 ReferenceError 가 난다).
+     - grooveOn / grooveMode — 둘 다 있다(arrange.js). GROOVE_NAMES 도 있다. */
+try{
+  /* 곡 구조 (D) — SONG_FORM_NAMES · SONG_FORM · formPoolFor · sectionAt · sectionLabel */
+  if(typeof SONG_FORM_NAMES!=='undefined' && typeof SONG_FORM!=='undefined' && UI.form){
+    UI.formrow.hidden=false;
+    const add=(v,t)=>UI.formmode.add(new Option(t,v));
+    add('genre','장르 자동');
+    add('all','전체 무작위');
+    SONG_FORM_NAMES.forEach(n => add(n, (SONG_FORM[n]&&SONG_FORM[n].label) || n));
+    UI.formmode.value='genre';
+    UI.form.onclick = () => {
+      formOn = UI.form.dataset.on!=='1';
+      UI.form.dataset.on = formOn?'1':'0';
+      UI.form.textContent = formOn?'켜짐':'꺼짐';
+      setStat(formOn ? '곡 구조 켜짐 — 섹션을 따라 진행합니다' : '곡 구조 꺼짐');
+      markDirty();
+    };
+    UI.formmode.onchange = e => { formMode=e.target.value; markDirty(); };
+  }
+}catch(err){ console.warn('[events] 곡 구조 UI 배선 실패 — arrange.js 쪽 전역 이름을 확인하세요', err); }
+
+try{
+  /* 화성 진행 (C: harmony.js, D 가 시퀀서에서 씀) — PROG_NAMES · PROG ·
+     COMP · progPoolFor 등. progOn 은 있지만 progMode 는 없다(위 설명) —
+     토글만 걸고 모드 select 는 숨긴다. */
+  if(typeof PROG_NAMES!=='undefined' && typeof PROG!=='undefined' && UI.prg){
+    UI.prgrow.hidden=false;
+    UI.prg.onclick = () => {
+      progOn = UI.prg.dataset.on!=='1';
+      UI.prg.dataset.on = progOn?'1':'0';
+      UI.prg.textContent = progOn?'켜짐':'꺼짐';
+      setStat(progOn ? `화성 진행 켜짐 — 코드가 마디마다 바뀝니다 (${PROG_NAMES.length}종 중에서 장르에 맞게)` : '화성 진행 꺼짐');
+      markDirty();
+    };
+    if(typeof progMode==='undefined'){
+      UI.prgmode.hidden=true;                 // 모드 개념이 없다 — 토글만 의미가 있다
+    }else{
+      const add=(v,t)=>UI.prgmode.add(new Option(t,v));
+      add('genre','장르 자동');
+      add('all','전체 무작위');
+      PROG_NAMES.forEach(n => add(n, (PROG[n]&&PROG[n].label) || n));
+      UI.prgmode.value='genre';
+      UI.prgmode.onchange = e => { progMode=e.target.value; markDirty(); };
+    }
+  }
+}catch(err){ console.warn('[events] 화성 진행 UI 배선 실패 — harmony.js 쪽 전역 이름을 확인하세요', err); }
+
+try{
+  /* 그루브 (D: arrange.js) — GROOVE · GROOVE_NAMES · groovePoolFor */
+  if(typeof GROOVE!=='undefined' && UI.grv){
+    UI.grvrow.hidden=false;
+    const names = (typeof GROOVE_NAMES!=='undefined') ? GROOVE_NAMES : Object.keys(GROOVE);
+    const add=(v,t)=>UI.grvmode.add(new Option(t,v));
+    add('genre','장르 자동');
+    add('all','전체 무작위');
+    names.forEach(n => add(n, (GROOVE[n]&&GROOVE[n].label) || n));
+    UI.grvmode.value='genre';
+    UI.grv.onclick = () => {
+      grooveOn = UI.grv.dataset.on!=='1';
+      UI.grv.dataset.on = grooveOn?'1':'0';
+      UI.grv.textContent = grooveOn?'켜짐':'꺼짐';
+      setStat(grooveOn ? '그루브 켜짐 — 장르별 스윙·벨로시티로 바뀝니다' : '그루브 꺼짐');
+      markDirty();
+    };
+    UI.grvmode.onchange = e => { grooveMode=e.target.value; markDirty(); };
+  }
+}catch(err){ console.warn('[events] 그루브 UI 배선 실패 — arrange.js 쪽 전역 이름을 확인하세요', err); }

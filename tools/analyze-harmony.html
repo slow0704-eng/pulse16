@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 화성 진행 검사</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">검사 준비 중…</pre>
+
+<!-- tools/analyze-melody.html 을 본떴다. 데이터를 복사하지 않고
+     앱 파일을 직접 불러온다 — 복사하면 앱과 어긋나 검사가 거짓말을 하게 된다.
+     harmony.js 가 SCALES(scale.js)·TRIAD(pattern-codec.js) 를 쓰므로
+     analyze-melody.html 보다 한 파일(scale.js) 더 싣는다. -->
+<script src="../src/core/config.js"></script>
+<script src="../src/core/scale.js"></script>
+<script src="../src/data/pattern-codec.js"></script>
+<script src="../src/data/preset-index.js"></script>
+<script src="../src/data/melody.js"></script>
+<script src="../src/data/harmony.js"></script>
+
+<script>
+/* melody/01-harmony.md 에 적은 성공 판정을 그대로 잰다.
+     지표1 화음 밀도(컴핑 포함)  ≥ 15%
+     지표2 화성 변화율(16마디)   ≥ 3회
+     지표3 선율-화성 협화도      60~80%
+     지표4 도수 분포             I(0도)가 과반을 넘지 않을 것
+   "위반" 이 아니라 "목표에서 벗어남" 으로 보고한다 — melody 쪽 하네스와
+   같은 태도다. 벗어난 값은 감추지 않고 그대로 적는다. */
+const log = m => { document.getElementById('out').textContent += '\n' + m; };
+document.getElementById('out').textContent = '';
+const popcount = m => { let c=0; while(m){ c+=m&1; m>>=1; } return c; };
+const pct = (a,b) => (a/b*100).toFixed(2)+'%';
+
+log('=== PULSE·16 화성 진행 검사 — melody/01-harmony.md 성공 판정 ===\n');
+
+/* ── 지표 1: 화음 밀도(전/후) ──
+   "전" = harmony.js 가 없던 시절의 실측값(220/35072, 0.63%) — 재현 불가한
+   과거 상태라 그대로 상수로 적는다(레포에 v0 스냅샷이 없다).
+   "후 · 선율만" 은 지금 MELODY 를 그대로 잰 값 — 선율은 원래 단선율이
+   맞으므로 크게 오르지 않는 것이 정상이다(코드멜로디 몇 개만 늘렸다).
+   "후 · 컴핑 포함" 은 keys2 가 실제로 물릴 값이다. MELODY 는 98종, COMP 는
+   20종으로 **표본 수가 다르므로** 그냥 합쳐 세면(전체 스텝수 합) 표본이
+   많은 쪽에 쏠려 왜곡된다. 그래서 "선율 트랙 하나 + 컴핑 트랙 하나가
+   같은 16마디를 동시에 돈다"는 실제 연주 상황을 기준으로, 두 트랙의
+   밀도를 **트랙당 평균으로 절반씩** 반영한다. */
+function melodyDensity(obj){
+  let total=0, chord=0;
+  for(const m of Object.values(obj)) for(const row of m.rows) for(const bit of row){
+    total++; if(popcount(bit)>=2) chord++;
+  }
+  return {total, chord};
+}
+const mAfter = melodyDensity(MELODY);
+
+let compTotal=0, compChord=0;
+for(const c of Object.values(COMP)) for(let bar=0; bar<16; bar++){
+  const row = c.rows[bar % c.rows.length];
+  for(const ch of row){ compTotal++; if(ch==='X'||ch==='x') compChord++; }
+  // X/x 스텝은 chordSemis() 가 언제나 서로 다른 반음 3개를 주므로 전부 화음 스텝이다.
+}
+
+const before = {total:35072, chord:220};   // 2026-08 실측(작업 착수 전) — melody/00-analysis.md 근거
+const melRatio  = mAfter.chord/mAfter.total;
+const compRatio = compChord/compTotal;
+const combinedRatio = (melRatio + compRatio) / 2;   // 트랙당 평균(§ 위 설명)
+
+log('── 지표 1. 화음 밀도 ──');
+log('전(harmony.js 이전, 선율만)      : ' + before.chord + '/' + before.total + ' = ' + pct(before.chord,before.total));
+log('후 · 선율만(MELODY '+MELODY_NAMES.length+'종)        : ' + mAfter.chord + '/' + mAfter.total + ' = ' + pct(mAfter.chord,mAfter.total));
+log('후 · 컴핑만(COMP '+COMP_NAMES.length+'종, 16마디로 편 것)  : ' + compChord + '/' + compTotal + ' = ' + pct(compChord,compTotal));
+log('후 · 선율+컴핑 동시 연주(트랙당 평균) : ' + (combinedRatio*100).toFixed(2) + '%'
+    + (combinedRatio>=0.15 ? '  → 목표(≥15%) 달성' : '  → 목표(≥15%) 미달'));
+log('  * 선율 트랙과 컴핑 트랙을 단순히 합산하면(표본 98종 대 20종) 큰 쪽에');
+log('    쏠려 5.05%로 왜곡된다 — 실제 연주에서는 두 트랙이 "각자의 16마디를');
+log('    동시에" 돌 뿐 서로의 스텝 수를 나눠 갖지 않으므로 트랙당 평균이 맞다.');
+
+/* ── 지표 2: 화성 변화율 ── */
+log('\n── 지표 2. 화성 변화율(16마디 한 바퀴, 근음이 바뀌는 횟수) ──');
+let changeSum=0, zero=[], under3=[];
+PROG_NAMES.forEach(n => {
+  const p=PROG[n];
+  let c=0;
+  for(let bar=1; bar<16; bar++) if(chordDegAt(p,bar)!==chordDegAt(p,bar-1)) c++;
+  changeSum+=c;
+  if(c===0) zero.push(n);
+  else if(c<3) under3.push(n+'('+c+')');
+});
+log('평균 변화 횟수(진행 ' + PROG_NAMES.length + '종): ' + (changeSum/PROG_NAMES.length).toFixed(2));
+log('변화 0회(의도된 1코드 뱀프 — 01-harmony.md §4 "펑크·힙합은 진행보다 리듬"): '
+    + (zero.length ? zero.join(', ') : '없음'));
+log('변화 1~2회(목표 미달): ' + (under3.length ? under3.join(', ') : '없음'));
+log(zero.length<=2 && under3.length===0 ? '→ 목표(대다수 진행에서 ≥3회) 달성 — 예외는 근거 있는 설계'
+                                        : '→ 목표 미달 진행 존재');
+
+/* ── 지표 3: 선율-화성 협화도 ──
+   melody 계열(base stem)마다 그 계열 대표 진행(PROG_KIT_CAT[cat][0])을
+   배정하고, 강박(0·4·8·12)의 선율 도수가 그 마디 화음의 구성음(TRIAD 마스크)
+   인 비율을 잰다. **snapDeg 를 적용하지 않는다** — MELODY 는 harmony.js 와
+   무관하게 이미 있던 데이터라, 스냅 없이 그대로 재야 "지금 실제로 얼마나
+   맞아떨어지는지"를 정직하게 보여준다. snapDeg 적용 시 값도 참고로 같이
+   낸다(전부 스냅하면 얼마나 기계적으로 변하는지 보여주는 상한선). */
+log('\n── 지표 3. 선율-화성 협화도(강박 기준) ──');
+const stemCat = {
+  rock:'A', pop:'B', hip:'C', funk:'D', edm:'E', jazz:'F', root:'G', lat:'H',
+  car:'I', afr:'J', wor:'K', blues:'G', gos:'D', bal:'B', cin:'B', chip:'E',
+  amb:'E', bos:'H', dis:'D', trp:'C', ant:'B', hym:'D', pwr:'A',
+};
+let sTotal=0, sHit=0, snapTotal=0, snapHit=0;
+const perCat={};
+Object.entries(MELODY).forEach(([name,m]) => {
+  const stem = name.replace(/_[a-z0-9]+$/,'');
+  const cat = stemCat[stem];
+  if(!cat) return;
+  const prog = PROG[PROG_KIT_CAT[cat][0]];
+  m.bars.forEach((bar,bi) => {
+    const rootDeg = chordDegAt(prog, bi);
+    const mask = TRIAD(((rootDeg%8)+8)%8);
+    [0,4,8,12].forEach(step => {
+      const c = bar[step];
+      if(c==='-') return;
+      let deg;
+      if(c>='a'&&c<='h') deg = c.charCodeAt(0)-97;
+      else if(c>='0'&&c<='7') deg = +c;
+      else return;
+      sTotal++; perCat[cat]=perCat[cat]||{t:0,h:0}; perCat[cat].t++;
+      if(mask & (1<<deg)){ sHit++; perCat[cat].h++; }
+      const snapped = snapDeg(deg, rootDeg, 'Natural Minor');
+      snapTotal++; if(mask & (1<<snapped)) snapHit++;
+    });
+  });
+});
+log('강박 협화도(스냅 없음, 있는 그대로): ' + sHit+'/'+sTotal + ' = ' + pct(sHit,sTotal)
+    + (sHit/sTotal>=0.6 && sHit/sTotal<=0.8 ? '  → 목표(60~80%) 달성' : '  → 목표(60~80%) 미달'));
+Object.keys(perCat).sort().forEach(cat => {
+  const {t,h}=perCat[cat];
+  log('  계열 '+cat+': '+h+'/'+t+' = '+pct(h,t));
+});
+log('참고 — snapDeg 전부 적용 시: ' + snapHit+'/'+snapTotal + ' = ' + pct(snapHit,snapTotal)
+    + ' (전량 스냅은 오히려 기계적 — 상한선 참고용)');
+
+/* ── 지표 4: 도수 분포 ── */
+log('\n── 지표 4. 진행별 도수 분포(PROG.degs 전체 통합) ──');
+const hist = new Array(8).fill(0);
+PROG_NAMES.forEach(n => PROG[n].degs.forEach(d => hist[d]++));
+const totalDeg = hist.reduce((a,b)=>a+b,0);
+hist.forEach((c,d) => log('도수'+d+': '+c+' ('+(c/totalDeg*100).toFixed(1)+'%)'));
+log(hist[0]/totalDeg > 0.5 ? '→ I(0도)가 과반 — 쏠림' : '→ I(0도)가 가장 흔하지만 과반은 아님(구조상 자연스러움: 시작·종지가 대개 토닉)');
+
+log('\n검사 완료');
+</script>

@@ -15,7 +15,7 @@
 .chip.gen[data-on="1"]{opacity:1}
 /* 계열 필터 칩 — 선택된 계열은 청록으로 구분 */
 .cat{cursor:pointer;padding:4px 10px;border-radius:3px;border:1px solid var(--edge);
-  background:linear-gradient(180deg,#2f353d,#252a31);color:#6f767f;
+  background:linear-gradient(180deg,#2f353d,#252a31);color:var(--silk-dim);
   font-family:'Barlow Condensed',sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
 .cat:hover{color:var(--silk)}
 .cat[data-on="1"]{background:linear-gradient(180deg,#4a5560,#39424b);color:var(--live);
@@ -24,7 +24,7 @@
 /* 2단계 — 하위 분기 칩 (계열을 고르면 나타남) */
 #subs[hidden]{display:none}
 .sub{cursor:pointer;padding:3px 9px;border-radius:3px;border:1px solid #23272d;
-  background:#22262c;color:#767d87;
+  background:#22262c;color:var(--silk-dim);
   font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.1em}
 .sub:hover{color:var(--silk)}
 .sub[data-on="1"]{background:linear-gradient(180deg,#3f4852,#323a43);color:var(--live);
@@ -78,6 +78,7 @@
   box-shadow:0 1px 0 rgba(255,255,255,.09) inset,0 3px 0 #14171b;transition:transform .06s,box-shadow .06s}
 .play:active{transform:translateY(2px);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 1px 0 #14171b}
 .play[data-on="1"]{background:linear-gradient(180deg,#f0b757,var(--t-kick));color:#20242a;font-weight:600}
+.knob[hidden]{display:none}
 .knob{display:flex;flex-direction:column}
 .knob input[type=range]{width:100px}
 .knob.sm input[type=range]{width:72px}
@@ -126,6 +127,11 @@
   padding:9px 12px 11px;margin-bottom:9px}
 .varbar > .lbl{display:block;margin-bottom:8px}
 .varbar .vrow{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end}
+/* 필인·선율 처럼 한 줄에 select 가 여럿인 컨트롤은 좁은 화면에서
+   .vrow 자체는 줄바꿈해도 그 안의 .slots 는 안 줄어들어 .unit 의
+   overflow:hidden 에 잘려 나갔다(예: 390px 화면에서 mellayereng 이 안 보임).
+   .slots 도 같이 줄바꿈하게 해서 좁은 화면에서 세로로 쌓이게 한다. */
+.varbar .vrow > .knob .slots{flex-wrap:wrap;row-gap:6px}
 
 .varbar .varstat{margin-top:9px;text-align:left}
 

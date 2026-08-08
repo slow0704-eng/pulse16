@@ -80,7 +80,8 @@ function saveState(){
     const knobs={}; SLIDERS.forEach(id => { knobs[id]=UI[id].value; });
     const sels={};  ['kit','space','root','scale','oct','beng','bsrc',
                      'keng','geng','koct','goct','keng2','geng2',
-                     'shufn','pshufn','pshufbpm','pshufmode','filln','fillmode','fillnL','fillmodeL','melmode','mellen','mellayer','mellayereng'].forEach(id => { sels[id]=UI[id].value; });
+                     'shufn','pshufn','pshufbpm','pshufmode','filln','fillmode','fillnL','fillmodeL','melmode','mellen','mellayer','mellayereng',
+                     'formmode','prgmode','grvmode'].forEach(id => { sels[id]=UI[id].value; });
     const panels={}; document.querySelectorAll('.pbtn').forEach(b => { panels[b.dataset.panel]=b.dataset.on; });
     localStorage.setItem(SAVE_KEY, JSON.stringify({
       v:1, banks:banks.map(b=>({drums:b.drums,bass:b.bass,keys:b.keys,gtr:b.gtr,
@@ -131,6 +132,17 @@ function loadState(){
     layerEng =(o.sels && o.sels.mellayereng) || 'same';
     UI.mellayereng.disabled = layerMode==='off';
     UI.pshufbpm.disabled = patMode!=='genre';
+    /* 곡 구조 · 화성 진행 · 그루브 (D·C) — fillMode/melMode 와 같은 방식으로
+       "선택 모드" 만 복원하고 On/Off 는 복원하지 않는다(패턴 셔플과 같은 이유 —
+       켜진 채로 새로 열리면 사용자가 손대기 전에 패턴이 바뀐다).
+       SONG_FORM_NAMES/PROG_NAMES/GROOVE 의 존재로 해당 파일이 로드됐는지
+       가늠한다 — formMode 자체는 초기값이 undefined 일 수 있어 그 이름으로는
+       못 가른다. progMode 는 harmony.js 쪽에 모드 개념이 없어 아예 없다
+       (events.js 참고) — 복원 대상에서 뺀다. */
+    try{
+      if(typeof SONG_FORM_NAMES!=='undefined') formMode = (o.sels && o.sels.formmode) || 'genre';
+      if(typeof GROOVE!=='undefined')          grooveMode = (o.sels && o.sels.grvmode) || 'genre';
+    }catch(err){ console.warn('[edit] 곡 구조·그루브 모드 복원 실패 — 전역 이름을 확인하세요', err); }
     /* 패턴 셔플은 복원하지 않는다 — 켜진 채로 새로 열면
        사용자가 손대기도 전에 패턴이 바뀌어 버린다 */
     for(const [id,v] of Object.entries(o.knobs||{})){

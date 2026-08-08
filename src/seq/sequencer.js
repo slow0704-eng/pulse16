@@ -40,6 +40,33 @@ let layerMode='off', layerEng='same', melNow2=null;
    같은 것을 뽑으면 트랙을 나눈 의미가 없다. */
 let melNowB=null, riffNowB=null;
 
+/* ── 화성 진행 ──
+   화성 담당(C)이 만드는 src/data/harmony.js 의 PROG·progPoolFor·chordDegAt·
+   chordSemis·snapDeg·COMP·compPoolFor 를 쓴다. 병렬로 작업 중이라 아직
+   없을 수도 있으므로 매번 typeof 로 방어한다 — 없으면 조용히 기존 동작
+   (진행 없이 P.keys2/원래 2번 선율, 스냅 없는 베이스)으로 빠진다.
+
+   선율과 같은 원칙으로 MEL_BARS(16) 격자에 anchor 를 맞춘다 — 그래야
+   진행이 선율·필인·셔플과 같은 자리에서 바뀐다(ARCHITECTURE.md 의
+   "셔플 주기" 절과 같은 이유). progNow 는 셔플이 src.keys 를 바꾼
+   **뒤**(onLoopWrap 의 셔플 블록 다음)에 뽑아야 장르가 맞는다. */
+let progOn=false, progNow=null, progAnchor=0, compNow=null, chordRoot=null;
+
+/** 화성 담당의 PROG 풀에서 다음 진행을 고른다. harmony.js 가 없으면 null */
+function pickProg(){
+  if(typeof PROG==='undefined' || typeof progPoolFor!=='function') return null;
+  const pool=progPoolFor(src.keys);
+  if(!pool || !pool.length) return null;
+  return PROG[pool[(Math.random()*pool.length)|0]] || null;
+}
+/** 컴핑 리듬을 고른다. harmony.js 가 없으면 null */
+function pickComp(){
+  if(typeof COMP==='undefined' || typeof compPoolFor!=='function') return null;
+  const pool=compPoolFor(src.keys);
+  if(!pool || !pool.length) return null;
+  return COMP[pool[(Math.random()*pool.length)|0]] || null;
+}
+
 /* ── 선율 길이는 '루프 개수'로 센다 ──
    한 루프가 한 마디다. 선율마다 길이가 다르므로(16·32·64) 고정 상수를
    쓸 수 없다. melLen 은 **지금 걸린 것들 중 가장 긴 것**을 따르고,
@@ -74,39 +101,68 @@ function fillAt(i){
 /** 한 스텝에 울릴 보이스를 전부 발사. 확률로 걸러진 트랙 id 배열을 돌려줌 */
 function voicesAt(i,t){
   const jit=()=>H()*(Math.random()*2-1)*0.006;
+  /* ── 그루브(arrange.js) ──
+     grooveOn 이 꺼져 있으면(기본값) 항상 0/1 을 돌려줘 지금과 똑같이 들린다.
+     스윙은 홀수 스텝에만 걸린다(Tone.Transport.swing 도 fbLoop() 도 같다 —
+     실측 비교는 arrange.js 의 주석 참고). 이미 t 에 공통으로 걸린 그 스윙량을
+     여기서 트랙별 배율(grooveNow.swing)로 다시 조정한다 — 트랙마다 다른
+     스윙을 걸려면 "공통으로 걸린 만큼"을 알아야 빼고 다시 얹을 수 있다. */
+  const swung = i%2===1;
+  const baseSwing = swung ? spb()*(1/6)*(knob('swing')/100) : 0;
+  const groove = id => {
+    if(!grooveOn || !grooveNow) return 0;
+    const off = (grooveNow.off && grooveNow.off[id]) || 0;
+    const mul = (grooveNow.swing && grooveNow.swing[id]!=null) ? grooveNow.swing[id] : 1;
+    return off + baseSwing*(mul-1);
+  };
+  const gvel = id => (grooveOn && grooveNow && grooveNow.vel && grooveNow.vel[id]) || 1;
   const skipped=[];
   const fk=fillAt(i);
   TRACKS.forEach(tr => {
     let v, e=eng[tr.id];
     if(fk!==null){
-      /* 필인 구간 — 평소 패턴을 무시한다. 필인에 안 적힌 트랙은 쉰다. */
+      /* 필인 구간 — 평소 패턴을 무시한다. 필인에 안 적힌 트랙은 쉰다.
+         섹션의 off 마스크는 여기 적용하지 않는다 — 필인은 섹션이 바뀐다는
+         신호라 섹션 마스크보다 우선한다(arrange.js sectionOff 주석 참고). */
       const row=fillNow.pat[tr.id];
       const c=row ? row[fk] : '-';
       v = c==='X' ? 2 : c==='x' ? 1 : 0;
       if(fillNow.eng && fillNow.eng[tr.id]) e=fillNow.eng[tr.id];
     }else{
       v=P.drums[tr.id][i];
+      /* 곡 구조(arrange.js) — 이 섹션에서 꺼진 트랙이면 발사하지 않는다.
+         mute[] 는 사용자 상태라 안 건드리고, 여기서만 판정하는 별도
+         마스크다. 롤에 찍힌 패턴 자체는 그대로 남는다. */
+      if(v && sectionOff(tr.id)) v=0;
     }
     if(!v || mute[tr.id]) return;
     /* 필인은 확률로 빠지면 안 된다 — 구멍이 나면 필인으로 안 들린다 */
     if(fk===null && v===1 && Math.random()>effProb(tr.id)){ skipped.push(tr.id); return; }
-    chan[tr.id].gain.value=lvl[tr.id];
-    fireTrack(tr.id, Math.max(t+jit(), ctx.currentTime+0.004), v===2?1:0.60, e);
+    chan[tr.id].gain.value=lvl[tr.id]*sectionLvl(tr.id);
+    fireTrack(tr.id, Math.max(t+jit()+groove(tr.id), ctx.currentTime+0.004),
+              (v===2?1:0.60)*gvel(tr.id), e);
   });
   /* 베이스도 선율 모드에서는 16마디 라인을 탄다.
      건반·기타와 같은 melBar 를 본다 — 셋이 같은 형식 위에 있어야 곡이 된다. */
-  const deg = blineNow ? barOf(blineNow)[i] : P.bass[i];
-  if(deg>=0 && !mute.bass){
-    chan.bass.gain.value=lvl.bass;
-    bassVoice(t, deg, spb()*0.25*(knob('gate')/100), eng.bass);
+  let deg = blineNow ? barOf(blineNow)[i] : P.bass[i];
+  /* 화성 진행(progOn) — 강박(4분음표 자리, i%4===0)만 그 마디 화음의 근음으로
+     스냅한다. 매 스텝을 스냅하면 베이스라인 고유의 굴곡(경과음·필인)이
+     아르페지오로 뭉개진다 — 귀가 화성 근음을 인지하는 자리는 대개 강박이라
+     거기만 맞춰도 화성이 들리면서 라인의 모양은 살아남는다. */
+  if(deg>=0 && progOn && chordRoot!=null && typeof snapDeg==='function' && i%4===0){
+    deg = snapDeg(deg, chordRoot, scaleName);
+  }
+  if(deg>=0 && !mute.bass && !sectionOff('bass')){
+    chan.bass.gain.value=lvl.bass*sectionLvl('bass');
+    bassVoice(t+jit()+groove('bass'), deg, spb()*0.25*(knob('gate')/100), eng.bass);
   }
 
   /* 건반 — 비트마스크의 켜진 음도를 전부 발음 (화음)
      선율 모드면 P.keys 대신 16마디 선율의 '지금 마디'를 읽는다.
      P.keys 를 덮어쓰지 않으므로 선율을 꺼도 사용자가 찍은 패턴이 그대로 남는다. */
   const m = melNow ? barOf(melNow)[i] : P.keys[i];
-  if(m && !mute.keys){
-    chan.keys.gain.value=lvl.keys;
+  if(m && !mute.keys && !sectionOff('keys')){
+    chan.keys.gain.value=lvl.keys*sectionLvl('keys');
     if(keysWet) keysWet.gain.value=(KENG[eng.keys]||KENG.pad).chorus||0;
     const kdur=spb()*0.25*(knob('kgate')/100);
     /* 벨로시티 — 예전에는 모든 음이 0.85 고정이라 어느 음이나 똑같이 울렸다.
@@ -118,8 +174,9 @@ function voicesAt(i,t){
     /* 화음은 위 음을 조금 여리게 — 실제 연주에서 아래가 더 세다 */
     let vi=0;
     const kbase = keysOct+rootNote+knob('ksemi');
+    const kt = t+jit()+groove('keys');
     for(let d=0; d<ROWS; d++) if(m & (1<<d))
-      keysVoice(t, kbase+SCALES[scaleName][d], kdur, kv*Math.pow(0.94,vi++), eng.keys);
+      keysVoice(kt, kbase+SCALES[scaleName][d], kdur, kv*Math.pow(0.94,vi++), eng.keys);
 
     /* 겹침 — 본 선율 위에 한 겹 더 쌓는다.
        조금 여리게(0.72) 하고 살짝 늦게(4ms) 넣어야 두 겹으로 들린다.
@@ -135,7 +192,7 @@ function voicesAt(i,t){
       for(let d=0; d<ROWS; d++) if(lm & (1<<d)){
         const dd = d + dOff;
         if(dd >= ROWS) continue;                 // 도수를 벗어나면 건너뛴다
-        keysVoice(t+0.004, kbase+SCALES[scaleName][dd]+semi,
+        keysVoice(kt+0.004, kbase+SCALES[scaleName][dd]+semi,
                   kdur, kv*0.72*Math.pow(0.94,li++), le);
       }
     }
@@ -145,29 +202,52 @@ function voicesAt(i,t){
      선율 모드면 P.gtr 대신 16마디 리프의 '지금 마디'를 읽는다.
      건반 선율과 같은 melBar 를 본다 — 둘이 같은 형식 위에 있어야 곡이 된다. */
   const gd = riffNow ? barOf(riffNow)[i] : P.gtr[i];
-  if(gd>=0 && !mute.gtr){
-    chan.gtr.gain.value=lvl.gtr;
-    guitarVoice(t, gd, spb()*0.25*(knob('ggate')/100), eng.gtr);
+  if(gd>=0 && !mute.gtr && !sectionOff('gtr')){
+    chan.gtr.gain.value=lvl.gtr*sectionLvl('gtr');
+    guitarVoice(t+jit()+groove('gtr'), gd, spb()*0.25*(knob('ggate')/100), eng.gtr);
   }
 
-  /* ── 2번 트랙 ──
-     1번과 **다른 선율/리프**를 돈다. 반대쪽으로 팬을 벌려 자리를 나눈다.
-     선율 모드가 꺼져 있으면 프리셋이 적어 둔 패턴(대개 비어 있음)을 쓴다. */
-  const m2 = melNowB ? barOf(melNowB)[i] : P.keys2[i];
-  if(m2 && !mute.keys2){
-    chan.keys2.gain.value=lvl.keys2;
-    const kdur2=spb()*0.25*(knob('kgate')/100);
-    const acc2 = i===0 ? 0.92 : (i%4===0 ? 0.72 : 0.52);
-    const kv2  = Math.min(1, acc2*rnd(0.14*H()));
-    let v2=0;
-    for(let d=0; d<ROWS; d++) if(m2 & (1<<d))
-      keysVoice(t, keysOct+rootNote+knob('ksemi')+SCALES[scaleName][d],
-                kdur2, kv2*Math.pow(0.94,v2++), eng.keys2);
+  /* ── 2번 트랙(keys2) ──
+     progOn 이면 컴핑(화성 반주)으로 전환한다. keys2 는 원래 "1번과 다른
+     단선율"을 도는 트랙이었는데, 실측해 보면 선율 라이브러리 35,072 스텝 중
+     2음 이상 동시 발음(=화음)은 220개, 0.63% 뿐이라 곡에 화음이 사실상
+     한 번도 안 울렸다. 컴핑이 그 자리를 대신하는 편이 훨씬 값어치 있다.
+     progOn 이 꺼져 있거나 harmony.js 가 아직 없으면(chordRoot===null)
+     기존 동작(2번 선율/패턴)을 그대로 쓴다 — 통합 전에도 앱이 그대로 돈다. */
+  if(!mute.keys2 && !sectionOff('keys2') && progOn && chordRoot!=null && compNow
+     && typeof chordSemis==='function'){
+    /* COMP 항목은 fills.js 의 필인처럼 rows 가 여러 개일 수 있다(몬투노처럼
+       마디마다 엇박이 미묘하게 바뀌는 스타일) — barOf() 와 같은 관례로
+       (진행과 같은 anchor 인) loopNo-progAnchor 를 rows.length 로 되풀이한다. */
+    const compRow = compNow.rows[(loopNo - progAnchor) % compNow.rows.length];
+    const c = compRow ? compRow[i] : '-';
+    if(c==='X' || c==='x'){
+      chan.keys2.gain.value=lvl.keys2*sectionLvl('keys2');
+      const semis = chordSemis(chordRoot, scaleName);         // 스케일 토닉 기준 반음 배열
+      const kdur2 = spb()*(c==='X'?0.9:0.45)*(knob('kgate')/100);
+      const kv2   = (c==='X'?0.62:0.42)*rnd(0.12*H());
+      const kbase2= keysOct+rootNote+knob('ksemi');
+      const kt2   = t+jit()+groove('keys2');
+      semis.forEach((s,vi) => keysVoice(kt2, kbase2+s, kdur2, kv2*Math.pow(0.90,vi), eng.keys2));
+    }
+  }else{
+    const m2 = melNowB ? barOf(melNowB)[i] : P.keys2[i];
+    if(m2 && !mute.keys2 && !sectionOff('keys2')){
+      chan.keys2.gain.value=lvl.keys2*sectionLvl('keys2');
+      const kdur2=spb()*0.25*(knob('kgate')/100);
+      const acc2 = i===0 ? 0.92 : (i%4===0 ? 0.72 : 0.52);
+      const kv2  = Math.min(1, acc2*rnd(0.14*H()));
+      let v2=0;
+      const kt2 = t+jit()+groove('keys2');
+      for(let d=0; d<ROWS; d++) if(m2 & (1<<d))
+        keysVoice(kt2, keysOct+rootNote+knob('ksemi')+SCALES[scaleName][d],
+                  kdur2, kv2*Math.pow(0.94,v2++), eng.keys2);
+    }
   }
   const gd2 = riffNowB ? barOf(riffNowB)[i] : P.gtr2[i];
-  if(gd2>=0 && !mute.gtr2){
-    chan.gtr2.gain.value=lvl.gtr2;
-    guitarVoice2(t, gd2, spb()*0.25*(knob('ggate')/100), eng.gtr2);
+  if(gd2>=0 && !mute.gtr2 && !sectionOff('gtr2')){
+    chan.gtr2.gain.value=lvl.gtr2*sectionLvl('gtr2');
+    guitarVoice2(t+jit()+groove('gtr2'), gd2, spb()*0.25*(knob('ggate')/100), eng.gtr2);
   }
   return skipped;
 }
@@ -369,6 +449,44 @@ function onLoopWrap(){
     }
   }
 
+  /* ── 곡 구조(arrange.js) ── 셔플 뒤, 선율 앞. 형식은 선율과 같은 이유:
+     formPoolFor(src.kick) 가 방금 셔플로 바뀐 장르를 보고 골라야 한다. */
+  formTick(src.kick, loopNo);
+  /* 섹션의 마지막 마디면 큰 필인을 강제한다 — 단, 이번 루프에 이미
+     주기적 필인(bigDue/smallDue)이 잡혀 있으면 그쪽을 존중한다(겹치면
+     큰 필인이 이긴다는 원칙은 이미 위에서 처리됐다). */
+  if(fillTier==='' && sectionWantsFill()){
+    const f2 = pickFill('L', fillModeL);
+    if(f2){ fillNow=f2; fillTier='섹션 전환'; }
+  }
+  /* 섹션의 첫 마디면(코러스 진입 등) 채워진 다른 뱅크로 넘어간다.
+     뱅크가 하나뿐이면(대부분의 사용자) shuffleBank() 가 조용히 null 을
+     돌려주고 아무 일도 안 일어난다. */
+  if(sectionWantsBank()){
+    const b=shuffleBank(false);
+    if(b) setStat(`${sectionLabel()} → 뱅크 ${b}`);
+  }
+
+  /* ── 그루브(arrange.js) ── grooveOn 이 꺼져 있으면 grooveNow 는 null 로
+     유지된다 — voicesAt() 의 groove() 가 그때 전부 0 을 돌려준다. */
+  grooveTick(src.kick);
+
+  /* ── 화성 진행(arrange.js + harmony.js) ──
+     선율과 같은 원칙 — 셔플이 src.keys 를 바꾼 **뒤** 뽑아야 장르가 맞는다.
+     선율과 같은 MEL_BARS(16) 격자를 그대로 재사용해, 진행이 선율·필인·
+     셔플과 같은 자리에서 바뀌게 한다. */
+  if(progOn){
+    if(!progNow){
+      progAnchor = loopNo - (loopNo % MEL_BARS);
+      progNow = pickProg(); compNow = pickComp();
+    }else if(loopNo - progAnchor >= MEL_BARS){
+      progAnchor = loopNo;
+      progNow = pickProg(); compNow = pickComp();
+    }
+    chordRoot = (progNow && typeof chordDegAt==='function')
+      ? chordDegAt(progNow, loopNo - progAnchor) : null;
+  }else{ progNow=null; compNow=null; chordRoot=null; }
+
   /* ── 선율도 같은 격자 위에 올린다 ──
      한 루프가 한 마디다. 예전에는 melBar 라는 **자기 카운터**를 따로 세서,
      선율을 켠 시점이 곧 선율 주기의 시작점이었다. 그래서 주기가 같아도
@@ -435,6 +553,10 @@ function restartSong(){
   melNow2=null; melNowB=null; riffNowB=null;
   fillNow=null; fillTier='';
   melLen=MEL_BARS;
+  /* 곡 구조 · 진행 · 그루브도 "구간의 시작"이다 — 새 장르 풀에서 다시 고른다 */
+  formRestart();
+  progNow=null; progAnchor=0; compNow=null; chordRoot=null;
+  grooveNow=null;
 
   if(playing){
     step=0;
@@ -449,6 +571,13 @@ function restartSong(){
     melNowB = pickMelody2(); riffNowB = pickRiff2();
     calcMelLen();
   }
+  /* 같은 이유로 폼·진행·그루브도 즉시 새로 골라 둔다 (loopNo 는 이미 0) */
+  formTick(src.kick, loopNo);
+  if(progOn){
+    progAnchor=0; progNow=pickProg(); compNow=pickComp();
+    chordRoot = (progNow && typeof chordDegAt==='function') ? chordDegAt(progNow,0) : null;
+  }
+  grooveTick(src.kick);
   if(typeof syncVariation==='function') syncVariation();
 }
 

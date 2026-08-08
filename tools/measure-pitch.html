@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<title>PULSE·16 KS 음정 실측 — 자기상관</title>
+<style>body{font-family:monospace;background:#16191d;color:#e6e1d6;padding:20px;font-size:12px}
+pre{white-space:pre-wrap}</style>
+<pre id="out">측정 준비 중…</pre>
+
+<!-- 과제 1(★★★) 전용 하네스 — string.js ksInto() 의 루프 필터 군지연 때문에
+     실제 기본주파수가 설계 주파수보다 낮게 난다는 의심(docs/mutable-차용.md ★5)을
+     영교차 위상 누적으로 검증합니다. ⚠ 앱 코드를 복사하지 않습니다 —
+     ARCHITECTURE.md 「주의」 절대로 <script src> 로 src/ 를 그대로 로드합니다.
+
+     ksInto(out,off,f,S,amp,SR) 는 AudioContext 에 전혀 의존하지 않는 순수 함수라
+     (SR 을 인자로 직접 받습니다) OfflineAudioContext 렌더는커녕 boot() 도 필요
+     없습니다 — 앰프·캐비닛·몸통 필터는 주파수를 안 바꾸므로(필터는 진폭·위상만
+     바꾸지 기음의 주파수 성분 자체를 옮기지 않습니다) "현 코어 그 자체" 를
+     직접 재는 이 방법으로 충분합니다.
+     ⚠ graph.js 는 지금 다른 담당자가 작업 중이라 boot() 이 `modalBank is not
+     defined` 로 깨져 있습니다(실측 중 발견 — 최종 보고서에 남겼습니다).
+     이 하네스는 boot() 을 아예 안 부르므로 그 문제와 무관하게 동작합니다.
+     _app-harness.js 는 로드만 해 두고(관례를 맞추기 위해) offlineBoot() 는
+     쓰지 않습니다. -->
+<script src="../src/core/config.js"></script>
+<script src="../src/core/engines.js"></script>
+<script src="_app-harness.js"></script>
+<script src="../src/audio/string.js"></script>
+
+<script>
+(async () => {
+const outEl = document.getElementById('out');
+const log = m => { outEl.textContent += '\n' + m; };
+outEl.textContent = '';
+
+try{
+const SR = 48000;          // ksInto 는 ctx 를 안 쓰므로 boot()/offlineBoot() 불필요
+
+/* ── 두 번 실패하고 세 번째로 정착한 방법 ──
+   ① 정수 랙 + 포물선 보간 자기상관: 순수 감쇠 사인파에서조차 82Hz 에서
+      3.3cent 편향(감쇠 때문에 창 안 진폭이 안 변한다는 가정이 깨짐).
+   ② 영교차 위상 누적: 사인파에는 완벽(§0, 편향 0.0000)했지만 실제 ksInto
+      출력에 적용하니 수백~수천 cent 로 완전히 깨졌다. 이유 — **ksInto 는
+      순음이 아니다.** KS 루프(지연선+올패스+필터)는 콤 필터라 정확히
+      기본주파수의 정수배 자리에 공진이 서고, 그 배음들이 실제로 강하게
+      실려 나온다(그게 KS 로 현을 합성하는 이유다). 배음이 섞이면 한 주기 안에
+      영교차가 여러 번 생겨 카운팅이 통째로 틀어진다.
+   ③ 창을 f0 로 좁힌 위상차(phase-slope) 법 — 최종 채택.
+      시각이 떨어진 두 지점에서 f0 를 목표로 한 (Hann 창) 복소 상관값의
+      위상을 재고, 그 위상차를 baseline 시간으로 나눠 f0 로부터의 편차를
+      뽑는다. 표준 보컬/튜너 알고리즘(instantaneous frequency)과 같다.
+      창이 f0 에 좁게 맞춰져 있어(해상도 ≈ 1/창길이, 다음 배음(2f0)과는
+      f0 만큼 떨어져 있어 창이 손가락 몇 개 배만 넓어도 배음이 안 섞인다)
+      배음이 몇 개가 실려 있든 f0 성분만 골라 잰다. */
+function goertzelComplex(d, f0, i0, N){
+  let re=0, im=0;
+  const w0 = 2*Math.PI*f0/SR;
+  for(let i=0;i<N;i++){
+    const idx = i0+i;
+    if(idx<0 || idx>=d.length) continue;
+    const win = 0.5-0.5*Math.cos(2*Math.PI*i/(N-1));      // Hann — 사이드로브 억제
+    const ph = w0*idx;
+    re += d[idx]*win*Math.cos(ph);
+    im -= d[idx]*win*Math.sin(ph);
+  }
+  return Math.atan2(im,re);
+}
+/** f0 근방의 실제 주파수를 위상차로 정밀하게 잰다.
+    win 초 길이의 두 창(중심 t1c,t2c)에서 f0 목표 복소상관 위상을 재고,
+    f0 로 이미 반영된 위상 진행을 뺀 나머지(=편차)를 baseline 으로 나눈다.
+    ⚠ baseline·f0 오차가 크면 위상이 ±π 를 넘어 감겨 엉뚱한 값이 나온다
+    (모호성 반경 = 1/(2·baseline) Hz). 그래서 밖에서 좁은 baseline 으로
+    거칠게 잡고 → 그 값을 f0 삼아 넓은 baseline 으로 정밀화하는 2단으로 쓴다. */
+function phaseSlopePitch(d, f0, t1, t2, win){
+  const N = Math.max(8, Math.round(win*SR));
+  const i1 = Math.round(t1*SR), i2 = Math.round(t2*SR);
+  const phi1 = goertzelComplex(d, f0, i1, N);
+  const phi2 = goertzelComplex(d, f0, i2, N);
+  const t1c = (i1 + (N-1)/2)/SR, t2c = (i2 + (N-1)/2)/SR;  // Hann 무게중심 = 창 중앙
+  const dt = t2c - t1c;
+  /* ⚠ 여기서 f0 의 위상 진행을 또 빼면 안 된다 — goertzelComplex 가 이미
+     exp(-j·2π·f0·idx/SR) 로(창 시작이 아니라 **샘플 0 기준 절대 위치**로)
+     상관하므로, f=f0 일 때 phi1=phi2=phi0(상수)가 된다. f0 성분의 위상
+     진행은 상관기 안에서 이미 지워져 있다 — 남는 phi2-phi1 이 곧
+     (f_actual-f0)·2π·dt 다. (처음에 이 항을 한 번 더 빼서 82Hz 에서
+     56cent, 110Hz 에서 66cent 오차가 났었다 — §0 자기검증으로 잡았다) */
+  let dphi = phi2 - phi1;
+  dphi = ((dphi + Math.PI) % (2*Math.PI) + 2*Math.PI) % (2*Math.PI) - Math.PI;  // (-π,π] 로 감기
+  return f0 + dphi/(2*Math.PI*dt);
+}
+/** 거친 baseline → 정밀 baseline 2단. sec 은 버퍼 길이(초). */
+function measureF0(d, fGuess, sec){
+  const t1a = Math.max(0.012, 4/fGuess);
+  const winA = Math.max(0.015, Math.min(0.05, 4/fGuess));
+  let t2a = Math.min(sec-winA-0.005, t1a + Math.max(3*winA, 0.15));
+  if(t2a <= t1a) t2a = Math.min(sec-winA-0.002, t1a+2*winA);
+  if(t2a <= t1a) return NaN;
+  const coarse = phaseSlopePitch(d, fGuess, t1a, t2a, winA);
+  if(!isFinite(coarse) || coarse <= 0) return NaN;
+
+  const winB = Math.max(0.02, Math.min(0.08, 6/coarse));
+  const t1b = t1a;
+  let t2b = Math.min(sec-winB-0.005, t1b + Math.max(6*winB, 0.4*sec));
+  if(t2b - t1b < 2*winB) t2b = Math.min(sec-winB-0.002, t1b+2*winB);
+  if(t2b <= t1b) return coarse;
+  return phaseSlopePitch(d, coarse, t1b, t2b, winB);
+}
+
+/* ── 0. 측정법 자체 검증 — 정확히 아는 주파수를 재서 방법의 오차를 본다.
+   실측이 진실이라는 원칙을 지키려면, 잣대(자기상관) 자체가 믿을 만한지부터
+   확인해야 한다. 순수 사인 + 지수 감쇠(1초 t60)를 만들어 같은 절차로 잰다. */
+log('=== 0. 측정법 자체 검증 ===');
+log('0-A. 순음(사인) + 지수감쇠(t60=1s) — fGuess = 정확한 값');
+log('목표Hz       측정Hz        오차(cent)');
+let selfMaxCt = 0;
+for(const f0 of [82.41,110,164.81,220,329.63,440]){
+  const sec = 0.4;
+  const N = Math.round(SR*sec);
+  const d = new Float32Array(N);
+  const dec = Math.log(1000)/1.0;
+  for(let i=0;i<N;i++) d[i] = Math.exp(-dec*i/SR) * Math.sin(2*Math.PI*f0*i/SR + 0.7);
+  const m = measureF0(d, f0, sec);
+  const ct = 1200*Math.log2(m/f0);
+  selfMaxCt = Math.max(selfMaxCt, Math.abs(ct));
+  log(f0.toFixed(2).padStart(10) + '   ' + m.toFixed(4).padStart(11) + '   ' + ct.toFixed(4).padStart(11));
+}
+log('0-B. ksInto 처럼 배음이 실린 감쇠 복합음(H1~H8, KS 콤 형태 진폭) — fGuess = 정확한 값');
+log('     ksInto 는 순음이 아니므로 이 검증이 실전에 더 가깝다.');
+log('목표Hz       측정Hz        오차(cent)');
+for(const f0 of [82.41,110,329.63]){
+  const sec = 0.4;
+  const N = Math.round(SR*sec);
+  const d = new Float32Array(N);
+  const dec = Math.log(1000)/0.8;
+  for(let i=0;i<N;i++){
+    let s=0;
+    for(let h=1;h<=8;h++) s += Math.sin(2*Math.PI*f0*h*i/SR + h*0.31)/h;   // 1/n 감쇠 배음열
+    d[i] = Math.exp(-dec*i/SR) * s;
+  }
+  const m = measureF0(d, f0, sec);
+  const ct = 1200*Math.log2(m/f0);
+  selfMaxCt = Math.max(selfMaxCt, Math.abs(ct));
+  log(f0.toFixed(2).padStart(10) + '   ' + m.toFixed(4).padStart(11) + '   ' + ct.toFixed(4).padStart(11));
+}
+log('0-C. 초기 추정(fGuess)이 30cent 어긋나도 2단(거친→정밀)이 수렴하는가');
+{
+  const f0=110, sec=0.4, N=Math.round(SR*sec), d=new Float32Array(N);
+  const dec=Math.log(1000)/1.0;
+  for(let i=0;i<N;i++) d[i]=Math.exp(-dec*i/SR)*Math.sin(2*Math.PI*f0*i/SR+0.7);
+  const fGuess = f0*Math.pow(2,30/1200);
+  const m = measureF0(d, fGuess, sec);
+  const ct = 1200*Math.log2(m/f0);
+  selfMaxCt = Math.max(selfMaxCt, Math.abs(ct));
+  log('  fGuess=' + fGuess.toFixed(2) + 'Hz(+30ct 오프) → 측정 ' + m.toFixed(4) + 'Hz, 실제 110Hz 대비 오차 ' + ct.toFixed(4) + 'cent');
+}
+log('\n측정법 자체 최대오차: ' + selfMaxCt.toFixed(4) + ' cent'
+   + (selfMaxCt < 0.1 ? '  → 목표(<2cent)보다 20배 이상 정밀. 실측 신뢰 가능.' : '  ⚠ 방법 자체 오차가 큽니다 — 결과를 곧이곧대로 믿지 마세요.'));
+
+/* ── 본 측정 — ksInto() 를 직접 호출해 현 코어 그 자체의 음정을 잰다 ── */
+const NOTES = [['E2',82.41], ['A2',110.00], ['E4',329.63]];
+
+function measureEngine(S){
+  const rows = [];
+  for(const [nm,f] of NOTES){
+    const T60 = S.t60*Math.pow(82.41/f, S.t60k);
+    const sec = Math.min(T60*1.1+0.15, 6.0);
+    const N = Math.ceil(SR*sec);
+    const out = new Float32Array(N);
+    ksInto(out, 0, f, S, 1, SR);
+    const measured = measureF0(out, f, sec);
+    const cent = 1200*Math.log2(measured/f);
+    /* DC 근사 이론 군지연 (docs/mutable-차용.md ★5) — 검증용으로 함께 낸다 */
+    const a = 1-Math.exp(-2*Math.PI*S.lpF/SR);
+    const b = 1-Math.pow(10, S.shDb/20);
+    const gdCalc = b*(1-a)/a;
+    const gdMeas = SR/measured - SR/f;
+    rows.push({nm, f, measured, cent, gdCalc, gdMeas});
+  }
+  return rows;
+}
+
+log('\n=== 1. 기타 엔진 — ksInto() 직접 호출 (앰프·캐비닛 배제, 순수 KS 코어) ===');
+log('엔진         E2(82Hz)ct   A2(110Hz)ct   E4(330Hz)ct  │ gd계산(smp,DC근사) gd실측@E2(smp)');
+log('─'.repeat(100));
+const results = {gtr:{}, bass:{}};
+for(const [e,S] of Object.entries(GTR)){
+  if(S.bowed){ log(('gtr/'+e).padEnd(12) + '  (활로 켜는 악기 — ksInto 대상 아님, 해당 없음)'); continue; }
+  const rows = measureEngine(S);
+  results.gtr[e] = rows;
+  log(('gtr/'+e).padEnd(12)
+    + rows.map(r => r.cent.toFixed(2).padStart(13)).join('')
+    + ' │ ' + rows[0].gdCalc.toFixed(3).padStart(17)
+    + '   ' + rows[0].gdMeas.toFixed(3).padStart(12));
+}
+
+log('\n=== 2. 현 베이스 엔진 ===');
+log('엔진         E2(82Hz)ct   A2(110Hz)ct   E4(330Hz)ct  │ gd계산(smp,DC근사) gd실측@E2(smp)');
+log('─'.repeat(100));
+for(const [e,S] of Object.entries(BSTR)){
+  const rows = measureEngine(S);
+  results.bass[e] = rows;
+  log(('bass/'+e).padEnd(12)
+    + rows.map(r => r.cent.toFixed(2).padStart(13)).join('')
+    + ' │ ' + rows[0].gdCalc.toFixed(3).padStart(17)
+    + '   ' + rows[0].gdMeas.toFixed(3).padStart(12));
+}
+
+/* ── 요약 통계 ── */
+let maxAbs = 0; const over2 = [];
+for(const grp of [results.gtr, results.bass])
+  for(const [e,rows] of Object.entries(grp))
+    for(const r of rows){
+      if(Math.abs(r.cent) > maxAbs) maxAbs = Math.abs(r.cent);
+      if(Math.abs(r.cent) >= 2) over2.push(e+'/'+r.nm+' '+r.cent.toFixed(2)+'ct');
+    }
+log('\n최대 |오차|: ' + maxAbs.toFixed(2) + ' cent');
+log('|오차| ≥ 2cent 인 항목(' + over2.length + '개): ' + (over2.join(', ') || '없음'));
+
+/* ── gd 실측/계산 비율 — DC 근사 보정식이 실제로 맞는지 검증 ── */
+log('\n=== 3. gd 실측/계산(DC근사) 비율 (E2,A2,E4) — 1.0 이면 DC 근사식을 그대로 써도 된다 ===');
+for(const [grpName,grp] of [['gtr',results.gtr],['bass',results.bass]])
+  for(const [e,rows] of Object.entries(grp)){
+    const ratios = rows.map(r => Math.abs(r.gdCalc) > 1e-6 ? r.gdMeas/r.gdCalc : NaN);
+    const finite = ratios.filter(isFinite);
+    if(!finite.length) continue;
+    const avg = finite.reduce((a,b)=>a+b,0)/finite.length;
+    log((grpName+'/'+e).padEnd(13) + ' 비율(E2,A2,E4)= '
+      + ratios.map(x => isFinite(x)?x.toFixed(3):'  ─').join(', ')
+      + '   평균=' + avg.toFixed(3));
+  }
+
+/* ── DC 근사가 완전히 빗나갔다 — E2 에서 부호까지 반대(+25cent, 날카로워짐).
+   원인 후보: ★5 문서는 lp+shelf 만 계산했고 **DC 차단 1극 하이패스(r=0.999)**
+   는 계산하지 않았다. 이 필터의 컷오프는 SR·(1-r)/(2π) ≈ 7.6Hz 로 아주
+   낮아 보이지만, 1극 필터는 컷오프에서 아주 멀리까지도 위상이 안 죽는다
+   (감쇠는 -6dB/oct 로 빠르지만 위상은 완만하다). 82Hz 는 컷오프의 10배가
+   넘는데도 위상이 무시 못 할 크기(도 단위 몇~십몇 도)로 남아 있을 수 있다.
+   DC 근사(ω→0)가 아니라 **실제 신호 주파수 ω=2πf/SR 에서 정확히** 위상을
+   계산해 검증한다 — lp+shelf 는 F(z), DC 차단은 H_dc(z) 두 개를 각각
+   해석적으로 유도해 더한다(둘 다 1차 필터라 닫힌 식이 나온다). */
+function analyticFilterDelay(f, S, SR){
+  const w = 2*Math.PI*f/SR;
+  const a = 1-Math.exp(-2*Math.PI*S.lpF/SR);
+  const b = 1-Math.pow(10, S.shDb/20);
+  /* lp+shelf 직렬을 하나의 1차 유리함수로: v = g·[(1-b)·y + b·lp(y)],
+     lp(z) = a/(1-(1-a)z^-1) 이므로
+     F(z) = (1-b) + b·a/(1-(1-a)z^-1)
+          = [c0 - c1·z^-1] / [1-(1-a)z^-1],  c0=1-b(1-a), c1=(1-b)(1-a) */
+  const c0 = 1-b*(1-a), c1 = (1-b)*(1-a);
+  const phF = Math.atan2(c1*Math.sin(w), c0-c1*Math.cos(w))
+            - Math.atan2((1-a)*Math.sin(w), 1-(1-a)*Math.cos(w));
+  /* DC 차단 v=x-x[-1]+r·v[-1] → H(z)=(1-z^-1)/(1-r·z^-1), r=0.999(코드 상수) */
+  const r = 0.999;
+  const phDC = (Math.PI/2 - w/2) - Math.atan2(r*Math.sin(w), 1-r*Math.cos(w));
+  const totalPhase = phF + phDC;
+  return -totalPhase/w;     // 샘플 단위 위상지연(음수 = 위상 리드 = 주기가 짧아짐)
+}
+log('\n=== 4. 해석적 위상지연(실제 ω 에서, DC 근사 아님) vs 실측 gd — E2,A2,E4 ===');
+log('lp+shelf 뿐 아니라 DC차단(r=0.999) 위상까지 더한 값. 1.0 근처면 이걸로 보정한다.');
+for(const [grpName,grp] of [['gtr',GTR],['bass',BSTR]])
+  for(const [e,S] of Object.entries(grp)){
+    if(S.bowed) continue;
+    const rows = (results.gtr[e]||results.bass[e]);
+    if(!rows) continue;
+    const an = NOTES.map(([nm,f]) => analyticFilterDelay(f,S,SR));
+    const ratios = rows.map((r,i) => Math.abs(an[i])>1e-9 ? r.gdMeas/an[i] : NaN);
+    log((grpName+'/'+e).padEnd(13)
+      + ' 해석gd(E2,A2,E4)= ' + an.map(x=>x.toFixed(3)).join(', ')
+      + '  실측gd= ' + rows.map(r=>r.gdMeas.toFixed(3)).join(', ')
+      + '  비율= ' + ratios.map(x=>isFinite(x)?x.toFixed(3):'  ─').join(', '));
+  }
+
+/* ── mute 진단 — 남은 오차가 "보정식이 틀렸다" 인지 "t60 이 너무 짧아
+   측정이 불리하다"(수렴 전에 신호가 죽어 비고유모드 성분이 안 빠짐)인지
+   가른다. 같은 lpF·shDb·beta 로 t60 만 인위적으로 늘려 오래 울리게 하면,
+   측정법의 SNR/수렴 문제는 사라지고 "보정식 자체가 이 필터에 맞는가"
+   만 남는다. */
+log('\n=== 5. mute 진단 — t60 을 인위로 늘려 측정법의 수렴 문제를 배제 ===');
+log('실제 소리는 안 바꾼다(측정 전용 사본). lpF·shDb·beta 는 그대로, t60 만 키운다.');
+for(const f of [82.41, 110.00]){
+  for(const t60fake of [GTR.mute.t60, 1.0, 3.0]){
+    const S = Object.assign({}, GTR.mute, {t60:t60fake, t60k:0});
+    const T60 = t60fake;
+    const sec = Math.min(T60*1.1+0.15, 6.0);
+    const N = Math.ceil(SR*sec);
+    const out = new Float32Array(N);
+    ksInto(out, 0, f, S, 1, SR);
+    const measured = measureF0(out, f, sec);
+    const cent = 1200*Math.log2(measured/f);
+    log('  f=' + f.toFixed(2) + 'Hz  t60(가짜)=' + t60fake.toFixed(2) + 's  → 오차 ' + cent.toFixed(2) + 'cent');
+  }
+}
+log('t60 을 늘렸는데도 오차가 안 줄면 보정식이 이 필터엔 안 맞는 것이고,');
+log('t60 을 늘리자 오차가 2cent 안으로 들어오면 실제 mute(t60=0.16s)는');
+log('측정법이 불리했을 뿐 — 다만 그 경우 "실제로 짧게 울리는 소리 자체의');
+log('음정 불확실성"이라 보정으로 없앨 수 없는 물리적 한계로 봐야 한다.');
+
+/* ── 과제 2 — 분산(dispersion) 올패스: bass/upright ──
+   disp 를 켠 채 ① 기음이 여전히 <2cent 안에 있는가(stretch_correction 검증)
+   ② 비조화도 B 가 실물 업라이트 베이스 기준(1e-4~5e-4) 안에 드는가 를 잰다.
+   hInharmonicity 는 _app-harness.js 가 제공하는 표준 절차(struck.js 비조화도
+   검증에 이미 쓰인 것과 같은 함수)를 그대로 쓴다 — 새로 안 짠다. */
+log('\n=== 6. 과제2 — bass/upright 분산(disp=' + BSTR.upright.disp + ') 검증 ===');
+log('① 기음 정확도 — disp 를 켠 채로도 과제1 목표(<2cent)를 지키는가');
+log('음역        목표Hz    측정Hz      오차(cent)');
+for(const [nm,f] of [['E1',41.20],['A1',55.00],['E2',82.41],['A2',110.00]]){
+  const S = BSTR.upright;
+  const T60 = S.t60*Math.pow(82.41/f, S.t60k);
+  const sec = Math.min(T60*1.1+0.15, 6.0);
+  const out = new Float32Array(Math.ceil(SR*sec));
+  ksInto(out, 0, f, S, 1, SR);
+  const measured = measureF0(out, f, sec);
+  const cent = 1200*Math.log2(measured/f);
+  log('  ' + nm.padEnd(8) + f.toFixed(2).padStart(8) + '  ' + measured.toFixed(3).padStart(10) + '  ' + cent.toFixed(3).padStart(10));
+}
+log('\n② 실측 대조 — disp=0(끔) 일 때도 기음이 그대로 정확한지(회귀 확인)');
+{
+  const S0 = Object.assign({}, BSTR.upright, {disp:0});
+  const f=82.41, T60=S0.t60, sec=Math.min(T60*1.1+0.15,6.0);
+  const out=new Float32Array(Math.ceil(SR*sec));
+  ksInto(out,0,f,S0,1,SR);
+  const m=measureF0(out,f,sec);
+  log('  disp=0  E2  측정 ' + m.toFixed(3) + 'Hz  오차 ' + (1200*Math.log2(m/f)).toFixed(3) + 'cent (과제1 결과와 같아야 정상)');
+}
+log('\n③ 비조화도 B 실측 — f_n = n·f0·√(1+B·n²) 역산 (hInharmonicity, struck.js 검증과 같은 절차)');
+log('실물 기준: 업라이트 베이스 대략 1e-4 ~ 5e-4');
+log('음역      B(실측)      H4어긋남  H8어긋남  쓴배음');
+for(const [nm,f] of [['E1',41.20],['A1',55.00],['E2',82.41]]){
+  const S = BSTR.upright;
+  const T60 = S.t60*Math.pow(82.41/f, S.t60k);
+  const sec = Math.min(T60*1.1+0.15, 6.0);
+  const out = new Float32Array(Math.ceil(SR*sec));
+  ksInto(out, 0, f, S, 1, SR);
+  const aStart=0.03, aEnd=Math.min(sec-0.05, aStart+0.45);
+  const inh = hInharmonicity(out, f, 12, aStart, aEnd, 150);
+  const at = n => { const p=inh.parts.find(x=>x.n===n); return p?p.cents.toFixed(1)+'ct':'  ─'; };
+  log('  ' + nm.padEnd(8) + (inh.B==null?'   ─':inh.B.toExponential(2)).padStart(11)
+    + at(4).padStart(10) + at(8).padStart(10) + String(inh.used).padStart(8));
+}
+log('(disp=0 일 때는 B 가 0 에 가까워야 한다 — 대조용)');
+{
+  const S0 = Object.assign({}, BSTR.upright, {disp:0});
+  const f=82.41, T60=S0.t60, sec=Math.min(T60*1.1+0.15,6.0);
+  const out=new Float32Array(Math.ceil(SR*sec));
+  ksInto(out,0,f,S0,1,SR);
+  const inh = hInharmonicity(out, f, 12, 0.03, Math.min(sec-0.05,0.48), 150);
+  log('  disp=0  E2  B(실측)=' + (inh.B==null?'─':inh.B.toExponential(2)));
+}
+
+log('\n측정 완료');
+window.__done = true;
+window.__RESULTS = results;
+}catch(err){
+  log('\n!! 측정 실패: ' + (err && err.stack ? err.stack : err));
+  window.__done = 'error';
+}
+})();
+</script>

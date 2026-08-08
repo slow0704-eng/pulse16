@@ -17,7 +17,7 @@ body{background:radial-gradient(120% 90% at 50% -10%,#3a414c 0%,#23272e 55%,#161
 .mk{font-family:'Space Mono',monospace;font-size:11px;color:var(--t-kick);letter-spacing:.1em;padding-bottom:5px}
 .tagline{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;
   text-transform:uppercase;color:var(--silk-dim);padding-bottom:4px}
-.stat{margin-left:auto;font-family:'Space Mono',monospace;font-size:10px;color:#5e646d;
+.stat{margin-left:auto;font-family:'Space Mono',monospace;font-size:10px;color:var(--silk-dim);
   padding-bottom:6px;text-align:right;line-height:1.5}
 .stat b{color:var(--t-bass);font-weight:400}
 .warn{display:none;padding:12px 20px;background:#3a2a2a;border-bottom:1px solid var(--edge);

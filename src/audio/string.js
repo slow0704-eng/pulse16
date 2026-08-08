@@ -25,15 +25,89 @@
 
 /** out[off..] 에 현 하나를 가산 합성 */
 function ksInto(out,off,f,S,amp,SR){
-  const P=SR/f;
+  /* ── 루프 필터 군지연 보정 ──
+     지연선 길이만으로 P=SR/f 를 잡으면 음이 처진다 — 루프 안의 1극 저역통과
+     (lp)·셸프(shelf)·DC 차단(dY, 아래 루프의 0.999 재귀)에도 위상지연이
+     있고, 그만큼 루프 한 바퀴가 길어(또는 짧아)지기 때문이다.
+
+     처음엔 docs/mutable-차용.md ★5 의 DC 근사(gd=b(1-a)/a, ω→0 극한)를
+     그대로 넣어 봤는데, tools/measure-pitch.html 로 실측하니 **부호부터
+     틀렸다** — E2 에서 처지기는커녕 +25 cent 나 날카로워졌고 크기도
+     DC 근사보다 300배 컸다(예: gtr/clean E2 계산 0.026 샘플, 실측 8.3 샘플).
+     원인은 ★5 가 셸프만 계산하고 **DC 차단 필터를 안 넣은 것**이었다 —
+     컷오프가 SR·(1-0.999)/2π ≈ 7.6Hz 로 낮아 무해해 보이지만, 1극 필터는
+     컷오프에서 한참 떨어져도 위상이 안 죽어서 82Hz 에서도 위상이
+     몇 도~십몇 도 남는다. DC 근사(ω→0) 대신 **실제 신호 주파수
+     ω=2πf/SR 에서** lp+셸프와 DC 차단 둘 다의 정확한 위상을 각각의
+     1차 유리함수에서 해석적으로 구해 더했더니, 실측 gd 와 비율
+     0.97~0.99 로 맞았다(18/20 엔진·음역 조합, tools/측정결과-신규음색.md
+     §「과제1」참고). MI 의 svf_shift(2극 SVF 용)는 우리 필터(1극+셸프)에
+     안 맞아 그대로 안 썼다 — 아래는 우리 필터 구조에서 직접 유도한 것. */
+  const a  =1-Math.exp(-2*Math.PI*S.lpF/SR);
+  const b  =1-Math.pow(10,S.shDb/20);
+  const DC_R=0.999;                       // 아래 dY 재귀(DC 차단)와 반드시 같은 값
+
+  const w=2*Math.PI*f/SR;
+  /* lp+셸프 직렬을 하나의 1차 유리함수로: v=g·[(1-b)·y + b·lp(y)],
+     lp(z)=a/(1-(1-a)z^-1) ⇒ F(z)=[c0-c1·z^-1]/[1-(1-a)z^-1],
+     c0=1-b(1-a), c1=(1-b)(1-a) — g(실수 이득)는 위상에 안 나온다 */
+  const c0=1-b*(1-a), c1=(1-b)*(1-a);
+  const phF = Math.atan2(c1*Math.sin(w), c0-c1*Math.cos(w))
+            - Math.atan2((1-a)*Math.sin(w), 1-(1-a)*Math.cos(w));
+  /* DC 차단 v=x-x[-1]+r·v[-1] ⇒ H(z)=(1-z^-1)/(1-r·z^-1) */
+  const phDC = (Math.PI/2 - w/2) - Math.atan2(DC_R*Math.sin(w), 1-DC_R*Math.cos(w));
+  const gd = -(phF+phDC)/w;               // 샘플 단위 위상지연(음수=리드=주기가 짧아짐)
+
+  let P=SR/f - gd;
+
+  /* ── 분산(dispersion) 올패스 — 강성 때문에 배음이 정수배보다 높아진다 ──
+     docs/mutable-차용.md ★6(rings/dsp/string.cc). S.disp 가 0(기본, 미설정
+     포함)이면 아래는 전부 건너뛰어 기존 엔진 소리는 한 샘플도 안 바뀐다.
+
+     처음엔 Plaits 의 경험적 stretch_correction 보정항을 그대로 옮겼는데
+     (plaits/.../string.cc:126-127,158), bass/upright 저음(E1~A2)에서
+     tools/measure-pitch.html §6 실측이 27~48cent 로 완전히 깨졌다 — 그
+     보정항은 MI 가 자기네 음역·구조에서 경험적으로 맞춘 상수라 우리
+     구조(별도 지연선 + 별도 셸프/DC차단)와 우리 음역(아주 굵고 낮은 업라이트
+     저음)엔 안 맞았다(★5 의 svf_shift 와 같은 교훈).
+
+     대신 과제1 과 **같은 방법**을 한 번 더 썼다 — 분산 올패스도
+     Schroeder 형(z^-D 임베디드 지연 + 계수 g)이라 정확한 유리함수이고,
+     실제 ω=2πf/SR 에서 위상을 닫힌 식으로 구할 수 있다. lp+셸프·DC차단의
+     위상(gd, 위에서 이미 구함)에 이 위상까지 더해 총 지연이 정확히
+     SR/f 가 되도록 P_main 을 역산한다 — 경험식이 아니라 우리 필터
+     그대로의 해석해라서 음역에 안 흔들린다(실측으로 확인, §6). */
+  let dispLine=null, dispWp=0, dispLen=0, dispGain=0;
+  if(S.disp){
+    const sp = S.disp*(2-S.disp)*0.475;                   // stretch_point, 0~0.475 (rings 식)
+    dispGain = -0.618*S.disp/(0.15+Math.abs(S.disp));      // ap_gain, 0~-0.535 (rings 식)
+    const apDelay = Math.round(P*sp);
+    if(apDelay>=4){
+      /* Schroeder 올패스 H(z)=(z^-D-g)/(1-g·z^-D) 의 ω 에서의 정확한 위상.
+         w·D 가 2π 를 넘나들 수 있으므로(D 가 수백 샘플) DC 근사가 아니라
+         cos(wD)·sin(wD) 로 직접 계산 — 과제1 의 F(z)·DC차단과 같은 방식. */
+      const wD = w*apDelay, cwD=Math.cos(wD), swD=Math.sin(wD);
+      const phDisp = Math.atan2(-swD, cwD-dispGain)
+                   - Math.atan2(dispGain*swD, 1-dispGain*cwD);
+      const delayDisp = -phDisp/w;
+      const pMain = P - delayDisp;
+      if(pMain>=4){
+        P = pMain;
+        /* line(메인 지연선)과 같은 관례: 길이 D 원형버퍼를 같은 슬롯에서
+           읽고 쓰면 정확히 D 샘플 지연이다. +1 을 하면 D+1 이 되어 버려
+           위상식(D 를 그대로 쓴 것)과 실제 구현이 어긋난다 —
+           처음에 +1 로 짜서 A2 에서 -2.58cent 잔차가 났었다(실측으로 발견). */
+        dispLen = apDelay; dispLine = new Float32Array(dispLen);
+      } else dispGain = 0;
+    } else dispGain = 0;                                    // 너무 낮은 음이면 우회(MI 와 같은 조건)
+  }
+
   const Di=Math.max(3,Math.floor(P)-1);
   const fr=P-Di;                          // 1.0~2.0 — 올패스 과도응답 회피
   const ap=(1-fr)/(1+fr);                 // 1차 올패스 보간: |H|=1 이라 여분 감쇠 없음
 
   const T60=S.t60*Math.pow(82.41/f,S.t60k);
   const g  =Math.min(Math.pow(10,-3/(f*T60)),0.9975);
-  const a  =1-Math.exp(-2*Math.PI*S.lpF/SR);
-  const b  =1-Math.pow(10,S.shDb/20);
 
   /* 여기 — 뜯은 직후 현의 상태를 그대로 넣는다.
      예전에는 exF 를 중심으로 대역제한한 2.8ms 노이즈 버스트였다.
@@ -73,14 +147,21 @@ function ksInto(out,off,f,S,amp,SR){
   const M=Math.min(out.length-off, Math.ceil(SR*(T60*1.05+0.1)));
   for(let n=0;n<M;n++){
     const v0=line[wp];
-    const y=ap*v0+aX-ap*aY; aX=v0; aY=y;
+    let y=ap*v0+aX-ap*aY; aX=v0; aY=y;
+    if(dispLine){                          // 분산 올패스 — Schroeder 형(stmlib Allpass)
+      const rd=dispLine[dispWp];
+      const wr=y+dispGain*rd;
+      dispLine[dispWp]=wr;
+      y=-wr*dispGain+rd;
+      dispWp=(dispWp+1)%dispLen;
+    }
     lp+=(y-lp)*a;
     let v=g*(y-b*(y-lp));                 // max|H| = g < 1 → 무조건 안정
     if(thr){
       if(v> thr) v= thr+(v-thr)*0.30;
       else if(v<-thr) v=-thr+(v+thr)*0.30;
     }
-    dY=v-dX+0.999*dY; dX=v; v=dY;         // DC 차단
+    dY=v-dX+DC_R*dY; dX=v; v=dY;          // DC 차단 — 위 gd 계산의 DC_R 과 같은 값이어야 한다
     line[wp]=v; wp=(wp+1)%Di;
     out[off+n]+=y;
   }

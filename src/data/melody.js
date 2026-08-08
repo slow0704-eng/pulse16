@@ -108,6 +108,25 @@ const PHRASE = {
   /* 앤섬 — 스타디움. 긴 음으로 오르고 정점에서 되받음 */
   antA  :['a-------c-------','b-------d-------','a-------c-------','b---a-----------'],
   antB  :['c-------e-------','d-------f-------','e-------d-------','c---b---a-------'],
+
+  /* ── 아래 두 쌍은 3화음 보강분 ──
+     gosA·gosB 가 42개 중 유일한 3화음 표기였다(patterns/00-harmony.md TRIAD
+     주석·melody/01-harmony.md §2 근거). keys2 컴핑이 harmony.js 로 따로
+     생겼으니 선율까지 전부 화음으로 바꾸지는 않는다 — 몇 개만 코드
+     멜로디로 남겨 둔다. 리듬 자리(대시 위치)는 기존 단음 프레이즈의
+     자리를 그대로 빌리고 문자만 도수(0~7)로 바꿨다 — 자리를 새로
+     설계하지 않아도 길이 실수가 안 난다. */
+
+  /* 성가 — gosA(0-2-1) 와 다른 화성 어휘(0-3-1). 온음계 상행 뒤 서브도미넌트 경유 */
+  hymA  :['0-------3---1---','1-------4---2---','0-------3---1---','1---0-----------'],
+  hymB  :['2-------5---3---','3-------6---4---','2-------5---3---','1---0-----------'],
+
+  /* 파워코드 성 — hipA 자리를 빌린 3화음. 록·힙합 훅에 파워코드 스타브를 얹을 때.
+     hipA 원본은 끝음이 도수1(불안정)이지만 — 힙합은 훅이 계속 도는 것이 맞아
+     의도적이다(melody/02-melody-theory.md §10). 여기는 "코드멜로디" 예시라
+     끝은 안정 도수(0)로 맺는다. */
+  pwrA  :['0-------2---0---','0-------2---1---','0-------2---0---','2-----0---------'],
+  pwrB  :['2-------4---2---','2-------4---3---','2-------4---2---','4-----0---------'],
 };
 
 /* ── 송폼 ──
@@ -167,6 +186,11 @@ const MEL_SRC = [
   ['disA','disB',    {AABB:'디스코 옥타브', ABAB:'디스코 교대',  AAAB:'디스코 반복'}],
   ['trpA','trpB',    {AAAB:'트랩 성긴',     AABA:'트랩 회귀',    ABAB:'트랩 교대'}],
   ['antA','antB',    {AABA:'앤섬 스타디움', AABB:'앤섬 절-후렴', ABAB:'앤섬 교대'}],
+  /* 3화음 보강분 — gosA·gosB 하나뿐이던 코드멜로디 어휘를 둘 더 늘렸다.
+     선율 전체를 화음화하지 않는다는 원칙(§ PHRASE 주석)은 지킨다 —
+     42개 프레이즈 중 이제 3쌍(6개)만 3화음이다. */
+  ['hymA','hymB',    {AABB:'성가 코드멜로디', AABA:'성가 화답'}],
+  ['pwrA','pwrB',    {AAAB:'파워코드 코드멜로디', ABAB:'파워코드 교대'}],
 ];
 
 /* 이름은 프레이즈쌍 + 폼으로 자동 생성 — 손으로 21개를 적던 것을 없앱니다 */
@@ -300,10 +324,10 @@ function melodyLenPool(pool, pref){
 /* ── 하위분기 → 어울리는 선율 ──
    이름은 `프레이즈쌍_폼` 입니다 (예: pop_aabb). */
 const MELODY_KIT_CAT = {
-  A:['rock_aaba','rock_aabb','ant_aaba','blues_aaba'],
+  A:['rock_aaba','rock_aabb','ant_aaba','blues_aaba','pwr_aaab'],
   B:['pop_aabb','pop_abab','bal_aaba','ant_aabb','cin_aabb'],
   C:['hip_aaab','hip_aaba','trp_aaab','trp_aaba'],
-  D:['funk_aabb','funk_abab','dis_aabb','gos_aabb'],
+  D:['funk_aabb','funk_abab','dis_aabb','gos_aabb','hym_aabb'],
   E:['edm_aaab','edm_aabb','chip_aaab','dis_abab','amb_aaba'],
   F:['jazz_abab','jazz_aaba','bos_aabb','bal_aabb'],
   G:['root_aaba','root_aabb','blues_aaba','blues_aabb'],
@@ -316,7 +340,7 @@ const MELODY_KIT_CAT = {
 const MELODY_KIT = {
   'Metal'                  :[],            // 메탈은 건반을 안 씁니다
   'Punk'                   :[],
-  'Hard Rock'              :['rock_aaba','ant_aaba','blues_aaba'],
+  'Hard Rock'              :['rock_aaba','ant_aaba','blues_aaba','pwr_aaab'],
   'Alternative'            :['rock_aabb','amb_aaba','bal_aaba'],
   'Post-punk 계보'         :['rock_abab','amb_aabb','ant_abab'],
   'Bebop 계보'             :['jazz_abab','jazz_aaba','bal_aabb'],
@@ -325,7 +349,7 @@ const MELODY_KIT = {
   '현대 갈래'              :['jazz_aaba','bos_aaba','bal_aaba'],
   'Funk'                   :['funk_aabb','funk_abab','dis_aabb'],
   'Disco'                  :['dis_aabb','funk_abab','gos_aabb'],
-  'Soul'                   :['gos_aabb','funk_aabb','bal_aaba'],
+  'Soul'                   :['gos_aabb','funk_aabb','bal_aaba','hym_aabb'],
   'Contemporary R&B'       :['bal_aaba','funk_abab','trp_aaba'],
   'House 계열'             :['edm_aaab','dis_abab','chip_aaab'],
   'Techno 계열'            :['edm_aaab','amb_aaab','chip_abab'],
@@ -343,7 +367,7 @@ const MELODY_KIT = {
   'Blues'                  :['blues_aaba','blues_aabb','root_aaba'],
   'Country'                :['root_aabb','root_aaba','blues_aaba'],
   'Folk'                   :['root_aabb','bal_aaba','blues_aaba'],
-  'Gospel · 지역 장르'     :['gos_aabb','gos_aaba','bal_aabb'],
+  'Gospel · 지역 장르'     :['gos_aabb','gos_aaba','hym_aabb'],
   'Reggae 갈래'            :['car_aaba','car_aabb'],
   '자메이카'               :['car_aaba','car_aabb','lat_abab'],
   '쿠바'                   :['lat_aabb','lat_abab','bos_aaba'],
@@ -420,6 +444,25 @@ const RIFF_PHRASE = {
   /* 라틴 — 몬투노. 짧은 모티프 + 4마디째 하행 종지 */
   latA  :['--0-1---1-2-----','--1-2---2-3-----','--2-3---3-2-----','2-1-0-----------'],
   latB  :['--2-3---3-4-----','--3-4---4-5-----','--4-5---5-4-----','3-2-0-----------'],
+
+  /* ── 아래 세 쌍은 보강분(melody/01-harmony.md 정리 후 추가) ──
+     RIFF 12종은 MELODY 92종에 비해 심하게 적었다(00-analysis.md 근거로
+     지적된 문제). 새 장르를 무작정 늘리기보다, RIFF_KIT_CAT 에 이미
+     계열은 있는데 **그 계열다운 리프가 없어 대체 항목으로 때웠던 자리**
+     (F=재즈가 펑크로, J=아프리카가 펑크로 대체됨)를 먼저 채운다. */
+
+  /* 소울 — 클린 톤 커팅. funkA 보다 정박에 더 붙는다(싱커페이션이 덜함) */
+  soulA :['0---0---0---0---','0---0---1---1---','2---2---1---1---','1---0-----------'],
+  soulB :['2---2---2---2---','2---2---3---3---','4---4---3---3---','2---0-----------'],
+
+  /* 하이라이프 — 서아프리카 핑거스타일. 3스텝 모티프가 16과 안 맞아떨어져
+     자연히 어긋난다(멜로디 J 계열과 같은 설계, 00-analysis.md §2 J) */
+  afrA  :['0--2--1--0--1---','0--2--1--0--1---','0--2--1--0--2---','1--0------------'],
+  afrB  :['2--4--3--2--3---','2--4--3--2--3---','2--4--3--2--4---','3--2------------'],
+
+  /* 재즈 컴핑 기타 — 찰스턴형 불규칙 스탭(patterns/00-harmony.md jazz_comp 리듬을 옮김) */
+  jazzA :['--0----0--1---1-','--0----0--1---2-','--0----0--1---1-','--1-0-----------'],
+  jazzB :['--2----2--3---3-','--2----2--3---4-','--2----2--3---3-','--3-2-----------'],
 };
 
 function buildRiff(a,b,form){
@@ -445,6 +488,29 @@ const RIFF = {
   arp_country  :{label:'컨트리 아르페지오',bars:buildRiff('arpA','arpB','AABB')},
   edm_arp      :{label:'EDM 아르페지오',bars:buildRiff('edmA','edmB','AAAB')},
   latin_montuno:{label:'라틴 몬투노',  bars:buildRiff('latA','latB','AABB')},
+
+  /* ── 보강분 — 기존 6쌍에 폼을 더 걸어서(MELODY 가 MEL_SRC 로 하는 것과 같은 방식)
+     늘렸다. 새 재료를 새로 쓴 것이 아니라 같은 4마디 재료를 다른 폼으로 다시
+     이었을 뿐이지만, AABA·AABB·ABAB 는 재현 지점이 달라 실제로 다른 16마디가
+     된다(melody.js 파일 머리의 MEL_SRC 설계 참고). */
+  rock_alt        :{label:'록 교대',        bars:buildRiff('rockA','rockB','ABAB')},
+  metal_riff      :{label:'메탈 리프',      bars:buildRiff('metalA','metalB','AABA')},
+  funk_groove     :{label:'펑크 반복',      bars:buildRiff('funkA','funkB','AAAB')},
+  skank_offbeat   :{label:'스킹크 교대',    bars:buildRiff('skankA','skankB','ABAB')},
+  arp_swing       :{label:'아르페지오 교대',bars:buildRiff('arpA','arpB','ABAB')},
+  edm_build       :{label:'EDM 빌드',       bars:buildRiff('edmA','edmB','AABB')},
+  edm_alt         :{label:'EDM 교대',       bars:buildRiff('edmA','edmB','ABAB')},
+  latin_montuno_alt :{label:'몬투노 교대',  bars:buildRiff('latA','latB','ABAB')},
+  latin_montuno_loop:{label:'몬투노 반복',  bars:buildRiff('latA','latB','AAAB')},
+
+  /* ── 새 재료 — 재즈·소울·아프리카는 계열이 있는데도 리프가 없어
+     RIFF_KIT_CAT 이 펑크로 대체하고 있었다(§ 위 주석). 진짜 재료를 채운다. */
+  soul_chank   :{label:'소울 클린 커팅', bars:buildRiff('soulA','soulB','AABA')},
+  soul_prog    :{label:'소울 진행',      bars:buildRiff('soulA','soulB','AABB')},
+  highlife_gtr :{label:'하이라이프 기타',bars:buildRiff('afrA','afrB','AABB')},
+  highlife_loop:{label:'하이라이프 반복',bars:buildRiff('afrA','afrB','AAAB')},
+  jazz_gtr_comp :{label:'재즈 컴핑 기타',  bars:buildRiff('jazzA','jazzB','ABAB')},
+  jazz_gtr_swing:{label:'재즈 스윙 컴핑',  bars:buildRiff('jazzA','jazzB','AABA')},
 };
 const RIFF_NAMES = Object.keys(RIFF);
 Object.values(RIFF).forEach(r => { r.rows = r.bars.map(bpat); });
@@ -453,13 +519,13 @@ const RIFF_KIT_CAT = {
   A:['rock_power','rock_drive'],
   B:['rock_drive','arp_folk'],
   C:['funk_cut','edm_arp'],
-  D:['funk_cut','funk_call'],
-  E:['edm_arp','funk_cut'],
-  F:['funk_call','arp_folk'],
+  D:['funk_cut','soul_chank'],
+  E:['edm_arp','edm_build'],
+  F:['jazz_gtr_comp','jazz_gtr_swing'],       // 재즈 계열엔 재즈 컴핑 기타를 — 예전엔 펑크로 대체됐다
   G:['arp_country','arp_folk'],
   H:['latin_montuno','arp_folk'],
   I:['skank','skank_up'],
-  J:['funk_cut','arp_folk'],
+  J:['highlife_gtr','highlife_loop'],         // 아프리카 계열엔 하이라이프 기타를 — 예전엔 펑크로 대체됐다
   K:['arp_folk','latin_montuno'],
   X:['rock_power'],
 };
@@ -467,11 +533,18 @@ const RIFF_KIT = {
   'Metal'                  :['metal_chug','metal_gallop'],
   'Hard Rock'              :['rock_power','metal_gallop'],
   'Punk'                   :['rock_drive','rock_power'],
-  'Alternative'            :['rock_power','rock_drive'],
+  'Alternative'            :['rock_power','rock_alt'],
   'Post-punk 계보'         :['arp_folk','rock_drive'],
+  'Bebop 계보'             :['jazz_gtr_comp','jazz_gtr_swing'],
+  'Latin Jazz'             :['jazz_gtr_swing','latin_montuno'],
+  'Fusion 계보'            :['jazz_gtr_comp','funk_groove'],
+  '현대 갈래'               :['jazz_gtr_comp','jazz_gtr_swing'],
   'Funk'                   :['funk_cut','funk_call'],
   'Disco'                  :['funk_cut','funk_call'],
-  'Soul'                   :['funk_call','funk_cut'],
+  'Soul'                   :['soul_chank','soul_prog'],
+  'Contemporary R&B'       :['soul_prog','soul_chank'],
+  '서아프리카'              :['highlife_gtr','highlife_loop'],
+  '동아프리카'              :['highlife_loop','highlife_gtr'],
   'Reggae 갈래'            :['skank','skank_up'],
   '자메이카'               :['skank_up','skank'],
   'Dancehall 계보'         :['skank','edm_arp'],
@@ -485,7 +558,6 @@ const RIFF_KIT = {
   '브라질'                 :['latin_montuno','arp_folk'],
   '멕시코'                 :['arp_folk','latin_montuno'],
   '콜롬비아'               :['latin_montuno','arp_folk'],
-  '서아프리카'             :['funk_cut','arp_folk'],
   '남아시아'               :['arp_folk','latin_montuno'],
 };
 
@@ -547,6 +619,11 @@ const BASS_PHRASE = {
   /* 툼바오 — 다음 마디를 미리 당겨 치는 것이 핵심 */
   blatA :['0-----0-1-----0-','0-----0-2-----1-','2-----2-3-----2-','1-----1-0-------'],
   blatB :['2-----2-3-----2-','3-----3-4-----3-','4-----4-3-----2-','1-----1-0-------'],
+
+  /* 아프리카 — 최면적인 한 음 반복(00-analysis.md §2 J: "짧은 모티프가 겹침").
+     BLINE_KIT_CAT J 가 여태 펑크·라틴으로 대체되고 있었다(§ 아래 KIT 주석). */
+  bafrA :['0---0---0---0---','0---0---0---1---','2---2---2---1---','0---0-----------'],
+  bafrB :['2---2---2---2---','2---2---2---3---','4---4---4---3---','2---2-----------'],
 };
 
 function buildBass(a,b,form){
@@ -560,16 +637,23 @@ function buildBass(a,b,form){
 }
 
 const BLINE_SRC = [
-  ['brockA','brockB',{AABA:'록 근음',    AABB:'록 진행'}],
+  /* 폼을 한 개씩 더 걸었다(각 쌍 3폼) — BLINE 20종이 MELODY 92종 대비
+     심하게 적다는 지적(melody/00-analysis.md)에 따른 보강.
+     bmet 은 손대지 않았다 — 메탈 베이스는 기타를 그대로 따라가는 연타라
+     AABA 로 튼다고 새로운 인상을 안 준다(§10 예외, 연타형). */
+  ['brockA','brockB',{AABA:'록 근음',    AABB:'록 진행',    ABAB:'록 교대'}],
   ['bmetA','bmetB',  {AAAB:'메탈 연타',  AABB:'메탈 갤럽'}],
-  ['bfunA','bfunB',  {AABB:'펑크 싱코페',ABAB:'펑크 옥타브'}],
-  ['bwalA','bwalB',  {ABAB:'재즈 워킹',  AABA:'워킹 회귀'}],
-  ['bdisA','bdisB',  {AABB:'디스코 옥타브',ABAB:'디스코 교대'}],
-  ['bregA','bregB',  {AABA:'레게 성긴',  AABB:'레게 진행'}],
-  ['b808A','b808B',  {AAAB:'808 롱',     AABA:'808 슬라이드'}],
-  ['bcouA','bcouB',  {AABB:'컨트리 붐칙',AABA:'붐칙 회귀'}],
-  ['bhouA','bhouB',  {AAAB:'하우스 엇박',AABB:'하우스 진행'}],
-  ['blatA','blatB',  {AABB:'라틴 툼바오',ABAB:'툼바오 교대'}],
+  ['bfunA','bfunB',  {AABB:'펑크 싱코페',ABAB:'펑크 옥타브',AAAB:'펑크 반복'}],
+  ['bwalA','bwalB',  {ABAB:'재즈 워킹',  AABA:'워킹 회귀',  AABB:'워킹 진행'}],
+  ['bdisA','bdisB',  {AABB:'디스코 옥타브',ABAB:'디스코 교대',AAAB:'디스코 반복'}],
+  ['bregA','bregB',  {AABA:'레게 성긴',  AABB:'레게 진행',  ABAB:'레게 교대'}],
+  ['b808A','b808B',  {AAAB:'808 롱',     AABA:'808 슬라이드',AABB:'808 진행'}],
+  ['bcouA','bcouB',  {AABB:'컨트리 붐칙',AABA:'붐칙 회귀',  ABAB:'붐칙 교대'}],
+  ['bhouA','bhouB',  {AAAB:'하우스 엇박',AABB:'하우스 진행',ABAB:'하우스 교대'}],
+  ['blatA','blatB',  {AABB:'라틴 툼바오',ABAB:'툼바오 교대',AABA:'툼바오 회귀'}],
+  /* 새 재료 — 아프리카 계열엔 여태 전용 베이스가 없어 펑크·라틴으로
+     대체되고 있었다(§ 아래 KIT_CAT 주석). */
+  ['bafrA','bafrB',  {AABB:'아프로 반복', AAAB:'아프로 순환'}],
 ];
 const BLINE = {};
 BLINE_SRC.forEach(([a,b,forms]) => {
@@ -585,7 +669,7 @@ const BLINE_KIT_CAT = {
   C:['b808_aaab','b808_aaba'],   D:['bfun_aabb','bdis_aabb'],
   E:['bhou_aaab','bdis_abab'],   F:['bwal_abab','bwal_aaba'],
   G:['bcou_aabb','bcou_aaba'],   H:['blat_aabb','blat_abab'],
-  I:['breg_aaba','breg_aabb'],   J:['bfun_aabb','blat_aabb'],
+  I:['breg_aaba','breg_aabb'],   J:['bafr_aabb','bafr_aaab'],
   K:['blat_abab','bcou_aabb'],   X:['brock_aaba'],
 };
 const BLINE_KIT = {
@@ -604,7 +688,7 @@ const BLINE_KIT = {
   'Reggae 갈래':['breg_aaba','breg_aabb'],'자메이카':['breg_aabb','breg_aaba'],
   '쿠바':['blat_aabb','blat_abab'],       '브라질':['blat_abab','bwal_aaba'],
   '멕시코':['bcou_aabb','blat_aabb'],     '콜롬비아':['blat_abab','blat_aabb'],
-  '서아프리카':['bfun_aabb','blat_aabb'], '동아프리카':['bfun_aabb'],
+  '서아프리카':['bafr_aabb','bafr_aaab'], '동아프리카':['bafr_aaab','bafr_aabb'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */

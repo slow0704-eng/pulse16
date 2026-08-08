@@ -26,8 +26,12 @@ ES 모듈이 아니라 평범한 `<script src>` 입니다. 이유가 둘입니�
 
 ## 지도
 
+아래는 실제 `<script>` 로드 순서 그대로입니다 — 이 문서에서 위→아래 순서가
+곧 의존 순서입니다.
+
 ```
-pulse16-mk16.html      마크업 + link/script 목록 (388줄)
+pulse16-mk16.html      마크업 + link/script 목록 (490줄 안팎 — 계속 자랍니다,
+                        정확한 숫자는 굳이 맞추지 말고 grep 으로 확인하세요)
 
 styles/
   tokens.css           디자인 토큰 (색·간격 변수)
@@ -41,9 +45,6 @@ src/
     config.js          §1  HAS_TONE · STEPS · TRACKS · ENGINES
     engines.js             건반 엔진표(KENG) · 기타 엔진표(GTR)
     scale.js               NOTES · SCALES · 튠 노브 대응 · 계열(CATS)
-    dom.js             §3  UI 객체 · knob() · setKnob()
-    state.js           §4  뱅크 · 트랙 상태 · 전역 오디오 노드 선언
-    util.js            §5  노드 풀 · BQ/G/osc · env/env2 · Q_DB
   data/
     preset-index.js        PRESET_SUB(하위 분기) · PRESET_CAT(계열)
                            TONE_KIT — 하위분기별 건반·기타·베이스·타악기 배정
@@ -53,17 +54,37 @@ src/
       01-rock.js …         장르별 프리셋. Object.assign(RAW, {…})
       12-example.js
       _build.js            RAW → LIB 전개. 장르 파일 뒤에 와야 한다
+    fills.js                필인 라이브러리(FILLS) · fillPoolFor()
+    melody.js               16마디 선율·리프·베이스 라이브러리(MELODY·RIFF·
+                           BLINE) · PHRASE·FORM(프레이즈 결합 폼, 곡 구조의
+                           SONG_FORM 과 다름 — 아래 "이름 충돌" 참고)
+    harmony.js              화성 진행(PROG·PROG_NAMES)·컴핑(COMP)·
+                           chordDegAt·chordSemis·snapDeg — melody.js 다음,
+                           core/dom.js 앞
+  core/ (계속)
+    dom.js             §3  UI 객체 · knob() · setKnob()
+    state.js           §4  뱅크 · 트랙 상태 · 전역 오디오 노드 선언
+    util.js            §5  노드 풀 · BQ/G/osc · env/env2 · Q_DB
   audio/
+    modal.js                모달 공진 뱅크 — 몸통 공명을 직렬 peaking 대신
+                           병렬 밴드패스로(graph.js 의 boot() 이 바로 씀).
+                           core/util.js 다음, audio/graph.js 앞
     graph.js           §6  버스 · 앰프 체인 · 리버브 · 마스터
     sampler.js         §7  샘플 로딩
     params.js          §8  파라미터 적용
     voice-drum.js      §9  킥·스네어·클랩·하이햇·톰·퍼커션 · 사이드체인
     string.js              뜯은 현 코어 (Karplus-Strong) — 기타와 베이스가 공용
     voice-bass.js      §9  베이스 (합성 5종 + 현 4종)
+    struck.js               타현(비조화 가법합성) — keys/piano·vibes·marimba 등
     voice-keys.js      §9-B 건반 · 신스
     voice-gtr.js       §9-C 기타 · 밴조 · 만돌린 · 시타르 · 피들(찰현)
   seq/
-    sequencer.js       §10 스텝 스케줄링
+    arrange.js              (신규) 곡 구조(섹션)·트랙별 그루브 — SONG_FORM·
+                           SONG_FORM_NAMES·formOn/formMode·GROOVE·
+                           GROOVE_NAMES·grooveOn/grooveMode. voice-gtr.js
+                           다음, seq/sequencer.js 앞
+    sequencer.js       §10 스텝 스케줄링 — progOn·chordRoot 등 harmony.js ·
+                           arrange.js 의 전역을 typeof 로 방어하며 쓴다
   ui/
     meters.js          §11 화면 갱신 · 미터
     build.js           §12 UI 구성
@@ -76,8 +97,21 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   measure-tonal.html   베이스·건반·기타 실측 (배음 구조)
   tune-guitar.html     기타 여기 모델 원인 분리
   verify-*.html        DSP 단위 검증
+  _app-harness.js      src/ 를 직접 로드해 위 하네스들에게 진짜 앱 그래프를
+                       내어주는 공용 모듈 (아래 "주의" 참고)
 mcp/pulse-audit/       계측 MCP 서버 (harness · render_wav · audio_measure · a11y)
 ```
+
+**새 파일을 끼울 위치는 이 지도의 줄 순서 그 자체입니다** — 표에 없는
+파일을 추가했다면 실제로 로드되는 자리에 맞춰 이 지도도 같이 고치세요.
+
+**이름 충돌 주의**: `data/melody.js` 가 이미 최상위 `const FORM`(AABA·AABB 같은
+프레이즈 결합 폼)을 선언하고 있어서, `seq/arrange.js` 의 "곡 구조(섹션)"
+기능은 원래 합의된 `FORM`/`FORM_NAMES` 대신 `SONG_FORM`/`SONG_FORM_NAMES` 로
+이름을 바꿨습니다. 같은 전역 스코프에서 `const` 를 두 번 선언하면 전체
+스크립트가 죽으므로(`Identifier 'FORM' has already been declared`), 새 전역을
+추가할 때는 먼저 `grep -rn "^const NAME\b\|^let NAME\b\|^function NAME\b" src/`
+로 겹치는 이름이 없는지 확인하세요.
 
 ## 프리셋 추가
 
