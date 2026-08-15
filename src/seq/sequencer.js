@@ -327,6 +327,8 @@ function shufflePattern(){
      건반·기타가 이전 음색 그대로 남아 장르가 어긋난다 */
   if(L.kit.keys) eng.keys=L.kit.keys;
   if(L.kit.gtr ) eng.gtr =L.kit.gtr;
+  if(L.kit.keys2) eng.keys2=L.kit.keys2;
+  if(L.kit.gtr2 ) eng.gtr2 =L.kit.gtr2;
   applyPresetLvl(L);
   applyTune(L.tune); applyBassCfg(L.bcfg);
   setKnob('swing',L.swing); setSwing(L.swing);

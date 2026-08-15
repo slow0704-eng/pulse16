@@ -13,6 +13,20 @@ for(const [n,p] of Object.entries(RAW)){
   if(!kit.keys) kit.keys = T.keys;
   if(!kit.gtr ) kit.gtr  = T.gtr;
   if(!kit.perc && T.perc) kit.perc = T.perc;
+  /* 드럼 엔진도 하위분기가 정할 수 있게 합니다.
+     예전에는 keys·gtr·perc·bass 만 통로가 있어서, 트랩을 불러도 킥이
+     deep 이고 하우스를 불러도 클랩이 spread 였습니다 — 엔진은 있는데
+     아무도 안 골라 주는 상태였습니다.
+     perc 는 pperc(기본 패턴)까지 딸려 있어 위에서 따로 다룹니다. */
+  TRACK_IDS.forEach(id => { if(id!=='perc' && !kit[id] && T[id]) kit[id] = T[id]; });
+  /* 2번 건반·기타 — 같은 악기를 두 벌 쓰지 않도록 하위분기가 따로 정합니다.
+     (keys2·gtr2 는 코러스에서만 켜지는 레이어입니다 — arrange.js SECTION_RULE) */
+  /* ⚠ 반드시 값을 채웁니다. 적용 지점이 «없으면 현재 엔진 유지» 라서,
+     비워 두면 **앞서 부른 프리셋의 2번 악기가 그대로 따라옵니다** —
+     아프로비츠를 불렀다가 탱고를 부르면 탱고 코러스에서 코라가 울렸습니다.
+     기본값은 state.js 의 eng 초기값과 같습니다. */
+  kit.keys2 = kit.keys2 || T.keys2 || 'strings';
+  kit.gtr2  = kit.gtr2  || T.gtr2  || 'clean';
   /* perc 엔진만 정하고 패턴이 없으면 트랙이 조용합니다.
      하위분기 단위로 기본 패턴을 함께 줍니다 — 프리셋이 perc 를 직접 적으면 그쪽이 이깁니다.
      Soca 의 16분 아이언만 문서에 명시돼 있고, 나머지는 통상적인 자리입니다. */
