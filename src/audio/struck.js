@@ -45,6 +45,44 @@ const STRUCK = {
           unison:[0], hammer:{f:1800,q:1.0,dec:0.005,amp:0.12}},
   marimba:{parts:5, ratios:[1,3.9,9.5,16.2,23.0], tilt:1.55, t60:0.9, t60n:0.30,
           unison:[0], hammer:{f:2600,q:1.2,dec:0.004,amp:0.22}},
+
+  /* ══ 타현·타봉 6종 ══════════════════════════════════════════════
+     ratios 는 **자유단 막대의 횡진동 모드비**에서 옵니다 —
+       1 : 2.756 : 5.404 : 8.933 : 13.34
+     (오일러-베르누이 보 방정식의 자유-자유 경계 해. 음향학 교과서 값이고
+      위 marimba·vibes 가 쓰는 것과 같은 계열입니다.)
+
+     실로폰·마림바는 막대 아래를 깎아(undercut) **2번 모드를 일부러 정수배로
+     당겨** 둡니다 — 마림바 4:1, 실로폰 3:1. 글로켄슈필은 안 깎아서
+     2.756 이 그대로 남습니다. 그 차이가 «나무 말렛 ↔ 금속 말렛» 을 가릅니다.
+
+     t60 은 재질에서 옵니다: 나무(로즈우드)는 짧고, 금속(알루미늄·강철)은 깁니다.
+     ⚠ amp 는 struck 경로가 자체 정규화(bakeStruck 의 피크 0.85)를 하므로
+       엔진별로 따로 없습니다 — KEYS_TEX 와 vca 가 레벨을 잡습니다. */
+
+  /* 실로폰 — 2번 모드를 3:1 로 깎은 나무 막대. 마림바보다 높고 훨씬 짧습니다. */
+  xylophone:{parts:4, ratios:[1,3.0,6.0,9.2], tilt:1.40, t60:0.35, t60n:0.30,
+          unison:[0], hammer:{f:3400,q:1.3,dec:0.003,amp:0.30}},
+  /* 글로켄슈필 — 안 깎은 강철 막대라 2.756 이 그대로 남고 아주 길게 웁니다.
+     이 비정수 2번 모드가 «쨍» 하는 금속성의 정체입니다. */
+  glocken :{parts:4, ratios:[1,2.756,5.404,8.933], tilt:0.95, t60:1.80, t60n:0.28,
+          unison:[0], hammer:{f:5200,q:1.4,dec:0.002,amp:0.26}},
+  /* 첼레스타 — 글로켄과 같은 강철 막대지만 나무 공명통이 붙어 부드럽습니다.
+     해머가 펠트라 어택이 훨씬 무릅니다. */
+  celesta :{parts:4, ratios:[1,2.756,5.404,8.933], tilt:1.35, t60:1.20, t60n:0.34,
+          unison:[0], hammer:{f:2600,q:0.9,dec:0.006,amp:0.12}},
+  /* 칼림바(음비라) — 금속 혀를 튕깁니다. 막대와 같은 모드지만 한쪽이 고정단이라
+     고역이 빨리 죽고, 통이 작아 기음이 약합니다. 아프리카·로파이. */
+  kalimba :{parts:3, ratios:[1,2.756,5.404], tilt:1.55, t60:0.80, t60n:0.45,
+          unison:[0], hammer:{f:2200,q:1.1,dec:0.004,amp:0.22}},
+  /* 오르골 — 강철 빗살을 튕깁니다. 아주 얇고 높으며 배음이 성깁니다. */
+  musicbox:{parts:3, ratios:[1,2.756,5.404], tilt:1.15, t60:0.90, t60n:0.40,
+          unison:[0], hammer:{f:4600,q:1.6,dec:0.002,amp:0.28}},
+  /* 튜블러벨 — 관(管)이라 막대와 모드가 다릅니다. STK TubeBell 이 쓰는
+     √2 = 1.414 비를 그대로 씁니다(src/TubeBell.cpp, ratios 1 : 1.414).
+     아주 길게 울립니다 — 교회종·오케스트라. */
+  tubular :{parts:4, ratios:[1,1.414,2.0,2.828], tilt:0.85, t60:6.0, t60n:0.22,
+          unison:[0,1.5], hammer:{f:3000,q:1.0,dec:0.005,amp:0.24}},
 };
 
 /** 한 음을 통째로 구워 AudioBuffer 로 돌려준다 */
@@ -122,7 +160,8 @@ function struckBuf(name, midi, hz, S){
 }
 
 /** 구운 버퍼로 한 음을 낸다. keysVoice 가 STRUCK 엔진일 때 이리로 넘긴다. */
-function struckVoice(t, midi, dur, vel, name){
+function struckVoice(t, midi, dur, vel, name, ch){
+  ch = ch || 'keys';                 // 2번 건반 트랙은 'keys2' — keysVoice() 주석 참고
   const S = STRUCK[name];
   const hz = 440*Math.pow(2,(midi-69)/12);
   const X = KEYS_TEX[name] || TEX_DEFAULT;
@@ -131,7 +170,7 @@ function struckVoice(t, midi, dur, vel, name){
   const rel = 0.12;
   const end = t + Math.min(buf.duration, dur + rel) + 0.08;
 
-  const vca = G('keys', end);
+  const vca = G(ch, end);
 
   /* 벨로시티 민감도. 0 이면 세기를 무시하고 고정 세기로 친다 —
      플렉트럼으로 뜯는 하프시코드가 그렇다. */
@@ -159,7 +198,7 @@ function struckVoice(t, midi, dur, vel, name){
   /* 해머 잡음 — 때리는 순간의 소리. 벨로시티에 크게 반응한다 */
   if(S.hammer){
     const K = S.hammer, he = t + K.dec + 0.02;
-    const hg = G('keys', he), hf = BQ('bandpass', K.f, K.q, he);
+    const hg = G(ch, he), hf = BQ('bandpass', K.f, K.q, he);
     env(hg, t, K.amp*ve*ve, K.dec, 0.0005);
     hf.connect(hg); tapNoise(hf, he);
   }

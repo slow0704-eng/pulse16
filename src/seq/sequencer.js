@@ -228,7 +228,7 @@ function voicesAt(i,t){
       const kv2   = (c==='X'?0.62:0.42)*rnd(0.12*H());
       const kbase2= keysOct+rootNote+knob('ksemi');
       const kt2   = t+jit()+groove('keys2');
-      semis.forEach((s,vi) => keysVoice(kt2, kbase2+s, kdur2, kv2*Math.pow(0.90,vi), eng.keys2));
+      semis.forEach((s,vi) => keysVoice(kt2, kbase2+s, kdur2, kv2*Math.pow(0.90,vi), eng.keys2, 'keys2'));
     }
   }else{
     const m2 = melNowB ? barOf(melNowB)[i] : P.keys2[i];
@@ -241,7 +241,7 @@ function voicesAt(i,t){
       const kt2 = t+jit()+groove('keys2');
       for(let d=0; d<ROWS; d++) if(m2 & (1<<d))
         keysVoice(kt2, keysOct+rootNote+knob('ksemi')+SCALES[scaleName][d],
-                  kdur2, kv2*Math.pow(0.94,v2++), eng.keys2);
+                  kdur2, kv2*Math.pow(0.94,v2++), eng.keys2, 'keys2');
     }
   }
   const gd2 = riffNowB ? barOf(riffNowB)[i] : P.gtr2[i];

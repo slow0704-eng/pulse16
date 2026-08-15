@@ -326,7 +326,7 @@ function audition2(id){
   chan[id].gain.value=lvl[id];
   const t=ctx.currentTime+0.02;
   if(id==='keys2')
-    keysVoice(t, keysOct+rootNote+knob('ksemi'), spb()*0.25*(knob('kgate')/100), 0.85, eng.keys2);
+    keysVoice(t, keysOct+rootNote+knob('ksemi'), spb()*0.25*(knob('kgate')/100), 0.85, eng.keys2, 'keys2');
   else
     guitarVoice2(t, 0, spb()*0.25*(knob('ggate')/100), eng.gtr2);
 }

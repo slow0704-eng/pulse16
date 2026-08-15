@@ -113,6 +113,18 @@ const KEYS_TEX = {
                       [1000,16.0,0.80],   // F2
                       [2450,18.0,0.70],   // F3
                       [3400,16.0,0.45]]}, // F4
+
+  /* 합창 — vocoder 와 같은 병렬 포먼트 회로지만 모음이 다릅니다.
+     vocoder 는 «이» 에 가까운 좁은 모음(F1 650·F2 1000)이고,
+     합창은 «아»(F1 700·F2 1150) 를 씁니다 — 입을 크게 벌린 소리라
+     F1·F2 가 붙어 있고 Q 가 낮습니다(여러 사람이 미묘하게 다른 모음을 냄).
+     dry 를 vocoder 보다 크게 둡니다 — 안 그러면 사람이 아니라 필터로 들립니다. */
+  choir    :{kt:0.10,kd:0.20, dry:0.30,
+             formant:[[ 320, 4.0,0.50],
+                      [ 700, 8.0,1.00],   // F1 «아»
+                      [1150, 9.0,0.85],   // F2
+                      [2600,11.0,0.50],   // F3 — 합창의 «빛»
+                      [3500,10.0,0.28]]},
   /* 하프시코드는 얕은 나무 상자 — 저역 공명이 거의 없고 중고역만 */
   harpsi   :{kt:0.65,kd:0.55,body:[[700,1.6,2.5],[2000,1.4,3.5]]},
   /* 오르간은 몸통이 없습니다 — 전기 신호가 스피커로 바로 갑니다.
@@ -129,10 +141,17 @@ const KEYS_TEX = {
 const TEX_DEFAULT={kt:0.40,kd:0.35};
 
 let keysVox=[];
-function keysVoice(t,midi,dur,vel,name){
+/* ch — 어느 채널로 낼지. 2번 건반 트랙은 'keys2' 를 넘긴다.
+   ⚠ 예전에는 이 인자가 없어 **eng.keys2 로 불려도 소리가 chan.keys 로 갔다.**
+     chan.keys2 에 애널라이저를 물리면 strings 가 87회 울리는 동안 피크가 정확히 0 이었다.
+     그래서 2번 건반의 레벨 슬라이더·팬(−0.26)·리버브 센드·섹션별 레벨이 전부
+     무효였다(음소거만 시퀀서가 호출 전에 걸러서 동작했다).
+     guitarVoice2() 는 chan.gtr2 로 제대로 가고 있었다 — 건반만 빠져 있었다. */
+function keysVoice(t,midi,dur,vel,name,ch){
+  ch = ch || 'keys';
   /* 때린 현·막대는 가산합성을 구워 쓴다 — FM 으로는 배음이 일곱 번째쯤에서
      끊겨 "인공적인 패드" 로 들린다. (src/audio/struck.js) */
-  if(typeof STRUCK!=="undefined" && STRUCK[name]) return struckVoice(t,midi,dur,vel,name);
+  if(typeof STRUCK!=="undefined" && STRUCK[name]) return struckVoice(t,midi,dur,vel,name,ch);
 
   const E=KENG[name]||KENG.pad, hz=440*Math.pow(2,(midi-69)/12);
   const X=KEYS_TEX[name]||TEX_DEFAULT;
@@ -152,7 +171,7 @@ function keysVoice(t,midi,dur,vel,name){
   }
 
   const life=dur+rel*1.6+0.15, end=t+life, oscs=[];
-  const vca=G('keys',end);
+  const vca=G(ch,end);
   const mix=acqGain(); mix.gain.value=E.mixG; retire(mix,'gain',end+0.05);
   const hp =BQ('highpass',E.hp,Q_BUTTER,end);
   const F  =lp24(fHz,E.f.R,end);
@@ -267,7 +286,7 @@ function keysVoice(t,midi,dur,vel,name){
 
   if(E.click){                           /* 플럭 어택 · 오르간 키클릭 */
     const [f,q,dec,amp]=E.click, ce=t+dec+0.02;
-    const cg=G('keys',ce), cf=BQ('bandpass',f,q,ce);
+    const cg=G(ch,ce), cf=BQ('bandpass',f,q,ce);
     env(cg,t,amp*vel,dec,0.0008); cf.connect(cg); tapNoise(cf,ce);
   }
   if(E.vib){                             /* 지연 후 서서히 걸리는 비브라토 */

@@ -233,21 +233,23 @@ function bassVoice(t,deg,dur,e){
     /* 선형 Q 8 의 피크가 +18dB 이므로 그만큼 되돌린다 */
     const comp=acqGain(); comp.gain.value=0.16; retire(comp,'gain',end+0.05);
     o.connect(f1).connect(f2).connect(comp).connect(mixIn); oscs.push(o);
-  }else if(e==='moog'){
-    /* 무그 계열 모노 신스 베이스 — 톱니+사각을 24dB 래더에 통과시킨 소리.
-       acid 와 다른 점은 레조넌스를 얕게(Q 1.6) 두고 컷오프를 덜 닫는 것.
-       acid 가 "꾸르륵" 이라면 이쪽은 "두툼" 입니다.
-       펑크·신스팝·디스코의 베이스 라인. */
-    const top=Math.min(hz*16,2600), bot=Math.max(hz*3.2,150);
-    const f1=BQ('lowpass',top,Q_DB(1.6),end);
+  }else if(BSYN[e]){
+    /* 오실레이터 스택 → 24dB 래더 → 컷오프 엔벨로프.
+       예전에는 moog 하나만 이 자리에 분기로 박혀 있었습니다. 구조가
+       일반형이라 파라미터만 engines.js 의 BSYN 표로 뺐습니다 —
+       **moog 의 수치는 그대로**라 소리가 안 바뀝니다(실측으로 확인).
+       acid 는 303 특유의 2단 구성이 달라 표에 안 넣고 분기로 남깁니다. */
+    const S=BSYN[e];
+    const top=Math.min(hz*S.top[0],S.top[1]), bot=Math.max(hz*S.bot[0],S.bot[1]);
+    const f1=BQ('lowpass',top,Q_DB(S.q),end);
     const f2=BQ('lowpass',top,Q_BUTTER,end);        // 합계 24dB/oct
-    const tau=Math.min(dur*0.45,0.30);
+    const tau=Math.min(dur*S.tau[0],S.tau[1]);
     [f1,f2].forEach(f=>{
       f.frequency.setValueAtTime(top,t);
       f.frequency.setTargetAtTime(bot,t,tau);
     });
-    const mixg=acqGain(); mixg.gain.value=0.42; retire(mixg,'gain',end+0.05);
-    [['sawtooth',1,0.62,0],['square',1,0.34,-6],['sawtooth',2,0.14,4]].forEach(([ty,m,a,det])=>{
+    const mixg=acqGain(); mixg.gain.value=S.mix; retire(mixg,'gain',end+0.05);
+    S.oscs.forEach(([ty,m,a,det])=>{
       const o=osc(ty,t,dur+0.6);
       setPitch(o.frequency,m); o.detune.value=det;
       const og=acqGain(); og.gain.value=a; retire(og,'gain',end+0.05);
