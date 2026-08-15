@@ -129,6 +129,95 @@ const PHRASE = {
   pwrB  :['2-------4---2---','2-------4---3---','2-------4---2---','4-----0---------'],
 };
 
+/* ── 리듬 × 윤곽 분해 ────────────────────────────────────────
+   위 46개 프레이즈는 «언제 치는가»(리듬)와 «무슨 도수를 치는가»(윤곽)가
+   한 문자열에 붙어 있습니다. 그래서 장르마다 리듬 자리가 고정이고,
+   도수 골격은 거의 전부 «도약 하나 + 순차 둘로 되받기»(0→2→1→0) 한 종류입니다.
+   같은 장르를 틀면 늘 같은 리듬으로 같은 윤곽이 나오는 이유가 이것입니다.
+
+     리듬  'x-----x-x---x---'   온셋 자리 16비트
+     윤곽  [0, 2, 1, 0]         온셋 순서대로의 도수
+     weave(리듬, 윤곽) → 'a-----c-b---a---'
+
+   리듬 문자는 «그 자리에 무슨 표기를 쓰는가»(단음이냐 화음이냐)까지 담습니다.
+   안 담으면 gosA('0-------2---1---')를 되짜올 때 단음('a---')이 나와
+   왕복이 깨집니다. 아래 표가 pattern-codec.js 의 kpat 표기 전부를 덮습니다.
+   ⚠ 리듬 문자열의 알파벳은 마디 문자열과 **다른 계통**입니다 —
+     리듬에는 '-' 와 아래 마커 일곱 개만 나옵니다. */
+const NOTE_CLASS = [
+  ['x','a'],   // 단음 a~h
+  ['X','0'],   // 3화음 0~7
+  ['7','A'],   // 7화음 A~H
+  ['9','I'],   // 9화음 I~P
+  ['+','Q'],   // add9  Q~X
+  ['4','i'],   // sus4  i~p
+  ['6','q'],   // 6화음 q~x
+];
+/** 마디 문자 → [마커, 기준문자]. 쉼이면 null */
+const noteClass = c => NOTE_CLASS.find(([,base]) => {
+  const d = c.charCodeAt(0) - base.charCodeAt(0);
+  return d >= 0 && d < 8;
+}) || null;
+
+/** 마디 → 리듬(온셋 자리 + 표기 계열) */
+function rhythmOf(bar){
+  let out='';
+  for(const c of bar){ const e=noteClass(c); out += e ? e[0] : '-'; }
+  return out;
+}
+/** 마디 → 윤곽(온셋 순서대로의 도수 0~7) */
+function contourOf(bar){
+  const out=[];
+  for(const c of bar){ const e=noteClass(c); if(e) out.push(c.charCodeAt(0)-e[1].charCodeAt(0)); }
+  return out;
+}
+/** 리듬 + 윤곽 → 마디. 윤곽이 온셋보다 짧으면 **되풀이합니다** —
+    모티프를 짧게 두고 리듬만 늘리는 것이 실제 작법이라 그대로 돌립니다. */
+function weave(r, c){
+  let k=0;
+  let out='';
+  for(const m of r){
+    if(m==='-'){ out+='-'; continue; }
+    const e = NOTE_CLASS.find(([mark]) => mark===m) || NOTE_CLASS[0];
+    const d = c.length ? c[k++ % c.length] : 0;
+    out += String.fromCharCode(e[1].charCodeAt(0) + Math.max(0, Math.min(7, d|0)));
+  }
+  return out;
+}
+
+/* ── 리듬 교차로 만든 프레이즈 ──────────────────────────────
+   ⚠ **계열 안에서만** 섞습니다. latA(몬투노) 윤곽에 hipA(힙합) 리듬을
+     씌우면 장르 정체성이 깨집니다 — genres/00-tree.md 의 A~K 계열이
+     경계이고, MELODY_KIT_CAT 이 그 경계를 그대로 씁니다.
+
+   ⚠ **종지 마디(4번째)는 리듬 쪽 원본을 그대로 씁니다.** 교차하면 끝음이
+     으뜸음에서 벗어나는 일이 잦은데(실측: 8쌍 중 3쌍), 그 마디는 이미
+     검증된 종지라 손대지 않는 편이 낫습니다. buildLong 이 종지에서
+     모방진행을 그만두는 것과 같은 규칙입니다.
+
+   계열 C(힙합)·I(카리브)·J(아프리카)는 **일부러 뺐습니다** — 그 계열의
+   프레이즈끼리는 윤곽이 이미 같아서(둘 다 0→2→1→0) 교차해도 상대 프레이즈가
+   그대로 나옵니다. 이름만 늘고 소리는 안 느는 항목은 표를 속입니다. */
+function crossPhrase(rSrc, cSrc){
+  const pr=PHRASE[rSrc], pc=PHRASE[cSrc];
+  return pr.map((bar,i) => i===3 ? bar : weave(rhythmOf(bar), contourOf(pc[i])));
+}
+/* [새 이름(A/B 뺀 것), 리듬 출처, 윤곽 출처, 계열] */
+const MEL_CROSS = [
+  ['rkant','rock','ant',  'A'],   // 록 8분 자리에 앤섬의 2음 왕복
+  ['cinbal','cin','bal',  'B'],   // 시네마틱 4분 자리에 발라드의 2음 오스티나토
+  ['disfun','dis','funk', 'D'],   // 디스코 8분 자리에 펑크의 촘촘한 순차
+  ['edmchp','edm','chip', 'E'],   // EDM 16분 자리에 칩튠의 3음 순환
+  ['jazbal','jazz','bal', 'F'],   // 재즈 지그재그 자리에 2음 — 엔클로저
+  ['rootbl','root','blues','G'],  // 루츠 장식음 자리에 블루스 왕복
+  ['latbos','lat','bos',  'H'],   // 몬투노 자리에 2음 과헤오
+  ['worcin','wor','cin',  'K'],   // 월드 장식음 자리에 시네마틱 순차
+];
+MEL_CROSS.forEach(([name, r, c]) => {
+  PHRASE[name+'A'] = crossPhrase(r+'A', c+'A');
+  PHRASE[name+'B'] = crossPhrase(r+'B', c+'B');
+});
+
 /* ── 송폼 ──
    16마디를 어떻게 잇는지. 대중음악에서 실제로 쓰이는 틀만 넣었습니다.
    숫자는 PHRASE 두 개(A·B) 중 무엇을 쓰는지의 자리입니다. */
@@ -191,6 +280,21 @@ const MEL_SRC = [
      42개 프레이즈 중 이제 3쌍(6개)만 3화음이다. */
   ['hymA','hymB',    {AABB:'성가 코드멜로디', AABA:'성가 화답'}],
   ['pwrA','pwrB',    {AAAB:'파워코드 코드멜로디', ABAB:'파워코드 교대'}],
+
+  /* ── 리듬 × 윤곽 교차분 (§ MEL_CROSS) ──
+     위 23쌍은 리듬 자리가 장르마다 하나씩 고정이었다. 여기부터는 같은 계열
+     안에서 **한쪽의 리듬에 다른 쪽의 윤곽**을 얹은 쌍이다. 새 프레이즈를
+     손으로 쓴 것이 아니라 이미 검증된 재료 둘을 교차한 것이라, 리듬은 그
+     장르의 자리를 그대로 지키고 윤곽만 낯설어진다.
+     ⚠ 이름은 전부 새 이름이다 — 위 23쌍은 한 글자도 안 건드렸다. */
+  ['rkantA','rkantB',  {AABB:'록 스타디움 훅',   ABAB:'록 훅 교대'}],
+  ['cinbalA','cinbalB',{AABA:'시네마틱 오스티나토', AABB:'시네마틱 긴숨'}],
+  ['disfunA','disfunB',{AABB:'디스코 펑크 라인', ABAB:'디스코 펑크 교대'}],
+  ['edmchpA','edmchpB',{AAAB:'EDM 칩 아르페지오', AABB:'EDM 칩 빌드'}],
+  ['jazbalA','jazbalB',{ABAB:'재즈 엔클로저',    AABA:'엔클로저 회귀'}],
+  ['rootblA','rootblB',{AABB:'루츠 블루스 왕복', AABA:'루츠 블루스 회귀'}],
+  ['latbosA','latbosB',{AABB:'라틴 과헤오',      ABAB:'과헤오 교대'}],
+  ['worcinA','worcinB',{AABA:'월드 시네마틱',    AABB:'월드 시네마틱 진행'}],
 ];
 
 /* 이름은 프레이즈쌍 + 폼으로 자동 생성 — 손으로 21개를 적던 것을 없앱니다 */
@@ -238,6 +342,73 @@ function seqUp(bar, n){
 }
 const seqPhrase = (p,n) => p.map(bar => seqUp(bar,n));
 
+/* ── 변형 연산자 4종 ─────────────────────────────────────────
+   전부 «리듬 × 윤곽» 분해(§ NOTE_CLASS) 위에서 돕니다. 그래서 표기 계열
+   (단음이냐 화음이냐)은 어느 연산을 걸어도 안 바뀝니다. */
+
+/** 역행 — 리듬은 그대로 두고 **온셋의 음만 역순**으로.
+
+    ⚠ 문자열을 통째로 뒤집는 진짜 역행은 안 씁니다. 'b---a-----------' 을
+      뒤집으면 '-----------a---b' 가 되어 첫 박이 비고, 무엇보다 **리듬 자리가
+      뒤집힙니다** — 이 파일의 전제가 «리듬 자리 = 장르 정체성» 이라
+      역행 한 번에 장르가 사라집니다. 음 순서만 되짚으면 윤곽은 확실히
+      새로워지고 장르는 남습니다. 브릿지·아웃트로 자리에 씁니다. */
+function retro(bar){ return weave(rhythmOf(bar), contourOf(bar).reverse()); }
+
+/** 반사 — 도수를 축 axis 에 대고 뒤집는다. d → 2·axis − d.
+    axis 를 안 주면 그 마디의 **첫 음**을 축으로 삼습니다(첫 음이 제자리에 남음).
+
+    ⚠ 대중음악에서 가장 위험한 변형입니다. 무조 음악에서는 정체성이지만
+      조성 음악에서 도수를 반사하면 «음이 이상해진» 것으로 들립니다.
+      그래서 (1) 결과를 0~7 안에 **반드시** 가두고(범위를 벗어나면 ±7 로 접고,
+      그래도 벗어나면 자릅니다), (2) 적용처를 긴 선율의 브릿지 한 덩어리로
+      좁힙니다 — LONG_FORMS['64b'] 의 세 번째 덩어리 하나뿐이고,
+      거는 재료도 시네마틱·재즈·앰비언트 셋뿐입니다(§ LONG_B). */
+function invert(bar, axis){
+  const c=contourOf(bar);
+  if(!c.length) return bar;
+  const ax = (axis===undefined || axis===null) ? c[0] : axis;
+  return weave(rhythmOf(bar), c.map(d => {
+    let v = 2*ax - d;
+    while(v < 0) v += 7;                 // 옥타브로 접는다 — 도수 공간이라 7
+    while(v > 7) v -= 7;
+    return Math.max(0, Math.min(7, v));
+  }));
+}
+
+/** 회전 — **온셋 자리만** n 스텝 돌린다. 음 순서는 그대로.
+    모티프가 박자와 어긋나며 겹치는 것이 아프로·라틴 계열의 몸이라,
+    그 계열의 재료에 겁니다(§ LONG_B). n>0 이 늦게, n<0 이 당겨 침. */
+function rotate(bar, n){
+  const r=rhythmOf(bar);
+  const s=((16 - (n|0)) % 16 + 16) % 16;
+  return weave(r.slice(s)+r.slice(0,s), contourOf(bar));
+}
+
+/** 온셋 간격을 f 배로. 첫 온셋은 제자리에 두고 그 뒤 간격만 늘리거나 줄인다.
+    16칸을 넘으면 잘라내고, 줄여서 자리가 겹치면 다음 빈 칸으로 밀어
+    음을 안 버립니다(rootA 의 장식음 같은 연타가 사라지면 안 됩니다). */
+function timeScale(bar, f){
+  const r=rhythmOf(bar), c=contourOf(bar);
+  const mark=[], pos=[];
+  [...r].forEach((m,i) => { if(m!=='-'){ mark.push(m); pos.push(i); } });
+  if(!pos.length) return bar;
+  const out=new Array(16).fill('-');
+  pos.forEach((i,n) => {
+    let p=Math.round(pos[0] + (i-pos[0])*f);
+    while(p<16 && out[p]!=='-') p++;
+    if(p<16) out[p]=weave(mark[n], [c[n]]);
+  });
+  return out.join('');
+}
+/** 확대 — 간격 ×2. 여백이 악기인 앰비언트·발라드에 맞습니다. */
+const augment  = bar => timeScale(bar, 2);
+/** 축소 — 간격 ÷2. 마디 뒤쪽이 비므로 필인 자리가 생깁니다. */
+const diminish = bar => timeScale(bar, .5);
+
+/* buildLong 의 plan 이 이름으로 부릅니다 */
+const MEL_OPS = {retro, invert, rotate, augment, diminish};
+
 /** 16마디 덩어리를 이어 붙인다. 덩어리마다 폼과 **재료**를 함께 바꾼다.
 
     폼만 바꾸면 서로 다른 마디가 늘지 않는다 — AABA 와 AABB 는 네 자리 중
@@ -249,9 +420,13 @@ const seqPhrase = (p,n) => p.map(bar => seqUp(bar,n));
 function buildLong(a, b, plan){
   const pa=PHRASE[a], pb=PHRASE[b];
   const out=[];
-  plan.forEach(([form,shift], k) => {
+  plan.forEach(([form,shift,op,arg], k) => {
     const chunk = shift ? buildBarsP(seqPhrase(pa,shift), seqPhrase(pb,shift), form)
                         : buildBarsP(pa, pb, form);
+    /* ⚠ 변형은 그 덩어리의 **종지 마디(15)를 빼고** 겁니다. 모방진행을
+       종지 직전에 그만두는 위 규칙과 같은 이유입니다 — 종지까지 뒤집으면
+       곡이 으뜸음이 아닌 데서 끝납니다. */
+    if(op && MEL_OPS[op]) for(let i=0;i<15;i++) chunk[i]=MEL_OPS[op](chunk[i], arg);
     if(k < plan.length-1) chunk[15]=openEnd(chunk[15]);   // 마지막만 닫는다
     /* ⚠ 마지막 덩어리가 모방진행이면 **종지에서 모방을 버린다.**
        안 그러면 곡 전체가 으뜸음이 아닌 데서 끝난다 —
@@ -268,7 +443,43 @@ function buildLong(a, b, plan){
 const LONG_FORMS = {
   32:[['AABA',0],['AABB',1]],
   64:[['AABA',0],['AABB',1],['ABAB',2],['AABA',0]],
+
+  /* ── 변형 연산자를 건 새 plan ──
+     ⚠ 위 32·64 는 한 글자도 안 건드렸습니다 — 기존 _l32·_l64 선율의 소리는
+       변화가 0 입니다. 아래는 **새 이름**(_l32b·_l64b)으로만 나갑니다.
+
+     [폼, 올림, 연산, 인자]. 연산은 그 덩어리에만 걸립니다.
+     32b — 두 번째(마지막) 덩어리를 변형. **모방진행(올림)은 뺐습니다** —
+           올림과 변형을 겹치면 한 덩어리에서 두 가지가 동시에 바뀌어
+           «다른 곡» 이 됩니다. 여기서는 변형 하나만 겁니다.
+     64b — 32·64 와 같은 제시·전개·재현 위에서 **세 번째 덩어리(브릿지)만**
+           반사합니다. 32마디를 듣고 나서 16마디 낯설어졌다가 재현부로
+           돌아오는 자리라, 반사를 견디는 유일한 위치입니다. */
+  '32b':[['AABA',0],['AABB',0,'@op']],
+  '64b':[['AABA',0],['AABB',1],['ABAB',2,'invert'],['AABA',0]],
 };
+/* 32b 의 '@op' 자리에 무엇이 들어가는지는 **계열이 정합니다.**
+   리듬 자리를 흔드는 rotate 는 «모티프가 어긋나며 겹치는» 것이 정체성인
+   아프로·라틴·카리브·보사에만, 음을 늘리는 augment 는 «여백이 악기» 인
+   앰비언트·발라드에만 겁니다. 나머지는 음 순서만 되짚는 retro 입니다.
+   (diminish 는 뒤쪽을 비워 필인 자리를 내주므로 촘촘한 재료에 씁니다) */
+const LONG_B_OP = {
+  afr:'rotate', lat:'rotate', car:'rotate', bos:'rotate', latbos:'rotate',
+  amb:'augment', bal:'augment', ant:'augment', cinbal:'augment',
+  edm:'diminish', chip:'diminish', dis:'diminish', edmchp:'diminish', disfun:'diminish',
+};
+const LONG_B_ARG = {rotate:2};        // 회전은 2스텝(8분 하나) — 한 박을 넘기면 다른 리듬이 된다
+/* 32b 를 다는 재료. 두세 음 훅이 정체성인 힙합·트랩은 뺍니다 —
+   훅을 되짚으면 훅이 아니게 됩니다(melody/02-melody-theory.md §10). */
+const LONG_32B = ['rock','pop','bal','cin','ant','jazz','root','blues','wor','amb',
+                  'lat','afr','car','bos','edm','chip','dis','funk','gos',
+                  'rkant','cinbal','disfun','edmchp','jazbal','rootbl','latbos','worcin'];
+/* 64b 는 **셋뿐입니다.** invert 가 걸리는 유일한 자리라 좁게 잡았습니다:
+   시네마틱(영화음악은 반사를 실제로 씁니다) · 재즈(비밥 어법에 있습니다) ·
+   앰비언트(조성의 구심력이 가장 약해 반사를 견딥니다).
+   록·팝·앤섬은 뺐습니다 — 후렴 윤곽을 뒤집으면 후렴이 안 됩니다. */
+const LONG_64B = ['cin','jazz','amb'];
+const OP_LABEL = {retro:'역행', invert:'반사', rotate:'회전', augment:'확대', diminish:'축소'};
 /* ── 측정 결과 (tools/analyze-melody.html, 2026-08) ──
    ①순차·②복귀·③정점·⑦끝음은 16루프짜리와 같은 수준으로 통과합니다.
    ⑥'다른 마디' 비율만 목표(0.40~0.75) 아래입니다 — 32루프 0.38, 64루프 0.20~0.33.
@@ -287,6 +498,15 @@ MEL_SRC.forEach(([a,b,forms]) => {
   MELODY[base+'_l32']={label:first+' 32루프', bars:buildLong(a,b,LONG_FORMS[32])};
   if(LONG_64.includes(base))
     MELODY[base+'_l64']={label:first+' 64루프', bars:buildLong(a,b,LONG_FORMS[64])};
+
+  /* 변형판 — 새 이름(_l32b·_l64b)으로만 나갑니다(§ LONG_FORMS 주석) */
+  if(LONG_32B.includes(base)){
+    const op=LONG_B_OP[base]||'retro';
+    const plan=LONG_FORMS['32b'].map(t => t[2]==='@op' ? [t[0],t[1],op,LONG_B_ARG[op]] : t);
+    MELODY[base+'_l32b']={label:first+' 32루프 '+OP_LABEL[op], bars:buildLong(a,b,plan)};
+  }
+  if(LONG_64B.includes(base))
+    MELODY[base+'_l64b']={label:first+' 64루프 반사', bars:buildLong(a,b,LONG_FORMS['64b'])};
 });
 
 const MELODY_NAMES = Object.keys(MELODY);
@@ -305,7 +525,9 @@ function melodyLenPool(pool, pref){
   const sib = (n,suf) => n.replace(/_[a-z0-9]+$/, suf);
   if(pref==='auto'){
     const out=[...pool];
-    pool.forEach(n => ['_l32','_l64'].forEach(suf => {
+    /* '_l32b'·'_l64b' 는 변형 연산자를 건 판입니다(§ LONG_FORMS).
+       **더하기만 합니다** — 기존 네 개는 그대로 남습니다. */
+    pool.forEach(n => ['_l32','_l64','_l32b','_l64b'].forEach(suf => {
       const k=sib(n,suf);
       if(MELODY[k] && !out.includes(k)) out.push(k);
     }));
@@ -313,9 +535,12 @@ function melodyLenPool(pool, pref){
   }
   const want=+pref;
   if(!(want>0)) return pool;
-  const swapped = pool.map(n => {
+  /* 같은 길이의 변형판이 있으면 **함께** 내놓습니다. 고르는 것은 부르는 쪽이고,
+     여기서 하나로 줄이면 새 재료가 영영 안 나옵니다. 없으면 예전과 같습니다. */
+  const swapped = pool.flatMap(n => {
     const k=sib(n,'_l'+want);
-    return (want>16 && MELODY[k]) ? k : n;
+    if(!(want>16 && MELODY[k])) return [n];
+    return MELODY[k+'b'] ? [k, k+'b'] : [k];
   });
   const hit = swapped.filter(n => MELODY[n] && MELODY[n].rows.length===want);
   return hit.length ? hit : swapped;      // 그 길이가 없으면 원래 풀로
@@ -386,6 +611,43 @@ const MELODY_KIT = {
      이 키로는 조회되지 않는다. 'Metal' 이 이미 [] 라 결과도 같았다 —
      닿지 않는 줄은 "메탈코어는 따로 정했다"는 착각만 준다. */
 };
+
+/* ── 교차분 배정 ────────────────────────────────────────────
+   위 두 표를 **더하기만** 합니다 — 지우지도, 순서를 바꾸지도 않습니다.
+   그래서 예전에 나오던 선율은 전부 그대로 나오고, 풀에 항목이 늘 뿐입니다.
+   손으로 45줄을 고치는 대신 표를 따로 두는 이유가 이것입니다: 무엇을
+   더했는지가 한눈에 보이고, «지운 것이 없다» 를 증명할 필요가 없어집니다.
+
+   ⚠ 계열이 곧 경계입니다(genres/00-tree.md). 교차 프레이즈는 그 계열
+     안에서만 만들었으므로, 배정도 그 계열 밖으로 안 나갑니다.
+     C(힙합)·I(카리브)·J(아프리카)는 교차분이 없어 비어 있습니다. */
+const MEL_CROSS_CAT = {
+  A:['rkant_aabb','rkant_abab'],   B:['cinbal_aaba','cinbal_aabb'],
+  D:['disfun_aabb','disfun_abab'], E:['edmchp_aaab','edmchp_aabb'],
+  F:['jazbal_abab','jazbal_aaba'], G:['rootbl_aabb','rootbl_aaba'],
+  H:['latbos_aabb','latbos_abab'], K:['worcin_aaba','worcin_aabb'],
+};
+Object.entries(MEL_CROSS_CAT).forEach(([f,ns]) => MELODY_KIT_CAT[f].push(...ns));
+
+const MEL_CROSS_SUB = {
+  'Hard Rock':['rkant_aabb'], 'Alternative':['rkant_abab'], 'Post-punk 계보':['rkant_abab'],
+  'Bebop 계보':['jazbal_abab'], '현대 갈래':['jazbal_aaba'], 'Lo-fi':['jazbal_aaba'],
+  'Downtempo · Ambient · Retro':['jazbal_aaba'],
+  'Latin Jazz':['latbos_aabb'], '쿠바':['latbos_aabb'], '콜롬비아':['latbos_aabb'],
+  '브라질':['latbos_abab'], '멕시코':['latbos_abab'],
+  'Fusion 계보':['disfun_aabb'], 'Funk':['disfun_aabb'], 'Soul':['disfun_aabb'],
+  'Disco':['disfun_abab'], 'Contemporary R&B':['disfun_abab'],
+  'House 계열':['edmchp_aaab'], 'Techno 계열':['edmchp_aaab'],
+  'Trance 계열':['edmchp_aabb'], 'Breakbeat 계열':['edmchp_aabb'],
+  'Dubstep · Bass Music':['edmchp_aabb'],
+  'Synth-pop 계보':['cinbal_aabb'], 'Dance-pop 계보':['cinbal_aaba'],
+  'Teen Pop · Indie Pop':['cinbal_aaba'], '아르헨티나 · 남미 남부':['cinbal_aabb'],
+  'Blues':['rootbl_aabb'], 'Country':['rootbl_aabb'], 'Folk':['rootbl_aaba'],
+  '남아시아':['worcin_aaba'], '북아프리카':['worcin_aaba'], '동유럽 · 발칸':['worcin_aabb'],
+  /* Metal·Punk 은 건반을 안 쓰므로(빈 배열) 여기 없습니다.
+     Trap·Drill·Southern(C)·Reggae·자메이카(I)도 교차분이 없어 없습니다. */
+};
+Object.entries(MEL_CROSS_SUB).forEach(([k,ns]) => { if(MELODY_KIT[k]) MELODY_KIT[k].push(...ns); });
 
 /** 지금 걸린 프리셋에 어울리는 선율 이름 목록 */
 function melodyPoolFor(name){
