@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PULSE·16 — 사용법과 동작 원리</title>
+<link rel="icon" href="data:,">
+<!-- ⚠ 외부 오리진을 들이지 마세요. 이 사이트는 자기 자신 말고 아무 데도
+     접속하지 않습니다(샘플을 고를 때만 예외). docs/perf/04-외부의존성.md -->
+<link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/tokens.css">
+
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink,#16191d);color:var(--silk,#e6e1d6);
+       font-family:'Barlow',system-ui,sans-serif;font-size:15px;line-height:1.72}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px 120px}
+
+  header.top{position:sticky;top:0;z-index:9;background:rgba(22,25,29,.94);
+       backdrop-filter:blur(8px);border-bottom:1px solid rgba(230,225,214,.12)}
+  .topin{max-width:960px;margin:0 auto;padding:14px 22px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .brand{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:600;letter-spacing:.02em}
+  .brand b{color:var(--t-kick,#e0a044)}
+  .sub{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;
+       text-transform:uppercase;color:var(--silk-dim,#9a948a)}
+  .back{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.14em;
+       text-transform:uppercase;text-decoration:none;color:#20242a;background:var(--t-kick,#e0a044);
+       padding:7px 15px;border-radius:3px;font-weight:600;white-space:nowrap}
+  .back:hover{filter:brightness(1.1)}
+
+  h2{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:600;letter-spacing:.04em;
+     margin:56px 0 6px;padding-bottom:7px;border-bottom:2px solid var(--t-kick,#e0a044)}
+  h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:600;letter-spacing:.05em;
+     margin:32px 0 4px;color:var(--t-bass,#9fc0e8)}
+  h4{font-size:15px;font-weight:600;margin:20px 0 2px;color:var(--silk,#e6e1d6)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:5px 0}
+  code,kbd{font-family:'Space Mono',monospace;font-size:12.5px;
+       background:rgba(230,225,214,.09);padding:1.5px 6px;border-radius:3px}
+  kbd{border:1px solid rgba(230,225,214,.28);white-space:nowrap}
+  .lead{font-size:16.5px;color:var(--silk,#e6e1d6);border-left:3px solid var(--t-kick,#e0a044);
+       padding:2px 0 2px 16px;margin:18px 0}
+  .note{background:rgba(230,225,214,.05);border-left:3px solid var(--t-bass,#9fc0e8);
+       padding:12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
+  .warn{background:rgba(224,160,68,.09);border-left:3px solid var(--t-kick,#e0a044);
+       padding:12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
+  .tblwrap{overflow-x:auto;margin:16px 0}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+  th,td{text-align:left;padding:7px 11px;border-bottom:1px solid rgba(230,225,214,.13);vertical-align:top}
+  th{font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:.11em;
+     text-transform:uppercase;color:var(--silk-dim,#9a948a);white-space:nowrap}
+  td:first-child{white-space:nowrap}
+  pre{background:rgba(0,0,0,.34);border:1px solid rgba(230,225,214,.12);border-radius:4px;
+      padding:14px 16px;overflow-x:auto;font-family:'Space Mono',monospace;font-size:12px;line-height:1.62}
+  .toc{background:rgba(0,0,0,.24);border:1px solid rgba(230,225,214,.13);border-radius:5px;
+       padding:16px 20px;margin:26px 0}
+  .toc ol{columns:2;column-gap:34px;margin:6px 0 0;padding-left:20px}
+  .toc a{color:var(--silk,#e6e1d6);text-decoration:none;border-bottom:1px dotted rgba(230,225,214,.4)}
+  .toc a:hover{color:var(--t-kick,#e0a044)}
+  .flow{font-family:'Space Mono',monospace;font-size:12px;line-height:1.9;
+        background:rgba(0,0,0,.34);border:1px solid rgba(230,225,214,.12);
+        border-radius:4px;padding:16px;overflow-x:auto;white-space:pre}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid rgba(230,225,214,.13);
+       color:var(--silk-dim,#9a948a);font-size:13px}
+  @media(max-width:640px){ .toc ol{columns:1} .brand{font-size:24px} }
+</style>
+
+<header class="top"><div class="topin">
+  <span class="brand">PULSE<b>·</b>16</span>
+  <span class="sub">사용법 · 동작 원리</span>
+  <a class="back" href="pulse16-mk16.html">← 도구로 돌아가기</a>
+</div></header>
+
+<div class="wrap">
+
+<p class="lead">
+  브라우저에서 도는 16스텝 리듬·화성 생성기입니다. 서버도 로그인도 없고,
+  파일을 더블클릭해도 열립니다. 소리는 전부 <b>그 자리에서 합성</b>합니다 —
+  음원 파일을 재생하는 것이 아닙니다.
+</p>
+
+<div class="toc">
+  <b style="font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:13px">차례</b>
+  <ol>
+    <li><a href="#start">30초 시작</a></li>
+    <li><a href="#screen">화면 구성</a></li>
+    <li><a href="#tracks">12개 트랙</a></li>
+    <li><a href="#engines">음색 엔진 186종</a></li>
+    <li><a href="#knobs">노브 전체</a></li>
+    <li><a href="#variation">스스로 바뀌는 것들</a></li>
+    <li><a href="#how">동작 원리</a></li>
+    <li><a href="#synth">합성 방식 네 가지</a></li>
+    <li><a href="#chain">오디오 체인</a></li>
+    <li><a href="#preset">프리셋이 정하는 것</a></li>
+    <li><a href="#save">저장 · 오프라인</a></li>
+    <li><a href="#keys">단축키</a></li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="start">1. 30초 시작</h2>
+<ol>
+  <li><b>프리셋 칩을 누릅니다.</b> 맨 위 <b>Pattern Library</b> 에 357개가 있습니다.
+      장르 이름을 누르면 패턴·음색·템포·조성이 통째로 올라옵니다.</li>
+  <li><b>Play</b> 를 누릅니다 (<kbd>Space</kbd>).</li>
+  <li>그리드를 눌러 패턴을 고칩니다. 드래그하면 연속으로 찍힙니다.</li>
+  <li><b>Variation</b> 스위치를 켜면 루프가 돌면서 <b>스스로 바뀝니다</b> —
+      틀어 놓고 듣는 것이 이 도구의 기본 사용법입니다.</li>
+</ol>
+<div class="note">
+  첫 조작(아무 클릭·키 입력)에서 오디오 그래프를 미리 짓습니다. 그래서 Play 첫 클릭이
+  즉시 울립니다. 브라우저는 사용자 제스처 없이 소리를 못 내므로, 페이지를 열자마자
+  자동 재생되지는 않습니다.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="screen">2. 화면 구성</h2>
+<div class="tblwrap"><table>
+<tr><th>영역</th><th>하는 일</th></tr>
+<tr><td><b>Pattern Library</b></td><td>프리셋 357종. 칩에 표시가 있는 것은 <i>tone</i>(음색까지 지정) ·
+  <i>gen</i>(규칙으로 유도한 파생 — 청감 미검증)입니다.</td></tr>
+<tr><td><b>Sample Bank</b></td><td>외부 드럼 샘플을 트랙에 배정합니다. <b>이것만 네트워크를 씁니다.</b>
+  실패해도 합성 엔진으로 자동으로 되돌아가므로 전 기능을 그대로 씁니다.</td></tr>
+<tr><td><b>Loop Deck</b></td><td>배경 루프 재생. 박자 동기는 하지 않습니다.</td></tr>
+<tr><td><b>Transport</b></td><td>Play · Tempo · Swing · Chance · Master · 뱅크 A~D · Undo/Redo.</td></tr>
+<tr><td><b>Variation</b></td><td>루프가 돌 때 스스로 바뀌는 것들 — 아래 §6.</td></tr>
+<tr><td><b>Sequencer</b></td><td>드럼 7트랙 그리드 + 음정 트랙 피아노롤.</td></tr>
+<tr><td><b>Panels</b></td><td>Tune · Bass · Keys · Master · Studio 다섯 패널.</td></tr>
+<tr><td><b>Meters</b></td><td>출력 레벨과 게인 리덕션(압축량).</td></tr>
+</table></div>
+
+<h3>패턴 뱅크 A~D</h3>
+<p>독립 슬롯 넷입니다. 곡의 구간(인트로·벌스·코러스)을 따로 담아 두고
+<kbd>1</kbd>~<kbd>4</kbd> 로 넘깁니다. <b>곡 구조</b> 를 켜면 섹션이 바뀔 때
+자동으로 다른 뱅크로 넘어갑니다.</p>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="tracks">3. 12개 트랙</h2>
+<p>드럼 7 + 음정 5 입니다. <b>트랙은 이름에 묶이지 않습니다</b> — 장르에 따라
+<code>tom</code> 이 로그드럼·콩가·수르두가 되고, <code>clap</code> 이 탬버린이 됩니다.</p>
+
+<div class="tblwrap"><table>
+<tr><th>트랙</th><th>기본 역할</th><th>팬</th><th>비고</th></tr>
+<tr><td><code>kick</code></td><td>킥</td><td>0</td><td>칠 때마다 베이스·건반 버스를 잠깐 눌러 줍니다(사이드체인)</td></tr>
+<tr><td><code>snare</code></td><td>스네어</td><td>−0.06</td><td>노이즈(와이어) + 삼각파 2개(몸통)</td></tr>
+<tr><td><code>clap</code></td><td>클랩</td><td>−0.30</td><td>짧은 박수 여러 번 + 마지막에 테일</td></tr>
+<tr><td><code>chat</code></td><td>클로즈드 하이햇</td><td>+0.30</td><td rowspan="2">오픈이 울리면 클로즈드가 초크(choke)합니다 — 실물과 같습니다</td></tr>
+<tr><td><code>ohat</code></td><td>오픈 하이햇</td><td>+0.38</td></tr>
+<tr><td><code>tom</code></td><td><b>음정 있는</b> 막울림</td><td>−0.34</td><td>튠 노브를 따라갑니다. 톰·콩가·타블라·수르두</td></tr>
+<tr><td><code>perc</code></td><td><b>음정 없는</b> 금속·나무</td><td>+0.44</td><td>튠을 안 따릅니다. 셰이커·클라베·아고고</td></tr>
+<tr><td><code>bass</code></td><td>베이스</td><td>0</td><td>모노 — 새 음이 나면 이전 음을 끊습니다</td></tr>
+<tr><td><code>keys</code></td><td>건반 1</td><td>0</td><td>화음. 스텝당 최대 8음</td></tr>
+<tr><td><code>gtr</code></td><td>기타 1</td><td>—</td><td>앰프 체인을 거칩니다</td></tr>
+<tr><td><code>keys2</code></td><td>건반 2</td><td>−0.26</td><td rowspan="2"><b>코러스 섹션에서만</b> 켜지는 레이어입니다.
+  곡 구조를 끄면 항상 울립니다</td></tr>
+<tr><td><code>gtr2</code></td><td>기타 2</td><td>−0.18</td></tr>
+</table></div>
+
+<div class="note">
+  <b>같은 악기를 두 종류 동시에 낼 수 있습니다.</b> <code>keys</code> 에 피아노,
+  <code>keys2</code> 에 스트링을 걸면 둘이 함께 울립니다. 기타도 마찬가지입니다 —
+  음정 악기 최대 4개가 동시에 다른 음색으로 연주됩니다. 베이스는 1트랙뿐입니다.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="engines">4. 음색 엔진 186종</h2>
+<div class="tblwrap"><table>
+<tr><th>트랙</th><th>수</th><th>예</th></tr>
+<tr><td>kick</td><td>9</td><td>Deep Boom · Punch · Tight · Acoustic · 808 Long · 909 · Pure Sub · Jazz · Gabber</td></tr>
+<tr><td>snare</td><td>13</td><td>Analog Body · Crack · Gated · Lo-fi · Brush · Rimshot · 808 · 909 · Piccolo · Marching · DnB · Trap · Fat</td></tr>
+<tr><td>clap</td><td>9</td><td>Spread · Tight · Hall · Finger Snap · 808 · 909 · Stack · Room · Dry</td></tr>
+<tr><td>chat / ohat</td><td>7 · 7</td><td>6-Osc Metal · Noise · Tick · Sizzle · Dark · Foot · Crisp</td></tr>
+<tr><td>tom</td><td>17</td><td>Analog · Conga · Bongo · Timbale · Log Drum · Cowbell · Surdo · Djembe · Tabla · Taiko · Darbuka · Cuíca · Talking Drum …</td></tr>
+<tr><td>perc</td><td>19</td><td>Shaker · Clave · Agogô · Güiro · Maraca · Sekere · Sleigh Bells · Bamboo Chimes · Angklung · Water Drops · Coke Can …</td></tr>
+<tr><td>bass</td><td>27</td><td>808 Sub · Acid · Reese · Moog · Finger · Pick · Slap · Upright · Fretless · Flatwound · Guitarrón · Growl · Buzz …</td></tr>
+<tr><td>keys</td><td>43</td><td>Piano · Rhodes(EP) · Wurlitzer · Clavinet · Organ · Strings · Choir · Horns · Accordion · Bandoneon · Vibraphone · Glockenspiel · Celesta · Kalimba · Music Box · Tubular Bells · Clarinet · Flute · Trumpet …</td></tr>
+<tr><td>gtr</td><td>35</td><td>Clean · Crunch · Hi-Gain · Palm Mute · Nylon · 12-String · Pedal Steel · Banjo · Mandolin · Sitar · Oud · Bouzouki · Koto · Shamisen · Pipa · Kora · Harp · Jazz Archtop · Slide …</td></tr>
+</table></div>
+
+<div class="note">
+  타악기·말렛·FM 건반 상당수는 <b>Synthesis ToolKit</b>(Perry R. Cook · Gary P. Scavone, MIT)의
+  실측 파라미터를 환산해 넣었습니다. 막울림·막대 악기는 원형막의 베셀 0점 모드비와
+  자유단 막대의 횡진동 모드비를 씁니다. 출처와 환산식은
+  <code>docs/음색/01-STK차용.md</code> 에 대조표로 남겨 두었습니다.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="knobs">5. 노브 전체</h2>
+
+<h3>Tune 패널 — 드럼 음정</h3>
+<p><b>Kick · Snare · Tom · Hat</b> 각 트랙의 음정을 반음 단위로 옮깁니다.
+내리면 감쇠가 함께 길어집니다(실물 드럼이 그렇습니다).</p>
+
+<h3>Bass 패널</h3>
+<div class="tblwrap"><table>
+<tr><th>노브</th><th>하는 일</th></tr>
+<tr><td>Bass Semi / Oct</td><td>이조 · 옥타브</td></tr>
+<tr><td>Root / Scale</td><td>곡 전체의 조성과 음계. 모든 음정 트랙이 여기 맞춰 스냅됩니다</td></tr>
+<tr><td>Length</td><td>음 길이(게이트)</td></tr>
+<tr><td>Glide</td><td>포르타멘토 — 이전 음의 주파수에서 미끄러져 옵니다</td></tr>
+<tr><td>Blend</td><td>서브(사인)와 배음부의 비율</td></tr>
+<tr><td>Drive</td><td>배음부 새추레이션</td></tr>
+<tr><td>X-Over</td><td>서브와 배음부를 가르는 주파수</td></tr>
+<tr><td>Tone</td><td>배음부 로우패스</td></tr>
+</table></div>
+<p class="note" style="margin-top:8px">Blend·Drive·X-Over·Tone 은 <b>합성 베이스 전용</b>입니다.
+현 베이스(핑거·픽·슬랩·업라이트·프렛리스…)는 실제 현을 모델링하므로 Drive 만 앰프 앞단으로 걸립니다.</p>
+
+<h3>Keys 패널</h3>
+<p><b>Keys / Gtr</b> 각각 Semi · Oct · Length. 그 아래 <b>Bass · Keys · Gtr · Keys2 · Gtr2</b>
+다섯 트랙의 볼륨과 음색 선택이 있습니다.</p>
+
+<h3>Master 패널</h3>
+<div class="tblwrap"><table>
+<tr><th>노브</th><th>하는 일</th></tr>
+<tr><td>Bus Trim</td><td>믹스 버스 입력 레벨</td></tr>
+<tr><td>Limit Thr / Rel</td><td>리미터 문턱 · 릴리스</td></tr>
+<tr><td>Glue Atk / Amt</td><td>글루 컴프레서 — 전체를 한 덩어리로 붙입니다</td></tr>
+<tr><td>Sub</td><td>저역 병렬 경로 — 새추레이션을 거친 저역을 따로 더합니다</td></tr>
+<tr><td>Exciter</td><td>고역 병렬 경로 — 배음을 만들어 더합니다</td></tr>
+<tr><td>Punch</td><td>드럼 트랜지언트 강조</td></tr>
+<tr><td>Drive</td><td>마스터 새추레이션</td></tr>
+<tr><td>Width</td><td>스테레오 폭</td></tr>
+</table></div>
+
+<h3>Studio 패널</h3>
+<div class="tblwrap"><table>
+<tr><th>노브</th><th>하는 일</th></tr>
+<tr><td>Reverb / Space / Rev Width</td><td>리버브 양 · 공간 크기 · 폭</td></tr>
+<tr><td>Sidechain</td><td>킥이 칠 때 베이스·건반·리버브를 누르는 깊이</td></tr>
+<tr><td>Human</td><td>타이밍·세기·음정의 미세한 흔들림. 0 이면 완전히 기계적입니다</td></tr>
+<tr><td>Chance</td><td>스텝이 실제로 울릴 확률 — 낮추면 성기게 연주합니다</td></tr>
+</table></div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="variation">6. 스스로 바뀌는 것들 (Variation)</h2>
+<p>이 도구의 핵심입니다. 각 항목은 <b>루프 개수</b>를 주기로 돕니다.</p>
+<div class="tblwrap"><table>
+<tr><th>항목</th><th>무엇이 바뀌나</th></tr>
+<tr><td><b>Kit 셔플</b></td><td>드럼 음색을 갈아끼웁니다</td></tr>
+<tr><td><b>패턴 셔플</b></td><td>패턴을 다른 프리셋으로 바꿉니다. 모드로 범위(같은 장르/계열/전체)를 정합니다</td></tr>
+<tr><td><b>필인</b></td><td>루프 끝에 필인을 넣습니다. 작은 것과 큰 것을 따로 돌립니다</td></tr>
+<tr><td><b>선율 · 기타 리프</b></td><td>16마디 선율 라이브러리에서 골라 연주합니다. 길이·레이어를 정합니다</td></tr>
+<tr><td><b>곡 구조</b></td><td>인트로 → 벌스 → 프리코러스 → 코러스 → 브릿지 → 브레이크 → 아웃트로.
+  섹션마다 <b>트랙을 끄고 레벨을 바꿉니다</b></td></tr>
+<tr><td><b>화성 진행</b></td><td>마디마다 코드가 바뀌고, 건반·베이스·기타가 그 코드에 스냅됩니다</td></tr>
+<tr><td><b>그루브</b></td><td>장르별 스윙·벨로시티 느낌을 트랙마다 다르게 밀고 당깁니다</td></tr>
+</table></div>
+
+<div class="warn">
+  <b>곡 구조를 켜면 트랙이 사라집니다 — 고장이 아닙니다.</b> 인트로는 킥·베이스·하이햇만,
+  브레이크는 거의 전부 끕니다. <code>keys2</code>·<code>gtr2</code> 는
+  <b>코러스에서만</b> 켜집니다. 항상 다 듣고 싶으면 곡 구조를 끄십시오.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="how">7. 동작 원리</h2>
+
+<h3>7-1. 소리는 미리 만들어 두지 않습니다</h3>
+<p>음원 파일이 없습니다. 스텝이 올 때마다 오실레이터·필터·노이즈를 <b>그 자리에서 조립</b>해
+울리고, 끝나면 해체합니다. 그래서 전체가 500 KB 남짓이고 음색을 무한히 비틀 수 있습니다.</p>
+
+<h3>7-2. 스케줄러 — 왜 <code>setInterval</code> 이 아닌가</h3>
+<p>자바스크립트 타이머는 수십 밀리초씩 흔들립니다. 그걸로 드럼을 치면 사람이 바로 알아챕니다.
+그래서 <b>오디오 시계</b>를 씁니다 — 지금 울리는 것이 아니라 <b>미래의 정확한 시각을 예약</b>합니다.</p>
+<pre>onTick(t)  →  t 는 «이 스텝이 울려야 할 오디오 시각»
+              지금이 아니라 조금 뒤(lookAhead)입니다.
+              그 사이에 노드를 만들어 t 에 맞춰 예약해 둡니다.
+              메인 스레드가 잠깐 늦어도 소리는 안 흔들립니다.</pre>
+<p>Tone.js 가 있으면 그 트랜스포트를, 없으면 내장 폴백 스케줄러가 같은 일을 합니다.
+화면 갱신은 오디오와 분리돼 있어, 그림이 늦어도 소리는 정확합니다.</p>
+
+<h3>7-3. 노드 풀 — 만들고 버리지 않습니다</h3>
+<p>스텝마다 노드를 새로 만들면 가비지 컬렉터가 주기적으로 멈추고, 그 멈춤이 곧 글리치입니다.
+게인·필터 노드를 <b>풀에 넣고 돌려 씁니다.</b> 화면의 <code>nodes</code> 숫자가 지금 살아 있는 노드 수입니다.</p>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="synth">8. 합성 방식 네 가지</h2>
+<p>악기마다 «무엇이 소리를 내는가» 가 달라서 회로를 넷으로 나눠 씁니다.</p>
+
+<h4>① 감산 합성 — 신스·오르간·관악·스트링</h4>
+<p>오실레이터를 여러 개 쌓고 <b>24 dB/oct 로우패스</b>로 깎습니다. 필터가 음정을 얼마나
+따라가는지(key scaling)와 <b>몸통 공명</b>이 «신스 패치» 와 «악기» 를 가릅니다.
+몸통은 음정을 <b>안</b> 따라갑니다 — 통 크기는 고정이니까요.</p>
+
+<h4>② Karplus-Strong — 뜯은 현 (기타·베이스·민속 발현악기 35+7종)</h4>
+<p>짧은 지연선에 초기 변위를 넣고, 한 바퀴 돌 때마다 조금씩 깎으며 되먹입니다.
+현이 실제로 하는 일과 같습니다.</p>
+<pre>뜯는 위치(β)  →  배음 널이 n = 1/β 에 섭니다
+픽업 위치      →  또 다른 널. 두 널이 겹치면 배음에 구멍이 나므로 떨어뜨립니다
+루프 저역통과  →  고역이 먼저 죽습니다 (굵은 현일수록 빨리)
+복현(course)   →  한 음을 두 줄로. 두 줄이 절대 안 맞는 그 어긋남이 음색입니다
+자와리(buzz)   →  시타르·샤미센. 진폭이 문턱을 넘는 동안만 접혀 부서집니다</pre>
+<p>라이브 지연선으로는 낮은 음을 못 냅니다(블록 크기 때문에 상한 187.5 Hz).
+그래서 <b>한 음을 통째로 버퍼에 구워 캐시</b>합니다.</p>
+
+<h4>③ 비조화 가산 합성 — 때린 현·막대 (피아노·하프시코드·비브라폰·글로켄…)</h4>
+<p>피아노가 오르간처럼 안 들리는 이유는 <b>비조화성</b>입니다. 현이 뻣뻣해서 배음이
+정수배보다 <b>높습니다</b>:</p>
+<pre>f_n = n · f0 · √(1 + B·n²)      B = 비조화 계수(저음일수록 큼)</pre>
+<p>배음 수십 개를 실시간 오실레이터로는 못 냅니다 — 역시 <b>구워서</b> 씁니다.
+막대(마림바·글로켄)는 정수배가 아예 아니라 모드비를 직접 줍니다.</p>
+
+<h4>④ 병렬 모달 뱅크 — 몸통 공명 (밴조 가죽 헤드·시타르 박·스틸팬 통)</h4>
+<p>직렬 peaking EQ 는 기울기만 바꿀 뿐 <b>스스로 울지 않습니다.</b> 가죽 헤드가 받아 우는 것이
+밴조의 정체성이라, 병렬 밴드패스를 가중합해 실제로 공진시킵니다.</p>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="chain">9. 오디오 체인</h2>
+<div class="flow">보이스(오실레이터·노이즈·구운 버퍼)
+   │
+   ├─ chan[트랙]  ── 기타는 앰프+FX, 건반은 코러스를 거침
+   │      │
+   │      ├─ panner[트랙] ─┬─ 킥·베이스·건반 → duckNode(사이드체인) ─┐
+   │      │                └─ 그 외 ─────────────────────────────┤
+   │      └─ send[트랙] → sendMono → 컨볼루션 리버브 → 폭 확장 ──┤
+   │                                                              ▼
+   │                                                          mixBus
+   │                                                             │
+   │                                                         busTrim
+   │                        ┌────────────────┬───────────────────┤
+   │                    (본선)            (Sub 병렬)        (Exciter 병렬)
+   │                  럼블 컷·글루컴프    저역 새추레이션      고역 배음 생성
+   │                        └────────────────┴───────────────────┘
+   │                                        ▼
+   │                                     sumBus
+   │                                        │
+   │                        마스터 새추레이션 → masterGain
+   │                                        │
+   │                                    리미터
+   │                                        │
+   │                          트루피크 실링(−3 dB 점근)
+   │                                        ▼
+   └───────────────────────────────────  스피커</div>
+
+<div class="note">
+  <b>트루피크 실링이 왜 따로 있나.</b> 리미터는 어택이 4 ms 라 1 ms 급 킥 클릭을 못 잡습니다.
+  실측에서 정상 상태는 −3.5 dBFS 인데 트랜지언트가 그걸 3.5 dB 뚫고 나가 0 dBFS 를
+  넘었습니다. 그래서 샘플 단위로 즉시 듣는 소프트 클리퍼를 하나 더 뒀습니다.
+  문턱 아래는 <b>손대지 않습니다</b> — 라우드니스를 지키는 자리입니다.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="preset">10. 프리셋이 정하는 것</h2>
+<p>프리셋 하나는 <b>패턴 + 음색 + 템포 + 조성 + 노브값</b> 한 벌입니다.
+음색은 두 단계로 정해집니다.</p>
+<ol>
+  <li><b>프리셋 자신의 지정</b> — 있으면 무조건 이깁니다.</li>
+  <li><b>하위분기 배정표</b> — 프리셋이 안 적은 자리를 채웁니다.
+      «Trap 계열» · «House 계열» · «쿠바» 같은 64개 분기마다
+      건반·기타·베이스·퍼커션·2번 트랙을 정해 둡니다.</li>
+</ol>
+<p>프리셋이 늘어도 배정표는 안 늘어납니다. 특정 프리셋만 예외를 두고 싶으면
+그 프리셋에 직접 적으면 됩니다.</p>
+
+<div class="warn">
+  <b>트랩의 킥이 «808 Long» 이 아니라 «Tight» 인 것은 의도입니다.</b>
+  베이스가 808(감쇠 긴 서브)인데 킥까지 1.6초 서브를 쓰면 저역이 충돌합니다.
+  둘 중 하나는 자리를 비켜야 합니다 — 트랩에서는 킥이 비킵니다.
+</div>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="save">11. 저장 · 오프라인</h2>
+<ul>
+  <li><b>자동 저장.</b> 만지는 대로 브라우저에 저장되고, 다음에 열면 그대로 복원됩니다.
+      서버로 아무것도 보내지 않습니다.</li>
+  <li><b>오프라인.</b> 폰트와 오디오 라이브러리가 저장소 안에 들어 있어,
+      비행기 안에서도 <b>전 기능이 동작합니다.</b> 유일한 예외가 외부 드럼 샘플인데,
+      못 받으면 합성 엔진으로 알아서 되돌아갑니다.</li>
+  <li><b>파일로 열기.</b> 빌드 도구가 없습니다. HTML 파일을 더블클릭하면 그대로 돕니다.</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<h2 id="keys">12. 단축키</h2>
+<div class="tblwrap"><table>
+<tr><th>키</th><th>하는 일</th></tr>
+<tr><td><kbd>Space</kbd></td><td>재생 / 정지</td></tr>
+<tr><td><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <kbd>4</kbd></td><td>패턴 뱅크 A~D 전환</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>실행취소</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>다시하기</td></tr>
+<tr><td>드래그</td><td>패드·노트를 끌어서 연속 입력 / 지우기</td></tr>
+<tr><td><kbd>?</kbd></td><td>도움말 열기</td></tr>
+<tr><td><kbd>Esc</kbd></td><td>닫기</td></tr>
+</table></div>
+
+<footer>
+  더 깊은 내용은 저장소 문서에 있습니다 —
+  <code>ARCHITECTURE.md</code>(파일 구조) ·
+  <code>docs/perf/</code>(성능 실측) ·
+  <code>docs/음색/</code>(음색 출처와 환산) ·
+  <code>genres/</code>(장르별 편성).
+  <br><br>
+  <a class="back" href="pulse16-mk16.html" style="display:inline-block">← 도구로 돌아가기</a>
+</footer>
+
+</div>
+</html>

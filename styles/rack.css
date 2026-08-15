@@ -96,6 +96,8 @@
 .slot[data-filled="1"]::after{content:"";position:absolute;left:50%;bottom:3px;
   width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--t-bass)}
 .slot[data-filled="0"]{color:#5b626b}
+/* 사용법 링크는 <a> 라 인라인입니다 — height 가 안 먹으므로 정렬을 맞춥니다 */
+a.util{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 .util:hover,.slot:hover{color:var(--silk)}
 .util:disabled{opacity:.4;cursor:not-allowed}
 
