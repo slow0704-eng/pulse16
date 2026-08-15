@@ -32,11 +32,25 @@ python -m http.server 8000
 
 ## 문서
 
+**먼저 볼 것**
+
+- [`manual.html`](manual.html) — **사용자용 사용법과 동작 원리** (사이트 안 페이지. 앱 헤더의 「사용법」 버튼)
+- [`docs/시스템설명서.md`](docs/시스템설명서.md) — 아키텍처 · 런타임 · 신호 경로 · 성능 · 인터페이스
+- [`docs/시스템-비즈니스설명서.md`](docs/시스템-비즈니스설명서.md) — 장르 체계 · 음색 배정 · 변주 규칙 · 음악 이론 규칙
+
+**자료**
+
 - [`genres/`](genres/) — 세부장르별 특징과 대표 레퍼런스
 - [`melody/`](melody/) — 화성·선율 이론과 선율 라이브러리의 근거
 - [`patterns/`](patterns/) — 패턴 표기법과 리듬 자료
 - [`consulting/`](consulting/) — ISP · EA · ISMP
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — 파일 분리 구조와 알려진 위험
+
+**측정 · 검토 기록**
+
+- [`docs/perf/`](docs/perf/) — 오디오 런타임 · 로딩과 전달 · WebAssembly 검토 · 외부 의존성
+- [`docs/음색/`](docs/음색/) — 엔진 파라미터 출처(STK 등)와 환산식
+- [`docs/qa/`](docs/qa/) — 신뢰성 검토
 
 ## 측정 먼저
 
