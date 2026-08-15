@@ -187,7 +187,7 @@ function chordDegAt(p, bar){
     예: chordSemis(3,'Natural Minor') → TRIAD(3)={3,5,7} →
         [SCALES['Natural Minor'][3], [5], [7]] = [5,8,12]. */
 function chordSemis(rootDeg, scaleName, type){
-  return chordVoicing(chordMask(((rootDeg % 8) + 8) % 8, type || 'triad'), scaleName);
+  return chordVoicing(chordMask(((rootDeg % 8) + 8) % 8, type || 'triad', scaleName), scaleName);
 }
 
 /** 선율 도수를 그 마디 화음의 구성음으로 스냅한다.
@@ -201,7 +201,7 @@ function chordSemis(rootDeg, scaleName, type){
     없어져 함수가 있으나 마나 해진다. */
 function snapDeg(deg, rootDeg, scaleName, type){
   const t = type || 'triad';
-  const raw = chordMask(((rootDeg % 8) + 8) % 8, t);
+  const raw = chordMask(((rootDeg % 8) + 8) % 8, t, scaleName);
   /* 확장 화음은 도수가 8 이상까지 올라간다(9도·13도). 선율 도수는 0~7 이므로
      그대로 견주면 영영 안 맞는다 — **옥타브 안으로 접어 «음이름» 으로** 견준다.
      ⚠ 3화음일 때는 접지 않는다. TRIAD 는 이미 7 을 넘으면 −7 자리바꿈을 해

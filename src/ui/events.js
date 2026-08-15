@@ -257,16 +257,30 @@ UI.fillmode.onchange = e => {
 /* ── 스튜디오 · 음정 셀렉트 ── */
 UI.space.onchange = e => { if(convolver) convolver.buffer=IR[e.target.value]; markDirty(); };
 UI.root.onchange  = e => { rootNote=+e.target.value; syncLabels(); markDirty(); };
-UI.scale.onchange = e => { scaleName=e.target.value; syncLabels(); markDirty(); };
+UI.scale.onchange = e => {
+  scaleName=e.target.value;
+  /* 스케일이 바뀌면 화음 모양도 바뀐다(5음계 전용 모양 — pattern-codec.js
+     CHORD_PENTA). 마스크는 kpat 이 구워 둔 것이라 다시 구워야 반영된다. */
+  if(typeof rebakeKeys==='function') rebakeKeys();
+  syncLabels(); markDirty();
+};
+/** 지금 걸린 프리셋의 원본 문자열로 건반 마스크를 다시 굽는다 */
+function rebakeKeys(){
+  const R = (typeof RAW!=='undefined') && RAW[src.keys];
+  if(R && R.keys) P.keys = kpat(R.keys, chordType, scaleName);
+  const R2 = (typeof RAW!=='undefined') && RAW[src.keys2];
+  if(R2 && R2.keys2) P.keys2 = kpat(R2.keys2, chordType, scaleName);
+  if(typeof syncKeys==='function') syncKeys();
+}
 /* 화음 종류를 바꾸면 **이미 펼쳐 둔 마스크를 다시 펴야** 합니다.
    P.keys 는 kpat 이 구운 비트마스크라, 종류만 바꾸고 두면 안 바뀝니다.
    지금 걸린 프리셋의 원본 문자열로 다시 굽습니다. */
 if(UI.chord) UI.chord.onchange = e => {
   chordType = e.target.value;
   const n = src.keys, R = (typeof RAW!=='undefined') && RAW[n];
-  if(R && R.keys) P.keys = kpat(R.keys, chordType);
+  if(R && R.keys) P.keys = kpat(R.keys, chordType, scaleName);
   const n2 = src.keys2, R2 = (typeof RAW!=='undefined') && RAW[n2];
-  if(R2 && R2.keys2) P.keys2 = kpat(R2.keys2, chordType);
+  if(R2 && R2.keys2) P.keys2 = kpat(R2.keys2, chordType, scaleName);
   syncKeys(); markDirty();
 };
 UI.oct.onchange   = e => { baseOct=+e.target.value; syncLabels(); markDirty(); };

@@ -40,7 +40,24 @@ for(const [n,p] of Object.entries(RAW)){
      구분할 수 없습니다. 그래서 예외를 두고 싶은 프리셋은 kit.bass 에 적습니다.
      이 통로가 없으면 하위분기 하나에 묶인 프리셋들이 전부 같은 베이스가 됩니다. */
   const bassEng = kit.bass || T.bass || null;
-  const bcfg = bassEng ? {...p.bcfg, eng:bassEng} : p.bcfg;
+  const bcfg = {...p.bcfg};
+  if(bassEng) bcfg.eng = bassEng;
+
+  /* ── 스케일 ──────────────────────────────────────────────────
+     확장 화음(7·9·13화음)은 **7음계라야 제 소리가 납니다.** 5음계에서
+     r·r+2·r+4 는 3화음이 아니라 4도 쌓기가 되기 때문입니다(pattern-codec.js).
+     보사노바에 nine 을 얹어도 A-D-C-E 가 나오던 이유가 이것입니다.
+
+     그런데 프리셋의 스케일은 대부분 **고른 값이 아니라 기본값이 복사된 것**
+     으로 보입니다 — 357개 중 286개(80%)가 Minor Pentatonic 이고,
+     **356개가 근음 9로 같습니다.** state.js 의 초기값과 정확히 같습니다.
+
+     그래서 «기본값이면 하위분기 값으로 덮고, 일부러 고른 값이면 존중» 합니다.
+     비펜타토닉을 적어 둔 71개(Dorian·Major·Natural Minor)는 안 건드립니다.
+
+     ⚠ 블루스는 **일부러 펜타토닉으로 남겨 뒀습니다.** 블루스 음계가 곧
+       펜타토닉이고, 그 위에 도미넌트 7화음을 얹는 것이 블루스의 어법입니다. */
+  if(T.scale && bcfg.scale === 'Minor Pentatonic') bcfg.scale = T.scale;
 
   /* off — 그 장르가 안 쓰는 악기는 패턴을 비웁니다.
      음소거가 아니라 패턴을 비우는 쪽입니다. 음소거는 상태로 남아
@@ -57,11 +74,11 @@ for(const [n,p] of Object.entries(RAW)){
     bpm:p.bpm, swing:p.swing, kit, bcfg, tune:p.tune, tone:!!p.tone,
     cat:p.cat||null, gen:!!p.gen,
     prob:p.prob||null, smp:p.smp||null, bass:bpat(p.bass),
-    keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys, kit.chord),
+    keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys, kit.chord, bcfg.scale),
     gtr : (blankGtr || !p.gtr) ? new Array(STEPS).fill(-1) : bpat(p.gtr),
     /* 2번 트랙은 프리셋이 적으면 쓰고, 없으면 빈 패턴.
        16마디 선율 모드에서는 라이브러리가 채웁니다. */
-    keys2: p.keys2 ? kpat(p.keys2, kit.chord) : new Array(STEPS).fill(0),
+    keys2: p.keys2 ? kpat(p.keys2, kit.chord, bcfg.scale) : new Array(STEPS).fill(0),
     gtr2 : p.gtr2  ? bpat(p.gtr2)  : new Array(STEPS).fill(-1),
     drums:Object.fromEntries(TRACKS.map(t =>
       [t.id, pat(t.id==='perc' ? (off.includes('perc') ? null : percPat) : p[t.id])])),

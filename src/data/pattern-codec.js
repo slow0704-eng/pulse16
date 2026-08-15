@@ -61,6 +61,33 @@ const CHORD = {
   eleven  : [0,2,6,10],    // 1-3-7-11
   thirteen: [0,2,6,12],    // 1-3-7-13
 };
+/* ── 5음계 전용 모양 ──────────────────────────────────────────
+   ⚠ **도수 오프셋은 7음계를 전제합니다.** 5음계는 도수 간격이 달라
+     같은 오프셋이 전혀 다른 음정이 됩니다:
+
+       5음계 도수  0→근음  1→단3도  2→완전4도  3→완전5도  4→단7도
+
+   그래서 그대로 쓰면 이런 일이 납니다(실측):
+     power [0,4]  → 근음 + **단7도**.  파워코드인데 5도가 없습니다.
+     sus4  [0,3,4]→ 근음 + 5도 + b7.  4도가 없습니다.
+     add9  [0,2,4,8] → 9도 자리에 **5도의 옥타브 위**가 옵니다.
+
+   5음계에 장2도(9도)가 아예 없으므로 add9·sus2 는 성립하지 않습니다 —
+   3화음(4도 쌓기)으로 되돌립니다. power·sus4 는 도수를 고쳐 잡습니다.
+
+   ⚠ triad 는 **일부러 안 고칩니다.** 5음계의 «4도 쌓기» 는 힙합·록에서
+     오히려 정확한 소리이고(위 CHORD 주석), 프리셋 357개가 이미 그 소리입니다.
+   ⚠ sev·nine 도 그대로 둡니다 — 5음계에서 b7 과 #9 가 나와
+     블루스·펑크 어법(7#9)에 맞습니다. */
+const CHORD_PENTA = {
+  power   : [0,3],      // 1-5
+  sus4    : [0,2,3],    // 1-4-5
+  sus2    : [0,2,3],    // 장2도가 없다 → sus4 로 대신한다
+  add9    : [0,2,4],    // 9도가 없다 → 3화음
+  eleven  : [0,2,4],
+  thirteen: [0,2,4],
+  six     : [0,2,3,4],  // 1-4-5-b7 (5음계의 6도는 없다)
+};
 const CHORD_NAMES = Object.keys(CHORD);
 /* 근음 0~6 + 최대 오프셋 12 = 18. 렌더 루프는 이 값까지 훑어야 한다. */
 const DEG_MAX = 19;
@@ -71,10 +98,12 @@ const DEG_MAX = 19;
       기존 프리셋 357개가 전부 '0'~'7' 로 적혀 있으므로, 여기가 달라지면
       전 프리셋의 소리가 바뀝니다. 확장 화음만 자리바꿈 없이 위로 쌓습니다 —
       9도를 옥타브 안으로 접으면 근음과 장2도로 부딪혀 뭉치기 때문입니다. */
-function chordMask(r, type){
-  const shape = CHORD[type];
-  if(!shape || type==='triad') return TRIAD(r);
-  const root = ((r % 7) + 7) % 7;                 // 확장 화음은 근음을 0~6 으로
+function chordMask(r, type, scaleName){
+  if(type==='triad' || !CHORD[type]) return TRIAD(r);
+  const penta = (typeof SCALE_N!=='undefined') && SCALE_N[scaleName] === 5;
+  const shape = (penta && CHORD_PENTA[type]) || CHORD[type];
+  const n = penta ? 5 : 7;
+  const root = ((r % n) + n) % n;                 // 확장 화음은 근음을 옥타브 안으로
   let m = 0;
   for(const o of shape) m |= 1 << (root + o);
   return m;
@@ -120,12 +149,12 @@ const KPAT_EXPLICIT = [
   ['A','H','sev'], ['I','P','nine'], ['Q','X','add9'],
   ['i','p','sus4'], ['q','x','six'],
 ];
-const kpat = (s, type) => s
+const kpat = (s, type, scaleName) => s
   ? [...s].map(c => {
       if(c==='-') return 0;
-      if(c>='0' && c<='7') return chordMask(+c, type || 'triad');
+      if(c>='0' && c<='7') return chordMask(+c, type || 'triad', scaleName);
       for(const [lo,hi,t] of KPAT_EXPLICIT)
-        if(c>=lo && c<=hi) return chordMask(c.charCodeAt(0)-lo.charCodeAt(0), t);
+        if(c>=lo && c<=hi) return chordMask(c.charCodeAt(0)-lo.charCodeAt(0), t, scaleName);
       const d=c.charCodeAt(0)-97;               // 'a' → 0
       return (d>=0 && d<8) ? (1<<d) : 0;
     })
