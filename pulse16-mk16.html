@@ -5,10 +5,12 @@
 <title>PULSE·16 MK XVI — Verified Presets</title>
 <!-- 빈 파비콘 — 없으면 브라우저가 매 로드마다 favicon.ico 404 를 남긴다 -->
 <link rel="icon" href="data:,">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+<!-- ⚠ 여기에 외부 오리진을 다시 들이지 마세요. 지금 이 페이지는 자기 자신 말고는
+     아무 데도 접속하지 않습니다(샘플을 고를 때만 예외 — docs/perf/04-외부의존성.md).
+     예전에는 fonts.googleapis(preconnect+CSS) · fonts.gstatic(woff2) · cdnjs(Tone)
+     셋을 탔고, HTML→CSS→woff2 3단 직렬 사슬이 붙어 있었습니다. -->
+<link rel="stylesheet" href="styles/fonts.css">
+<script src="vendor/tone-14.7.77.js"></script>
 
 <link rel="stylesheet" href="styles/tokens.css">
 <link rel="stylesheet" href="styles/layout.css">

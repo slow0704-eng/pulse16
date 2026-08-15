@@ -6,6 +6,18 @@
 /* ═══ §1  상수 · 설정 ═══════════════════════════════════════ */
 
 const HAS_TONE   = typeof window.Tone !== 'undefined';
+
+/* ⚠ 이 앱이 접속하는 **유일한** 외부 오리진입니다.
+   폰트와 Tone.js 는 2026-08-15 에 저장소 안으로 들여왔습니다(`fonts/` · `vendor/`).
+   남은 것은 샘플뿐이고, 그것도 사용자가 킷·루프·샘플 엔진을 고를 때만 탑니다.
+
+   여기는 **제3자의 GitHub Pages 사이트**입니다 — SLA 가 없고 `max-age=600`(10분)
+   이라 길게 틀어 두면 같은 파일을 계속 다시 받습니다. 실패는 정상 경로로 취급하세요:
+   `sampler.js` 의 `blocked()` 가 잡아 합성 엔진으로 되돌립니다.
+
+   **저장소 안으로 들여오지 마세요** — 상류(Tonejs/audio)에 라이선스 파일이 없습니다.
+   링크를 거는 것과 복사해 재배포하는 것은 다른 행위입니다.
+   경위와 대안은 docs/perf/04-외부의존성.md §3-4. */
 const AUDIO_BASE = 'https://tonejs.github.io/audio/';
 const STEPS = 16, ROWS = 8;
 
@@ -34,9 +46,14 @@ const LOOP_CANDIDATES = [
 const PIANO_URLS = {'A0':'A0.mp3','C1':'C1.mp3','D#1':'Ds1.mp3','F#1':'Fs1.mp3',
   'A1':'A1.mp3','C2':'C2.mp3','D#2':'Ds2.mp3','F#2':'Fs2.mp3',
   'A2':'A2.mp3','D#3':'Ds3.mp3','C3':'C3.mp3','F#3':'Fs3.mp3','A3':'A3.mp3'};
+/* ⚠ G#2 를 도로 넣지 마세요 — 상류에 `casio/Gs2.mp3` 가 없습니다(영구 404).
+   Gs2·GS2·gs2·G%232·Ab2·As2 를 전부 찔러 봤고 G2 만 200 입니다(2026-08-15 확인).
+   Tone.Sampler 가 이웃 음으로 보간하므로 소리는 멀쩡했지만, casio 를 고를 때마다
+   헛요청 1건과 콘솔 404 가 남고 있었습니다. 위 LOOP_CANDIDATES 에서 «항상 404 인 셋»
+   을 뺀 것과 같은 정리입니다. */
 const CASIO_URLS = {'A1':'A1.mp3','A#1':'As1.mp3','B1':'B1.mp3','C2':'C2.mp3',
   'C#2':'Cs2.mp3','D2':'D2.mp3','D#2':'Ds2.mp3','E2':'E2.mp3','F2':'F2.mp3',
-  'F#2':'Fs2.mp3','G2':'G2.mp3','G#2':'Gs2.mp3','A2':'A2.mp3'};
+  'F#2':'Fs2.mp3','G2':'G2.mp3','A2':'A2.mp3'};
 
 /* ── 드럼 트랙 정의 ──
    tom 과 perc 는 둘 다 타악기 트랙이지만 역할이 갈립니다.

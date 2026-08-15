@@ -33,7 +33,19 @@ ES 모듈이 아니라 평범한 `<script src>` 입니다. 이유가 둘입니�
 pulse16-mk16.html      마크업 + link/script 목록 (490줄 안팎 — 계속 자랍니다,
                         정확한 숫자는 굳이 맞추지 말고 grep 으로 확인하세요)
 
+vendor/
+  tone-14.7.77.js      Tone.js (MIT, tone-LICENSE.md 동봉). 예전에 cdnjs 에서
+                       받던 것을 2026-08-15 에 들여왔습니다 — 버전을 파일명에
+                       박아 뒀으니 올릴 때는 새 파일을 두고 HTML 한 줄만 바꾸세요
+fonts/
+  *.woff2 (8)          Barlow · Barlow Condensed · Space Mono 의 latin 서브셋
+  OFL.txt              위 셋의 SIL Open Font License 1.1 원문
+                       ⚠ 여기에 외부 오리진을 다시 들이지 마세요 —
+                         이 페이지는 이제 자기 자신 말고 아무 데도 접속하지 않습니다
+                         (샘플을 고를 때만 예외). docs/perf/04-외부의존성.md
+
 styles/
+  fonts.css            위 woff2 의 @font-face. tokens.css 앞에 옵니다
   tokens.css           디자인 토큰 (색·간격 변수)
   layout.css           레이아웃 뼈대 · 헤더 · 반응형
   rack.css             패턴 라이브러리 · 샘플 뱅크 · 트랜스포트 · FX · 미터
