@@ -165,6 +165,22 @@ function bassVoice(t,deg,dur,e,vel){
     }
   };
 
+  /* ── 지속 레벨 ──
+     s808 의 어택/지속비가 22.6dB 이고 나머지 합성 베이스가 6.2dB 인 진짜
+     이유입니다. s808 은 서브가 dur 동안 0.15% 까지 지수 감쇠하는데,
+     나머지는 0.17초 만에 82% 로 눌러앉아 그대로 버팁니다. 뜯는 소리가
+     안 나는 것이 당연합니다.
+
+     다만 **대부분은 이대로가 맞습니다.** 하우스·테크노·리즈의 베이스는
+     끝까지 버티는 것이 정체성이라 다 같이 감쇠시키면 장르가 망가집니다.
+     그래서 BSYN 의 sus:[레벨, tau] 필드가 **있는 엔진만** 바꿉니다.
+     필드가 없으면 예전 값(0.82 / 0.17초) 그대로입니다. */
+  const _S = (typeof BSYN!=='undefined') && BSYN[e];
+  const susS = (_S && _S.sus) ? _S.sus[0] : 0.82;
+  const susT = (_S && _S.sus) ? _S.sus[1] : 0.17;
+  /* 배음부는 예전에 0.58/0.82 = 0.71 의 비였다. 그 비를 지킨다. */
+  const susH = (_S && _S.sus) ? _S.sus[0]*0.71 : (is808?0.35:0.58);
+
   /* 서브 — 808 은 길게 감쇠, 그 외는 서스테인 유지 */
   const gsub=G('bass',end);
   const pS=(is808?0.88:0.70)*(1-blend*(is808?0.40:0.55))*vAmp;
@@ -176,8 +192,8 @@ function bassVoice(t,deg,dur,e,vel){
   }else{
     gsub.gain.setValueAtTime(0,t);
     gsub.gain.linearRampToValueAtTime(pS,t+0.007);
-    gsub.gain.setTargetAtTime(pS*0.82,t+0.05,0.17);
-    hold(gsub.gain,t+dur*0.90, expAt(pS,pS*0.82,0.17,dur*0.90-0.05));
+    gsub.gain.setTargetAtTime(pS*susS,t+0.05,susT);
+    hold(gsub.gain,t+dur*0.90, expAt(pS,pS*susS,susT,dur*0.90-0.05));
     gsub.gain.linearRampToValueAtTime(0,t+dur*0.90+0.05);
   }
   const so=osc('sine',t,dur+0.6); setPitch(so.frequency,1); so.connect(gsub); oscs.push(so);
@@ -185,11 +201,41 @@ function bassVoice(t,deg,dur,e,vel){
   /* 배음부 */
   const hDur=is808?Math.min(dur*0.35,0.26):dur*0.84;
   const gh=G('bass',end);
-  const pH=(is808?0.34:0.42)*(0.28+blend*1.05)*vAmp;
+  /* ── 배음 가지 메이크업 [실측으로 정한 값] ──
+     이 상수가 없을 때, 합성 베이스는 **엔진이 무엇이든 똑같은 소리가 났습니다.**
+     A1(55Hz) 한 음을 공장 초기값(Blend 38 · X-Over 105)으로 렌더해서
+     두 가지를 따로 재 보면:
+
+         서브 사인(gsub)만  −10.6 dB
+         배음부(gh)만       −29.4 dB   ← 엔진 전체가 여기 들어 있다
+
+     즉 **엔진이 사인파보다 18.8dB 아래**였습니다. Blend 를 100 까지
+     끝까지 밀어도 −8.1dB 로 여전히 사인이 이깁니다. 사용자가 들은
+     «공에서 바람 빠지는 소리» 는 이것입니다 — 무슨 엔진을 골라도
+     실제로 들리는 것은 55Hz 사인 하나였습니다.
+     sub·moog·acid·pluckbs·buzz 의 지속 RMS 가 소수점까지 −9.7dB 로
+     같았던 것이 증거입니다.
+
+     이득법이 의도한 비는 −5.8dB 인데(pS=0.554 대 pH=0.285) 실측이
+     −18.8dB 인 것은, gh 가 사슬 **끝**에 달려서 그 앞의 셰이퍼 보정(mk)·
+     X-Over 2단·톱니의 기음 손실이 전부 누적되기 때문입니다.
+     gh 는 셰이퍼 뒤라 여기를 올려도 왜곡이 더 생기지 않습니다.
+
+     목표: 기본값에서 배음이 서브보다 5dB 아래(들리되 서브가 중심을 잡는다).
+       −18.8 → −5.0 이므로 +13.8dB = ×4.9.
+     808 은 예외입니다. 808 의 정체성이 «길게 끄는 거의 순수한 사인» 이라
+     같이 올리면 장르가 아예 달라집니다. −15.3 → −9 만, ×2.1 로 둡니다. */
+  const HMAKE = is808 ? 2.1 : 4.2;
+  /* 4.9(= 정확히 −5.0dB 목표) 에서 4.2 로 0.7 낮췄습니다. 4.9 로 재면
+     합성군의 피크가 +0.7~+1.7dBFS 로 올라갑니다 — 배음부에 진짜 과도가
+     생겼다는 뜻이라 자체는 좋은 신호지만, 그만큼 마스터 리미터를 밀어
+     다른 트랙을 눌러 버립니다. 4.2 면 배음이 서브보다 −6.5dB 로
+     여전히 충분히 들리면서 피크가 0dBFS 아래로 들어옵니다. */
+  const pH=(is808?0.34:0.42)*(0.28+blend*1.05)*vAmp*HMAKE;
   gh.gain.setValueAtTime(0,t);
   gh.gain.linearRampToValueAtTime(pH,t+0.006);
-  gh.gain.setTargetAtTime(pH*(is808?0.35:0.58),t+0.03,is808?0.06:0.10);
-  hold(gh.gain,t+hDur, expAt(pH, pH*(is808?0.35:0.58), is808?0.06:0.10, hDur-0.03));
+  gh.gain.setTargetAtTime(pH*susH,t+0.03,is808?0.06:(_S&&_S.sus?susT*0.6:0.10));
+  hold(gh.gain,t+hDur, expAt(pH, pH*susH, is808?0.06:(_S&&_S.sus?susT*0.6:0.10), hDur-0.03));
   gh.gain.linearRampToValueAtTime(0,t+hDur+0.04);
 
   const mixIn=acqGain(); mixIn.gain.value=1; retire(mixIn,'gain',end+0.05);
@@ -216,10 +262,17 @@ function bassVoice(t,deg,dur,e,vel){
       const g=acqGain(); g.gain.value=a; retire(g,'gain',end+0.05);
       o.connect(g).connect(mixIn); oscs.push(o);
     });
-    const ce=t+0.03, cg=G('bass',ce), cf=BQ('bandpass',1700,1.2,ce);   // 808 특유의 클릭
-    env(cg,t,0.16*vAmp,0.018,0.0006); cf.connect(cg); tapNoise(cf,ce);
   }else if(e==='sub'){
-    [[2,0.50,'triangle'],[3,0.20,'sine'],[4,0.10,'sine'],[6,0.04,'sine']].forEach(([m,a,ty])=>{
+    /* ⚠ 예전에는 [2,triangle],[3,sine],[4,sine],[6,sine] 이라 **6배음에서
+       끝났습니다.** A2 에서 660Hz 가 상한이고, 600Hz 위 에너지가 전체의
+       0.001% 였습니다(실측). 같은 잣대로 현 베이스(finger)는 3.9% 로 36dB 차이입니다.
+       그래서 노브를 끝까지 밀어도 «맹숭맹숭» 이 안 없어졌습니다 —
+       Blend·Drive·Tone 을 전부 최대로 해도 2k~4k 대역이 0.000% 였습니다.
+       **없는 배음은 필터로 못 살립니다.**
+
+       톱니 하나를 기음 자리에 두면 tone 노브(3600Hz)까지 배음이 찹니다.
+       기음은 어차피 xoHP 2단(24dB/oct)이 지우고 서브(gsub)가 담당합니다. */
+    [[1,0.55,'sawtooth'],[2,0.30,'triangle'],[3,0.14,'sine']].forEach(([m,a,ty])=>{
       if(hz*m>12000) return;
       const o=osc(ty,t,dur+0.6); setPitch(o.frequency,m);
       const g=acqGain(); g.gain.value=a; retire(g,'gain',end+0.05);
@@ -274,7 +327,11 @@ function bassVoice(t,deg,dur,e,vel){
     setPitch(mod.frequency,3.01);          // 모듈레이터에도 글라이드 (기존 누락 — C:M 비율이 깨졌었다)
     mg.gain.setValueAtTime(hz*6.0,t);      // I ≈ 2.0
     mg.gain.exponentialRampToValueAtTime(hz*0.40,t+Math.min(dur*0.55,0.6));
-    mod.connect(mg).connect(car.frequency); car.connect(mixIn); oscs.push(car,mod);
+    /* 다른 엔진은 전부 mixg(0.30~0.52) 나 comp(0.16) 를 거쳐 mixIn 에 드는데
+       여기만 이득 노드 없이 곧장 물려 있어 진폭이 1.0 이었습니다. 그래서
+       fm 만 RMS 가 무리보다 3.2dB, 피크가 3.6dB 높았습니다(실측). */
+    const fg=acqGain(); fg.gain.value=0.42; retire(fg,'gain',end+0.05);
+    mod.connect(mg).connect(car.frequency); car.connect(fg).connect(mixIn); oscs.push(car,mod);
   }else{   // reese
     /* 두 가지를 함께 고친다.
        ① 통과대역 — hz*7 은 A1 에서 385Hz 라 X-Over(120Hz) 와 겹쳐 1.2옥타브뿐이었다.
@@ -287,7 +344,7 @@ function bassVoice(t,deg,dur,e,vel){
     f.frequency.setTargetAtTime(bot,t,Math.min(dur*0.35,0.4));
     const beat=3.0;                                            // 목표 3Hz
     const c=Math.min(1200*Math.log2(1+beat/hz),60);            // 상한 60 cent
-    const mixg=acqGain(); mixg.gain.value=0.34; retire(mixg,'gain',end+0.05);
+    const mixg=acqGain(); mixg.gain.value=0.26; retire(mixg,'gain',end+0.05);   // 0.34→0.26: 톱니 셋이 온셋에 정렬해 피크가 무리보다 2.3dB 높았다
     /* 세 톱니를 좌·우·중앙으로 갈라 모노 진폭 비팅이 아닌 이미지 회전이 되게 */
     [[1,0,0],[1,c,-0.75],[2,-c*0.6,0.75]].forEach(([m,det,pan])=>{
       const o=osc('sawtooth',t,dur+0.6);
