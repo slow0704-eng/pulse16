@@ -13,7 +13,7 @@
 const bassBuf=makeStringCache(20);
 let bassStrRef=null;
 
-function stringBass(t,midi,dur,e){
+function stringBass(t,midi,dur,e,vel){
   const S=BSTR[e], hz=440*Math.pow(2,(midi-69)/12);
 
   if(bassStrRef){
@@ -26,7 +26,9 @@ function stringBass(t,midi,dur,e){
   const rel=0.16;
   const end=t+Math.min(buf.duration,dur+rel)+0.08;
   const bd=knob('bdrv')/100;
-  const v=0.9*rnd(0.08*H())*(0.75+bd*0.5);
+  /* vel — 선택 인자. 안 넘기면 1 이 곱해져 예전과 한 샘플도 안 달라진다.
+     ⚠ 음량만 건다. 세게 칠수록 밝아지는 음색 연동은 여기서 안 한다. */
+  const v=0.9*rnd(0.08*H())*(0.75+bd*0.5)*(vel??1);
 
   const g=acqGain(); retire(g,'gain',end+0.05);
   g.connect(ampIn[S.amp]||chan.bass);
@@ -61,7 +63,7 @@ function stringBass(t,midi,dur,e){
    않고 숨이 빠지듯 잦아듭니다. 이 두 가지가 없으면 그냥 둔한 신스입니다.
    배음은 원뿔관이라 정수배가 다 나오되 8배음 위로 급히 죽습니다. */
 let tubaRef=null;
-function windBass(t,midi,dur){
+function windBass(t,midi,dur,vel){
   const hz=440*Math.pow(2,(midi-69)/12);
   if(tubaRef){
     try{ fadeOut(tubaRef.g.gain,t,0.03); }catch(err){}
@@ -84,9 +86,11 @@ function windBass(t,midi,dur){
 
   /* 숨소리 — 관악의 어택을 만드는 성분 */
   const be=t+0.09, bg=G('bass',be), bf=BQ('bandpass',420,0.9,be);
-  env(bg,t,0.055*rnd(0.15*H()),0.07,0.012); bf.connect(bg); tapNoise(bf,be);
+  env(bg,t,0.055*rnd(0.15*H())*(vel??1),0.07,0.012); bf.connect(bg); tapNoise(bf,be);
 
-  const v=0.62*rnd(0.07*H());
+  /* vel — 선택 인자. 숨소리도 같은 배율로 줄여야 **음량만** 바뀐다.
+     기음만 줄이면 여리게 칠수록 바람소리만 남아 음색이 변한다. */
+  const v=0.62*rnd(0.07*H())*(vel??1);
   g.gain.setValueAtTime(0,t);
   g.gain.linearRampToValueAtTime(v,t+atk);
   hold(g.gain,t+dur,v);
@@ -100,7 +104,10 @@ function windBass(t,midi,dur){
 /* ── 합성 베이스 ──
    공통: 사인 서브(gsub) + 배음부(gh). 배음부는 드라이브·X-Over·Tone 을 거칩니다.
    엔진별로 mixIn 에 들어가는 소스만 달라집니다. */
-function bassVoice(t,deg,dur,e){
+/* vel — **선택** 인자(0~1 남짓). 안 넘기면 어디서도 1 이 곱해져
+   예전 소리와 한 샘플도 안 달라진다. 음량만 건다 — 세게 칠수록 밝아지는
+   음색 연동(필터 컷오프·드라이브)은 일부러 안 넣었다. */
+function bassVoice(t,deg,dur,e,vel){
   const midi = baseOct + rootNote + knob('bsemi') + SCALES[scaleName][deg];
 
   /* 샘플러 계열은 별도 경로 */
@@ -110,7 +117,7 @@ function bassVoice(t,deg,dur,e){
     if(ready && inst){
       try{
         const nm = NOTES[((midi%12)+12)%12] + (Math.floor(midi/12)-1);
-        inst.triggerAttackRelease(nm, Math.max(dur,0.25), t, 0.85);
+        inst.triggerAttackRelease(nm, Math.max(dur,0.25), t, 0.85*(vel??1));
       }catch(err){}
     }else{
       loadSampler(e);
@@ -121,8 +128,8 @@ function bassVoice(t,deg,dur,e){
   /* 현 베이스 계열 — 기타와 같은 현 코어로 굽고 베이스 앰프로 보낸다.
      서브 오실레이터를 안 쓴다. 실제 베이스는 그런 게 없고,
      현 모델의 기음이 이미 최강 배음이라 덧붙이면 오히려 뭉갠다. */
-  if(BSTR[e]) return stringBass(t,midi,dur,e);
-  if(e==='tuba') return windBass(t,midi,dur);
+  if(BSTR[e]) return stringBass(t,midi,dur,e,vel);
+  if(e==='tuba') return windBass(t,midi,dur,vel);
 
   /* 모노 신스 — 이전 음을 짧게 페이드아웃 */
   /* 이전 노트의 주파수 — 포르타멘토의 출발점 */
@@ -137,7 +144,9 @@ function bassVoice(t,deg,dur,e){
 
   const hz    = 440*Math.pow(2,(midi-69)/12);
   const is808 = (e==='s808');
-  const blend = knob('bmix')/100, bd = knob('bdrv')/100, vel = rnd(0.06*H());
+  /* vAmp — 예전엔 이 자리 이름이 vel 이었다. 인자 vel 과 이름이 겹쳐 바꿨을 뿐,
+     인자를 안 넘기면 (vel??1)=1 이라 값이 그대로다. */
+  const blend = knob('bmix')/100, bd = knob('bdrv')/100, vAmp = rnd(0.06*H())*(vel??1);
   const gl    = knob('bglide')/100;
   const xo    = Math.max(knob('xover'), hz*1.15);
   const end   = t+dur+0.7, oscs=[];
@@ -158,7 +167,7 @@ function bassVoice(t,deg,dur,e){
 
   /* 서브 — 808 은 길게 감쇠, 그 외는 서스테인 유지 */
   const gsub=G('bass',end);
-  const pS=(is808?0.88:0.70)*(1-blend*(is808?0.40:0.55))*vel;
+  const pS=(is808?0.88:0.70)*(1-blend*(is808?0.40:0.55))*vAmp;
   if(is808){
     gsub.gain.setValueAtTime(0,t);
     gsub.gain.linearRampToValueAtTime(pS,t+0.005);
@@ -176,7 +185,7 @@ function bassVoice(t,deg,dur,e){
   /* 배음부 */
   const hDur=is808?Math.min(dur*0.35,0.26):dur*0.84;
   const gh=G('bass',end);
-  const pH=(is808?0.34:0.42)*(0.28+blend*1.05)*vel;
+  const pH=(is808?0.34:0.42)*(0.28+blend*1.05)*vAmp;
   gh.gain.setValueAtTime(0,t);
   gh.gain.linearRampToValueAtTime(pH,t+0.006);
   gh.gain.setTargetAtTime(pH*(is808?0.35:0.58),t+0.03,is808?0.06:0.10);
@@ -208,7 +217,7 @@ function bassVoice(t,deg,dur,e){
       o.connect(g).connect(mixIn); oscs.push(o);
     });
     const ce=t+0.03, cg=G('bass',ce), cf=BQ('bandpass',1700,1.2,ce);   // 808 특유의 클릭
-    env(cg,t,0.16*vel,0.018,0.0006); cf.connect(cg); tapNoise(cf,ce);
+    env(cg,t,0.16*vAmp,0.018,0.0006); cf.connect(cg); tapNoise(cf,ce);
   }else if(e==='sub'){
     [[2,0.50,'triangle'],[3,0.20,'sine'],[4,0.10,'sine'],[6,0.04,'sine']].forEach(([m,a,ty])=>{
       if(hz*m>12000) return;

@@ -252,37 +252,123 @@ function sectionWantsBank(){
 
 let grooveOn=false, grooveMode='genre', grooveNow=null;
 
+/* ── accent — 스텝별 세기 배율 (16칸) ────────────────────────────
+   vel 은 **트랙당 상수 하나**라 «1·3박이 세고 뒷박이 여리다» 를 표현 못 한다.
+   accent 는 마디 안의 자리(스텝)마다 곱하는 배율이다. vel 과 곱해 쓴다.
+   자리 번호는 patterns/README.md:26-28 의 규약 그대로 — 0부터, 1박=0 · 2박=4 ·
+   3박=8 · 4박=12, 홀수 스텝이 뒷16분(스윙을 받는 자리).
+
+   ── 값을 두 개로만 쓴 이유 ──
+   문서에 "스텝별 강약을 몇 배로" 라고 적어 둔 자료는 **없다**(docs 전수 확인).
+   그래서 수치를 새로 지어내지 않고, **이미 이 표 안에 있던 두 값**만 재사용한다.
+     · 1.06 — laidback 의 vel.snare (이 표에서 가장 큰 기존 강세)
+     · 0.90 — mpc 의 vel.chat   (이 표에 있는 유일한 기존 약화)
+   자리를 어디로 잡을지만 자료로 정하고, 근거를 못 대는 자리는 **1 로 둔다.**
+   (patterns/README.md:27 의 X/x 이분법과도 어긋나지 않게 2단계로 유지)
+
+   ⚠ 음색은 안 건드린다. voice-bass.js·voice-gtr.js 의 vel 인자도 음량만 건다.
+
+   ── vel·accent 가 실제로 걸리는 곳 (예전 주석 정정) ──
+   예전에는 «bassVoice()/guitarVoice() 는 세기 인자를 안 받으니 vel.bass·vel.gtr 는
+   죽은 값» 이라고 적혀 있었다. 이제 아니다 — 세 함수 모두 마지막에 **선택** 인자
+   vel 을 받는다(안 넘기면 예전 소리 그대로).
+     bassVoice(t,deg,dur,e,vel) · guitarVoice(t,deg,dur,e,vel) · guitarVoice2(…,vel)
+   ⚠ 아직 **호출부가 안 넘긴다** — sequencer.js 를 잇는 것은 별도 작업이다.
+     이을 때 곱할 값은  vel[track] * grooveAccent(grooveNow, step)  이다. */
+const ACC_HI = 1.06, ACC_LO = 0.90;
+/** 자리 목록 → 16칸 배열. 안 적은 자리는 1 */
+function accArr(map){
+  const a = new Array(16).fill(1);
+  for(const k in map) a[+k] = map[k];
+  return a;
+}
+/** 홀수 스텝(뒷16분)만 v, 나머지는 1 인 16칸 배열 */
+function accOff16(v, extra){
+  const a = new Array(16).fill(1);
+  for(let i=1;i<16;i+=2) a[i]=v;
+  for(const k in (extra||{})) a[+k] = extra[k];
+  return a;
+}
+
 const GROOVE = {
   none: {label:'없음(기본)', cat:'X', off:{}, swing:{}, vel:{}},
+  /* none 에는 accent 를 일부러 안 넣는다 — 기본 소리가 한 톨도 바뀌면 안 된다 */
 
+  /* 백비트(4·12)를 세운다. 근거: 이 그루브의 label 과 off.snare +12ms 가
+     이미 스네어를 백비트 악기로 지목하고 있고, genres/04-rnb-soul-funk.md:24
+     Southern Soul «느슨한 백비트, 뒤로 끄는 감», :75 Neo-Soul «뒤로 끄는(laid-back)
+     그루브, 고스트 노트». 고스트의 **자리**를 특정한 문장은 없어 뒷16분은 1 로 둔다. */
   laidback: {label:'레이드백 (스네어·하이햇 살짝 뒤)', cat:'A',
     off:{snare:+0.012, chat:+0.005, ohat:+0.005, bass:-0.004},
-    swing:{}, vel:{snare:1.06}},
+    swing:{}, vel:{snare:1.06},
+    accent: accArr({4:ACC_HI, 12:ACC_HI})},
 
-  /* ⚠ vel 은 fireTrack() 의 v 인자(드럼)와 keysVoice() 의 vel 인자에만 실제로
-     걸린다. bassVoice()/guitarVoice() 는 세기 인자를 안 받는 시그니처라
-     (voice-bass.js·voice-gtr.js 는 이 파일 소유가 아니라 손 못 댐)
-     vel.bass·vel.gtr 를 적어도 죽은 값이 된다 — 그래서 여기 안 적는다. */
+  /* on the one — 1박만 세우고 나머지 15칸을 통째로 낮춘다.
+     근거: genres/04-rnb-soul-funk.md:48-51 «펑크의 강세는 1박입니다. 록의 2·4
+     백비트와 정반대라서 … 1박에 킥·베이스·기타·혼을 동시에 꽂고, 나머지 15스텝은
+     의도적으로 비우거나 아주 작게 채웁니다», :40 JB Funk «1박 강조(on the one)».
+     patterns/00-archetypes.md:232 는 하이햇 액센트가 «불규칙» 이라고 못박으므로
+     주기적인 강약을 얹지 않고 1박 대 나머지의 평탄한 대비로만 둔다. */
   pushed: {label:'앞으로 미는 (펑크·훵크)', cat:'D',
     off:{bass:-0.008, kick:-0.003, gtr:-0.006, keys:-0.004},
-    swing:{}, vel:{kick:1.05}},
+    swing:{}, vel:{kick:1.05},
+    accent: [ACC_HI, ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,
+             ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO,ACC_LO]},
 
+  /* 붐뱁 — 백비트(4·12)가 서고 스윙 받는 뒷16분이 여리다.
+     근거: genres/03-hiphop.md:17 «스네어 2·4 고정 … 느슨한 햇»,
+     patterns/03-hiphop.md:23-31 «S ----X-------X---» (4·12 만 X),
+     같은 블록 «K X--x----X---x---» 는 뒷16분(3·12… 중 3)을 x 로 적는다.
+     뒷16분을 낮추는 값 0.90 은 이 그루브가 이미 chat 에 쓰던 vel 과 같은 값이다.
+     (이 표의 swing.chat 1.35 가 그 자리를 크게 미는 것과 짝이 된다) */
   mpc: {label:'MPC 스윙 (붐뱁)', cat:'C',
     off:{snare:+0.010, chat:+0.006, keys:-0.004},
-    swing:{chat:1.35, snare:0.55, ohat:0.55}, vel:{chat:0.90}},
+    swing:{chat:1.35, snare:0.55, ohat:0.55}, vel:{chat:0.90},
+    accent: accOff16(ACC_LO, {4:ACC_HI, 12:ACC_HI})},
 
+  /* 재즈 라이드 — «딩 / 딩-가-딩». 4분음 자리(0·4·8·12)가 «딩», 그 사이
+     셋잇단 뒷음 «가» 가 여리다. 근거: genres/06-jazz.md:22-25 «재즈 라이드는
+     "딩, 딩-가-딩" 즉 4분 + 셋잇단 8분의 조합입니다», :34 Bebop «라이드 중심,
+     킥은 액센트만», :19 «셋잇단 라이드 패턴».
+     16그리드에서 셋잇단 뒷음이 놓이는 자리는 스윙이 미는 홀수 스텝이므로
+     (이 표의 swing.chat 1.6 이 실제로 그 자리를 민다) 홀수 스텝을 낮춘다. */
   jazzRide: {label:'재즈 라이드 셔플', cat:'F',
     off:{chat:+0.009, bass:-0.005},
-    swing:{chat:1.6, bass:0.35, snare:0.5}, vel:{}},
+    swing:{chat:1.6, bass:0.35, snare:0.5}, vel:{},
+    accent: accOff16(ACC_LO, {0:ACC_HI, 4:ACC_HI, 8:ACC_HI, 12:ACC_HI})},
 
+  /* tightGrid 에는 accent 를 **일부러 안 넣는다.**
+     patterns/05-electronic.md:23-30 House 는 킥 4개가 전부 같은 X 이고 햇도 전부 x —
+     자료가 말하는 성격이 "편차 없음" 이다. genres/05-electronic.md:47-51 이 말하는
+     추진력도 «오픈햇 뒷박» 의 존재이지 세기가 아니다. 근거 없이 값을 넣지 않는다. */
   tightGrid: {label:'그리드 고정 (EDM)', cat:'E',
     off:{}, swing:{chat:0, snare:0, ohat:0}, vel:{}},
 
+  /* 원드롭 — 무게중심이 1박이 아니라 3박(스텝 8)이고, 1박은 죽인다.
+     근거: genres/09-caribbean.md:25 «킥·스네어가 3박에 동시, 1박은 비움 …
+     1박을 비우는 것이 정의», :31-33 «1박에는 아무것도 오지 않습니다. 킥과
+     스네어(림샷)가 3박에 동시에 떨어집니다», patterns/09-caribbean.md:23-30
+     «K --------X-------» «H --x---x---x---x-».
+     뒷박 스캥크 자리(2·6·10·14)를 세우는 근거: genres/09-caribbean.md:17
+     «뒷박 스캥크 + 원드롭 계열», :15 «뒷박이 곡의 엔진», 그리고 이 표가 이미
+     off.gtr +7ms / off.keys +6ms 로 스캥크 악기를 뒤로 미는 것.
+     accent 는 스텝을 비울 수 없으므로 1박은 0.90 까지만 낮춘다. */
   reggaeOneDrop: {label:'원드롭 레이백', cat:'I',
     off:{snare:+0.014, bass:-0.006, gtr:+0.007, keys:+0.006},
-    swing:{}, vel:{}},
+    swing:{}, vel:{},
+    accent: accArr({0:ACC_LO, 2:ACC_HI, 6:ACC_HI, 8:ACC_HI, 10:ACC_HI, 14:ACC_HI})},
 };
 const GROOVE_NAMES = Object.keys(GROOVE);
+
+/** 그루브의 스텝별 세기 배율. 없으면 1 을 돌려준다.
+    id 는 그루브 **이름**('mpc') 이거나 GROOVE 항목 객체(grooveNow) 둘 다 받는다.
+    step 은 16 을 넘어도(마디 누적 스텝) 알아서 접는다. */
+function grooveAccent(id, step){
+  const g = (id && typeof id === 'object') ? id : GROOVE[id];
+  if(!g || !g.accent) return 1;
+  const a = g.accent[((step|0) % 16 + 16) % 16];
+  return (typeof a === 'number' && isFinite(a) && a > 0) ? a : 1;
+}
 
 const GROOVE_POOL_CAT = {
   A:['none','laidback','pushed'],

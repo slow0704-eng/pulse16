@@ -570,8 +570,18 @@ function onLoopWrap(){
 
 function onTick(time){
   const i=step; step=(step+1)%STEPS;
-  if(step===0) onLoopWrap();
   const skipped=voicesAt(i,time);
+  /* ⚠ onLoopWrap 은 **연주한 뒤에** 부른다. 예전에는 voicesAt 앞이었는데,
+     step 이 이미 0 으로 넘어간 상태라 «이 마디의 마지막 16분음표» 가
+     **다음 마디 상태**로 연주됐다 — 새로 뽑힌 필인의 첫 타가 직전 마디
+     끝에 한 방 먼저 나가고, 정작 필인이 끝나는 자리는 비었다(실측):
+
+         ................  ................  ...............F  ............FFF.
+
+     폴백 스케줄러(fbLoop)는 처음부터 voicesAt 뒤에서 불렀다 — 두 경로가
+     서로 다르게 동작하고 있었고, 폴백 쪽이 맞다. Tone 경로를 거기 맞춘다.
+     섹션 전환·선율 마디 전환도 같은 이유로 한 스텝 일찍 바뀌고 있었다. */
+  if(step===0) onLoopWrap();
   Tone.Draw.schedule(()=>drawStep(i,skipped), time);
 }
 /** 폴백 스케줄러 — 140ms 앞까지 미리 채움. 홀수 스텝을 스윙만큼 뒤로 민다 */

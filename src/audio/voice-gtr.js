@@ -12,9 +12,13 @@ let gtrRef=null;
     KS 는 "한 번 에너지를 넣고 감쇠"인데 활은 계속 밀어 넣는다.
     그래서 톱니를 지속시키고 몸통 공진(포먼트)으로 바이올린을 만든다.
     활 잡음과 지연 비브라토가 없으면 그냥 신스 리드로 들린다. */
-function fiddleVoice(t,dur,hz,v){
+/* ch — 어느 채널로 낼지. 2번 기타 트랙은 'gtr2' 를 넘긴다.
+   ⚠ 예전에는 이 인자가 없어 **gtr2 로 피들을 골라도 소리가 chan.gtr 로 갔다.**
+     계측에서 gtr2/fiddle 만 chan.gtr2 가 무음으로 나와 드러났다.
+     keysVoice 가 chan.keys 를 하드코딩하던 것과 똑같은 버그다. */
+function fiddleVoice(t,dur,hz,v,ch){
   const rel=0.10, life=dur+rel+0.15, end=t+life;
-  const g=G('gtr',end);
+  const g=G(ch||'gtr',end);
 
   /* 몸통 공진 — 바이올린의 대표 공진 3개 (A0 · B1− · B1+) */
   const mix=acqGain(); mix.gain.value=1; retire(mix,'gain',end+0.05);
@@ -49,7 +53,12 @@ function fiddleVoice(t,dur,hz,v){
   g.gain.linearRampToValueAtTime(0,t+dur+rel);
 }
 
-function guitarVoice(t,deg,dur,e){
+/* vel — **선택** 인자(0~1 남짓). 안 넘기면 (vel??1)=1 이라 예전과
+   한 샘플도 안 달라진다. **음량만** 건다 — 세게 뜯을수록 밝아지는
+   음색 연동(픽 위치·바디 필터)은 여기서 안 한다.
+   팜뮤트의 척(chug) 보강분과 피들의 활 세기도 v 를 그대로 따라가므로
+   자동으로 같은 배율이 걸린다(음색 유지). */
+function guitarVoice(t,deg,dur,e,vel){
   const S=GTR[e]||GTR.clean;
   applyGtrFx(e);                    // 버스 이펙트 — 엔진이 바뀔 때만 실제로 움직인다
   const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg];
@@ -61,12 +70,12 @@ function guitarVoice(t,deg,dur,e){
     gtrRef=null;
   }
 
-  if(S.bowed){ fiddleVoice(t,dur,hz,0.9*rnd(0.10*H())); return; }
+  if(S.bowed){ fiddleVoice(t,dur,hz,0.9*rnd(0.10*H())*(vel??1),'gtr'); return; }
 
   const buf=gtrBuf(e+'|'+midi, hz, S);
   const rel=S.palm?0.06:0.30;
   const end=t+Math.min(buf.duration,dur+rel)+0.08;
-  const v=0.9*rnd(0.10*H());
+  const v=0.9*rnd(0.10*H())*(vel??1);
 
   const g=acqGain(); retire(g,'gain',end+0.05);
   g.connect(ampIn[S.amp]||chan.gtr);
@@ -111,7 +120,7 @@ function guitarVoice(t,deg,dur,e){
    guitarVoice 는 gtrRef 하나로 모노를 지키므로, 2번 트랙이 같은 함수를 쓰면
    서로의 음을 죽입니다. 참조와 채널만 따로 두고 나머지는 같습니다. */
 let gtrRef2=null;
-function guitarVoice2(t,deg,dur,e){
+function guitarVoice2(t,deg,dur,e,vel){        // vel — 선택 인자. guitarVoice 와 같은 계약
   const S=GTR[e]||GTR.clean;
   const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg];
   const hz=440*Math.pow(2,(midi-69)/12);
@@ -121,12 +130,12 @@ function guitarVoice2(t,deg,dur,e){
     try{ gtrRef2.s.stop(t+0.02); }catch(err){}
     gtrRef2=null;
   }
-  if(S.bowed){ fiddleVoice(t,dur,hz,0.8*rnd(0.10*H())); return; }
+  if(S.bowed){ fiddleVoice(t,dur,hz,0.8*rnd(0.10*H())*(vel??1),'gtr2'); return; }
 
   const buf=gtrBuf(e+'|'+midi, hz, S);
   const rel=S.palm?0.06:0.30;
   const end=t+Math.min(buf.duration,dur+rel)+0.08;
-  const v=0.8*rnd(0.10*H());
+  const v=0.8*rnd(0.10*H())*(vel??1);
 
   const g=acqGain(); retire(g,'gain',end+0.05);
   g.connect(chan.gtr2);              // 앰프를 안 거치고 2번 채널로 — 팬이 반대쪽
