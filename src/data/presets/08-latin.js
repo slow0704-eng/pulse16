@@ -32,7 +32,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'------------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'------------x---',
   bass:'0---0---3---5---',
-  keys:'--0-0---0-0-5---',gtr:'----------------'},
+  keys:'--0-0---0-0-5---',gtr:'----------------',gtr2:'--2-4---2-4-7---'},
 
 'Merengue':{bpm:145,swing:0,
   kit:{kick:'tight',snare:'tight',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',tom:'timbale',keys:'horns',bass:'finger',perc:'guiro'},
@@ -64,7 +64,7 @@ Object.assign(RAW, {
   kick:'X-----X-----X---',snare:'----x---x-------',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-----3-----5---',
-  keys:'--0-0---0-0-3---',gtr:'----------------'},
+  keys:'--0-0---0-0-3---',keys2:'----0--0----3--3',gtr:'----------------'},
 
 'Salsa':{bpm:190,swing:0,cat:'H',gen:1,
   kit:{kick:'tight',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',tom:'timbale',keys:'horns',bass:'upright',perc:'clave'},
@@ -74,7 +74,7 @@ Object.assign(RAW, {
   kick:'X-----X-----X---',snare:'----x---x-------',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-----3-----5---',
-  keys:'--0-0---0-0-3---',gtr:'----------------'},
+  keys:'--0-0---0-0-3---',keys2:'----0--0----3--3',gtr:'----------------'},
 
 'Timba':{bpm:200,swing:0,cat:'H',gen:1,
   kit:{kick:'tight',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',tom:'timbale',keys:'piano',bass:'finger',perc:'clave'},
@@ -84,7 +84,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'--0-0---0-0-2---',gtr:'----------------'},
+  keys:'--0-0---0-0-2---',keys2:'----0--0----2--2',gtr:'----------------'},
 
 'Rumba':{bpm:110,swing:0,cat:'H',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',tom:'conga',perc:'clave',off:['keys','gtr']},
@@ -104,7 +104,7 @@ Object.assign(RAW, {
   kick:'X-----X-----X---',snare:'----x---x-------',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-----3-----5---',
-  keys:'--0-0---0-0-5---',gtr:'----------------'},
+  keys:'--0-0---0-0-5---',keys2:'----0--0----5--5',gtr:'----------------'},
 
 'Cha-cha-chá':{bpm:120,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',tom:'conga',keys:'horns',bass:'upright',perc:'guiro'},
@@ -114,7 +114,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'--0-0---0-0-5---',gtr:'----------------'},
+  keys:'--0-0---0-0-5---',keys2:'----0--0----5--5',gtr:'----------------'},
 
 'Dembow':{bpm:122,swing:0,cat:'H',gen:1,
   kit:{kick:'deep',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'bell',bass:'s808',perc:'guiro'},
@@ -214,7 +214,7 @@ Object.assign(RAW, {
   kick:'X-----X-----X---',snare:'----x---x-------',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-----3-----5---',
-  keys:'--0-0---0-0-5---',gtr:'----------------'},
+  keys:'--0-0---0-0-5---',keys2:'----0--0----5--5',gtr:'----------------'},
 
 'Mozambique':{bpm:115,swing:0,cat:'H',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',tom:'conga',keys:'horns',bass:'upright',perc:'clave'},
@@ -224,7 +224,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'--0-0---0-0-5---',gtr:'----------------'},
+  keys:'--0-0---0-0-5---',keys2:'----0--0----5--5',gtr:'----------------'},
 
 'Bomba':{bpm:120,swing:0,cat:'H',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',tom:'conga',perc:'clave',off:['keys','gtr']},
@@ -244,7 +244,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'--0-0---0-0-3---',gtr:'----------------'},
+  keys:'--0-0---0-0-3---',gtr:'----------------',gtr2:'--2-4---2-4-5---'},
 
 'Partido Alto':{bpm:100,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',tom:'conga',keys:'ep',gtr:'nylon',perc:'tamb'},
@@ -304,7 +304,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'0---0---5---5---',gtr:'0-0-0-0-5-5-5-5-'},
+  keys:'0---0---5---5---',keys2:'----0-------5---',gtr:'0-0-0-0-5-5-5-5-'},
 
 'Norteño':{bpm:140,swing:0,cat:'H',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -324,7 +324,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'0---0---3---3---',gtr:'0-0-0-0-3-3-3-3-'},
+  keys:'0---0---3---3---',keys2:'----0-------3---',gtr:'0-0-0-0-3-3-3-3-'},
 
 'Cumbia Sonidera':{bpm:93,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'hall',chat:'noise',ohat:'noise',tom:'analog'},
@@ -344,7 +344,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'0---0---3---3---',gtr:'0---0---3---3---'},
+  keys:'0---0---3---3---',keys2:'0-------3-------',gtr:'0---0---3---3---'},
 
 'Electrotango':{bpm:115,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'synth'},
@@ -354,7 +354,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'---x---x---x---x',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----3-0-----5-',
-  keys:'0---0---2---2---',gtr:'0---0---2---2---'},
+  keys:'0---0---2---2---',keys2:'0-------2-------',gtr:'0---0---2---2---'},
 
 'Sad Perreo':{bpm:93,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},

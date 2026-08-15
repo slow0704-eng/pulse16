@@ -397,6 +397,11 @@ LIB_NAMES.forEach(name => {
     P.bass=L.bass.slice(); src.bass=name;
     P.keys=L.keys.slice();  src.keys=name;
     P.gtr =L.gtr.slice();   src.gtr =name;
+    /* ⚠ 2번 트랙 패턴을 여기서 안 옮기면 «프리셋에 적어도 소리가 안 나는» 상태가 된다.
+       _build.js 가 LIB[n].keys2/gtr2 를 만들어 두는데 아무도 안 가져가고 있었다 —
+       그래서 프리셋 90개에 패턴을 넣고도 P.keys2 가 전부 빈 배열이었다(실측). */
+    P.keys2=L.keys2.slice(); src.keys2=name;
+    P.gtr2 =L.gtr2.slice();  src.gtr2 =name;
     /* 건반·기타 음색도 프리셋을 따라간다. 예전에는 드럼과 베이스만 따라가서
        Death Metal 을 불러도 기타가 clean 그대로였다. */
     if(L.kit.keys) eng.keys=L.kit.keys;

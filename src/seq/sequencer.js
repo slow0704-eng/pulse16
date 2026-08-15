@@ -91,6 +91,35 @@ function calcMelLen(){
   melLen = ls.length ? Math.max(...ls) : MEL_BARS;
 }
 
+/* ── 화성 스냅 ────────────────────────────────────────────────
+   진행이 켜져 있고 그 마디 화음이 정해졌을 때만, **강박(i%4===0)만**
+   그 마디 화음의 구성음으로 당긴다. 베이스가 이미 쓰던 관례를
+   선율(건반)·리프(기타)로 넓힌 것이다 — 문서(§9-4)가 적어 둔 동작인데
+   실제로는 베이스에만 걸려 있었다.
+
+   ⚠ progOn 이 꺼져 있으면 여기가 **항상 false** 라 아래 스냅이 전부
+     통과된다. 진행을 안 쓰는 기존 사용자의 출력은 한 샘플도 안 바뀐다.
+   ⚠ 매 스텝 걸지 않는 이유는 베이스와 같다 — 강박만 맞춰도 화성은
+     들리고, 사이 16분의 경과음이 살아남아야 선율이 선율로 들린다.
+     snapDeg 가 "너무 멀면 포기" 하는 것과 같은 취지다. */
+function snapAt(i){
+  return progOn && chordRoot!=null && typeof snapDeg==='function' && i%4===0;
+}
+/** 건반 비트마스크를 스냅한다. **켜진 비트가 하나(=단음)일 때만.**
+
+    kpat 의 'a'~'h' 는 단음이라 비트가 하나다 — 그건 선율이므로 옮긴다.
+    '0'~'7'(과 확장 표기)은 chordMask 가 편 **화음**이라 비트가 둘 이상이고,
+    여기를 건드리면 chordVoicing 이 잡아 둔 보이싱이 무너진다. 그대로 둔다. */
+function snapKeyMask(m){
+  let d = -1;
+  for(let b=0; b<DEG_MAX; b++) if(m & (1<<b)){
+    if(d >= 0) return m;                  // 2음 이상 = 이미 화음
+    d = b;
+  }
+  if(d < 0 || d >= ROWS) return m;        // 빈 마스크 · 도수 밖이면 그대로
+  return 1 << snapDeg(d, chordRoot, scaleName, chordType);
+}
+
 /** 이 스텝이 필인 구간이면 필인 패턴을, 아니면 null 을 준다 */
 function fillAt(i){
   if(!fillNow) return null;
@@ -149,9 +178,7 @@ function voicesAt(i,t){
      스냅한다. 매 스텝을 스냅하면 베이스라인 고유의 굴곡(경과음·필인)이
      아르페지오로 뭉개진다 — 귀가 화성 근음을 인지하는 자리는 대개 강박이라
      거기만 맞춰도 화성이 들리면서 라인의 모양은 살아남는다. */
-  if(deg>=0 && progOn && chordRoot!=null && typeof snapDeg==='function' && i%4===0){
-    deg = snapDeg(deg, chordRoot, scaleName, chordType);
-  }
+  if(deg>=0 && snapAt(i)) deg = snapDeg(deg, chordRoot, scaleName, chordType);
   if(deg>=0 && !mute.bass && !sectionOff('bass')){
     chan.bass.gain.value=lvl.bass*sectionLvl('bass');
     bassVoice(t+jit()+groove('bass'), deg, spb()*0.25*(knob('gate')/100), eng.bass);
@@ -160,7 +187,10 @@ function voicesAt(i,t){
   /* 건반 — 비트마스크의 켜진 음도를 전부 발음 (화음)
      선율 모드면 P.keys 대신 16마디 선율의 '지금 마디'를 읽는다.
      P.keys 를 덮어쓰지 않으므로 선율을 꺼도 사용자가 찍은 패턴이 그대로 남는다. */
-  const m = melNow ? barOf(melNow)[i] : P.keys[i];
+  let m = melNow ? barOf(melNow)[i] : P.keys[i];
+  /* 화성 진행 — 강박의 **단음만** 그 마디 화음으로 당긴다(snapKeyMask 주석).
+     겹침(layer)도 이 m 을 그대로 쓰므로 본 선율과 같이 움직인다. */
+  if(m && snapAt(i)) m = snapKeyMask(m);
   if(m && !mute.keys && !sectionOff('keys')){
     chan.keys.gain.value=lvl.keys*sectionLvl('keys');
     if(keysWet) keysWet.gain.value=(KENG[eng.keys]||KENG.pad).chorus||0;
@@ -203,7 +233,9 @@ function voicesAt(i,t){
   /* 기타 — 모노.
      선율 모드면 P.gtr 대신 16마디 리프의 '지금 마디'를 읽는다.
      건반 선율과 같은 melBar 를 본다 — 둘이 같은 형식 위에 있어야 곡이 된다. */
-  const gd = riffNow ? barOf(riffNow)[i] : P.gtr[i];
+  let gd = riffNow ? barOf(riffNow)[i] : P.gtr[i];
+  /* 기타는 도수가 그대로 오므로 바로 씌운다. −1 은 쉼표다. */
+  if(gd>=0 && snapAt(i)) gd = snapDeg(gd, chordRoot, scaleName, chordType);
   if(gd>=0 && !mute.gtr && !sectionOff('gtr')){
     chan.gtr.gain.value=lvl.gtr*sectionLvl('gtr');
     guitarVoice(t+jit()+groove('gtr'), gd, spb()*0.25*(knob('ggate')/100), eng.gtr);
@@ -235,7 +267,10 @@ function voicesAt(i,t){
       semis.forEach((s,vi) => keysVoice(kt2, kbase2+s, kdur2, kv2*Math.pow(0.90,vi), eng.keys2, 'keys2'));
     }
   }else{
-    const m2 = melNowB ? barOf(melNowB)[i] : P.keys2[i];
+    /* 컴핑이 못 걸린 경우(compNow 가 없는 등)에만 오는 가지다. 여기서도
+       2번 선율이 화성 밖으로 나가면 안 되므로 1번과 같은 스냅을 건다. */
+    let m2 = melNowB ? barOf(melNowB)[i] : P.keys2[i];
+    if(m2 && snapAt(i)) m2 = snapKeyMask(m2);
     if(m2 && !mute.keys2 && !sectionOff('keys2')){
       chan.keys2.gain.value=lvl.keys2*sectionLvl('keys2');
       const kdur2=spb()*0.25*(knob('kgate')/100);
@@ -248,7 +283,8 @@ function voicesAt(i,t){
         keysVoice(kt2, kb2+sm, kdur2, kv2*Math.pow(0.94,v2++), eng.keys2, 'keys2'));
     }
   }
-  const gd2 = riffNowB ? barOf(riffNowB)[i] : P.gtr2[i];
+  let gd2 = riffNowB ? barOf(riffNowB)[i] : P.gtr2[i];
+  if(gd2>=0 && snapAt(i)) gd2 = snapDeg(gd2, chordRoot, scaleName, chordType);
   if(gd2>=0 && !mute.gtr2 && !sectionOff('gtr2')){
     chan.gtr2.gain.value=lvl.gtr2*sectionLvl('gtr2');
     guitarVoice2(t+jit()+groove('gtr2'), gd2, spb()*0.25*(knob('ggate')/100), eng.gtr2);
@@ -327,6 +363,10 @@ function shufflePattern(){
   P.bass=L.bass.slice(); src.bass=name;
   P.keys=L.keys.slice();  src.keys=name;
   P.gtr =L.gtr.slice();   src.gtr =name;
+  /* 2번 트랙 패턴 — ui/build.js 의 같은 자리와 짝이다.
+     여기를 빼면 패턴 셔플로 넘어간 프리셋만 2번 트랙이 조용해진다. */
+  P.keys2=L.keys2.slice(); src.keys2=name;
+  P.gtr2 =L.gtr2.slice();  src.gtr2 =name;
   /* 칩을 눌렀을 때와 같은 배선을 탄다 — 안 그러면 셔플로 넘어간 프리셋만
      건반·기타가 이전 음색 그대로 남아 장르가 어긋난다 */
   if(L.kit.keys) eng.keys=L.kit.keys;

@@ -124,7 +124,7 @@ Object.assign(RAW, {
   kick:'X-----x---X-----',snare:'----X-------X---',clap:'----------------',
   chat:'x---x-x-x---x-x-',ohat:'--------------x-',tom:'----------------',
   bass:'0-------3-------',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Moombahton':{bpm:110,swing:10,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'analog',keys:'lead',bass:'reese'},
@@ -234,7 +234,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'-------------x-x',
   bass:'0-0-5-0-3-0-5-3-',
-  keys:'--0---0---3---3-',gtr:'--0-0---3-3-----'},
+  keys:'--0---0---3---3-',keys2:'0---------3-----',gtr:'--0-0---3-3-----'},
 
 'Detroit Techno':{bpm:130,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'body',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'pad',bass:'moog'},
@@ -414,7 +414,7 @@ Object.assign(RAW, {
   kick:'X-----x---X-----',snare:'----X-------X---',clap:'----------------',
   chat:'x---x-x-x---x-x-',ohat:'--------------x-',tom:'----------------',
   bass:'0-------3-------',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Nu Jazz':{bpm:112,swing:28,cat:'E',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'synth',keys:'ep',gtr:'clean',bass:'upright'},
@@ -424,7 +424,7 @@ Object.assign(RAW, {
   kick:'X---------X-----',snare:'----X-------X---',clap:'----x-------x---',
   chat:'-x-xx-x--x-xx-x-',ohat:'--------------x-',tom:'----------------',
   bass:'0---0-3---5-0---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'0-------0-------',gtr:'----------------'},
 
 'Vaporwave':{bpm:75,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'ep',gtr:'clean'},
@@ -434,7 +434,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Garage House':{bpm:124,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'body',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'piano',bass:'finger'},
@@ -774,7 +774,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----X-------X---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'----------------',
   bass:'0---3---5---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Balearic':{bpm:110,swing:0,cat:'E',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'tick',ohat:'tick',tom:'wood',keys:'pad',gtr:'nylon',bass:'finger'},
@@ -784,7 +784,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----X-------X---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'----------------',
   bass:'0---3---5---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'0-------0-------',gtr:'----------------'},
 
 'Lounge':{bpm:105,swing:50,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'vibes',gtr:'nylon',bass:'upright'},
@@ -794,7 +794,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0---0---3---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'0-------0-------',gtr:'----------------'},
 
 'Ambient Techno':{bpm:124,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'pad',gtr:'clean'},
@@ -804,7 +804,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----X-------X---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'----------------',
   bass:'0---3---5---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Mallsoft':{bpm:73,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'hall',chat:'metal',ohat:'metal',tom:'synth',keys:'pad',gtr:'clean'},
@@ -814,7 +814,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----X-------X---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'----------------',
   bass:'0---3---5---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--------0-------',gtr:'----------------'},
 
 'Future Funk':{bpm:118,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'lead',gtr:'clean',bass:'moog'},
@@ -824,7 +824,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----X-------X---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'----------------',
   bass:'0---3---5---3---',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'--0---0---0---0-',gtr:'----------------'},
 
 'Electro House':{bpm:128,swing:0,cat:'E',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'lead',bass:'reese'},

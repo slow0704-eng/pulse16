@@ -12,7 +12,7 @@ Object.assign(RAW, {
   kick:'X---x--x--x-----',snare:'----X--x----X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'--0----0--2---2-',gtr:'--0----0--2---2-'},
+  keys:'--0----0--2---2-',keys2:'----0--0----2--2',gtr:'--0----0--2---2-'},
 
 /* ── Latin ── */
 
@@ -64,7 +64,7 @@ Object.assign(RAW, {
   kick:'X---x--x--x-----',snare:'----X--x----X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-'},
+  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-',gtr2:'--4-2---6-4-----'},
 
 'Afro-Cuban Jazz':{bpm:190,swing:0,cat:'F',gen:1,
   kit:{kick:'tight',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -74,7 +74,7 @@ Object.assign(RAW, {
   kick:'X---x--x--x-----',snare:'----X--x----X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-'},
+  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-',gtr2:'--4-2---6-4-----'},
 
 'Bossa Jazz':{bpm:130,swing:0,cat:'F',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
@@ -84,7 +84,7 @@ Object.assign(RAW, {
   kick:'X---x--x--x-----',snare:'----X--x----X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-'},
+  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-',gtr2:'2--4--2-6--4--6-'},
 
 'Samba Jazz':{bpm:103,swing:0,cat:'F',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -94,6 +94,6 @@ Object.assign(RAW, {
   kick:'X---x--x--x-----',snare:'----X--x----X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-'},
+  keys:'0--0--0-2--2--2-',gtr:'0--0--0-2--2--2-',gtr2:'--4-2---6-4-----'},
 
 });

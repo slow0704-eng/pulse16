@@ -446,11 +446,11 @@ const TONE_KIT = {
   '뿌리'                   :{chord:'triad', keys:'piano',   gtr:'crunch', bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
                             kick:'wood',   snare:'fat',    tom:'wood',
                             lvl:{keys:0.58}},
-  'Hard Rock'              :{chord:'power', keys:'organ',   gtr:'hi',     bass:'pick',
+  'Hard Rock'              :{gtr2:'hi', chord:'power', keys:'organ',   gtr:'hi',     bass:'pick',
                             kick:'punch',  snare:'crack',  tom:'analog',
                             lvl:{gtr:0.60,keys:0.40}},
   /* 6현 베이스 — 저음 B 현이 있어 다운튜닝 기타와 자리가 맞습니다 */
-  'Metal'                  :{chord:'power', keys:'poly',    gtr:'hi',     bass:'bass6',
+  'Metal'                  :{gtr2:'hi', chord:'power', keys:'poly',    gtr:'hi',     bass:'bass6',
                             kick:'tight',  snare:'crack',  tom:'analog',
                             lvl:{gtr:0.62,keys:0.30}, off:['keys']},
   'Punk'                   :{chord:'power', keys:'organ',   gtr:'crunch', bass:'pick',
@@ -588,7 +588,7 @@ const TONE_KIT = {
                             keys2:'horns', tom:'conga',   kick:'wood',    snare:'rim',
                             lvl:{keys:0.50,perc:0.52,bass:0.76}},
   /* 콰트로 — 푸에르토리코 히바로·플레나. 봉고는 봄바·메렝게 */
-  '푸에르토리코 · 도미니카':{scale:'Natural Minor', chord:'sev', keys:'horns',   gtr:'nylon',  bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
+  '푸에르토리코 · 도미니카':{keys2:'horns', scale:'Natural Minor', chord:'sev', keys:'horns',   gtr:'nylon',  bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
                             gtr2:'cuatro', tom:'bongo',   kick:'wood',
                             lvl:{keys:0.48,perc:0.48}},
   '멕시코'                 :{chord:'triad', keys:'accordion',gtr:'nylon', bass:'tuba',    perc:'clave', pperc:'x--x--x---x-x---',
@@ -608,10 +608,10 @@ const TONE_KIT = {
   /* ── I. Caribbean ── */
   /* 레게 베이스는 플랫와운드입니다 — 죽은 현의 그 둔탁함이 정체성.
      원드롭의 3박은 림샷입니다 */
-  'Reggae 갈래'            :{chord:'triad', keys:'organ',   gtr:'clean',  bass:'flatwound',
+  'Reggae 갈래'            :{keys2:'organ', chord:'triad', keys:'organ',   gtr:'clean',  bass:'flatwound',
                             kick:'deep',   snare:'rim',    chat:'foot',
                             lvl:{keys:0.50,bass:0.80,gtr:0.44}},
-  '자메이카'               :{scale:'Major', chord:'sev', keys:'horns',   gtr:'chorus', bass:'flatwound',
+  '자메이카'               :{keys2:'horns', scale:'Major', chord:'sev', keys:'horns',   gtr:'chorus', bass:'flatwound',
                             kick:'wood',   snare:'rim',
                             lvl:{keys:0.50,bass:0.78}},
   'Dancehall 계보'         :{chord:'triad', keys:'supersaw',gtr:'clean',

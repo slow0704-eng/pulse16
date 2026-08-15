@@ -282,7 +282,7 @@ Object.assign(RAW, {
   kick:'X-x-X-x-X-x-X-x-',snare:'----X-------X---',clap:'----------------',
   chat:'xxxxxxxxxxxxxxxx',ohat:'----------------',tom:'----------------',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'----------------',gtr:'00-00-0-00-00-3-'},
+  keys:'----------------',keys2:'0-------0-------',gtr:'00-00-0-00-00-3-'},
 
 'Metalcore':{bpm:150,swing:0,cat:'A',gen:1,
   kit:{kick:'tight',snare:'tight',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'poly',gtr:'mute',bass:'pick',off:['keys']},
@@ -392,7 +392,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'----------------',gtr:'00-00-0-00-00-2-'},
+  keys:'----------------',keys2:'0-------0-------',gtr:'00-00-0-00-00-2-'},
 
 'Punk Rock':{bpm:180,swing:0,cat:'A',gen:1,
   kit:{kick:'tight',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',gtr:'crunch'},
@@ -502,6 +502,6 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------2-------',gtr:'0-0-0-0-2-2-2-2-'},
+  keys:'0-------2-------',gtr:'0-0-0-0-2-2-2-2-',gtr2:'------4-------4-'},
 
 });

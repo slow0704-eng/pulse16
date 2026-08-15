@@ -12,7 +12,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0---0---3---3---',
-  keys:'0-------2-------',gtr:'0--0--0-2--2--2-'},
+  keys:'0-------2-------',gtr:'0--0--0-2--2--2-',gtr2:'--------4-6-4---'},
 
 'Honky-tonk':{bpm:130,swing:0,
   kit:{kick:'wood',snare:'tight',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',snare:'brush',keys:'piano',gtr:'steel',bass:'upright'},
@@ -22,7 +22,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'xXxxxXxxxXxxxXxx',clap:'----------------',
   chat:'----------------',ohat:'----------------',tom:'----------------',
   bass:'0-------5-------',
-  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-'},
+  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-',gtr2:'------4-------5-'},
 
 'Bluegrass':{bpm:150,swing:0,
   kit:{kick:'wood',snare:'tight',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',snare:'rim',keys:'piano',gtr:'mandolin',bass:'upright',off:['keys']},
@@ -44,7 +44,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0---0---3---3---',
-  keys:'0-------5-------',gtr:'0--0--0-5--5--5-'},
+  keys:'0-------5-------',gtr:'0--0--0-5--5--5-',gtr2:'--------7-2-7---'},
 
 'Jump Blues':{bpm:160,swing:50,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',keys:'horns',gtr:'clean',bass:'upright'},
@@ -54,7 +54,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0---0---3---3---',
-  keys:'0-------4-------',gtr:'0--0--0-4--4--4-'},
+  keys:'0-------4-------',gtr:'0--0--0-4--4--4-',gtr2:'--------6-1-6---'},
 
 'Blues Rock':{bpm:125,swing:0,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'organ',gtr:'crunch',bass:'finger'},
@@ -64,7 +64,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------3-------',gtr:'0--0--0-3--3--3-'},
+  keys:'0-------3-------',gtr:'0--0--0-3--3--3-',gtr2:'--------5-7-5---'},
 
 'Old-time / Hillbilly':{bpm:130,swing:0,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'tick',ohat:'tick',tom:'wood',snare:'brush',keys:'harmonica',gtr:'banjo',bass:'upright',off:['keys']},
@@ -84,7 +84,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------2-------',gtr:'0-0-0-0-2-2-2-2-'},
+  keys:'0-------2-------',keys2:'0---0---2---2---',gtr:'0-0-0-0-2-2-2-2-',gtr2:'------4-------4-'},
 
 'Outlaw Country':{bpm:110,swing:0,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'piano',gtr:'nylon',bass:'finger'},
@@ -104,7 +104,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------2-------',gtr:'0-0-0-0-2-2-2-2-'},
+  keys:'0-------2-------',gtr:'0-0-0-0-2-2-2-2-',gtr2:'------4-------4-'},
 
 'Bro-country':{bpm:115,swing:0,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'synth',keys:'lead',gtr:'crunch',bass:'pick'},
@@ -124,7 +124,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------2-------',gtr:'0--0-0--2--2-0--'},
+  keys:'0-------2-------',gtr:'0--0-0--2--2-0--',gtr2:'--2---4---4-6---'},
 
 'Indie Folk':{bpm:105,swing:0,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'hall',chat:'tick',ohat:'tick',tom:'wood'},
@@ -134,7 +134,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------4-------',gtr:'0--0-0--4--4-0--'},
+  keys:'0-------4-------',gtr:'0--0-0--4--4-0--',gtr2:'--2---4---6-1---'},
 
 'Folk Rock':{bpm:130,swing:0,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
@@ -144,7 +144,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------2-------',gtr:'0--0-0--2--2-0--'},
+  keys:'0-------2-------',gtr:'0--0-0--2--2-0--',gtr2:'--2---4---4-6---'},
 
 'Gospel':{bpm:100,swing:30,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
@@ -154,7 +154,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0---0---3---3---',gtr:'----------------'},
+  keys:'0---0---3---3---',keys2:'----0-------3---',gtr:'----------------'},
 
 'Zydeco / Cajun':{bpm:140,swing:0,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -184,7 +184,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------5-------',gtr:'0--0--0-5--5--5-'},
+  keys:'0-------5-------',gtr:'0--0--0-5--5--5-',gtr2:'--------7-2-7---'},
 
 'Countrypolitan':{bpm:100,swing:0,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'strings',gtr:'pedal',bass:'finger'},
@@ -194,7 +194,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------4-------',gtr:'0-0-0-0-4-4-4-4-'},
+  keys:'0-------4-------',keys2:'0---0---4---4---',gtr:'0-0-0-0-4-4-4-4-',gtr2:'------4-------6-'},
 
 'Alt-country':{bpm:105,swing:0,cat:'G',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'ep',gtr:'pedal',bass:'finger'},
@@ -204,7 +204,7 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-0-0-0-0-',
-  keys:'0-------5-------',gtr:'0-0-0-0-5-5-5-5-'},
+  keys:'0-------5-------',gtr:'0-0-0-0-5-5-5-5-',gtr2:'------4-------7-'},
 
 'Americana':{bpm:105,swing:0,cat:'G',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'tick',ohat:'tick',tom:'wood',keys:'harmonica',gtr:'steel',bass:'upright'},

@@ -19,6 +19,7 @@ if(!HAS_TONE){
     TRACKS.forEach(t => { P.drums[t.id]=L.drums[t.id].slice(); });
     P.bass=L.bass.slice();
     P.keys=L.keys.slice(); P.gtr=L.gtr.slice();
+    P.keys2=L.keys2.slice(); P.gtr2=L.gtr2.slice();   // 2번 트랙 — build.js 주석 참고
     applyTune(L.tune); applyBassCfg(L.bcfg);
     UI.savestat.textContent='자동 저장 준비됨';
   }else{

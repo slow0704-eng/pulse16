@@ -12,7 +12,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'0-------0-------',gtr:'----------------'},
 
 'Eurodance':{bpm:140,swing:0,
   kit:{kick:'punch',snare:'crack',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -46,7 +46,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
   bass:'0---0---3---3---',
-  keys:'0---0---3---3---',gtr:'0-------3-------'},
+  keys:'0---0---3---3---',keys2:'0-------3-------',gtr:'0-------3-------'},
 
 'Dance-pop':{bpm:124,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -76,7 +76,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'aceaaceadfaddfad',gtr:'----------------'},
+  keys:'aceaaceadfaddfad',keys2:'0-------3-------',gtr:'----------------'},
 
 'Teen Pop':{bpm:118,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'piano',gtr:'clean'},
@@ -86,7 +86,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0--0--0-4--4--4-'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0--0--0-4--4--4-'},
 
 'Bedroom Pop':{bpm:95,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'lofi',clap:'spread',chat:'noise',ohat:'noise',tom:'synth',keys:'ep',gtr:'clean'},
@@ -116,7 +116,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--x---x---x---x-',tom:'-------------x-x',
   bass:'0-0-5-0-3-0-5-3-',
-  keys:'0---0---3---3---',gtr:'0-------3-------'},
+  keys:'0---0---3---3---',keys2:'--0---0---3---3-',gtr:'0-------3-------'},
 
 'J-pop':{bpm:135,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'piano',gtr:'clean'},
@@ -126,7 +126,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---5---5---',gtr:'0-------5-------'},
+  keys:'0---0---5---5---',keys2:'0-------5-------',gtr:'0-------5-------'},
 
 'Shibuya-kei':{bpm:115,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'tick',ohat:'tick',tom:'synth',keys:'vibes',gtr:'twelve',bass:'upright'},
@@ -136,7 +136,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'--0---0---4---4-',gtr:'0-------4-------'},
 
 'Enka':{bpm:85,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'strings',gtr:'nylon',bass:'upright'},
@@ -146,7 +146,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---2---2---',gtr:'0-------2-------'},
+  keys:'0---0---2---2---',keys2:'0-------2-------',gtr:'0-------2-------'},
 
 'Trot':{bpm:120,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -166,7 +166,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---3---3---',gtr:'0-------3-------'},
+  keys:'0---0---3---3---',keys2:'0-------3-------',gtr:'0-------3-------'},
 
 'Arabic Pop':{bpm:110,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'tight',clap:'spread',chat:'noise',ohat:'noise',tom:'synth'},
@@ -176,7 +176,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',gtr:'0-------4-------',gtr2:'----2-4-----6-1-'},
 
 'Schlager':{bpm:120,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'accordion',gtr:'clean'},
@@ -186,7 +186,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0-------4-------'},
 
 'Turbo-folk':{bpm:125,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -206,7 +206,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0-------4-------'},
 
 'Soft Rock':{bpm:110,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'tight',clap:'spread',chat:'noise',ohat:'noise',tom:'wood'},
@@ -216,7 +216,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0-------4-------'},
 
 'AOR':{bpm:115,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -226,7 +226,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---3---3---',gtr:'0-------3-------'},
+  keys:'0---0---3---3---',keys2:'0-------3-------',gtr:'0-------3-------'},
 
 'New Romantic':{bpm:125,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'tight',clap:'spread',chat:'noise',ohat:'noise',tom:'synth'},
@@ -236,7 +236,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'aceaaceadfaddfad',gtr:'----------------'},
+  keys:'aceaaceadfaddfad',keys2:'0-------3-------',gtr:'----------------'},
 
 'Retrowave':{bpm:99,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -246,7 +246,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'aceaaceadfaddfad',gtr:'----------------'},
+  keys:'aceaaceadfaddfad',keys2:'0-------3-------',gtr:'----------------'},
 
 'Digicore':{bpm:160,swing:0,cat:'B',gen:1,
   kit:{kick:'tight',snare:'crack',clap:'spread',chat:'tick',ohat:'tick',tom:'synth'},
@@ -286,7 +286,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0--0--0-4--4--4-'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0--0--0-4--4--4-'},
 
 'Twee Pop':{bpm:130,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'vibes',gtr:'twelve'},
@@ -306,7 +306,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0--0--0-4--4--4-'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0--0--0-4--4--4-'},
 
 'Baroque Pop':{bpm:110,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'harpsi',gtr:'nylon',bass:'upright'},
@@ -316,7 +316,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---5---5---',gtr:'0--0--0-5--5--5-'},
+  keys:'0---0---5---5---',keys2:'0-------5-------',gtr:'0--0--0-5--5--5-'},
 
 'Kayōkyoku':{bpm:100,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'tight',clap:'spread',chat:'noise',ohat:'noise',tom:'wood',keys:'strings',gtr:'clean',bass:'finger'},
@@ -326,7 +326,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'0-------4-------',gtr:'0-------4-------'},
 
 'Cantopop':{bpm:100,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'piano',gtr:'clean'},
@@ -336,7 +336,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---5---5---',gtr:'0-------5-------'},
+  keys:'0---0---5---5---',keys2:'0-------5-------',gtr:'0-------5-------'},
 
 'Latin Pop':{bpm:110,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth',keys:'horns',gtr:'nylon',perc:'guiro'},
@@ -346,7 +346,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---4---4---',gtr:'0-------4-------'},
+  keys:'0---0---4---4---',keys2:'----0-------4---',gtr:'0-------4-------'},
 
 'Desi Beats':{bpm:133,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},
@@ -376,7 +376,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'----X-------X---',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'-------------x-x',
   bass:'0-0-0-0-5-5-3-3-',
-  keys:'0---0---2---2---',gtr:'0-------2-------'},
+  keys:'0---0---2---2---',keys2:'0-------2-------',gtr:'0-------2-------'},
 
 'Tropical Bass':{bpm:115,swing:0,cat:'B',gen:1,
   kit:{kick:'punch',snare:'tight',clap:'spread',chat:'metal',ohat:'metal',tom:'synth'},

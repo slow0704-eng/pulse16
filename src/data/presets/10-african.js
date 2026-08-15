@@ -52,7 +52,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----X-------X---',clap:'----------------',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-3-5-3-0-3-5-3-',
-  keys:'----------------',gtr:'0-0-0-0-4-4-4-4-'},
+  keys:'----------------',gtr:'0-0-0-0-4-4-4-4-',gtr2:'2--4--2--1--6--1'},
 
 /* ── Hip Hop ── */
 
@@ -64,7 +64,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----x-------x---',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x-x---x-x-',
   bass:'0--0--3---5--0--',
-  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-'},
+  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-',gtr2:'-2-4-2-4-7-2-7-2'},
 
 'Hiplife':{bpm:105,swing:0,cat:'J',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',keys:'bell',bass:'s808'},
@@ -94,7 +94,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----x-------x---',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x-x---x-x-',
   bass:'0--0--3---5--0--',
-  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-'},
+  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-',gtr2:'-2-4-2-4-7-2-7-2'},
 
 'Congolese Rumba':{bpm:115,swing:0,cat:'J',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -104,7 +104,7 @@ Object.assign(RAW, {
   kick:'X-----X-----X---',snare:'----x---x-------',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'--x---x---x---x-',
   bass:'0-----3-----5---',
-  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-'},
+  keys:'----------------',gtr:'0-0-0-0-5-5-5-5-',gtr2:'2--4--2--2--7--2'},
 
 'Ndombolo':{bpm:145,swing:0,cat:'J',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'synth'},
@@ -114,7 +114,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----x-------x---',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x-x---x-x-',
   bass:'0--0--3---5--0--',
-  keys:'----------------',gtr:'0-0-0-0-3-3-3-3-'},
+  keys:'----------------',gtr:'0-0-0-0-3-3-3-3-',gtr2:'2--4--2--7--5--7'},
 
 'Mbaqanga':{bpm:115,swing:0,cat:'J',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
@@ -174,7 +174,7 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----x-------x---',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x-x---x-x-',
   bass:'0--0--3---5--0--',
-  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-'},
+  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-',gtr2:'----2-4-----5-7-'},
 
 'Mahraganat':{bpm:115,swing:0,cat:'J',gen:1,
   kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
@@ -224,6 +224,6 @@ Object.assign(RAW, {
   kick:'X---X---X---X---',snare:'----------------',clap:'----x-------x---',
   chat:'x-xxx-x-x-xxx-x-',ohat:'----------------',tom:'--x---x-x---x-x-',
   bass:'0--0--3---5--0--',
-  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-'},
+  keys:'0-------3-------',gtr:'0-0-0-0-3-3-3-3-',gtr2:'----2-4-----5-7-'},
 
 });
