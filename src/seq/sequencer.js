@@ -150,7 +150,7 @@ function voicesAt(i,t){
      아르페지오로 뭉개진다 — 귀가 화성 근음을 인지하는 자리는 대개 강박이라
      거기만 맞춰도 화성이 들리면서 라인의 모양은 살아남는다. */
   if(deg>=0 && progOn && chordRoot!=null && typeof snapDeg==='function' && i%4===0){
-    deg = snapDeg(deg, chordRoot, scaleName);
+    deg = snapDeg(deg, chordRoot, scaleName, chordType);
   }
   if(deg>=0 && !mute.bass && !sectionOff('bass')){
     chan.bass.gain.value=lvl.bass*sectionLvl('bass');
@@ -175,8 +175,10 @@ function voicesAt(i,t){
     let vi=0;
     const kbase = keysOct+rootNote+knob('ksemi');
     const kt = t+jit()+groove('keys');
-    for(let d=0; d<ROWS; d++) if(m & (1<<d))
-      keysVoice(kt, kbase+SCALES[scaleName][d], kdur, kv*Math.pow(0.94,vi++), eng.keys);
+    /* chordVoicing 이 마스크를 반음 배열로 편다 — 9화음·13화음은 도수가
+       8 이상까지 올라가고, 두 옥타브를 넘으면 접어 내린다(pattern-codec.js). */
+    chordVoicing(m, scaleName).forEach(sm =>
+      keysVoice(kt, kbase+sm, kdur, kv*Math.pow(0.94,vi++), eng.keys));
 
     /* 겹침 — 본 선율 위에 한 겹 더 쌓는다.
        조금 여리게(0.72) 하고 살짝 늦게(4ms) 넣어야 두 겹으로 들린다.
@@ -189,10 +191,10 @@ function voicesAt(i,t){
       const dOff = layerMode==='third' ? 2 : layerMode==='fifth' ? 3 : 0;
       const semi = layerMode==='octave' ? 12 : 0;
       let li=0;
-      for(let d=0; d<ROWS; d++) if(lm & (1<<d)){
+      for(let d=0; d<DEG_MAX; d++) if(lm & (1<<d)){
         const dd = d + dOff;
-        if(dd >= ROWS) continue;                 // 도수를 벗어나면 건너뛴다
-        keysVoice(kt+0.004, kbase+SCALES[scaleName][dd]+semi,
+        if(dd >= DEG_MAX) continue;              // 도수를 벗어나면 건너뛴다
+        keysVoice(kt+0.004, kbase+degSemi(dd,scaleName)+semi,
                   kdur, kv*0.72*Math.pow(0.94,li++), le);
       }
     }
@@ -223,7 +225,9 @@ function voicesAt(i,t){
     const c = compRow ? compRow[i] : '-';
     if(c==='X' || c==='x'){
       chan.keys2.gain.value=lvl.keys2*sectionLvl('keys2');
-      const semis = chordSemis(chordRoot, scaleName);         // 스케일 토닉 기준 반음 배열
+      /* 컴핑도 패턴과 같은 화음 종류를 쓴다 — 한 곡 안에서 «패턴은 3화음,
+         반주는 9화음» 처럼 어긋나면 조성이 흔들린다. */
+      const semis = chordSemis(chordRoot, scaleName, chordType);  // 토닉 기준 반음 배열
       const kdur2 = spb()*(c==='X'?0.9:0.45)*(knob('kgate')/100);
       const kv2   = (c==='X'?0.62:0.42)*rnd(0.12*H());
       const kbase2= keysOct+rootNote+knob('ksemi');
@@ -239,9 +243,9 @@ function voicesAt(i,t){
       const kv2  = Math.min(1, acc2*rnd(0.14*H()));
       let v2=0;
       const kt2 = t+jit()+groove('keys2');
-      for(let d=0; d<ROWS; d++) if(m2 & (1<<d))
-        keysVoice(kt2, keysOct+rootNote+knob('ksemi')+SCALES[scaleName][d],
-                  kdur2, kv2*Math.pow(0.94,v2++), eng.keys2, 'keys2');
+      const kb2 = keysOct+rootNote+knob('ksemi');
+      chordVoicing(m2, scaleName).forEach(sm =>
+        keysVoice(kt2, kb2+sm, kdur2, kv2*Math.pow(0.94,v2++), eng.keys2, 'keys2'));
     }
   }
   const gd2 = riffNowB ? barOf(riffNowB)[i] : P.gtr2[i];
@@ -329,6 +333,7 @@ function shufflePattern(){
   if(L.kit.gtr ) eng.gtr =L.kit.gtr;
   if(L.kit.keys2) eng.keys2=L.kit.keys2;
   if(L.kit.gtr2 ) eng.gtr2 =L.kit.gtr2;
+  if(L.kit.chord) chordType=L.kit.chord;
   applyPresetLvl(L);
   applyTune(L.tune); applyBassCfg(L.bcfg);
   setKnob('swing',L.swing); setSwing(L.swing);

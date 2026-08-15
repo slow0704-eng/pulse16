@@ -297,6 +297,15 @@ for(let r=0;r<ROWS;r++){
 /* ── 음정 셀렉트 ── */
 NOTES.forEach((n,i) => UI.root.add(new Option(n,i,false,i===9)));
 Object.keys(SCALES).forEach(s => UI.scale.add(new Option(s,s)));
+/* 화음 종류 — 라벨은 «무엇이 달라지는가» 를 적는다.
+   도수 오프셋이라 장·단은 스케일이 정한다(pattern-codec.js CHORD). */
+const CHORD_LABEL = {
+  triad:'3화음 (기본)', power:'5도 (파워)', sus2:'sus2', sus4:'sus4',
+  six:'6화음', sev:'7화음', nine:'9화음', add9:'add9',
+  eleven:'11화음', thirteen:'13화음',
+};
+if(UI.chord) Object.keys(CHORD).forEach(c =>
+  UI.chord.add(new Option(CHORD_LABEL[c]||c, c)));
 [['24','Oct 1'],['36','Oct 2'],['48','Oct 3']].forEach(([v,l]) =>
   UI.oct.add(new Option(l,v,false,v==='24')));
 [['36','Oct 2'],['48','Oct 3'],['60','Oct 4']].forEach(([v,l]) =>
@@ -394,6 +403,7 @@ LIB_NAMES.forEach(name => {
     if(L.kit.gtr ) eng.gtr =L.kit.gtr;
     if(L.kit.keys2) eng.keys2=L.kit.keys2;
     if(L.kit.gtr2 ) eng.gtr2 =L.kit.gtr2;
+    if(L.kit.chord) chordType=L.kit.chord;
     applyPresetLvl(L);
     applyTune(L.tune); applyBassCfg(L.bcfg);
     setKnob('bpm',  L.bpm);   setBpm(L.bpm);
@@ -493,6 +503,7 @@ function syncStrips(){
     row.querySelector('.src').value=src[id];
   });
   UI.beng.value=eng.bass; UI.bsrc.value=src.bass;
+  if(UI.chord) UI.chord.value=chordType;
   UI.keng.value=eng.keys; UI.geng.value=eng.gtr;
   if(UI.keng2) UI.keng2.value=eng.keys2;
   if(UI.geng2) UI.geng2.value=eng.gtr2;

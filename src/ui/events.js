@@ -258,6 +258,17 @@ UI.fillmode.onchange = e => {
 UI.space.onchange = e => { if(convolver) convolver.buffer=IR[e.target.value]; markDirty(); };
 UI.root.onchange  = e => { rootNote=+e.target.value; syncLabels(); markDirty(); };
 UI.scale.onchange = e => { scaleName=e.target.value; syncLabels(); markDirty(); };
+/* 화음 종류를 바꾸면 **이미 펼쳐 둔 마스크를 다시 펴야** 합니다.
+   P.keys 는 kpat 이 구운 비트마스크라, 종류만 바꾸고 두면 안 바뀝니다.
+   지금 걸린 프리셋의 원본 문자열로 다시 굽습니다. */
+if(UI.chord) UI.chord.onchange = e => {
+  chordType = e.target.value;
+  const n = src.keys, R = (typeof RAW!=='undefined') && RAW[n];
+  if(R && R.keys) P.keys = kpat(R.keys, chordType);
+  const n2 = src.keys2, R2 = (typeof RAW!=='undefined') && RAW[n2];
+  if(R2 && R2.keys2) P.keys2 = kpat(R2.keys2, chordType);
+  syncKeys(); markDirty();
+};
 UI.oct.onchange   = e => { baseOct=+e.target.value; syncLabels(); markDirty(); };
 
 /* ── 베이스 스트립 ── */

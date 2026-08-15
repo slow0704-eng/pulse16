@@ -419,218 +419,232 @@ const TONE_KIT = {
          kit.bass 에 적으십시오(프리셋이 이깁니다).
        셋 다 엔진은 있으니 사용자가 직접 고를 수 있습니다. */
 
+  /* ── 화음 종류(chord) ──────────────────────────────────────
+     '0'~'7' 표기가 **어떤 화음으로 울릴지**를 하위분기가 정합니다.
+     종류표는 pattern-codec.js 의 CHORD 를 보십시오.
+
+     ⚠ 도수 오프셋이라 **성질(장·단·감)은 스케일이 정합니다.** Natural Minor
+       0도에 sev 를 얹으면 i-m7, 2도에 얹으면 III-maj7 이 저절로 나옵니다.
+       그래서 화음표가 스케일 수만큼 안 늘어납니다.
+
+     ⚠ 모달 음악(서아시아·발칸·남아시아·북아프리카)은 3도 쌓기 확장이
+       안 맞습니다 — 일부러 triad 로 둡니다. 화음을 늘리는 것이 늘
+       «좋아지는» 것은 아닙니다.
+
+     ⚠ 안 적으면 'triad' 라 예전과 완전히 같습니다. */
+
   /* ── A. Rock ── */
-  '뿌리'                   :{keys:'piano',   gtr:'crunch', bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
+  '뿌리'                   :{chord:'triad', keys:'piano',   gtr:'crunch', bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
                             kick:'wood',   snare:'fat',    tom:'wood',
                             lvl:{keys:0.58}},
-  'Hard Rock'              :{keys:'organ',   gtr:'hi',     bass:'pick',
+  'Hard Rock'              :{chord:'power', keys:'organ',   gtr:'hi',     bass:'pick',
                             kick:'punch',  snare:'crack',  tom:'analog',
                             lvl:{gtr:0.60,keys:0.40}},
   /* 6현 베이스 — 저음 B 현이 있어 다운튜닝 기타와 자리가 맞습니다 */
-  'Metal'                  :{keys:'poly',    gtr:'hi',     bass:'bass6',
+  'Metal'                  :{chord:'power', keys:'poly',    gtr:'hi',     bass:'bass6',
                             kick:'tight',  snare:'crack',  tom:'analog',
                             lvl:{gtr:0.62,keys:0.30}, off:['keys']},
-  'Punk'                   :{keys:'organ',   gtr:'crunch', bass:'pick',
+  'Punk'                   :{chord:'power', keys:'organ',   gtr:'crunch', bass:'pick',
                             kick:'punch',  snare:'piccolo',
                             lvl:{gtr:0.60}, off:['keys']},
   /* 포스트펑크의 그 «차가운» 기타는 코러스가 만듭니다 */
-  'Post-punk 계보'         :{keys:'poly',    gtr:'chorus', bass:'finger',
+  'Post-punk 계보'         :{chord:'add9', keys:'poly',    gtr:'chorus', bass:'finger',
                             kick:'punch',  snare:'tight',  chat:'crisp'},
-  'Alternative'            :{keys:'pad',     gtr:'crunch', bass:'finger',
+  'Alternative'            :{chord:'add9', keys:'pad',     gtr:'crunch', bass:'finger',
                             kick:'punch',  snare:'fat'},
   /* 사이키델릭 = 페이저. 기존 crunch 로는 그 훑고 지나가는 소리가 안 납니다 */
-  'Psychedelic · Krautrock':{keys:'organ',   gtr:'phase',  bass:'finger',
+  'Psychedelic · Krautrock':{chord:'triad', keys:'organ',   gtr:'phase',  bass:'finger',
                             kick:'deep',   snare:'body',   tom:'analog'},
-  'Soft Rock · AOR 계보'   :{keys:'piano',   gtr:'clean',  bass:'flatwound', keys2:'strings',
+  'Soft Rock · AOR 계보'   :{chord:'nine', keys:'piano',   gtr:'clean',  bass:'flatwound', keys2:'strings',
                             kick:'wood',   snare:'body',
                             lvl:{keys:0.56}},
 
   /* ── B. Pop ── */
-  'Teen Pop · Indie Pop'   :{keys:'piano',   gtr:'clean',  bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
+  'Teen Pop · Indie Pop'   :{chord:'add9', keys:'piano',   gtr:'clean',  bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
                             keys2:'strings', kick:'punch', snare:'piccolo',
                             lvl:{keys:0.56,perc:0.38}},
-  'Synth-pop 계보'         :{keys:'lead',    gtr:'clean',  bass:'square', keys2:'choir',
+  'Synth-pop 계보'         :{chord:'add9', keys:'lead',    gtr:'clean',  bass:'square', keys2:'choir',
                             kick:'nine09', snare:'nine09', clap:'eight08', chat:'crisp',
                             lvl:{keys:0.56}},
-  'Dance-pop 계보'         :{keys:'lead',    gtr:'clean',  bass:'pluckbs',
+  'Dance-pop 계보'         :{chord:'add9', keys:'lead',    gtr:'clean',  bass:'pluckbs',
                             kick:'nine09', clap:'stack',   chat:'crisp', ohat:'sizzle',
                             lvl:{keys:0.54}},
-  '지역 팝'                :{keys:'piano',   gtr:'clean',  bass:'finger', keys2:'strings',
+  '지역 팝'                :{chord:'nine', keys:'piano',   gtr:'clean',  bass:'finger', keys2:'strings',
                             kick:'punch',  snare:'body',   lvl:{keys:0.56}},
-  '하이브리드 · 인터넷 장르':{keys:'bell',   gtr:'clean',
+  '하이브리드 · 인터넷 장르':{chord:'sev', keys:'bell',   gtr:'clean',
                             kick:'eight08',snare:'trap',   clap:'eight08'},
 
   /* ── C. Hip Hop — 808·Reese 는 의도된 값이라 bass 를 안 건드립니다 ── */
-  '뿌리 · 골든에이지'      :{keys:'ep',      gtr:'clean',  perc:'shaker', pperc:'--x---x---x---x-',
+  '뿌리 · 골든에이지'      :{chord:'sev', keys:'ep',      gtr:'clean',  perc:'shaker', pperc:'--x---x---x---x-',
                             kick:'deep',   snare:'fat',    chat:'dark'},
   /* 트랩의 정체성이 드디어 붙습니다 — 808 롱 서브 킥 + 짧고 높은 스네어 */
-  'Trap 계열'              :{keys:'bell',    gtr:'clean',
+  'Trap 계열'              :{chord:'triad', keys:'bell',    gtr:'clean',
                             kick:'eight08',snare:'trap',   clap:'eight08', chat:'tick',
                             lvl:{keys:0.44,bass:0.82}, off:['gtr']},
-  'Drill'                  :{keys:'bell',    gtr:'clean',
+  'Drill'                  :{chord:'triad', keys:'bell',    gtr:'clean',
                             kick:'eight08',snare:'trap',   chat:'tick',
                             lvl:{keys:0.44,bass:0.82}, off:['gtr']},
-  'Southern'               :{keys:'bell',    gtr:'clean',
+  'Southern'               :{chord:'triad', keys:'bell',    gtr:'clean',
                             kick:'eight08',snare:'trap',   clap:'eight08',
                             lvl:{keys:0.44,bass:0.82}, off:['gtr']},
-  'West Coast'             :{keys:'supersaw',gtr:'clean',  bass:'moog',
+  'West Coast'             :{chord:'sev', keys:'supersaw',gtr:'clean',  bass:'moog',
                             kick:'deep',   snare:'fat',    chat:'noise'},
-  'Cloud · Emo 계열'       :{keys:'pad',     gtr:'clean',
+  'Cloud · Emo 계열'       :{chord:'add9', keys:'pad',     gtr:'clean',
                             kick:'eight08',snare:'trap',   chat:'dark'},
   /* 로파이는 «먼지» 가 전부입니다 — 어두운 햇 + 뭉갠 스네어 + 사포 */
-  'Lo-fi'                  :{keys:'vibes',   gtr:'clean',  perc:'sandpaper', pperc:'--x---x---x---x-',
+  'Lo-fi'                  :{chord:'nine', keys:'vibes',   gtr:'clean',  perc:'sandpaper', pperc:'--x---x---x---x-',
                             kick:'jazz',   snare:'lofi',   chat:'dark',
                             lvl:{keys:0.54,perc:0.34}},
-  'UK 계열'                :{keys:'bell',    gtr:'clean',
+  'UK 계열'                :{chord:'triad', keys:'bell',    gtr:'clean',
                             kick:'nine09', snare:'dnb',    chat:'crisp'},
-  '지역화 파생'            :{keys:'bell',    gtr:'clean',  kick:'eight08', snare:'trap'},
+  '지역화 파생'            :{chord:'triad', keys:'bell',    gtr:'clean',  kick:'eight08', snare:'trap'},
 
   /* ── D. R&B · Soul · Funk — 라이브 밴드 편성 ── */
   /* 펑크 기타는 와(오토와)로 커팅합니다 */
-  'Funk'                   :{keys:'clav',    gtr:'wah',    bass:'slap',   perc:'tamb', pperc:'--x---x---x---x-',
+  'Funk'                   :{chord:'nine', keys:'clav',    gtr:'wah',    bass:'slap',   perc:'tamb', pperc:'--x---x---x---x-',
                             kick:'punch',  snare:'fat',    tom:'analog',
                             lvl:{keys:0.52,gtr:0.46,perc:0.40}},
-  'Disco'                  :{keys:'strings', gtr:'wah',    bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
+  'Disco'                  :{chord:'sev', keys:'strings', gtr:'wah',    bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
                             kick:'punch',  snare:'fat',    clap:'stack',  ohat:'sizzle',
                             lvl:{keys:0.44,perc:0.38}},
   /* 모타운·소울 베이스는 플랫와운드입니다 — 손가락 잡음이 없고 둔탁합니다 */
-  'Soul'                   :{keys:'strings', gtr:'clean',  bass:'flatwound', perc:'tamb', pperc:'--x---x---x---x-',
+  'Soul'                   :{chord:'sev', keys:'strings', gtr:'clean',  bass:'flatwound', perc:'tamb', pperc:'--x---x---x---x-',
                             keys2:'choir', kick:'wood',   snare:'fat',
                             lvl:{keys:0.44,perc:0.38}},
-  'Contemporary R&B'       :{keys:'ep',      gtr:'clean',  bass:'finger',
+  'Contemporary R&B'       :{chord:'nine', keys:'ep',      gtr:'clean',  bass:'finger',
                             kick:'eight08',snare:'trap',   clap:'eight08'},
-  'Electro'                :{keys:'lead',    gtr:'clean',  bass:'moog',
+  'Electro'                :{chord:'triad', keys:'lead',    gtr:'clean',  bass:'moog',
                             kick:'eight08',snare:'eight08',clap:'eight08', lvl:{keys:0.54}},
 
   /* ── E. Electronic ── */
-  'House 계열'             :{keys:'pluck',   gtr:'clean',  bass:'pluckbs', perc:'shaker', pperc:'--x---x---x---x-',
+  'House 계열'             :{chord:'sev', keys:'pluck',   gtr:'clean',  bass:'pluckbs', perc:'shaker', pperc:'--x---x---x---x-',
                             kick:'nine09', snare:'nine09', clap:'nine09',  chat:'crisp', ohat:'sizzle'},
-  'Techno 계열'            :{keys:'pluck',   gtr:'clean',  bass:'pluckbs',
+  'Techno 계열'            :{chord:'triad', keys:'pluck',   gtr:'clean',  bass:'pluckbs',
                             kick:'nine09', snare:'tight',  clap:'dry',     chat:'crisp'},
-  'Trance 계열'            :{keys:'supersaw',gtr:'clean',  bass:'pluckbs',
+  'Trance 계열'            :{chord:'sus4', keys:'supersaw',gtr:'clean',  bass:'pluckbs',
                             kick:'punch',  clap:'stack',   chat:'crisp',   ohat:'sizzle'},
-  'Breakbeat 계열'         :{keys:'pluck',   gtr:'clean',
+  'Breakbeat 계열'         :{chord:'sev', keys:'pluck',   gtr:'clean',
                             kick:'subkick',snare:'dnb',    chat:'crisp'},
   /* 덥스텝의 그 «으르렁» 은 레조넌스를 크게 두고 천천히 닫는 것입니다 */
-  'Dubstep · Bass Music'   :{keys:'bell',    gtr:'clean',  bass:'growl',
+  'Dubstep · Bass Music'   :{chord:'triad', keys:'bell',    gtr:'clean',  bass:'growl',
                             kick:'subkick',snare:'dnb',    chat:'tick'},
   /* 개버는 «왜곡된 킥 자체가 리드» 인 장르입니다 */
-  'Hardcore 계열'          :{keys:'supersaw',gtr:'clean',  bass:'buzz',
+  'Hardcore 계열'          :{chord:'power', keys:'supersaw',gtr:'clean',  bass:'buzz',
                             kick:'gabber', snare:'crack',  clap:'dry'},
-  'Downtempo · Ambient · Retro':{keys:'pad', gtr:'clean',  bass:'hollow', keys2:'glassharm',
+  'Downtempo · Ambient · Retro':{chord:'nine', keys:'pad', gtr:'clean',  bass:'hollow', keys2:'glassharm',
                             perc:'water',  pperc:'----x-------x---',
                             kick:'subkick',snare:'brush',  chat:'dark',
                             lvl:{perc:0.34}},
 
   /* ── F. Jazz — 업라이트가 기본입니다 ── */
   /* 재즈 기타는 아치탑 넥픽업 — 배음이 없는 것이 정체성입니다 */
-  'Bebop 계보'             :{keys:'piano',   gtr:'jazzbox',bass:'upright',
+  'Bebop 계보'             :{chord:'nine', keys:'piano',   gtr:'jazzbox',bass:'upright',
                             kick:'jazz',   snare:'brush',  chat:'foot',
                             lvl:{keys:0.62,bass:0.78,gtr:0.40}},
-  'Latin Jazz'             :{keys:'piano',   gtr:'nylon',  bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
+  'Latin Jazz'             :{chord:'nine', keys:'piano',   gtr:'nylon',  bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
                             gtr2:'jazzbox',kick:'jazz',   snare:'brush',  tom:'conga',
                             lvl:{keys:0.60,bass:0.78,perc:0.50}},
   /* 프렛리스 — 재즈퓨전 베이스의 그 «음~» 하는 울림 */
-  'Fusion 계보'            :{keys:'sax',     gtr:'jazzbox',bass:'fretless', keys2:'ep',
+  'Fusion 계보'            :{chord:'thirteen', keys:'sax',     gtr:'jazzbox',bass:'fretless', keys2:'ep',
                             kick:'punch',  snare:'piccolo',lvl:{keys:0.54}},
-  '현대 갈래'              :{keys:'piano',   gtr:'jazzbox',bass:'upright',
+  '현대 갈래'              :{chord:'nine', keys:'piano',   gtr:'jazzbox',bass:'upright',
                             kick:'jazz',   snare:'brush',  lvl:{keys:0.60,bass:0.76}},
   /* ⚠ 이름이 «현대 크로스오버» 라 재즈 항목처럼 보이지만, 실제로 묶인 프리셋은
      **Latin Trap · Neoperreo · Sad Perreo — 레게톤 계열**입니다.
      예전 표는 이 자리에 피아노+업라이트(재즈 편성)를 주고 있었습니다.
      하위분기 이름만 보고 고치면 또 틀립니다 — PRESET_SUB 를 역으로 훑어
      실제 프리셋 목록을 보고 정하십시오. */
-  '현대 크로스오버'        :{keys:'bell',    gtr:'clean',  keys2:'pad',
+  '현대 크로스오버'        :{chord:'triad', keys:'bell',    gtr:'clean',  keys2:'pad',
                             lvl:{keys:0.46,bass:0.82}, off:['gtr']},
 
   /* ── G. Blues · Country · Folk ── */
   /* 슬라이드(보틀넥) — 블루스의 그 미끄러지는 소리. 픽 잡음이 거의 없습니다 */
-  'Blues'                  :{keys:'piano',   gtr:'slide',  bass:'finger', gtr2:'crunch',
+  'Blues'                  :{chord:'sev', keys:'piano',   gtr:'slide',  bass:'finger', gtr2:'crunch',
                             kick:'wood',   snare:'body',   lvl:{keys:0.56}},
   /* 페달 스틸이 컨트리의 2번 기타, 팜뮤트가 내슈빌 베이스 */
-  'Country'                :{keys:'ep',      gtr:'steel',  bass:'muted',  gtr2:'pedal',
+  'Country'                :{chord:'triad', keys:'ep',      gtr:'steel',  bass:'muted',  gtr2:'pedal',
                             kick:'wood',   snare:'rim',    perc:'sticks', pperc:'--x---x---x---x-'},
-  'Folk'                   :{keys:'harmonica',gtr:'steel', bass:'upright', gtr2:'dulcimer',
+  'Folk'                   :{chord:'add9', keys:'harmonica',gtr:'steel', bass:'upright', gtr2:'dulcimer',
                             kick:'jazz',   snare:'brush',  lvl:{keys:0.50}},
   /* 가스펠 합창 — keys2 가 코러스에서만 켜지는 것이 마침 맞습니다 */
-  'Gospel · 지역 장르'     :{keys:'piano',   gtr:'clean',  bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
+  'Gospel · 지역 장르'     :{chord:'nine', keys:'piano',   gtr:'clean',  bass:'finger', perc:'tamb', pperc:'--x---x---x---x-',
                             keys2:'choir', kick:'wood',   snare:'fat',    clap:'stack',
                             lvl:{keys:0.60,perc:0.40}},
-  '루츠와의 교차'          :{keys:'organ',   gtr:'steel',  bass:'flatwound', gtr2:'resonator',
+  '루츠와의 교차'          :{chord:'triad', keys:'organ',   gtr:'steel',  bass:'flatwound', gtr2:'resonator',
                             kick:'wood',   snare:'body'},
 
   /* ── H. Latin ── */
   /* 트레스 — 손 쿠바노·티임바의 그 «틱틱» 거리는 반주. 콩가는 필수 */
-  '쿠바'                   :{keys:'piano',   gtr:'tres',   bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
+  '쿠바'                   :{chord:'sev', keys:'piano',   gtr:'tres',   bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
                             keys2:'horns', tom:'conga',   kick:'wood',    snare:'rim',
                             lvl:{keys:0.50,perc:0.52,bass:0.76}},
   /* 콰트로 — 푸에르토리코 히바로·플레나. 봉고는 봄바·메렝게 */
-  '푸에르토리코 · 도미니카':{keys:'horns',   gtr:'nylon',  bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
+  '푸에르토리코 · 도미니카':{chord:'sev', keys:'horns',   gtr:'nylon',  bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
                             gtr2:'cuatro', tom:'bongo',   kick:'wood',
                             lvl:{keys:0.48,perc:0.48}},
-  '멕시코'                 :{keys:'accordion',gtr:'nylon', bass:'tuba',    perc:'clave', pperc:'x--x--x---x-x---',
+  '멕시코'                 :{chord:'triad', keys:'accordion',gtr:'nylon', bass:'tuba',    perc:'clave', pperc:'x--x--x---x-x---',
                             keys2:'trumpet',tom:'timbale',kick:'wood',
                             lvl:{keys:0.48,perc:0.48,bass:0.74}},
   /* 수르두 — 삼바·파고지의 저음 통드럼. 바투카다의 심장 */
-  '브라질'                 :{keys:'ep',      gtr:'nylon',  bass:'finger',  perc:'shaker', pperc:'xxxxxxxxxxxxxxxx',
+  '브라질'                 :{chord:'nine', keys:'ep',      gtr:'nylon',  bass:'finger',  perc:'shaker', pperc:'xxxxxxxxxxxxxxxx',
                             tom:'surdo',   kick:'wood',   snare:'rim'},
-  '콜롬비아'               :{keys:'accordion',gtr:'nylon', bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
+  '콜롬비아'               :{chord:'triad', keys:'accordion',gtr:'nylon', bass:'finger',  perc:'guiro', pperc:'x-x-x-x-x-x-x-x-',
                             tom:'conga',   kick:'wood',
                             lvl:{keys:0.52,perc:0.44}},
   /* 탱고뿐입니다(Electrotango·Nuevo Tango·Tango) — 안데스 악기를 넣지 않습니다 */
-  '아르헨티나 · 남미 남부' :{keys:'bandoneon',gtr:'nylon', bass:'upright', keys2:'strings',
+  '아르헨티나 · 남미 남부' :{chord:'sev', keys:'bandoneon',gtr:'nylon', bass:'upright', keys2:'strings',
                             kick:'wood',   snare:'rim',
                             lvl:{keys:0.58,bass:0.74}},
 
   /* ── I. Caribbean ── */
   /* 레게 베이스는 플랫와운드입니다 — 죽은 현의 그 둔탁함이 정체성.
      원드롭의 3박은 림샷입니다 */
-  'Reggae 갈래'            :{keys:'organ',   gtr:'clean',  bass:'flatwound',
+  'Reggae 갈래'            :{chord:'triad', keys:'organ',   gtr:'clean',  bass:'flatwound',
                             kick:'deep',   snare:'rim',    chat:'foot',
                             lvl:{keys:0.50,bass:0.80,gtr:0.44}},
-  '자메이카'               :{keys:'horns',   gtr:'chorus', bass:'flatwound',
+  '자메이카'               :{chord:'sev', keys:'horns',   gtr:'chorus', bass:'flatwound',
                             kick:'wood',   snare:'rim',
                             lvl:{keys:0.50,bass:0.78}},
-  'Dancehall 계보'         :{keys:'supersaw',gtr:'clean',
+  'Dancehall 계보'         :{chord:'triad', keys:'supersaw',gtr:'clean',
                             kick:'eight08',snare:'trap',   clap:'eight08'},
-  '트리니다드 · 바베이도스':{keys:'steelpan',gtr:'clean',  bass:'finger',  perc:'iron', pperc:'xxxxxxxxxxxxxxxx',
+  '트리니다드 · 바베이도스':{chord:'sev', keys:'steelpan',gtr:'clean',  bass:'finger',  perc:'iron', pperc:'xxxxxxxxxxxxxxxx',
                             tom:'conga',   kick:'punch',
                             lvl:{keys:0.54,perc:0.42}},
-  '프랑스어권 카리브'      :{keys:'ep',      gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
+  '프랑스어권 카리브'      :{chord:'nine', keys:'ep',      gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
                             tom:'conga',   kick:'wood'},
 
   /* ── J. African ── */
   /* 세케레(조롱박 셰이커)와 토킹드럼 — 푸지·주주·아프로비트의 그 소리.
      코라는 데저트 블루스·만데 계열 */
-  '서아프리카'             :{keys:'organ',   gtr:'clean',  bass:'finger',  perc:'sekere', pperc:'x-xxx-x-x-xxx-x-',
+  '서아프리카'             :{chord:'sev', keys:'organ',   gtr:'clean',  bass:'finger',  perc:'sekere', pperc:'x-xxx-x-x-xxx-x-',
                             gtr2:'kora',   tom:'talking', kick:'wood',
                             lvl:{perc:0.50,gtr:0.46}},
-  '동아프리카'             :{keys:'organ',   gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-xxx-x-x-xxx-x-',
+  '동아프리카'             :{chord:'triad', keys:'organ',   gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-xxx-x-x-xxx-x-',
                             tom:'djembe',  kick:'wood'},
   /* 콩고 룸바·소커스는 기타 음악입니다 — 2번 기타가 세베네를 받습니다 */
-  '중앙아프리카'           :{keys:'marimba', gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
+  '중앙아프리카'           :{chord:'triad', keys:'marimba', gtr:'clean',  bass:'finger',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
                             gtr2:'clean',  tom:'conga',   kick:'wood',
                             lvl:{keys:0.54}},
-  '남아프리카'             :{keys:'pluck',   gtr:'clean',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
+  '남아프리카'             :{chord:'sev', keys:'pluck',   gtr:'clean',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
                             kick:'punch',  snare:'tight',  chat:'crisp'},
 
   /* ── K. 기타 지역 ── */
   /* 타블라 — 데지 비트. ⚠ 방그라의 돌(dhol)은 아직 모델이 없습니다 */
-  '남아시아'               :{keys:'ep',      gtr:'sitar',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
+  '남아시아'               :{chord:'triad', keys:'ep',      gtr:'sitar',  perc:'shaker', pperc:'x-x-x-x-x-x-x-x-',
                             tom:'tabla',   kick:'punch',
                             lvl:{gtr:0.44,perc:0.44}},
   /* C-pop·Trot 뿐이라 전통악기를 주악기로 두지 않습니다 */
-  '동아시아'               :{keys:'ep',      gtr:'clean',  bass:'finger', keys2:'strings',
+  '동아시아'               :{chord:'sev', keys:'ep',      gtr:'clean',  bass:'finger', keys2:'strings',
                             kick:'punch',  snare:'piccolo'},
   /* 우드 — 아랍 고전·팝의 중심. 다르부카는 둘 다 씁니다.
      기타는 nylon 으로 둡니다 — Rumba Flamenca 가 여기 묶여 있습니다 */
-  '서아시아 · 지중해'      :{keys:'ep',      gtr:'nylon',  bass:'finger', gtr2:'oud',
+  '서아시아 · 지중해'      :{chord:'triad', keys:'ep',      gtr:'nylon',  bass:'finger', gtr2:'oud',
                             tom:'darbuka',  perc:'tamb',  pperc:'--x---x---x---x-',
                             lvl:{gtr:0.46}},
-  '동유럽 · 발칸'          :{keys:'accordion',gtr:'saz',   perc:'tamb', pperc:'--x---x---x---x-',
+  '동유럽 · 발칸'          :{chord:'triad', keys:'accordion',gtr:'saz',   perc:'tamb', pperc:'--x---x---x---x-',
                             gtr2:'bouzouki',tom:'darbuka',
                             lvl:{keys:0.54,gtr:0.46}},
-  '북아프리카'             :{keys:'ep',      gtr:'nylon',  perc:'tamb', pperc:'x-x-x-x-x-x-x-x-',
+  '북아프리카'             :{chord:'triad', keys:'ep',      gtr:'nylon',  perc:'tamb', pperc:'x-x-x-x-x-x-x-x-',
                             gtr2:'oud',    tom:'darbuka', kick:'wood'},
 };
 

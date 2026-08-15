@@ -27,6 +27,9 @@ for(const [n,p] of Object.entries(RAW)){
      기본값은 state.js 의 eng 초기값과 같습니다. */
   kit.keys2 = kit.keys2 || T.keys2 || 'strings';
   kit.gtr2  = kit.gtr2  || T.gtr2  || 'clean';
+  /* 화음 종류 — '0'~'7' 이 3화음으로 울릴지 7·9화음으로 울릴지.
+     안 정하면 'triad' 라 예전과 완전히 같다. */
+  kit.chord = kit.chord || T.chord || 'triad';
   /* perc 엔진만 정하고 패턴이 없으면 트랙이 조용합니다.
      하위분기 단위로 기본 패턴을 함께 줍니다 — 프리셋이 perc 를 직접 적으면 그쪽이 이깁니다.
      Soca 의 16분 아이언만 문서에 명시돼 있고, 나머지는 통상적인 자리입니다. */
@@ -54,11 +57,11 @@ for(const [n,p] of Object.entries(RAW)){
     bpm:p.bpm, swing:p.swing, kit, bcfg, tune:p.tune, tone:!!p.tone,
     cat:p.cat||null, gen:!!p.gen,
     prob:p.prob||null, smp:p.smp||null, bass:bpat(p.bass),
-    keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys),
+    keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys, kit.chord),
     gtr : (blankGtr || !p.gtr) ? new Array(STEPS).fill(-1) : bpat(p.gtr),
     /* 2번 트랙은 프리셋이 적으면 쓰고, 없으면 빈 패턴.
        16마디 선율 모드에서는 라이브러리가 채웁니다. */
-    keys2: p.keys2 ? kpat(p.keys2) : new Array(STEPS).fill(0),
+    keys2: p.keys2 ? kpat(p.keys2, kit.chord) : new Array(STEPS).fill(0),
     gtr2 : p.gtr2  ? bpat(p.gtr2)  : new Array(STEPS).fill(-1),
     drums:Object.fromEntries(TRACKS.map(t =>
       [t.id, pat(t.id==='perc' ? (off.includes('perc') ? null : percPat) : p[t.id])])),
