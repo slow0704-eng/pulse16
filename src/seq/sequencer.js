@@ -155,7 +155,11 @@ function voicesAt(i,t){
          신호라 섹션 마스크보다 우선한다(arrange.js sectionOff 주석 참고). */
       const row=fillNow.pat[tr.id];
       const c=row ? row[fk] : '-';
-      v = c==='X' ? 2 : c==='x' ? 1 : 0;
+      /* FILLS 는 pat() 을 안 거치고 여기서 직접 읽는다(자체 파서).
+         지금 FILLS 30개에 쓰인 글자는 '- X x' 뿐이라 'o' 를 넣어도
+         소리는 안 바뀌지만, 두 파서가 같은 글자를 알아야 나중에
+         필인에 고스트를 찍었을 때 조용히 무시되지 않는다. */
+      v = c==='X' ? 2 : c==='x' ? 1 : c==='o' ? GHOST : 0;
       if(fillNow.eng && fillNow.eng[tr.id]) e=fillNow.eng[tr.id];
     }else{
       v=P.drums[tr.id][i];
@@ -166,10 +170,12 @@ function voicesAt(i,t){
     }
     if(!v || mute[tr.id]) return;
     /* 필인은 확률로 빠지면 안 된다 — 구멍이 나면 필인으로 안 들린다 */
-    if(fk===null && v===1 && Math.random()>effProb(tr.id)){ skipped.push(tr.id); return; }
+    /* 확률로 빠지는 것은 «약한 타» 다. 고스트도 약한 타라 같이 넣는다 —
+       v!==2 는 v===1 || v===GHOST 와 같다(0 은 위에서 이미 걸러졌다). */
+    if(fk===null && v!==2 && Math.random()>effProb(tr.id)){ skipped.push(tr.id); return; }
     chan[tr.id].gain.value=lvl[tr.id]*sectionLvl(tr.id);
     fireTrack(tr.id, Math.max(t+jit()+groove(tr.id), ctx.currentTime+0.004),
-              (v===2?1:0.60)*gvel(tr.id), e);
+              VEL_OF(v)*gvel(tr.id), e);
   });
   /* 베이스도 선율 모드에서는 16마디 라인을 탄다.
      건반·기타와 같은 melBar 를 본다 — 셋이 같은 형식 위에 있어야 곡이 된다. */

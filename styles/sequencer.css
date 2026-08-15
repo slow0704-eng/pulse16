@@ -30,6 +30,11 @@
   background:#fff;opacity:.42;border-radius:1px}
 .pad[data-v="2"]::after{content:"";position:absolute;left:5px;right:5px;top:4px;height:3px;
   background:#fff;opacity:.92;border-radius:2px}
+/* 고스트(3) — 1 보다 어둡게, 그리고 «작은 점» 으로. 형태가 달라야
+   흑백·저시력에서도 x 와 구별된다(위 3단계와 같은 원칙). */
+.pad[data-v="3"]{background:linear-gradient(180deg,color-mix(in srgb,var(--tone) 34%,#000),color-mix(in srgb,var(--tone) 17%,#000))}
+.pad[data-v="3"]::after{content:"";position:absolute;left:50%;margin-left:-2px;bottom:5px;
+  width:4px;height:4px;background:#fff;opacity:.38;border-radius:50%}
 /* 재생 표시는 즉시 반응해야 함 — 174 BPM 이면 16분이 86ms */
 .pad.hit{background:var(--live)!important;transition:none}
 .pad.skip{opacity:.35}

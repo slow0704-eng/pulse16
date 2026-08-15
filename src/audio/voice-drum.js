@@ -5,6 +5,56 @@
 
 /* ═══ §9  신스 보이스 ═══════════════════════════════════════ */
 
+/* ═══ 세기(velocity) → 음색 ═══════════════════════════════════
+   여리게 치면 **작아질 뿐 아니라 어두워지고 더 빨리 죽습니다.**
+   예전에는 v 가 전부 진폭 곱셈에만 쓰여서, v=0.25 를 넣으면 «같은 소리를
+   작게 튼 것» 이 됐습니다. 고역이 그대로라 믹스에서 와이어만 또렷하게
+   남습니다 — 고스트 노트가 아니라 그냥 작게 친 백비트입니다.
+
+   ── 왜 어두워지는가 : 접촉시간 ──
+   스틱·비터·손이 헤드에 닿아 있는 시간 τ 가 여기(勵起) 스펙트럼의 폭을
+   정합니다. 대략 1/τ 위로는 에너지가 안 실립니다. 세게 칠수록 팁이 더
+   찌그러져 τ 가 **짧아지고**, 그만큼 고차 모드까지 여기됩니다.
+   피아노 해머에서 정량화된 관계이며(Hall · Askenfelt, 해머 강성의
+   비선형성), 이 저장소의 struck.js 가 `1800 + 9000·ve²` 로 로우패스를
+   여는 것도 같은 이야기입니다.
+     ⇒ v 를 **로우패스 컷오프 · 밴드패스 중심 · 모드별 게인**에 태웁니다.
+
+   ── 왜 더 빨리 죽는가 ──
+     ① 심벌·하이햇 — 큰 진폭에서는 비선형 모드 결합이 저차 모드의 에너지를
+        고차로 계속 퍼올립니다. 세게 친 심벌만 «샤—» 하고 길게 남는 이유가
+        이것입니다. 작은 진폭은 선형 영역이라 짧고 둔합니다.
+        (Legge · Fletcher 의 얕은 공(gong) 연구, Fletcher · Rossing 심벌 장)
+     ② 스네어 — 와이어가 울려면 헤드가 와이어를 **들어올려야** 합니다.
+        문턱 아래(고스트)에서는 와이어가 헤드에 붙은 채 잠깐 딸그락하다
+        헤드에 눌려 죽습니다. 고스트의 노이즈 꼬리가 훨씬 짧은 까닭입니다.
+     ③ 나무·금속 막대·벨 — 고차 모드는 복사손실·내부손실이 커서 원래 빨리
+        죽습니다. 고차가 덜 실리면 들리는 꼬리도 함께 짧아집니다.
+     ⇒ v 를 **감쇠시간**에도 태웁니다.
+
+   ⚠ 반대로 킥의 서브·톰의 기음 같은 **저차 모드는 거의 선형**이라 감쇠가
+     세기에 별로 안 변합니다. 그래서 그쪽 계수만 일부러 가장 작게 뒀습니다
+     (0.12~0.25). 없는 물리를 지어내지 않기 위해서입니다.
+   ⚠ 안 만든 것: 센 타격이 막 장력을 올려 만드는 **피치 글라이드의 세기
+     의존**(Rossing, Science of Percussion Instruments). 음정이 흔들려
+     기존 프리셋의 소리가 바뀌므로 이번에는 손대지 않았습니다.
+
+   ── 무회귀 장치 ──
+   보정항을 전부 vTone(v,k) = 1 − k(1−v²) 꼴로 적습니다.
+   v=1 이면 1 − k·0 = **정확히 1** 이고, 부동소수점에서도 x*1 은 x 와
+   비트가 같습니다. 그래서 v=1.0 의 소리는 한 표본도 안 바뀝니다.
+   필터를 새로 끼워야 하는 자리(스네어·클랩·햇의 고스트 로우패스)는
+   아예 **v<1 일 때만 노드를 만듭니다** — v=1 에서는 그래프의 모양까지
+   예전과 같아야 하기 때문입니다.
+
+   ⚠ k 값 자체는 물리에서 유도한 상수가 아닙니다. 위 «방향» 을 지키면서
+     v=0.25 가 −12~−18dB · 중심 하강 · T60 단축이라는 실측 창에 들어오도록
+     잡은 조정 상수입니다. 근거는 계산이 아니라 하네스 실측 표입니다.
+   ⚠ v>1 은 1 로 자릅니다 — 필터 컷오프가 나이퀴스트로 달아나지 않게. */
+const vTone = (v,k) => { const u = v>1 ? 1 : (v<0 ? 0 : v); return 1 - k*(1-u*u); };
+/** 고스트 로우패스 컷오프. v=1 에서는 **호출부가 아예 안 부릅니다.** */
+const vLP = (v,lo) => { const u = v>1 ? 1 : (v<0 ? 0 : v); return lo + (20000-lo)*u*u; };
+
 /* ── 킥 ──
    sub(사인 바디) + body(중저역) + atk(어택 톤) + click(노이즈 트랜지언트) 4층 구조.
    Trap 계열은 tight 를 써서 808 에 저역을 양보하는 것이 정석입니다. */
@@ -49,7 +99,11 @@ function kick(t,v,e){
   const S=KICK[e], mul=st2r(knob('ktune'));
   const stretch=1+Math.max(0,-knob('ktune'))*0.035;
   const sw=0.55+SUB()*0.85, pw=0.45+PUN()*1.05;
-  const sdec=S.sub.dec*stretch, end=t+sdec+0.3;
+  /* 세기 → 음색. 비터가 헤드에 얕게 닿으면 접촉시간이 길어져 고역이 덜
+     실리고, 트랜지언트 층(어택·클릭)이 먼저 사라집니다. 서브는 거의
+     선형이라 가장 덜 건드립니다(위 ⚠). */
+  const kBr=vTone(v,0.55);            // 바디 로우패스·클릭 대역
+  const sdec=S.sub.dec*stretch*vTone(v,0.12), end=t+sdec+0.3;
 
   /* 1) 서브 — 짧게 위에서 떨어지는 사인 */
   const gs=G('kick',end), os=osc('sine',t,sdec+0.25);
@@ -58,27 +112,33 @@ function kick(t,v,e){
   os.frequency.exponentialRampToValueAtTime(S.sub.f1*mul,t+S.sub.drop);
   env2(gs,t,v*sw,0.42,0.07,sdec,0.0015); os.connect(gs);
 
-  /* 2) 바디 — 새추레이션을 거친 중저역 */
-  const eb=t+S.body.dec+0.2;
-  const gb=G('kick',eb), ob=osc('sine',t,S.body.dec+0.15);
+  /* 2) 바디 — 새추레이션을 거친 중저역.
+     세기가 낮으면 새추레이터가 선형 구간만 쓰므로 배음이 저절로 줄지만,
+     로우패스가 6000 으로 고정이라 그 위 노이즈성 성분이 그대로 남았습니다. */
+  const bdec=S.body.dec*vTone(v,0.20);
+  const eb=t+bdec+0.2;
+  const gb=G('kick',eb), ob=osc('sine',t,bdec+0.15);
   ob.frequency.setValueAtTime(S.body.f0*mul,t);
   ob.frequency.exponentialRampToValueAtTime(S.body.f1*mul,t+S.body.drop);
-  env2(gb,t,v*S.body.amp*(0.7+SUB()*0.5),0.35,0.03,S.body.dec,0.001);
-  const ws=shaperNode(S.sh!=null?S.sh:1,eb), blp=BQ('lowpass',6000,0.707,eb);
+  env2(gb,t,v*S.body.amp*(0.7+SUB()*0.5),0.35,0.03,bdec,0.001);
+  const ws=shaperNode(S.sh!=null?S.sh:1,eb), blp=BQ('lowpass',6000*kBr,0.707,eb);
   ob.connect(ws).connect(blp).connect(gb);
 
   /* 3) 어택 — 튠의 절반만 따라가는 삼각파 */
-  const ea=t+S.atk.dec+0.1;
-  const ga=G('kick',ea), oa=osc('triangle',t,S.atk.dec+0.08);
+  const adec=S.atk.dec*vTone(v,0.35);
+  const ea=t+adec+0.1;
+  const ga=G('kick',ea), oa=osc('triangle',t,adec+0.08);
   const amul=st2r(knob('ktune')*0.5);
   oa.frequency.setValueAtTime(S.atk.f*amul,t);
-  oa.frequency.exponentialRampToValueAtTime(S.atk.f*amul*0.45,t+S.atk.dec);
-  env(ga,t,v*S.atk.amp*pw,S.atk.dec,0.0006); oa.connect(ga);
+  oa.frequency.exponentialRampToValueAtTime(S.atk.f*amul*0.45,t+adec);
+  env(ga,t,v*S.atk.amp*pw*vTone(v,0.45),adec,0.0006); oa.connect(ga);
 
-  /* 4) 클릭 — 노이즈 트랜지언트 */
-  const ec=t+S.click.dec+0.08;
-  const gc=G('kick',ec), f=BQ(S.click.bp?'bandpass':'lowpass',S.click.f,S.click.q,ec);
-  env(gc,t,v*S.click.amp*pw*0.5,S.click.dec,0.0005);
+  /* 4) 클릭 — 노이즈 트랜지언트. 비터가 가죽을 때리는 «딱» 이라
+     접촉시간에 가장 직접 걸립니다 — 다섯 층 중 세기 의존이 가장 큽니다. */
+  const cdec=S.click.dec*vTone(v,0.45);
+  const ec=t+cdec+0.08;
+  const gc=G('kick',ec), f=BQ(S.click.bp?'bandpass':'lowpass',S.click.f*vTone(v,0.50),S.click.q,ec);
+  env(gc,t,v*S.click.amp*pw*0.5*vTone(v,0.55),cdec,0.0005);
   f.connect(gc); tapNoise(f,ec);
 }
 
@@ -174,8 +234,10 @@ function tom(t,v,e){
   const S=TOM[e]||TOM.analog, mul=st2r(knob('ttune'));
 
   if(S.bell){                     // 카우벨 — 막울림이 아니므로 경로가 다름
-    const dec=S.dec, end=t+dec+0.2;
-    const g=G('tom',end), bp=BQ('bandpass',S.bp[0]*mul,S.bp[1],end);
+    /* 금속 덩어리라 위 ③ 이 그대로 적용됩니다 — 살짝 치면 고차 모드가
+       덜 실려 어둡고, 그 고차가 먼저 죽으므로 꼬리도 짧습니다. */
+    const dec=S.dec*vTone(v,0.30), end=t+dec+0.2;
+    const g=G('tom',end), bp=BQ('bandpass',S.bp[0]*mul*vTone(v,0.30),S.bp[1],end);
     bp.connect(g);
     S.bell.forEach((hz,i) => {
       const o=osc('square',t,dec+0.1);
@@ -187,7 +249,9 @@ function tom(t,v,e){
     return;
   }
 
-  const dec=S.dec*(1+Math.max(0,-knob('ttune'))*0.03);
+  /* 막의 기음은 거의 선형이라 세기로 감쇠가 크게 안 변합니다 — 0.25 로
+     가장 작게. 밝기는 슬랩·셸·스틱 어택 쪽에서 만듭니다(아래). */
+  const dec=S.dec*(1+Math.max(0,-knob('ttune'))*0.03)*vTone(v,0.25);
   const f0=S.f0*mul*rnd(0.03*H()), f1=S.f1*mul, end=t+dec*1.3+0.25;
 
   const g=G('tom',end), o=osc(S.type,t,dec+0.2);
@@ -203,20 +267,25 @@ function tom(t,v,e){
   }
 
   if(S.shell) S.shell.forEach((r,i) => {   // 금속 셸의 비배음 링
+    /* 기음보다 훨씬 높은 모드들 — 접촉시간이 길어지면 가장 먼저 빠집니다 */
     const se=t+dec*0.9, sg=G('tom',se), so=osc('sine',t,dec*0.75);
     so.frequency.setValueAtTime(f0*r,t);
-    env(sg,t,v*0.14*(i?0.6:1),dec*0.55,0.001); so.connect(sg);
+    env(sg,t,v*0.14*(i?0.6:1)*vTone(v,0.55),dec*0.55*vTone(v,0.30),0.001); so.connect(sg);
   });
 
   if(S.slap){                              // 손바닥 슬랩
-    const K=S.slap, se=t+K.dec+0.1, sg=G('tom',se);
-    const f=BQ('bandpass',K.f*mul,K.q,se);
-    env(sg,t,v*K.amp*PUN()*rnd(0.1*H()),K.dec,0.0008); f.connect(sg); tapNoise(f,se);
+    /* 슬랩은 손이 막을 «찰싹» 때려 헤드를 크게 찌그러뜨릴 때만 나는
+       소리입니다. 살살 얹으면 톤(개방음)만 남고 슬랩은 사실상 사라집니다 —
+       그래서 대역·크기·길이를 셋 다 내립니다. */
+    const K=S.slap, kd=K.dec*vTone(v,0.40), se=t+kd+0.1, sg=G('tom',se);
+    const f=BQ('bandpass',K.f*mul*vTone(v,0.35),K.q,se);
+    env(sg,t,v*K.amp*PUN()*rnd(0.1*H())*vTone(v,0.50),kd,0.0008); f.connect(sg); tapNoise(f,se);
   }
 
   if(S.body){   // 어쿠스틱은 스틱 어택을 얹음
-    const be=t+0.12, bg=G('tom',be), f=BQ('bandpass',1300*mul,1.6,be);
-    env(bg,t,v*0.22*PUN(),0.055,0.001); f.connect(bg); tapNoise(f,be);
+    const bd=0.055*vTone(v,0.40), be=t+0.12, bg=G('tom',be);
+    const f=BQ('bandpass',1300*mul*vTone(v,0.30),1.6,be);
+    env(bg,t,v*0.22*PUN()*vTone(v,0.50),bd,0.001); f.connect(bg); tapNoise(f,be);
   }
 }
 
@@ -306,6 +375,11 @@ const PERC = {
 function perc(t,v,e){
   const S=PERC[e]||PERC.shaker;
   const amp=v*S.amp*rnd(0.12*H());
+  /* mk — **모드 차수당** 감쇠. 접촉시간 모형을 가장 곧이곧대로 쓰는 자리입니다:
+     여기 스펙트럼이 1/τ 위로 굴러떨어지므로, i 번째(더 높은) 모드는
+     mk^i 만큼 덜 실립니다. i=0 은 mk⁰=1 이라 기음은 안 건드립니다 —
+     «작아지는 것» 이 아니라 «어두워지는 것» 이라야 하기 때문입니다. */
+  const mk=vTone(v,0.40), br=vTone(v,0.30), dk=vTone(v,0.32);
 
   if(S.tone){                       /* 공진체 — 노이즈로 때려 울린다 */
     const end=t+S.dec+0.15;
@@ -315,25 +389,27 @@ function perc(t,v,e){
       const q  = S.qs    ? S.qs[i]    : S.q;
       const mg = S.gains ? S.gains[i] : Math.pow(0.62,i);
       const g=G('perc',end), f=BQ('bandpass',hz*rnd(0.012*H()),q,end);
-      env(g,t,amp*mg,S.dec*Math.pow(0.80,i),0.0006);
+      env(g,t,amp*mg*Math.pow(mk,i),S.dec*Math.pow(0.80,i)*dk,0.0006);
       f.connect(g); tapNoise(f,end);
     });
     return;
   }
 
   if(S.sweep){                      /* 스크래치 — 밴드패스 중심을 왕복으로 훑는다 */
-    const end=t+S.dec+0.12, g=G('perc',end);
+    /* 살살 문지르면 손이 덜 움직입니다 — 왕복 폭(f1)이 줄고 짧아집니다 */
+    const sdec=S.dec*vTone(v,0.25);
+    const end=t+sdec+0.12, g=G('perc',end);
     const f=BQ('bandpass',S.f0,S.q,end);
     f.frequency.setValueAtTime(S.f0,t);
-    f.frequency.exponentialRampToValueAtTime(S.f1, t+S.dec*0.45);
-    f.frequency.exponentialRampToValueAtTime(S.f0*1.2, t+S.dec);
+    f.frequency.exponentialRampToValueAtTime(S.f1*br, t+sdec*0.45);
+    f.frequency.exponentialRampToValueAtTime(S.f0*1.2, t+sdec);
     f.connect(g); tapNoise(f,end);
     /* 문지르는 손의 왕복이 음량에도 굴곡을 만든다 */
     g.gain.setValueAtTime(0,t);
     g.gain.linearRampToValueAtTime(amp,t+0.004);
-    g.gain.linearRampToValueAtTime(amp*0.45,t+S.dec*0.45);
-    g.gain.linearRampToValueAtTime(amp*0.85,t+S.dec*0.72);
-    g.gain.linearRampToValueAtTime(0,t+S.dec+0.02);
+    g.gain.linearRampToValueAtTime(amp*0.45,t+sdec*0.45);
+    g.gain.linearRampToValueAtTime(amp*0.85,t+sdec*0.72);
+    g.gain.linearRampToValueAtTime(0,t+sdec+0.02);
     return;
   }
 
@@ -341,25 +417,28 @@ function perc(t,v,e){
     const n=Math.max(2,Math.round(S.dec*S.rate)), seg=S.dec/n, end=t+S.dec+0.12;
     for(let i=0;i<n;i++){
       const g=G('perc',end);
-      const f=BQ('bandpass',S.bp[0]*(1+i/n*0.5),S.bp[1],end);   // 훑으며 밝아짐
-      env(g,t+i*seg,amp*(0.35+0.65*i/n)*0.5,seg*0.9,0.0005);
+      const f=BQ('bandpass',S.bp[0]*(1+i/n*0.5)*br,S.bp[1],end);   // 훑으며 밝아짐
+      env(g,t+i*seg,amp*(0.35+0.65*i/n)*0.5,seg*0.9*dk,0.0005);
       f.connect(g); tapNoise(f,end);
     }
     return;
   }
 
+  /* 셰이커 계열 — 씨앗이 통 벽을 치는 충돌음의 합입니다. 살살 흔들면
+     충돌 속도가 낮아 각 충돌의 여기 스펙트럼이 아래로 내려갑니다. */
   const end=t+S.dec+0.12, g=G('perc',end);
-  const head=BQ('bandpass',S.bp[0]*rnd(0.05*H()),S.bp[1],end);
+  const head=BQ('bandpass',S.bp[0]*rnd(0.05*H())*br,S.bp[1],end);
   let node=head;
   if(S.hp){ const h=BQ('highpass',S.hp,0.707,end); node.connect(h); node=h; }
   node.connect(g); (S.pink?tapPink:tapNoise)(head,end);
-  env(g,t,amp,S.dec,S.atk);
+  env(g,t,amp,S.dec*dk,S.atk);
 
   if(S.jingle) S.jingle.forEach((hz,i) => {   /* 징글의 금속 성분 */
+    /* 징글은 전부 헤드보다 높은 금속 모드라 mk 를 i+1 제곱으로 먹입니다 */
     const jg=G('perc',end), o=osc('square',t,S.dec*0.8);
     o.frequency.setValueAtTime(hz*rnd(0.02*H()),t);
     const jf=BQ('bandpass',hz,9,end);
-    env(jg,t,amp*0.10*Math.pow(0.75,i),S.dec*0.7,0.0008);
+    env(jg,t,amp*0.10*Math.pow(0.75,i)*Math.pow(mk,i+1),S.dec*0.7*dk,0.0008);
     o.connect(jf).connect(jg);
   });
 }
@@ -408,28 +487,39 @@ const SNARE = {
   fat    :{hp:900, dec:0.28, tone:0.68,tdec:0.17, bp:0,crush:0},
 };
 function snare(t,v,e){
-  const S=SNARE[e]||SNARE.body, mul=st2r(knob('stune')), end=t+S.dec+0.15;
+  const S=SNARE[e]||SNARE.body, mul=st2r(knob('stune'));
+  const u=v>1?1:(v<0?0:v);
+  /* 와이어는 헤드가 들어올려야 웁니다(위 ②). 문턱 아래로 내려갈수록
+     크기·꼬리가 함께 줄고, 몸통(삼각파 «퉁»)은 상대적으로 덜 줄어
+     고스트가 «치익» 이 아니라 «툭» 이 됩니다 — 실제 고스트 노트의 정체.
+     그래서 tone(몸통 크기)에는 보정을 **안 겁니다.** */
+  const wdec=S.dec*vTone(v,0.45), end=t+wdec+0.15;
 
   /* 스네어 와이어 = 필터링한 노이즈 */
   const g=G('snare',end), hp=BQ('highpass',S.hp*mul*rnd(0.05*H()),0.707,end);
   let node=hp;
-  if(S.bp){ const pk=BQ('peaking',4200*mul,1.1,end,5); hp.connect(pk); node=pk; }
+  if(S.bp){ const pk=BQ('peaking',4200*mul,1.1,end,5*vTone(v,0.60)); hp.connect(pk); node=pk; }
   if(S.lp){ const lp=BQ('lowpass',S.lp,0.707,end); node.connect(lp); node=lp; }
   if(S.crush){
     const pre=BQ('lowpass',4000,0.707,end), w=shaperNode(2,end), lp=BQ('lowpass',3200,0.707,end);
     node.connect(pre).connect(w).connect(lp); node=lp;
   }
-  env(g,t,v*(S.amp??0.88)*rnd(0.08*H()),S.dec,S.atk??0.0012);
+  /* 고스트 로우패스 — 접촉시간이 만드는 고역 컷.
+     ⚠ v=1 에서는 **노드를 아예 안 만듭니다.** 20kHz 로 열어 두는 것과
+       달리 그래야 신호경로가 예전과 한 노드도 안 달라집니다. */
+  if(u<1){ const gl=BQ('lowpass',vLP(v,2200),0.707,end); node.connect(gl); node=gl; }
+  env(g,t,v*(S.amp??0.88)*rnd(0.08*H())*vTone(v,0.30),wdec,S.atk??0.0012);
   node.connect(g); (S.pink?tapPink:tapNoise)(hp,end);
 
   /* 몸통 = 두 개의 삼각파 */
-  const te=t+S.tdec+0.15, tm=S.tmul||1;
+  const tdec=S.tdec*vTone(v,0.20);
+  const te=t+tdec+0.15, tm=S.tmul||1;
   [188,272].forEach((hz,i) => {
-    const og=G('snare',te), o=osc('triangle',t,S.tdec+0.12);
+    const og=G('snare',te), o=osc('triangle',t,tdec+0.12);
     const h=hz*tm*mul*rnd(0.02*H());
     o.frequency.setValueAtTime(h,t);
-    o.frequency.exponentialRampToValueAtTime(h*0.76,t+S.tdec);
-    env(og,t,v*S.tone*(i?0.55:1)*(0.7+PUN()*0.5),S.tdec,0.002);
+    o.frequency.exponentialRampToValueAtTime(h*0.76,t+tdec);
+    env(og,t,v*S.tone*(i?0.55:1)*(0.7+PUN()*0.5),tdec,0.002);
     o.connect(og);
   });
 }
@@ -457,12 +547,17 @@ const CLAP = {
 };
 function clap(t,v,e){
   const S=CLAP[e]||CLAP.spread;
+  /* 손뼉도 같은 접촉시간 이야기입니다 — 살짝 마주치면 살이 오래 닿아
+     «짝» 이 «툭» 이 되고, 손에 갇힌 공기의 울림(테일)도 짧아집니다. */
+  const u=v>1?1:(v<0?0:v), br=vTone(v,0.30), dk=vTone(v,0.40);
   S.offs.forEach((off,i) => {   // 짧은 박수 여러 번 + 마지막에 테일
     const last=(i===S.offs.length-1), j=off*rnd(0.25*H());
-    const dec=last?S.tail:0.032, end=t+j+dec+0.15;
-    const g=G('clap',end), f=BQ('bandpass',S.f*rnd(0.06*H()),S.q,end);
-    env(g,t+j,v*(last?1:0.62)*rnd(0.1*H()),dec,0.001);
-    f.connect(g); tapNoise(f,end);
+    const dec=(last?S.tail:0.032)*dk, end=t+j+dec+0.15;
+    const g=G('clap',end), f=BQ('bandpass',S.f*rnd(0.06*H())*br,S.q,end);
+    let node=f;
+    if(u<1){ const gl=BQ('lowpass',vLP(v,2200),0.707,end); f.connect(gl); node=gl; }
+    env(g,t+j,v*(last?1:0.62)*rnd(0.1*H())*vTone(v,0.30),dec,0.001);
+    node.connect(g); tapNoise(f,end);
   });
 }
 
@@ -499,17 +594,28 @@ function hat(t,v,e,dec,open){
   if(openHat){ fadeOut(openHat.gain,t,open?0.005:0.007); openHat=null; }  // 초크
   const id=open?'ohat':'chat', mul=st2r(knob('htune'));
   const S=HAT[e]||HAT.noise;
+  const u=v>1?1:(v<0?0:v);
   const d=dec*rnd(0.10*H()), end=t+d+0.15;
   const g=G(id,end);
+  /* 세기 의존이 **드럼 다섯 중 가장 큰** 자리입니다. 심벌은 큰 진폭에서
+     비선형 모드 결합이 고차 모드에 계속 에너지를 퍼올려 «샤—» 가 길게
+     남고(위 ①), 작은 진폭은 선형 영역이라 짧고 둔한 «틱» 이 됩니다.
+     ⚠ 로우패스는 v<1 일 때만 만듭니다(무회귀).
+     ⚠ 컷오프 하한 7000 은 실측으로 잡았습니다. 처음에 5000 으로 뒀더니
+       hp 7200~10500 인 엔진들이 로우패스 **아래로 통째로 잠겨** v=0.25 에서
+       −22~−31dB 까지 떨어졌습니다. 고스트가 아니라 사라진 것입니다.
+       하이햇 대역의 아래턱과 컷오프를 겹치게 두어야 «어두운 틱» 이 됩니다. */
+  let out=g;
+  if(u<1){ const gl=BQ('lowpass',vLP(v,7000),0.707,end); gl.connect(g); out=gl; }
   if(S.metal){
-    metalBP.frequency.setValueAtTime(S.bp*mul*rnd(0.05*H()),t);
-    tapMetal(g,end);
+    metalBP.frequency.setValueAtTime(S.bp*mul*rnd(0.05*H())*vTone(v,0.20),t);
+    tapMetal(out,end);
   }else{
     const hp=BQ('highpass',S.hp*mul*rnd(0.05*H()),0.707,end);
-    const pk=BQ('peaking',S.pk*mul,S.pq,end,S.pd);
-    hp.connect(pk).connect(g); (S.pink?tapPink:tapNoise)(hp,end);
+    const pk=BQ('peaking',S.pk*mul,S.pq,end,S.pd*vTone(v,0.40));
+    hp.connect(pk).connect(out); (S.pink?tapPink:tapNoise)(hp,end);
   }
-  env(g,t,v*S.amp*rnd(0.14*H()), d*S.dm, 0.0008);
+  env(g,t,v*S.amp*rnd(0.14*H()), d*S.dm*vTone(v,0.55), 0.0008);
   /* 회수된 게인 노드는 풀에서 다른 보이스에 재배정된다.
      참조를 그대로 두면 다음 초크가 엉뚱한 보이스를 죽이므로 만료 시 스스로 지운다. */
   if(open){

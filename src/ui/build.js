@@ -126,13 +126,22 @@ TRACKS.forEach(tr => {
       P.drums[tr.id][i]=v;
       pad.dataset.v=v;
       pad.setAttribute('aria-pressed', v ? 'true' : 'false');
+      /* 고스트는 켜짐/꺼짐만으로는 x 와 구별이 안 된다. 화면에서는
+         점 모양으로 갈리지만(sequencer.css) 낭독에는 단서가 없어
+         이름에 붙인다. 강세(X)는 이미 시각·청각 모두에서 두드러진다. */
+      pad.setAttribute('aria-label',
+        `${tr.label} ${Math.floor(i/4)+1}박 ${i%4+1}번째 스텝` + (v===GHOST ? ' 고스트' : ''));
       if(v && audible){
         wake(); chan[tr.id].gain.value=lvl[tr.id];
-        fireTrack(tr.id, ctx.currentTime+0.02, v===2?1:0.60, eng[tr.id]);
+        fireTrack(tr.id, ctx.currentTime+0.02, VEL_OF(v), eng[tr.id]);
       }
       markChips(); syncSlots(); markDirty();
     };
-    const cycle=()=>{ pushUndo(); const v=(P.drums[tr.id][i]+1)%3; setVal(v,true); return v; };
+    /* 0 → x → X → 고스트 → 0. 고스트를 **뒤에 붙였다** — 앞에 끼우면
+       «빈 칸 한 번 눌러 x» 라는 기존 손버릇이 전부 어긋난다.
+       예전 %3 은 고스트 칸을 누르면 (3+1)%3=1 이라 보통 타로
+       바뀌어 버렸다(값이 지워지는 것보다 나쁘다 — 조용히 세진다). */
+    const cycle=()=>{ pushUndo(); const v=(P.drums[tr.id][i]+1)%4; setVal(v,true); return v; };
 
     pad.addEventListener('pointerdown', e => {
       e.preventDefault();
@@ -460,6 +469,9 @@ function syncDrums(){
       const v=P.drums[tr.id][i], el=padEl[tr.id][i];
       el.dataset.v=v;
       el.setAttribute('aria-pressed', v ? 'true' : 'false');
+      /* 프리셋을 불러도 고스트 표시가 따라와야 한다 — setVal 과 같은 규칙 */
+      el.setAttribute('aria-label',
+        `${tr.label} ${Math.floor(i/4)+1}박 ${i%4+1}번째 스텝` + (v===GHOST ? ' 고스트' : ''));
     }
 }
 function syncBass(){

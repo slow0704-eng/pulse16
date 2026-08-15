@@ -55,8 +55,10 @@ const FILLS = {
   /* ── 재즈·펑크 ── */
   rimroll   :{label:'림 롤',          size:'S', len:8,
               pat:{snare:'x-xx-xxX'}, eng:{snare:'rim'}},
+  /* 이름이 «고스트 노트» 인데 표기가 없어 전부 보통 타(x)로 적혀 있었다.
+     마지막 한 방만 강세로 두고 나머지는 이름대로 고스트(o)다. */
   ghost     :{label:'고스트 노트',    size:'S', len:8,
-              pat:{snare:'x--x-x-X', kick:'X-------'}},
+              pat:{snare:'o--o-o-X', kick:'X-------'}},
   brushswirl:{label:'브러시 스월',    size:'S', len:8,
               pat:{snare:'xxxxxxxx'}, eng:{snare:'brush'}},
 
