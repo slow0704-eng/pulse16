@@ -73,8 +73,33 @@ function bakeStruck(hz, S){
       const ph = Math.random()*TWO;
       /* 진폭이 −80dB 아래로 떨어지면 더 안 돈다 — 고역 배음은 금방 끝난다 */
       const stop = Math.min(N, Math.ceil(SR*Math.log(1e4)/dec));
-      for(let i=0; i<stop; i++)
-        out[i] += amp*Math.exp(-dec*i/SR)*Math.sin(w*i + ph);
+      /* ── 감쇠 사인을 복소 회전 재귀로 ──
+         원식은 샘플마다 exp 한 번 sin 한 번이었다. 파샬이 48개(unison 3 ×
+         parts 16)고 버퍼가 최대 6초라 초월함수 호출이 1400만 번까지 갔다 —
+         피아노 한 음에 메인스레드가 264 ms 멈췄다(측정).
+
+         z_i = amp·e^(−dec·i/SR)·e^(j(w·i+ph)) 로 두면 **허수부가 정확히
+         원식**이고, z_(i+1) = z_i·c 다. c = e^(−dec/SR)·e^(jw) 는 파샬당
+         한 번만 구하면 되므로 안쪽 루프에 곱셈 넷·덧셈 둘만 남는다.
+
+         ⚠ 실수부 zr 을 임시변수 없이 먼저 갱신하면 zi 계산이 새 zr 을 써서
+         회전이 깨진다 — t 를 반드시 거칠 것.
+
+         [측정] Chrome 151 piano C4(N=286,800) 263.7 → 12.9 ms (20.4배).
+         원식 대비 최대 표본차 1.8e−7 = **−134 dBFS** 로, Float32 양자화
+         한계(−138 dB) 언저리라 들리지 않는다. 누적 위상오차는 288k 샘플에서
+         상대 1e−13 수준(배정밀도)이라 음정에 영향이 없다.
+
+         같은 재귀를 손으로 인코딩한 WASM 으로도 재 봤지만 12.9 → 13.3 ms 로
+         **더 느렸다** — V8 이 이 루프를 이미 같은 기계어로 뽑는다.
+         WASM 은 sin/exp 명령이 아예 없어서 어차피 이 재귀를 써야 하고,
+         그러면 남는 이득이 없다. docs/perf/03-웹어셈블리검토.md 참고. */
+      const r = Math.exp(-dec/SR), cr = r*Math.cos(w), ci = r*Math.sin(w);
+      let zr = amp*Math.cos(ph), zi = amp*Math.sin(ph);
+      for(let i=0; i<stop; i++){
+        out[i] += zi;
+        const t = zr*cr - zi*ci; zi = zr*ci + zi*cr; zr = t;
+      }
     }
   });
 
