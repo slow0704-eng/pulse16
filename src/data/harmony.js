@@ -157,7 +157,7 @@ const PROG_KIT_CAT = {
     blinePoolFor() 와 같은 순서(하위분기 우선 → 계열 → 기본값)지만,
     **절대 빈 배열을 주지 않는다** — 메탈·펑크처럼 건반을 꺼 두는
     계열도 진행 데이터 자체는 갖는다(호출부가 빈 배열로 인덱싱해
-    깨지지 않도록). 건반을 낼지 말지는 TONE_KIT.off 가 정한다. */
+    깨지지 않도록). 건반을 낼지 말지는 프리셋의 kit.off 가 정한다. */
 function progPoolFor(name){
   const sub = PROG_KIT[PRESET_SUB[name]];
   if(sub) return sub;

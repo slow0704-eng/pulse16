@@ -37,7 +37,7 @@ const probT  = Object.fromEntries(TRACK_IDS.map(id => [id,1]));
 /* ── 음정 상태 ── */
 let rootNote = 9, scaleName = 'Minor Pentatonic', baseOct = 24;
 /* 기본 화음 종류 — '0'~'7' 표기가 어떤 화음으로 울릴지 정한다.
-   하위분기(TONE_KIT.chord)가 정하고, 프리셋이 kit.chord 로 덮을 수 있다.
+   프리셋이 kit.chord 로 정한다(2026-08-17 이전에는 하위분기가 정했다).
    'triad' 면 예전과 완전히 같다(pattern-codec.js CHORD 표). */
 let chordType = 'triad';
 

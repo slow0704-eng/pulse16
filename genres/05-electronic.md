@@ -31,6 +31,8 @@
 | Bassline | 135~142 | 스피드 개러지 골격 | 공격적 베이스 리프 | 북잉글랜드 파생 |
 | UK Funky | 128~135 | 4/4 + 소카·아프로 퍼커션 | 콩가, 트라이벌 톰 | 하우스와 아프로의 접점 |
 | Tech House | 124~128 | 하우스 + 테크노 미니멀리즘 | 짧고 타이트한 퍼커션 | 그루브의 반복 내구성 |
+| Tropical House | 100~118 | 하우스 골격, 느리게 | 마림바·팬플룻 계열 리드, 부드러운 플럭 | 드롭에 신스 대신 선율 악기 |
+| Hip House | 118~128 | 4/4 + 랩 | 피아노 스탭, 디바 훅 | 하우스 위에 랩 → [03-hiphop.md](03-hiphop.md)와 교차 |
 | Progressive House | 124~130 | 하우스 골격, 긴 빌드업 | 겹겹의 패드, 서서히 여는 필터 | 8~16마디 단위 전개 |
 | Tribal House | 122~128 | 4/4 + 폴리리듬 톰 | 콩가·젬베·톰 레이어 | 퍼커션이 멜로디를 대신 |
 | French House | 120~128 | 하우스 골격 | **필터 스윕 디스코 샘플**, 강한 컴프 | 사이드체인 펌핑 |
@@ -54,6 +56,25 @@ Deep House는 킥의 어택을 죽이는 대신 베이스를 넓게, Tech House�
 로그 드럼은 사인파 기반 서브에 **빠른 피치 하강 엔벨로프**를 건 소리입니다
 (대략 시작 음정 +12~+24 반음에서 100~200ms 안에 근음으로 하강).
 808과 달리 지속음이 아니라 타악기적으로 짧게 끊깁니다.
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 4곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Hip House | 1991 | Gonna Make You Sweat (Everybody Dance Now) | C+C Music Factory featuring Freedom Williams | Hot 100 |
+| Hip House | 1991 | Good Vibrations | Marky Mark and the Funky Bunch featuring Loleatta Holloway | Hot 100 |
+| Tropical House | 2015 | What Do You Mean? | Justin Bieber | Hot 100 |
+| Tropical House | 2016 | Sorry | Justin Bieber | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -134,6 +155,22 @@ Techno 킥은 House 킥보다 **짧고 위쪽**입니다. 4마디에 한 번씩 
 때문입니다. 그래서 DnB는 빠른 음악이 아니라 "87 BPM의 두 배로 세는 음악"입니다.
 고스트 스네어(스텝 7·15)는 장식이 아니라 이 두 배속 감각을 만드는 장치입니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 0곡 · Billboard 200 1장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Big Beat | 1997 | The Fat of the Land | The Prodigy | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 6. Dubstep · Bass Music
@@ -161,6 +198,23 @@ Techno 킥은 House 킥보다 **짧고 위쪽**입니다. 4마디에 한 번씩 
 **Future Bass 제작 노트**
 코드가 정지해 있지 않고 항상 미세하게 피치가 흔들립니다. 슈퍼소 코드에
 LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 넣습니다.
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 2곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Future Bass | 2016 | Closer | The Chainsmokers featuring Halsey | Hot 100 |
+| Trap (EDM) | 2013 | Harlem Shake | Baauer | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -201,6 +255,24 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 노이즈 게이트로 200~400ms에서 잘라냅니다. 자연스럽게 사라지지 않고
 **뚝 끊기는** 것이 80년대 사운드의 정체입니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 2장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| New Age | 1982 | Chariots of Fire | Vangelis | Hot 100 |
+| New Age | 1982 | Chariots of Fire | Vangelis | BB200 |
+| New Age ? | 1998 | Titanic | James Horner (사운드트랙) | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## PULSE·16 설정값
@@ -209,6 +281,37 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 [00-instruments.md](00-instruments.md) 참조. 박자는 [../patterns/05-electronic.md](../patterns/05-electronic.md).
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
+
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/05-electronic.md`](../patterns/05-electronic.md) 에 한 줄씩 적어 두었습니다.
+
+
+> **2026-08-17 정정 — 베이스 표** 록(A) 문서에서 찾은 것과 **같은 세 가지**가
+> 이 문서에도 그대로 있었습니다. 표를 프리셋에서 다시 뽑았습니다 — 79행.
+>
+> **① 엔진 칸** — 프리셋의 `bcfg.eng` 를 옮긴 값이었습니다. 실제로는
+> `kit.bass` > `TONE_KIT`(하위분기) > `bcfg.eng` 순으로 정해지므로(`_build.js`),
+> 엔진 칸 **73줄**이 틀렸습니다. `TONE_KIT` 이 건반·기타와 함께 베이스도
+> 하위분기 단위로 정하기 때문입니다 — 표에는 그 앞 단계 값이 적혀 있었습니다.
+>
+> **② Oct** — 일렉트로닉은 신스가 **의도된 값**이라 6종(Nu-disco·Downtempo·Nu Jazz·
+> Garage House·Balearic·Lounge)만 내렸습니다 — 전부 현 베이스로 배정된 것들입니다.
+>
+> **③ Scale 칸** — `Minor Pentatonic` 은 state.js 의 초기값이라 «고른 값» 이
+> 아니고, `_build.js` 가 하위분기 스케일로 덮습니다. 표에는 덮이기 전 값이
+> 적혀 있었습니다(40칸).
+>
+> ⚠ 현 베이스에서 **Blend · X-Over · Tone · Glide 는 아무 일도 하지 않습니다** —
+> 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
+
 
 ### 트랙 재배정
 
@@ -228,16 +331,16 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 | House | 124 | 12 | `punch` | `tight` | `spread` | `metal` | `analog` | -1/0/0/0 |
 | UK Garage | 134 | 34 | `tight` | `tight` | `spread` | `noise` | `analog` | -2/1/-2/1 |
 | Deep House | 122 | 14 | `deep` | `tight` | `spread` | `noise` | `analog` | -3/0/-1/0 |
-| Amapiano | 113 | 28 | `tight` | `body` | `spread` | `noise` | `synth` | -2/-2/-6/0 |
-| Afro House | 122 | 16 | `punch` | `body` | `tight` | `noise` | `wood` | -2/-1/-2/1 |
+| Amapiano | 113 | 28 | `tight` | `body` | `spread` | `noise` | `logdrum` | -2/-2/-6/0 |
+| Afro House | 122 | 16 | `punch` | `body` | `tight` | `noise` | `conga` | -2/-1/-2/1 |
 | ·Chicago House | 122 | 0 | `punch` | `lofi` | `spread` | `metal` | `synth` | -2/-4/-2/-2 |
 | ·Acid House | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·Tech House | 126 | 0 | `tight` | `tight` | `spread` | `metal` | `synth` | -1/0/-2/0 |
 | ·Progressive House | 128 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Tribal House | 125 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
+| ·Tribal House | 125 | 0 | `wood` | `tight` | `spread` | `noise` | `conga` | -2/0/-2/0 |
 | ·French House | 124 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·Melodic House & Techno | 122 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·UK Funky | 131 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
+| ·UK Funky | 131 | 0 | `wood` | `tight` | `spread` | `noise` | `conga` | -2/0/-2/0 |
 | ·Garage House | 124 | 0 | `punch` | `body` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·2-step Garage | 134 | 30 | `deep` | `tight` | `spread` | `metal` | `synth` | -4/0/-2/0 |
 | ·Bassline | 139 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
@@ -253,29 +356,29 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| House | `sub` | 36 | 74 | 0 | 46 | 40 | 135 | 4400 | 55 | 32 | 45 | Minor Pentatonic |
+| House | `pluckbs` | 36 | 74 | 0 | 46 | 40 | 135 | 4400 | 55 | 32 | 45 | Natural Minor |
 | UK Garage | `sub` | 24 | 120 | 8 | 40 | 34 | 110 | 3800 | 62 | 36 | 40 | Natural Minor |
 | Deep House | `sub` | 36 | 90 | 0 | 36 | 26 | 120 | 3400 | 60 | 28 | 42 | Dorian |
 | Amapiano | `sub` | 24 | 240 | 40 | 30 | 30 | 80 | 2600 | 66 | 34 | 40 | Natural Minor |
-| Afro House | `sub` | 36 | 86 | 0 | 44 | 32 | 118 | 4000 | 58 | 32 | 38 | Dorian |
-| ·Chicago House | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Acid House | `acid` | 36 | 80 | 0 | 64 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Tech House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·Progressive House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Tribal House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·French House | `acid` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Melodic House & Techno | `sub` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·UK Funky | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Garage House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·2-step Garage | `s808` | 24 | 420 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Minor Pentatonic |
-| ·Bassline | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Filter House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Big Room | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Complextro | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Bass House | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Electro House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Future House | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Speed Garage | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| Afro House | `finger` | 24 | 86 | 0 | 44 | 32 | 118 | 4000 | 58 | 32 | 38 | Dorian |
+| ·Chicago House | `moog` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Acid House | `acid` | 36 | 80 | 0 | 64 | 62 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Tech House | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Progressive House | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Tribal House | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·French House | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Melodic House & Techno | `moog` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·UK Funky | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Garage House | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·2-step Garage | `sub` | 24 | 420 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Natural Minor |
+| ·Bassline | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Filter House | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Big Room | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Complextro | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Bass House | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Electro House | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Future House | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Speed Garage | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
 
 ### Techno 계열
 
@@ -298,16 +401,16 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Techno | `acid` | 36 | 88 | 6 | 60 | 62 | 130 | 5400 | 60 | 34 | 58 | Minor Pentatonic |
-| ·Detroit Techno | `sub` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Minimal Techno | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Dub Techno | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| Techno | `pluckbs` | 36 | 88 | 6 | 60 | 62 | 130 | 5400 | 60 | 34 | 58 | Minor Pentatonic |
+| ·Detroit Techno | `moog` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Minimal Techno | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Dub Techno | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 | ·Acid Techno | `acid` | 36 | 80 | 0 | 64 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Microhouse | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·Hard Techno | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Hardgroove | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Schranz | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Industrial | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Microhouse | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Hard Techno | `reese` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Hardgroove | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Schranz | `reese` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Industrial | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 
 ### Breakbeat 계열
 
@@ -330,16 +433,16 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Drum & Bass | `reese` | 24 | 520 | 14 | 38 | 56 | 95 | 3800 | 66 | 40 | 40 | Minor Pentatonic |
-| ·Big Beat | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Nu Skool Breaks | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Jungle | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Liquid Funk | `fm` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 22 | Dorian |
-| ·Neurofunk | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Jump-up | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Halftime DnB | `sub` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Techstep | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Drumfunk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| Drum & Bass | `reese` | 24 | 520 | 14 | 38 | 56 | 95 | 3800 | 66 | 40 | 40 | Natural Minor |
+| ·Big Beat | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Nu Skool Breaks | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Jungle | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Liquid Funk | `sub` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Neurofunk | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Jump-up | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Halftime DnB | `reese` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Techstep | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Drumfunk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
 
 ### Dubstep · Bass Music
 
@@ -370,20 +473,20 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Dubstep | `reese` | 24 | 420 | 20 | 62 | 70 | 90 | 3200 | 70 | 44 | 55 | Minor Pentatonic |
 | ·EDM Trap | `s808` | 24 | 620 | 24 | 26 | 52 | 78 | 2800 | 70 | 46 | 60 | Minor Pentatonic |
-| Future Bass | `fm` | 36 | 260 | 16 | 58 | 36 | 130 | 5600 | 56 | 38 | 58 | Major |
-| Moombahton | `s808` | 24 | 300 | 26 | 30 | 44 | 90 | 3000 | 66 | 38 | 48 | Minor Pentatonic |
+| Future Bass | `reese` | 36 | 260 | 16 | 58 | 36 | 130 | 5600 | 56 | 38 | 58 | Major |
+| Moombahton | `reese` | 24 | 300 | 26 | 30 | 44 | 90 | 3000 | 66 | 38 | 48 | Minor Pentatonic |
 | ·Brostep | `reese` | 36 | 560 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 | ·Future Garage | `sub` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Jersey Club | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Deep Dubstep | `s808` | 24 | 700 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Minor Pentatonic |
+| ·Jersey Club | `s808` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Deep Dubstep | `sub` | 24 | 700 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Minor Pentatonic |
 | ·Meditative Dubstep | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Riddim | `sub` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Melodic Dubstep | `sub` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Festival Trap | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Baltimore Club | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Philly Club | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Riddim | `reese` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Melodic Dubstep | `reese` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Festival Trap | `s808` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Baltimore Club | `s808` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Philly Club | `growl` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 | ·Wave | `sub` | 36 | 560 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·Hardwave | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Hardwave | `reese` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 
 ### Trance 계열
 
@@ -407,17 +510,17 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Psytrance | `acid` | 24 | 55 | 0 | 66 | 68 | 120 | 5000 | 58 | 30 | 70 | Minor Pentatonic |
-| Trance | `sub` | 36 | 42 | 0 | 52 | 40 | 140 | 5200 | 54 | 30 | 60 | Natural Minor |
-| Hardstyle | `sub` | 24 | 180 | 0 | 48 | 78 | 95 | 3600 | 72 | 40 | 80 | Minor Pentatonic |
-| ·Uplifting Trance | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
-| ·Progressive Trance | `sub` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Goa | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Full-on | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
-| ·Forest | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·Hi-tech | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Hard Trance | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Rawstyle | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| Psytrance | `acid` | 24 | 55 | 0 | 66 | 68 | 120 | 5000 | 58 | 30 | 70 | Natural Minor |
+| Trance | `pluckbs` | 36 | 42 | 0 | 52 | 40 | 140 | 5200 | 54 | 30 | 60 | Natural Minor |
+| Hardstyle | `reese` | 24 | 180 | 0 | 48 | 78 | 95 | 3600 | 72 | 40 | 80 | Natural Minor |
+| ·Uplifting Trance | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
+| ·Progressive Trance | `pluckbs` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Goa | `acid` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Full-on | `acid` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
+| ·Forest | `acid` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Hi-tech | `acid` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Hard Trance | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Rawstyle | `reese` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
 
 ### Hardcore 계열
 
@@ -435,11 +538,11 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Gabber | `acid` | 24 | 70 | 0 | 70 | 88 | 110 | 4600 | 66 | 48 | 75 | Minor Pentatonic |
-| ·Happy Hardcore | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
-| ·Breakbeat Hardcore | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Hardcore Techno | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Frenchcore | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| Gabber | `buzz` | 24 | 70 | 0 | 70 | 88 | 110 | 4600 | 66 | 48 | 75 | Minor Pentatonic |
+| ·Happy Hardcore | `buzz` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
+| ·Breakbeat Hardcore | `buzz` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Hardcore Techno | `buzz` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Frenchcore | `buzz` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 
 ### Downtempo · Ambient · Retro
 
@@ -463,17 +566,17 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Trip Hop | `sub` | 24 | 200 | 0 | 34 | 28 | 95 | 2600 | 64 | 28 | 26 | Natural Minor |
-| Synthwave | `sub` | 36 | 80 | 0 | 50 | 32 | 140 | 4800 | 52 | 26 | 30 | Natural Minor |
-| ·Downtempo | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Nu Jazz | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
-| ·Vaporwave | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Chillout | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Balearic | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Lounge | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Ambient Techno | `sub` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
-| ·Mallsoft | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
-| ·Future Funk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
+| Trip Hop | `finger` | 24 | 200 | 0 | 34 | 28 | 95 | 2600 | 64 | 28 | 26 | Natural Minor |
+| Synthwave | `moog` | 36 | 80 | 0 | 50 | 32 | 140 | 4800 | 52 | 26 | 30 | Natural Minor |
+| ·Downtempo | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Dorian |
+| ·Nu Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Vaporwave | `hollow` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Dorian |
+| ·Chillout | `hollow` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Balearic | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Lounge | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Dorian |
+| ·Ambient Techno | `hollow` | 36 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 48 | Natural Minor |
+| ·Mallsoft | `hollow` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Dorian |
+| ·Future Funk | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
 
 ### Disco
 
@@ -487,7 +590,7 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Nu-disco | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Nu-disco | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Major |
 
 ### Electro
 
@@ -502,8 +605,8 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Electro | `s808` | 24 | 420 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Minor Pentatonic |
-| ·Electroclash | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
+| ·Electro | `moog` | 24 | 420 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 48 | Minor Pentatonic |
+| ·Electroclash | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 48 | Minor Pentatonic |
 
 ### 하이브리드 · 인터넷 장르
 
@@ -518,6 +621,26 @@ LFO를 아주 얕게(±10~30 cent) 걸고, 노트마다 짧은 피치 벤드를 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ·Global Bass | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 3곡 · Billboard 200 2장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| House | 2022 | Break My Soul | Beyoncé | Hot 100 |
+| House | 2022 | Honestly, Nevermind | Drake | BB200 |
+| House | 2022 | Renaissance | Beyoncé | BB200 |
+| House | 2024 | Yes, And? | Ariana Grande | Hot 100 |
+| Downtempo | 1991 | Justify My Love | Madonna | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 

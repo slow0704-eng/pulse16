@@ -16,6 +16,24 @@
 | **Rocksteady** | 80~100 | 스카를 늦춘 것, 베이스 부각 | 두꺼운 베이스 라인 | 템포 하락이 장르를 낳음 |
 | **Reggae** | 60~90 | 뒷박 스캥크 + 원드롭 계열 | 멜로딕 베이스 | 아래 갈래들의 상위 개념 |
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 3곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Reggae (One Drop) | 1972 | I Can See Clearly Now | Johnny Nash | Hot 100 |
+| Reggae (One Drop) | 1974 | I Shot the Sheriff | Eric Clapton | Hot 100 |
+| Rocksteady | 1981 | The Tide Is High | Blondie | Hot 100 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 2. Reggae 갈래
@@ -39,6 +57,24 @@
 저역만 남겼다가 다시 열어줍니다. 시퀀서로 만들려면 트랙별 뮤트 오토메이션과
 딜레이 send 오토메이션이 필요합니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 3곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Lovers Rock | 1988 | Red Red Wine | UB40 | Hot 100 |
+| Lovers Rock | 1990 | Close to You | Maxi Priest | Hot 100 |
+| Lovers Rock | 1993 | Can't Help Falling in Love | UB40 | Hot 100 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 3. Dancehall 계보
@@ -50,12 +86,45 @@
 | Digital Dancehall | 90~110 | 상동 | 카시오 프리셋 음색 | "슬렝 텡" 이후 |
 | Dembow riddim | 90~110 | 스텝 3·6·11·14 림샷 | 신스 타악 | → [08-latin.md](08-latin.md) 레게톤의 기원 |
 | Bashment | 90~110 | 댄스홀 골격 | 현대적 프로덕션 | 댄스홀의 현재형 |
+| Reggae Fusion | 90~112 | 댄스홀 리듬 + 팝 구조 | 스캥크 기타 + R&B 보컬 | **1박에 킥이 들어감** — 원-드롭이 아님 |
 | Afro-dancehall | 95~110 | 댄스홀 + 아프로비츠 | 아프로 퍼커션 | → [10-african.md](10-african.md)와 교차 |
 
 **리딤(riddim)이란**
 자메이카 음악에서는 하나의 반주 트랙(리딤)에 여러 가수가 각자 노래를 얹습니다.
 같은 리딤으로 만든 곡이 수십 개씩 나오는 것이 정상입니다.
 프리셋 개념과 가장 가까운 문화라, 샘플 라이브러리 설계 시 참고할 만합니다.
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 16곡 · Billboard 200 1장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Dancehall | 1994 | Here Comes the Hotstepper | Ini Kamoze | Hot 100 |
+| Dancehall | 2003 | Get Busy | Sean Paul | Hot 100 |
+| Dancehall | 2003 | Baby Boy | Beyoncé featuring Sean Paul | Hot 100 |
+| Dancehall | 2006 | Temperature | Sean Paul | Hot 100 |
+| Dancehall | 2010 | Rude Boy | Rihanna | Hot 100 |
+| Dancehall | 2016 | Work | Rihanna featuring Drake | Hot 100 |
+| Dancehall | 2016 | Cheap Thrills | Sia featuring Sean Paul | Hot 100 |
+| Dancehall | 2017 | Shape of You | Ed Sheeran | Hot 100 |
+| Reggae Fusion | 2001 | It Wasn't Me | Shaggy featuring Ricardo "RikRok" Ducent | Hot 100 |
+| Reggae Fusion | 2001 | Angel | Shaggy featuring Rayvon | Hot 100 |
+| Reggae Fusion | 2001 | Hot Shot | Shaggy | BB200 |
+| Reggae Fusion | 2007 | Don't Matter | Akon | Hot 100 |
+| Reggae Fusion | 2007 | Beautiful Girls | Sean Kingston | Hot 100 |
+| Reggae Fusion | 2012 | One More Night | Maroon 5 | Hot 100 |
+| Reggae Fusion | 2014 | Rude | Magic! | Hot 100 |
+| Reggae Fusion | 2015 | Cheerleader | Omi | Hot 100 |
+| Ragga | 1993 | Informer | Snow | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -68,6 +137,22 @@
 | Power Soca | 155~180 | 소카, 더 빠르게 | 강한 타악 | 카니발 경연용 |
 | Groovy Soca | 115~135 | 소카, 느리게 | 부드러운 편곡 | 파워소카의 짝 |
 | Chutney Soca | 130~160 | 소카 + 인도계 리듬 | 돌락, 하모늄 | 인도계 디아스포라 |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Calypso | 1963 | If You Wanna Be Happy | Jimmy Soul | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -88,6 +173,35 @@
 [00-instruments.md](00-instruments.md) 참조. 박자는 [../patterns/09-caribbean.md](../patterns/09-caribbean.md).
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
+
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/09-caribbean.md`](../patterns/09-caribbean.md) 에 한 줄씩 적어 두었습니다.
+
+
+> **2026-08-17 정정 — 베이스 표** 록(A) 문서에서 찾은 것과 **같은 세 가지**가
+> 이 문서에도 그대로 있었습니다. 표를 프리셋에서 다시 뽑았습니다 — 21행.
+>
+> **① 엔진 칸** — 프리셋의 `bcfg.eng` 를 옮긴 값이었습니다. 실제로는
+> `kit.bass` > `TONE_KIT`(하위분기) > `bcfg.eng` 순으로 정해지므로(`_build.js`),
+> 엔진 칸 21줄 — 레게·댄스홀은 `flatwound`(둔탁하고 짧은 그 베이스)입니다.
+>
+> **② Oct** — 이 계열은 **이미 24 였습니다.** 원-드롭의 저역은 처음부터 맞게 나 있었습니다.
+>
+> **③ Scale 칸** — `Minor Pentatonic` 은 state.js 의 초기값이라 «고른 값» 이
+> 아니고, `_build.js` 가 하위분기 스케일로 덮습니다. 표에는 덮이기 전 값이
+> 적혀 있었습니다(9칸).
+>
+> ⚠ 현 베이스에서 **Blend · X-Over · Tone · Glide 는 아무 일도 하지 않습니다** —
+> 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
+
 
 ### 트랙 재배정
 
@@ -111,10 +225,10 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Reggae One Drop | `sub` | 24 | 260 | 8 | 28 | 26 | 85 | 2600 | 70 | 28 | 24 | Natural Minor |
-| Ska | `sub` | 24 | 58 | 0 | 42 | 28 | 125 | 4200 | 50 | 26 | 16 | Major |
-| ·Mento | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rocksteady | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Reggae One Drop | `flatwound` | 24 | 260 | 8 | 28 | 26 | 85 | 2600 | 70 | 28 | 24 | Natural Minor |
+| Ska | `flatwound` | 24 | 58 | 0 | 42 | 28 | 125 | 4200 | 50 | 26 | 16 | Major |
+| ·Mento | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Rocksteady | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 트리니다드 · 바베이도스
 
@@ -126,17 +240,17 @@
 | ·Calypso | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Power Soca | 168 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Groovy Soca | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Chutney Soca | 145 | 0 | `punch` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Chutney Soca | 145 | 0 | `punch` | `body` | `tight` | `noise` | `tabla` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Soca | `sub` | 24 | 56 | 0 | 46 | 32 | 125 | 4400 | 54 | 30 | 30 | Major |
-| ·Calypso | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Power Soca | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Groovy Soca | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Chutney Soca | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Soca | `finger` | 24 | 56 | 0 | 46 | 32 | 125 | 4400 | 54 | 30 | 30 | Major |
+| ·Calypso | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Power Soca | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Groovy Soca | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Chutney Soca | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 프랑스어권 카리브
 
@@ -153,10 +267,10 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Zouk | `sub` | 24 | 110 | 6 | 44 | 28 | 115 | 3800 | 56 | 28 | 26 | Major |
-| ·Kompa | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Zouk Love | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Bouyon | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Zouk | `finger` | 24 | 110 | 6 | 44 | 28 | 115 | 3800 | 56 | 28 | 26 | Major |
+| ·Kompa | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Zouk Love | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Bouyon | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### Reggae 갈래
 
@@ -173,10 +287,10 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Lovers Rock | `sub` | 24 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Roots Reggae | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rockers | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Steppers | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Lovers Rock | `flatwound` | 24 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Roots Reggae | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Rockers | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Steppers | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### Dancehall 계보
 
@@ -195,12 +309,12 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Dancehall | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Dancehall | `s808` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Ragga | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Digital Dancehall | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Dembow riddim | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Bashment | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Afro-dancehall | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Dembow riddim | `s808` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Bashment | `s808` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Afro-dancehall | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ---
 

@@ -3,71 +3,56 @@
    전역 렉시컬 스코프를 공유한다 — 로드 순서가 곧 의존 순서다. */
 'use strict';
 
+/* ═══ 2026-08-17 — 상속을 끊었다 ═══════════════════════════════
+   여기에는 «프리셋이 안 적은 칸을 TONE_KIT(하위분기)이 채운다» 는
+   상속이 있었다. 편했지만 대가가 컸다:
+
+     · 한 하위분기에 묶인 프리셋은 건반·기타·2번 레이어·화음·베이스·
+       스케일·퍼커션이 **전부 같은 값**이 됐다. 357종 중 **207종**이
+       형제와 편성이 한 칸도 다르지 않았다.
+     · «House 계열» 23종이 편성 14가지, «Trap 계열» 7종이 **2가지**였다.
+       Melodic Trap 과 Rage 와 Trap Metal 이 같은 악기로 울렸다는 뜻이다.
+     · 세부 장르를 추가할수록 상위 장르의 평균값에 수렴했다 —
+       가지를 칠수록 개성이 사라지는 구조였다.
+
+   계통도(genres/00-tree.md)의 상하위 관계는 **논리적 분류로 남긴다.**
+   PRESET_SUB 도 그대로다 — 문서·검색·표 정렬이 그것을 쓴다.
+   다만 **소리를 만드는 값은 프리셋마다 직접 적는다.** 357종 전부
+   물질화했고(2026-08-17), 이제 여기서는 아무것도 상속하지 않는다.
+
+   ⚠ 새 프리셋을 추가할 때는 kit 에 **13칸을 다 적어야 한다** —
+     kick·snare·clap·chat·ohat·tom·keys·keys2·gtr·gtr2·bass·chord,
+     그리고 퍼커션을 쓰면 perc(엔진)와 perc(패턴). 빠뜨리면 아래
+     MISSING 검사가 콘솔에 이름을 찍는다. TONE_KIT 은 이제 «그 하위분기에는
+     이런 악기가 맞다» 는 **참고표**이지 적용되는 값이 아니다. */
+
+const PRESET_REQUIRED = ['kick','snare','clap','chat','ohat','tom',
+                         'keys','keys2','gtr','gtr2','bass','chord'];
+
 /* 문자열 패턴을 숫자 배열로 전개한 사용본 */
 const LIB = {};
+const PRESET_MISSING = [];
 for(const [n,p] of Object.entries(RAW)){
-  /* 프리셋이 직접 적은 kit 이 항상 이깁니다. 안 적은 트랙만 TONE_KIT 이 채웁니다.
-     그래서 특정 프리셋만 예외를 두고 싶으면 그 프리셋의 kit 에 적으면 됩니다. */
-  const T = toneKitFor(n, p.cat);
   const kit = {...p.kit};
-  if(!kit.keys) kit.keys = T.keys;
-  if(!kit.gtr ) kit.gtr  = T.gtr;
-  if(!kit.perc && T.perc) kit.perc = T.perc;
-  /* 드럼 엔진도 하위분기가 정할 수 있게 합니다.
-     예전에는 keys·gtr·perc·bass 만 통로가 있어서, 트랩을 불러도 킥이
-     deep 이고 하우스를 불러도 클랩이 spread 였습니다 — 엔진은 있는데
-     아무도 안 골라 주는 상태였습니다.
-     perc 는 pperc(기본 패턴)까지 딸려 있어 위에서 따로 다룹니다. */
-  TRACK_IDS.forEach(id => { if(id!=='perc' && !kit[id] && T[id]) kit[id] = T[id]; });
-  /* 2번 건반·기타 — 같은 악기를 두 벌 쓰지 않도록 하위분기가 따로 정합니다.
-     (keys2·gtr2 는 코러스에서만 켜지는 레이어입니다 — arrange.js SECTION_RULE) */
-  /* ⚠ 반드시 값을 채웁니다. 적용 지점이 «없으면 현재 엔진 유지» 라서,
-     비워 두면 **앞서 부른 프리셋의 2번 악기가 그대로 따라옵니다** —
-     아프로비츠를 불렀다가 탱고를 부르면 탱고 코러스에서 코라가 울렸습니다.
-     기본값은 state.js 의 eng 초기값과 같습니다. */
-  kit.keys2 = kit.keys2 || T.keys2 || 'strings';
-  kit.gtr2  = kit.gtr2  || T.gtr2  || 'clean';
-  /* 화음 종류 — '0'~'7' 이 3화음으로 울릴지 7·9화음으로 울릴지.
-     안 정하면 'triad' 라 예전과 완전히 같다. */
-  kit.chord = kit.chord || T.chord || 'triad';
-  /* perc 엔진만 정하고 패턴이 없으면 트랙이 조용합니다.
-     하위분기 단위로 기본 패턴을 함께 줍니다 — 프리셋이 perc 를 직접 적으면 그쪽이 이깁니다.
-     Soca 의 16분 아이언만 문서에 명시돼 있고, 나머지는 통상적인 자리입니다. */
-  const percPat = p.perc || (kit.perc ? T.pperc : null);
 
-  /* 베이스 우선순위 — 프리셋의 kit.bass > TONE_KIT > 프리셋의 bcfg.eng.
-     bcfg.eng 는 모든 프리셋이 갖고 있어서 "기본값"과 "일부러 정한 값"을
-     구분할 수 없습니다. 그래서 예외를 두고 싶은 프리셋은 kit.bass 에 적습니다.
-     이 통로가 없으면 하위분기 하나에 묶인 프리셋들이 전부 같은 베이스가 됩니다. */
-  const bassEng = kit.bass || T.bass || null;
+  /* 빠진 칸 보고 — 채워 주지 않는다. 소리로 티가 나야 고쳐진다.
+     (state.js 초기값으로 울리므로 «앞 프리셋이 따라오는» 일은 없다) */
+  const miss = PRESET_REQUIRED.filter(k => !kit[k]);
+  if(miss.length) PRESET_MISSING.push(`${n} — ${miss.join(',')}`);
+
+  /* 베이스 — kit.bass 가 bcfg.eng 를 덮는다.
+     둘 다 프리셋 안에 있으므로 이것은 상속이 아니라 «한 프리셋 안의 우선순위» 다.
+     bcfg.eng 는 신스 베이스 5종을 고르던 옛 칸이고, 현 베이스 11종이
+     들어오면서 kit.bass 가 실질적인 엔진 칸이 됐다. */
   const bcfg = {...p.bcfg};
-  if(bassEng) bcfg.eng = bassEng;
-
-  /* ── 스케일 ──────────────────────────────────────────────────
-     확장 화음(7·9·13화음)은 **7음계라야 제 소리가 납니다.** 5음계에서
-     r·r+2·r+4 는 3화음이 아니라 4도 쌓기가 되기 때문입니다(pattern-codec.js).
-     보사노바에 nine 을 얹어도 A-D-C-E 가 나오던 이유가 이것입니다.
-
-     그런데 프리셋의 스케일은 대부분 **고른 값이 아니라 기본값이 복사된 것**
-     으로 보입니다 — 357개 중 286개(80%)가 Minor Pentatonic 이고,
-     **356개가 근음 9로 같습니다.** state.js 의 초기값과 정확히 같습니다.
-
-     그래서 «기본값이면 하위분기 값으로 덮고, 일부러 고른 값이면 존중» 합니다.
-     비펜타토닉을 적어 둔 71개(Dorian·Major·Natural Minor)는 안 건드립니다.
-
-     ⚠ 블루스는 **일부러 펜타토닉으로 남겨 뒀습니다.** 블루스 음계가 곧
-       펜타토닉이고, 그 위에 도미넌트 7화음을 얹는 것이 블루스의 어법입니다. */
-  if(T.scale && bcfg.scale === 'Minor Pentatonic') bcfg.scale = T.scale;
+  if(kit.bass) bcfg.eng = kit.bass;
 
   /* off — 그 장르가 안 쓰는 악기는 패턴을 비웁니다.
      음소거가 아니라 패턴을 비우는 쪽입니다. 음소거는 상태로 남아
      다음 프리셋까지 따라가지만, 빈 패턴은 프리셋에 딸린 성질이라
      사용자가 롤에서 직접 찍으면 바로 살아납니다.
      (메탈에 건반이 없는 것은 patterns/00-harmony.md 의 의도입니다) */
-  /* 프리셋이 직접 끄는 것이 하위분기 기본값을 이깁니다.
-     같은 하위분기라도 그런지는 건반이 없고 브릿팝은 있습니다 —
-     이 통로가 없으면 둘을 못 가릅니다. (genres/00-reference.md) */
-  const off = kit.off || T.off || [];
+  const off = kit.off || [];
   const blankKeys = off.includes('keys'), blankGtr = off.includes('gtr');
 
   LIB[n] = {
@@ -81,9 +66,11 @@ for(const [n,p] of Object.entries(RAW)){
     keys2: p.keys2 ? kpat(p.keys2, kit.chord, bcfg.scale) : new Array(STEPS).fill(0),
     gtr2 : p.gtr2  ? bpat(p.gtr2)  : new Array(STEPS).fill(-1),
     drums:Object.fromEntries(TRACKS.map(t =>
-      [t.id, pat(t.id==='perc' ? (off.includes('perc') ? null : percPat) : p[t.id])])),
-    /* 악기별 볼륨 — 하위분기가 정한 것만. 없으면 프리셋이 트랙 볼륨을 안 건드립니다. */
-    lvl: T.lvl || null,
+      [t.id, pat(t.id==='perc' ? (off.includes('perc') ? null : p.perc) : p[t.id])])),
+    /* 악기별 볼륨 — 프리셋이 적은 것만. 없으면 트랙 볼륨을 안 건드립니다. */
+    lvl: p.lvl || null,
   };
 }
+if(PRESET_MISSING.length)
+  console.warn(`[preset] kit 칸이 빈 프리셋 ${PRESET_MISSING.length}종\n  ` + PRESET_MISSING.join('\n  '));
 const LIB_NAMES = Object.keys(LIB);

@@ -1,179 +1,390 @@
-# E. Electronic — 장르별 박자
+# E. Electronic / Dance — 장르별 박자
 
 > [../genres/05-electronic.md](../genres/05-electronic.md) 의 악기·음색 분석과 짝을 이루는 **박자 자료**입니다.
 > 여기는 16스텝 패턴만, 저쪽은 악기·수치를 다룹니다.
 >
-> 표기: `K`킥 `S`스네어 `C`클랩 `H`클로즈햇 `O`오픈햇 `T`톰 `B`베이스(음도)
-> `X`강세 `x`보통 `-`없음 · 0부터 시작, 1박=0 2박=4 3박=8 4박=12
+> 표기: `K`킥 `S`스네어 `C`클랩 `H`클로즈햇 `O`오픈햇 `T`톰 `P`퍼커션 `B`베이스(음도)
+> `X`강세 `x`보통 `o`고스트 `-`없음 · 0부터 시작, 1박=0 2박=4 3박=8 4박=12
 >
-> 이름 앞 `·` = 규칙 파생. 표기 없음 = 손으로 작성.
 > 공통 원형은 [00-archetypes.md](00-archetypes.md), 표기·스윙·그리드 한계는 [README.md](README.md).
+> 값이 안 비어 있는 트랙만 적었습니다 — 줄이 없으면 그 트랙은 쉽니다.
 
-**수록 90종 · 서로 다른 골격 19개**
+**수록 86종 — 골격도 86가지입니다.**
 
-> 골격이 같은 장르는 한 블록에 묶었습니다. 묶인 장르들은 **박자가 동일하고**
-> 템포·스윙·악기 구성으로 구분됩니다. 파생 프리셋(`·`)이 원형을 상속한 결과이며,
-> 자료로 확인된 고유 박자가 있는 장르는 별도 블록으로 떨어져 있습니다.
+> 2026-08-17 이전에는 «골격이 같은 장르는 한 블록에 묶었습니다» 라고 적혀 있었고,
+> 실제로 골격이 7개뿐이었습니다. 상속으로 파생 프리셋이 원형을 그대로 받던 탓입니다.
+> 상속을 끊고([`_build.js`](../src/data/presets/_build.js)) 장르마다 박자를 다시 썼습니다 —
+> 이제 **묶인 블록이 없습니다.**
 
 ---
 
-## House 계열  (23종 · 골격 5개)
+## House 계열  (21종)
 
 ```
- House                  124 BPM  swing 12
+ House                  124 BPM  swing 12      ← 4/4 + 오픈햇 뒷박 + 16분 베이스 — 하우스의 기준선
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
+  P --x---x---x---x-
   B 0-0-3-0-5-0-3-0-
 
- UK Garage              134 BPM  swing 34
-·UK Funky               131 BPM  swing  0
-·Speed Garage           134 BPM  swing  0
+ UK Garage              134 BPM  swing 34      ← 브로큰 킥 + 스윙 34 의 어긋난 햇
   K X---------X-----
   S ----X-------X---
   C ----x-------x---
   H -x-xx-x--x-xx-x-
   O --------------x-
-  T ----------------
+  P --x---x---x---x-
   B 0---0-3---5-0---
 
- Deep House             122 BPM  swing 14
-·Chicago House          122 BPM  swing  0
-·Acid House             125 BPM  swing  0
-·Tech House             126 BPM  swing  0
-·Progressive House      128 BPM  swing  0
-·Tribal House           125 BPM  swing  0
-·French House           124 BPM  swing  0
-·Melodic House & Techno 122 BPM  swing  0
-·Garage House           124 BPM  swing  0
-·2-step Garage          134 BPM  swing 30
-·Bassline               139 BPM  swing  0
-·Filter House           124 BPM  swing  0
-·Big Room               129 BPM  swing  0
-·Complextro             128 BPM  swing  0
-·Bass House             128 BPM  swing  0
-·Electro House          128 BPM  swing  0
-·Future House           126 BPM  swing  0
+ Deep House             122 BPM  swing 14      ← 굴러가는 베이스 — 앞으로 밀지 않는다
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
+  P --x---x---x---x-
+  B 0-0-0---3-3-0---
 
- Amapiano               113 BPM  swing 28
-  K X---X---X---X---
-  S ----------------
-  C ------x-----x---
-  H --x-x---x-x-x-x-
-  O ------------x---
-  T ----x-------x-x-
-  B 0---0-3---5---3-
-
- Afro House             122 BPM  swing 16
-  K X---X---X---X---
-  S ----------------
-  C ----x-------x---
-  H x-xxx-x-x-xxx-x-
-  O ----------------
-  T --x---x-x---x-x-
-  B 0--0--3---5--0--
-```
-
-## Techno 계열  (10종 · 골격 2개)
-
-```
- Techno                 134 BPM  swing  0
+ Chicago House          122 BPM  swing  0      ← 909 원형 — 8분 베이스가 쉬지 않는다
   K X---X---X---X---
   S --------x-------
-  C ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-0-0-0-0-0-0-
+
+ Acid House             125 BPM  swing  0      ← 303 이 16분으로 꾸르륵거리고 햇도 16분
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H XxxxXxxxXxxxXxxx
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-3-0-5-3-0-3-
+
+ Tech House             126 BPM  swing  0      ← 타악기 중심 — 햇이 잘게 쪼개진다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-xxx-x-x-xxx-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0---0-5-0---0-
+
+ Progressive House      128 BPM  swing  0      ← 베이스가 길게 눌린다 — 긴 빌드업
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0---0---5---5---
+
+ Tribal House           125 BPM  swing  0      ← 콩가 + 8분 셰이커가 리듬의 주역
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  T --x-x---x-x-x-x-
+  P x-x-x-x-x-x-x-x-
+  B 0---3---0---5---
+
+ French House           124 BPM  swing  0      ← 필터 건 디스코 루프 — 16분 베이스
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-5-0-3-0-5-3-
+
+ Melodic House & Techno 122 BPM  swing  0      ← 16분 아르페지오가 곡을 끌고 간다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-------3-------
+
+ UK Funky               131 BPM  swing  0      ← 개러지 골격 + 콩가 — 아프로·소카의 타악
+  K X---------X-----
+  S ----X-------X---
+  C ----x-------x---
+  H -x-xx-x--x-xx-x-
+  O --------------x-
+  T --x-x---x-x-x-x-
+  P x-x-x-x-x-x-x-x-
+  B 0---0-3---5-3---
+
+ Garage House           124 BPM  swing  0      ← 가스펠 피아노가 베이스를 끌고 간다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0---0-3-5-3-0---
+
+ 2-step Garage          134 BPM  swing 30      ← 킥과 스네어가 어긋난 2스텝 · 스윙 30
+  K X---------X-x---
+  S ----X-------X---
+  C ----x-------x---
+  H -x-xx-x--x-xx-xx
+  O --------------x-
+  P --x---x---x---x-
+  B 0---0-3---5-0-3-
+
+ Bassline               139 BPM  swing  0      ← 스피드개러지 골격 + 베이스 리프
+  K X---------X-----
+  S ----X-------X---
+  C ----x-------x---
+  H -x-xx-x--x-xx-x-
+  O --------------x-
+  P --x---x---x---x-
+  B 0-0-3-3-5-5-3-3-
+
+ Filter House           124 BPM  swing  0      ← 필터가 열리는 자리에 톰 하나
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  T ------------x---
+  P --x---x---x---x-
+  B 0-------5-------
+
+ Big Room               129 BPM  swing  0      ← 드롭에서 킥·스네어가 3박을 함께 때린다
+  K X---X---X---X---
+  S --------X-------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O ------------x---
+  T ------------x-x-
+  P --x---x---x---x-
+  B 0-------0-------
+
+ Complextro             128 BPM  swing  0      ← 스탭이 16분으로 튄다 — 글리치
+  K X---X---X---X---
+  S ----X-------X---
+  C ----X-------X---
+  H x-xxx-x-x-xxx-xx
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-3-0-5-5-0-3-
+
+ Bass House             128 BPM  swing  0      ← 하우스 4/4 + 덥스텝 베이스
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0---0-0-3---3-0-
+
+ Electro House          128 BPM  swing  0      ← 왜곡 톱니 스탭 8분
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-0-0-3-3-3-3-
+
+ Future House           126 BPM  swing  0      ← 필터 건 플럭 — 드롭이 «말한다»
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x---x---x---x-
+  B 0-0-3-0-0-5-0-0-
+
+ Speed Garage           134 BPM  swing  0      ← 브로큰 킥 + 우글거리는 베이스
+  K X---------X-x---
+  S ----X-------X---
+  C ----x-------x---
+  H -x-xx-x--x-xx-x-
+  O --------------x-
+  P --x---x---x---x-
+  B 0-0-----3-3-5-5-
+```
+
+## Techno 계열  (10종)
+
+```
+ Techno                 134 BPM  swing  0      ← 스네어 3박 + 톰 — 테크노의 기준선
+  K X---X---X---X---
+  S --------x-------
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
   T ------------x-x-
   B 0---0---0---0-3-
 
-·Detroit Techno         130 BPM  swing  0
-·Minimal Techno         127 BPM  swing  0
-·Dub Techno             122 BPM  swing  0
-·Acid Techno            137 BPM  swing  0
-·Microhouse             124 BPM  swing  0
-·Hard Techno            155 BPM  swing  0
-·Hardgroove             140 BPM  swing  0
-·Schranz                155 BPM  swing  0
-·Industrial             150 BPM  swing  0
+ Detroit Techno         130 BPM  swing  0      ← 화성이 있는 테크노 — 신콥 베이스
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
+  B 0---0-3-5---3---
+
+ Minimal Techno         127 BPM  swing  0      ← 뺄 수 있는 것을 다 뺐다
+  K X---X---X---X---
+  S ----------------
+  H --x---x---x---x-
+  O ------------x---
+  T ------------x---
+  B 0-------0-------
+
+ Dub Techno             122 BPM  swing  0      ← 코드 스탭 하나가 딜레이로 번진다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  O ------x-------x-
+  B 0-------0-------
+
+ Acid Techno            137 BPM  swing  0      ← 303 이 16분 내내 — 햇도 16분
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H XxxxXxxxXxxxXxxx
+  O ------------x---
+  B 0-3-0-5-0-3-0-5-
+
+ Microhouse             124 BPM  swing  0      ← 클릭과 잔여물 — 클랩이 박 사이에
+  K X---X---X---X---
+  S ----------------
+  C ------x-----x---
+  H x-x-x-xxx-x-x-x-
+  O --x---x---x---x-
+  P --x-x---x-x---x-
+  B 0---0---3-0-----
+
+ Hard Techno            155 BPM  swing  0      ← 킥이 마디 끝에서 한 번 더
+  K X---X---X---X-x-
+  S --------x-------
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  B 0-0-0-0-0-0-0-0-
+
+ Hardgroove             140 BPM  swing  0      ← 타악 루프 + 16분 햇
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H x-xxx-x-x-xxx-x-
+  O --x---x---x---x-
+  T --x-x---x-x-x---
+  B 0-0-3-0-5-0-3-0-
+
+ Schranz                155 BPM  swing  0      ← 킥이 마디 끝에서 16분으로 굴러떨어진다
+  K X---X---X---XxXx
+  S ----------------
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  B 0---0---0---0---
+
+ Industrial             150 BPM  swing  0      ← 왜곡 킥 + 노이즈 · 스네어 3박
+  K X---X---X-x-X---
+  S --------X-------
+  H XxxxXxxxXxxxXxxx
+  O --x---x---x---x-
+  T ------------x-x-
+  B 0-------0---3---
 ```
 
-## Breakbeat 계열  (10종 · 골격 4개)
+## Breakbeat 계열  (10종)
 
 ```
- Drum & Bass            174 BPM  swing  0
-·Big Beat               128 BPM  swing  0
-·Liquid Funk            174 BPM  swing  0
-·Neurofunk              174 BPM  swing  0
-·Jump-up                174 BPM  swing  0
+ Drum & Bass            174 BPM  swing  0      ← 아멘 골격 — 스네어 고스트가 살아 있어야
   K X---------X-----
-  S ----X--x----X--x
-  C ----------------
+  S ----X--o----X--o
   H --x---x---x---x-
   O --------------x-
-  T ----------------
   B 0-------------5-
 
-·Nu Skool Breaks        135 BPM  swing 28
-·Jungle                 165 BPM  swing 28
+ Big Beat               128 BPM  swing  0      ← 굵은 브레이크 + 필터 신스
+  K X---------X-x---
+  S ----X--x----X--x
+  H --x---x---x---x-
+  O --------------x-
+  B 0-------0---5---
+
+ Nu Skool Breaks        135 BPM  swing 28      ← 2스텝 햇 + 베이스가 박 사이로
   K X---------X-----
   S ----X-------X---
   C ----x-------x---
   H -x-xx-x--x-xx-x-
   O --------------x-
-  T ----------------
-  B 0---0-3---5-0---
+  B 0-0---3-0-5---0-
 
-·Halftime DnB           174 BPM  swing  0
+ Jungle                 165 BPM  swing 28      ← 브레이크를 잘라 붙인다 — 고스트와 엇박 스네어
+  K X-----x---X-----
+  S ----X--o--x-X--o
+  C ----x-------x---
+  H -x-xx-x--x-xx-x-
+  O --------------x-
+  B 0-----------5---
+
+ Liquid Funk            174 BPM  swing  0      ← 굴러가는 DnB — 화음이 부드럽다
+  K X---------X-----
+  S ----X--o----X--o
+  H --x---x---x---x-
+  O --------------x-
+  B 0-------3-----5-
+
+ Neurofunk              174 BPM  swing  0      ← 어두운 리즈 — 베이스가 짧게 끊어 친다
+  K X---------X-----
+  S ----X--o----X--o
+  H --x---x---x---x-
+  O --------------x-
+  B 0-0-----0-0---3-
+
+ Jump-up                174 BPM  swing  0      ← 통통 튀는 베이스 리프
+  K X---------X-----
+  S ----X--x----X--x
+  H --x---x---x---x-
+  O --------------x-
+  B 0-0-5-5-0-0-3-3-
+
+ Halftime DnB           174 BPM  swing  0      ← 174 BPM 인데 체감은 87 — 스네어 3박
   K X-------X-------
   S --------X-------
   C ----x---X---x---
   H x-x-x-xxx-x-x-xx
-  O ----------------
-  T ----------------
   B 0-------5-------
 
-·Techstep               174 BPM  swing  0
-·Drumfunk               173 BPM  swing  0
-  K X---X---X---X---
-  S ----------------
-  C ----X-------X---
-  H x-x-x-x-x-x-x-x-
-  O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
-```
-
-## Dubstep · Bass Music  (16종 · 골격 5개)
-
-```
- Dubstep                140 BPM  swing  0
-·Brostep                145 BPM  swing  0
-  K X-------X-------
-  S --------X-------
-  C ----------------
+ Techstep               174 BPM  swing  0      ← DnB 골격 — 4/4 가 아니다
+  K X---------X-----
+  S ----X-------X---
   H --x---x---x---x-
-  O ----------------
-  T ----------------
+  O --------------x-
   B 0-------0-----3-
 
-·EDM Trap               145 BPM  swing  0
+ Drumfunk               173 BPM  swing  0      ← 브레이크를 잘게 편집 — 스네어가 계속 어긋난다
+  K X--x---x--X--x--
+  S ----X-o-x---X-o-
+  H -x-x-x-x-x-x-x-x
+  O --------------x-
+  B 0---------------
+```
+
+## Dubstep · Bass Music  (16종)
+
+```
+ Dubstep                140 BPM  swing  0      ← 하프타임 · 성긴 서브 — 덥스텝의 기준선
+  K X-------X-------
+  S --------X-------
+  H --x---x---x---x-
+  B 0-------0-----3-
+
+ EDM Trap               145 BPM  swing  0      ← 트랩 햇 + 페스티벌 드롭
   K X-----x-X-----x-
   S --------X-------
   C --------X-------
@@ -182,208 +393,350 @@
   T ------------x-x-
   B 0-------5-------
 
- Future Bass            150 BPM  swing  0
-·Future Garage          135 BPM  swing  0
-·Jersey Club            135 BPM  swing  0
-·Deep Dubstep           140 BPM  swing  0
-·Riddim                 144 BPM  swing  0
-·Melodic Dubstep        145 BPM  swing  0
-·Wave                   150 BPM  swing  0
+ Future Bass            150 BPM  swing  0      ← 슈퍼소 화음이 3박에서 열린다
   K X-------X-------
   S --------X-------
   C ----x---X---x---
   H x-x-x-xxx-x-x-xx
-  O ----------------
-  T ----------------
-  B 0-------5-------
+  B 0---0---5---3---
 
- Moombahton             110 BPM  swing 10
+ Moombahton             110 BPM  swing 10      ← 뎀보우 스네어 — 110 BPM 의 하우스
   K X-------X-------
   S ---x--x----x--x-
   C ----x-------x---
   H x-x-x-x-x-x-x-x-
-  O ----------------
-  T ----------------
   B 0--0--0-5--5--3-
 
-·Meditative Dubstep     140 BPM  swing  0
-·Festival Trap          145 BPM  swing  0
-·Baltimore Club         134 BPM  swing  0
-·Philly Club            135 BPM  swing  0
-·Hardwave               150 BPM  swing  0
-  K X---X---X---X---
-  S ----------------
-  C ----X-------X---
+ Brostep                145 BPM  swing  0      ← 공격적 워블 — 베이스가 두 번씩 끊긴다
+  K X-------X---x---
+  S --------X-------
+  H --x---x---x---x-
+  B 0-0-----0-0---3-
+
+ Future Garage          135 BPM  swing  0      ← 2스텝의 잔향 — 킥이 박 사이로 미끄러진다
+  K X-----x---X-----
+  S --------X-------
+  C ----x---X---x---
+  H x-x-x-xxx-x-x-xx
+  B 0-------3-------
+
+ Jersey Club            135 BPM  swing  0      ← 5타 킥이 정체성
+  K X--X--X---X-X---
+  S --------X-------
+  C --------x-------
+  H x-x-x-x-x-x-x-x-
+  B 0--0--0---5-3---
+
+ Deep Dubstep           140 BPM  swing  0      ← 서브만 남긴다 — 베이스 한 음
+  K X-------X-------
+  S --------X-------
+  C ----x---X---x---
+  H --x---x---x---x-
+  B 0---------------
+
+ Meditative Dubstep     140 BPM  swing  0      ← 하프타임 · 4분 햇 — 명상 쪽으로
+  K X-------X-------
+  S --------X-------
+  H x---x---x---x---
+  B 0-------0-------
+
+ Riddim                 144 BPM  swing  0      ← 같은 워블의 반복 — 베이스가 세 번씩
+  K X-------X-------
+  S --------X-------
+  C ----x---X---x---
+  H x-x-x-xxx-x-x-xx
+  B 0-0-0---0-0-0---
+
+ Melodic Dubstep        145 BPM  swing  0      ← 감정선 — 화음이 움직인다
+  K X-------X-------
+  S --------X-------
+  C ----x---X---x---
+  H x-x-x-xxx-x-x-xx
+  B 0---3---5---3---
+
+ Festival Trap          145 BPM  swing  0      ← 트랩 골격을 페스티벌 규모로
+  K X-----x-X-----x-
+  S --------X-------
+  C --------x-------
+  H x-xx--x-x-xxx-xx
+  O ------------x---
+  T ------------x-x-
+  B 0-------5---3---
+
+ Baltimore Club         134 BPM  swing  0      ← 8타 킥 — 볼티모어의 브레이크
+  K X--X--X-X--X--X-
+  S --------X-------
+  C ----x-------x---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
+  B 0--0--0-5--5--3-
+
+ Philly Club            135 BPM  swing  0      ← 킥이 뒤에 몰린다 — 볼티모어에서 갈라진 갈래
+  K X--X--X---X-X-X-
+  S --------X-------
+  C ----x-------x---
+  H x-xxx-x-x-xxx-x-
+  O --x---x---x---x-
+  B 0--0--0---5-3-0-
+
+ Wave                   150 BPM  swing  0      ← 흐릿한 하프타임 — 햇이 고르지 않다
+  K X-------X-------
+  S --------X-------
+  C ----x---X---x---
+  H x---x-x-x---x-x-
+  B 0-------3-------
+
+ Hardwave               150 BPM  swing  0      ← 웨이브를 왜곡으로 — 킥이 16분으로 붙는다
+  K X---X---X-x-X---
+  S --------X-------
+  H x-x-x-xxx-x-x-xx
+  B 0-0-----3-3-----
 ```
 
-## Trance 계열  (11종 · 골격 4개)
+## Trance 계열  (11종)
 
 ```
- Psytrance              145 BPM  swing  0
+ Psytrance              145 BPM  swing  0      ← 16분 베이스가 쉬지 않는다 — 킥 사이를 채운다
   K X---X---X---X---
   S ----------------
-  C ----------------
   H --x---x---x---x-
   O ------x-------x-
-  T ----------------
   B -000-000-000-000
 
- Trance                 138 BPM  swing  0
+ Trance                 138 BPM  swing  0      ← 오프비트 8분 베이스
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
   B -0-0-0-0-0-0-0-0
 
- Hardstyle              150 BPM  swing  0
+ Hardstyle              150 BPM  swing  0      ← 리버스 베이스 — 킥과 베이스가 자리를 바꾼다
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H --x---x---x---x-
-  O ----------------
   T ------------x-x-
   B -0-------0------
 
-·Uplifting Trance       140 BPM  swing  0
-·Progressive Trance     132 BPM  swing  0
-·Goa                    140 BPM  swing  0
-·Full-on                144 BPM  swing  0
-·Forest                 153 BPM  swing  0
-·Hi-tech                173 BPM  swing  0
-·Hard Trance            145 BPM  swing  0
-·Rawstyle               155 BPM  swing  0
+ Uplifting Trance       140 BPM  swing  0      ← 오프비트 베이스 + 슈퍼소 아르페지오
   K X---X---X---X---
   S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
-```
+  B -0-0-0-0-3-3-3-3
 
-## Hardcore 계열  (5종 · 골격 2개)
-
-```
- Gabber                 180 BPM  swing  0
+ Progressive Trance     132 BPM  swing  0      ← 16분 베이스가 쉬지 않고 굴러간다
   K X---X---X---X---
   S ----------------
-  C ----------------
+  C ----X-------X---
   H x-x-x-x-x-x-x-x-
-  O ----------------
-  T ----------------
+  O --x---x---x---x-
+  B 0-0-0-0-0-0-0-0-
+
+ Goa                    140 BPM  swing  0      ← 사이트랜스의 원형 — 선율이 더 많다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  O ------x-------x-
+  B -00--00--00--00-
+
+ Full-on                144 BPM  swing  0      ← 베이스가 16분을 가득 채운다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  O ------x-------x-
+  B -000-000-0-0-000
+
+ Forest                 153 BPM  swing  0      ← 어둡고 빠른 사이 — 베이스가 끊겨 튄다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  O ------x-------x-
+  B 0-00-00-0-00-00-
+
+ Hi-tech                173 BPM  swing  0      ← 극단으로 빠른 사이 — 16분이 성글게 흩어진다
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  O ------x-------x-
+  B -00-0-00-00-0-00
+
+ Hard Trance            145 BPM  swing  0      ← 하드 킥 + 8분 베이스 · 스네어 3박
+  K X---X---X---X---
+  S --------X-------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  T ------------x-x-
+  B 0-0-0-0-0-0-0-0-
+
+ Rawstyle               155 BPM  swing  0      ← 리버스 베이스를 더 성기게
+  K X---X---X---X---
+  S ----------------
+  C ----X-------X---
+  H --x---x---x---x-
+  T ------------x-x-
+  B -0---0---0---0--
+```
+
+## Hardcore 계열  (5종)
+
+```
+ Gabber                 180 BPM  swing  0      ← 왜곡 킥 4/4 — 킥이 곧 악기
+  K X---X---X---X---
+  S ----------------
+  H x-x-x-x-x-x-x-x-
   B 0---0---0---0---
 
-·Happy Hardcore         172 BPM  swing  0
-·Breakbeat Hardcore     140 BPM  swing  0
-·Hardcore Techno        180 BPM  swing  0
-·Frenchcore             205 BPM  swing  0
-  K X---X---X---X---
-  S ----------------
+ Happy Hardcore         172 BPM  swing  0      ← 브레이크비트 + 피아노 스탭
+  K X---X-x-X---X---
+  S ----X-------X---
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
+  B 0-0-3-3-5-5-3-3-
+
+ Breakbeat Hardcore     140 BPM  swing  0      ← 아멘 브레이크 + 스탭 — 90년대 레이브
+  K X---------X-----
+  S ----X--x----X--x
+  H -x-xx-x--x-xx-x-
+  O --------------x-
+  B 0-------0---5---
+
+ Hardcore Techno        180 BPM  swing  0      ← 왜곡 킥 4/4 + 스네어 3박
+  K X---X---X---X---
+  S --------X-------
+  C ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  B 0---0---3---3---
+
+ Frenchcore             205 BPM  swing  0      ← 킥이 16분으로 구른다 — 킥 자체가 베이스
+  K XxXxXxXxXxXxXxXx
+  S --------X-------
+  H --x---x---x---x-
+  B 0---0---0---0---
 ```
 
-## Downtempo · Ambient · Retro  (11종 · 골격 5개)
+## Downtempo · Ambient · Retro  (10종)
 
 ```
- Trip Hop                90 BPM  swing 30
-·Downtempo              100 BPM  swing  0
+ Trip Hop                90 BPM  swing 30      ← 스윙 30 · 느슨한 햇 — 브레이크를 늦춘다
   K X-----x---X-----
   S ----X-------X---
-  C ----------------
   H x---x-x-x---x-x-
   O --------------x-
-  T ----------------
+  P ----x-------x---
   B 0-------3-------
 
- Synthwave              100 BPM  swing  0
-·Vaporwave               75 BPM  swing  0
-  K X-------X-------
+ Downtempo              100 BPM  swing  0      ← 트립합보다 느슨하게 — 4분 햇
+  K X-------x-X-----
   S ----X-------X---
-  C ----x-------x---
-  H x-x-x-x-x-x-x-x-
-  O ----------------
-  T -------------x-x
-  B 0-0-0-0-5-5-3-3-
+  H x---x---x---x---
+  O --------------x-
+  P ----x-------x---
+  B 0-------5-------
 
-·Nu Jazz                112 BPM  swing 28
+ Nu Jazz                112 BPM  swing 28      ← 브로큰비트 + 업라이트
   K X---------X-----
   S ----X-------X---
   C ----x-------x---
   H -x-xx-x--x-xx-x-
   O --------------x-
-  T ----------------
-  B 0---0-3---5-0---
+  P ----x-------x---
+  B 0---3-5---3-0---
 
-·Chillout               100 BPM  swing  0
-·Balearic               110 BPM  swing  0
-·Ambient Techno         124 BPM  swing  0
-·Mallsoft                73 BPM  swing  0
-·Future Funk            118 BPM  swing  0
-  K X---X---X---X---
-  S ----------------
-  C ----X-------X---
-  H x-x-x-x-x-x-x-x-
-  O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
-
-·Lounge                 105 BPM  swing 50
+ Vaporwave               75 BPM  swing  0      ← 느린 8분 — 피치 내린 샘플의 자리
   K X-------X-------
   S ----X-------X---
-  C ----------------
+  C ----x-------x---
   H x-x-x-x-x-x-x-x-
-  O ----------------
-  T ----------------
+  T -------------x-x
+  P ----x-------x---
+  B 0-0-0-0-5-5-3-3-
+
+ Chillout               100 BPM  swing  0      ← 4분 햇 · 킥 둘 — 배경으로 물러난다
+  K X-------X-------
+  S ----X-------X---
+  H x---x---x---x---
+  O ------------x---
+  P ----x-------x---
+  B 0-------3-------
+
+ Balearic               110 BPM  swing  0      ← 4/4 에 손 타악기 — 발레아릭의 여유
+  K X---X---X---X---
+  S ----------------
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P --x-x---x-x-x---
+  B 0---0---5---3---
+
+ Lounge                 105 BPM  swing 50      ← 스윙 50 + 업라이트 — 라운지의 재지함
+  K X-------X-------
+  S ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  P ----x-------x---
   B 0---0---3---3---
-```
 
-## Disco  (1종 · 골격 1개)
+ Ambient Techno         124 BPM  swing  0      ← 4/4 만 남기고 나머지를 다 뺐다
+  K X---X---X---X---
+  S ----------------
+  H --x---x---x---x-
+  O ------------x---
+  P ----x-------x---
+  B 0-------0-------
 
-```
-·Nu-disco               118 BPM  swing  0
+ Mallsoft                73 BPM  swing  0      ← 아주 느리고 멀리 — 베이스 한 음, 햇 둘
+  K X-------X-------
+  S ----X-------X---
+  H --x-------x-----
+  P ----x-------x---
+  B 0---------------
+
+ Future Funk            118 BPM  swing  0      ← 시티팝을 잘라 붙인다 — 16분 베이스
   K X---X---X---X---
   S ----X-------X---
-  C ----------------
+  H x-x-x-x-x-x-x-x-
+  O --x---x---x---x-
+  P ----x-------x---
+  B 0-0-5-5-3-3-5-0-
+```
+
+## Disco  (1종)
+
+```
+ Nu-disco               118 BPM  swing  0      ← 디스코 4/4 를 현대 프로덕션으로
+  K X---X---X---X---
+  S ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
   T -------------x-x
-  B 0-0-5-0-3-0-5-3-
+  P --x---x---x---x-
+  B 0-0-5-0-3-5-0-3-
 ```
 
-## Electro  (2종 · 골격 1개)
+## Electro  (2종)
 
 ```
-·Electro                120 BPM  swing  0
-·Electroclash           128 BPM  swing  0
+ Electro                120 BPM  swing  0      ← 808 일렉트로 브레이크 — 4/4 가 아니다
+  K X-----X-X-------
+  S ----X-------X---
+  H x-x-x-x-x-x-x-x-
+  O --------------x-
+  T ------------x-x-
+  B 0-0-0-0-5-5-3-3-
+
+ Electroclash           128 BPM  swing  0      ← 일렉트로 + 펑크 보컬 — 햇 강세로 민다
   K X---X---X---X---
-  S ----------------
-  C ----X-------X---
-  H x-x-x-x-x-x-x-x-
-  O --x---x---x---x-
-  T ----------------
-  B 0---3---5---3---
-```
-
-## 하이브리드 · 인터넷 장르  (1종 · 골격 1개)
-
-```
-·Global Bass            115 BPM  swing  0
-  K X-------X-------
-  S ---x--x----x--x-
+  S ----X-------X---
   C ----x-------x---
-  H x-x-x-x-x-x-x-x-
-  O ----------------
-  T ----------------
-  B 0--0--0-5--5--3-
+  H X-x-X-x-X-x-X-x-
+  O --x---x---x---x-
+  B 0-0-0-0-0-0-0-0-
 ```
-

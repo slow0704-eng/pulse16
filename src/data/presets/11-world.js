@@ -5,7 +5,10 @@
 Object.assign(RAW, {
 
 'Bhangra':{bpm:145,swing:0,
-  kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood'},
+  lvl:{gtr:0.44,perc:0.44},
+  kit:{kick:'wood',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',
+       keys:'ep',keys2:'strings',gtr:'sitar',gtr2:'clean',bass:'sub',chord:'triad',perc:'shaker'},
+  perc:'x-x-x-x-x-x-x-x-',
   tune:{kick:-3,snare:1,tom:4,hat:2},
   bcfg:{eng:'sub',oct:24,semi:0,gate:64,glide:0,blend:44,drive:32,xover:120,tone:4000,
         sub:56,exc:30,duck:24,root:9,scale:'Major'},
@@ -22,13 +25,14 @@ Object.assign(RAW, {
    ═════════════════════════════════════════════════════════ */
 
 'Global Bass':{bpm:115,swing:0,cat:'K',gen:1,
-  kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
+  kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',
+       keys:'bell',keys2:'strings',gtr:'clean',gtr2:'clean',bass:'sub',chord:'sev'},
   tune:{kick:-2,snare:0,tom:-2,hat:0},
   bcfg:{eng:'sub',oct:36,semi:0,gate:80,glide:0,blend:40,drive:32,xover:120,tone:4000,
         sub:56,exc:32,duck:28,root:9,scale:'Minor Pentatonic'},
-  kick:'X-------X-------',snare:'---x--x----x--x-',clap:'----x-------x---',
+  kick:'X-------X---x---',snare:'---x--x----x--x-',clap:'----x-------x---',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',
-  bass:'0--0--0-5--5--3-',
+  bass:'0--0--5-0--3--5-',
   keys:'--0---0---3---3-',gtr:'----------------'},
 
 /* ── 2차 파생 142종 — genres/*.md 표에서 genres.json 으로 승격 후 생성 ── */

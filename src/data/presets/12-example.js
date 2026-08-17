@@ -5,7 +5,8 @@
 Object.assign(RAW, {
 
 'Play Along':{bpm:125,swing:0,tone:1,
-  kit:{kick:'punch',snare:'crack',clap:'tight',chat:'noise',ohat:'noise',tom:'analog'},
+  kit:{kick:'punch',snare:'crack',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',
+       keys:'pad',keys2:'strings',gtr:'clean',gtr2:'clean',bass:'fm',chord:'triad'},
   tune:{kick:0,snare:0,tom:0,hat:0},
   bcfg:{eng:'fm',oct:36,semi:0,gate:62,glide:0,blend:46,drive:32,xover:130,tone:4200,
         sub:55,exc:32,duck:30,root:0,scale:'Major'},
@@ -17,7 +18,8 @@ Object.assign(RAW, {
   keys:'0-------4-------',gtr:'0---0---4---4---'},
 
 'Casio Cells':{bpm:120,swing:0,tone:1,
-  kit:{kick:'tight',snare:'tight',clap:'tight',chat:'tick',ohat:'noise',tom:'synth'},
+  kit:{kick:'tight',snare:'tight',clap:'tight',chat:'tick',ohat:'noise',tom:'synth',
+       keys:'pad',keys2:'strings',gtr:'clean',gtr2:'clean',bass:'casio',chord:'triad'},
   tune:{kick:0,snare:0,tom:0,hat:0},
   bcfg:{eng:'casio',oct:36,semi:0,gate:70,glide:0,blend:44,drive:30,xover:130,tone:4200,
         sub:50,exc:30,duck:25,root:9,scale:'Minor Pentatonic'},

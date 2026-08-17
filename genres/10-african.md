@@ -138,6 +138,35 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
 
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/10-african.md`](../patterns/10-african.md) 에 한 줄씩 적어 두었습니다.
+
+
+> **2026-08-17 정정 — 베이스 표** 록(A) 문서에서 찾은 것과 **같은 세 가지**가
+> 이 문서에도 그대로 있었습니다. 표를 프리셋에서 다시 뽑았습니다 — 15행.
+>
+> **① 엔진 칸** — 프리셋의 `bcfg.eng` 를 옮긴 값이었습니다. 실제로는
+> `kit.bass` > `TONE_KIT`(하위분기) > `bcfg.eng` 순으로 정해지므로(`_build.js`),
+> 엔진 칸 12줄 — 서·중앙아프리카는 `finger` 입니다.
+>
+> **② Oct** — **12종이 36** 이었습니다. 아프로비츠의 «고무 같은 서브» 가 안 나던 이유입니다. 24 로 내렸습니다(표 11칸).
+>
+> **③ Scale 칸** — `Minor Pentatonic` 은 state.js 의 초기값이라 «고른 값» 이
+> 아니고, `_build.js` 가 하위분기 스케일로 덮습니다. 표에는 덮이기 전 값이
+> 적혀 있었습니다(9칸).
+>
+> ⚠ 현 베이스에서 **Blend · X-Over · Tone · Glide 는 아무 일도 하지 않습니다** —
+> 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
+
+
 ### 트랙 재배정
 
 이 계열에서 트랙이 기본 역할과 다르게 쓰이는 경우입니다.
@@ -157,18 +186,18 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 | ·Hiplife | 105 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Coupé-décalé | 122 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Desert Blues | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Fuji | 120 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Fuji | 120 | 0 | `wood` | `body` | `tight` | `noise` | `talking` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Afrobeats | `sub` | 36 | 88 | 0 | 42 | 30 | 120 | 4000 | 58 | 34 | 30 | Minor Pentatonic |
-| ·Highlife | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Hiplife | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Coupé-décalé | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Desert Blues | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Fuji | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Afrobeats | `finger` | 24 | 88 | 0 | 42 | 30 | 120 | 4000 | 58 | 34 | 30 | Major |
+| ·Highlife | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Hiplife | `s808` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Coupé-décalé | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Desert Blues | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Fuji | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 남아프리카
 
@@ -186,11 +215,11 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Kwaito | `sub` | 24 | 200 | 10 | 32 | 34 | 95 | 3000 | 68 | 34 | 36 | Minor Pentatonic |
-| ·Mbaqanga | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| Kwaito | `sub` | 24 | 200 | 10 | 32 | 34 | 95 | 3000 | 68 | 34 | 36 | Major |
+| ·Mbaqanga | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
 | ·Gqom | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 55 | Natural Minor |
 | ·Marabi | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
-| ·Afro Tech | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Afro Tech | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 중앙아프리카
 
@@ -206,9 +235,9 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Soukous | `reese` | 36 | 60 | 0 | 54 | 30 | 150 | 5200 | 46 | 28 | 24 | Major |
-| ·Congolese Rumba | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Ndombolo | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Soukous | `finger` | 24 | 60 | 0 | 54 | 30 | 150 | 5200 | 46 | 28 | 24 | Major |
+| ·Congolese Rumba | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Ndombolo | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### 동아프리카
 
@@ -224,9 +253,9 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Ethio-jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Bongo Flava | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Gengetone | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Ethio-jazz | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Bongo Flava | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Gengetone | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### 북아프리카
 
@@ -234,9 +263,9 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Raï | 120 | 0 | `wood` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
-| ·Mahraganat | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Shaabi | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Raï | 120 | 0 | `wood` | `body` | `tight` | `noise` | `darbuka` | -2/0/-2/0 |
+| ·Mahraganat | 115 | 0 | `wood` | `body` | `tight` | `noise` | `darbuka` | -2/0/-2/0 |
+| ·Shaabi | 115 | 0 | `wood` | `body` | `tight` | `noise` | `darbuka` | -2/0/-2/0 |
 
 **베이스**
 
@@ -245,6 +274,22 @@ tizita·bati·ambassel)은 서양 장·단조와 다른 반음 배치를 갖습�
 | ·Raï | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Mahraganat | `sub` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Shaabi | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Afrobeats (복수) | 2016 | One Dance | Drake featuring Wizkid and Kyla | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 

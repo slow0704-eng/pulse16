@@ -76,6 +76,7 @@
 |---|---|---|---|
 | Global Bass | 100~130 | 지역 리듬 + EDM 프로덕션 | 뎀보우·쿰비아를 클럽화 |
 | Tropical Bass | 100~130 | 상동 | 글로벌베이스와 동의어 |
+| Siren Beat | 100~115 | 3-3-2 킥 + 사이렌 신스 훅 | 뉴질랜드·태평양 디아스포라 |
 | Sped-up / Nightcore | 원곡 ×1.25~1.35 | 피치·속도 동시 상승 | 원곡 편곡을 건드리지 않음 |
 | Slowed + Reverb | 원곡 ×0.75~0.85 | 속도 하강 + 큰 리버브 | 상동 |
 | Mashup | 가변 | 기존 곡 2개 이상 결합 | 저작권 문제 상존 |
@@ -85,6 +86,24 @@
 샘플 라이브러리에 넣는다면 "장르"가 아니라 **프리셋 이펙트 체인**으로
 분류하는 것이 맞습니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 2곡 · Billboard 200 1장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Mashup | 1981 | Stars on 45 | Stars on 45 | Hot 100 |
+| Mashup | 2004 | Collision Course | Jay-Z / Linkin Park | BB200 |
+| Siren Beat | 2020 | Savage Love (Laxed – Siren Beat) | Jawsh 685, Jason Derulo and BTS | Hot 100 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## PULSE·16 설정값
@@ -93,6 +112,35 @@
 [00-instruments.md](00-instruments.md) 참조. 박자는 [../patterns/11-regional.md](../patterns/11-regional.md).
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
+
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/11-regional.md`](../patterns/11-regional.md) 에 한 줄씩 적어 두었습니다.
+
+
+> **2026-08-17 정정 — 베이스 표** 록(A) 문서에서 찾은 것과 **같은 세 가지**가
+> 이 문서에도 그대로 있었습니다. 표를 프리셋에서 다시 뽑았습니다 — 4행.
+>
+> **① 엔진 칸** — 프리셋의 `bcfg.eng` 를 옮긴 값이었습니다. 실제로는
+> `kit.bass` > `TONE_KIT`(하위분기) > `bcfg.eng` 순으로 정해지므로(`_build.js`),
+> 엔진 칸 4줄 — `sub`·`fm` 이라 적혀 있었지만 실제로는 `finger` 입니다.
+>
+> **② Oct** — 프리셋은 **이미 24 인데 표만 36** 이었습니다 — 표가 프리셋보다 뒤처져 있던 경우입니다(4칸).
+>
+> **③ Scale 칸** — `Minor Pentatonic` 은 state.js 의 초기값이라 «고른 값» 이
+> 아니고, `_build.js` 가 하위분기 스케일로 덮습니다. 표에는 덮이기 전 값이
+> 적혀 있었습니다(1칸).
+>
+> ⚠ 현 베이스에서 **Blend · X-Over · Tone · Glide 는 아무 일도 하지 않습니다** —
+> 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
+
 
 ### 트랙 재배정
 
@@ -107,8 +155,8 @@
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | Bhangra | 145 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -3/1/4/2 |
-| ·Desi Beats | 133 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·UK Bhangra | 132 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
+| ·Desi Beats | 133 | 0 | `punch` | `tight` | `spread` | `metal` | `tabla` | -2/0/-2/0 |
+| ·UK Bhangra | 132 | 0 | `wood` | `tight` | `spread` | `noise` | `tabla` | -2/0/-2/0 |
 
 **베이스**
 
@@ -124,15 +172,15 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Trot | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Trot | 120 | 18 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·C-pop | 100 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Trot | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·C-pop | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·Trot | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·C-pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
 
 ### 서아시아 · 지중해
 
@@ -140,15 +188,15 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Arabic Pop | 110 | 0 | `wood` | `tight` | `spread` | `noise` | `synth` | -2/0/-2/0 |
+| ·Arabic Pop | 110 | 0 | `wood` | `tight` | `spread` | `noise` | `darbuka` | -2/0/-2/0 |
 | ·Rumba Flamenca | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Arabic Pop | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rumba Flamenca | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Arabic Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Rumba Flamenca | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### 동유럽 · 발칸
 
@@ -156,13 +204,13 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Turbo-folk | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Turbo-folk | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `darbuka` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Turbo-folk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Turbo-folk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 하이브리드 · 인터넷 장르
 

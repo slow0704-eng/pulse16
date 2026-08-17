@@ -25,6 +25,27 @@
 스윙 노브 50(2:1 비율)으로 근사하면 비슷해지지만, 빠른 템포에서는 어긋납니다.
 정확히 하려면 **12스텝(4박×3) 또는 24스텝** 모드가 필요합니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 2곡 · Billboard 200 4장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Swing / Big Band | 1962 | The Stripper | David Rose | Hot 100 |
+| Swing / Big Band | 1973 | Lady Sings the Blues | Diana Ross (사운드트랙) | BB200 |
+| Swing / Big Band | 2014 | Cheek to Cheek | Tony Bennett and Lady Gaga | BB200 |
+| New Orleans / Dixieland | 1964 | Hello, Dolly! | Louis Armstrong | Hot 100 |
+| New Orleans / Dixieland | 1964 | Hello, Dolly! | Louis Armstrong | BB200 |
+| New Orleans / Dixieland ? | 1974 | The Sting | Marvin Hamlisch (사운드트랙) | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 2. Bebop 계보
@@ -37,6 +58,22 @@
 | Cool Jazz | 100~160 | 가벼운 스윙 | 낮은 다이내믹 | 여백 중심 |
 | West Coast Jazz | 100~160 | 쿨재즈와 동일 | 편곡 비중 높음 | 지역 기반 분류 |
 | Modal Jazz | 가변 | 자유로운 스윙 | 소편성 | 코드 진행 대신 선법 |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 0장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Soul Jazz | 1968 | Grazing in the Grass | Hugh Masekela | Hot 100 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -71,6 +108,24 @@
 퓨전은 재즈지만 **스윙하지 않습니다.** 16분 스트레이트가 기본이라
 오히려 16스텝 그리드와 잘 맞는 유일한 재즈 계열입니다.
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 0곡 · Billboard 200 3장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Jazz Fusion ? | 1969 | Blood, Sweat & Tears | Blood, Sweat & Tears | BB200 |
+| Jazz Fusion ? | 1970 | Blood, Sweat & Tears 3 | Blood, Sweat & Tears | BB200 |
+| Jazz Fusion ? | 1974 | Chicago VII | Chicago | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 6. 현대 갈래
@@ -82,6 +137,27 @@
 | Nu Jazz | 100~125 | 브로큰비트 또는 4/4 | 전자 + 어쿠스틱 | → [05-electronic.md](05-electronic.md) §8 |
 | Spiritual Jazz | 가변 | 순환적 리듬 | 하프, 소프라노 색소폰 | 모달 + 명상적 반복 |
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 5장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Smooth Jazz | 1976 | Breezin' | George Benson | BB200 |
+| Smooth Jazz | 1979 | Rise | Herb Alpert | Hot 100 |
+| Smooth Jazz | 1994 | Miracles: The Holiday Album | Kenny G | BB200 |
+| Smooth Jazz ? | 2003 | Come Away with Me | Norah Jones | BB200 |
+| Smooth Jazz ? | 2004 | Feels Like Home | Norah Jones | BB200 |
+| Smooth Jazz ? | 2007 | Not Too Late | Norah Jones | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## PULSE·16 설정값
@@ -90,6 +166,18 @@
 [00-instruments.md](00-instruments.md) 참조. 박자는 [../patterns/06-jazz.md](../patterns/06-jazz.md).
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
+
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/06-jazz.md`](../patterns/06-jazz.md) 에 한 줄씩 적어 두었습니다.
+
 
 ### Fusion 계보
 
@@ -103,7 +191,7 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Jazz Fusion | `fm` | 24 | 80 | 0 | 52 | 28 | 125 | 4400 | 50 | 28 | 18 | Dorian |
+| Jazz Fusion | `fretless` | 24 | 80 | 0 | 52 | 28 | 125 | 4400 | 50 | 28 | 18 | Dorian |
 
 ### Bebop 계보
 
@@ -118,8 +206,8 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Soul Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
-| ·West Coast Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Soul Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·West Coast Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
 
 ### 현대 갈래
 
@@ -134,8 +222,8 @@
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Smooth Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Acid Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Smooth Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·Acid Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
 
 ### Latin Jazz
 
@@ -143,24 +231,38 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Latin Jazz | 170 | 0 | `tight` | `body` | `tight` | `noise` | `wood` | 1/2/1/0 |
-| ·Afro-Cuban Jazz | 190 | 0 | `tight` | `body` | `tight` | `noise` | `wood` | 1/2/1/0 |
-| ·Bossa Jazz | 130 | 0 | `wood` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Samba Jazz | 103 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Latin Jazz | 170 | 0 | `tight` | `body` | `tight` | `noise` | `timbale` | 1/2/1/0 |
+| ·Afro-Cuban Jazz | 190 | 0 | `tight` | `body` | `tight` | `noise` | `timbale` | 1/2/1/0 |
+| ·Bossa Jazz | 130 | 0 | `wood` | `rim` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Samba Jazz | 103 | 0 | `wood` | `body` | `tight` | `noise` | `surdo` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Latin Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Afro-Cuban Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Bossa Jazz | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Samba Jazz | `fm` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Latin Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Afro-Cuban Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
+| ·Bossa Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·Samba Jazz | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Dorian |
 
-> 위 **베이스** 표의 엔진 칸은 프리셋이 적어 둔 `bcfg.eng` 입니다.
-> 재즈 계열은 `TONE_KIT` 이 하위분기 단위로 `upright`(퓨전만 `slap`)를
-> 덮어쓰므로, 실제로 울리는 것은 전부 업라이트입니다.
-> 우선순위는 `src/data/presets/_build.js` 참조.
+> **2026-08-17 정정 — 베이스 표** 이 자리에는 «엔진 칸은 `bcfg.eng` 이고
+> 실제로는 `TONE_KIT` 이 덮는다» 는 주의만 적혀 있었습니다. 주의로 남겨 두는
+> 대신 **표를 실제 값으로 다시 뽑았습니다** — 9행(엔진 9 · Oct 8 · Scale 6).
+> 덧붙여 그 주의 자체도 한 군데 틀렸습니다: 퓨전은 `slap` 이 아니라 **`fretless`** 입니다.
+>
+> **Oct 8종이 36** 이었습니다 — root 9 기준 A2 110Hz 로, 업라이트가 낼 음역이
+> 아닙니다(개방 A현이 55Hz). 현 베이스는 서브 오실레이터가 없어(`voice-bass.js` §9)
+> 이 옥타브에서는 20~60Hz 가 통째로 비었습니다. 24 로 내렸습니다.
+>
+> **Scale 6칸** — `Minor Pentatonic` 은 초기값이라 `_build.js` 가 하위분기의
+> Dorian 으로 덮습니다. 재즈에서 이 차이는 크게 벌어집니다: 5음계에서
+> `0·2·4` 는 3화음이 아니라 근음·4도·b7 이라(`pattern-codec.js`)
+> `chord:'nine'` 을 걸어도 9화음이 서지 않습니다.
+>
+> ⚠ 워킹 베이스의 `Length`(gate)는 아직 80 — 4분음의 44% 스타카토입니다.
+> «걸어가는» 레가토가 아닙니다. Traditional Pop(02-pop.md)은 340 으로 올려
+> 해결했고, 재즈 8종은 **아직 손대지 않았습니다.**
+> 우선순위는 `src/data/presets/_build.js`, 엔진 11종은 [00-instruments.md](00-instruments.md) §7-2.
 
 ---
 

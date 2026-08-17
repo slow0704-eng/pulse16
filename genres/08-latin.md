@@ -52,6 +52,23 @@
 PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 → [../presets/audit.md](../presets/audit.md)
 
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 1장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Plena | 2026 | DTMF | Bad Bunny | Hot 100 |
+| Plena ? | 2025 | Debí Tirar Más Fotos | Bad Bunny | BB200 |
+
+<!-- chart-auto:end -->
+
 ---
 
 ## 3. 브라질
@@ -134,9 +151,45 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 | 장르 | BPM | 리듬 골격 | 음색·편성 | 핵심 포인트 |
 |---|---|---|---|---|
 | Latin Pop | 90~130 | 라틴 리듬 + 팝 구조 | 팝 프로덕션 | 크로스오버 |
+| Latin Rock | 95~130 | 록 드럼 + 쿠바 퍼커션 동시 | 콩가·팀발레스 + 기타 솔로 | 둘을 같은 그리드에 정확히 놓으면 뭉침 |
 | Latin Trap | 130~145 | 트랩 골격 | 808 + 라틴 보컬 | 트랩 드럼 위 스페인어 플로우 |
 | Neoperreo | 90~105 | 레게톤 골격, 실험적 | 로우파이·전자 질감 | 언더그라운드 재해석 |
 | Sad Perreo | 85~100 | 레게톤 골격 | 어두운 화성, 오토튠 | 감성적 갈래 |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 11곡 · Billboard 200 9장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Latin Pop | 1995 | Dreaming of You | Selena | BB200 |
+| Latin Pop | 1996 | Macarena (Bayside Boys Mix) | Los del Río | Hot 100 |
+| Latin Pop | 1999 | Livin' la Vida Loca | Ricky Martin | Hot 100 |
+| Latin Pop | 1999 | Bailamos | Enrique Iglesias | Hot 100 |
+| Latin Pop | 1999 | Ricky Martin | Ricky Martin | BB200 |
+| Latin Pop | 2000 | Maria Maria | Santana featuring The Product G&B | Hot 100 |
+| Latin Pop | 2000 | Be with You | Enrique Iglesias | Hot 100 |
+| Latin Pop | 2006 | Hips Don't Lie | Shakira featuring Wyclef Jean | Hot 100 |
+| Latin Pop | 2018 | Havana | Camila Cabello featuring Young Thug | Hot 100 |
+| Latin Pop | 2019 | Señorita | Shawn Mendes and Camila Cabello | Hot 100 |
+| Latin Pop | 2022 | We Don't Talk About Bruno | Encanto 출연진 | Hot 100 |
+| Latin Pop | 2022 | Encanto | Soundtrack | BB200 |
+| Latin Rock | 1970 | Abraxas | Santana | BB200 |
+| Latin Rock | 1971 | Santana III | Santana | BB200 |
+| Latin Rock | 1999 | Smooth | Santana featuring Rob Thomas | Hot 100 |
+| Latin Rock | 1999 | Supernatural | Santana | BB200 |
+| Latin Rock | 2002 | Shaman | Santana | BB200 |
+| Latin Trap | 2018 | I Like It | Cardi B, Bad Bunny and J Balvin | Hot 100 |
+| Latin Trap | 2020 | El Último Tour Del Mundo | Bad Bunny | BB200 |
+| Latin Trap | 2023 | Nadie Sabe Lo Que Va a Pasar Mañana | Bad Bunny | BB200 |
+
+<!-- chart-auto:end -->
 
 ---
 
@@ -146,6 +199,35 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 [00-instruments.md](00-instruments.md) 참조. 박자는 [../patterns/08-latin.md](../patterns/08-latin.md).
 
 이름 앞 `·` 는 규칙 파생(청감 미검증), 표기 없음은 손으로 작성한 값입니다.
+
+> **2026-08-17 — 상속을 끊고 장르마다 값을 다시 잡았습니다.**
+> 그전에는 프리셋이 안 적은 칸을 **하위분기(TONE_KIT)가 채웠습니다.** 편했지만
+> 한 분기에 묶인 장르는 건반·기타·2번 레이어·화음·베이스·스케일·퍼커션이
+> **전부 같은 값**이 됐고, 357종 중 **207종이 형제와 편성이 한 칸도 안 달랐습니다.**
+> 박자는 더 심해서 **318종이 26개 무리로 같은 패턴**을 쓰고 있었습니다.
+>
+> [`_build.js`](../src/data/presets/_build.js) 에서 상속 경로를 지우고, 이 계열의
+> 프리셋을 **장르마다 다시 썼습니다** — 위 표의 값은 그 결과입니다.
+> 계통도([00-tree.md](00-tree.md))의 상하위 관계는 **논리적 분류로 그대로** 남습니다.
+> 무엇을 어떻게 갈랐는지는 [`../patterns/08-latin.md`](../patterns/08-latin.md) 에 한 줄씩 적어 두었습니다.
+
+
+> **2026-08-17 정정 — 베이스 표** 록(A) 문서에서 찾은 것과 **같은 세 가지**가
+> 이 문서에도 그대로 있었습니다. 표를 프리셋에서 다시 뽑았습니다 — 36행.
+>
+> **① 엔진 칸** — 프리셋의 `bcfg.eng` 를 옮긴 값이었습니다. 실제로는
+> `kit.bass` > `TONE_KIT`(하위분기) > `bcfg.eng` 순으로 정해지므로(`_build.js`),
+> 엔진 칸 **35줄**이 틀렸습니다 — 쿠바·안데스 계열은 `upright`, 나머지는 `finger` 입니다.
+>
+> **② Oct** — 이 계열은 **이미 24 였습니다.** 고칠 것이 없었습니다.
+>
+> **③ Scale 칸** — `Minor Pentatonic` 은 state.js 의 초기값이라 «고른 값» 이
+> 아니고, `_build.js` 가 하위분기 스케일로 덮습니다. 표에는 덮이기 전 값이
+> 적혀 있었습니다(22칸).
+>
+> ⚠ 현 베이스에서 **Blend · X-Over · Tone · Glide 는 아무 일도 하지 않습니다** —
+> 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
+
 
 ### 트랙 재배정
 
@@ -161,22 +243,22 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | Reggaeton | 96 | 8 | `deep` | `tight` | `spread` | `metal` | `analog` | -5/-2/-5/0 |
-| Bachata | 130 | 0 | `wood` | `tight` | `tight` | `noise` | `wood` | -1/2/2/2 |
-| Merengue | 145 | 0 | `tight` | `tight` | `tight` | `noise` | `wood` | 0/3/1/3 |
+| Bachata | 130 | 0 | `wood` | `tight` | `tight` | `noise` | `bongo` | -1/2/2/2 |
+| Merengue | 145 | 0 | `tight` | `tight` | `tight` | `noise` | `timbale` | 0/3/1/3 |
 | ·Dembow | 122 | 0 | `deep` | `body` | `tight` | `noise` | `analog` | -4/0/-2/0 |
-| ·Bomba | 120 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Plena | 115 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Bomba | 120 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
+| ·Plena | 115 | 0 | `punch` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Reggaeton | `s808` | 24 | 290 | 30 | 22 | 36 | 85 | 2800 | 64 | 40 | 44 | Minor Pentatonic |
-| Bachata | `sub` | 24 | 86 | 0 | 36 | 24 | 120 | 3800 | 50 | 24 | 18 | Natural Minor |
-| Merengue | `sub` | 24 | 52 | 0 | 40 | 28 | 125 | 4000 | 48 | 26 | 16 | Major |
-| ·Dembow | `sub` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Bomba | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Plena | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Reggaeton | `s808` | 24 | 290 | 30 | 22 | 36 | 85 | 2800 | 64 | 40 | 44 | Natural Minor |
+| Bachata | `finger` | 24 | 86 | 0 | 36 | 24 | 120 | 3800 | 50 | 24 | 18 | Natural Minor |
+| Merengue | `finger` | 24 | 52 | 0 | 40 | 28 | 125 | 4000 | 48 | 26 | 16 | Major |
+| ·Dembow | `s808` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Bomba | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Plena | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 콜롬비아
 
@@ -194,11 +276,11 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Cumbia | `sub` | 24 | 96 | 0 | 38 | 26 | 115 | 3600 | 52 | 26 | 20 | Natural Minor |
-| ·Vallenato | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Champeta | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Chicha | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Cumbia Villera | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Cumbia | `finger` | 24 | 96 | 0 | 38 | 26 | 115 | 3600 | 52 | 26 | 20 | Natural Minor |
+| ·Vallenato | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Champeta | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Chicha | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Cumbia Villera | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### 아르헨티나 · 남미 남부
 
@@ -214,9 +296,9 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Tango | `sub` | 24 | 44 | 0 | 42 | 24 | 120 | 3400 | 52 | 24 | 14 | Natural Minor |
-| ·Nuevo Tango | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Electrotango | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| Tango | `upright` | 24 | 44 | 0 | 42 | 24 | 120 | 3400 | 52 | 24 | 14 | Natural Minor |
+| ·Nuevo Tango | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
+| ·Electrotango | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 쿠바
 
@@ -224,31 +306,31 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Son Cubano | 160 | 0 | `punch` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Salsa | 190 | 0 | `tight` | `body` | `tight` | `noise` | `wood` | 1/2/1/0 |
-| ·Timba | 200 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
-| ·Rumba | 110 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Mambo | 180 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
-| ·Cha-cha-chá | 120 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Songo | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Mozambique | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Rumba Yambú | 85 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -5/0/-5/0 |
-| ·Rumba Columbia | 140 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Son Cubano | 160 | 0 | `punch` | `body` | `tight` | `noise` | `bongo` | -2/0/-2/0 |
+| ·Salsa | 190 | 0 | `tight` | `body` | `tight` | `noise` | `timbale` | 1/2/1/0 |
+| ·Timba | 200 | 0 | `tight` | `body` | `tight` | `noise` | `timbale` | 1/2/1/0 |
+| ·Rumba | 110 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
+| ·Mambo | 180 | 0 | `tight` | `body` | `tight` | `noise` | `timbale` | 1/2/1/0 |
+| ·Cha-cha-chá | 120 | 0 | `punch` | `body` | `tight` | `noise` | `timbale` | -2/0/-2/0 |
+| ·Songo | 115 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
+| ·Mozambique | 115 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
+| ·Rumba Yambú | 85 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -5/0/-5/0 |
+| ·Rumba Columbia | 140 | 0 | `wood` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Son Cubano | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Salsa | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Timba | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rumba | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Mambo | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Cha-cha-chá | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Songo | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Mozambique | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rumba Yambú | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Rumba Columbia | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Son Cubano | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Salsa | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Timba | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Rumba | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Mambo | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
+| ·Cha-cha-chá | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Songo | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Mozambique | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Rumba Yambú | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Rumba Columbia | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 현대 크로스오버
 
@@ -274,11 +356,11 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Pagode | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Pagode | 100 | 0 | `punch` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
 | ·Bossa Nova | 130 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
-| ·Forró | 125 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Forró | 125 | 0 | `wood` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Baile Funk | 130 | 0 | `deep` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Partido Alto | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Partido Alto | 100 | 0 | `punch` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
 | ·Baião | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Funk Mandelão | 130 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Bruxaria | 140 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
@@ -287,14 +369,14 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Pagode | `sub` | 24 | 400 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Bossa Nova | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Forró | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Baile Funk | `sub` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Partido Alto | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Baião | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Funk Mandelão | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Bruxaria | `sub` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Pagode | `finger` | 24 | 400 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Bossa Nova | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Forró | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Baile Funk | `s808` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Partido Alto | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Baião | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Funk Mandelão | `s808` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Bruxaria | `s808` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 멕시코
 
@@ -311,10 +393,28 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Mariachi | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Norteño | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Banda | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Cumbia Sonidera | `sub` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Mariachi | `tuba` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Norteño | `tuba` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Banda | `tuba` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Cumbia Sonidera | `tuba` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+
+<!-- chart-auto:start -->
+
+**차트 1위 — 이 분기에서 나온 것** *(Hot 100 1곡 · Billboard 200 2장)*
+
+> 출처는 [../billboard/](../billboard/) — **곡·앨범명은 위키백과 그대로이지만
+> 장르는 붙인 것**입니다. `?` 는 자료가 갈리는 것이고, 없다고 확정은 아닙니다.
+> 연도는 1위에 오른 해이며, 재등정은 첫 해만 남겼습니다.
+> **패턴의 근거로 쓰지 말고, 무엇을 들어 볼지 고르는 입구로만 쓰십시오.**
+> 이 표는 자동 생성입니다 — `tools/chart-to-genres.mjs`. 여기가 아니라 `billboard/` 를 고치십시오.
+
+| 장르 | 연도 | 곡 · 앨범 | 아티스트 | 차트 |
+|---|---|---|---|---|
+| Reggaeton | 2017 | Despacito | Luis Fonsi and Daddy Yankee featuring Justin Bieber | Hot 100 |
+| Reggaeton | 2022 | Un Verano Sin Ti | Bad Bunny | BB200 |
+| Reggaeton | 2023 | Mañana Será Bonito | Karol G | BB200 |
+
+<!-- chart-auto:end -->
 
 ---
 

@@ -29,6 +29,8 @@
 ```
 Rock & Roll (1950s, 블루스 + 컨트리)
 ├── Surf Rock
+├── Instrumental Rock
+├── British Invasion (1964~, 영국이 되돌려 보낸 로큰롤)
 ├── Garage Rock
 │   └── Proto-punk
 ├── Psychedelic Rock
@@ -39,8 +41,11 @@ Rock & Roll (1950s, 블루스 + 컨트리)
 │   ├── Blues Rock
 │   ├── Southern Rock
 │   ├── Glam Rock
+│   ├── Arena Rock
+│   ├── Power Ballad (형식의 이름)
 │   └── Heavy Metal
 │       ├── NWOBHM
+│       ├── Glam Metal
 │       ├── Thrash Metal ── Death Metal ── Black Metal
 │       ├── Doom / Sludge / Stoner
 │       ├── Power Metal / Symphonic Metal
@@ -58,21 +63,29 @@ Rock & Roll (1950s, 블루스 + 컨트리)
 │   │   └── Post-punk Revival / Dance-punk
 │   └── Emo ── Screamo / Midwest Emo
 ├── Alternative Rock
-│   ├── Grunge
+│   ├── Grunge ── Post-grunge
 │   ├── Indie Rock ── Lo-fi Indie / Slacker Rock
+│   ├── Madchester
+│   ├── Rap Rock (→ C와 교차)
 │   ├── Shoegaze ── Dream Pop
 │   ├── Britpop
 │   ├── Noise Rock
+│   ├── Industrial Rock ── Industrial Metal (→ E와 교차)
 │   └── Post-rock
-└── Folk Rock / Country Rock (→ G와 교차)
+└── Folk Rock / Country Rock ─── Heartland Rock (→ G와 교차)
 ```
 
 ## B. Pop 계열
 
 ```
 Traditional Pop (틴 팬 앨리, 크루너)
+├── Easy Listening (연주곡 중심)
+├── Novelty Song (장르가 아니라 기획)
 ├── Brill Building / Girl Group (1960s)
+│   └── Wall of Sound (제작 기법)
 ├── Soft Rock / AOR ─── City Pop (일본)
+│   ├── Adult Contemporary
+│   └── Pop Rock (→ A와 교차)
 ├── Synth-pop ─── New Romantic
 │   ├── Electropop
 │   ├── Synthwave / Retrowave
@@ -83,6 +96,7 @@ Traditional Pop (틴 팬 앨리, 크루너)
 │   ├── Freestyle
 │   └── EDM-pop
 ├── Teen Pop / Bubblegum
+├── Sunshine Pop
 ├── Indie Pop
 │   ├── Bedroom Pop
 │   ├── Twee Pop
@@ -105,8 +119,11 @@ Old School Hip Hop (1979~, 디스코 브레이크 위 랩)
 │   ├── Boom Bap ★
 │   ├── Jazz Rap / Conscious Hip Hop
 │   └── Hardcore Hip Hop ── Horrorcore
+├── Electro Hop (1980s 서부, 808 + 보코더)
+├── Pop Rap
 ├── West Coast
 │   ├── G-Funk
+│   ├── Gangsta Rap
 │   └── Hyphy / Jerk
 ├── Southern
 │   ├── Miami Bass ── Booty Bass
@@ -124,6 +141,7 @@ Old School Hip Hop (1979~, 디스코 브레이크 위 랩)
 │   └── Bronx / NY Drill (Jersey·Sample Drill 파생)
 ├── Cloud Rap ── Emo Rap / SoundCloud Rap
 ├── Lo-fi Hip Hop ★ ── Chillhop / Jazzhop
+├── Alternative Hip Hop
 ├── Abstract / Experimental Hip Hop
 ├── UK 계열
 │   ├── Grime
@@ -144,12 +162,15 @@ Rhythm & Blues (1940s~)
 │   ├── Southern Soul / Memphis Soul
 │   ├── Philadelphia Soul ─── Disco
 │   ├── Northern Soul
-│   └── Psychedelic Soul
+│   ├── Psychedelic Soul
+│   ├── Blue-eyed Soul
+│   └── Country Soul (→ G와 교차)
 ├── Funk
 │   ├── JB Funk (원-온-더-원)
 │   ├── P-Funk
 │   ├── Jazz-Funk
 │   ├── Disco Funk ★
+│   ├── Minneapolis Sound
 │   ├── Boogie / Post-disco
 │   └── Electro-funk ─── Electro (→ E)
 ├── Disco
@@ -178,6 +199,8 @@ Electronic Dance Music
 │   │   ├── Speed Garage ── Bassline
 │   │   └── UK Funky
 │   ├── Tech House
+│   ├── Tropical House
+│   ├── Hip House (→ C와 교차)
 │   ├── Progressive House
 │   ├── Tribal House
 │   ├── French House / Filter House
@@ -323,6 +346,7 @@ Latin
 │   └── Chacarera / Zamba
 └── 현대 크로스오버
     ├── Latin Pop
+    ├── Latin Rock (→ A와 교차)
     ├── Latin Trap
     └── Reggaeton 파생 (Neoperreo / Sad Perreo)
 ```
@@ -341,6 +365,7 @@ Jamaica
 │           └── Dancehall
 │               ├── Ragga / Digital Dancehall
 │               ├── Dembow riddim (→ Reggaeton)
+│               ├── Reggae Fusion (→ B·D와 교차)
 │               └── Bashment / Afro-dancehall
 Trinidad / Barbados
 ├── Calypso ── Soca ── Power Soca / Groovy Soca
@@ -404,6 +429,7 @@ Africa
 │   └── C-pop / Mandopop
 └── 하이브리드 · 인터넷 장르
     ├── Global Bass / Tropical Bass
+    ├── Siren Beat (뉴질랜드 · 태평양)
     ├── Sped-up / Nightcore
     ├── Slowed + Reverb
     └── Mashup / Plunderphonics

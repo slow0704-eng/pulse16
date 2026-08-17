@@ -48,7 +48,7 @@
 
 | 파일 | 내용 |
 |---|---|
-| [data/genres.json](data/genres.json) | 위 내용의 기계 판독용 사본 — 장르 430개, 패턴 29개, 프리셋 연결 358개 |
+| [data/genres.json](data/genres.json) | 위 내용의 기계 판독용 사본 — 장르 463개, 패턴 29개, 프리셋 연결 358개 |
 | [data/README.md](data/README.md) | 필드 설명과 검증 스크립트 |
 
 ### 도구
