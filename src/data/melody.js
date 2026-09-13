@@ -793,6 +793,35 @@ const MELODY_KIT_PRESET = {
   'Tribal House'          :['afr_aabb','lat_abab','edm_aabb'],
   'Amapiano'              :['afr_aabb','lat_abab','edm_aabb'],
   'Afro House'            :['afr_aabb','lat_abab','edm_aabb'],
+
+  /* E. Dubstep · Bass Music 16종 — 2026-09-14 배치 A5
+     (genres/profiles/05-E-dubstep.json)
+     여기도 편성이 먼저 갈려 있었다 — pad+sub(분위기) · growl+reese(공격) ·
+     supersaw(선율) · s808(트랩 파생) · bell 134~135BPM(클럽), 그리고
+     110 BPM 의 Moombahton. 16종 → 6무리. 새 프레이즈는 만들지 않았다 —
+     있는 재료로 충분했다.                                              */
+  /* 1) 분위기형 — 패드가 길게 깔린다. 하프타임이라 밀도가 절반이다 */
+  'Dubstep'               :['amb_aaba','amb_aabb','bal_aaba'],
+  'Deep Dubstep'          :['amb_aaba','amb_aabb','bal_aaba'],
+  'Meditative Dubstep'    :['amb_aaba','amb_aabb','bal_aaba'],
+  'Future Garage'         :['amb_aaba','amb_aabb','bal_aaba'],
+  'Wave'                  :['amb_aaba','amb_aabb','bal_aaba'],
+  /* 2) 공격형 — 베이스가 주역이라 건반이 비켜 준다 */
+  'Brostep'               :['edm_aaab','trp_aaab'],
+  'Riddim'                :['edm_aaab','trp_aaab'],
+  'Hardwave'              :['edm_aaab','trp_aaab'],
+  /* 3) 선율형 — 슈퍼소우로 화음을 넓게 편다. 이 무리만 상행 윤곽이다 */
+  'Future Bass'           :['cin_aabb','edm_aabb','bal_aaba'],
+  'Melodic Dubstep'       :['cin_aabb','edm_aabb','bal_aaba'],
+  /* 4) 트랩 파생 — 808 이 들어오면 선율도 트랩 어법이 된다 */
+  'EDM Trap'              :['trp_aaab','trp_aaba','hip_aaab'],
+  'Festival Trap'         :['trp_aaab','trp_aaba','hip_aaab'],
+  /* 5) 클럽 — 저지·볼티모어·필리. 쪼갠 스탭이 몸이라 개러지와 어법이 같다 */
+  'Jersey Club'           :['gar_abab','funk_abab','trp_aaba'],
+  'Baltimore Club'        :['gar_abab','funk_abab','trp_aaba'],
+  'Philly Club'           :['gar_abab','funk_abab','trp_aaba'],
+  /* 6) 뭄바톤 — 110 BPM 에 뎀보우. 형제 15종과 템포부터 30 이상 벌어진다 */
+  'Moombahton'            :['lat_abab','car_aabb','trp_aaba'],
 };
 
 function melodyPoolFor(name){
@@ -1049,6 +1078,24 @@ const RIFF_KIT_PRESET = {
   'Tribal House'          :['highlife_gtr','edm_arp'],
   'Amapiano'              :['highlife_gtr','edm_arp'],
   'Afro House'            :['highlife_gtr','edm_arp'],
+
+  /* E. Dubstep · Bass Music — 배치 A5 */
+  'Dubstep'               :['edm_arp','arp_folk'],   // 분위기형 — 성글게
+  'Deep Dubstep'          :['edm_arp','arp_folk'],
+  'Meditative Dubstep'    :['edm_arp','arp_folk'],
+  'Future Garage'         :['edm_arp','arp_folk'],
+  'Wave'                  :['edm_arp','arp_folk'],
+  'Brostep'               :['edm_build','edm_alt'],  // 공격형 — 빌드와 드롭
+  'Riddim'                :['edm_build','edm_alt'],
+  'Hardwave'              :['edm_build','edm_alt'],
+  'Future Bass'           :['edm_arp','edm_build'],  // 선율형
+  'Melodic Dubstep'       :['edm_arp','edm_build'],
+  'EDM Trap'              :['edm_arp','edm_alt'],
+  'Festival Trap'         :['edm_arp','edm_alt'],
+  'Jersey Club'           :['funk_cut','edm_alt'],   // 클럽 — 쪼갠 커팅
+  'Baltimore Club'        :['funk_cut','edm_alt'],
+  'Philly Club'           :['funk_cut','edm_alt'],
+  'Moombahton'            :['latin_montuno','edm_arp'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
@@ -1262,6 +1309,24 @@ const BLINE_KIT_PRESET = {
   'Tribal House'          :['bafr_aabb','bhou_aaab'],
   'Amapiano'              :['bafr_aabb','bhou_aaab'],    // 로그드럼 — 분류가 House 라 여기서 잡는다
   'Afro House'            :['bafr_aabb','bhou_aaab'],
+
+  /* E. Dubstep · Bass Music — 배치 A5. 베이스가 장르 그 자체인 계열이다 */
+  'Dubstep'               :['b808_aabb','breg_aaba'],  // 분위기형 — 길게 끌고 성글게
+  'Deep Dubstep'          :['b808_aabb','breg_aaba'],
+  'Meditative Dubstep'    :['b808_aabb','breg_aaba'],
+  'Future Garage'         :['b808_aabb','breg_aaba'],
+  'Wave'                  :['b808_aabb','breg_aaba'],
+  'Brostep'               :['bmet_aaab','bhou_aaab'],  // 공격형 — 워블은 연타에 가깝다
+  'Riddim'                :['bmet_aaab','bhou_aaab'],
+  'Hardwave'              :['bmet_aaab','bhou_aaab'],
+  'Future Bass'           :['bhou_aabb','bdis_aabb'],  // 선율형 — 화음을 따라 움직인다
+  'Melodic Dubstep'       :['bhou_aabb','bdis_aabb'],
+  'EDM Trap'              :['b808_aaab','b808_aaba'],  // 트랩 파생 — 트랩 계열과 같다
+  'Festival Trap'         :['b808_aaab','b808_aaba'],
+  'Jersey Club'           :['bfun_abab','b808_aaab'],  // 클럽 — 쪼갠 싱코페
+  'Baltimore Club'        :['bfun_abab','b808_aaab'],
+  'Philly Club'           :['bfun_abab','b808_aaab'],
+  'Moombahton'            :['blat_aabb','breg_aabb'],  // 뎀보우
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */

@@ -147,6 +147,7 @@ const ENUMS = {
   'melody.contour': ['rise', 'arch', 'fall', 'zigzag', 'static'],
   'melody.rhythm': ['onbeat', 'offbeat', 'offbeat16', 'triplet-feel'],
   'melody.repetition': ['low', 'mid', 'high'],
+  'melody.voicing': ['single', 'chord', 'mixed'],
   'bass.role': ['root', 'walking', 'arpeggio', 'octave'],
   'bass.gate': ['short', 'mid', 'long'],
   'bass.kickRelation': ['locked', 'offset', 'free'],
@@ -296,6 +297,9 @@ head('P7 — 차별화 거리 (기록만 · 임계값 미정)');
 const CONTOUR = ['fall', 'static', 'arch', 'zigzag', 'rise'];
 const REPEAT = ['low', 'mid', 'high'];
 const GLIDE = ['none', 'occasional', 'defining'];
+/* 단음이냐 3화음이냐 — 이 축이 없어서 피아노 하우스와 마림바 트라이벌이
+   거리 0.04 로 붙어 있었다. 표기가 다르면 들리는 것이 근본적으로 다르다. */
+const VOICING = ['single', 'mixed', 'chord'];
 const mid = r => (typeof r?.min === 'number' && typeof r?.max === 'number') ? (r.min + r.max) / 2 : 0;
 
 /** 프로파일 → 정규화 벡터. 각 축을 0~1 로 맞춘다. */
@@ -307,6 +311,7 @@ function vec(p) {
     CONTOUR.indexOf(p.melody?.contour) / (CONTOUR.length - 1),
     REPEAT.indexOf(p.melody?.repetition) / (REPEAT.length - 1),
     GLIDE.indexOf(p.bass?.glide) / (GLIDE.length - 1),
+    VOICING.indexOf(p.melody?.voicing) / (VOICING.length - 1),
   ].map(v => (Number.isFinite(v) && v >= 0) ? v : 0);
 }
 const dist = (a, b) => +Math.sqrt(a.reduce((s, v, i) => s + (v - b[i]) ** 2, 0)).toFixed(3);
@@ -369,8 +374,33 @@ for (const [sub, list] of Object.entries(bySub)) {
       warn(`${p.preset} — "${p.meta.shareWith}" 와 선율이 다르다면서 같은 풀을 씁니다`);
   }
 }
-console.log(`\n  ⓘ 임계값은 아직 없습니다. 첫 배치들의 거리 분포를 본 뒤 정합니다 —`);
-console.log(`    지금 숫자를 박으면 그것이 곧 «지어낸 값» 이 됩니다.`);
+/* ── 분포 요약 ────────────────────────────────────────────────────
+   임계값은 여전히 박지 않는다. 대신 **관측된 두 분포를 그대로 보여준다** —
+   같은 풀 쌍과 다른 풀 쌍의 거리가 실제로 갈리는지, 겹치는 구간이 어디인지
+   사람이 보고 판단할 수 있게. 겹침 구간이 좁아지면 그때 임계를 정한다. */
+{
+  const same = [], diff = [];
+  for (const list of Object.values(bySub)) {
+    for (let i = 0; i < list.length; i++) for (let j = i + 1; j < list.length; j++) {
+      const d = dist(vec(list[i]), vec(list[j]));
+      (poolSig(list[i]) === poolSig(list[j]) ? same : diff).push(d);
+    }
+  }
+  const st = a => a.length
+    ? `쌍 ${String(a.length).padStart(4)}  최소 ${Math.min(...a).toFixed(3)}`
+      + `  최대 ${Math.max(...a).toFixed(3)}  평균 ${(a.reduce((s, v) => s + v, 0) / a.length).toFixed(3)}`
+    : '없음';
+  console.log(`\n  분포 — 같은 풀  ${st(same)}`);
+  console.log(`         다른 풀  ${st(diff)}`);
+  if (same.length && diff.length) {
+    const lo = Math.min(...diff), hi = Math.max(...same);
+    console.log(lo > hi
+      ? `  ${OK} 두 분포가 겹치지 않습니다 (경계 ${hi.toFixed(3)} ~ ${lo.toFixed(3)}) — 임계를 정할 수 있습니다`
+      : `  ⓘ 겹침 구간 ${lo.toFixed(3)} ~ ${hi.toFixed(3)} — 여기 드는 쌍은 사람이 판단할 자리입니다`);
+  }
+  console.log(`  ⓘ 임계값은 아직 박지 않았습니다. 겹침이 남아 있는 동안 숫자를 정하면`);
+  console.log(`    그것이 곧 «지어낸 값» 이 됩니다.`);
+}
 
 /* ═══ P8 — 커버리지 ═══ */
 
