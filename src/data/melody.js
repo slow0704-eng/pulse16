@@ -624,6 +624,43 @@ const MELODY_KIT = {
   /* 'Metalcore' 항목이 있었지만 PRESET_SUB['Metalcore'] 가 'Metal' 이라
      이 키로는 조회되지 않는다. 'Metal' 이 이미 [] 라 결과도 같았다 —
      닿지 않는 줄은 "메탈코어는 따로 정했다"는 착각만 준다. */
+
+  /* ── 2026-09-14 · 빈 하위분기를 채웠다 ────────────────────────────
+     RIFF_KIT·BLINE_KIT 과 같은 일이다. 여기 없던 분기는 계열 기본값으로
+     떨어져, `pop_aabb|pop_abab|…` 하나를 **18종**이(지역 팝·뿌리·동아시아…),
+     `hip_aaab|hip_aaba|trp_*` 를 18종이(골든에이지·UK·West Coast…) 썼다.
+     **새 선율은 만들지 않았다.** 있던 152종을 제 자리에 연결했을 뿐이다.
+     'Dancehall 계보' 는 여기 두지 않는다 — 프리셋마다 갈려서
+     MELODY_KIT_PRESET 이 맡는다(배치 A2).                            */
+
+  /* A·B. 록·팝 */
+  '뿌리'                   :['rock_aaba','blues_aaba','root_aaba'], // 로큰롤·R&B — 블루스에서 왔다
+  '루츠와의 교차'          :['root_aabb','rock_aabb','blues_aabb'],
+  'Psychedelic · Krautrock':['rock_abab','amb_aaba','ant_abab'],    // 모토릭 — 같은 것을 오래
+  'Soft Rock · AOR 계보'   :['bal_aaba','pop_aabb','cinbal_aaba'],
+  '지역 팝'                :['pop_abab','bal_aaba','cin_aabb'],     // 계열 기본값과 겹치지 않게
+  '동아시아'               :['bal_aaba','pop_aabb','wor_aaba'],     // 트로트·C-pop — 월드 어휘가 섞인다
+
+  /* C. 힙합 */
+  '뿌리 · 골든에이지'      :['hip_aaba','jazz_aaba','funk_abab'],   // 재즈·펑크 샘플이 몸이다
+  'UK 계열'                :['hip_aaab','trp_aaba','afr_aabb'],     // 아프로스윙이 섞여 있다
+  'West Coast'             :['funk_abab','hip_aaba','dis_aabb'],    // G-Funk 는 펑크다
+  'Cloud · Emo 계열'       :['amb_aaba','trp_aaba','bal_aaba'],     // 이모 랩은 발라드에 가깝다
+  '지역화 파생'            :['trp_aaab','lat_abab'],                // Brazilian Phonk
+
+  /* E. 일렉트로닉 */
+  'Hardcore 계열'          :['edm_aaab','chip_aaab'],
+  'Electro'                :['edm_abab','chip_aabb'],
+
+  /* H·I. 라틴·카리브 */
+  '푸에르토리코 · 도미니카':['lat_aabb','car_aabb','latbos_aabb'],
+  '현대 크로스오버'        :['trp_aaba','lat_abab'],                // 라틴 트랩
+  '트리니다드 · 바베이도스':['car_aabb','lat_abab','afr_aabb'],     // 소카 — 아프로가 섞인다
+  '프랑스어권 카리브'      :['car_aaba','bos_aabb','lat_abab'],     // 주크 — 부드럽다
+
+  /* K. 기타 지역 */
+  '서아시아 · 지중해'      :['wor_aaba','wor_aabb','lat_abab'],
+  '하이브리드 · 인터넷 장르':['edm_abab','lat_abab','afr_aabb'],
 };
 
 /* ── 교차분 배정 ────────────────────────────────────────────
@@ -880,6 +917,60 @@ const RIFF_KIT = {
   '멕시코'                 :['arp_folk','latin_montuno'],
   '콜롬비아'               :['latin_montuno','arp_folk'],
   '남아시아'               :['arp_folk','latin_montuno'],
+
+  /* ── 2026-09-14 · 빈 하위분기를 채웠다 ────────────────────────────
+     위 29개만 등록돼 있어서 나머지 36개 분기 169종이 전부 계열 기본값
+     하나로 몰렸다. 실측하면 `edm_arp|edm_build` 하나를 **43종**이,
+     `funk_cut|edm_arp` 를 41종이, `rock_drive|arp_folk` 를 37종이 썼다.
+
+     **새 리프는 만들지 않았다.** 있던 27종을 제 자리에 연결했을 뿐이다.
+     차이가 없는 분기에는 같은 값을 준다 — 없는 차이를 만들지 않는다
+     (Drill 과 Trap 계열은 기타 취급이 같아서 같은 값이다).            */
+
+  /* E. 일렉트로닉 — 기타가 있어도 신스 아르페지오의 자리다 */
+  'Dubstep · Bass Music'   :['edm_build','edm_alt'],      // 하프타임 — 빌드 쪽이 맞다
+  'Breakbeat 계열'         :['funk_cut','edm_alt'],       // 브레이크비트의 뿌리가 펑크 브레이크다
+  'Hardcore 계열'          :['edm_build','edm_alt'],
+  'Electro'                :['edm_alt','edm_arp'],
+  'Downtempo · Ambient · Retro':['arp_folk','edm_arp'],   // 성글고 느긋하게
+
+  /* C. 힙합 — 기타는 드물다. 계열 기본값(펑크 커팅)이 과했다 */
+  '뿌리 · 골든에이지'      :['funk_cut','jazz_gtr_comp'], // 샘플 출처가 재즈·펑크다
+  'Trap 계열'              :['edm_arp','edm_alt'],
+  'Drill'                  :['edm_arp','edm_alt'],        // Trap 과 같다 — 기타로는 안 갈린다
+  'Southern'               :['edm_arp','edm_alt'],        // Trap 과 같다 — 처음엔 House 와 같은 값을 줘서 35종이 도로 뭉쳤다
+  'Lo-fi'                  :['jazz_gtr_comp','arp_swing'],
+  'West Coast'             :['funk_cut','funk_groove'],   // G-Funk 의 클린 커팅
+  'UK 계열'                :['edm_arp','highlife_gtr'],   // 그라임은 기타가 없고 아프로스윙은 아프로비츠 기타다
+  'Cloud · Emo 계열'       :['arp_folk','rock_alt'],      // 이모 랩의 기타는 이모 기타다
+  '지역화 파생'            :['edm_arp','latin_montuno'],
+
+  /* A·B. 록·팝 */
+  'Psychedelic · Krautrock':['rock_alt','rock_drive'],    // 모토릭 — 같은 것을 오래 민다
+  '뿌리'                   :['rock_drive','arp_country'], // 로큰롤은 컨트리에서 왔다
+  '루츠와의 교차'          :['arp_country','rock_drive'],
+  'Teen Pop · Indie Pop'   :['rock_alt','arp_folk'],
+  'Dance-pop 계보'         :['funk_cut','arp_folk'],
+  'Synth-pop 계보'         :['edm_arp','arp_folk'],
+  'Soft Rock · AOR 계보'   :['arp_folk','rock_alt'],
+  '지역 팝'                :['arp_folk','rock_drive'],
+
+  /* H·I. 라틴·카리브 */
+  '푸에르토리코 · 도미니카':['arp_folk','latin_montuno'], // 바차타의 레키토 아르페지오
+  '아르헨티나 · 남미 남부' :['latin_montuno_alt','arp_folk'],
+  '현대 크로스오버'        :['edm_arp','latin_montuno'],
+  '트리니다드 · 바베이도스':['skank_up','skank_offbeat'], // 소카는 빠른 업스트로크
+  '프랑스어권 카리브'      :['skank_offbeat','arp_folk'],
+
+  /* J·K. 아프리카·기타 지역 */
+  '중앙아프리카'           :['highlife_gtr','highlife_loop'], // 수쿠스 기타가 정체성이다
+  '북아프리카'             :['arp_folk','latin_montuno'],
+  '남아프리카'             :['highlife_loop','highlife_gtr'],
+  'Gospel · 지역 장르'     :['soul_chank','soul_prog'],
+  '동아시아'               :['arp_folk','rock_drive'],
+  '서아시아 · 지중해'      :['arp_folk','latin_montuno'], // 룸바 플라멩카
+  '동유럽 · 발칸'          :['arp_folk','latin_montuno'],
+  '하이브리드 · 인터넷 장르':['edm_arp','latin_montuno'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
@@ -1010,6 +1101,58 @@ const BLINE_KIT = {
   '쿠바':['blat_aabb','blat_abab'],       '브라질':['blat_abab','bwal_aaba'],
   '멕시코':['bcou_aabb','blat_aabb'],     '콜롬비아':['blat_abab','blat_aabb'],
   '서아프리카':['bafr_aabb','bafr_aaab'], '동아프리카':['bafr_aaab','bafr_aabb'],
+
+  /* ── 2026-09-14 · 빈 하위분기를 채웠다 ────────────────────────────
+     RIFF_KIT 과 같은 일이다. 위 28개만 등록돼 있어 나머지 37개 분기
+     177종이 계열 기본값으로 몰렸고, `bhou_aaab|bdis_abab` 하나를
+     **43종**이, `brock_aabb|bdis_aabb` 를 39종이, `brock_aaba|brock_aabb`
+     를 26종이 썼다. 있던 31종을 제 자리에 연결한 것이고 새 라인은 없다. */
+
+  /* E. 일렉트로닉 — 베이스가 장르 그 자체인 자리가 많다 */
+  'Dubstep · Bass Music':['b808_aabb','bhou_aaab'],   // 서브가 길게 움직인다
+  'Breakbeat 계열':['bfun_abab','bhou_aaab'],         // 펑크 브레이크에서 왔다
+  'Hardcore 계열':['bhou_aaab','bmet_aaab'],          // 킥과 베이스가 한 덩어리
+  'Electro':['b808_aaab','bdis_abab'],
+  'Downtempo · Ambient · Retro':['bdis_aabb','breg_aaba'],
+
+  /* C. 힙합 */
+  '뿌리 · 골든에이지':['bfun_aabb','bwal_aaba'],      // 샘플 출처가 펑크·재즈 업라이트다
+  'Contemporary R&B':['bfun_abab','b808_aaba'],
+  'West Coast':['bfun_abab','b808_aaab'],             // G-Funk 의 미끄러지는 베이스
+  'UK 계열':['b808_aaab','bhou_aaab'],
+  'Cloud · Emo 계열':['b808_aabb','brock_aabb'],
+  '지역화 파생':['b808_aaba','blat_abab'],
+
+  /* A·B. 록·팝 */
+  'Alternative':['brock_aabb','brock_abab'],
+  'Post-punk 계보':['brock_abab','bdis_abab'],        // 베이스가 선율을 맡는 계열
+  'Psychedelic · Krautrock':['brock_abab','brock_aaba'],
+  '뿌리':['bwal_aabb','bcou_aabb'],                   // 로큰롤 부기 — 워킹에 가깝다
+  '루츠와의 교차':['bcou_aabb','brock_aabb'],
+  'Teen Pop · Indie Pop':['brock_aabb','bdis_aabb'],
+  'Dance-pop 계보':['bdis_aabb','bhou_aabb'],
+  'Synth-pop 계보':['bdis_abab','bhou_aabb'],
+  'Soft Rock · AOR 계보':['bdis_aabb','bwal_aabb'],
+  '지역 팝':['bdis_aabb','brock_aabb'],
+  '동아시아':['bdis_aabb','brock_aabb'],
+
+  /* H·I. 라틴·카리브 */
+  '푸에르토리코 · 도미니카':['blat_aabb','b808_aaab'],// 뎀보우는 808 과 툼바오 사이다
+  '아르헨티나 · 남미 남부':['bwal_aabb','blat_aaba'], // 탱고의 걸어다니는 베이스
+  '현대 크로스오버':['b808_aaba','blat_abab'],
+  'Dancehall 계보':['breg_aaba','b808_aaab'],
+  '트리니다드 · 바베이도스':['breg_aabb','blat_aabb'],
+  '프랑스어권 카리브':['breg_aabb','blat_abab'],
+
+  /* J·K. 아프리카·기타 지역 */
+  '중앙아프리카':['bafr_aaab','bafr_aabb'],
+  '북아프리카':['bafr_aabb','blat_aabb'],
+  '남아프리카':['bafr_aabb','bhou_aaab'],             // 아마피아노의 로그드럼 베이스
+  'Gospel · 지역 장르':['bfun_aabb','bwal_aaba'],
+  '남아시아':['blat_aabb','bafr_aabb'],
+  '서아시아 · 지중해':['blat_aaba','bafr_aabb'],
+  '동유럽 · 발칸':['bwal_aabb','blat_aabb'],
+  '하이브리드 · 인터넷 장르':['blat_abab','bhou_aaab'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */
