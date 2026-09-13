@@ -650,14 +650,31 @@ const MEL_CROSS_SUB = {
 Object.entries(MEL_CROSS_SUB).forEach(([k,ns]) => { if(MELODY_KIT[k]) MELODY_KIT[k].push(...ns); });
 
 /** 지금 걸린 프리셋에 어울리는 선율 이름 목록 */
+/* ── 풀을 고를 때의 계열 판정 ────────────────────────────────────
+   프리셋 357종은 raw 정의에 cat:'A'~'K' 를 **직접 적어 둔다**(LIB[name].cat).
+   `PRESET_CAT` 은 56종만 손으로 적힌 예외표라, 그것만 보면 계열을 못 찾고
+   폴백으로 떨어지는 프리셋이 생긴다. 실측(2026-09-14)하면 이랬다:
+
+     선율 69종 · 기타 리프 **140종** · 베이스 라인 **152종**
+
+   리프·베이스는 폴백 키가 실재해서 죽지 않을 뿐, 댄스홀·소카·엔카가
+   전부 록 파워코드 리프와 록 베이스라인을 받고 있었다. 셋 다 LIB.cat 만
+   보면 100% 제 계열을 찾는다(어긋나는 프리셋 0종 — 두 표는 상보적이다).
+
+   ui/build.js 의 catOf() · seq/arrange.js 의 catFor() 와 같은 우선순위다.
+   그 둘은 melody.js 보다 **나중에** 로드되므로 기대지 않고 여기서 다시
+   적는다 — arrange.js 가 같은 이유로 한 것과 같은 판단이다. */
+function poolCatFor(name){
+  return (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat)
+      || PRESET_CAT[name] || 'K';
+}
+
 function melodyPoolFor(name){
   const sub=MELODY_KIT[PRESET_SUB[name]];
   if(sub) return sub;                                   // 빈 배열이면 "선율 없음"
   /* ⚠ 'pop_arch' 는 키가 아니라 **라벨**('팝 아치')이었다.
-     MELODY 의 키는 프레이즈쌍_폼 규칙이라 실제 이름은 pop_aabb 다.
-     하위분기·계열 둘 다 안 걸리는 프리셋 69개(355개 중)가 이 자리로 떨어져
-     선율이 통째로 안 나왔다. riff·bline 의 기본값은 원래 정상이었다. */
-  return MELODY_KIT_CAT[PRESET_CAT[name]] || ['pop_aabb'];
+     MELODY 의 키는 프레이즈쌍_폼 규칙이라 실제 이름은 pop_aabb 다. */
+  return MELODY_KIT_CAT[poolCatFor(name)] || ['pop_aabb'];
 }
 
 
@@ -827,7 +844,7 @@ const RIFF_KIT = {
 function riffPoolFor(name){
   const sub=RIFF_KIT[PRESET_SUB[name]];
   if(sub) return sub;
-  return RIFF_KIT_CAT[PRESET_CAT[name]] || ['rock_power'];
+  return RIFF_KIT_CAT[poolCatFor(name)] || ['rock_power'];
 }
 
 
@@ -957,5 +974,5 @@ const BLINE_KIT = {
 function blinePoolFor(name){
   const sub=BLINE_KIT[PRESET_SUB[name]];
   if(sub) return sub;
-  return BLINE_KIT_CAT[PRESET_CAT[name]] || ['brock_aaba'];
+  return BLINE_KIT_CAT[poolCatFor(name)] || ['brock_aaba'];
 }
