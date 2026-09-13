@@ -111,7 +111,28 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   verify-*.html        DSP 단위 검증
   _app-harness.js      src/ 를 직접 로드해 위 하네스들에게 진짜 앱 그래프를
                        내어주는 공용 모듈 (아래 "주의" 참고)
+  ci/                  자동 검사 — 브라우저 없이, 외부 의존성 없이 도는 Node 스크립트
+    _lib.mjs           공용: 파일 훑기 · 주석/문자열 지우기 · 최상위 선언 수집 ·
+                       HTML 의 <script src> · id 목록
+    check-syntax.mjs   src·tools·mcp 의 모든 .js/.mjs 를 node --check
+    check-globals.mjs  **전역 이름 충돌** — 로드 순서대로 이어붙여 파서에게 묻고
+                       (브라우저와 같은 규칙), 따로 전수 조사도 한다.
+                       id 와 같은 이름의 최상위 function 은 경고 (duck 사고)
+    check-load-order.mjs  HTML 의 <script> 목록 ↔ 디스크 ↔ 이 지도 대조
+    _browser.mjs       브라우저 검사 공용: 정적 서버 · 콘솔/예외 수집 · 타임아웃.
+                       playwright·axe-core 는 mcp/pulse-audit/node_modules
+                       에서 가져온다 — 루트에 package.json 을 두지 않는다
+    smoke.mjs          앱이 실제로 뜨는가 — 콘솔 에러 0건 · 프리셋 로딩 ·
+                       Play 3초 · file:// · axe 보고(실패시키지 않음)
+    regression.mjs     docs/qa/01-신뢰성.md 의 결함 재발 검사 (R1·R3·R4·R5·R6 +
+                       손상 저장본 8종). 아직 안 고친 결함은 KNOWN 목록에 두고
+                       «예상된 실패» 로 센다 — 고쳐지면 실패로 돌아서 알린다
 mcp/pulse-audit/       계측 MCP 서버 (harness · render_wav · audio_measure · a11y)
+                       + tools/ci/ 의 브라우저 검사가 쓰는 node_modules 의 집
+.github/workflows/
+  ci.yml               push·PR 마다 위를 돌린다. job 1 static(정적, 5분 상한) →
+                       통과해야 job 2 browser(스모크·회귀, 20분 상한). 크로미움은
+                       package-lock.json 해시를 키로 캐시한다
 ```
 
 **새 파일을 끼울 위치는 이 지도의 줄 순서 그 자체입니다** — 표에 없는

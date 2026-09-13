@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "PULSE·16 전용 MCP — 사운드 품질 계측과 UI/UX 점검",
+  "description": "PULSE·16 전용 MCP — 사운드 품질 계측과 UI/UX 점검. tools/ci/ 의 브라우저 검사도 이 node_modules 를 가져다 쓴다 — 저장소에서 npm 이 필요한 곳은 여기 한 군데다",
   "bin": { "pulse-audit": "server.js" },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

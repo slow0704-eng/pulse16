@@ -1,5 +1,7 @@
 # PULSE·16
 
+[![CI](https://github.com/slow0704-eng/pulse16/actions/workflows/ci.yml/badge.svg)](https://github.com/slow0704-eng/pulse16/actions/workflows/ci.yml)
+
 브라우저에서 도는 16스텝 시퀀서입니다. 빌드 도구 없이 `pulse16-mk16.html` 을 열면 그대로 돕니다.
 드럼·베이스·건반·기타를 합성으로 소리 내고, 장르 프리셋과 선율 라이브러리를 얹어
 "틀어 놓으면 곡이 되는" 상태를 만드는 것이 목표입니다.
@@ -61,6 +63,37 @@ python -m http.server 8000
 드리프트 위험이 있었는데, 그 구조는 이제 사라졌습니다. 자세한 경위는
 `ARCHITECTURE.md` 의 "주의" 절에 있습니다.
 
+## 검사 돌리기
+
+push·PR 마다 GitHub Actions 가 자동으로 돕니다(`.github/workflows/ci.yml`).
+손으로 돌릴 때는 아래와 같습니다.
+
+**정적 검사** — 외부 의존성 0, 몇 초면 끝납니다. 커밋 전에 이것만이라도 돌리세요.
+
+```
+node tools/ci/check-syntax.mjs        # 모든 .js/.mjs 문법
+node tools/ci/check-globals.mjs       # 전역 이름 충돌  ← 가장 중요
+node tools/ci/check-load-order.mjs    # HTML ↔ 디스크 ↔ ARCHITECTURE.md 지도
+```
+
+`check-globals.mjs` 가 가장 중요합니다. 이 앱은 클래식 `<script>` 라 `src/` 의
+최상위 선언 485개가 **하나의 전역 렉시컬 스코프**를 공유합니다. 두 파일이 같은
+이름을 `const` 로 선언하면 브라우저가 그 뒤 스크립트를 전부 실행하지 않고
+화면이 백지가 됩니다. 새 전역을 추가하기 전에 이것을 돌리세요.
+
+**브라우저 검사** — 아래 MCP 서버의 `node_modules` 를 씁니다.
+
+```
+node tools/ci/smoke.mjs               # 실제로 뜨는가 · 콘솔 에러 0건 · file:// · axe
+node tools/ci/regression.mjs          # docs/qa/01-신뢰성.md 의 결함 재발 검사
+node tools/ci/regression.mjs --quick  # 45초 재생 구간을 10초로 (손으로 볼 때만)
+```
+
+회귀 시험은 **아직 안 고친 결함을 «예상된 실패» 로 따로 셉니다.** 그 목록은
+`tools/ci/regression.mjs` 의 `KNOWN` 에 있습니다. 결함이 고쳐지면 시험이
+**실패로 돌아서** 목록과 `docs/qa/01-신뢰성.md` 를 같이 갱신하라고 알려 줍니다.
+임계값을 낮춰 통과시키지 마세요.
+
 ## MCP 서버
 
 ```
@@ -69,7 +102,8 @@ npm install
 node selftest.js
 ```
 
-`node_modules` 는 저장소에 넣지 않습니다.
+`node_modules` 는 저장소에 넣지 않습니다. `tools/ci/` 의 브라우저 검사도
+이 `node_modules` 를 가져다 씁니다 — 저장소에서 npm 이 필요한 곳은 여기 한 군데입니다.
 
 ## 레퍼런스 사용에 관하여
 

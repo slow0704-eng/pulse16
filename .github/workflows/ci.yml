@@ -1,0 +1,96 @@
+# PULSE·16 CI — 커밋할 때마다 도는 안전장치.
+#
+# 두 단계로 나눈 이유: 정적 검사는 Node 만 있으면 20초 안에 끝나는데,
+# 브라우저 검사는 크로미움을 받아야 해서 몇 분이 든다. 값싼 것을 먼저 돌려
+# 거기서 걸리면 비싼 것을 아예 시작하지 않는다(`needs: static`).
+#
+# 검사 내용은 tools/ci/ 의 각 스크립트 머리말에 적혀 있다.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# 같은 브랜치에 연달아 밀면 앞의 실행을 취소한다 — 어차피 뒤엣것만 의미가 있다
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # ── 1단계 · 정적 검사 ── 외부 의존성 0. Node 만 있으면 된다.
+  static:
+    name: 정적 검사 (문법 · 전역 충돌 · 로드 순서)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 문법 검사
+        run: node tools/ci/check-syntax.mjs
+
+      # 이 저장소에서 가장 중요한 검사다. 같은 이름을 두 파일에서 const 로
+      # 선언하면 브라우저가 그 뒤 스크립트를 전부 실행하지 않는다.
+      - name: 전역 이름 충돌 검사
+        run: node tools/ci/check-globals.mjs
+
+      - name: 로드 순서 · 지도 대조
+        run: node tools/ci/check-load-order.mjs
+
+  # ── 2·3단계 · 브라우저 검사 ── static 이 통과했을 때만 돈다.
+  browser:
+    name: 브라우저 검사 (스모크 · 회귀)
+    needs: static
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: mcp/pulse-audit/package-lock.json
+
+      # 이 저장소에서 npm 이 필요한 곳은 여기 한 군데다 (.gitignore 참고).
+      - name: 의존성 복원
+        working-directory: mcp/pulse-audit
+        run: npm ci
+
+      # playwright 버전이 바뀔 때만 브라우저를 새로 받는다.
+      # lock 파일 해시를 키에 넣어 두면 버전 고정이 그대로 캐시 키가 된다.
+      - name: 크로미움 캐시
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-${{ runner.os }}-${{ hashFiles('mcp/pulse-audit/package-lock.json') }}
+
+      - name: 크로미움 내려받기
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        working-directory: mcp/pulse-audit
+        run: npx playwright install --with-deps chromium
+
+      # 캐시가 맞았어도 OS 의존 패키지는 이미지에 없을 수 있으므로 그것만 채운다
+      - name: 크로미움 실행 의존성
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        working-directory: mcp/pulse-audit
+        run: npx playwright install-deps chromium
+
+      - name: 스모크 테스트
+        run: node tools/ci/smoke.mjs
+
+      # 회귀 시험은 45초 재생 구간이 있어 2~3분 걸린다.
+      # --quick 을 붙이면 10초로 줄지만, CI 에서는 줄이지 않는다 —
+      # liveNodes 누수는 짧게 돌리면 안 드러난다.
+      - name: 회귀 시험
+        run: node tools/ci/regression.mjs
