@@ -70,7 +70,7 @@ jobs:
       # lock 파일 해시를 키에 넣어 두면 버전 고정이 그대로 캐시 키가 된다.
       - name: 크로미움 캐시
         id: pw-cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/ms-playwright
           key: pw-${{ runner.os }}-${{ hashFiles('mcp/pulse-audit/package-lock.json') }}
