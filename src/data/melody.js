@@ -61,6 +61,18 @@ const PHRASE = {
   carA  :['--a---c---b---a-','--b---d---c---b-','--a---c---b---c-','--b---a---------'],
   carB  :['--c---e---d---c-','--d---f---e---d-','--c---e---d---b-','--b---a---------'],
 
+  /* I-2. 래가 · 디지털 댄스홀 — 신스 리드가 스킹크보다 촘촘하다.
+     carA 가 오프비트(2·6·10·14)만 치는 반면 여기는 2박·4박 머리(4·12)도
+     짚어 «리드가 앞에 나오는» 시대의 어법을 만든다. 오프비트 74%.
+     근거: genres/profiles/09-I-dancehall.json */
+  ragA  :['--a-b-c---e---d-','--a-b-c---e-d-c-','--c-b-a---d---c-','--a-b-a---------'],
+  ragB  :['--e-f-g---h---g-','--e-f-g---h-g-d-','--g-f-e---h---d-','--e-f-e---------'],
+
+  /* I-3. 아프로 댄스홀 — 마림바가 리드다. 위 둘과 달리 8분 순차로 걸어
+     올라갔다 내려온다(도약 하나 + 순차 되받기). 오프비트 고정이 아니다. */
+  afdA  :['--a-b-c-e-d-c---','--a-b-c-e-f-e---','--c-d-e-g-f-e---','--a-c-a---------'],
+  afdB  :['--e-f-g-e-f-e---','--e-f-g-h-g-f---','--g-f-d-h-g-f---','--e-g-e---------'],
+
   /* J. African — 3·5스텝 모티프가 어긋나며 겹침 */
   afrA  :['a--c--b--a--b---','b--d--c--b--c---','a--c--b--a--c---','b--a------------'],
   afrB  :['c--e--d--c--d---','d--f--e--d--e---','c--e--d--c--b---','b--a------------'],
@@ -263,6 +275,8 @@ const MEL_SRC = [
   ['rootA','rootB',  {AABA:'루츠 펜타토닉', AABB:'루츠 전통',    ABAB:'루츠 교대'}],
   ['latA','latB',    {AABB:'라틴 몬투노',   ABAB:'라틴 모티프',  AAAB:'라틴 반복'}],
   ['carA','carB',    {AABA:'카리브 스킹크', AABB:'카리브 오프비트', ABAB:'카리브 교대'}],
+  ['ragA','ragB',    {AABA:'래가 리드',     AABB:'래가 스탭',    ABAB:'래가 교대'}],
+  ['afdA','afdB',    {AABB:'아프로댄스홀 마림바', AABA:'아프로댄스홀 회귀', ABAB:'아프로댄스홀 교대'}],
   ['afrA','afrB',    {AABB:'아프로 폴리리듬',AAAB:'아프로 모티프',ABAB:'아프로 교대'}],
   ['worA','worB',    {AABA:'월드 장식음',   AABB:'월드 전통',    ABAB:'월드 교대'}],
   ['bluesA','bluesB',{AABA:'블루스 왕복',   AABB:'블루스 12마디풍', ABAB:'블루스 콜앤리스폰스'}],
@@ -669,7 +683,35 @@ function poolCatFor(name){
       || PRESET_CAT[name] || 'K';
 }
 
+/* ── 프리셋이 직접 정한 선율 풀 ────────────────────────────────────
+   MELODY_KIT 은 **하위분기** 키다. 그래서 한 분기에 묶인 프리셋은
+   전부 같은 선율을 받는다 — `_build.js` 가 2026-08-17 에 kit 에서 끊어낸
+   것과 똑같은 상속이 선율 쪽에는 남아 있었다.
+
+   실제로 문제가 된 자리: 'Dancehall 계보' 6종은 한 분기인데
+     · Dancehall · Dembow riddim — 리듬이 정체성. 선율은 성긴 스킹크
+     · Ragga · Digital Dancehall · Bashment — 신스 리드가 앞에 나온다
+     · Afro-dancehall — 마림바 리드 · 핑거 베이스 · 셰이커. 계보가 다르다
+   셋은 선율로 갈리는데 분기가 하나라 표현할 방법이 없었다.
+
+   ⚠ **여기에 프리셋을 적는 것은 «형제와 다르다» 는 판정이다.**
+     근거 없이 적지 말 것. 판정 근거는 genres/profiles/*.json 에 있고
+     tools/ci/check-melody-profile.mjs 가 둘이 어긋나는지 본다.
+     차이가 없으면 적지 않는 것이 맞다 — 없는 차이를 만드는 것이
+     이 작업의 가장 큰 실패다. */
+const MELODY_KIT_PRESET = {
+  /* I. Dancehall 계보 — 2026-09-14 배치 A2 (genres/profiles/09-I-dancehall.json) */
+  'Dancehall'        :['car_aaba','car_aabb'],          // 성긴 스킹크 — 기존 재료가 맞다
+  'Dembow riddim'    :['car_aaba','car_aabb'],          // Dancehall 과 공유 (리듬으로 갈린다)
+  'Ragga'            :['rag_aaba','rag_aabb','car_aabb'],
+  'Digital Dancehall':['rag_aaba','rag_aabb','car_aabb'],   // Ragga 와 공유 (음색으로 갈린다)
+  'Bashment'         :['rag_aaba','rag_aabb','car_aabb'],   // Ragga 와 완전히 같은 풀 — 차이를 못 찾았다
+  'Afro-dancehall'   :['afd_aabb','afd_aaba','afr_aabb'],
+};
+
 function melodyPoolFor(name){
+  const own=MELODY_KIT_PRESET[name];
+  if(own) return own;                                   // 프리셋이 직접 정한 것이 최우선
   const sub=MELODY_KIT[PRESET_SUB[name]];
   if(sub) return sub;                                   // 빈 배열이면 "선율 없음"
   /* ⚠ 'pop_arch' 는 키가 아니라 **라벨**('팝 아치')이었다.

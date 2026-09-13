@@ -127,6 +127,15 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
     regression.mjs     docs/qa/01-신뢰성.md 의 결함 재발 검사 (R1·R3·R4·R5·R6 +
                        손상 저장본 8종). 아직 안 고친 결함은 KNOWN 목록에 두고
                        «예상된 실패» 로 센다 — 고쳐지면 실패로 돌아서 알린다
+    check-melody-profile.mjs
+                       genres/profiles/*.json ↔ melody.js 대조. 프레이즈가
+                       자기 프로파일 수치를 만족하는지, 근거 형식(곡 제목이
+                       못 들어가게)이 맞는지, «차이가 없는데 다른 풀» 과
+                       «차이가 있는데 같은 풀» 을 양방향으로 본다
+genres/profiles/       장르 프로파일 — 선율·리프·베이스 배정의 «왜» 를 담은
+  *.json               근거 자료. 배치(하위분기) 하나 = 파일 하나.
+                       ⚠ 런타임에 읽지 않습니다. 앱이 읽는 것은 melody.js 이고
+                         이 JSON 은 근거이며, 둘이 어긋나면 CI 가 잡습니다
 mcp/pulse-audit/       계측 MCP 서버 (harness · render_wav · audio_measure · a11y)
                        + tools/ci/ 의 브라우저 검사가 쓰는 node_modules 의 집
 .github/workflows/

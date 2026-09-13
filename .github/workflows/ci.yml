@@ -94,3 +94,8 @@ jobs:
       # liveNodes 누수는 짧게 돌리면 안 드러난다.
       - name: 회귀 시험
         run: node tools/ci/regression.mjs
+
+      # 장르 프로파일(genres/profiles/*.json)과 melody.js 가 어긋나는지 본다.
+      # 프로파일이 아직 없으면 «검사할 것 없음» 으로 조용히 통과한다.
+      - name: 장르 프로파일 검사
+        run: node tools/ci/check-melody-profile.mjs
