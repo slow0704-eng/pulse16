@@ -122,6 +122,8 @@ try {
     cat: Object.fromEntries(Object.keys(LIB).map(n => [n, PRESET_CAT[n] || (LIB[n] && LIB[n].cat) || null])),
     chordVals: [...new Set(Object.values(LIB).map(L => L.kit && L.kit.chord).filter(Boolean))],
     melodyKit: Object.fromEntries(Object.entries(MELODY_KIT)),
+    /* 프리셋이 직접 정한 풀이 있으면 그것이 실제로 쓰이는 값이다 */
+    effPool: Object.fromEntries(Object.keys(LIB).map(n => [n, melodyPoolFor(n)])),
     noMelody: Object.keys(LIB).filter(n => melodyPoolFor(n).length === 0),
     phraseBars: {
       PHRASE: Object.fromEntries(Object.entries(PHRASE).map(([k, v]) => [k, v.map(String)])),
@@ -213,13 +215,15 @@ for (const { file, p } of profiles) {
   for (const k of p.meta?.pool || []) {
     if (!known.has(k)) { fail(`${p.preset} [${file}] — pool 의 '${k}' 이 MELODY/RIFF/BLINE 어디에도 없음`); p3++; }
   }
-  /* P9 — 하위분기에 배정이 있으면 그것과 어긋나면 안 된다 */
-  const kit = live.melodyKit[p.sub];
-  if (kit && p.meta?.pool && p.meta.poolDecision === 'own') {
-    const same = kit.length === p.meta.pool.length && kit.every((v, i) => v === p.meta.pool[i]);
+  /* P9 — JSON 의 pool 이 **실제로 쓰이는 풀** 과 같은가.
+     MELODY_KIT_PRESET → MELODY_KIT → MELODY_KIT_CAT 의 결과를 그대로 본다.
+     하위분기 표만 보면, 프리셋이 직접 정한 풀을 «어긋났다» 고 잘못 잡는다. */
+  const eff = live.effPool[p.preset];
+  if (eff && p.meta?.pool) {
+    const same = eff.length === p.meta.pool.length && eff.every((v, i) => v === p.meta.pool[i]);
     if (!same)
-      warn(`${p.preset} — meta.pool 이 melody.js 의 MELODY_KIT['${p.sub}'] 과 다릅니다`
-         + ` (JSON: ${p.meta.pool.join('|')} / 코드: ${kit.join('|')}) — 아직 안 옮겼다는 뜻입니다`);
+      warn(`${p.preset} — meta.pool 이 실제 배정과 다릅니다`
+         + ` (JSON: ${p.meta.pool.join('|')} / 앱: ${eff.join('|')}) — 아직 안 옮겼다는 뜻입니다`);
   }
 }
 if (p3 === 0) console.log(`${OK} pool 키 전부 실재`);

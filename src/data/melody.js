@@ -73,6 +73,13 @@ const PHRASE = {
   afdA  :['--a-b-c-e-d-c---','--a-b-c-e-f-e---','--c-d-e-g-f-e---','--a-c-a---------'],
   afdB  :['--e-f-g-e-f-e---','--e-f-g-h-g-f---','--g-f-d-h-g-f---','--e-g-e---------'],
 
+  /* E-2. UK 개러지 — 16분 싱코페. 스텝 0·3·6·10·13 에 걸린다.
+     하우스의 정박(0·4·8·12)도, 레게의 오프비트(2·6·10·14)도 아닌
+     «쪼갠» 자리다. 이것이 2-step 을 2-step 으로 만든다.
+     근거: genres/profiles/05-E-house.json */
+  garA  :['a--b--c---a--c--','a--b--c---e--d--','c--d--e---c--e--','a--b--a---------'],
+  garB  :['e--f--g---e--g--','e--f--g---h--g--','g--f--d---g--e--','e--f--e---------'],
+
   /* J. African — 3·5스텝 모티프가 어긋나며 겹침 */
   afrA  :['a--c--b--a--b---','b--d--c--b--c---','a--c--b--a--c---','b--a------------'],
   afrB  :['c--e--d--c--d---','d--f--e--d--e---','c--e--d--c--b---','b--a------------'],
@@ -277,6 +284,7 @@ const MEL_SRC = [
   ['carA','carB',    {AABA:'카리브 스킹크', AABB:'카리브 오프비트', ABAB:'카리브 교대'}],
   ['ragA','ragB',    {AABA:'래가 리드',     AABB:'래가 스탭',    ABAB:'래가 교대'}],
   ['afdA','afdB',    {AABB:'아프로댄스홀 마림바', AABA:'아프로댄스홀 회귀', ABAB:'아프로댄스홀 교대'}],
+  ['garA','garB',    {AABB:'개러지 2-step', ABAB:'개러지 교대', AABA:'개러지 회귀'}],
   ['afrA','afrB',    {AABB:'아프로 폴리리듬',AAAB:'아프로 모티프',ABAB:'아프로 교대'}],
   ['worA','worB',    {AABA:'월드 장식음',   AABB:'월드 전통',    ABAB:'월드 교대'}],
   ['bluesA','bluesB',{AABA:'블루스 왕복',   AABB:'블루스 12마디풍', ABAB:'블루스 콜앤리스폰스'}],
@@ -744,6 +752,47 @@ const MELODY_KIT_PRESET = {
   'Digital Dancehall':['rag_aaba','rag_aabb','car_aabb'],   // Ragga 와 공유 (음색으로 갈린다)
   'Bashment'         :['rag_aaba','rag_aabb','car_aabb'],   // Ragga 와 완전히 같은 풀 — 차이를 못 찾았다
   'Afro-dancehall'   :['afd_aabb','afd_aaba','afr_aabb'],
+
+  /* E. House 계열 23종 — 2026-09-14 배치 A4 (genres/profiles/05-E-house.json)
+     한 하위분기에 23종이 묶여 선율·리프·베이스가 전부 같았다. 남아 있던
+     마지막 23종 천장이다. 편성이 이미 갈려 있었다 —
+     bass 가 acid · reese · sub · moog · pluckbs · finger 로 여섯 갈래고
+     BPM 113~139, swing 0~34. 선율만 따라오지 못한 자리였다.
+     23종 → 7무리. 23풀로 쪼개지 않았다.                                */
+  /* 1) 피아노 하우스 — 시카고·가라지. 가스펠·디스코에서 온 코드 스탭 */
+  'House'                 :['gos_aabb','dis_aabb','funk_aabb'],
+  'Chicago House'         :['gos_aabb','dis_aabb','funk_aabb'],
+  'Garage House'          :['gos_aabb','dis_aabb','funk_aabb'],
+  /* 2) 필터·프렌치 — 디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈 */
+  'French House'          :['dis_abab','cin_aabb','edm_aabb'],
+  'Filter House'          :['dis_abab','cin_aabb','edm_aabb'],
+  /* 3) 딥·멜로딕 — 패드 위에 성글게. 움직임이 가장 적다 */
+  'Deep House'            :['amb_aaba','edm_aabb','bal_aaba'],
+  'Melodic House & Techno':['amb_aaba','edm_aabb','bal_aaba'],
+  'Tech House'            :['amb_aaba','edm_aabb','bal_aaba'],
+  'Future House'          :['amb_aaba','edm_aabb','bal_aaba'],
+  /* 4) UK 개러지 — 16분 싱코페. garA/garB 를 새로 썼다 */
+  'UK Garage'             :['gar_aabb','gar_abab','funk_abab'],
+  '2-step Garage'         :['gar_aabb','gar_abab','funk_abab'],
+  'Speed Garage'          :['gar_aabb','gar_abab','funk_abab'],
+  /* UK Funky 는 처음에 따로 뒀다가 되돌렸다 — 선율 수치가 개러지 넷과
+     거리 0 이었다. 아프로가 섞이는 것은 타악과 기타(highlife_gtr)이지
+     선율이 아니다. Bassline 도 순서만 바꿔 뒀던 것을 되돌렸다. */
+  'UK Funky'              :['gar_aabb','gar_abab','funk_abab'],
+  'Bassline'              :['gar_aabb','gar_abab','funk_abab'],
+  /* 5) 빅룸·일렉트로 — 리드가 앞에 나온다. 기존 하우스 풀이 여기 맞다 */
+  'Big Room'              :['edm_aaab','chip_aaab','edmchp_aaab'],
+  'Complextro'            :['edm_aaab','chip_aaab','edmchp_aaab'],
+  'Bass House'            :['edm_aaab','chip_aaab','edmchp_aaab'],
+  'Electro House'         :['edm_aaab','chip_aaab','edmchp_aaab'],
+  'Progressive House'     :['edm_aaab','chip_aaab','edmchp_aaab'],
+  /* 6) 애시드 — 303 이 선율을 맡는다. 건반은 비켜 준다 */
+  'Acid House'            :['edm_aaab','amb_aaab'],
+  /* 7) 타악·아프로 — 마림바·로그드럼. 아마피아노는 113 BPM 에 스윙 28 로
+        형제 22종과 템포부터 다르다 */
+  'Tribal House'          :['afr_aabb','lat_abab','edm_aabb'],
+  'Amapiano'              :['afr_aabb','lat_abab','edm_aabb'],
+  'Afro House'            :['afr_aabb','lat_abab','edm_aabb'],
 };
 
 function melodyPoolFor(name){
@@ -973,8 +1022,39 @@ const RIFF_KIT = {
   '하이브리드 · 인터넷 장르':['edm_arp','latin_montuno'],
 };
 
+/* 프리셋이 직접 정한 리프 풀. MELODY_KIT_PRESET 과 같은 규칙이다 —
+   적는 것은 «형제와 다르다» 는 판정이고, 근거는 genres/profiles/*.json 에 있다. */
+const RIFF_KIT_PRESET = {
+  /* E. House 계열 — 배치 A4 */
+  'House'                 :['funk_cut','soul_chank'],    // 디스코·소울 커팅
+  'Chicago House'         :['funk_cut','soul_chank'],
+  'Garage House'          :['funk_cut','soul_chank'],
+  'French House'          :['funk_cut','funk_groove'],   // 필터드 디스코 기타가 정체성
+  'Filter House'          :['funk_cut','funk_groove'],
+  'Deep House'            :['edm_arp','arp_folk'],
+  'Melodic House & Techno':['edm_arp','arp_folk'],
+  'Tech House'            :['edm_arp','arp_folk'],
+  'Future House'          :['edm_arp','arp_folk'],
+  'UK Garage'             :['funk_cut','edm_alt'],
+  '2-step Garage'         :['funk_cut','edm_alt'],
+  'Speed Garage'          :['funk_cut','edm_alt'],
+  'UK Funky'              :['highlife_gtr','funk_cut'],  // UK 펑키는 아프로 기타를 쓴다
+  'Bassline'              :['funk_cut','edm_alt'],
+  'Big Room'              :['edm_build','edm_alt'],
+  'Complextro'            :['edm_build','edm_alt'],
+  'Bass House'            :['edm_build','edm_alt'],
+  'Electro House'         :['edm_build','edm_alt'],
+  'Progressive House'     :['edm_arp','edm_build'],      // 긴 아르페지오가 주역 — 형제 넷과 여기서 갈린다
+  'Acid House'            :['edm_arp'],                  // 303 이 다 한다 — 기타는 비켜 준다
+  'Tribal House'          :['highlife_gtr','edm_arp'],
+  'Amapiano'              :['highlife_gtr','edm_arp'],
+  'Afro House'            :['highlife_gtr','edm_arp'],
+};
+
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
 function riffPoolFor(name){
+  const own=RIFF_KIT_PRESET[name];
+  if(own) return own;
   const sub=RIFF_KIT[PRESET_SUB[name]];
   if(sub) return sub;
   return RIFF_KIT_CAT[poolCatFor(name)] || ['rock_power'];
@@ -1155,8 +1235,39 @@ const BLINE_KIT = {
   '하이브리드 · 인터넷 장르':['blat_abab','bhou_aaab'],
 };
 
+/* 프리셋이 직접 정한 베이스 풀. 위 둘과 같은 규칙이다. */
+const BLINE_KIT_PRESET = {
+  /* E. House 계열 — 배치 A4. 베이스 엔진이 이미 여섯 갈래로 갈려 있었다
+     (acid · reese · sub · moog · pluckbs · finger) — 라인만 하나였다 */
+  'House'                 :['bhou_aabb','bdis_aabb'],    // 디스코 뿌리
+  'Chicago House'         :['bhou_aabb','bdis_aabb'],
+  'Garage House'          :['bhou_aabb','bdis_aabb'],
+  'French House'          :['bdis_aabb','bdis_abab'],    // 디스코 옥타브 루프
+  'Filter House'          :['bdis_aabb','bdis_abab'],
+  'Deep House'            :['bhou_aaab','bhou_abab'],
+  'Melodic House & Techno':['bhou_aaab','bhou_abab'],
+  'Tech House'            :['bhou_aaab','bhou_abab'],
+  'Future House'          :['bhou_aaab','bhou_abab'],
+  'UK Garage'             :['bfun_abab','bhou_abab'],    // 개러지 베이스는 쪼갠다
+  '2-step Garage'         :['bfun_abab','bhou_abab'],
+  'Speed Garage'          :['bfun_abab','bhou_abab'],
+  'UK Funky'              :['bfun_abab','bafr_aabb'],
+  'Bassline'              :['bfun_abab','bmet_aaab'],    // 리스 베이스 — 연타에 가깝다
+  'Big Room'              :['bhou_aaab','bmet_aaab'],
+  'Complextro'            :['bhou_aaab','bmet_aaab'],
+  'Bass House'            :['bhou_aaab','bmet_aaab'],
+  'Electro House'         :['bhou_aaab','bmet_aaab'],
+  'Progressive House'     :['bhou_aaab','bmet_aaab'],
+  'Acid House'            :['bhou_abab','bhou_aaab'],    // 303 은 쉬지 않고 움직인다
+  'Tribal House'          :['bafr_aabb','bhou_aaab'],
+  'Amapiano'              :['bafr_aabb','bhou_aaab'],    // 로그드럼 — 분류가 House 라 여기서 잡는다
+  'Afro House'            :['bafr_aabb','bhou_aaab'],
+};
+
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */
 function blinePoolFor(name){
+  const own=BLINE_KIT_PRESET[name];
+  if(own) return own;
   const sub=BLINE_KIT[PRESET_SUB[name]];
   if(sub) return sub;
   return BLINE_KIT_CAT[poolCatFor(name)] || ['brock_aaba'];

@@ -1,0 +1,2730 @@
+{
+  "batch": "A4",
+  "sub": "House 계열",
+  "cat": "E",
+  "date": "2026-09-14",
+  "verdict": "23종 → 선율 7무리. 남아 있던 마지막 23종 천장이었다. 23풀로 쪼개지 않았다.",
+  "profiles": [
+    {
+      "preset": "House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-stab",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 중후반 미국 시카고 · 12곡",
+        "distinguishes": [
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Chicago House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Garage House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "gos_aabb",
+          "dis_aabb",
+          "funk_aabb"
+        ],
+        "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+      }
+    },
+    {
+      "preset": "Chicago House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-stab",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 중후반 미국 시카고 · 12곡",
+        "distinguishes": [
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Garage House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "House",
+        "pool": [
+          "gos_aabb",
+          "dis_aabb",
+          "funk_aabb"
+        ],
+        "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+      }
+    },
+    {
+      "preset": "Garage House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-stab",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 중후반 미국 시카고 · 12곡",
+        "distinguishes": [
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+          },
+          {
+            "from": "House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chicago House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "House",
+        "pool": [
+          "gos_aabb",
+          "dis_aabb",
+          "funk_aabb"
+        ],
+        "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
+      }
+    },
+    {
+      "preset": "French House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "string-loop",
+          "keys2": "brass",
+          "gtr": "filter-cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 프랑스 파리 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Filter House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "dis_abab",
+          "cin_aabb",
+          "edm_aabb"
+        ],
+        "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+      }
+    },
+    {
+      "preset": "Filter House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "string-loop",
+          "keys2": "brass",
+          "gtr": "filter-cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 프랑스 파리 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+          },
+          {
+            "from": "French House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "French House",
+        "pool": [
+          "dis_abab",
+          "cin_aabb",
+          "edm_aabb"
+        ],
+        "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
+      }
+    },
+    {
+      "preset": "Deep House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 미국·독일 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Melodic House & Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Tech House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Future House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "edm_aabb",
+          "bal_aaba"
+        ],
+        "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+      }
+    },
+    {
+      "preset": "Melodic House & Techno",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 미국·독일 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Tech House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Future House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Deep House",
+        "pool": [
+          "amb_aaba",
+          "edm_aabb",
+          "bal_aaba"
+        ],
+        "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+      }
+    },
+    {
+      "preset": "Tech House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 미국·독일 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Melodic House & Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Future House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Deep House",
+        "pool": [
+          "amb_aaba",
+          "edm_aabb",
+          "bal_aaba"
+        ],
+        "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+      }
+    },
+    {
+      "preset": "Future House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 미국·독일 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Melodic House & Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Tech House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Deep House",
+        "pool": [
+          "amb_aaba",
+          "edm_aabb",
+          "bal_aaba"
+        ],
+        "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
+      }
+    },
+    {
+      "preset": "UK Garage",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "chop",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "phrases": {
+        "keysA": [
+          "a--b--c---a--c--",
+          "a--b--c---e--d--",
+          "c--d--e---c--e--",
+          "a--b--a---------"
+        ],
+        "keysB": [
+          "e--f--g---e--g--",
+          "e--f--g---h--g--",
+          "g--f--d---g--e--",
+          "e--f--e---------"
+        ]
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 영국 런던 · 12곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "2-step Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Speed Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bassline",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "UK Funky",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "gar_aabb",
+          "gar_abab",
+          "funk_abab"
+        ],
+        "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+      }
+    },
+    {
+      "preset": "2-step Garage",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "chop",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 영국 런던 · 12곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Speed Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bassline",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "UK Funky",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "UK Garage",
+        "pool": [
+          "gar_aabb",
+          "gar_abab",
+          "funk_abab"
+        ],
+        "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+      }
+    },
+    {
+      "preset": "Speed Garage",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "chop",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 영국 런던 · 12곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "2-step Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bassline",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "UK Funky",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "UK Garage",
+        "pool": [
+          "gar_aabb",
+          "gar_abab",
+          "funk_abab"
+        ],
+        "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+      }
+    },
+    {
+      "preset": "Bassline",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "chop",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 영국 런던 · 12곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "2-step Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Speed Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "UK Funky",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "UK Garage",
+        "pool": [
+          "gar_aabb",
+          "gar_abab",
+          "funk_abab"
+        ],
+        "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+      }
+    },
+    {
+      "preset": "UK Funky",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "chop",
+          "keys2": "strings",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 후반 영국 런던 · 12곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "2-step Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Speed Garage",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bassline",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "UK Garage",
+        "pool": [
+          "gar_aabb",
+          "gar_abab",
+          "funk_abab"
+        ],
+        "note": "16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다"
+      }
+    },
+    {
+      "preset": "Big Room",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 9
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 초 네덜란드·미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Complextro",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bass House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electro House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "edm_aaab",
+          "chip_aaab",
+          "edmchp_aaab"
+        ],
+        "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Complextro",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 9
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 초 네덜란드·미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bass House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electro House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Big Room",
+        "pool": [
+          "edm_aaab",
+          "chip_aaab",
+          "edmchp_aaab"
+        ],
+        "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Bass House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 9
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 초 네덜란드·미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Complextro",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electro House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Big Room",
+        "pool": [
+          "edm_aaab",
+          "chip_aaab",
+          "edmchp_aaab"
+        ],
+        "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Electro House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 9
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 초 네덜란드·미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Complextro",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bass House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Big Room",
+        "pool": [
+          "edm_aaab",
+          "chip_aaab",
+          "edmchp_aaab"
+        ],
+        "note": "리드가 앞에 나오고 드롭으로 쌓는다. 밀도가 23종 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Progressive House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 9
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "pad",
+          "gtr": "arp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "edm_aaab",
+          "chip_aaab",
+          "edmchp_aaab"
+        ],
+        "note": "선율은 빅룸과 같다. 갈리는 것은 기타가 긴 아르페지오를 맡는다는 점뿐이다"
+      }
+    },
+    {
+      "preset": "Acid House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "contour": "static",
+        "range": {
+          "min": 2,
+          "max": 4
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "stab",
+          "keys2": "poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 후반 미국 시카고 · 9곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "melody",
+            "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "edm_aaab",
+          "amb_aaab"
+        ],
+        "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
+      }
+    },
+    {
+      "preset": "Tribal House",
+      "sub": "House 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "marimba-pluck",
+          "keys2": "strings",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 남아프리카·서아프리카 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Amapiano",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Afro House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_aabb",
+          "lat_abab",
+          "edm_aabb"
+        ],
+        "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+      }
+    },
+    {
+      "preset": "Amapiano",
+      "sub": "House 계열",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "marimba-pluck",
+          "keys2": "strings",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 남아프리카·서아프리카 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Afro House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Tribal House",
+        "pool": [
+          "afr_aabb",
+          "lat_abab",
+          "edm_aabb"
+        ],
+        "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+      }
+    },
+    {
+      "preset": "Afro House",
+      "sub": "House 계열",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          1,
+          4,
+          3
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "marimba-pluck",
+          "keys2": "strings",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 남아프리카·서아프리카 · 11곡",
+        "distinguishes": [
+          {
+            "from": "House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "French House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Deep House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "UK Garage",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Big Room",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Progressive House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Acid House",
+            "axis": "melody",
+            "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+          },
+          {
+            "from": "Tribal House",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Amapiano",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Tribal House",
+        "pool": [
+          "afr_aabb",
+          "lat_abab",
+          "edm_aabb"
+        ],
+        "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
+      }
+    }
+  ]
+}
