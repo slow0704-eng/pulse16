@@ -94,6 +94,22 @@ node tools/ci/regression.mjs --quick  # 45초 재생 구간을 10초로 (손으�
 **실패로 돌아서** 목록과 `docs/qa/01-신뢰성.md` 를 같이 갱신하라고 알려 줍니다.
 임계값을 낮춰 통과시키지 마세요.
 
+## 선율을 들어 보기
+
+`melOn` 기본값이 `false` 라(`src/seq/sequencer.js:24`) 그냥 렌더하면 프리셋
+자신의 1마디 `keys` 패턴만 울리고 **16마디 선율 라이브러리는 한 음도 나지
+않습니다.** 선율·리프·베이스를 고친 뒤 귀로 확인하려면 이것을 쓰세요.
+
+```
+node tools/render-melody.mjs Dancehall Ragga Afro-dancehall --sec 40
+node tools/render-melody.mjs Ragga --mel rag_aaba    # 특정 선율로 고정
+node tools/render-melody.mjs Dancehall --off         # 선율 끈 대조군
+```
+
+100 BPM 기준 16마디 한 바퀴가 약 39초입니다. 결과는 `renders/` 에 쌓이고
+`.gitignore` 의 `*.wav` 로 저장소에는 들어가지 않습니다. 어느 선율이 실제로
+걸렸는지도 같이 찍습니다 — 풀에서 고르므로 회차마다 다를 수 있습니다.
+
 ## MCP 서버
 
 ```

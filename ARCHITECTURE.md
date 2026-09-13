@@ -111,6 +111,10 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   verify-*.html        DSP 단위 검증
   _app-harness.js      src/ 를 직접 로드해 위 하네스들에게 진짜 앱 그래프를
                        내어주는 공용 모듈 (아래 "주의" 참고)
+  render-melody.mjs    **선율을 켠 채** 녹음해 renders/ 에 WAV 를 남긴다.
+                       melOn 기본값이 false 라 mcp 의 render_wav 로는 16마디
+                       선율이 한 음도 안 난다 — MELODY·RIFF·BLINE 을 고치고
+                       귀로 확인하려면 이쪽을 쓴다
   ci/                  자동 검사 — 브라우저 없이, 외부 의존성 없이 도는 Node 스크립트
     _lib.mjs           공용: 파일 훑기 · 주석/문자열 지우기 · 최상위 선언 수집 ·
                        HTML 의 <script src> · id 목록
