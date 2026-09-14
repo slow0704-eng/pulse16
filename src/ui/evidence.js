@@ -123,6 +123,41 @@ function evidenceHtml(name){
   return out.join('');
 }
 
+/* ── 라이브러리 아래 «지금 장르» 줄 ────────────────────────────────
+   프리셋을 고를 때마다 갱신한다. 모달 버튼 뒤에 묻어 두면 아무도 안 본다.
+
+   ⚠ **여기 뜨는 곡은 «이 프리셋의 모티브» 가 아니다.**
+   프로파일은 곡 제목을 기록하지 않는다 — 여러 곡에서 뽑은 구조적 성질만
+   남긴다(genres/profiles/README.md §2). 이 줄이 보여 주는 것은 «그 장르
+   이름으로 빌보드 1위를 한 기록» 이고, 라벨에 그렇게 적는다. */
+function updateMotif(){
+  if(typeof UI === 'undefined' || !UI.motif) return;
+  const name = (typeof src !== 'undefined' && src.keys) || null;
+  if(!name){ UI.motif.innerHTML = ''; return; }
+
+  const P = (typeof GENRE_PROFILE !== 'undefined' && GENRE_PROFILE[name]) || null;
+  const ch = evidenceCharts(name);
+  const top = [...ch.hot, ...ch.bb].sort((a,b) => (b[7]||0)-(a[7]||0)).slice(0,3);
+  const out = [];
+
+  out.push(`<span class="k">${evEsc(name)}</span>`);
+  if(P){
+    out.push(`<span class="k">밀도 ${P.mel.d[0]}~${P.mel.d[1]}</span>`);
+    out.push(`<span class="k">${evLbl('contour',P.mel.c)}</span>`);
+    out.push(`<span class="k">${evLbl('rhythm',P.mel.y)}</span>`);
+  }
+  out.push(`<span class="k">1위 기록</span>`);
+  if(top.length){
+    out.push(top.map(r =>
+      `<span class="song">${evEsc(r[1])} <i>— ${evEsc(r[2])}</i>`
+      + (r[7] ? ` <span class="wk">${r[7]}주</span>` : '') + `</span>`).join(' · '));
+  } else {
+    out.push(`<span class="none">이 장르 이름으로 1위한 기록이 없습니다</span>`);
+  }
+  out.push(`<span class="more"><button type="button" onclick="showEvidence()">근거 전체 →</button></span>`);
+  UI.motif.innerHTML = out.join(' ');
+}
+
 function showEvidence(){
   const name = (typeof src !== 'undefined' && src.keys) || null;
   if(!name || typeof UI === 'undefined' || !UI.why) return;

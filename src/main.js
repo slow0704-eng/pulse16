@@ -44,6 +44,10 @@ if(!HAS_TONE){
 
      지연 생성(필요할 때 굽기)은 일부러 안 합니다 — 재생 중 메인 스레드 정지는
      곧 오디오 글리치이고, 악기에서는 200ms 한 번보다 훨씬 나쁩니다. */
+  /* 라이브러리 아래 «지금 장르» 줄을 처음 한 번 채운다 —
+     그 뒤로는 칩 클릭이 갱신한다(ui/events.js). */
+  try{ updateMotif(); }catch(e){ /* evidence.js 가 없으면 조용히 넘어간다 */ }
+
   const prewarm = () => {
     document.removeEventListener('pointerdown', prewarm, true);
     document.removeEventListener('keydown', prewarm, true);

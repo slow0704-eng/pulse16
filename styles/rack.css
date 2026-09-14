@@ -140,3 +140,25 @@ a.util{display:inline-flex;align-items:center;justify-content:center;text-decora
 /* 필인 2단의 작은/큰 구분 라벨 */
 .slots .tag2{font-size:10px;letter-spacing:.06em;color:var(--silk-dim);
   padding:0 2px 0 6px;align-self:center}
+
+
+/* ── 지금 고른 장르의 근거 줄 (#motif) ──
+   src/ui/evidence.js 가 채운다. 프리셋을 바꿀 때마다 갱신된다.
+
+   ⚠ 여기 뜨는 곡은 **그 장르로 1위를 한 기록**이지 «이 프리셋의 모티브» 가
+     아니다. 프로파일은 곡 제목을 기록하지 않는다 — 여러 곡에서 뽑은 구조적
+     성질만 남긴다(genres/profiles/README.md §2). 줄 앞의 라벨이 그것을 말한다. */
+.motif{margin-top:9px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;
+  background:rgba(255,255,255,.025);font-size:12px;line-height:1.7;color:var(--silk-dim);
+  display:flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.motif:empty{display:none}
+.motif .k{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--live);border:1px solid var(--line);
+  border-radius:3px;padding:1px 5px;white-space:nowrap}
+.motif .song{color:var(--silk)}
+.motif .song i{color:var(--silk-dim);font-style:normal}
+.motif .wk{font-family:'Space Mono',monospace;font-size:10px;color:var(--t-bass)}
+.motif .more{margin-left:auto;font-size:11px}
+.motif .more button{background:none;border:0;color:var(--live);cursor:pointer;
+  font:inherit;text-decoration:underline;padding:0}
+.motif .none{color:var(--silk-dim)}

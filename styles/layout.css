@@ -17,6 +17,15 @@ body{background:radial-gradient(120% 90% at 50% -10%,#3a414c 0%,#23272e 55%,#161
 .mk{font-family:'Space Mono',monospace;font-size:11px;color:var(--t-kick);letter-spacing:.1em;padding-bottom:5px}
 .tagline{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;
   text-transform:uppercase;color:var(--silk-dim);padding-bottom:4px}
+/* 페이지 이동 — 시퀀서 · 빌보드 차트 · 설명서.
+   billboard.html 에도 같은 모양을 둔다(그쪽은 자기 CSS 에 복사). */
+.nav{display:flex;gap:2px;align-items:center;padding-bottom:3px;margin-left:6px}
+.nav a,.nav span{font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:.12em;
+  text-transform:uppercase;text-decoration:none;color:var(--silk-dim);
+  padding:4px 10px;border:1px solid transparent;border-radius:5px;line-height:1.4}
+.nav a:hover{color:var(--silk);background:rgba(255,255,255,.05);border-color:var(--line)}
+.nav a:focus-visible{outline:2px solid var(--live);outline-offset:1px}
+.nav .on{color:var(--silk);background:rgba(255,255,255,.07);border-color:var(--line)}
 .stat{margin-left:auto;font-family:'Space Mono',monospace;font-size:10px;color:var(--silk-dim);
   padding-bottom:6px;text-align:right;line-height:1.5}
 .stat b{color:var(--t-bass);font-weight:400}
@@ -27,4 +36,4 @@ body{background:radial-gradient(120% 90% at 50% -10%,#3a414c 0%,#23272e 55%,#161
 
 /* ── 11. 반응형 · 접근성 ────────────────────────────────────── */
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-@media (max-width:560px){.tagline,.stat{display:none}.brand{font-size:27px}.fx .tag{width:auto}}
+@media (max-width:560px){.tagline,.stat{display:none}.nav{margin-left:auto}.brand{font-size:27px}.fx .tag{width:auto}}

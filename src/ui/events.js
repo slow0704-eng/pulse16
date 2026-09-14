@@ -95,6 +95,9 @@ document.querySelectorAll('.pbtn').forEach(b => {
 UI.undo.onclick = doUndo;
 UI.redo.onclick = doRedo;
 /* 근거 패널 — 이 프리셋이 무엇에서 나왔는가 (src/ui/evidence.js) */
+/* 칩의 onclick 은 build.js 가 버튼에 직접 걸어 두므로, 여기서 버블링을 받으면
+   프리셋이 적용된 **뒤에** 돈다 — src.keys 가 이미 새 이름이다. */
+UI.chips.addEventListener('click', () => updateMotif());
 UI.whybtn.onclick = showEvidence;
 UI.whyclose.onclick = hideEvidence;
 UI.why.onclick = e => { if(e.target===UI.why) hideEvidence(); };
