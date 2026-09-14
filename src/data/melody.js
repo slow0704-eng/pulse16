@@ -899,6 +899,67 @@ const MELODY_KIT_PRESET = {
   'Noise Rock'              :['rock_aabb','rock_aaba','rock_abab'],
   /* 페달 스틸과 플랫와운드 베이스 */
   'Country Rock'            :['rootbl_aabb','rootbl_aaba','root_aabb'],
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
+     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 선율 풀뿐이다.
+     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
+  /* 슈퍼소우가 드롭을 끌고 간다 */
+  'EDM-pop'                 :['dis_aabb','dis_abab','dis_aaab'],
+  'Eurodance'               :['dis_aabb','dis_abab','dis_aaab'],
+  /* 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다 */
+  'Dance-pop'               :['pop_aabb','pop_aaba','pop_abab'],
+  'Euro-pop'                :['pop_aabb','pop_aaba','pop_abab'],
+  /* 벨 리드에 라틴계 싱코페 */
+  'Freestyle'               :['cin_aabb','cin_aaba','cin_abab'],
+  /* 155~160 BPM 에 칩튠 어휘 */
+  'Hyperpop'                :['chip_aabb','chip_abab','chip_aaab'],
+  'Digicore'                :['chip_aabb','chip_abab','chip_aaab'],
+  /* 신스 훅이 몇 음으로 앤섬을 만든다 */
+  'Electropop'              :['ant_aaba','ant_aabb','ant_abab'],
+  'New Romantic'            :['ant_aaba','ant_aabb','ant_abab'],
+  /* 80년대 아르페지오가 쉬지 않고 돈다 */
+  'Retrowave'               :['chip_aabb','chip_abab','chip_aaab'],
+  'Synthwave'               :['chip_aabb','chip_abab','chip_aaab'],
+  /* 스윙 50 에 업라이트, 7화음 */
+  'Traditional Pop'         :['jazz_aaba','jazz_abab','jazbal_aaba'],
+  /* 작곡가 공장의 3분 팝 */
+  'Brill Building'          :['pop_aaba','rock_aaba','blues_aaba'],
+  /* 합창 훅이라 순차가 많고 반복이 강하다 */
+  'Teen Pop'                :['pop_aabb','pop_abab','cinbal_aaba'],
+  'Bubblegum'               :['pop_aabb','pop_abab','cinbal_aaba'],
+  /* 다듬지 않은 프로덕션 */
+  'Indie Pop'               :['bal_aaba','bal_aabb','bal_abab'],
+  'Twee Pop'                :['bal_aaba','bal_aabb','bal_abab'],
+  'Bedroom Pop'             :['bal_aaba','bal_aabb','bal_abab'],
+  /* 하프시코드·현·목관 */
+  'Chamber Pop'             :['cin_aaba','cin_aabb','cin_abab'],
+  'Baroque Pop'             :['cin_aaba','cin_aabb','cin_abab'],
+  /* 슬랩 베이스에 9화음 */
+  'City Pop'                :['jazbal_aaba','jazbal_abab','jazz_aaba'],
+  /* 플랫와운드에 라디오용 매끈함 */
+  'Soft Rock'               :['cinbal_aaba','cinbal_aabb','bal_aaba'],
+  'AOR'                     :['cinbal_aaba','cinbal_aabb','bal_aaba'],
+  /* 현이 두껍게 깔리고 전조가 잦다 */
+  'J-pop'                   :['cin_aabb','cin_aaba','cinbal_aabb'],
+  'Mandopop'                :['cin_aabb','cin_aaba','cinbal_aabb'],
+  'Cantopop'                :['cin_aabb','cin_aaba','cinbal_aabb'],
+  'Kayōkyoku'               :['cin_aabb','cin_aaba','cinbal_aabb'],
+  /* 요나누키 5음계에 꺾는 창법 */
+  'Enka'                    :['wor_aaba','wor_aabb','worcin_aaba'],
+  'Trot'                    :['wor_aaba','wor_aabb','worcin_aaba'],
+  /* 지역색이 관·아코디언·나일론으로 나온다 */
+  'Latin Pop'               :['lat_aabb','lat_abab','latbos_aabb'],
+  'Schlager'                :['lat_aabb','lat_abab','latbos_aabb'],
+  'Shibuya-kei'             :['lat_aabb','lat_abab','latbos_aabb'],
+  'C-pop'                   :['lat_aabb','lat_abab','latbos_aabb'],
+  /* 장식음이 많고 인접 도수를 스친다 */
+  'Arabic Pop'              :['wor_aabb','wor_abab','worcin_aabb'],
+  'Rumba Flamenca'          :['wor_aabb','wor_abab','worcin_aabb'],
+  'Turbo-folk'              :['wor_aabb','wor_abab','worcin_aabb'],
+  /* 시타르에 돌 리듬 */
+  'Desi Beats'              :['afr_aabb','afr_aaab','wor_aaba'],
+  'UK Bhangra'              :['afr_aabb','afr_aaab','wor_aaba'],
+  /* 스틸팬에 카리브 오프비트 */
+  'Tropical Bass'           :['car_aabb','car_aaba','lat_abab'],
 };
 
 function melodyPoolFor(name){
@@ -1235,6 +1296,67 @@ const RIFF_KIT_PRESET = {
   'Noise Rock'              :['rock_power','rock_alt'],
   /* 페달 스틸과 플랫와운드 베이스 */
   'Country Rock'            :['arp_country','rock_drive'],
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
+     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 리프 풀뿐이다.
+     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
+  /* 슈퍼소우가 드롭을 끌고 간다 */
+  'EDM-pop'                 :['edm_build','edm_alt'],
+  'Eurodance'               :['edm_build','edm_alt'],
+  /* 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다 */
+  'Dance-pop'               :['funk_cut','arp_folk'],
+  'Euro-pop'                :['funk_cut','arp_folk'],
+  /* 벨 리드에 라틴계 싱코페 */
+  'Freestyle'               :['edm_arp','funk_cut'],
+  /* 155~160 BPM 에 칩튠 어휘 */
+  'Hyperpop'                :['edm_arp','edm_alt'],
+  'Digicore'                :['edm_arp','edm_alt'],
+  /* 신스 훅이 몇 음으로 앤섬을 만든다 */
+  'Electropop'              :['rock_alt','arp_folk'],
+  'New Romantic'            :['rock_alt','arp_folk'],
+  /* 80년대 아르페지오가 쉬지 않고 돈다 */
+  'Retrowave'               :['edm_arp','rock_alt'],
+  'Synthwave'               :['edm_arp','rock_alt'],
+  /* 스윙 50 에 업라이트, 7화음 */
+  'Traditional Pop'         :['jazz_gtr_swing','jazz_gtr_comp'],
+  /* 작곡가 공장의 3분 팝 */
+  'Brill Building'          :['rock_drive','arp_country'],
+  /* 합창 훅이라 순차가 많고 반복이 강하다 */
+  'Teen Pop'                :['rock_alt','arp_folk'],
+  'Bubblegum'               :['rock_alt','arp_folk'],
+  /* 다듬지 않은 프로덕션 */
+  'Indie Pop'               :['arp_folk','rock_alt'],
+  'Twee Pop'                :['arp_folk','rock_alt'],
+  'Bedroom Pop'             :['arp_folk','rock_alt'],
+  /* 하프시코드·현·목관 */
+  'Chamber Pop'             :['arp_folk','arp_swing'],
+  'Baroque Pop'             :['arp_folk','arp_swing'],
+  /* 슬랩 베이스에 9화음 */
+  'City Pop'                :['funk_cut','soul_chank'],
+  /* 플랫와운드에 라디오용 매끈함 */
+  'Soft Rock'               :['arp_folk','soul_prog'],
+  'AOR'                     :['arp_folk','soul_prog'],
+  /* 현이 두껍게 깔리고 전조가 잦다 */
+  'J-pop'                   :['arp_folk','rock_alt'],
+  'Mandopop'                :['arp_folk','rock_alt'],
+  'Cantopop'                :['arp_folk','rock_alt'],
+  'Kayōkyoku'               :['arp_folk','rock_alt'],
+  /* 요나누키 5음계에 꺾는 창법 */
+  'Enka'                    :['arp_folk','arp_swing'],
+  'Trot'                    :['arp_folk','arp_swing'],
+  /* 지역색이 관·아코디언·나일론으로 나온다 */
+  'Latin Pop'               :['latin_montuno','arp_folk'],
+  'Schlager'                :['latin_montuno','arp_folk'],
+  'Shibuya-kei'             :['latin_montuno','arp_folk'],
+  'C-pop'                   :['latin_montuno','arp_folk'],
+  /* 장식음이 많고 인접 도수를 스친다 */
+  'Arabic Pop'              :['arp_folk','latin_montuno'],
+  'Rumba Flamenca'          :['arp_folk','latin_montuno'],
+  'Turbo-folk'              :['arp_folk','latin_montuno'],
+  /* 시타르에 돌 리듬 */
+  'Desi Beats'              :['arp_folk','highlife_gtr'],
+  'UK Bhangra'              :['arp_folk','highlife_gtr'],
+  /* 스틸팬에 카리브 오프비트 */
+  'Tropical Bass'           :['skank_up','latin_montuno'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
@@ -1528,6 +1650,67 @@ const BLINE_KIT_PRESET = {
   'Noise Rock'              :['brock_aabb','bmet_aaab'],
   /* 페달 스틸과 플랫와운드 베이스 */
   'Country Rock'            :['bcou_aabb','brock_aabb'],
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
+     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 베이스 풀뿐이다.
+     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
+  /* 슈퍼소우가 드롭을 끌고 간다 */
+  'EDM-pop'                 :['bdis_abab','bhou_aaab'],
+  'Eurodance'               :['bdis_abab','bhou_aaab'],
+  /* 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다 */
+  'Dance-pop'               :['bdis_aabb','bhou_aabb'],
+  'Euro-pop'                :['bdis_aabb','bhou_aabb'],
+  /* 벨 리드에 라틴계 싱코페 */
+  'Freestyle'               :['bdis_abab','bfun_abab'],
+  /* 155~160 BPM 에 칩튠 어휘 */
+  'Hyperpop'                :['bhou_aaab','bmet_aaab'],
+  'Digicore'                :['bhou_aaab','bmet_aaab'],
+  /* 신스 훅이 몇 음으로 앤섬을 만든다 */
+  'Electropop'              :['bdis_abab','bhou_aabb'],
+  'New Romantic'            :['bdis_abab','bhou_aabb'],
+  /* 80년대 아르페지오가 쉬지 않고 돈다 */
+  'Retrowave'               :['bdis_abab','bdis_aaab'],
+  'Synthwave'               :['bdis_abab','bdis_aaab'],
+  /* 스윙 50 에 업라이트, 7화음 */
+  'Traditional Pop'         :['bwal_abab','bwal_aaba'],
+  /* 작곡가 공장의 3분 팝 */
+  'Brill Building'          :['bwal_aabb','bcou_aabb'],
+  /* 합창 훅이라 순차가 많고 반복이 강하다 */
+  'Teen Pop'                :['brock_aabb','bdis_aabb'],
+  'Bubblegum'               :['brock_aabb','bdis_aabb'],
+  /* 다듬지 않은 프로덕션 */
+  'Indie Pop'               :['brock_aabb','breg_aaba'],
+  'Twee Pop'                :['brock_aabb','breg_aaba'],
+  'Bedroom Pop'             :['brock_aabb','breg_aaba'],
+  /* 하프시코드·현·목관 */
+  'Chamber Pop'             :['bwal_aabb','bwal_aaba'],
+  'Baroque Pop'             :['bwal_aabb','bwal_aaba'],
+  /* 슬랩 베이스에 9화음 */
+  'City Pop'                :['bfun_abab','bfun_aabb'],
+  /* 플랫와운드에 라디오용 매끈함 */
+  'Soft Rock'               :['bdis_aabb','bwal_aabb'],
+  'AOR'                     :['bdis_aabb','bwal_aabb'],
+  /* 현이 두껍게 깔리고 전조가 잦다 */
+  'J-pop'                   :['bdis_aabb','brock_aabb'],
+  'Mandopop'                :['bdis_aabb','brock_aabb'],
+  'Cantopop'                :['bdis_aabb','brock_aabb'],
+  'Kayōkyoku'               :['bdis_aabb','brock_aabb'],
+  /* 요나누키 5음계에 꺾는 창법 */
+  'Enka'                    :['bwal_aaba','breg_aaba'],
+  'Trot'                    :['bwal_aaba','breg_aaba'],
+  /* 지역색이 관·아코디언·나일론으로 나온다 */
+  'Latin Pop'               :['blat_aabb','blat_abab'],
+  'Schlager'                :['blat_aabb','blat_abab'],
+  'Shibuya-kei'             :['blat_aabb','blat_abab'],
+  'C-pop'                   :['blat_aabb','blat_abab'],
+  /* 장식음이 많고 인접 도수를 스친다 */
+  'Arabic Pop'              :['blat_aaba','bafr_aabb'],
+  'Rumba Flamenca'          :['blat_aaba','bafr_aabb'],
+  'Turbo-folk'              :['blat_aaba','bafr_aabb'],
+  /* 시타르에 돌 리듬 */
+  'Desi Beats'              :['bafr_aabb','blat_aabb'],
+  'UK Bhangra'              :['bafr_aabb','blat_aabb'],
+  /* 스틸팬에 카리브 오프비트 */
+  'Tropical Bass'           :['breg_aabb','blat_abab'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */

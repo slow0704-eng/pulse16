@@ -196,8 +196,10 @@ const ENUMS = {
 };
 
 /* 「1990년대 초 영국 남부 · 12곡」 — 연대 · 서술 · N곡.
-   곡 제목을 적을 문법 자리가 없다. 이것이 기계가 할 수 있는 몫이다. */
-const EVIDENCE_RE = /^\d{4}년대.*·\s*(\d+)곡$/;
+   곡 제목을 적을 문법 자리가 없다. 이것이 기계가 할 수 있는 몫이다.
+   「1940~50년대」처럼 연대에 걸친 표기도 받는다 — 정당한 형식이고,
+   곡 제목을 막는 것과는 무관하다. */
+const EVIDENCE_RE = /^\d{4}(?:\s*~\s*\d{2,4})?년대.*·\s*(\d+)곡$/;
 
 const get = (o, path) => path.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
 
@@ -400,8 +402,16 @@ function vec(p) {
 }
 const dist = (a, b) => +Math.sqrt(a.reduce((s, v, i) => s + (v - b[i]) ** 2, 0)).toFixed(3);
 
+/* ⚠ 하위분기 이름은 계열을 넘어 겹친다 — 「뿌리」가 록(A)에도 팝(B)에도 있고
+   내용은 전혀 다르다(로큰롤 대 틴팬앨리). 계열까지 넣어야 한 무리가 된다. */
 const bySub = {};
-for (const { p } of profiles) (bySub[p.sub] ||= []).push(p);
+for (const { p } of profiles) (bySub[`${p.sub} · 계열 ${p.cat}`] ||= []).push(p);
+
+/* 같은 풀을 쓰는 프리셋 전체 — 무리끼리 근거를 찾을 때 쓴다.
+   무리가 하위분기를 넘어 걸치면(Trot 과 C-pop 이 다른 무리에 들어가듯)
+   앵커가 같은 분기 안에 없을 수 있다. 그때도 연결을 찾을 수 있어야 한다. */
+const byPoolAll = {};
+for (const { p } of profiles) (byPoolAll[(p.meta?.pool || []).join('|')] ||= []).push(p);
 
 /* 어느 쌍에 «무엇이 다른가» 를 요구할 것인가.
 
@@ -441,7 +451,9 @@ for (const [sub, list] of Object.entries(bySub)) {
   /* 풀 무리끼리는 최소 한 줄의 근거가 있어야 한다 */
   const keys = Object.keys(groups);
   for (let i = 0; i < keys.length; i++) for (let j = i + 1; j < keys.length; j++) {
-    const A = groups[keys[i]], B = groups[keys[j]];
+    /* 같은 풀을 쓰는 프리셋 **전체**로 넓혀서 본다 — 앵커가 다른 분기에 있을 수 있다 */
+    const A = byPoolAll[keys[i]] || groups[keys[i]];
+    const B = byPoolAll[keys[j]] || groups[keys[j]];
     const any = A.some(a => B.some(b => linked(a, b).length));
     if (!any)
       warn(`[${sub}] 풀 «${keys[i].slice(0, 24)}» ↔ «${keys[j].slice(0, 24)}» —`
