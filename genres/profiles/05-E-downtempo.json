@@ -1,0 +1,1172 @@
+{
+  "batch": "A6",
+  "sub": "Downtempo · Ambient · Retro",
+  "cat": "E",
+  "date": "2026-09-15",
+  "verdict": "11종 → 6무리. 한 분기인데 73~124 BPM, 스윙 0~50, 베이스 엔진이 여섯이다. Synthwave 만 계열이 B(팝)다. 베이퍼웨이브는 따로 두려다 합쳤다 — 느리고 뭉갠 것은 템포와 음색이지 선율이 아니었다.",
+  "profiles": [
+    {
+      "preset": "Downtempo",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국·유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Chillout",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Ambient Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Vaporwave",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mallsoft",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+      }
+    },
+    {
+      "preset": "Chillout",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국·유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Downtempo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Ambient Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Vaporwave",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mallsoft",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Downtempo",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+      }
+    },
+    {
+      "preset": "Ambient Techno",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국·유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Downtempo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chillout",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Vaporwave",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mallsoft",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Downtempo",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+      }
+    },
+    {
+      "preset": "Vaporwave",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국·유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Downtempo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chillout",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Ambient Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mallsoft",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Downtempo",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+      }
+    },
+    {
+      "preset": "Mallsoft",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국·유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+          },
+          {
+            "from": "Downtempo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chillout",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Ambient Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Vaporwave",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Downtempo",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 음이 마디에 한두 개뿐이고 음색이 앞에 나온다 — 재료 중 가장 성긴 축"
+      }
+    },
+    {
+      "preset": "Balearic",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.5
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "nylon",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1980년대 후반 스페인 이비사 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bos_aaba",
+          "bos_aabb",
+          "cin_aabb"
+        ],
+        "note": "나일론 기타가 둘이다(gtr·keys2). 형제 중 유일하게 선율이 패드 뒤가 아니라 앞에 있고 음역이 한 도수 넓다"
+      }
+    },
+    {
+      "preset": "Trip Hop",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.8
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "glass",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 영국 브리스틀 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+          },
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "trp_aaba",
+          "hip_aaba",
+          "bal_aabb"
+        ],
+        "note": "90 BPM 에 스윙 30. 라운지가 아니라 힙합 쪽 박자다 — 두세 음을 되풀이하므로 도약 비율이 형제보다 두 배 높다"
+      }
+    },
+    {
+      "preset": "Nu Jazz",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep-vibes",
+          "keys2": "horn",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽·일본 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Lounge",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aaba",
+          "jazz_abab",
+          "jazz_aabb"
+        ],
+        "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+      }
+    },
+    {
+      "preset": "Lounge",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.4
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep-vibes",
+          "keys2": "horn",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽·일본 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Nu Jazz",
+        "pool": [
+          "jazz_aaba",
+          "jazz_abab",
+          "jazz_aabb"
+        ],
+        "note": "업라이트 베이스에 스윙 28~50. 밀도가 패드 무리의 세 배이고 방향을 계속 바꾼다"
+      }
+    },
+    {
+      "preset": "Synthwave",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "B",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck-arp",
+          "keys2": "pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 후반 이후 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+          },
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+          },
+          {
+            "from": "Future Funk",
+            "axis": "melody",
+            "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "chip_aabb",
+          "chip_abab",
+          "chip_aaab"
+        ],
+        "note": "이 분기에서 유일한 계열 B(팝)다. 아르페지오라 거의 모든 이동이 도약이다 — 앰비언트와 정반대 끝"
+      }
+    },
+    {
+      "preset": "Future Funk",
+      "sub": "Downtempo · Ambient · Retro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "ep",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 인터넷·일본 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Downtempo",
+            "axis": "melody",
+            "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+          },
+          {
+            "from": "Balearic",
+            "axis": "melody",
+            "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+          },
+          {
+            "from": "Trip Hop",
+            "axis": "melody",
+            "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+          },
+          {
+            "from": "Nu Jazz",
+            "axis": "melody",
+            "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+          },
+          {
+            "from": "Synthwave",
+            "axis": "melody",
+            "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "dis_abab",
+          "dis_aabb",
+          "dis_aaab"
+        ],
+        "note": "디스코를 잘라 붙인다. 신스웨이브와 밀도·음역은 같고 윤곽이 다르다 — 올라가는 대신 오간다"
+      }
+    }
+  ]
+}

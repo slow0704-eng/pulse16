@@ -185,8 +185,8 @@
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -268,7 +268,8 @@
           "rag_aaba",
           "rag_aabb",
           "car_aabb"
-        ]
+        ],
+        "note": ""
       }
     },
     {
@@ -287,8 +288,8 @@
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -365,8 +366,8 @@
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,

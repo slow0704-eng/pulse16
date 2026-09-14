@@ -12,12 +12,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 6
+          "min": 2,
+          "max": 4
         },
         "leapRatio": {
-          "min": 0.2,
-          "max": 0.4
+          "min": 0.45,
+          "max": 0.65
         },
         "contour": "arch",
         "range": {
@@ -115,8 +115,8 @@
         "shareWith": null,
         "pool": [
           "gos_aabb",
-          "dis_aabb",
-          "funk_aabb"
+          "gos_aaba",
+          "gos_abab"
         ],
         "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
       }
@@ -128,12 +128,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 6
+          "min": 2,
+          "max": 4
         },
         "leapRatio": {
-          "min": 0.2,
-          "max": 0.4
+          "min": 0.45,
+          "max": 0.65
         },
         "contour": "arch",
         "range": {
@@ -231,8 +231,8 @@
         "shareWith": "House",
         "pool": [
           "gos_aabb",
-          "dis_aabb",
-          "funk_aabb"
+          "gos_aaba",
+          "gos_abab"
         ],
         "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
       }
@@ -244,12 +244,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 6
+          "min": 2,
+          "max": 4
         },
         "leapRatio": {
-          "min": 0.2,
-          "max": 0.4
+          "min": 0.45,
+          "max": 0.65
         },
         "contour": "arch",
         "range": {
@@ -347,8 +347,8 @@
         "shareWith": "House",
         "pool": [
           "gos_aabb",
-          "dis_aabb",
-          "funk_aabb"
+          "gos_aaba",
+          "gos_abab"
         ],
         "note": "가스펠·디스코에서 온 피아노 코드 스탭. 형제 중 유일하게 3화음 표기가 몸이다"
       }
@@ -360,16 +360,16 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 5,
-          "max": 7
+          "min": 6,
+          "max": 8
         },
         "leapRatio": {
-          "min": 0.25,
-          "max": 0.45
+          "min": 0.8,
+          "max": 0.95
         },
         "contour": "rise",
         "range": {
-          "min": 4,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -384,7 +384,7 @@
           "endDegree": 0
         },
         "repetition": "high",
-        "voicing": "chord",
+        "voicing": "single",
         "scale": "Minor Pentatonic"
       },
       "harmony": {
@@ -458,8 +458,8 @@
         "shareWith": null,
         "pool": [
           "dis_abab",
-          "cin_aabb",
-          "edm_aabb"
+          "dis_aabb",
+          "dis_aaab"
         ],
         "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
       }
@@ -471,16 +471,16 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 5,
-          "max": 7
+          "min": 6,
+          "max": 8
         },
         "leapRatio": {
-          "min": 0.25,
-          "max": 0.45
+          "min": 0.8,
+          "max": 0.95
         },
         "contour": "rise",
         "range": {
-          "min": 4,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -495,7 +495,7 @@
           "endDegree": 0
         },
         "repetition": "high",
-        "voicing": "chord",
+        "voicing": "single",
         "scale": "Minor Pentatonic"
       },
       "harmony": {
@@ -569,8 +569,8 @@
         "shareWith": "French House",
         "pool": [
           "dis_abab",
-          "cin_aabb",
-          "edm_aabb"
+          "dis_aabb",
+          "dis_aaab"
         ],
         "note": "디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다"
       }
@@ -582,12 +582,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 2,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.35
+          "min": 0.25,
+          "max": 0.45
         },
         "contour": "static",
         "range": {
@@ -689,8 +689,8 @@
         "shareWith": null,
         "pool": [
           "amb_aaba",
-          "edm_aabb",
-          "bal_aaba"
+          "bal_aaba",
+          "bal_abab"
         ],
         "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
       }
@@ -702,12 +702,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 2,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.35
+          "min": 0.25,
+          "max": 0.45
         },
         "contour": "static",
         "range": {
@@ -809,8 +809,8 @@
         "shareWith": "Deep House",
         "pool": [
           "amb_aaba",
-          "edm_aabb",
-          "bal_aaba"
+          "bal_aaba",
+          "bal_abab"
         ],
         "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
       }
@@ -822,12 +822,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 2,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.35
+          "min": 0.25,
+          "max": 0.45
         },
         "contour": "static",
         "range": {
@@ -929,8 +929,8 @@
         "shareWith": "Deep House",
         "pool": [
           "amb_aaba",
-          "edm_aabb",
-          "bal_aaba"
+          "bal_aaba",
+          "bal_abab"
         ],
         "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
       }
@@ -942,12 +942,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 2,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.35
+          "min": 0.25,
+          "max": 0.45
         },
         "contour": "static",
         "range": {
@@ -1049,8 +1049,8 @@
         "shareWith": "Deep House",
         "pool": [
           "amb_aaba",
-          "edm_aabb",
-          "bal_aaba"
+          "bal_aaba",
+          "bal_abab"
         ],
         "note": "패드 위에 성글게. 23종 중 움직임이 가장 적다"
       }
@@ -1066,13 +1066,13 @@
           "max": 6
         },
         "leapRatio": {
-          "min": 0.25,
+          "min": 0.15,
           "max": 0.45
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -1207,13 +1207,13 @@
           "max": 6
         },
         "leapRatio": {
-          "min": 0.25,
+          "min": 0.15,
           "max": 0.45
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -1334,13 +1334,13 @@
           "max": 6
         },
         "leapRatio": {
-          "min": 0.25,
+          "min": 0.15,
           "max": 0.45
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -1461,13 +1461,13 @@
           "max": 6
         },
         "leapRatio": {
-          "min": 0.25,
+          "min": 0.15,
           "max": 0.45
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -1588,13 +1588,13 @@
           "max": 6
         },
         "leapRatio": {
-          "min": 0.25,
+          "min": 0.15,
           "max": 0.45
         },
         "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 5
+          "min": 5,
+          "max": 7
         },
         "degrees": [
           0,
@@ -1712,15 +1712,15 @@
       "melody": {
         "density": {
           "min": 6,
-          "max": 9
+          "max": 13
         },
         "leapRatio": {
-          "min": 0.3,
-          "max": 0.5
+          "min": 0.85,
+          "max": 1
         },
         "contour": "rise",
         "range": {
-          "min": 5,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -1833,15 +1833,15 @@
       "melody": {
         "density": {
           "min": 6,
-          "max": 9
+          "max": 13
         },
         "leapRatio": {
-          "min": 0.3,
-          "max": 0.5
+          "min": 0.85,
+          "max": 1
         },
         "contour": "rise",
         "range": {
-          "min": 5,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -1954,15 +1954,15 @@
       "melody": {
         "density": {
           "min": 6,
-          "max": 9
+          "max": 13
         },
         "leapRatio": {
-          "min": 0.3,
-          "max": 0.5
+          "min": 0.85,
+          "max": 1
         },
         "contour": "rise",
         "range": {
-          "min": 5,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -2075,15 +2075,15 @@
       "melody": {
         "density": {
           "min": 6,
-          "max": 9
+          "max": 13
         },
         "leapRatio": {
-          "min": 0.3,
-          "max": 0.5
+          "min": 0.85,
+          "max": 1
         },
         "contour": "rise",
         "range": {
-          "min": 5,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -2196,15 +2196,15 @@
       "melody": {
         "density": {
           "min": 6,
-          "max": 9
+          "max": 13
         },
         "leapRatio": {
-          "min": 0.3,
-          "max": 0.5
+          "min": 0.85,
+          "max": 1
         },
         "contour": "rise",
         "range": {
-          "min": 5,
+          "min": 6,
           "max": 7
         },
         "degrees": [
@@ -2301,17 +2301,17 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 2,
-          "max": 4
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.4
+          "min": 0.25,
+          "max": 0.5
         },
         "contour": "static",
         "range": {
-          "min": 2,
-          "max": 4
+          "min": 3,
+          "max": 5
         },
         "degrees": [
           0,
@@ -2392,8 +2392,8 @@
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
-          "edm_aaab",
-          "amb_aaab"
+          "amb_aaab",
+          "amb_aaba"
         ],
         "note": "303 베이스가 선율을 맡는다. 23종 중 유일하게 lead 가 keys 가 아니다"
       }
@@ -2405,11 +2405,11 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 7
+          "min": 3,
+          "max": 5
         },
         "leapRatio": {
-          "min": 0.2,
+          "min": 0.25,
           "max": 0.45
         },
         "contour": "arch",
@@ -2509,8 +2509,8 @@
         "shareWith": null,
         "pool": [
           "afr_aabb",
-          "lat_abab",
-          "edm_aabb"
+          "afr_aaab",
+          "lat_abab"
         ],
         "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
       }
@@ -2522,11 +2522,11 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 7
+          "min": 3,
+          "max": 5
         },
         "leapRatio": {
-          "min": 0.2,
+          "min": 0.25,
           "max": 0.45
         },
         "contour": "arch",
@@ -2626,8 +2626,8 @@
         "shareWith": "Tribal House",
         "pool": [
           "afr_aabb",
-          "lat_abab",
-          "edm_aabb"
+          "afr_aaab",
+          "lat_abab"
         ],
         "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
       }
@@ -2639,11 +2639,11 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
-          "max": 7
+          "min": 3,
+          "max": 5
         },
         "leapRatio": {
-          "min": 0.2,
+          "min": 0.25,
           "max": 0.45
         },
         "contour": "arch",
@@ -2743,8 +2743,8 @@
         "shareWith": "Tribal House",
         "pool": [
           "afr_aabb",
-          "lat_abab",
-          "edm_aabb"
+          "afr_aaab",
+          "lat_abab"
         ],
         "note": "타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다"
       }

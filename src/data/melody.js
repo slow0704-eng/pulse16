@@ -760,17 +760,17 @@ const MELODY_KIT_PRESET = {
      BPM 113~139, swing 0~34. 선율만 따라오지 못한 자리였다.
      23종 → 7무리. 23풀로 쪼개지 않았다.                                */
   /* 1) 피아노 하우스 — 시카고·가라지. 가스펠·디스코에서 온 코드 스탭 */
-  'House'                 :['gos_aabb','dis_aabb','funk_aabb'],
-  'Chicago House'         :['gos_aabb','dis_aabb','funk_aabb'],
-  'Garage House'          :['gos_aabb','dis_aabb','funk_aabb'],
+  'House'                 :['gos_aabb','gos_aaba','gos_abab'],
+  'Chicago House'         :['gos_aabb','gos_aaba','gos_abab'],
+  'Garage House'          :['gos_aabb','gos_aaba','gos_abab'],
   /* 2) 필터·프렌치 — 디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈 */
-  'French House'          :['dis_abab','cin_aabb','edm_aabb'],
-  'Filter House'          :['dis_abab','cin_aabb','edm_aabb'],
+  'French House'          :['dis_abab','dis_aabb','dis_aaab'],
+  'Filter House'          :['dis_abab','dis_aabb','dis_aaab'],
   /* 3) 딥·멜로딕 — 패드 위에 성글게. 움직임이 가장 적다 */
-  'Deep House'            :['amb_aaba','edm_aabb','bal_aaba'],
-  'Melodic House & Techno':['amb_aaba','edm_aabb','bal_aaba'],
-  'Tech House'            :['amb_aaba','edm_aabb','bal_aaba'],
-  'Future House'          :['amb_aaba','edm_aabb','bal_aaba'],
+  'Deep House'            :['amb_aaba','bal_aaba','bal_abab'],
+  'Melodic House & Techno':['amb_aaba','bal_aaba','bal_abab'],
+  'Tech House'            :['amb_aaba','bal_aaba','bal_abab'],
+  'Future House'          :['amb_aaba','bal_aaba','bal_abab'],
   /* 4) UK 개러지 — 16분 싱코페. garA/garB 를 새로 썼다 */
   'UK Garage'             :['gar_aabb','gar_abab','funk_abab'],
   '2-step Garage'         :['gar_aabb','gar_abab','funk_abab'],
@@ -787,12 +787,12 @@ const MELODY_KIT_PRESET = {
   'Electro House'         :['edm_aaab','chip_aaab','edmchp_aaab'],
   'Progressive House'     :['edm_aaab','chip_aaab','edmchp_aaab'],
   /* 6) 애시드 — 303 이 선율을 맡는다. 건반은 비켜 준다 */
-  'Acid House'            :['edm_aaab','amb_aaab'],
+  'Acid House'            :['amb_aaab','amb_aaba'],
   /* 7) 타악·아프로 — 마림바·로그드럼. 아마피아노는 113 BPM 에 스윙 28 로
         형제 22종과 템포부터 다르다 */
-  'Tribal House'          :['afr_aabb','lat_abab','edm_aabb'],
-  'Amapiano'              :['afr_aabb','lat_abab','edm_aabb'],
-  'Afro House'            :['afr_aabb','lat_abab','edm_aabb'],
+  'Tribal House'          :['afr_aabb','afr_aaab','lat_abab'],
+  'Amapiano'              :['afr_aabb','afr_aaab','lat_abab'],
+  'Afro House'            :['afr_aabb','afr_aaab','lat_abab'],
 
   /* E. Dubstep · Bass Music 16종 — 2026-09-14 배치 A5
      (genres/profiles/05-E-dubstep.json)
@@ -807,21 +807,49 @@ const MELODY_KIT_PRESET = {
   'Future Garage'         :['amb_aaba','amb_aabb','bal_aaba'],
   'Wave'                  :['amb_aaba','amb_aabb','bal_aaba'],
   /* 2) 공격형 — 베이스가 주역이라 건반이 비켜 준다 */
-  'Brostep'               :['edm_aaab','trp_aaab'],
-  'Riddim'                :['edm_aaab','trp_aaab'],
-  'Hardwave'              :['edm_aaab','trp_aaab'],
+  /* edm_aaab 은 밀도 12.5 의 빽빽한 아르페지오다 — «건반이 비켜 준다» 는
+     프로파일과 정반대였다(P11 이 잡음). 성긴 재료로 바꿨다 */
+  'Brostep'               :['trp_aaab','hip_aaab'],
+  'Riddim'                :['trp_aaab','hip_aaab'],
+  'Hardwave'              :['trp_aaab','hip_aaab'],
   /* 3) 선율형 — 슈퍼소우로 화음을 넓게 편다. 이 무리만 상행 윤곽이다 */
-  'Future Bass'           :['cin_aabb','edm_aabb','bal_aaba'],
-  'Melodic Dubstep'       :['cin_aabb','edm_aabb','bal_aaba'],
+  /* 밀도가 3.63·12.75·2.19 로 뒤죽박죽이었다. cin 으로 통일했다 —
+     음역 6 에 순차가 많아 «화음을 넓게 편다» 에 가장 가깝다 */
+  'Future Bass'           :['cin_aabb','cin_aaba','cin_abab'],
+  'Melodic Dubstep'       :['cin_aabb','cin_aaba','cin_abab'],
   /* 4) 트랩 파생 — 808 이 들어오면 선율도 트랩 어법이 된다 */
   'EDM Trap'              :['trp_aaab','trp_aaba','hip_aaab'],
   'Festival Trap'         :['trp_aaab','trp_aaba','hip_aaab'],
   /* 5) 클럽 — 저지·볼티모어·필리. 쪼갠 스탭이 몸이라 개러지와 어법이 같다 */
-  'Jersey Club'           :['gar_abab','funk_abab','trp_aaba'],
-  'Baltimore Club'        :['gar_abab','funk_abab','trp_aaba'],
-  'Philly Club'           :['gar_abab','funk_abab','trp_aaba'],
+  'Jersey Club'           :['gar_abab','gar_aabb','funk_abab'],
+  'Baltimore Club'        :['gar_abab','gar_aabb','funk_abab'],
+  'Philly Club'           :['gar_abab','gar_aabb','funk_abab'],
   /* 6) 뭄바톤 — 110 BPM 에 뎀보우. 형제 15종과 템포부터 30 이상 벌어진다 */
-  'Moombahton'            :['lat_abab','car_aabb','trp_aaba'],
+  'Moombahton'            :['lat_abab','car_aabb','lat_aabb'],
+
+  /* E. Downtempo · Ambient · Retro 11종 — 2026-09-15 배치 A6
+     (genres/profiles/05-E-downtempo.json)
+     한 분기인데 73~124 BPM, 스윙 0~50, 베이스 엔진이 여섯이다. 11종 → 7무리.
+     Synthwave 만 계열이 B(팝)이고 나머지는 E 다 — 분기 안에 계열이 섞여 있다. */
+  /* 1) 성긴 패드 — 건반이 패드다. 재료 중 가장 성긴 축(밀도 1.0~2.2).
+        베이퍼웨이브를 따로 두려다 합쳤다 — 느리고 뭉갠 것은 템포와
+        음색이지 선율이 아니다(73 BPM vs 100 BPM 인데 음 배치는 같다) */
+  'Downtempo'             :['amb_aaba','amb_aabb','bal_aaba'],
+  'Chillout'              :['amb_aaba','amb_aabb','bal_aaba'],
+  'Ambient Techno'        :['amb_aaba','amb_aabb','bal_aaba'],
+  'Vaporwave'             :['amb_aaba','amb_aabb','bal_aaba'],
+  'Mallsoft'              :['amb_aaba','amb_aabb','bal_aaba'],
+  /* 2) 발레아릭 — 나일론 기타가 둘(gtr·keys2). 음역이 한 도수 넓다 */
+  'Balearic'              :['bos_aaba','bos_aabb','cin_aabb'],
+  /* 3) 트립합 — 90 BPM 스윙 30. 두세 음 반복이라 도약 비율이 두 배다 */
+  'Trip Hop'              :['trp_aaba','hip_aaba','bal_aabb'],
+  /* 4) 재즈 물든 — 업라이트에 스윙 28~50. 밀도가 패드 무리의 세 배 */
+  'Nu Jazz'               :['jazz_aaba','jazz_abab','jazz_aabb'],
+  'Lounge'                :['jazz_aaba','jazz_abab','jazz_aabb'],
+  /* 5) 신스웨이브 — 계열 B. 아르페지오라 거의 모든 이동이 도약(0.92) */
+  'Synthwave'             :['chip_aabb','chip_abab','chip_aaab'],
+  /* 6) 퓨처펑크 — 잘라 붙인 디스코. 신스웨이브와 밀도는 같고 윤곽이 다르다 */
+  'Future Funk'           :['dis_abab','dis_aabb','dis_aaab'],
 };
 
 function melodyPoolFor(name){
@@ -1096,6 +1124,19 @@ const RIFF_KIT_PRESET = {
   'Baltimore Club'        :['funk_cut','edm_alt'],
   'Philly Club'           :['funk_cut','edm_alt'],
   'Moombahton'            :['latin_montuno','edm_arp'],
+
+  /* E. Downtempo · Ambient · Retro — 배치 A6 */
+  'Vaporwave'             :['arp_swing','edm_arp'],
+  'Mallsoft'              :['arp_swing','edm_arp'],
+  'Downtempo'             :['arp_folk','edm_arp'],
+  'Chillout'              :['arp_folk','edm_arp'],
+  'Ambient Techno'        :['arp_folk','edm_arp'],
+  'Balearic'              :['arp_folk','latin_montuno'],  // 나일론 기타가 둘이다
+  'Trip Hop'              :['jazz_gtr_comp','arp_swing'],
+  'Nu Jazz'               :['jazz_gtr_swing','jazz_gtr_comp'],
+  'Lounge'                :['jazz_gtr_swing','jazz_gtr_comp'],
+  'Synthwave'             :['edm_arp','rock_alt'],
+  'Future Funk'           :['funk_cut','funk_groove'],    // 잘라 붙인 디스코 커팅
 };
 
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
@@ -1327,6 +1368,19 @@ const BLINE_KIT_PRESET = {
   'Baltimore Club'        :['bfun_abab','b808_aaab'],
   'Philly Club'           :['bfun_abab','b808_aaab'],
   'Moombahton'            :['blat_aabb','breg_aabb'],  // 뎀보우
+
+  /* E. Downtempo · Ambient · Retro — 배치 A6 */
+  'Vaporwave'             :['breg_aaba','b808_aabb'],  // 아주 느리고 길게
+  'Mallsoft'              :['breg_aaba','b808_aabb'],
+  'Downtempo'             :['bdis_aabb','breg_aaba'],
+  'Chillout'              :['bdis_aabb','breg_aaba'],
+  'Ambient Techno'        :['bdis_aabb','breg_aaba'],
+  'Balearic'              :['blat_aaba','bcou_aaba'],
+  'Trip Hop'              :['bwal_aaba','breg_aaba'],
+  'Nu Jazz'               :['bwal_abab','bwal_aabb'],  // 업라이트 — 워킹이 정체성이다
+  'Lounge'                :['bwal_abab','bwal_aabb'],
+  'Synthwave'             :['bdis_abab','bhou_aabb'],  // 80년대 옥타브
+  'Future Funk'           :['bdis_aabb','bfun_abab'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */

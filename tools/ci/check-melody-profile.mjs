@@ -125,6 +125,45 @@ try {
     /* 프리셋이 직접 정한 풀이 있으면 그것이 실제로 쓰이는 값이다 */
     effPool: Object.fromEntries(Object.keys(LIB).map(n => [n, melodyPoolFor(n)])),
     noMelody: Object.keys(LIB).filter(n => melodyPoolFor(n).length === 0),
+
+    /* ── 실제 재료의 지표 ────────────────────────────────────────────
+       프로파일이 «밀도 4~6» 이라고 적었으면, 그 프리셋이 **실제로 받는**
+       MELODY 키가 정말 그 범위인지 기계가 재야 한다. JSON 에 적은
+       프레이즈만 보면 «선언한 것» 을 검사할 뿐 «주어지는 것» 은 못 본다.
+
+       MELODY·RIFF·BLINE 의 마디는 **16자 문자열**이다 (kpat/bpat 변환은
+       시퀀서가 재생할 때 한다). 표기는 patterns/README.md §1 그대로 —
+       'a'~'h' 단음 · '0'~'7' 3화음 · '-' 쉼. 그래서 voicing(단음이냐
+       3화음이냐)을 문자만 보고 기계로 잴 수 있다. */
+    material: (() => {
+      const stat = (bars) => {
+        const notes = [];            // {deg, chord}
+        for (const bar of bars) {
+          for (const c of String(bar)) {
+            if (c === '-') continue;
+            if (c >= '0' && c <= '7') notes.push({ deg: +c, chord: true });
+            else if (c >= 'a' && c <= 'h') notes.push({ deg: c.charCodeAt(0) - 97, chord: false });
+          }
+        }
+        let leaps = 0, moves = 0;
+        for (let i = 1; i < notes.length; i++) {
+          const d = Math.abs(notes[i].deg - notes[i - 1].deg);
+          if (d > 0) { moves++; if (d >= 2) leaps++; }
+        }
+        const degs = notes.map(n => n.deg);
+        return {
+          bars: bars.length,
+          density: +(notes.length / bars.length).toFixed(2),
+          leapRatio: moves ? +(leaps / moves).toFixed(2) : 0,
+          range: degs.length ? Math.max(...degs) - Math.min(...degs) : 0,
+          chordRatio: notes.length ? +(notes.filter(n => n.chord).length / notes.length).toFixed(2) : 0,
+        };
+      };
+      const out = {};
+      for (const T of [MELODY, RIFF, BLINE])
+        for (const [k, v] of Object.entries(T)) out[k] = stat(v.bars);
+      return out;
+    })(),
     phraseBars: {
       PHRASE: Object.fromEntries(Object.entries(PHRASE).map(([k, v]) => [k, v.map(String)])),
       RIFF_PHRASE: Object.fromEntries(Object.entries(RIFF_PHRASE).map(([k, v]) => [k, v.map(String)])),
@@ -278,14 +317,59 @@ for (const { file, p } of profiles) {
       fail(`${id} — 밀도 ${mt.density} 가 프로파일 ${JSON.stringify(p.melody.density)} 밖`);
     if (!inRange(mt.leapRatio, p.melody.leapRatio))
       fail(`${id} — 도약비율 ${mt.leapRatio} 가 프로파일 ${JSON.stringify(p.melody.leapRatio)} 밖`);
-    if (!inRange(mt.range, p.melody.range))
-      fail(`${id} — 음역 ${mt.range} 가 프로파일 ${JSON.stringify(p.melody.range)} 밖`);
+    /* ⚠ 음역은 «이상» 만 본다. 프로파일의 음역은 **16마디로 이은 결과**의
+       값인데 여기서 재는 것은 **4마디 프레이즈** 다. A·B 두 층을 폼으로
+       엮으면 음역이 넓어지므로, 4마디가 더 좁은 것은 정상이다.
+       (실제로 gar·rag 는 4마디 4 → 16마디 7 이다) */
+    if (typeof p.melody.range?.max === 'number' && mt.range > p.melody.range.max)
+      fail(`${id} — 음역 ${mt.range} 가 프로파일 최대 ${p.melody.range.max} 를 넘음`);
     const wantEmpty = p.melody.cadence?.lastBarEmpty;
     if (typeof wantEmpty === 'boolean' && mt.lastBarEmpty !== wantEmpty)
       fail(`${id} — 끝마디 비우기: 프로파일 ${wantEmpty} / 실제 ${mt.lastBarEmpty}`);
   }
 }
 console.log(phraseCount ? `프레이즈 ${phraseCount}개 검사` : `${WARN} 프레이즈가 아직 없습니다 (stage:"assign" 배치면 정상)`);
+
+/* ═══ P11 — 배정된 재료가 프로파일을 실제로 만족하는가 ═══════════════
+   이것이 «사람이 들어 봐야 안다» 를 대신하는 자리다. 프로파일이
+   「밀도 4~6 · 3화음이 몸」 이라고 적었으면, 그 프리셋이 **실제로 받는**
+   MELODY 키가 정말 그런지 기계가 잰다. JSON 에 적은 프레이즈만 보는
+   P5 는 «선언한 것» 을 검사할 뿐 «주어지는 것» 은 못 본다.
+
+   ⚠ 어긋나면 둘 중 하나가 틀린 것이다 — 프로파일 수치가 과장됐거나,
+     풀 선택이 틀렸거나. 임계를 늘리지 말고 둘 중 무엇인지 보라.
+   32·64루프(l32·l64)는 16마디 전제의 지표를 그대로 대면 안 되므로 뺀다
+   (melody/README.md §4-1).                                            */
+
+head('P11 — 배정된 재료가 프로파일 수치를 만족하는가');
+{
+  let checked = 0, off = 0;
+  const near = (v, r, slack) => !r
+    || ((typeof r.min !== 'number' || v >= r.min - slack)
+     && (typeof r.max !== 'number' || v <= r.max + slack));
+
+  for (const { p } of profiles) {
+    const pool = (p.meta?.pool || []).filter(k => !/_l(32|64)b?$/.test(k));
+    for (const k of pool) {
+      const m = live.material[k];
+      if (!m) continue;
+      checked++;
+      const bad = [];
+      /* 밀도는 ±1칸, 도약은 ±0.15, 음역은 ±1도수까지 봐준다 —
+         풀은 «후보 목록» 이지 한 곡의 정확한 사양이 아니다. */
+      if (!near(m.density, p.melody.density, 1)) bad.push(`밀도 ${m.density} ∉ ${p.melody.density.min}~${p.melody.density.max}`);
+      if (!near(m.leapRatio, p.melody.leapRatio, 0.15)) bad.push(`도약 ${m.leapRatio} ∉ ${p.melody.leapRatio.min}~${p.melody.leapRatio.max}`);
+      if (!near(m.range, p.melody.range, 1)) bad.push(`음역 ${m.range} ∉ ${p.melody.range.min}~${p.melody.range.max}`);
+      /* voicing 은 기계로 직접 잴 수 있는 유일한 질적 축이다 */
+      const isChord = m.chordRatio >= 0.5;
+      if (p.melody.voicing === 'chord' && !isChord) bad.push(`voicing:chord 인데 3화음 비율 ${m.chordRatio}`);
+      if (p.melody.voicing === 'single' && isChord) bad.push(`voicing:single 인데 3화음 비율 ${m.chordRatio}`);
+      if (bad.length) { warn(`${p.preset} ← ${k} — ${bad.join(' · ')}`); off++; }
+    }
+  }
+  console.log(`재료 ${checked}건 검사 (32·64루프 제외) — 어긋남 ${off}건`);
+  if (off === 0) console.log(`${OK} 배정된 재료가 전부 프로파일 범위 안입니다`);
+}
 
 /* ═══ P7 — 차별화, 양방향 ═══════════════════════════════════════════
    ⚠ **아직 임계값을 두지 않는다.** 「거리 얼마면 다른가」는 데이터가
