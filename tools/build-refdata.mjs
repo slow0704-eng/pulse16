@@ -38,7 +38,9 @@ function emit(rel, text){
    `*(재등정)*` 같은 꼬리표는 따로 뗀다.                              */
 
 const DECADES = ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
-const ROW = /^(\d+)\.\s+(.+?)\s+—\s+(.+?)\s*(?:\*\(([^)]+)\)\*\s*)?`([A-K])\s*·\s*([^`]+)`\s*$/;
+/* 꼬리표 `*1위 … · N주*` 는 tools/apply-billboard-runs.mjs 가 붙인다.
+   없을 수도 있다 — 위키백과 표기와 짝이 안 지어진 28건은 비어 있다. */
+const ROW = /^(\d+)\.\s+(.+?)\s+—\s+(.+?)\s*(?:\*\(([^)]+)\)\*\s*)?`([A-K])\s*·\s*([^`]+)`(?:\s*\*1위\s*([^*·]+)·\s*(\d+)주\*)?\s*$/;
 
 function parseChart(dir) {
   const rows = [];      // [year, title, artist, cat, genre, note]
@@ -53,7 +55,9 @@ function parseChart(dir) {
       const m = ROW.exec(raw.trim());
       if (!m) { skipped++; continue; }
       const genre = m[6].trim().replace(/\?$/, '');
-      rows.push([year, m[2].trim(), m[3].trim(), m[5], genre, m[4] || '']);
+      /* [연도, 제목, 아티스트, 계열, 장르, 꼬리표, 1위 구간, 누적 주] */
+      rows.push([year, m[2].trim(), m[3].trim(), m[5], genre, m[4] || '',
+                 (m[7] || '').trim(), m[8] ? +m[8] : 0]);
     }
   }
   return { rows, skipped };
@@ -71,7 +75,9 @@ console.log(`장르 태그 ${genres.size}종`);
 
 const bbJs = `/* 생성물 — tools/build-refdata.mjs 가 billboard/*.md 에서 만듭니다.
    손으로 고치지 마십시오. 원본을 고친 뒤 다시 돌리십시오.
-   한 줄: [연도, 제목, 아티스트, 계열코드, 장르, 꼬리표]
+   한 줄: [연도, 제목, 아티스트, 계열코드, 장르, 꼬리표, 1위 구간, 누적 주]
+   1위 구간·주차의 출처도 위키백과다 — tools/fetch-billboard-runs.mjs 가 세어 온다.
+   짝이 안 지어진 28건은 구간이 빈 문자열이고 주차가 0 이다(추측으로 안 채운다).
    출처는 위키백과 연도별 차트 1위 목록입니다 (billboard/README.md §신뢰도). */
 'use strict';
 

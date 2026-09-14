@@ -40,8 +40,9 @@ const evEsc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>
     비슷한 이름을 긁어 오면 «이 장르 곡» 이라는 표시가 거짓말이 된다. */
 function evidenceCharts(genreName){
   if(typeof BILLBOARD === 'undefined') return {hot:[], bb:[]};
+  /* 누적 주차가 긴 것부터 — 그 장르에서 가장 크게 팔린 것이 먼저 보여야 한다 */
   const pick = rows => rows.filter(r => r[4] === genreName)
-                           .sort((a,b) => a[0]-b[0]);
+                           .sort((a,b) => (b[7]||0)-(a[7]||0) || a[0]-b[0]);
   return { hot: pick(BILLBOARD.hot100), bb: pick(BILLBOARD.bb200) };
 }
 
@@ -108,8 +109,11 @@ function evidenceHtml(name){
            + ` 차트 1위는 대중성이 극대화된 지점이라 장르 관습에서 벗어나는 일이 많습니다 —`
            + ` 없다고 해서 그 장르가 작다는 뜻은 아닙니다.</p>`);
   } else {
+    /* r[7] = 누적 1위 주차. 0 이면 위키백과 표기와 짝이 안 지어진 것이라
+       비워 둔다 — 추측으로 채우지 않는다(tools/apply-billboard-runs.mjs). */
     const rows = (list, kind) => list.slice(0, 14).map(r =>
       `<li><span class="ev-y">${r[0]}</span> ${evEsc(r[1])} <i>— ${evEsc(r[2])}</i>`
+      + (r[7] ? ` <span class="ev-axis">1위 ${r[7]}주</span>` : '')
       + (r[5] ? ` <span class="ev-axis">${evEsc(r[5])}</span>` : '')
       + ` <span class="ev-axis">${kind}</span></li>`).join('');
     out.push(`<ul class="ev-chart">${rows(ch.hot,'Hot 100')}${rows(ch.bb,'BB 200')}</ul>`);

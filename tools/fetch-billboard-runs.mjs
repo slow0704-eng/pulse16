@@ -42,11 +42,21 @@ function wiki(title) {
   const f = join(CACHE, title.replace(/[^\w-]/g, '_') + '.html');
   if (existsSync(f)) {
     const c = readFileSync(f, 'utf8');
-    if (c.length > 2000) return c;      // 짧으면 실패한 캐시다 — 다시 받는다
+    /* 20 KB 를 기준으로 삼는다. 2 KB 로 뒀더니 **리다이렉트 스텁**(4.4 KB)이
+       «성공» 으로 캐시돼, redirects=1 을 고친 뒤에도 계속 그것을 읽었다.
+       진짜 연도 페이지는 100 KB 를 넘는다. */
+    if (c.length > 20000) return c;
   }
   const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}`
-            + `&prop=text&format=json&formatversion=2`;
-  for (let tryN = 1; tryN <= 3; tryN++) {
+            /* redirects=1 이 없으면 옛 제목을 못 따라간다 —
+               1962 는 «Top LPs», 1987 은 «number 1 albums» 로 리다이렉트된다 */
+            + `&prop=text&format=json&formatversion=2&redirects=1`;
+  /* ⚠ 위키백과 API 예절 — 간격 없이 두드리면 «too many requests» 로 막힌다.
+     실제로 134개를 연속으로 받다가 막혀서 7개 연도를 못 읽었다.
+     캐시에 없을 때만 쉬므로, 다시 돌릴 때는 느려지지 않는다. */
+  const nap = ms => execFileSync(process.execPath, ['-e', `setTimeout(()=>{}, ${ms})`]);
+  for (let tryN = 1; tryN <= 4; tryN++) {
+    nap(tryN === 1 ? 4000 : 15000 * tryN);
     let raw = '';
     try {
       raw = execFileSync('curl', ['-sS', '-m', '45', '--retry', '2', '--retry-delay', '2',
@@ -55,8 +65,7 @@ function wiki(title) {
     } catch { raw = ''; }
     let html = '';
     try { const j = JSON.parse(raw); html = (j.parse && j.parse.text) || ''; } catch {}
-    if (html.length > 2000) { writeFileSync(f, html, 'utf8'); return html; }
-    execFileSync(process.execPath, ['-e', `setTimeout(()=>{}, ${tryN * 1500})`]);  // 잠깐 쉬고 다시
+    if (html.length > 20000) { writeFileSync(f, html, 'utf8'); return html; }
   }
   return '';                            // 실패 — 캐시에 쓰지 않는다
 }
@@ -87,22 +96,35 @@ function parseTable(html) {
   const t = tables.find(x => /Issue date/i.test(x) && /<\/th>/.test(x));
   if (!t) return null;
 
-  const rows = [...t.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)].map(m => m[1]);
+  /* ⚠ 옛 표는 `</tr>` 를 생략한다(HTML 이 허용한다). `</tr>` 로 끊으면 머리 행이
+     여러 줄을 삼켜서 «January 2» 같은 날짜가 열 이름으로 잡힌다. `<tr` 로 가른다. */
+  const rows = t.split(/<tr[^>]*>/).slice(1).map(x => x.replace(/<\/tr>/g, ''));
   if (!rows.length) return null;
 
   /* 머리에서 열 위치를 찾는다 — 연대마다 열 수가 다르다 */
   const hcells = [...rows[0].matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map(m => strip(m[1]));
   const col = {
     date: hcells.findIndex(h => /issue date/i.test(h)),
-    work: hcells.findIndex(h => /^(song|single|album)/i.test(h)),
+    /* 연대마다 이름이 다르다 — 1960~70년대는 `Title`, 이후는 `Song`/`Album` */
+    work: hcells.findIndex(h => /^(song|single|album|title)/i.test(h)),
     art : hcells.findIndex(h => /artist/i.test(h)),
   };
+  /* ⚠ 1958~1963년 앨범 표는 머리가 **두 층**이다. 당시엔 통합 앨범 차트가 없어
+     `Issue date | Mono | Stereo` 아래 `Album | Artist(s) | Label` 이 두 벌 있다.
+     모노가 당시의 주 차트였으므로 그쪽을 쓰고, 출처가 다르다는 것은 결과에 적는다. */
+  let dataStart = 1, mono = false;
+  if (col.art < 0 && rows[1]) {
+    const sub = [...rows[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g)].map(m => strip(m[1]));
+    const w = sub.findIndex(h => /^(album|title|song)/i.test(h));
+    const a = sub.findIndex(h => /artist/i.test(h));
+    if (w >= 0 && a >= 0) { col.date = 0; col.work = w + 1; col.art = a + 1; dataStart = 2; mono = true; }
+  }
   if (col.date < 0 || col.work < 0 || col.art < 0) return null;
 
   /* rowspan 을 펼친다: carry[열] = {값, 남은행수} */
   const carry = [];
   const out = [];
-  for (const r of rows.slice(1)) {
+  for (const r of rows.slice(dataStart)) {
     const cells = [...r.matchAll(/<t[dh]([^>]*)>([\s\S]*?)<\/t[dh]>/g)]
       .map(m => ({ span: +((/rowspan\s*=\s*"?(\d+)/i.exec(m[1]) || [])[1] || 1), v: strip(m[2]) }));
     const row = [];
@@ -119,6 +141,7 @@ function parseTable(html) {
     if (!/[A-Za-z]+\s+\d{1,2}/.test(d)) continue;      // "January 2" 꼴만
     out.push([d, w, a]);
   }
+  out.mono = mono;
   return out;
 }
 
@@ -133,15 +156,17 @@ function iso(dateStr, year) {
 /* ── 수집 ───────────────────────────────────────────────────────── */
 
 const result = {};
+const MONO = {};
 for (const chart of ['hot100', 'bb200']) {
   head(`${chart} — ${FROM}~${TO}`);
   const weeks = [];          // [iso, work, artist]
-  let okY = 0, badY = [];
+  let okY = 0, badY = [], monoY = [];
   for (let y = FROM; y <= TO; y++) {
     let rows = null;
     try { rows = parseTable(wiki(TITLE[chart](y))); } catch (e) { rows = null; }
     if (!rows || !rows.length) { badY.push(y); continue; }
     okY++;
+    if (rows.mono) monoY.push(y);
     for (const [d, w, a] of rows) {
       const t = iso(d, y);
       if (t) weeks.push([t, w, a]);
@@ -149,6 +174,7 @@ for (const chart of ['hot100', 'bb200']) {
   }
   weeks.sort((a, b) => a[0].localeCompare(b[0]));
   console.log(`연도 ${okY}개 · 주 ${weeks.length}개` + (badY.length ? ` · ${NG} 못 읽음 ${badY.join(' ')}` : ` · ${OK}`));
+  if (monoY.length) console.log(`${WARN} ${monoY.join(' ')} 은 통합 차트가 없던 해라 **모노 차트**에서 가져왔습니다`);
 
   /* 연속 주를 한 구간으로 묶는다. 같은 곡이 떨어져 다시 오르면 구간이 늘어난다. */
   const runs = [];
@@ -166,6 +192,7 @@ for (const chart of ['hot100', 'bb200']) {
     e.runs.push([r.from, r.to, r.weeks]);
     e.weeks += r.weeks;
   }
+  MONO[chart] = monoY;
   result[chart] = [...byWork.values()]
     .sort((a, b) => a.runs[0][0].localeCompare(b.runs[0][0]));
   console.log(`구간 ${runs.length}개 → 고유 ${result[chart].length}건`
