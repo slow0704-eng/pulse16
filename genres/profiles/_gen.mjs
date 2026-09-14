@@ -19,7 +19,7 @@ if (!srcPath || !outPath) {
   console.log('사용법: node genres/profiles/_gen.mjs <배치모듈.mjs> <출력.json>');
   process.exit(2);
 }
-const { batch, sub, cat, date, verdict, groups, CAT = {}, PHRASES = {} }
+const { batch, sub, cat, date, verdict, groups, CAT = {}, SUB = {}, PHRASES = {} }
   = await import(pathToFileURL(resolve(srcPath)).href);
 
 const keys = Object.keys(groups).filter(k => groups[k].members.length);
@@ -43,7 +43,7 @@ for (const gk of keys) {
       dist.push({ from: sib, axis: 'none', note: '선율로 구분되지 않는다. 같은 풀이 맞다' });
 
     profiles.push({
-      preset: m, sub, cat: CAT[m] || cat, stage: 'mine',
+      preset: m, sub: SUB[m] || sub, cat: CAT[m] || cat, stage: 'mine',
       melody: {
         density: { min: g.mel.density[0], max: g.mel.density[1] },
         leapRatio: { min: g.mel.leap[0], max: g.mel.leap[1] },

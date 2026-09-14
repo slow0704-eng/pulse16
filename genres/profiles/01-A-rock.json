@@ -1,0 +1,4401 @@
+{
+  "batch": "A7",
+  "sub": "Rock (계열 A)",
+  "cat": "A",
+  "date": "2026-09-15",
+  "verdict": "49종 중 Metal 13 · Punk 7 은 선율 없음(의도). 남은 29종을 6풀 → 16풀로 갈랐다. 드럼과 편성은 이미 개별화돼 있었다(드럼 47/49 · 편성 49/49) — 선율만 하위분기에 묶여 있었다.",
+  "profiles": [
+    {
+      "preset": "Motorik",
+      "sub": "Psychedelic · Krautrock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.35,
+          "max": 0.6
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-hold",
+          "keys2": "mellotron",
+          "gtr": "phase",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 초 서독 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Krautrock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "ant_abab",
+          "ant_aabb",
+          "amb_aaba"
+        ],
+        "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+      }
+    },
+    {
+      "preset": "Krautrock",
+      "sub": "Psychedelic · Krautrock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.35,
+          "max": 0.6
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-hold",
+          "keys2": "mellotron",
+          "gtr": "phase",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 초 서독 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+          },
+          {
+            "from": "Motorik",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Motorik",
+        "pool": [
+          "ant_abab",
+          "ant_aabb",
+          "amb_aaba"
+        ],
+        "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+      }
+    },
+    {
+      "preset": "Psychedelic Rock",
+      "sub": "Psychedelic · Krautrock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "mellotron",
+          "gtr": "fuzz-phase",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 후반 미국·영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Acid Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rock_abab",
+          "blues_aabb",
+          "rock_aabb"
+        ],
+        "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+      }
+    },
+    {
+      "preset": "Acid Rock",
+      "sub": "Psychedelic · Krautrock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1,
+          3
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "mellotron",
+          "gtr": "fuzz-phase",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 후반 미국·영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Psychedelic Rock",
+        "pool": [
+          "rock_abab",
+          "blues_aabb",
+          "rock_aabb"
+        ],
+        "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+      }
+    },
+    {
+      "preset": "Space Rock",
+      "sub": "Psychedelic · Krautrock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "phase",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1970년대 영국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+      }
+    },
+    {
+      "preset": "Southern Rock",
+      "sub": "Hard Rock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "slide",
+          "gtr2": "twin"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 미국 남부 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "blues_aaba",
+          "blues_aabb",
+          "rootbl_aabb"
+        ],
+        "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+      }
+    },
+    {
+      "preset": "Rock",
+      "sub": "Hard Rock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.45,
+          "max": 0.8
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "hi",
+          "gtr2": "hi"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 영국·미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Glam Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rkant_aabb",
+          "rkant_abab"
+        ],
+        "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Glam Rock",
+      "sub": "Hard Rock",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.45,
+          "max": 0.8
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "hi",
+          "gtr2": "hi"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 영국·미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+          },
+          {
+            "from": "Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Rock",
+        "pool": [
+          "rkant_aabb",
+          "rkant_abab"
+        ],
+        "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+      }
+    },
+    {
+      "preset": "Rock & Roll",
+      "sub": "뿌리",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "sax",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 후반 미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "blues_aaba",
+          "rootbl_aaba",
+          "root_aaba"
+        ],
+        "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+      }
+    },
+    {
+      "preset": "Surf Rock",
+      "sub": "뿌리",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "none",
+          "gtr": "clean-reverb",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 초 미국 서부 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "cin_aabb",
+          "cin_aaba",
+          "rock_aabb"
+        ],
+        "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+      }
+    },
+    {
+      "preset": "Garage Rock",
+      "sub": "뿌리",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "none",
+          "gtr": "fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 중반 미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Proto-punk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rock_aaba",
+          "rock_aabb",
+          "blues_abab"
+        ],
+        "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+      }
+    },
+    {
+      "preset": "Proto-punk",
+      "sub": "뿌리",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "none",
+          "gtr": "fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 중반 미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Garage Rock",
+        "pool": [
+          "rock_aaba",
+          "rock_aabb",
+          "blues_abab"
+        ],
+        "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+      }
+    },
+    {
+      "preset": "Post-punk",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.35,
+          "max": 0.6
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "poly",
+          "keys2": "pad",
+          "gtr": "chorus",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Gothic Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "ant_abab",
+          "ant_aaba",
+          "amb_aabb"
+        ],
+        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+      }
+    },
+    {
+      "preset": "Gothic Rock",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.35,
+          "max": 0.6
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "poly",
+          "keys2": "pad",
+          "gtr": "chorus",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Post-punk",
+        "pool": [
+          "ant_abab",
+          "ant_aaba",
+          "amb_aabb"
+        ],
+        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+      }
+    },
+    {
+      "preset": "Post-punk Revival",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.35,
+          "max": 0.6
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "poly",
+          "keys2": "pad",
+          "gtr": "chorus",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Gothic Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Post-punk",
+        "pool": [
+          "ant_abab",
+          "ant_aaba",
+          "amb_aabb"
+        ],
+        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+      }
+    },
+    {
+      "preset": "Dance-punk",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly",
+          "gtr": "wah",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 초 미국·영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "New Wave",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "funk_abab",
+          "funk_aabb",
+          "funk_aaab"
+        ],
+        "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+      }
+    },
+    {
+      "preset": "New Wave",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly",
+          "gtr": "wah",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 초 미국·영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Dance-punk",
+        "pool": [
+          "funk_abab",
+          "funk_aabb",
+          "funk_aaab"
+        ],
+        "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+      }
+    },
+    {
+      "preset": "Emo",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "poly",
+          "gtr": "arp-crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 이후 미국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Screamo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "bal_aabb",
+          "bal_abab"
+        ],
+        "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+      }
+    },
+    {
+      "preset": "Screamo",
+      "sub": "Post-punk 계보",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "poly",
+          "gtr": "arp-crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 이후 미국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+          },
+          {
+            "from": "Emo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Emo",
+        "pool": [
+          "bal_aaba",
+          "bal_aabb",
+          "bal_abab"
+        ],
+        "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+      }
+    },
+    {
+      "preset": "Shoegaze",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "wall",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 초 영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Dream Pop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+      }
+    },
+    {
+      "preset": "Dream Pop",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "texture",
+          "gtr": "wall",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 초 영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Shoegaze",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "bal_aaba"
+        ],
+        "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+      }
+    },
+    {
+      "preset": "Britpop",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "pop_pulse"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "twelve",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 중반 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "pop_aabb",
+          "pop_aaba",
+          "pop_abab"
+        ],
+        "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+      }
+    },
+    {
+      "preset": "Lo-fi Indie",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "none",
+          "gtr": "clean-chorus",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 이후 미국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Slacker Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazbal_aaba",
+          "jazbal_abab"
+        ],
+        "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+      }
+    },
+    {
+      "preset": "Slacker Rock",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "none",
+          "gtr": "clean-chorus",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 이후 미국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Lo-fi Indie",
+        "pool": [
+          "jazbal_aaba",
+          "jazbal_abab"
+        ],
+        "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+      }
+    },
+    {
+      "preset": "Alternative Rock",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-pad",
+          "keys2": "strings",
+          "gtr": "crunch-fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Grunge",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Indie Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Noise Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rock_aabb",
+          "rock_aaba",
+          "rock_abab"
+        ],
+        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+      }
+    },
+    {
+      "preset": "Grunge",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-pad",
+          "keys2": "strings",
+          "gtr": "crunch-fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Indie Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Noise Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Alternative Rock",
+        "pool": [
+          "rock_aabb",
+          "rock_aaba",
+          "rock_abab"
+        ],
+        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+      }
+    },
+    {
+      "preset": "Indie Rock",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-pad",
+          "keys2": "strings",
+          "gtr": "crunch-fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Grunge",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Noise Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Alternative Rock",
+        "pool": [
+          "rock_aabb",
+          "rock_aaba",
+          "rock_abab"
+        ],
+        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+      }
+    },
+    {
+      "preset": "Noise Rock",
+      "sub": "Alternative",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-pad",
+          "keys2": "strings",
+          "gtr": "crunch-fuzz",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Country Rock",
+            "axis": "melody",
+            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Grunge",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Indie Rock",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Alternative Rock",
+        "pool": [
+          "rock_aabb",
+          "rock_aaba",
+          "rock_abab"
+        ],
+        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+      }
+    },
+    {
+      "preset": "Country Rock",
+      "sub": "루츠와의 교차",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "pedal-steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 미국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Motorik",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Space Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Southern Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Rock & Roll",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Surf Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Garage Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Post-punk",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Emo",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Shoegaze",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Britpop",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          },
+          {
+            "from": "Alternative Rock",
+            "axis": "melody",
+            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rootbl_aabb",
+          "rootbl_aaba",
+          "root_aabb"
+        ],
+        "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+      }
+    }
+  ]
+}
