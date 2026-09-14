@@ -30,7 +30,9 @@
 
   <div class="library">
     <span class="lbl">Pattern Library — <span id="libtotal">…종</span> · <span id="libcount">…종 표시</span>
-      · <i style="font-style:normal;color:var(--silk-dim)">·붙은 칩은 규칙 파생(청감 미검증) · 붉은 칩은 Tone.js 예제</i></span>
+      · <i style="font-style:normal;color:var(--silk-dim)">·붙은 칩은 규칙 파생(청감 미검증) · 붉은 칩은 Tone.js 예제</i>
+      <button class="util" id="whybtn" title="이 프리셋이 무엇에서 나왔는가 (E)" style="margin-left:8px">근거</button>
+      <a class="util" id="bblink" href="billboard.html" target="_blank" rel="noopener" title="빌보드 차트 조회">빌보드</a></span>
     <div class="chips" id="cats" style="margin-bottom:7px"></div>
     <div class="chips" id="subs" style="margin-bottom:9px" hidden></div>
     <div class="chips" id="chips" style="max-height:220px;overflow-y:auto"></div>
@@ -431,6 +433,13 @@
   </div>
 </main>
 
+<div id="why" role="dialog" aria-modal="true" aria-labelledby="whytitle">
+  <div class="card">
+    <div id="whybody"></div>
+    <button class="util close" id="whyclose">닫기</button>
+  </div>
+</div>
+
 <div id="help" role="dialog" aria-modal="true" aria-labelledby="helptitle">
   <div class="card">
     <h2 id="helptitle">단축키</h2>
@@ -471,6 +480,8 @@
 <script src="src/data/presets/11-world.js"></script>
 <script src="src/data/presets/12-example.js"></script>
 <script src="src/data/presets/_build.js"></script>
+<script src="src/data/billboard.js"></script>
+<script src="src/data/profiles.js"></script>
 <script src="src/data/fills.js"></script>
 <script src="src/data/melody.js"></script>
 <script src="src/data/harmony.js"></script>
@@ -492,5 +503,6 @@
 <script src="src/ui/meters.js"></script>
 <script src="src/ui/build.js"></script>
 <script src="src/ui/edit.js"></script>
+<script src="src/ui/evidence.js"></script>
 <script src="src/ui/events.js"></script>
 <script src="src/main.js"></script>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>빌보드 차트 조회 — PULSE·16</title>
+<!-- 빈 파비콘 — 없으면 브라우저가 매 로드마다 favicon.ico 404 를 남긴다 -->
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles/fonts.css">
+<link rel="stylesheet" href="styles/tokens.css">
+<style>
+/* 이 페이지만 쓰는 최소 레이아웃. 앱의 토큰(tokens.css)을 그대로 쓴다 —
+   색을 따로 정의하면 두 페이지가 곧 어긋난다. */
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--silk);
+     font-family:'Barlow',system-ui,sans-serif;font-size:14px;line-height:1.5}
+header{padding:20px 24px 14px;border-bottom:1px solid var(--line)}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:600;
+   margin:0 0 4px;letter-spacing:.02em}
+.sub{font-family:'Space Mono',monospace;font-size:11px;color:var(--silk-dim);margin:0}
+.sub a{color:var(--live)}
+main{padding:16px 24px 60px;max-width:1100px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+select,input[type=search]{background:var(--panel);color:var(--silk);
+  border:1px solid var(--line);border-radius:6px;padding:6px 9px;font:inherit;font-size:12.5px}
+input[type=search]{min-width:200px}
+label{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--silk-dim);
+      display:flex;flex-direction:column;gap:3px}
+.count{font-family:'Space Mono',monospace;font-size:11px;color:var(--live);margin-left:auto}
+table{width:100%;border-collapse:collapse}
+th{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+   color:var(--silk-dim);text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);
+   position:sticky;top:0;background:var(--bg)}
+td{padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.045);font-size:13px;vertical-align:top}
+tr:hover td{background:rgba(255,255,255,.03)}
+.y{font-family:'Space Mono',monospace;font-size:11px;color:var(--live);white-space:nowrap}
+.ar{color:var(--silk-dim)}
+.tag{font-family:'Space Mono',monospace;font-size:10px;border:1px solid var(--line);
+     border-radius:3px;padding:1px 5px;white-space:nowrap;color:var(--silk-dim)}
+.note{font-family:'Space Mono',monospace;font-size:9.5px;color:var(--live);margin-left:5px}
+.empty{padding:40px 8px;color:var(--silk-dim);text-align:center}
+.foot{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);
+      font-size:12px;color:var(--silk-dim);line-height:1.6;max-width:760px}
+.foot b{color:var(--silk)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>빌보드 차트 조회</h1>
+  <p class="sub">Hot 100 1위 싱글 · Billboard 200 1위 앨범 · 1960~2020년대
+    — <a href="pulse16-mk16.html">PULSE·16 으로 돌아가기</a></p>
+</header>
+
+<main>
+  <div class="bar">
+    <label>차트<select id="chart">
+      <option value="all">전체</option>
+      <option value="hot100">Hot 100 (싱글)</option>
+      <option value="bb200">Billboard 200 (앨범)</option>
+    </select></label>
+    <label>연대<select id="decade"><option value="all">전체</option></select></label>
+    <label>계열<select id="cat"><option value="all">전체</option></select></label>
+    <label>장르<select id="genre"><option value="all">전체</option></select></label>
+    <label>검색<input type="search" id="q" placeholder="곡·앨범·아티스트"></label>
+    <span class="count" id="count"></span>
+  </div>
+
+  <table>
+    <thead><tr><th style="width:62px">연도</th><th>제목</th><th style="width:26%">아티스트</th>
+      <th style="width:150px">장르</th><th style="width:78px">차트</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" hidden>조건에 맞는 항목이 없습니다.</div>
+
+  <div class="foot">
+    <p><b>출처</b>는 위키백과 연도별 차트 1위 목록입니다. 곡명·아티스트·순서는 그대로 가져왔습니다.
+      <b>BPM·조성은 없습니다</b> — 차트 문서에 그 정보가 없고, 1,000곡 넘는 곡을 개별 계측하는 것은
+      현실적이지 않아서입니다. 추측으로 채우면 그 위에 만든 패턴이 틀린 기반을 갖게 됩니다.</p>
+    <p><b>장르 표기는 신뢰도가 다릅니다.</b> 곡명과 달리 차트 문서에서 가져온 값이 아니라,
+      통용되는 분류를 <code>genres/</code> 계통도에 맞춰 붙인 것입니다. 1위 곡은 대개 여러 장르에
+      걸쳐 있어서 한 칸에 넣으면 반드시 뭔가가 잘립니다. <b>패턴을 만드는 근거로 쓰지 말고,
+      어느 장르를 들어 볼지 고르는 입구로만 쓰세요.</b></p>
+    <p><b>차트 1위가 그 장르의 전형은 아닙니다.</b> 1위는 대중성이 극대화된 지점이라
+      장르 관습에서 벗어난 경우가 많습니다. 장르의 표준은 <code>genres/</code> 를,
+      실제 히트의 감각은 여기를 보세요. 자세한 것은 <code>billboard/README.md</code> 에 있습니다.</p>
+  </div>
+</main>
+
+<!-- 생성물. tools/build-refdata.mjs 가 billboard/*.md 에서 만듭니다. -->
+<script src="src/data/billboard.js"></script>
+<script>
+'use strict';
+/* file:// 로도 열려야 하므로 fetch 없이 위 스크립트 하나만 읽는다. */
+
+const CAT_KR = {A:'록',B:'팝',C:'힙합',D:'R&B·소울·펑크',E:'일렉트로닉',F:'재즈',
+                G:'블루스·컨트리·포크',H:'라틴',I:'카리브',J:'아프리카',K:'기타 지역'};
+
+const ALL = [
+  ...BILLBOARD.hot100.map(r => r.concat(['hot100'])),
+  ...BILLBOARD.bb200.map(r => r.concat(['bb200'])),
+];
+const CHART_KR = {hot100:'Hot 100', bb200:'BB 200'};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ── 필터 채우기 ── */
+const decades = [...new Set(ALL.map(r => Math.floor(r[0]/10)*10))].sort();
+for (const d of decades) $('decade').add(new Option(`${d}년대`, d));
+for (const c of [...new Set(ALL.map(r => r[3]))].sort())
+  $('cat').add(new Option(`${c} · ${CAT_KR[c]||c}`, c));
+
+function fillGenres(){
+  const cat = $('cat').value;
+  const cur = $('genre').value;
+  const list = [...new Set(ALL.filter(r => cat==='all' || r[3]===cat).map(r => r[4]))].sort();
+  $('genre').length = 1;
+  for (const g of list) $('genre').add(new Option(g, g));
+  $('genre').value = list.includes(cur) ? cur : 'all';
+}
+
+function render(){
+  const chart = $('chart').value, dec = $('decade').value,
+        cat = $('cat').value, genre = $('genre').value,
+        q = $('q').value.trim().toLowerCase();
+  const rows = ALL.filter(r =>
+       (chart==='all' || r[6]===chart)
+    && (dec==='all'   || Math.floor(r[0]/10)*10 === +dec)
+    && (cat==='all'   || r[3]===cat)
+    && (genre==='all' || r[4]===genre)
+    && (!q || r[1].toLowerCase().includes(q) || r[2].toLowerCase().includes(q)))
+    .sort((a,b) => a[0]-b[0] || a[1].localeCompare(b[1]));
+
+  $('count').textContent = `${rows.length.toLocaleString()}건 / 전체 ${ALL.length.toLocaleString()}건`;
+  $('empty').hidden = rows.length > 0;
+  /* 한 번에 다 그리면 2,530행이라 느리다 — 1,200행에서 끊는다 */
+  const cut = rows.slice(0, 1200);
+  $('rows').innerHTML = cut.map(r =>
+    `<tr><td class="y">${r[0]}</td><td>${esc(r[1])}${r[5]?`<span class="note">${esc(r[5])}</span>`:''}</td>`
+    + `<td class="ar">${esc(r[2])}</td>`
+    + `<td><span class="tag">${r[3]} · ${esc(r[4])}</span></td>`
+    + `<td><span class="tag">${CHART_KR[r[6]]}</span></td></tr>`).join('');
+  if (rows.length > cut.length)
+    $('rows').insertAdjacentHTML('beforeend',
+      `<tr><td colspan="5" class="empty">${rows.length - cut.length}건 더 있습니다 — 조건을 좁혀 주세요.</td></tr>`);
+}
+
+$('cat').onchange = () => { fillGenres(); render(); };
+for (const id of ['chart','decade','genre']) $(id).onchange = render;
+$('q').oninput = render;
+
+/* 앱의 근거 패널에서 ?genre=Dancehall 로 넘어올 수 있다 */
+const qs = new URLSearchParams(location.search);
+fillGenres();
+if (qs.get('genre')) {
+  const g = qs.get('genre');
+  if ([...$('genre').options].some(o => o.value === g)) $('genre').value = g;
+}
+render();
+</script>
+</body>
+</html>

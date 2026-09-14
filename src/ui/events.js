@@ -65,7 +65,8 @@ UI.play.onclick = () => playing ? stop() : start();
 addEventListener('keydown', e => {
   const typing = /INPUT|SELECT|TEXTAREA/.test(e.target.tagName);
 
-  if(e.key==='Escape'){ UI.help.classList.remove('on'); return; }
+  if(e.key==='Escape'){ UI.help.classList.remove('on'); hideEvidence(); return; }
+  if(e.key==='e' || e.key==='E'){ e.preventDefault(); showEvidence(); return; }
   if(e.key==='?'){ e.preventDefault(); UI.help.classList.toggle('on'); return; }
   if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='z'){
     e.preventDefault();
@@ -93,6 +94,11 @@ document.querySelectorAll('.pbtn').forEach(b => {
 /* ── 실행취소 · 저장 · 도움말 ── */
 UI.undo.onclick = doUndo;
 UI.redo.onclick = doRedo;
+/* 근거 패널 — 이 프리셋이 무엇에서 나왔는가 (src/ui/evidence.js) */
+UI.whybtn.onclick = showEvidence;
+UI.whyclose.onclick = hideEvidence;
+UI.why.onclick = e => { if(e.target===UI.why) hideEvidence(); };
+
 UI.helpbtn.onclick = () => UI.help.classList.add('on');
 UI.helpclose.onclick = () => UI.help.classList.remove('on');
 UI.help.onclick = e => { if(e.target===UI.help) UI.help.classList.remove('on'); };

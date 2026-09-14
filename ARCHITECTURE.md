@@ -30,6 +30,8 @@ ES 모듈이 아니라 평범한 `<script src>` 입니다. 이유가 둘입니�
 곧 의존 순서입니다.
 
 ```
+billboard.html         빌보드 차트 조회 페이지 — 앱과 독립이고, 아래 data/ 의
+                       생성된 차트 스크립트 하나만 읽는다
 pulse16-mk16.html      마크업 + link/script 목록 (490줄 안팎 — 계속 자랍니다,
                         정확한 숫자는 굳이 맞추지 말고 grep 으로 확인하세요)
 
@@ -66,6 +68,12 @@ src/
       01-rock.js …         장르별 프리셋. Object.assign(RAW, {…})
       12-example.js
       _build.js            RAW → LIB 전개. 장르 파일 뒤에 와야 한다
+    billboard.js            (생성물) 빌보드 Hot 100·BB 200 1위 2,530건.
+                           tools/build-refdata.mjs 가 billboard/*.md 에서 만든다 —
+                           손으로 고치지 말 것. file:// 로 열려야 해서 마크다운을
+                           fetch 할 수 없으므로 스크립트로 굳혀 둔다
+    profiles.js             (생성물) 장르 프로파일. genres/profiles/*.json 에서
+                           같은 이유로 굳힌다. ⚠ 곡·아티스트 이름은 없다
     fills.js                필인 라이브러리(FILLS) · fillPoolFor()
     melody.js               16마디 선율·리프·베이스 라이브러리(MELODY·RIFF·
                            BLINE) · PHRASE·FORM(프레이즈 결합 폼, 곡 구조의
@@ -101,6 +109,12 @@ src/
     meters.js          §11 화면 갱신 · 미터
     build.js           §12 UI 구성
     edit.js            §12.5 실행취소 · 자동 저장 · 패널 · 드래그
+    evidence.js        §15 근거 패널 — 이 프리셋이 무엇에서 나왔는가.
+                           위는 프로파일에서 뽑은 수치, 아래는 그 장르로 태그된
+                           실제 빌보드 1위 곡. 둘의 성격이 다르다는 것을
+                           패널에 적어 둔다 (참고한 곡이 아니라 1위 기록이다).
+                           ⚠ events.js 가 로드 시점에 showEvidence 를 바인딩하므로
+                             **반드시 events.js 앞**에 와야 한다
     events.js          §13 이벤트 바인딩
   main.js              §14 초기화 — 유일하게 실행하는 파일
 
@@ -111,6 +125,9 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   verify-*.html        DSP 단위 검증
   _app-harness.js      src/ 를 직접 로드해 위 하네스들에게 진짜 앱 그래프를
                        내어주는 공용 모듈 (아래 "주의" 참고)
+  build-refdata.mjs    billboard/*.md + genres/profiles/*.json →
+                       src/data/billboard.js · src/data/profiles.js 로 굳힌다.
+                       원본을 고쳤으면 이것을 다시 돌려야 한다
   render-melody.mjs    **선율을 켠 채** 녹음해 renders/ 에 WAV 를 남긴다.
                        melOn 기본값이 false 라 mcp 의 render_wav 로는 16마디
                        선율이 한 음도 안 난다 — MELODY·RIFF·BLINE 을 고치고
