@@ -1,0 +1,5882 @@
+{
+  "batch": "A14",
+  "sub": "Caribbean · African (계열 I·J)",
+  "cat": "I",
+  "date": "2026-09-15",
+  "verdict": "37종 → 17무리. 카리브 17 · 아프리카 20 을 한 배치로 돌렸다.",
+  "profiles": [
+    {
+      "preset": "Roots Reggae",
+      "sub": "Reggae 갈래",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "horns-choir-trombone",
+          "gtr": "skank",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 자메이카 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Reggae One Drop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rockers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Steppers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "car_aaba",
+          "car_aabb",
+          "car_abab"
+        ],
+        "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Reggae One Drop",
+      "sub": "자메이카",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "horns-choir-trombone",
+          "gtr": "skank",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 자메이카 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Roots Reggae",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rockers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Steppers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Roots Reggae",
+        "pool": [
+          "car_aaba",
+          "car_aabb",
+          "car_abab"
+        ],
+        "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Rockers",
+      "sub": "Reggae 갈래",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "horns-choir-trombone",
+          "gtr": "skank",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 자메이카 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Roots Reggae",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Reggae One Drop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Steppers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Roots Reggae",
+        "pool": [
+          "car_aaba",
+          "car_aabb",
+          "car_abab"
+        ],
+        "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Steppers",
+      "sub": "Reggae 갈래",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "horns-choir-trombone",
+          "gtr": "skank",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 자메이카 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+          },
+          {
+            "from": "Roots Reggae",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Reggae One Drop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rockers",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Roots Reggae",
+        "pool": [
+          "car_aaba",
+          "car_aabb",
+          "car_abab"
+        ],
+        "note": "75~80 BPM 에 원드롭. 오르간 버블과 스킹크가 스텝 2·6·10·14 에만 들어가고 베이스가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Lovers Rock",
+      "sub": "Reggae 갈래",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "strings",
+          "gtr": "skank",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "bal_aabb",
+          "amb_aaba"
+        ],
+        "note": "EP 와 현이 깔린 부드러운 레게. 루츠 형제와 골격은 같은데 노래가 앞이고 음이 절반이다"
+      }
+    },
+    {
+      "preset": "Ska",
+      "sub": "자메이카",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns",
+          "keys2": "trombone",
+          "gtr": "skank-up",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 자메이카 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_aaab",
+          "lat_aabb",
+          "car_aabb"
+        ],
+        "note": "140 BPM 에 혼 섹션과 워킹 베이스. 레게의 절반 속도가 아니라 두 배다 — 이쪽이 먼저다"
+      }
+    },
+    {
+      "preset": "Rocksteady",
+      "sub": "자메이카",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-flute",
+          "keys2": "sax-horns",
+          "gtr": "skank-banjo",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 후반 자메이카 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Mento",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "car_aabb",
+          "blues_aabb",
+          "lat_abab"
+        ],
+        "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+      }
+    },
+    {
+      "preset": "Mento",
+      "sub": "자메이카",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-flute",
+          "keys2": "sax-horns",
+          "gtr": "skank-banjo",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 후반 자메이카 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Rocksteady",
+        "pool": [
+          "car_aabb",
+          "blues_aabb",
+          "lat_abab"
+        ],
+        "note": "스카와 레게 사이의 90~115 BPM. 밴조·플루트가 섞여 형제들보다 어쿠스틱하다"
+      }
+    },
+    {
+      "preset": "Soca",
+      "sub": "트리니다드 · 바베이도스",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "steelpan-brass",
+          "keys2": "brass-steelpan",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 트리니다드 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Power Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_aabb",
+          "afr_abab",
+          "car_abab"
+        ],
+        "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+      }
+    },
+    {
+      "preset": "Power Soca",
+      "sub": "트리니다드 · 바베이도스",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "steelpan-brass",
+          "keys2": "brass-steelpan",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 트리니다드 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+          },
+          {
+            "from": "Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Soca",
+        "pool": [
+          "afr_aabb",
+          "afr_abab",
+          "car_abab"
+        ],
+        "note": "155~168 BPM 에 스틸팬과 관악. 카리브에서 가장 빠르고 상행으로 달아오른다"
+      }
+    },
+    {
+      "preset": "Calypso",
+      "sub": "트리니다드 · 바베이도스",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "steelpan-accordion",
+          "keys2": "clarinet-sax-steelpan",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 트리니다드 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Groovy Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chutney Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "car_aabb",
+          "lat_aabb",
+          "latbos_aabb"
+        ],
+        "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+      }
+    },
+    {
+      "preset": "Groovy Soca",
+      "sub": "트리니다드 · 바베이도스",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "steelpan-accordion",
+          "keys2": "clarinet-sax-steelpan",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 트리니다드 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Chutney Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Calypso",
+        "pool": [
+          "car_aabb",
+          "lat_aabb",
+          "latbos_aabb"
+        ],
+        "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+      }
+    },
+    {
+      "preset": "Chutney Soca",
+      "sub": "트리니다드 · 바베이도스",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "steelpan-accordion",
+          "keys2": "clarinet-sax-steelpan",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 트리니다드 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Groovy Soca",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Calypso",
+        "pool": [
+          "car_aabb",
+          "lat_aabb",
+          "latbos_aabb"
+        ],
+        "note": "125~145 BPM 으로 소카보다 느긋하다. 클라리넷·아코디언이 섞여 옛 어법이 남아 있다"
+      }
+    },
+    {
+      "preset": "Zouk",
+      "sub": "프랑스어권 카리브",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "brass-sax-flute",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 앤틸리스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Kompa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Zouk Love",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "latbos_aabb",
+          "bos_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+      }
+    },
+    {
+      "preset": "Kompa",
+      "sub": "프랑스어권 카리브",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "brass-sax-flute",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 앤틸리스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Zouk Love",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Zouk",
+        "pool": [
+          "latbos_aabb",
+          "bos_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+      }
+    },
+    {
+      "preset": "Zouk Love",
+      "sub": "프랑스어권 카리브",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.1,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "brass-sax-flute",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 앤틸리스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Kompa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Zouk",
+        "pool": [
+          "latbos_aabb",
+          "bos_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "EP 9화음에 부드러운 싱코페. 프랑스어권 카리브라 자메이카 형제보다 화성이 두껍다"
+      }
+    },
+    {
+      "preset": "Bouyon",
+      "sub": "프랑스어권 카리브",
+      "cat": "I",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "steelpan",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1980년대 이후 도미니카섬 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_abab",
+          "car_abab",
+          "afr_aaab"
+        ],
+        "note": "135 BPM 에 신스 리드와 스틸팬. 주크 형제와 달리 화성이 얇고 타악이 앞이다"
+      }
+    },
+    {
+      "preset": "Afrobeats",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "strings-marimba-kalimba",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 나이지리아·가나 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Hiplife",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Coupé-décalé",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_aabb",
+          "afr_aaab",
+          "afr_abab"
+        ],
+        "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+      }
+    },
+    {
+      "preset": "Hiplife",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "strings-marimba-kalimba",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 나이지리아·가나 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Coupé-décalé",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Afrobeats",
+        "pool": [
+          "afr_aabb",
+          "afr_aaab",
+          "afr_abab"
+        ],
+        "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+      }
+    },
+    {
+      "preset": "Coupé-décalé",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "strings-marimba-kalimba",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 나이지리아·가나 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hiplife",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Afrobeats",
+        "pool": [
+          "afr_aabb",
+          "afr_aaab",
+          "afr_abab"
+        ],
+        "note": "벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다. 서아프리카 팝의 현재형이다"
+      }
+    },
+    {
+      "preset": "Highlife",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "horns-kalimba",
+          "keys2": "trumpet-horns",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 가나·나이지리아 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Fuji",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "wor_aabb",
+          "afr_abab",
+          "lat_aaab"
+        ],
+        "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Fuji",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "horns-kalimba",
+          "keys2": "trumpet-horns",
+          "gtr": "highlife",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 가나·나이지리아 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Highlife",
+        "pool": [
+          "wor_aabb",
+          "afr_abab",
+          "lat_aaab"
+        ],
+        "note": "혼 섹션에 스윙 30. 아프로비츠보다 앞선 세대이고 기타가 선율을 맡는다"
+      }
+    },
+    {
+      "preset": "Desert Blues",
+      "sub": "서아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "flute",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 말리·니제르 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "blues_abab",
+          "rootbl_aaba",
+          "wor_aaba"
+        ],
+        "note": "크런치 기타가 순환 리프를 돈다. 아프리카에서 유일하게 블루스 어휘이고 하행이 잦다"
+      }
+    },
+    {
+      "preset": "Kwaito",
+      "sub": "남아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck-pad",
+          "keys2": "strings-kalimba",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 남아프리카 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Gqom",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Afro Tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "amb_aaab"
+        ],
+        "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+      }
+    },
+    {
+      "preset": "Gqom",
+      "sub": "남아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck-pad",
+          "keys2": "strings-kalimba",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 남아프리카 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Afro Tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Kwaito",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "amb_aaab"
+        ],
+        "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+      }
+    },
+    {
+      "preset": "Afro Tech",
+      "sub": "남아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck-pad",
+          "keys2": "strings-kalimba",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 남아프리카 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Gqom",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Kwaito",
+        "pool": [
+          "amb_aaba",
+          "amb_aabb",
+          "amb_aaab"
+        ],
+        "note": "느린 하우스에 타악이 얹힌다. 건반이 플럭 두세 음뿐이고 로그드럼 베이스가 몸이다"
+      }
+    },
+    {
+      "preset": "Mbaqanga",
+      "sub": "남아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-piano",
+          "keys2": "sax",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 남아프리카 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Marabi",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "wor_abab",
+          "afr_aabb",
+          "lat_aabb"
+        ],
+        "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Marabi",
+      "sub": "남아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-piano",
+          "keys2": "sax",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 남아프리카 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Mbaqanga",
+        "pool": [
+          "wor_abab",
+          "afr_aabb",
+          "lat_aabb"
+        ],
+        "note": "오르간·색소폰이 순환 화성을 돈다. 콰이토 형제와 달리 밴드 편성이라 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Soukous",
+      "sub": "중앙아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "marimba",
+          "keys2": "strings-brass",
+          "gtr": "soukous",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 콩고 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ndombolo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Congolese Rumba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_abab",
+          "afr_aabb",
+          "lat_abab"
+        ],
+        "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+      }
+    },
+    {
+      "preset": "Ndombolo",
+      "sub": "중앙아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "marimba",
+          "keys2": "strings-brass",
+          "gtr": "soukous",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 콩고 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Congolese Rumba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Soukous",
+        "pool": [
+          "afr_abab",
+          "afr_aabb",
+          "lat_abab"
+        ],
+        "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+      }
+    },
+    {
+      "preset": "Congolese Rumba",
+      "sub": "중앙아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "marimba",
+          "keys2": "strings-brass",
+          "gtr": "soukous",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 콩고 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Ndombolo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Soukous",
+        "pool": [
+          "afr_abab",
+          "afr_aabb",
+          "lat_abab"
+        ],
+        "note": "**기타 세 대가 얽히는 세베네가 정체성**이다. 115~145 BPM 에 쿠바 룸바의 혈통이 남아 있다"
+      }
+    },
+    {
+      "preset": "Ethio-jazz",
+      "sub": "동아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "strings",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960~70년대 에티오피아 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aaba",
+          "jazbal_aaba",
+          "jazz_abab"
+        ],
+        "note": "스윙 50 에 5음계 모드. 아프리카에서 유일하게 재즈 워킹 베이스를 쓴다"
+      }
+    },
+    {
+      "preset": "Bongo Flava",
+      "sub": "동아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep-lead",
+          "keys2": "marimba-bell",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2000년대 이후 탄자니아·케냐 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Gengetone",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_aaab",
+          "afr_aabb",
+          "car_aabb"
+        ],
+        "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+      }
+    },
+    {
+      "preset": "Gengetone",
+      "sub": "동아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "ep-lead",
+          "keys2": "marimba-bell",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2000년대 이후 탄자니아·케냐 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Raï",
+            "axis": "melody",
+            "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Bongo Flava",
+        "pool": [
+          "afr_aaab",
+          "afr_aabb",
+          "car_aabb"
+        ],
+        "note": "힙합·댄스홀이 동아프리카에서 만난 자리. 에티오 재즈 형제와 달리 스윙이 없다"
+      }
+    },
+    {
+      "preset": "Raï",
+      "sub": "북아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-ep-lead",
+          "keys2": "strings-clarinet-accordion",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 알제리·이집트 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Shaabi",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mahraganat",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "wor_aaba",
+          "worcin_aabb",
+          "wor_abab"
+        ],
+        "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+      }
+    },
+    {
+      "preset": "Shaabi",
+      "sub": "북아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-ep-lead",
+          "keys2": "strings-clarinet-accordion",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 알제리·이집트 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Raï",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mahraganat",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Raï",
+        "pool": [
+          "wor_aaba",
+          "worcin_aabb",
+          "wor_abab"
+        ],
+        "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+      }
+    },
+    {
+      "preset": "Mahraganat",
+      "sub": "북아프리카",
+      "cat": "J",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-ep-lead",
+          "keys2": "strings-clarinet-accordion",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 알제리·이집트 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Roots Reggae",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Lovers Rock",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ska",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Rocksteady",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soca",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Calypso",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Zouk",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bouyon",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Afrobeats",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Highlife",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Desert Blues",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Kwaito",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Mbaqanga",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Soukous",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Ethio-jazz",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Bongo Flava",
+            "axis": "melody",
+            "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+          },
+          {
+            "from": "Raï",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Shaabi",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Raï",
+        "pool": [
+          "wor_aaba",
+          "worcin_aabb",
+          "wor_abab"
+        ],
+        "note": "아코디언과 나일론에 장식음이 많다. 사하라 이남 형제들과 달리 마캄 어휘가 섞인다"
+      }
+    }
+  ]
+}

@@ -960,6 +960,347 @@ const MELODY_KIT_PRESET = {
   'UK Bhangra'              :['afr_aabb','afr_aaab','wor_aaba'],
   /* 스틸팬에 카리브 오프비트 */
   'Tropical Bass'           :['car_aabb','car_aaba','lat_abab'],
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
+     41종 → 24무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 샘플에 스윙 30~38 */
+  'Boom Bap'                :['hip_aaab','hip_aaba','hip_abab'],
+  'Golden Age'              :['hip_aaab','hip_aaba','hip_abab'],
+  'Hardcore Hip Hop'        :['hip_aaab','hip_aaba','hip_abab'],
+  /* 업라이트에 트럼펫 */
+  'Jazz Rap'                :['jazz_aaba','jazbal_aaba','jazz_abab'],
+  /* 108 BPM 에 디스코·펑크 루프 */
+  'Old School Hip Hop'      :['funk_aabb','funk_abab','funk_aaab'],
+  /* 현·합창이 깔리고 가사가 주역이다 */
+  'Conscious Hip Hop'       :['amb_aaba','amb_aabb','bal_aaba'],
+  'Horrorcore'              :['amb_aaba','amb_aabb','bal_aaba'],
+  /* 벨 오스티나토 두세 음이 훅이다 */
+  'Trap'                    :['trp_aaab','trp_aaba','trp_abab'],
+  'Plugg'                   :['trp_aaab','trp_aaba','trp_abab'],
+  /* 트랩 골격에 노래가 얹힌다 */
+  'Melodic Trap'            :['cinbal_aaba','cinbal_aabb','bal_aaba'],
+  'Pluggnb'                 :['cinbal_aaba','cinbal_aabb','bal_aaba'],
+  /* 디스토션 슈퍼소우가 리드다 */
+  'Rage'                    :['chip_aaab','chip_aabb','chip_abab'],
+  'Trap Metal'              :['chip_aaab','chip_aabb','chip_abab'],
+  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
+  'Mumble Rap'              :['afr_aabb','afr_aaab','lat_abab'],
+  /* 74~82 BPM 에 스윙 30~44 */
+  'Lo-fi'                   :['jazbal_aaba','jazbal_abab'],
+  'Chillhop'                :['jazbal_aaba','jazbal_abab'],
+  /* 스윙 50 에 피아노·색소폰 */
+  'Jazzhop'                 :['jazz_aaba','jazz_aabb','jazbal_abab'],
+  /* 140 BPM 에 스퀘어 신스 */
+  'Grime'                   :['chip_abab','chip_aabb','chip_aaab'],
+  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
+  'Afroswing'               :['afr_aabb','afr_abab','car_aabb'],
+  /* 어둡고 성기다 */
+  'UK Rap'                  :['amb_aaab','amb_aaba','bal_aabb'],
+  'Road Rap'                :['amb_aaab','amb_aaba','bal_aabb'],
+  /* **미끄러지는 808 이 선율을 맡는다 */
+  'UK Drill'                :['amb_aaba','amb_aabb','amb_aaab'],
+  'Chicago Drill'           :['amb_aaba','amb_aabb','amb_aaab'],
+  'NY / Bronx Drill'        :['amb_aaba','amb_aabb','amb_aaab'],
+  'Sample Drill'            :['amb_aaba','amb_aabb','amb_aaab'],
+  /* 저지 클럽 박자가 드릴에 얹힌다 */
+  'Jersey Drill'            :['gar_abab','gar_aabb','funk_abab'],
+  /* 로파이 카우벨에 어두운 벨 */
+  'Phonk'                   :['trp_aaab','trp_abab','amb_aabb'],
+  'Memphis Rap'             :['trp_aaab','trp_abab','amb_aabb'],
+  'Drift Phonk'             :['trp_aaab','trp_abab','amb_aabb'],
+  /* 떼창을 위한 신스 브라스 스탭 */
+  'Crunk'                   :['ant_aabb','ant_abab','ant_aaba'],
+  'Bounce'                  :['ant_aabb','ant_abab','ant_aaba'],
+  /* 808 일렉트로에 빠른 신스 */
+  'Miami Bass'              :['dis_aabb','dis_abab','dis_aaab'],
+  'Booty Bass'              :['dis_aabb','dis_abab','dis_aaab'],
+  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
+  'Snap'                    :['amb_aaba','amb_aaab','amb_aabb'],
+  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
+  'G-Funk'                  :['funk_abab','funk_aabb','disfun_abab'],
+  /* 103~110 BPM 에 바운시한 신스 */
+  'Hyphy'                   :['gar_aabb','gar_abab','funk_aaab'],
+  'Jerk'                    :['gar_aabb','gar_abab','funk_aaab'],
+  /* 70 BPM 에 패드와 합창뿐 */
+  'Cloud Rap'               :['amb_aaba','amb_aabb','bal_aaba'],
+  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
+  'Emo Rap'                 :['bal_aaba','bal_aabb','bal_abab'],
+  'SoundCloud Rap'          :['bal_aaba','bal_aabb','bal_abab'],
+  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
+  'Brazilian Phonk'         :['lat_abab','lat_aabb','car_aabb'],
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
+     24종 → 16무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 클라비넷 16분에 슬랩 */
+  'Funk'                    :['funk_aabb','funk_abab','funk_aaab'],
+  'JB Funk'                 :['funk_aabb','funk_abab','funk_aaab'],
+  /* 현이 옥타브로 오르내린다 */
+  'Disco Funk'              :['dis_aabb','dis_abab','dis_aaab'],
+  'Post-disco'              :['dis_aabb','dis_abab','dis_aaab'],
+  /* 보코더와 무그가 앞에 선다 */
+  'P-Funk'                  :['funk_abab','disfun_abab','funk_aaab'],
+  'Electro-funk'            :['funk_abab','disfun_abab','funk_aaab'],
+  /* 슬랩에 트럼펫과 EP */
+  'Jazz-Funk'               :['jazz_aabb','jazz_abab','jazbal_abab'],
+  /* 디스코가 신스로 넘어간 자리 */
+  'Boogie'                  :['dis_abab','dis_aaab','dis_aabb'],
+  /* 스윙 34 에 신스 브라스 */
+  'New Jack Swing'          :['funk_aaab','funk_aabb','disfun_abab'],
+  /* 72~75 BPM */
+  'Quiet Storm'             :['bal_aaba','bal_aabb','amb_aaba'],
+  'Alternative R&B'         :['bal_aaba','bal_aabb','amb_aaba'],
+  /* 스윙 30 에 EP 9화음 */
+  '90s R&B'                 :['cinbal_aaba','cinbal_aabb','bal_abab'],
+  'Hip Hop Soul'            :['cinbal_aaba','cinbal_aabb','bal_abab'],
+  /* 808 에 R&B 보컬 */
+  'Trap Soul'               :['trp_aaba','trp_aaab','trp_abab'],
+  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
+  'Motown'                  :['pop_aabb','pop_aaba','pop_abab'],
+  'Northern Soul'           :['pop_aabb','pop_aaba','pop_abab'],
+  /* 현과 하프의 스위트 사운드 */
+  'Philadelphia Soul'       :['cin_aaba','cin_aabb','cin_abab'],
+  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
+  'Memphis Soul'            :['blues_aaba','blues_aabb','rootbl_aabb'],
+  /* 와우 기타와 오르간 */
+  'Psychedelic Soul'        :['funk_aabb','disfun_aabb','funk_abab'],
+  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
+  'Disco'                   :['dis_aabb','dis_abab','dis_aaab'],
+  'Euro Disco'              :['dis_aabb','dis_abab','dis_aaab'],
+  /* 124~134 BPM 에 신스 리드 */
+  'Hi-NRG'                  :['chip_aabb','chip_abab','chip_aaab'],
+  'Italo Disco'             :['chip_aabb','chip_abab','chip_aaab'],
+  /* 스윙 30 에 혼과 피아노 */
+  'Rhythm & Blues'          :['blues_abab','blues_aaba','root_aaba'],
+  /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
+     32종 → 18무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 워킹 베이스에 스윙 */
+  'West Coast Jazz'         :['jazz_abab','jazz_aaba','jazz_aabb'],
+  'Soul Jazz'               :['jazz_abab','jazz_aaba','jazz_aabb'],
+  /* 프렛리스에 13화음 */
+  'Jazz Fusion'             :['jazz_aabb','jazbal_abab','jazz_abab'],
+  /* 색소폰이 패드 위를 걷는다 */
+  'Smooth Jazz'             :['bal_aaba','cinbal_aaba','cinbal_aabb'],
+  /* 와우 기타와 오르간에 스윙 30 */
+  'Acid Jazz'               :['jazbal_abab','jazz_aaba','jazbal_aaba'],
+  /* 170~190 BPM 에 클라베 */
+  'Latin Jazz'              :['lat_aabb','lat_abab','latbos_aabb'],
+  'Afro-Cuban Jazz'         :['lat_aabb','lat_abab','latbos_aabb'],
+  /* 나일론 기타에 긴 음 */
+  'Bossa Jazz'              :['bos_aabb','bos_aaba','bos_abab'],
+  'Samba Jazz'              :['bos_aabb','bos_aaba','bos_abab'],
+  /* 스윙 30~50 의 셔플에 하모니카·크런치 기타 */
+  'Chicago Blues'           :['blues_aaba','blues_aabb','blues_abab'],
+  'Electric Blues'          :['blues_aaba','blues_aabb','blues_abab'],
+  'Texas Blues'             :['blues_aaba','blues_aabb','blues_abab'],
+  /* 160 BPM 에 혼 섹션과 업라이트 */
+  'Jump Blues'              :['jazz_aaba','jazbal_aaba','jazz_abab'],
+  /* 스윙 0 의 스트레이트 */
+  'Blues Rock'              :['rootbl_aabb','rootbl_aaba','rock_aabb'],
+  /* 90 BPM 에 리조네이터와 덜시머 */
+  'Country Blues'           :['root_aaba','rootbl_aaba','blues_aaba'],
+  /* 붐칙 베이스에 피아노·밴조 */
+  'Honky-tonk'              :['root_aaba','root_aabb','root_abab'],
+  'Old-time / Hillbilly'    :['root_aaba','root_aabb','root_abab'],
+  /* 150 BPM 에 만돌린 트레몰로 */
+  'Bluegrass'               :['jazz_aabb','root_abab','jazbal_abab'],
+  /* 현과 합창으로 컨트리를 팝으로 다듬은 자리 */
+  'Nashville Sound'         :['pop_aaba','pop_aabb','cinbal_aaba'],
+  'Countrypolitan'          :['pop_aaba','pop_aabb','cinbal_aaba'],
+  'Country Pop'             :['pop_aaba','pop_aabb','cinbal_aaba'],
+  /* 내슈빌의 매끈함을 거부한 계보 */
+  'Outlaw Country'          :['rootbl_aaba','rootbl_aabb','root_aabb'],
+  'Alt-country'             :['rootbl_aaba','rootbl_aabb','root_aabb'],
+  'Americana'               :['rootbl_aaba','rootbl_aabb','root_aabb'],
+  /* 크런치 기타에 신스 리드 */
+  'Bro-country'             :['rock_aaba','rock_aabb','rock_abab'],
+  /* 스틸 기타 아르페지오에 업라이트 */
+  'Folk Revival'            :['root_aabb','root_aaba','worcin_aaba'],
+  'Indie Folk'              :['root_aabb','root_aaba','worcin_aaba'],
+  /* 12현에 드럼이 들어온다 */
+  'Folk Rock'               :['rock_aabb','rock_abab','root_abab'],
+  /* 오르간 코드 스웰과 합창 */
+  'Gospel'                  :['gos_aabb','gos_aaba','gos_abab'],
+  /* 아코디언과 워시보드에 140 BPM */
+  'Zydeco / Cajun'          :['wor_aabb','wor_abab','afr_abab'],
+  /* 돌 리듬에 시타르 */
+  'Bhangra'                 :['afr_abab','afr_aabb','wor_abab'],
+  /* 여러 지역 타악을 베이스 뮤직 위에 얹는다 */
+  'Global Bass'             :['car_aabb','lat_abab','car_abab'],
+  /* E. Electronic 나머지 (계열 E) — 2026-09-15 배치 A12
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 플럭 몇 음이 루프를 돈다 */
+  'Techno'                  :['amb_aaba','amb_aaab','amb_aabb'],
+  'Hardgroove'              :['amb_aaba','amb_aaab','amb_aabb'],
+  'Microhouse'              :['amb_aaba','amb_aaab','amb_aabb'],
+  /* 패드 코드가 길게 깔린다 */
+  'Detroit Techno'          :['bal_aaba','bal_aabb','amb_aaba'],
+  'Dub Techno'              :['bal_aaba','bal_aabb','amb_aaba'],
+  /* 303 이 선율을 맡는다 */
+  'Acid Techno'             :['amb_aaab','amb_aabb','amb_aaba'],
+  /* 150~155 BPM 에 왜곡 리드 */
+  'Hard Techno'             :['chip_aaab','chip_abab','chip_aabb'],
+  'Schranz'                 :['chip_aaab','chip_abab','chip_aabb'],
+  'Industrial'              :['chip_aaab','chip_abab','chip_aabb'],
+  /* 벨 한두 음이 16분 격자에서 자리를 바꾼다 */
+  'Minimal Techno'          :['amb_aabb','amb_aaba','bal_aabb'],
+  /* 174 BPM 이지만 화성은 하프타임으로 느리게 흐른다 */
+  'Drum & Bass'             :['bal_aaba','amb_aaba','bal_aabb'],
+  'Liquid Funk'             :['bal_aaba','amb_aaba','bal_aabb'],
+  'Halftime DnB'            :['bal_aaba','amb_aaba','bal_aabb'],
+  /* 리스 베이스가 주역이고 신스가 위에서 쏘아 댄다 */
+  'Neurofunk'               :['chip_abab','chip_aabb','chip_aaab'],
+  'Techstep'                :['chip_abab','chip_aabb','chip_aaab'],
+  'Jump-up'                 :['chip_abab','chip_aabb','chip_aaab'],
+  /* 브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다 */
+  'Jungle'                  :['amb_aabb','amb_aaab','amb_aaba'],
+  'Drumfunk'                :['amb_aabb','amb_aaab','amb_aaba'],
+  /* 펑크 브레이크에 록 기타 */
+  'Big Beat'                :['funk_aabb','funk_abab','funk_aaab'],
+  'Nu Skool Breaks'         :['funk_aabb','funk_abab','funk_aaab'],
+  /* 슈퍼소우가 긴 상행으로 쌓아 올린다 */
+  'Trance'                  :['dis_aabb','dis_abab','dis_aaab'],
+  'Uplifting Trance'        :['dis_aabb','dis_abab','dis_aaab'],
+  'Hard Trance'             :['dis_aabb','dis_abab','dis_aaab'],
+  /* 303 계열 베이스가 16분을 쉬지 않고 구른다 */
+  'Psytrance'               :['chip_aaab','chip_abab','chip_aabb'],
+  'Goa'                     :['chip_aaab','chip_abab','chip_aabb'],
+  'Full-on'                 :['chip_aaab','chip_abab','chip_aabb'],
+  'Forest'                  :['chip_aaab','chip_abab','chip_aabb'],
+  'Hi-tech'                 :['chip_aaab','chip_abab','chip_aabb'],
+  /* 리버스 베이스에 앤섬 리드 */
+  'Hardstyle'               :['ant_aabb','ant_abab','ant_aaba'],
+  'Rawstyle'                :['ant_aabb','ant_abab','ant_aaba'],
+  /* 132 BPM 에 패드가 천천히 열린다 */
+  'Progressive Trance'      :['amb_aaba','bal_aaba','amb_aabb'],
+  /* 180~205 BPM 에 왜곡 킥 */
+  'Gabber'                  :['chip_abab','chip_aaab','chip_aabb'],
+  'Hardcore Techno'         :['chip_abab','chip_aaab','chip_aabb'],
+  'Frenchcore'              :['chip_abab','chip_aaab','chip_aabb'],
+  /* 피아노 스탭에 밝은 훅 */
+  'Happy Hardcore'          :['dis_aaab','dis_aabb','dis_abab'],
+  'Breakbeat Hardcore'      :['dis_aaab','dis_aabb','dis_abab'],
+  /* 디스코를 현대 장비로 다시 만든 자리 */
+  'Nu-disco'                :['dis_abab','dis_aabb','dis_aaab'],
+  /* 808 에 보코더 */
+  'Electro'                 :['ant_abab','ant_aabb','ant_aaba'],
+  'Electroclash'            :['ant_abab','ant_aabb','ant_aaba'],
+  /* H. Latin (계열 H) — 2026-09-15 배치 A13
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐 */
+  'Reggaeton'               :['amb_aabb','amb_aaba','car_aabb'],
+  'Dembow'                  :['amb_aabb','amb_aaba','car_aabb'],
+  /* 레키토 기타 아르페지오가 선율을 맡는다 */
+  'Bachata'                 :['lat_aabb','latbos_aabb','lat_aaab'],
+  /* 혼 섹션이 빠른 2박 위를 달린다 */
+  'Merengue'                :['lat_abab','lat_aabb','afr_abab'],
+  'Bomba'                   :['lat_abab','lat_aabb','afr_abab'],
+  'Plena'                   :['lat_abab','lat_aabb','afr_abab'],
+  /* 아코디언이 리드이고 92~105 BPM 으로 느긋하다 */
+  'Cumbia'                  :['lat_aaab','lat_aabb','wor_aaba'],
+  'Vallenato'               :['lat_aaab','lat_aabb','wor_aaba'],
+  'Cumbia Sonidera'         :['lat_aaab','lat_aabb','wor_aaba'],
+  /* 쿰비아에 서프 기타와 아프로 기타가 들어온다 */
+  'Chicha'                  :['latbos_abab','lat_abab','car_abab'],
+  'Champeta'                :['latbos_abab','lat_abab','car_abab'],
+  'Cumbia Villera'          :['latbos_abab','lat_abab','car_abab'],
+  /* 반도네온이 하행으로 끌어내린다 */
+  'Tango'                   :['jazz_abab','jazz_aabb','jazbal_abab'],
+  'Nuevo Tango'             :['jazz_abab','jazz_aabb','jazbal_abab'],
+  'Electrotango'            :['jazz_abab','jazz_aabb','jazbal_abab'],
+  /* 트레스와 피아노 몬투노가 클라베 위를 돈다 */
+  'Son Cubano'              :['lat_aabb','lat_aaab','latbos_aabb'],
+  'Songo'                   :['lat_aabb','lat_aaab','latbos_aabb'],
+  'Cha-cha-chá'             :['lat_aabb','lat_aaab','latbos_aabb'],
+  /* 180~200 BPM 에 혼 섹션 */
+  'Salsa'                   :['jazz_aaba','jazz_aabb','jazbal_aaba'],
+  'Timba'                   :['jazz_aaba','jazz_aabb','jazbal_aaba'],
+  'Mambo'                   :['jazz_aaba','jazz_aabb','jazbal_aaba'],
+  'Mozambique'              :['jazz_aaba','jazz_aabb','jazbal_aaba'],
+  /* 타악과 창이 몸이라 화성 악기가 거의 안 움직인다 */
+  'Rumba'                   :['bos_aabb','bos_aaba','bos_abab'],
+  'Rumba Yambú'             :['bos_aabb','bos_aaba','bos_abab'],
+  'Rumba Columbia'          :['bos_aabb','bos_aaba','bos_abab'],
+  /* 트랩 골격에 스페인어 */
+  'Latin Trap'              :['trp_aaab','trp_aaba','trp_abab'],
+  /* 레게톤을 느리고 흐릿하게 */
+  'Neoperreo'               :['bal_aaba','amb_aaba','bal_aabb'],
+  'Sad Perreo'              :['bal_aaba','amb_aaba','bal_aabb'],
+  /* 나일론 기타의 싱코페 컴핑에 9화음 */
+  'Bossa Nova'              :['bos_aaba','bos_aabb','bos_abab'],
+  'Partido Alto'            :['bos_aaba','bos_aabb','bos_abab'],
+  'Pagode'                  :['bos_aaba','bos_aabb','bos_abab'],
+  /* 아코디언·자붐바에 삼각철 */
+  'Forró'                   :['wor_aabb','wor_aaba','lat_aaab'],
+  'Baião'                   :['wor_aabb','wor_aaba','lat_aaab'],
+  /* 타악과 808 이 전부다 */
+  'Baile Funk'              :['amb_aaab','amb_aabb','car_abab'],
+  'Funk Mandelão'           :['amb_aaab','amb_aabb','car_abab'],
+  'Bruxaria'                :['amb_aaab','amb_aabb','car_abab'],
+  /* 트럼펫 두 대가 화음으로 운다 */
+  'Mariachi'                :['cin_aaba','cin_aabb','worcin_aaba'],
+  /* 140 BPM 에 관악대와 투바 */
+  'Banda'                   :['root_abab','root_aabb','wor_abab'],
+  'Norteño'                 :['root_abab','root_aabb','wor_abab'],
+  /* I. Caribbean · African (계열 I·J) — 2026-09-15 배치 A14
+     37종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 75~80 BPM 에 원드롭 */
+  'Roots Reggae'            :['car_aaba','car_aabb','car_abab'],
+  'Reggae One Drop'         :['car_aaba','car_aabb','car_abab'],
+  'Rockers'                 :['car_aaba','car_aabb','car_abab'],
+  'Steppers'                :['car_aaba','car_aabb','car_abab'],
+  /* EP 와 현이 깔린 부드러운 레게 */
+  'Lovers Rock'             :['bal_aaba','bal_aabb','amb_aaba'],
+  /* 140 BPM 에 혼 섹션과 워킹 베이스 */
+  'Ska'                     :['lat_aaab','lat_aabb','car_aabb'],
+  /* 스카와 레게 사이의 90~115 BPM */
+  'Rocksteady'              :['car_aabb','blues_aabb','lat_abab'],
+  'Mento'                   :['car_aabb','blues_aabb','lat_abab'],
+  /* 155~168 BPM 에 스틸팬과 관악 */
+  'Soca'                    :['afr_aabb','afr_abab','car_abab'],
+  'Power Soca'              :['afr_aabb','afr_abab','car_abab'],
+  /* 125~145 BPM 으로 소카보다 느긋하다 */
+  'Calypso'                 :['car_aabb','lat_aabb','latbos_aabb'],
+  'Groovy Soca'             :['car_aabb','lat_aabb','latbos_aabb'],
+  'Chutney Soca'            :['car_aabb','lat_aabb','latbos_aabb'],
+  /* EP 9화음에 부드러운 싱코페 */
+  'Zouk'                    :['latbos_aabb','bos_aabb','cinbal_aaba'],
+  'Kompa'                   :['latbos_aabb','bos_aabb','cinbal_aaba'],
+  'Zouk Love'               :['latbos_aabb','bos_aabb','cinbal_aaba'],
+  /* 135 BPM 에 신스 리드와 스틸팬 */
+  'Bouyon'                  :['afr_abab','car_abab','afr_aaab'],
+  /* 벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다 */
+  'Afrobeats'               :['afr_aabb','afr_aaab','afr_abab'],
+  'Hiplife'                 :['afr_aabb','afr_aaab','afr_abab'],
+  'Coupé-décalé'            :['afr_aabb','afr_aaab','afr_abab'],
+  /* 혼 섹션에 스윙 30 */
+  'Highlife'                :['wor_aabb','afr_abab','lat_aaab'],
+  'Fuji'                    :['wor_aabb','afr_abab','lat_aaab'],
+  /* 크런치 기타가 순환 리프를 돈다 */
+  'Desert Blues'            :['blues_abab','rootbl_aaba','wor_aaba'],
+  /* 느린 하우스에 타악이 얹힌다 */
+  'Kwaito'                  :['amb_aaba','amb_aabb','amb_aaab'],
+  'Gqom'                    :['amb_aaba','amb_aabb','amb_aaab'],
+  'Afro Tech'               :['amb_aaba','amb_aabb','amb_aaab'],
+  /* 오르간·색소폰이 순환 화성을 돈다 */
+  'Mbaqanga'                :['wor_abab','afr_aabb','lat_aabb'],
+  'Marabi'                  :['wor_abab','afr_aabb','lat_aabb'],
+  /* **기타 세 대가 얽히는 세베네가 정체성**이다 */
+  'Soukous'                 :['afr_abab','afr_aabb','lat_abab'],
+  'Ndombolo'                :['afr_abab','afr_aabb','lat_abab'],
+  'Congolese Rumba'         :['afr_abab','afr_aabb','lat_abab'],
+  /* 스윙 50 에 5음계 모드 */
+  'Ethio-jazz'              :['jazz_aaba','jazbal_aaba','jazz_abab'],
+  /* 힙합·댄스홀이 동아프리카에서 만난 자리 */
+  'Bongo Flava'             :['afr_aaab','afr_aabb','car_aabb'],
+  'Gengetone'               :['afr_aaab','afr_aabb','car_aabb'],
+  /* 아코디언과 나일론에 장식음이 많다 */
+  'Raï'                     :['wor_aaba','worcin_aabb','wor_abab'],
+  'Shaabi'                  :['wor_aaba','worcin_aabb','wor_abab'],
+  'Mahraganat'              :['wor_aaba','worcin_aabb','wor_abab'],
 };
 
 function melodyPoolFor(name){
@@ -1357,6 +1698,347 @@ const RIFF_KIT_PRESET = {
   'UK Bhangra'              :['arp_folk','highlife_gtr'],
   /* 스틸팬에 카리브 오프비트 */
   'Tropical Bass'           :['skank_up','latin_montuno'],
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
+     41종 → 24무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 샘플에 스윙 30~38 */
+  'Boom Bap'                :['jazz_gtr_comp','funk_cut'],
+  'Golden Age'              :['jazz_gtr_comp','funk_cut'],
+  'Hardcore Hip Hop'        :['jazz_gtr_comp','funk_cut'],
+  /* 업라이트에 트럼펫 */
+  'Jazz Rap'                :['jazz_gtr_comp','jazz_gtr_swing'],
+  /* 108 BPM 에 디스코·펑크 루프 */
+  'Old School Hip Hop'      :['funk_cut','funk_call'],
+  /* 현·합창이 깔리고 가사가 주역이다 */
+  'Conscious Hip Hop'       :['arp_folk','jazz_gtr_comp'],
+  'Horrorcore'              :['arp_folk','jazz_gtr_comp'],
+  /* 벨 오스티나토 두세 음이 훅이다 */
+  'Trap'                    :['edm_arp','edm_alt'],
+  'Plugg'                   :['edm_arp','edm_alt'],
+  /* 트랩 골격에 노래가 얹힌다 */
+  'Melodic Trap'            :['edm_arp','arp_folk'],
+  'Pluggnb'                 :['edm_arp','arp_folk'],
+  /* 디스토션 슈퍼소우가 리드다 */
+  'Rage'                    :['edm_build','metal_riff'],
+  'Trap Metal'              :['edm_build','metal_riff'],
+  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
+  'Mumble Rap'              :['highlife_gtr','edm_arp'],
+  /* 74~82 BPM 에 스윙 30~44 */
+  'Lo-fi'                   :['jazz_gtr_comp','arp_swing'],
+  'Chillhop'                :['jazz_gtr_comp','arp_swing'],
+  /* 스윙 50 에 피아노·색소폰 */
+  'Jazzhop'                 :['jazz_gtr_swing','jazz_gtr_comp'],
+  /* 140 BPM 에 스퀘어 신스 */
+  'Grime'                   :['edm_alt','edm_build'],
+  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
+  'Afroswing'               :['highlife_gtr','skank_offbeat'],
+  /* 어둡고 성기다 */
+  'UK Rap'                  :['arp_folk','edm_arp'],
+  'Road Rap'                :['arp_folk','edm_arp'],
+  /* **미끄러지는 808 이 선율을 맡는다 */
+  'UK Drill'                :['edm_arp','edm_alt'],
+  'Chicago Drill'           :['edm_arp','edm_alt'],
+  'NY / Bronx Drill'        :['edm_arp','edm_alt'],
+  'Sample Drill'            :['edm_arp','edm_alt'],
+  /* 저지 클럽 박자가 드릴에 얹힌다 */
+  'Jersey Drill'            :['funk_cut','edm_alt'],
+  /* 로파이 카우벨에 어두운 벨 */
+  'Phonk'                   :['edm_arp','edm_alt'],
+  'Memphis Rap'             :['edm_arp','edm_alt'],
+  'Drift Phonk'             :['edm_arp','edm_alt'],
+  /* 떼창을 위한 신스 브라스 스탭 */
+  'Crunk'                   :['edm_build','funk_cut'],
+  'Bounce'                  :['edm_build','funk_cut'],
+  /* 808 일렉트로에 빠른 신스 */
+  'Miami Bass'              :['edm_arp','funk_cut'],
+  'Booty Bass'              :['edm_arp','funk_cut'],
+  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
+  'Snap'                    :['edm_arp'],
+  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
+  'G-Funk'                  :['funk_cut','funk_groove'],
+  /* 103~110 BPM 에 바운시한 신스 */
+  'Hyphy'                   :['edm_alt','funk_cut'],
+  'Jerk'                    :['edm_alt','funk_cut'],
+  /* 70 BPM 에 패드와 합창뿐 */
+  'Cloud Rap'               :['arp_folk','edm_arp'],
+  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
+  'Emo Rap'                 :['arp_folk','rock_drive'],
+  'SoundCloud Rap'          :['arp_folk','rock_drive'],
+  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
+  'Brazilian Phonk'         :['latin_montuno','edm_arp'],
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
+     24종 → 16무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 클라비넷 16분에 슬랩 */
+  'Funk'                    :['funk_cut','funk_call'],
+  'JB Funk'                 :['funk_cut','funk_call'],
+  /* 현이 옥타브로 오르내린다 */
+  'Disco Funk'              :['funk_cut','funk_groove'],
+  'Post-disco'              :['funk_cut','funk_groove'],
+  /* 보코더와 무그가 앞에 선다 */
+  'P-Funk'                  :['funk_groove','edm_arp'],
+  'Electro-funk'            :['funk_groove','edm_arp'],
+  /* 슬랩에 트럼펫과 EP */
+  'Jazz-Funk'               :['jazz_gtr_comp','funk_groove'],
+  /* 디스코가 신스로 넘어간 자리 */
+  'Boogie'                  :['funk_cut','edm_arp'],
+  /* 스윙 34 에 신스 브라스 */
+  'New Jack Swing'          :['funk_cut','edm_alt'],
+  /* 72~75 BPM */
+  'Quiet Storm'             :['arp_folk','jazz_gtr_comp'],
+  'Alternative R&B'         :['arp_folk','jazz_gtr_comp'],
+  /* 스윙 30 에 EP 9화음 */
+  '90s R&B'                 :['soul_prog','soul_chank'],
+  'Hip Hop Soul'            :['soul_prog','soul_chank'],
+  /* 808 에 R&B 보컬 */
+  'Trap Soul'               :['edm_arp','edm_alt'],
+  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
+  'Motown'                  :['soul_chank','funk_cut'],
+  'Northern Soul'           :['soul_chank','funk_cut'],
+  /* 현과 하프의 스위트 사운드 */
+  'Philadelphia Soul'       :['soul_prog','arp_folk'],
+  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
+  'Memphis Soul'            :['soul_chank','funk_cut'],
+  /* 와우 기타와 오르간 */
+  'Psychedelic Soul'        :['funk_groove','funk_cut'],
+  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
+  'Disco'                   :['funk_cut','funk_groove'],
+  'Euro Disco'              :['funk_cut','funk_groove'],
+  /* 124~134 BPM 에 신스 리드 */
+  'Hi-NRG'                  :['edm_arp','edm_alt'],
+  'Italo Disco'             :['edm_arp','edm_alt'],
+  /* 스윙 30 에 혼과 피아노 */
+  'Rhythm & Blues'          :['rock_drive','jazz_gtr_swing'],
+  /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
+     32종 → 18무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 워킹 베이스에 스윙 */
+  'West Coast Jazz'         :['jazz_gtr_swing','jazz_gtr_comp'],
+  'Soul Jazz'               :['jazz_gtr_swing','jazz_gtr_comp'],
+  /* 프렛리스에 13화음 */
+  'Jazz Fusion'             :['jazz_gtr_comp','funk_groove'],
+  /* 색소폰이 패드 위를 걷는다 */
+  'Smooth Jazz'             :['jazz_gtr_comp','arp_swing'],
+  /* 와우 기타와 오르간에 스윙 30 */
+  'Acid Jazz'               :['jazz_gtr_comp','funk_groove'],
+  /* 170~190 BPM 에 클라베 */
+  'Latin Jazz'              :['latin_montuno','latin_montuno_alt'],
+  'Afro-Cuban Jazz'         :['latin_montuno','latin_montuno_alt'],
+  /* 나일론 기타에 긴 음 */
+  'Bossa Jazz'              :['latin_montuno_loop','arp_swing'],
+  'Samba Jazz'              :['latin_montuno_loop','arp_swing'],
+  /* 스윙 30~50 의 셔플에 하모니카·크런치 기타 */
+  'Chicago Blues'           :['rock_power','arp_country'],
+  'Electric Blues'          :['rock_power','arp_country'],
+  'Texas Blues'             :['rock_power','arp_country'],
+  /* 160 BPM 에 혼 섹션과 업라이트 */
+  'Jump Blues'              :['jazz_gtr_swing','rock_drive'],
+  /* 스윙 0 의 스트레이트 */
+  'Blues Rock'              :['rock_power','rock_drive'],
+  /* 90 BPM 에 리조네이터와 덜시머 */
+  'Country Blues'           :['arp_country','arp_folk'],
+  /* 붐칙 베이스에 피아노·밴조 */
+  'Honky-tonk'              :['arp_country','rock_drive'],
+  'Old-time / Hillbilly'    :['arp_country','rock_drive'],
+  /* 150 BPM 에 만돌린 트레몰로 */
+  'Bluegrass'               :['arp_country','arp_swing'],
+  /* 현과 합창으로 컨트리를 팝으로 다듬은 자리 */
+  'Nashville Sound'         :['arp_country','arp_folk'],
+  'Countrypolitan'          :['arp_country','arp_folk'],
+  'Country Pop'             :['arp_country','arp_folk'],
+  /* 내슈빌의 매끈함을 거부한 계보 */
+  'Outlaw Country'          :['arp_country','rock_alt'],
+  'Alt-country'             :['arp_country','rock_alt'],
+  'Americana'               :['arp_country','rock_alt'],
+  /* 크런치 기타에 신스 리드 */
+  'Bro-country'             :['rock_power','rock_drive'],
+  /* 스틸 기타 아르페지오에 업라이트 */
+  'Folk Revival'            :['arp_folk','arp_country'],
+  'Indie Folk'              :['arp_folk','arp_country'],
+  /* 12현에 드럼이 들어온다 */
+  'Folk Rock'               :['rock_alt','arp_folk'],
+  /* 오르간 코드 스웰과 합창 */
+  'Gospel'                  :['soul_chank','soul_prog'],
+  /* 아코디언과 워시보드에 140 BPM */
+  'Zydeco / Cajun'          :['arp_country','funk_cut'],
+  /* 돌 리듬에 시타르 */
+  'Bhangra'                 :['arp_folk','highlife_gtr'],
+  /* 여러 지역 타악을 베이스 뮤직 위에 얹는다 */
+  'Global Bass'             :['skank_up','latin_montuno'],
+  /* E. Electronic 나머지 (계열 E) — 2026-09-15 배치 A12
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 플럭 몇 음이 루프를 돈다 */
+  'Techno'                  :['edm_arp'],
+  'Hardgroove'              :['edm_arp'],
+  'Microhouse'              :['edm_arp'],
+  /* 패드 코드가 길게 깔린다 */
+  'Detroit Techno'          :['arp_folk','edm_arp'],
+  'Dub Techno'              :['arp_folk','edm_arp'],
+  /* 303 이 선율을 맡는다 */
+  'Acid Techno'             :['edm_arp'],
+  /* 150~155 BPM 에 왜곡 리드 */
+  'Hard Techno'             :['edm_build','metal_riff'],
+  'Schranz'                 :['edm_build','metal_riff'],
+  'Industrial'              :['edm_build','metal_riff'],
+  /* 벨 한두 음이 16분 격자에서 자리를 바꾼다 */
+  'Minimal Techno'          :['edm_arp'],
+  /* 174 BPM 이지만 화성은 하프타임으로 느리게 흐른다 */
+  'Drum & Bass'             :['arp_folk','edm_arp'],
+  'Liquid Funk'             :['arp_folk','edm_arp'],
+  'Halftime DnB'            :['arp_folk','edm_arp'],
+  /* 리스 베이스가 주역이고 신스가 위에서 쏘아 댄다 */
+  'Neurofunk'               :['edm_build','edm_alt'],
+  'Techstep'                :['edm_build','edm_alt'],
+  'Jump-up'                 :['edm_build','edm_alt'],
+  /* 브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다 */
+  'Jungle'                  :['edm_arp'],
+  'Drumfunk'                :['edm_arp'],
+  /* 펑크 브레이크에 록 기타 */
+  'Big Beat'                :['funk_cut','rock_power'],
+  'Nu Skool Breaks'         :['funk_cut','rock_power'],
+  /* 슈퍼소우가 긴 상행으로 쌓아 올린다 */
+  'Trance'                  :['edm_build','edm_arp'],
+  'Uplifting Trance'        :['edm_build','edm_arp'],
+  'Hard Trance'             :['edm_build','edm_arp'],
+  /* 303 계열 베이스가 16분을 쉬지 않고 구른다 */
+  'Psytrance'               :['edm_arp','edm_alt'],
+  'Goa'                     :['edm_arp','edm_alt'],
+  'Full-on'                 :['edm_arp','edm_alt'],
+  'Forest'                  :['edm_arp','edm_alt'],
+  'Hi-tech'                 :['edm_arp','edm_alt'],
+  /* 리버스 베이스에 앤섬 리드 */
+  'Hardstyle'               :['edm_build','edm_alt'],
+  'Rawstyle'                :['edm_build','edm_alt'],
+  /* 132 BPM 에 패드가 천천히 열린다 */
+  'Progressive Trance'      :['edm_arp','arp_folk'],
+  /* 180~205 BPM 에 왜곡 킥 */
+  'Gabber'                  :['edm_build','metal_riff'],
+  'Hardcore Techno'         :['edm_build','metal_riff'],
+  'Frenchcore'              :['edm_build','metal_riff'],
+  /* 피아노 스탭에 밝은 훅 */
+  'Happy Hardcore'          :['edm_build','edm_arp'],
+  'Breakbeat Hardcore'      :['edm_build','edm_arp'],
+  /* 디스코를 현대 장비로 다시 만든 자리 */
+  'Nu-disco'                :['funk_cut','funk_groove'],
+  /* 808 에 보코더 */
+  'Electro'                 :['edm_alt','edm_arp'],
+  'Electroclash'            :['edm_alt','edm_arp'],
+  /* H. Latin (계열 H) — 2026-09-15 배치 A13
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐 */
+  'Reggaeton'               :['skank_offbeat','latin_montuno'],
+  'Dembow'                  :['skank_offbeat','latin_montuno'],
+  /* 레키토 기타 아르페지오가 선율을 맡는다 */
+  'Bachata'                 :['arp_folk','latin_montuno'],
+  /* 혼 섹션이 빠른 2박 위를 달린다 */
+  'Merengue'                :['latin_montuno_alt','latin_montuno'],
+  'Bomba'                   :['latin_montuno_alt','latin_montuno'],
+  'Plena'                   :['latin_montuno_alt','latin_montuno'],
+  /* 아코디언이 리드이고 92~105 BPM 으로 느긋하다 */
+  'Cumbia'                  :['latin_montuno','arp_folk'],
+  'Vallenato'               :['latin_montuno','arp_folk'],
+  'Cumbia Sonidera'         :['latin_montuno','arp_folk'],
+  /* 쿰비아에 서프 기타와 아프로 기타가 들어온다 */
+  'Chicha'                  :['latin_montuno_loop','highlife_gtr'],
+  'Champeta'                :['latin_montuno_loop','highlife_gtr'],
+  'Cumbia Villera'          :['latin_montuno_loop','highlife_gtr'],
+  /* 반도네온이 하행으로 끌어내린다 */
+  'Tango'                   :['latin_montuno_alt','arp_swing'],
+  'Nuevo Tango'             :['latin_montuno_alt','arp_swing'],
+  'Electrotango'            :['latin_montuno_alt','arp_swing'],
+  /* 트레스와 피아노 몬투노가 클라베 위를 돈다 */
+  'Son Cubano'              :['latin_montuno','latin_montuno_loop'],
+  'Songo'                   :['latin_montuno','latin_montuno_loop'],
+  'Cha-cha-chá'             :['latin_montuno','latin_montuno_loop'],
+  /* 180~200 BPM 에 혼 섹션 */
+  'Salsa'                   :['latin_montuno_alt','latin_montuno'],
+  'Timba'                   :['latin_montuno_alt','latin_montuno'],
+  'Mambo'                   :['latin_montuno_alt','latin_montuno'],
+  'Mozambique'              :['latin_montuno_alt','latin_montuno'],
+  /* 타악과 창이 몸이라 화성 악기가 거의 안 움직인다 */
+  'Rumba'                   :['latin_montuno_loop','skank_offbeat'],
+  'Rumba Yambú'             :['latin_montuno_loop','skank_offbeat'],
+  'Rumba Columbia'          :['latin_montuno_loop','skank_offbeat'],
+  /* 트랩 골격에 스페인어 */
+  'Latin Trap'              :['edm_arp','edm_alt'],
+  /* 레게톤을 느리고 흐릿하게 */
+  'Neoperreo'               :['edm_arp','arp_folk'],
+  'Sad Perreo'              :['edm_arp','arp_folk'],
+  /* 나일론 기타의 싱코페 컴핑에 9화음 */
+  'Bossa Nova'              :['latin_montuno_loop','arp_swing'],
+  'Partido Alto'            :['latin_montuno_loop','arp_swing'],
+  'Pagode'                  :['latin_montuno_loop','arp_swing'],
+  /* 아코디언·자붐바에 삼각철 */
+  'Forró'                   :['arp_country','latin_montuno'],
+  'Baião'                   :['arp_country','latin_montuno'],
+  /* 타악과 808 이 전부다 */
+  'Baile Funk'              :['edm_alt','latin_montuno_loop'],
+  'Funk Mandelão'           :['edm_alt','latin_montuno_loop'],
+  'Bruxaria'                :['edm_alt','latin_montuno_loop'],
+  /* 트럼펫 두 대가 화음으로 운다 */
+  'Mariachi'                :['arp_folk','latin_montuno'],
+  /* 140 BPM 에 관악대와 투바 */
+  'Banda'                   :['arp_country','latin_montuno_alt'],
+  'Norteño'                 :['arp_country','latin_montuno_alt'],
+  /* I. Caribbean · African (계열 I·J) — 2026-09-15 배치 A14
+     37종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 75~80 BPM 에 원드롭 */
+  'Roots Reggae'            :['skank','skank_offbeat'],
+  'Reggae One Drop'         :['skank','skank_offbeat'],
+  'Rockers'                 :['skank','skank_offbeat'],
+  'Steppers'                :['skank','skank_offbeat'],
+  /* EP 와 현이 깔린 부드러운 레게 */
+  'Lovers Rock'             :['skank','arp_folk'],
+  /* 140 BPM 에 혼 섹션과 워킹 베이스 */
+  'Ska'                     :['skank_up','skank'],
+  /* 스카와 레게 사이의 90~115 BPM */
+  'Rocksteady'              :['skank','arp_country'],
+  'Mento'                   :['skank','arp_country'],
+  /* 155~168 BPM 에 스틸팬과 관악 */
+  'Soca'                    :['skank_up','skank_offbeat'],
+  'Power Soca'              :['skank_up','skank_offbeat'],
+  /* 125~145 BPM 으로 소카보다 느긋하다 */
+  'Calypso'                 :['skank_up','latin_montuno'],
+  'Groovy Soca'             :['skank_up','latin_montuno'],
+  'Chutney Soca'            :['skank_up','latin_montuno'],
+  /* EP 9화음에 부드러운 싱코페 */
+  'Zouk'                    :['skank_offbeat','arp_folk'],
+  'Kompa'                   :['skank_offbeat','arp_folk'],
+  'Zouk Love'               :['skank_offbeat','arp_folk'],
+  /* 135 BPM 에 신스 리드와 스틸팬 */
+  'Bouyon'                  :['skank_up','edm_alt'],
+  /* 벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다 */
+  'Afrobeats'               :['highlife_gtr','highlife_loop'],
+  'Hiplife'                 :['highlife_gtr','highlife_loop'],
+  'Coupé-décalé'            :['highlife_gtr','highlife_loop'],
+  /* 혼 섹션에 스윙 30 */
+  'Highlife'                :['highlife_gtr','highlife_loop'],
+  'Fuji'                    :['highlife_gtr','highlife_loop'],
+  /* 크런치 기타가 순환 리프를 돈다 */
+  'Desert Blues'            :['rock_alt','highlife_loop'],
+  /* 느린 하우스에 타악이 얹힌다 */
+  'Kwaito'                  :['edm_arp','highlife_loop'],
+  'Gqom'                    :['edm_arp','highlife_loop'],
+  'Afro Tech'               :['edm_arp','highlife_loop'],
+  /* 오르간·색소폰이 순환 화성을 돈다 */
+  'Mbaqanga'                :['highlife_gtr','funk_cut'],
+  'Marabi'                  :['highlife_gtr','funk_cut'],
+  /* **기타 세 대가 얽히는 세베네가 정체성**이다 */
+  'Soukous'                 :['highlife_gtr','highlife_loop'],
+  'Ndombolo'                :['highlife_gtr','highlife_loop'],
+  'Congolese Rumba'         :['highlife_gtr','highlife_loop'],
+  /* 스윙 50 에 5음계 모드 */
+  'Ethio-jazz'              :['jazz_gtr_comp','jazz_gtr_swing'],
+  /* 힙합·댄스홀이 동아프리카에서 만난 자리 */
+  'Bongo Flava'             :['highlife_loop','skank_offbeat'],
+  'Gengetone'               :['highlife_loop','skank_offbeat'],
+  /* 아코디언과 나일론에 장식음이 많다 */
+  'Raï'                     :['arp_folk','latin_montuno'],
+  'Shaabi'                  :['arp_folk','latin_montuno'],
+  'Mahraganat'              :['arp_folk','latin_montuno'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 기타 리프 이름 목록 */
@@ -1711,6 +2393,347 @@ const BLINE_KIT_PRESET = {
   'UK Bhangra'              :['bafr_aabb','blat_aabb'],
   /* 스틸팬에 카리브 오프비트 */
   'Tropical Bass'           :['breg_aabb','blat_abab'],
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
+     41종 → 24무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 샘플에 스윙 30~38 */
+  'Boom Bap'                :['bwal_aaba','bfun_aabb'],
+  'Golden Age'              :['bwal_aaba','bfun_aabb'],
+  'Hardcore Hip Hop'        :['bwal_aaba','bfun_aabb'],
+  /* 업라이트에 트럼펫 */
+  'Jazz Rap'                :['bwal_abab','bwal_aaba'],
+  /* 108 BPM 에 디스코·펑크 루프 */
+  'Old School Hip Hop'      :['bfun_aabb','bfun_abab'],
+  /* 현·합창이 깔리고 가사가 주역이다 */
+  'Conscious Hip Hop'       :['breg_aaba','bwal_aaba'],
+  'Horrorcore'              :['breg_aaba','bwal_aaba'],
+  /* 벨 오스티나토 두세 음이 훅이다 */
+  'Trap'                    :['b808_aaab','b808_aaba'],
+  'Plugg'                   :['b808_aaab','b808_aaba'],
+  /* 트랩 골격에 노래가 얹힌다 */
+  'Melodic Trap'            :['b808_aaba','b808_aabb'],
+  'Pluggnb'                 :['b808_aaba','b808_aabb'],
+  /* 디스토션 슈퍼소우가 리드다 */
+  'Rage'                    :['bmet_aaab','bhou_aaab'],
+  'Trap Metal'              :['bmet_aaab','bhou_aaab'],
+  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
+  'Mumble Rap'              :['b808_aaab','bafr_aabb'],
+  /* 74~82 BPM 에 스윙 30~44 */
+  'Lo-fi'                   :['bwal_aaba','breg_aaba'],
+  'Chillhop'                :['bwal_aaba','breg_aaba'],
+  /* 스윙 50 에 피아노·색소폰 */
+  'Jazzhop'                 :['bwal_abab','bwal_aabb'],
+  /* 140 BPM 에 스퀘어 신스 */
+  'Grime'                   :['bhou_aaab','bmet_aaab'],
+  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
+  'Afroswing'               :['bafr_aabb','breg_aabb'],
+  /* 어둡고 성기다 */
+  'UK Rap'                  :['b808_aabb','breg_aaba'],
+  'Road Rap'                :['b808_aabb','breg_aaba'],
+  /* **미끄러지는 808 이 선율을 맡는다 */
+  'UK Drill'                :['b808_aaba','b808_aaab'],
+  'Chicago Drill'           :['b808_aaba','b808_aaab'],
+  'NY / Bronx Drill'        :['b808_aaba','b808_aaab'],
+  'Sample Drill'            :['b808_aaba','b808_aaab'],
+  /* 저지 클럽 박자가 드릴에 얹힌다 */
+  'Jersey Drill'            :['bfun_abab','bhou_abab'],
+  /* 로파이 카우벨에 어두운 벨 */
+  'Phonk'                   :['b808_aaab','bmet_aaab'],
+  'Memphis Rap'             :['b808_aaab','bmet_aaab'],
+  'Drift Phonk'             :['b808_aaab','bmet_aaab'],
+  /* 떼창을 위한 신스 브라스 스탭 */
+  'Crunk'                   :['b808_aabb','bhou_aaab'],
+  'Bounce'                  :['b808_aabb','bhou_aaab'],
+  /* 808 일렉트로에 빠른 신스 */
+  'Miami Bass'              :['bdis_abab','bhou_aaab'],
+  'Booty Bass'              :['bdis_abab','bhou_aaab'],
+  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
+  'Snap'                    :['b808_aabb','breg_aaba'],
+  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
+  'G-Funk'                  :['bfun_abab','bfun_aabb'],
+  /* 103~110 BPM 에 바운시한 신스 */
+  'Hyphy'                   :['bhou_abab','bfun_abab'],
+  'Jerk'                    :['bhou_abab','bfun_abab'],
+  /* 70 BPM 에 패드와 합창뿐 */
+  'Cloud Rap'               :['breg_aaba','b808_aabb'],
+  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
+  'Emo Rap'                 :['brock_aabb','b808_aaba'],
+  'SoundCloud Rap'          :['brock_aabb','b808_aaba'],
+  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
+  'Brazilian Phonk'         :['blat_abab','b808_aaab'],
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
+     24종 → 16무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 클라비넷 16분에 슬랩 */
+  'Funk'                    :['bfun_aabb','bfun_abab'],
+  'JB Funk'                 :['bfun_aabb','bfun_abab'],
+  /* 현이 옥타브로 오르내린다 */
+  'Disco Funk'              :['bdis_aabb','bdis_abab'],
+  'Post-disco'              :['bdis_aabb','bdis_abab'],
+  /* 보코더와 무그가 앞에 선다 */
+  'P-Funk'                  :['bfun_abab','bhou_aaab'],
+  'Electro-funk'            :['bfun_abab','bhou_aaab'],
+  /* 슬랩에 트럼펫과 EP */
+  'Jazz-Funk'               :['bwal_abab','bfun_abab'],
+  /* 디스코가 신스로 넘어간 자리 */
+  'Boogie'                  :['bdis_abab','bdis_aaab'],
+  /* 스윙 34 에 신스 브라스 */
+  'New Jack Swing'          :['bfun_aaab','bhou_aabb'],
+  /* 72~75 BPM */
+  'Quiet Storm'             :['breg_aaba','bwal_aaba'],
+  'Alternative R&B'         :['breg_aaba','bwal_aaba'],
+  /* 스윙 30 에 EP 9화음 */
+  '90s R&B'                 :['bfun_aabb','breg_aabb'],
+  'Hip Hop Soul'            :['bfun_aabb','breg_aabb'],
+  /* 808 에 R&B 보컬 */
+  'Trap Soul'               :['b808_aaba','b808_aabb'],
+  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
+  'Motown'                  :['bfun_aabb','bwal_aabb'],
+  'Northern Soul'           :['bfun_aabb','bwal_aabb'],
+  /* 현과 하프의 스위트 사운드 */
+  'Philadelphia Soul'       :['bfun_abab','bdis_aabb'],
+  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
+  'Memphis Soul'            :['bfun_aabb','bcou_aabb'],
+  /* 와우 기타와 오르간 */
+  'Psychedelic Soul'        :['bfun_abab','bfun_aaab'],
+  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
+  'Disco'                   :['bdis_aabb','bdis_abab'],
+  'Euro Disco'              :['bdis_aabb','bdis_abab'],
+  /* 124~134 BPM 에 신스 리드 */
+  'Hi-NRG'                  :['bdis_abab','bhou_aaab'],
+  'Italo Disco'             :['bdis_abab','bhou_aaab'],
+  /* 스윙 30 에 혼과 피아노 */
+  'Rhythm & Blues'          :['bwal_aabb','bcou_aabb'],
+  /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
+     32종 → 18무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 워킹 베이스에 스윙 */
+  'West Coast Jazz'         :['bwal_abab','bwal_aaba'],
+  'Soul Jazz'               :['bwal_abab','bwal_aaba'],
+  /* 프렛리스에 13화음 */
+  'Jazz Fusion'             :['bwal_aabb','bfun_abab'],
+  /* 색소폰이 패드 위를 걷는다 */
+  'Smooth Jazz'             :['bwal_aaba','bfun_aabb'],
+  /* 와우 기타와 오르간에 스윙 30 */
+  'Acid Jazz'               :['bwal_abab','bfun_abab'],
+  /* 170~190 BPM 에 클라베 */
+  'Latin Jazz'              :['blat_aabb','bwal_abab'],
+  'Afro-Cuban Jazz'         :['blat_aabb','bwal_abab'],
+  /* 나일론 기타에 긴 음 */
+  'Bossa Jazz'              :['bwal_aaba','blat_aaba'],
+  'Samba Jazz'              :['bwal_aaba','blat_aaba'],
+  /* 스윙 30~50 의 셔플에 하모니카·크런치 기타 */
+  'Chicago Blues'           :['bcou_aabb','bwal_aabb'],
+  'Electric Blues'          :['bcou_aabb','bwal_aabb'],
+  'Texas Blues'             :['bcou_aabb','bwal_aabb'],
+  /* 160 BPM 에 혼 섹션과 업라이트 */
+  'Jump Blues'              :['bwal_aabb','bwal_abab'],
+  /* 스윙 0 의 스트레이트 */
+  'Blues Rock'              :['brock_aabb','bcou_aabb'],
+  /* 90 BPM 에 리조네이터와 덜시머 */
+  'Country Blues'           :['bcou_aaba','bwal_aaba'],
+  /* 붐칙 베이스에 피아노·밴조 */
+  'Honky-tonk'              :['bcou_aabb','bcou_aaba'],
+  'Old-time / Hillbilly'    :['bcou_aabb','bcou_aaba'],
+  /* 150 BPM 에 만돌린 트레몰로 */
+  'Bluegrass'               :['bcou_abab','bwal_aabb'],
+  /* 현과 합창으로 컨트리를 팝으로 다듬은 자리 */
+  'Nashville Sound'         :['bcou_aaba','bdis_aabb'],
+  'Countrypolitan'          :['bcou_aaba','bdis_aabb'],
+  'Country Pop'             :['bcou_aaba','bdis_aabb'],
+  /* 내슈빌의 매끈함을 거부한 계보 */
+  'Outlaw Country'          :['bcou_aabb','brock_aabb'],
+  'Alt-country'             :['bcou_aabb','brock_aabb'],
+  'Americana'               :['bcou_aabb','brock_aabb'],
+  /* 크런치 기타에 신스 리드 */
+  'Bro-country'             :['brock_aabb','bcou_aabb'],
+  /* 스틸 기타 아르페지오에 업라이트 */
+  'Folk Revival'            :['bcou_aaba','bwal_aaba'],
+  'Indie Folk'              :['bcou_aaba','bwal_aaba'],
+  /* 12현에 드럼이 들어온다 */
+  'Folk Rock'               :['brock_aabb','bcou_aabb'],
+  /* 오르간 코드 스웰과 합창 */
+  'Gospel'                  :['bfun_aabb','bwal_aaba'],
+  /* 아코디언과 워시보드에 140 BPM */
+  'Zydeco / Cajun'          :['bcou_abab','bfun_aabb'],
+  /* 돌 리듬에 시타르 */
+  'Bhangra'                 :['bafr_aaab','blat_aabb'],
+  /* 여러 지역 타악을 베이스 뮤직 위에 얹는다 */
+  'Global Bass'             :['blat_abab','breg_aabb'],
+  /* E. Electronic 나머지 (계열 E) — 2026-09-15 배치 A12
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 플럭 몇 음이 루프를 돈다 */
+  'Techno'                  :['bhou_aaab','bhou_abab'],
+  'Hardgroove'              :['bhou_aaab','bhou_abab'],
+  'Microhouse'              :['bhou_aaab','bhou_abab'],
+  /* 패드 코드가 길게 깔린다 */
+  'Detroit Techno'          :['bhou_aabb','breg_aaba'],
+  'Dub Techno'              :['bhou_aabb','breg_aaba'],
+  /* 303 이 선율을 맡는다 */
+  'Acid Techno'             :['bhou_abab','bhou_aaab'],
+  /* 150~155 BPM 에 왜곡 리드 */
+  'Hard Techno'             :['bmet_aaab','bhou_aaab'],
+  'Schranz'                 :['bmet_aaab','bhou_aaab'],
+  'Industrial'              :['bmet_aaab','bhou_aaab'],
+  /* 벨 한두 음이 16분 격자에서 자리를 바꾼다 */
+  'Minimal Techno'          :['bhou_abab','bhou_aabb'],
+  /* 174 BPM 이지만 화성은 하프타임으로 느리게 흐른다 */
+  'Drum & Bass'             :['b808_aabb','breg_aaba'],
+  'Liquid Funk'             :['b808_aabb','breg_aaba'],
+  'Halftime DnB'            :['b808_aabb','breg_aaba'],
+  /* 리스 베이스가 주역이고 신스가 위에서 쏘아 댄다 */
+  'Neurofunk'               :['bmet_aaab','bhou_aaab'],
+  'Techstep'                :['bmet_aaab','bhou_aaab'],
+  'Jump-up'                 :['bmet_aaab','bhou_aaab'],
+  /* 브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다 */
+  'Jungle'                  :['breg_aaba','b808_aabb'],
+  'Drumfunk'                :['breg_aaba','b808_aabb'],
+  /* 펑크 브레이크에 록 기타 */
+  'Big Beat'                :['bfun_abab','bfun_aabb'],
+  'Nu Skool Breaks'         :['bfun_abab','bfun_aabb'],
+  /* 슈퍼소우가 긴 상행으로 쌓아 올린다 */
+  'Trance'                  :['bhou_aabb','bdis_abab'],
+  'Uplifting Trance'        :['bhou_aabb','bdis_abab'],
+  'Hard Trance'             :['bhou_aabb','bdis_abab'],
+  /* 303 계열 베이스가 16분을 쉬지 않고 구른다 */
+  'Psytrance'               :['bhou_abab','bhou_aaab'],
+  'Goa'                     :['bhou_abab','bhou_aaab'],
+  'Full-on'                 :['bhou_abab','bhou_aaab'],
+  'Forest'                  :['bhou_abab','bhou_aaab'],
+  'Hi-tech'                 :['bhou_abab','bhou_aaab'],
+  /* 리버스 베이스에 앤섬 리드 */
+  'Hardstyle'               :['bmet_aaab','bhou_aaab'],
+  'Rawstyle'                :['bmet_aaab','bhou_aaab'],
+  /* 132 BPM 에 패드가 천천히 열린다 */
+  'Progressive Trance'      :['bhou_aabb','bhou_aaab'],
+  /* 180~205 BPM 에 왜곡 킥 */
+  'Gabber'                  :['bmet_aaab','bmet_aabb'],
+  'Hardcore Techno'         :['bmet_aaab','bmet_aabb'],
+  'Frenchcore'              :['bmet_aaab','bmet_aabb'],
+  /* 피아노 스탭에 밝은 훅 */
+  'Happy Hardcore'          :['bdis_abab','bhou_aaab'],
+  'Breakbeat Hardcore'      :['bdis_abab','bhou_aaab'],
+  /* 디스코를 현대 장비로 다시 만든 자리 */
+  'Nu-disco'                :['bdis_aabb','bfun_abab'],
+  /* 808 에 보코더 */
+  'Electro'                 :['b808_aaab','bdis_abab'],
+  'Electroclash'            :['b808_aaab','bdis_abab'],
+  /* H. Latin (계열 H) — 2026-09-15 배치 A13
+     39종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐 */
+  'Reggaeton'               :['b808_aaab','blat_abab'],
+  'Dembow'                  :['b808_aaab','blat_abab'],
+  /* 레키토 기타 아르페지오가 선율을 맡는다 */
+  'Bachata'                 :['blat_aabb','bcou_aaba'],
+  /* 혼 섹션이 빠른 2박 위를 달린다 */
+  'Merengue'                :['blat_abab','bafr_aabb'],
+  'Bomba'                   :['blat_abab','bafr_aabb'],
+  'Plena'                   :['blat_abab','bafr_aabb'],
+  /* 아코디언이 리드이고 92~105 BPM 으로 느긋하다 */
+  'Cumbia'                  :['blat_aaba','bcou_aabb'],
+  'Vallenato'               :['blat_aaba','bcou_aabb'],
+  'Cumbia Sonidera'         :['blat_aaba','bcou_aabb'],
+  /* 쿰비아에 서프 기타와 아프로 기타가 들어온다 */
+  'Chicha'                  :['blat_abab','bafr_aaab'],
+  'Champeta'                :['blat_abab','bafr_aaab'],
+  'Cumbia Villera'          :['blat_abab','bafr_aaab'],
+  /* 반도네온이 하행으로 끌어내린다 */
+  'Tango'                   :['bwal_abab','bwal_aabb'],
+  'Nuevo Tango'             :['bwal_abab','bwal_aabb'],
+  'Electrotango'            :['bwal_abab','bwal_aabb'],
+  /* 트레스와 피아노 몬투노가 클라베 위를 돈다 */
+  'Son Cubano'              :['blat_aabb','blat_aaba'],
+  'Songo'                   :['blat_aabb','blat_aaba'],
+  'Cha-cha-chá'             :['blat_aabb','blat_aaba'],
+  /* 180~200 BPM 에 혼 섹션 */
+  'Salsa'                   :['blat_abab','bwal_abab'],
+  'Timba'                   :['blat_abab','bwal_abab'],
+  'Mambo'                   :['blat_abab','bwal_abab'],
+  'Mozambique'              :['blat_abab','bwal_abab'],
+  /* 타악과 창이 몸이라 화성 악기가 거의 안 움직인다 */
+  'Rumba'                   :['blat_aaba','bafr_aaab'],
+  'Rumba Yambú'             :['blat_aaba','bafr_aaab'],
+  'Rumba Columbia'          :['blat_aaba','bafr_aaab'],
+  /* 트랩 골격에 스페인어 */
+  'Latin Trap'              :['b808_aaab','b808_aaba'],
+  /* 레게톤을 느리고 흐릿하게 */
+  'Neoperreo'               :['breg_aabb','b808_aabb'],
+  'Sad Perreo'              :['breg_aabb','b808_aabb'],
+  /* 나일론 기타의 싱코페 컴핑에 9화음 */
+  'Bossa Nova'              :['bwal_aaba','blat_aaba'],
+  'Partido Alto'            :['bwal_aaba','blat_aaba'],
+  'Pagode'                  :['bwal_aaba','blat_aaba'],
+  /* 아코디언·자붐바에 삼각철 */
+  'Forró'                   :['bcou_aabb','blat_aabb'],
+  'Baião'                   :['bcou_aabb','blat_aabb'],
+  /* 타악과 808 이 전부다 */
+  'Baile Funk'              :['b808_aaab','blat_abab'],
+  'Funk Mandelão'           :['b808_aaab','blat_abab'],
+  'Bruxaria'                :['b808_aaab','blat_abab'],
+  /* 트럼펫 두 대가 화음으로 운다 */
+  'Mariachi'                :['bcou_aaba','blat_aaba'],
+  /* 140 BPM 에 관악대와 투바 */
+  'Banda'                   :['bcou_abab','bcou_aabb'],
+  'Norteño'                 :['bcou_abab','bcou_aabb'],
+  /* I. Caribbean · African (계열 I·J) — 2026-09-15 배치 A14
+     37종 → 17무리.
+     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
+  /* 75~80 BPM 에 원드롭 */
+  'Roots Reggae'            :['breg_aaba','breg_aabb'],
+  'Reggae One Drop'         :['breg_aaba','breg_aabb'],
+  'Rockers'                 :['breg_aaba','breg_aabb'],
+  'Steppers'                :['breg_aaba','breg_aabb'],
+  /* EP 와 현이 깔린 부드러운 레게 */
+  'Lovers Rock'             :['breg_aabb','breg_abab'],
+  /* 140 BPM 에 혼 섹션과 워킹 베이스 */
+  'Ska'                     :['bwal_aabb','breg_aabb'],
+  /* 스카와 레게 사이의 90~115 BPM */
+  'Rocksteady'              :['breg_aabb','bcou_aaba'],
+  'Mento'                   :['breg_aabb','bcou_aaba'],
+  /* 155~168 BPM 에 스틸팬과 관악 */
+  'Soca'                    :['breg_abab','bafr_aabb'],
+  'Power Soca'              :['breg_abab','bafr_aabb'],
+  /* 125~145 BPM 으로 소카보다 느긋하다 */
+  'Calypso'                 :['breg_aabb','blat_aabb'],
+  'Groovy Soca'             :['breg_aabb','blat_aabb'],
+  'Chutney Soca'            :['breg_aabb','blat_aabb'],
+  /* EP 9화음에 부드러운 싱코페 */
+  'Zouk'                    :['breg_aabb','blat_abab'],
+  'Kompa'                   :['breg_aabb','blat_abab'],
+  'Zouk Love'               :['breg_aabb','blat_abab'],
+  /* 135 BPM 에 신스 리드와 스틸팬 */
+  'Bouyon'                  :['breg_abab','bafr_aaab'],
+  /* 벨과 셰이커가 16분을 짜고 스윙 26 이 붙는다 */
+  'Afrobeats'               :['bafr_aabb','bafr_aaab'],
+  'Hiplife'                 :['bafr_aabb','bafr_aaab'],
+  'Coupé-décalé'            :['bafr_aabb','bafr_aaab'],
+  /* 혼 섹션에 스윙 30 */
+  'Highlife'                :['bafr_aaab','blat_aabb'],
+  'Fuji'                    :['bafr_aaab','blat_aabb'],
+  /* 크런치 기타가 순환 리프를 돈다 */
+  'Desert Blues'            :['bafr_aabb','bcou_aaba'],
+  /* 느린 하우스에 타악이 얹힌다 */
+  'Kwaito'                  :['bafr_aabb','bhou_aaab'],
+  'Gqom'                    :['bafr_aabb','bhou_aaab'],
+  'Afro Tech'               :['bafr_aabb','bhou_aaab'],
+  /* 오르간·색소폰이 순환 화성을 돈다 */
+  'Mbaqanga'                :['bafr_aaab','bcou_abab'],
+  'Marabi'                  :['bafr_aaab','bcou_abab'],
+  /* **기타 세 대가 얽히는 세베네가 정체성**이다 */
+  'Soukous'                 :['bafr_aaab','blat_abab'],
+  'Ndombolo'                :['bafr_aaab','blat_abab'],
+  'Congolese Rumba'         :['bafr_aaab','blat_abab'],
+  /* 스윙 50 에 5음계 모드 */
+  'Ethio-jazz'              :['bwal_aaba','bwal_abab'],
+  /* 힙합·댄스홀이 동아프리카에서 만난 자리 */
+  'Bongo Flava'             :['bafr_aabb','breg_aabb'],
+  'Gengetone'               :['bafr_aabb','breg_aabb'],
+  /* 아코디언과 나일론에 장식음이 많다 */
+  'Raï'                     :['bafr_aabb','blat_aaba'],
+  'Shaabi'                  :['bafr_aabb','blat_aaba'],
+  'Mahraganat'              :['bafr_aabb','blat_aaba'],
 };
 
 /** 지금 걸린 프리셋에 어울리는 베이스 라인 이름 목록 */

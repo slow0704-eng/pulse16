@@ -1,0 +1,6032 @@
+{
+  "batch": "A13",
+  "sub": "Latin (계열 H)",
+  "cat": "H",
+  "date": "2026-09-15",
+  "verdict": "39종 → 17무리. 여덟 분기가 각각 한 풀을 쓰던 것을 프리셋 단위로 갈랐다.",
+  "profiles": [
+    {
+      "preset": "Reggaeton",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "pad-lead",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 푸에르토리코 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Dembow",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aabb",
+          "amb_aaba",
+          "car_aabb"
+        ],
+        "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+      }
+    },
+    {
+      "preset": "Dembow",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "pad-lead",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 푸에르토리코 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+          },
+          {
+            "from": "Reggaeton",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Reggaeton",
+        "pool": [
+          "amb_aabb",
+          "amb_aaba",
+          "car_aabb"
+        ],
+        "note": "뎀보우 리듬이 정체성이고 건반은 벨 두세 음뿐. 808 이 저역을 다 가져간다"
+      }
+    },
+    {
+      "preset": "Bachata",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "strings",
+          "gtr": "requinto",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 도미니카 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_aabb",
+          "latbos_aabb",
+          "lat_aaab"
+        ],
+        "note": "레키토 기타 아르페지오가 선율을 맡는다. 라틴에서 기타가 리드인 몇 안 되는 자리다"
+      }
+    },
+    {
+      "preset": "Merengue",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-accordion",
+          "keys2": "sax-choir-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 도미니카·푸에르토리코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bomba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Plena",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_abab",
+          "lat_aabb",
+          "afr_abab"
+        ],
+        "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Bomba",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-accordion",
+          "keys2": "sax-choir-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 도미니카·푸에르토리코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Plena",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Merengue",
+        "pool": [
+          "lat_abab",
+          "lat_aabb",
+          "afr_abab"
+        ],
+        "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Plena",
+      "sub": "푸에르토리코 · 도미니카",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-accordion",
+          "keys2": "sax-choir-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 도미니카·푸에르토리코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bomba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Merengue",
+        "pool": [
+          "lat_abab",
+          "lat_aabb",
+          "afr_abab"
+        ],
+        "note": "혼 섹션이 빠른 2박 위를 달린다. 레게톤과 달리 관악이 앞이고 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Cumbia",
+      "sub": "콜롬비아",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-organ",
+          "keys2": "strings-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 콜롬비아·멕시코 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Vallenato",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cumbia Sonidera",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_aaab",
+          "lat_aabb",
+          "wor_aaba"
+        ],
+        "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+      }
+    },
+    {
+      "preset": "Vallenato",
+      "sub": "콜롬비아",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-organ",
+          "keys2": "strings-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 콜롬비아·멕시코 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cumbia Sonidera",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Cumbia",
+        "pool": [
+          "lat_aaab",
+          "lat_aabb",
+          "wor_aaba"
+        ],
+        "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+      }
+    },
+    {
+      "preset": "Cumbia Sonidera",
+      "sub": "멕시코",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion-organ",
+          "keys2": "strings-horns",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 콜롬비아·멕시코 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Vallenato",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Cumbia",
+        "pool": [
+          "lat_aaab",
+          "lat_aabb",
+          "wor_aaba"
+        ],
+        "note": "아코디언이 리드이고 92~105 BPM 으로 느긋하다. 라틴에서 가장 넓게 퍼진 어법이다"
+      }
+    },
+    {
+      "preset": "Chicha",
+      "sub": "콜롬비아",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-marimba-lead",
+          "keys2": "strings",
+          "gtr": "surf-nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1960년대 이후 페루·콜롬비아 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Champeta",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cumbia Villera",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "latbos_abab",
+          "lat_abab",
+          "car_abab"
+        ],
+        "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+      }
+    },
+    {
+      "preset": "Champeta",
+      "sub": "콜롬비아",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-marimba-lead",
+          "keys2": "strings",
+          "gtr": "surf-nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1960년대 이후 페루·콜롬비아 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cumbia Villera",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Chicha",
+        "pool": [
+          "latbos_abab",
+          "lat_abab",
+          "car_abab"
+        ],
+        "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+      }
+    },
+    {
+      "preset": "Cumbia Villera",
+      "sub": "콜롬비아",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ-marimba-lead",
+          "keys2": "strings",
+          "gtr": "surf-nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1960년대 이후 페루·콜롬비아 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Champeta",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Chicha",
+        "pool": [
+          "latbos_abab",
+          "lat_abab",
+          "car_abab"
+        ],
+        "note": "쿰비아에 서프 기타와 아프로 기타가 들어온다. 형제 쿰비아보다 16분으로 잘게 움직인다"
+      }
+    },
+    {
+      "preset": "Tango",
+      "sub": "아르헨티나 · 남미 남부",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bandoneon",
+          "keys2": "strings-piano-pad",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 아르헨티나 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Nuevo Tango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electrotango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_abab",
+          "jazz_aabb",
+          "jazbal_abab"
+        ],
+        "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+      }
+    },
+    {
+      "preset": "Nuevo Tango",
+      "sub": "아르헨티나 · 남미 남부",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bandoneon",
+          "keys2": "strings-piano-pad",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 아르헨티나 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Tango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electrotango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Tango",
+        "pool": [
+          "jazz_abab",
+          "jazz_aabb",
+          "jazbal_abab"
+        ],
+        "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+      }
+    },
+    {
+      "preset": "Electrotango",
+      "sub": "아르헨티나 · 남미 남부",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bandoneon",
+          "keys2": "strings-piano-pad",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 아르헨티나 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+          },
+          {
+            "from": "Tango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Nuevo Tango",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Tango",
+        "pool": [
+          "jazz_abab",
+          "jazz_aabb",
+          "jazbal_abab"
+        ],
+        "note": "반도네온이 하행으로 끌어내린다. 라틴에서 유일하게 하행 윤곽이고 반복이 가장 약하다"
+      }
+    },
+    {
+      "preset": "Son Cubano",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-flute-horns",
+          "keys2": "trumpet-strings",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1920년대 이후 쿠바 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Songo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cha-cha-chá",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_aabb",
+          "lat_aaab",
+          "latbos_aabb"
+        ],
+        "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+      }
+    },
+    {
+      "preset": "Songo",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-flute-horns",
+          "keys2": "trumpet-strings",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1920년대 이후 쿠바 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Cha-cha-chá",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Son Cubano",
+        "pool": [
+          "lat_aabb",
+          "lat_aaab",
+          "latbos_aabb"
+        ],
+        "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+      }
+    },
+    {
+      "preset": "Cha-cha-chá",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-flute-horns",
+          "keys2": "trumpet-strings",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1920년대 이후 쿠바 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Songo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Son Cubano",
+        "pool": [
+          "lat_aabb",
+          "lat_aaab",
+          "latbos_aabb"
+        ],
+        "note": "트레스와 피아노 몬투노가 클라베 위를 돈다. 쿠바 형제 중 가장 느리고 노래에 가깝다"
+      }
+    },
+    {
+      "preset": "Salsa",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-piano-brass",
+          "keys2": "piano-sax-trombone",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 쿠바·뉴욕 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Timba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mambo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mozambique",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aaba",
+          "jazz_aabb",
+          "jazbal_aaba"
+        ],
+        "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+      }
+    },
+    {
+      "preset": "Timba",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-piano-brass",
+          "keys2": "piano-sax-trombone",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 쿠바·뉴욕 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mambo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mozambique",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Salsa",
+        "pool": [
+          "jazz_aaba",
+          "jazz_aabb",
+          "jazbal_aaba"
+        ],
+        "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+      }
+    },
+    {
+      "preset": "Mambo",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-piano-brass",
+          "keys2": "piano-sax-trombone",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 쿠바·뉴욕 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Timba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mozambique",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Salsa",
+        "pool": [
+          "jazz_aaba",
+          "jazz_aabb",
+          "jazbal_aaba"
+        ],
+        "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+      }
+    },
+    {
+      "preset": "Mozambique",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns-piano-brass",
+          "keys2": "piano-sax-trombone",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 쿠바·뉴욕 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Timba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Mambo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Salsa",
+        "pool": [
+          "jazz_aaba",
+          "jazz_aabb",
+          "jazbal_aaba"
+        ],
+        "note": "180~200 BPM 에 혼 섹션. 손 쿠바노의 두 배 속도이고 재즈 화성이 몸이다"
+      }
+    },
+    {
+      "preset": "Rumba",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "piano-choir",
+          "keys2": "choir-piano-horns",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 쿠바 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Rumba Yambú",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rumba Columbia",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bos_aabb",
+          "bos_aaba",
+          "bos_abab"
+        ],
+        "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+      }
+    },
+    {
+      "preset": "Rumba Yambú",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "piano-choir",
+          "keys2": "choir-piano-horns",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 쿠바 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rumba Columbia",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Rumba",
+        "pool": [
+          "bos_aabb",
+          "bos_aaba",
+          "bos_abab"
+        ],
+        "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+      }
+    },
+    {
+      "preset": "Rumba Columbia",
+      "sub": "쿠바",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "piano-choir",
+          "keys2": "choir-piano-horns",
+          "gtr": "tres",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 쿠바 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Rumba Yambú",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Rumba",
+        "pool": [
+          "bos_aabb",
+          "bos_aaba",
+          "bos_abab"
+        ],
+        "note": "타악과 창이 몸이라 화성 악기가 거의 안 움직인다. 쿠바 형제 중 가장 비어 있다"
+      }
+    },
+    {
+      "preset": "Latin Trap",
+      "sub": "현대 크로스오버",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.55,
+          "max": 0.8
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "occasional"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "strings",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2010년대 푸에르토리코·미국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "trp_aaab",
+          "trp_aaba",
+          "trp_abab"
+        ],
+        "note": "트랩 골격에 스페인어. 라틴 형제들과 달리 클라베가 없고 808 이 주역이다"
+      }
+    },
+    {
+      "preset": "Neoperreo",
+      "sub": "현대 크로스오버",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "lead-pad",
+          "keys2": "pad-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 이후 중남미·인터넷 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Sad Perreo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+      }
+    },
+    {
+      "preset": "Sad Perreo",
+      "sub": "현대 크로스오버",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "lead-pad",
+          "keys2": "pad-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 이후 중남미·인터넷 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Neoperreo",
+        "pool": [
+          "bal_aaba",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "레게톤을 느리고 흐릿하게. 93~98 BPM 으로 형제 레게톤보다 느리고 패드가 앞에 선다"
+      }
+    },
+    {
+      "preset": "Bossa Nova",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep",
+          "keys2": "flute-trombone",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 브라질 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Partido Alto",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Pagode",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bos_aaba",
+          "bos_aabb",
+          "bos_abab"
+        ],
+        "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+      }
+    },
+    {
+      "preset": "Partido Alto",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep",
+          "keys2": "flute-trombone",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 브라질 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Pagode",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Bossa Nova",
+        "pool": [
+          "bos_aaba",
+          "bos_aabb",
+          "bos_abab"
+        ],
+        "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+      }
+    },
+    {
+      "preset": "Pagode",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep",
+          "keys2": "flute-trombone",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 브라질 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Partido Alto",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Bossa Nova",
+        "pool": [
+          "bos_aaba",
+          "bos_aabb",
+          "bos_abab"
+        ],
+        "note": "나일론 기타의 싱코페 컴핑에 9화음. 성기게 두는 것이 어법이라 음이 가장 적다"
+      }
+    },
+    {
+      "preset": "Forró",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion",
+          "keys2": "clarinet-flute",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 이후 브라질 북동부 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Baião",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "wor_aabb",
+          "wor_aaba",
+          "lat_aaab"
+        ],
+        "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+      }
+    },
+    {
+      "preset": "Baião",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion",
+          "keys2": "clarinet-flute",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 이후 브라질 북동부 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+          },
+          {
+            "from": "Forró",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Forró",
+        "pool": [
+          "wor_aabb",
+          "wor_aaba",
+          "lat_aaab"
+        ],
+        "note": "아코디언·자붐바에 삼각철. 보사와 같은 브라질인데 도시가 아니라 시골 어법이다"
+      }
+    },
+    {
+      "preset": "Baile Funk",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "brass-lead-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 브라질 리우 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Funk Mandelão",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bruxaria",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaab",
+          "amb_aabb",
+          "car_abab"
+        ],
+        "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+      }
+    },
+    {
+      "preset": "Funk Mandelão",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "brass-lead-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 브라질 리우 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Bruxaria",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Baile Funk",
+        "pool": [
+          "amb_aaab",
+          "amb_aabb",
+          "car_abab"
+        ],
+        "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+      }
+    },
+    {
+      "preset": "Bruxaria",
+      "sub": "브라질",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "brass-lead-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 브라질 리우 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Funk Mandelão",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Baile Funk",
+        "pool": [
+          "amb_aaab",
+          "amb_aabb",
+          "car_abab"
+        ],
+        "note": "타악과 808 이 전부다. 브라질 형제의 나일론 기타 대신 신스 스탭 몇 개만 남는다"
+      }
+    },
+    {
+      "preset": "Mariachi",
+      "sub": "멕시코",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 5,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "trumpet",
+          "keys2": "strings",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 멕시코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          },
+          {
+            "from": "Banda",
+            "axis": "melody",
+            "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "cin_aaba",
+          "cin_aabb",
+          "worcin_aaba"
+        ],
+        "note": "트럼펫 두 대가 화음으로 운다. 기타론 베이스에 음역이 형제보다 한 도수 넓다"
+      }
+    },
+    {
+      "preset": "Banda",
+      "sub": "멕시코",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "brass-accordion",
+          "keys2": "trombone-trumpet",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 멕시코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Norteño",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "root_abab",
+          "root_aabb",
+          "wor_abab"
+        ],
+        "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+      }
+    },
+    {
+      "preset": "Norteño",
+      "sub": "멕시코",
+      "cat": "H",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "brass-accordion",
+          "keys2": "trombone-trumpet",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1900년대 이후 멕시코 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Reggaeton",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Bachata",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Merengue",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Cumbia",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Chicha",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Tango",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Son Cubano",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Salsa",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Rumba",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Latin Trap",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Neoperreo",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Bossa Nova",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Forró",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Baile Funk",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Mariachi",
+            "axis": "melody",
+            "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+          },
+          {
+            "from": "Banda",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Banda",
+        "pool": [
+          "root_abab",
+          "root_aabb",
+          "wor_abab"
+        ],
+        "note": "140 BPM 에 관악대와 투바. 마리아치보다 빠르고 폴카 혈통이라 정박이 단단하다"
+      }
+    }
+  ]
+}

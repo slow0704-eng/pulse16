@@ -1,0 +1,5620 @@
+{
+  "batch": "A11",
+  "sub": "Jazz · Roots · Regional (계열 F·G·K)",
+  "cat": "F",
+  "date": "2026-09-15",
+  "verdict": "32종 → 18무리. 재즈 9 · 루츠 21 · 기타 지역 2 를 한 배치로 돌렸다.",
+  "profiles": [
+    {
+      "preset": "West Coast Jazz",
+      "sub": "Bebop 계보",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-organ",
+          "keys2": "clarinet-sax",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Soul Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_abab",
+          "jazz_aaba",
+          "jazz_aabb"
+        ],
+        "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+      }
+    },
+    {
+      "preset": "Soul Jazz",
+      "sub": "Bebop 계보",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-organ",
+          "keys2": "clarinet-sax",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+          },
+          {
+            "from": "West Coast Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "West Coast Jazz",
+        "pool": [
+          "jazz_abab",
+          "jazz_aaba",
+          "jazz_aabb"
+        ],
+        "note": "워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다"
+      }
+    },
+    {
+      "preset": "Jazz Fusion",
+      "sub": "Fusion 계보",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "thirteen",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "sax",
+          "keys2": "ep",
+          "gtr": "jazzbox",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 미국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aabb",
+          "jazbal_abab",
+          "jazz_abab"
+        ],
+        "note": "프렛리스에 13화음. 스윙이 없고 16분이 몸이라 비밥 형제와 박자부터 다르다"
+      }
+    },
+    {
+      "preset": "Smooth Jazz",
+      "sub": "현대 갈래",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "sax",
+          "keys2": "pad",
+          "gtr": "jazzbox",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1980년대 이후 미국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "cinbal_aaba",
+          "cinbal_aabb"
+        ],
+        "note": "색소폰이 패드 위를 걷는다. 비밥의 절반 밀도이고 방향을 덜 바꾼다 — 라디오용이다"
+      }
+    },
+    {
+      "preset": "Acid Jazz",
+      "sub": "현대 갈래",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "funk_16th_stab"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "trumpet",
+          "gtr": "wah",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 후반 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazbal_abab",
+          "jazz_aaba",
+          "jazbal_aaba"
+        ],
+        "note": "와우 기타와 오르간에 스윙 30. 재즈 화성에 펑크 그루브를 붙인 자리다"
+      }
+    },
+    {
+      "preset": "Latin Jazz",
+      "sub": "Latin Jazz",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "trumpet-brass",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 이후 미국·쿠바 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Afro-Cuban Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "lat_aabb",
+          "lat_abab",
+          "latbos_aabb"
+        ],
+        "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+      }
+    },
+    {
+      "preset": "Afro-Cuban Jazz",
+      "sub": "Latin Jazz",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "trumpet-brass",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 이후 미국·쿠바 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Latin Jazz",
+        "pool": [
+          "lat_aabb",
+          "lat_abab",
+          "latbos_aabb"
+        ],
+        "note": "170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다"
+      }
+    },
+    {
+      "preset": "Bossa Jazz",
+      "sub": "Latin Jazz",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "flute-trombone",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 브라질 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Samba Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bos_aabb",
+          "bos_aaba",
+          "bos_abab"
+        ],
+        "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+      }
+    },
+    {
+      "preset": "Samba Jazz",
+      "sub": "Latin Jazz",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.55
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "flute-trombone",
+          "gtr": "nylon",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 브라질 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Bossa Jazz",
+        "pool": [
+          "bos_aabb",
+          "bos_aaba",
+          "bos_abab"
+        ],
+        "note": "나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다"
+      }
+    },
+    {
+      "preset": "Chicago Blues",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica-organ",
+          "keys2": "organ-horns",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Electric Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Texas Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "blues_aaba",
+          "blues_aabb",
+          "blues_abab"
+        ],
+        "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+      }
+    },
+    {
+      "preset": "Electric Blues",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica-organ",
+          "keys2": "organ-horns",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Texas Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Chicago Blues",
+        "pool": [
+          "blues_aaba",
+          "blues_aabb",
+          "blues_abab"
+        ],
+        "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+      }
+    },
+    {
+      "preset": "Texas Blues",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica-organ",
+          "keys2": "organ-horns",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 미국 · 12곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Electric Blues",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Chicago Blues",
+        "pool": [
+          "blues_aaba",
+          "blues_aabb",
+          "blues_abab"
+        ],
+        "note": "스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다"
+      }
+    },
+    {
+      "preset": "Jump Blues",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "horns",
+          "keys2": "sax",
+          "gtr": "jazzbox",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 미국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aaba",
+          "jazbal_aaba",
+          "jazz_abab"
+        ],
+        "note": "160 BPM 에 혼 섹션과 업라이트. 블루스에서 유일하게 빅밴드 쪽이라 밀도가 두 배다"
+      }
+    },
+    {
+      "preset": "Blues Rock",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "piano",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 후반 영국·미국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rootbl_aabb",
+          "rootbl_aaba",
+          "rock_aabb"
+        ],
+        "note": "스윙 0 의 스트레이트. 형제 셋이 셔플인데 여기만 록 비트라 박자부터 갈린다"
+      }
+    },
+    {
+      "preset": "Country Blues",
+      "sub": "Blues",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica",
+          "keys2": "dulcimer",
+          "gtr": "resonator",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1920~30년대 미국 남부 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "root_aaba",
+          "rootbl_aaba",
+          "blues_aaba"
+        ],
+        "note": "90 BPM 에 리조네이터와 덜시머. 밴드가 아니라 혼자 치는 블루스라 하행이 잦다"
+      }
+    },
+    {
+      "preset": "Honky-tonk",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-harmonica",
+          "keys2": "accordion-strings",
+          "gtr": "steel-banjo",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940~50년대 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Old-time / Hillbilly",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "root_aaba",
+          "root_aabb",
+          "root_abab"
+        ],
+        "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+      }
+    },
+    {
+      "preset": "Old-time / Hillbilly",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "piano-harmonica",
+          "keys2": "accordion-strings",
+          "gtr": "steel-banjo",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940~50년대 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Honky-tonk",
+        "pool": [
+          "root_aaba",
+          "root_aabb",
+          "root_abab"
+        ],
+        "note": "붐칙 베이스에 피아노·밴조. 컨트리의 뿌리 형태이고 반복이 강하다"
+      }
+    },
+    {
+      "preset": "Bluegrass",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano",
+          "keys2": "strings",
+          "gtr": "mandolin",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1940년대 이후 미국 애팔래치아 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_aabb",
+          "root_abab",
+          "jazbal_abab"
+        ],
+        "note": "150 BPM 에 만돌린 트레몰로. 속주가 정체성이라 컨트리에서 밀도가 가장 높다"
+      }
+    },
+    {
+      "preset": "Nashville Sound",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "strings-piano",
+          "keys2": "choir-strings",
+          "gtr": "pedal",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 미국 내슈빌 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Countrypolitan",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Country Pop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "pop_aaba",
+          "pop_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+      }
+    },
+    {
+      "preset": "Countrypolitan",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "strings-piano",
+          "keys2": "choir-strings",
+          "gtr": "pedal",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 미국 내슈빌 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Country Pop",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Nashville Sound",
+        "pool": [
+          "pop_aaba",
+          "pop_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+      }
+    },
+    {
+      "preset": "Country Pop",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "strings-piano",
+          "keys2": "choir-strings",
+          "gtr": "pedal",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 미국 내슈빌 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Countrypolitan",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Nashville Sound",
+        "pool": [
+          "pop_aaba",
+          "pop_aabb",
+          "cinbal_aaba"
+        ],
+        "note": "현과 합창으로 컨트리를 팝으로 다듬은 자리. 페달 스틸만 남기고 순차가 많아진다"
+      }
+    },
+    {
+      "preset": "Outlaw Country",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep-harmonica",
+          "keys2": "organ-piano",
+          "gtr": "nylon-pedal-steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Alt-country",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Americana",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rootbl_aaba",
+          "rootbl_aabb",
+          "root_aabb"
+        ],
+        "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+      }
+    },
+    {
+      "preset": "Alt-country",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep-harmonica",
+          "keys2": "organ-piano",
+          "gtr": "nylon-pedal-steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Americana",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Outlaw Country",
+        "pool": [
+          "rootbl_aaba",
+          "rootbl_aabb",
+          "root_aabb"
+        ],
+        "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+      }
+    },
+    {
+      "preset": "Americana",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "piano-ep-harmonica",
+          "keys2": "organ-piano",
+          "gtr": "nylon-pedal-steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1970년대 이후 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Alt-country",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Outlaw Country",
+        "pool": [
+          "rootbl_aaba",
+          "rootbl_aabb",
+          "root_aabb"
+        ],
+        "note": "내슈빌의 매끈함을 거부한 계보. 블루스 어휘가 섞이고 프로덕션을 덜 다듬는다"
+      }
+    },
+    {
+      "preset": "Bro-country",
+      "sub": "Country",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "strings",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 미국 · 8곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rock_aaba",
+          "rock_aabb",
+          "rock_abab"
+        ],
+        "note": "크런치 기타에 신스 리드. 컨트리 형제 중 유일하게 록 편성이라 페달 스틸이 없다"
+      }
+    },
+    {
+      "preset": "Folk Revival",
+      "sub": "Folk",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica-glocken",
+          "keys2": "dulcimer-strings",
+          "gtr": "steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 미국·영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Indie Folk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "root_aabb",
+          "root_aaba",
+          "worcin_aaba"
+        ],
+        "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+      }
+    },
+    {
+      "preset": "Indie Folk",
+      "sub": "Folk",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "harmonica-glocken",
+          "keys2": "dulcimer-strings",
+          "gtr": "steel",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 이후 미국·영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Folk Revival",
+        "pool": [
+          "root_aabb",
+          "root_aaba",
+          "worcin_aaba"
+        ],
+        "note": "스틸 기타 아르페지오에 업라이트. 컨트리와 재료는 이웃인데 붐칙이 없고 잔잔하다"
+      }
+    },
+    {
+      "preset": "Folk Rock",
+      "sub": "Folk",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "add9",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "harmonica",
+          "gtr": "twelve",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1960년대 중반 미국·영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rock_aabb",
+          "rock_abab",
+          "root_abab"
+        ],
+        "note": "12현에 드럼이 들어온다. 130 BPM 으로 포크 형제보다 빠르고 록 백비트가 있다"
+      }
+    },
+    {
+      "preset": "Gospel",
+      "sub": "Gospel · 지역 장르",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 2,
+          "max": 4
+        },
+        "leapRatio": {
+          "min": 0.4,
+          "max": 0.7
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "chord",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "gospel_swell"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ",
+          "keys2": "choir",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1950년대 이후 미국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "gos_aabb",
+          "gos_aaba",
+          "gos_abab"
+        ],
+        "note": "오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다"
+      }
+    },
+    {
+      "preset": "Zydeco / Cajun",
+      "sub": "Gospel · 지역 장르",
+      "cat": "G",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "nine",
+        "comping": "rock_8th"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "accordion",
+          "keys2": "harmonica",
+          "gtr": "cut",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1950년대 이후 미국 루이지애나 · 8곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "wor_aabb",
+          "wor_abab",
+          "afr_abab"
+        ],
+        "note": "아코디언과 워시보드에 140 BPM. 가스펠 형제와 달리 단음이고 계속 움직인다"
+      }
+    },
+    {
+      "preset": "Bhangra",
+      "sub": "남아시아",
+      "cat": "K",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "strings",
+          "gtr": "sitar",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 펀자브·영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          },
+          {
+            "from": "Global Bass",
+            "axis": "melody",
+            "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_abab",
+          "afr_aabb",
+          "wor_abab"
+        ],
+        "note": "돌 리듬에 시타르. 145 BPM 으로 남아시아 형제보다 빠르고 16분으로 쪼갠다"
+      }
+    },
+    {
+      "preset": "Global Bass",
+      "sub": "하이브리드 · 인터넷 장르",
+      "cat": "K",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "strings",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 인터넷·중남미 · 8곡",
+        "distinguishes": [
+          {
+            "from": "West Coast Jazz",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Jazz Fusion",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Smooth Jazz",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Acid Jazz",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Latin Jazz",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Bossa Jazz",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Chicago Blues",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Jump Blues",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Blues Rock",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Country Blues",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Honky-tonk",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Bluegrass",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Nashville Sound",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Outlaw Country",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Bro-country",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Folk Revival",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Folk Rock",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Gospel",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Zydeco / Cajun",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          },
+          {
+            "from": "Bhangra",
+            "axis": "melody",
+            "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "car_aabb",
+          "lat_abab",
+          "car_abab"
+        ],
+        "note": "여러 지역 타악을 베이스 뮤직 위에 얹는다. 어휘는 카리브·라틴 쪽이다"
+      }
+    }
+  ]
+}

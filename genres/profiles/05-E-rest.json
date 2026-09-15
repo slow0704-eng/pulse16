@@ -1,0 +1,6219 @@
+{
+  "batch": "A12",
+  "sub": "Electronic 나머지 (계열 E)",
+  "cat": "E",
+  "date": "2026-09-15",
+  "verdict": "39종 → 17무리. 일렉트로닉에서 남아 있던 네 분기를 프리셋 단위로 갈랐다.",
+  "profiles": [
+    {
+      "preset": "Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "strings-organ-bell",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hardgroove",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Microhouse",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "amb_aaab",
+          "amb_aabb"
+        ],
+        "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+      }
+    },
+    {
+      "preset": "Hardgroove",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "strings-organ-bell",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Microhouse",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Techno",
+        "pool": [
+          "amb_aaba",
+          "amb_aaab",
+          "amb_aabb"
+        ],
+        "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+      }
+    },
+    {
+      "preset": "Microhouse",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "pluck",
+          "keys2": "strings-organ-bell",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+          },
+          {
+            "from": "Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hardgroove",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Techno",
+        "pool": [
+          "amb_aaba",
+          "amb_aaab",
+          "amb_aabb"
+        ],
+        "note": "플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다"
+      }
+    },
+    {
+      "preset": "Detroit Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "strings-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 후반 미국 디트로이트 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Dub Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "bal_aabb",
+          "amb_aaba"
+        ],
+        "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+      }
+    },
+    {
+      "preset": "Dub Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "strings-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 후반 미국 디트로이트 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Detroit Techno",
+        "pool": [
+          "bal_aaba",
+          "bal_aabb",
+          "amb_aaba"
+        ],
+        "note": "패드 코드가 길게 깔린다. 형제 테크노의 플럭과 달리 화성이 앞에 서고 게이트가 길다"
+      }
+    },
+    {
+      "preset": "Acid Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaab",
+          "amb_aabb",
+          "amb_aaba"
+        ],
+        "note": "303 이 선율을 맡는다. 테크노 형제 중 유일하게 lead 가 베이스이고 글라이드가 정체성이다"
+      }
+    },
+    {
+      "preset": "Hard Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly-fmlead-choir",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Schranz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Industrial",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+      }
+    },
+    {
+      "preset": "Schranz",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly-fmlead-choir",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Industrial",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Hard Techno",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+      }
+    },
+    {
+      "preset": "Industrial",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "poly-fmlead-choir",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Schranz",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Hard Techno",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다"
+      }
+    },
+    {
+      "preset": "Minimal Techno",
+      "sub": "Techno 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "pluck",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 이후 독일 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aabb",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다"
+      }
+    },
+    {
+      "preset": "Drum & Bass",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad-ep",
+          "keys2": "strings-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Liquid Funk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Halftime DnB",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "bal_aaba",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+      }
+    },
+    {
+      "preset": "Liquid Funk",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad-ep",
+          "keys2": "strings-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Halftime DnB",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Drum & Bass",
+        "pool": [
+          "bal_aaba",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+      }
+    },
+    {
+      "preset": "Halftime DnB",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad-ep",
+          "keys2": "strings-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 영국 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Liquid Funk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Drum & Bass",
+        "pool": [
+          "bal_aaba",
+          "amb_aaba",
+          "bal_aabb"
+        ],
+        "note": "174 BPM 이지만 화성은 하프타임으로 느리게 흐른다. 패드가 깔리고 드럼이 주역이다"
+      }
+    },
+    {
+      "preset": "Neurofunk",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "occasional"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "growl-poly-pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Techstep",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Jump-up",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "chip_abab",
+          "chip_aabb",
+          "chip_aaab"
+        ],
+        "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+      }
+    },
+    {
+      "preset": "Techstep",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "occasional"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "growl-poly-pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Jump-up",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Neurofunk",
+        "pool": [
+          "chip_abab",
+          "chip_aabb",
+          "chip_aaab"
+        ],
+        "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+      }
+    },
+    {
+      "preset": "Jump-up",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "occasional"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "bell-lead",
+          "keys2": "growl-poly-pad",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 영국 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Techstep",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Neurofunk",
+        "pool": [
+          "chip_abab",
+          "chip_aabb",
+          "chip_aaab"
+        ],
+        "note": "리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다"
+      }
+    },
+    {
+      "preset": "Jungle",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "pad-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 초 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Drumfunk",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aabb",
+          "amb_aaab",
+          "amb_aaba"
+        ],
+        "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+      }
+    },
+    {
+      "preset": "Drumfunk",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "bell",
+          "keys2": "pad-glass",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 초 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Jungle",
+        "pool": [
+          "amb_aabb",
+          "amb_aaab",
+          "amb_aaba"
+        ],
+        "note": "브레이크를 잘게 썬 것이 몸이라 건반은 자리를 비운다. 서브 베이스와 레게 혈통이 남아 있다"
+      }
+    },
+    {
+      "preset": "Big Beat",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "funk_16th_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-lead",
+          "keys2": "brass-pad",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Nu Skool Breaks",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "funk_aabb",
+          "funk_abab",
+          "funk_aaab"
+        ],
+        "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+      }
+    },
+    {
+      "preset": "Nu Skool Breaks",
+      "sub": "Breakbeat 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 4,
+          "max": 6
+        },
+        "leapRatio": {
+          "min": 0.05,
+          "max": 0.35
+        },
+        "contour": "static",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "funk_16th_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "organ-lead",
+          "keys2": "brass-pad",
+          "gtr": "crunch",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 영국 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Big Beat",
+        "pool": [
+          "funk_aabb",
+          "funk_abab",
+          "funk_aaab"
+        ],
+        "note": "펑크 브레이크에 록 기타. 128~135 BPM 으로 형제 DnB 보다 40 느리고 그루브가 몸이다"
+      }
+    },
+    {
+      "preset": "Trance",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Uplifting Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hard Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "dis_aabb",
+          "dis_abab",
+          "dis_aaab"
+        ],
+        "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+      }
+    },
+    {
+      "preset": "Uplifting Trance",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hard Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Trance",
+        "pool": [
+          "dis_aabb",
+          "dis_abab",
+          "dis_aaab"
+        ],
+        "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+      }
+    },
+    {
+      "preset": "Hard Trance",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 유럽 · 12곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Uplifting Trance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Trance",
+        "pool": [
+          "dis_aabb",
+          "dis_abab",
+          "dis_aaab"
+        ],
+        "note": "슈퍼소우가 긴 상행으로 쌓아 올린다. sus4 화음과 브레이크다운이 형식이다"
+      }
+    },
+    {
+      "preset": "Psytrance",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead-bell",
+          "keys2": "strings-bell-supersaw-glocken",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 인도·이스라엘·유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Goa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Full-on",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Forest",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hi-tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+      }
+    },
+    {
+      "preset": "Goa",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead-bell",
+          "keys2": "strings-bell-supersaw-glocken",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 인도·이스라엘·유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Full-on",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Forest",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hi-tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Psytrance",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+      }
+    },
+    {
+      "preset": "Full-on",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead-bell",
+          "keys2": "strings-bell-supersaw-glocken",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 인도·이스라엘·유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Goa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Forest",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hi-tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Psytrance",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+      }
+    },
+    {
+      "preset": "Forest",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead-bell",
+          "keys2": "strings-bell-supersaw-glocken",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 인도·이스라엘·유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Goa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Full-on",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hi-tech",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Psytrance",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+      }
+    },
+    {
+      "preset": "Hi-tech",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "arpeggio",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "offset",
+        "glide": "defining"
+      },
+      "ensemble": {
+        "lead": "bass",
+        "off": [],
+        "roles": {
+          "keys": "lead-bell",
+          "keys2": "strings-bell-supersaw-glocken",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 인도·이스라엘·유럽 · 11곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Goa",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Full-on",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Forest",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Psytrance",
+        "pool": [
+          "chip_aaab",
+          "chip_abab",
+          "chip_aabb"
+        ],
+        "note": "303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다"
+      }
+    },
+    {
+      "preset": "Hardstyle",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.4,
+          "max": 0.65
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "strings-choir",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 네덜란드 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Rawstyle",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "ant_aabb",
+          "ant_abab",
+          "ant_aaba"
+        ],
+        "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+      }
+    },
+    {
+      "preset": "Rawstyle",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.4,
+          "max": 0.65
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "strings-choir",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 네덜란드 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Hardstyle",
+        "pool": [
+          "ant_aabb",
+          "ant_abab",
+          "ant_aaba"
+        ],
+        "note": "리버스 베이스에 앤섬 리드. 음은 적은데 크게 벌어져 떼창이 된다 — 트랜스와 다른 형식이다"
+      }
+    },
+    {
+      "preset": "Progressive Trance",
+      "sub": "Trance 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.5
+        },
+        "contour": "rise",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sus4",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "long",
+        "kickRelation": "offset",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys2",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "pluck",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "2000년대 이후 유럽 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaba",
+          "bal_aaba",
+          "amb_aabb"
+        ],
+        "note": "132 BPM 에 패드가 천천히 열린다. 트랜스 형제 중 유일하게 성기고 리드가 없다"
+      }
+    },
+    {
+      "preset": "Gabber",
+      "sub": "Hardcore 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 네덜란드·프랑스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hardcore Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Frenchcore",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "chip_abab",
+          "chip_aaab",
+          "chip_aabb"
+        ],
+        "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+      }
+    },
+    {
+      "preset": "Hardcore Techno",
+      "sub": "Hardcore 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 네덜란드·프랑스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Frenchcore",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Gabber",
+        "pool": [
+          "chip_abab",
+          "chip_aaab",
+          "chip_aabb"
+        ],
+        "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+      }
+    },
+    {
+      "preset": "Frenchcore",
+      "sub": "Hardcore 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.85,
+          "max": 1
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings-choir-growl",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 이후 네덜란드·프랑스 · 10곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          },
+          {
+            "from": "Hardcore Techno",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Gabber",
+        "pool": [
+          "chip_abab",
+          "chip_aaab",
+          "chip_aabb"
+        ],
+        "note": "180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다"
+      }
+    },
+    {
+      "preset": "Happy Hardcore",
+      "sub": "Hardcore 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "piano-organ",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 영국·네덜란드 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Breakbeat Hardcore",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "dis_aaab",
+          "dis_aabb",
+          "dis_abab"
+        ],
+        "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+      }
+    },
+    {
+      "preset": "Breakbeat Hardcore",
+      "sub": "Hardcore 계열",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "piano-organ",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1990년대 영국·네덜란드 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Happy Hardcore",
+        "pool": [
+          "dis_aaab",
+          "dis_aabb",
+          "dis_abab"
+        ],
+        "note": "피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다"
+      }
+    },
+    {
+      "preset": "Nu-disco",
+      "sub": "Disco",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 6,
+          "max": 8
+        },
+        "leapRatio": {
+          "min": 0.8,
+          "max": 0.95
+        },
+        "contour": "rise",
+        "range": {
+          "min": 6,
+          "max": 7
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "mid",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "strings",
+          "keys2": "ep",
+          "gtr": "wah",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "2000년대 이후 유럽 · 8곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          },
+          {
+            "from": "Electro",
+            "axis": "melody",
+            "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "dis_abab",
+          "dis_aabb",
+          "dis_aaab"
+        ],
+        "note": "디스코를 현대 장비로 다시 만든 자리. 와우 기타와 현이 그대로 남아 있다"
+      }
+    },
+    {
+      "preset": "Electro",
+      "sub": "Electro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.4,
+          "max": 0.65
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "vocoder-poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 미국·유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Electroclash",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "ant_abab",
+          "ant_aabb",
+          "ant_aaba"
+        ],
+        "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+      }
+    },
+    {
+      "preset": "Electroclash",
+      "sub": "Electro",
+      "cat": "E",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 3
+        },
+        "leapRatio": {
+          "min": 0.4,
+          "max": 0.65
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "disco_stab"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "lead",
+          "keys2": "vocoder-poly",
+          "gtr": "none",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "high",
+        "evidenceBasis": "1980년대 이후 미국·유럽 · 9곡",
+        "distinguishes": [
+          {
+            "from": "Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Detroit Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Acid Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Hard Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Minimal Techno",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Drum & Bass",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Neurofunk",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Jungle",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Big Beat",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Trance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Psytrance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Hardstyle",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Progressive Trance",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Gabber",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Happy Hardcore",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Nu-disco",
+            "axis": "melody",
+            "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+          },
+          {
+            "from": "Electro",
+            "axis": "none",
+            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+          }
+        ],
+        "poolDecision": "share",
+        "shareWith": "Electro",
+        "pool": [
+          "ant_abab",
+          "ant_aabb",
+          "ant_aaba"
+        ],
+        "note": "808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다"
+      }
+    }
+  ]
+}

@@ -57,7 +57,7 @@ for (const gk of keys) {
       harmony: { chordType: g.chordType, comping: g.comping },
       bass: { role: g.bass.role, octaveJump: g.bass.oct, gate: g.bass.gate,
               kickRelation: g.bass.kick, glide: g.bass.glide },
-      ensemble: { lead: g.lead, off: g.off || [], roles: g.roles, lvlHint: g.lvlHint || {} },
+      ensemble: { lead: g.lead, off: g.off || [], roles: g.roles || {}, lvlHint: g.lvlHint || {} },
       ...(g.phrases && isAnchor && PHRASES[g.phrases] ? { phrases: PHRASES[g.phrases] } : {}),
       meta: {
         confidence: g.conf, evidenceBasis: g.ev, distinguishes: dist,
