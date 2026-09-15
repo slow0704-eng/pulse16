@@ -8,127 +8,136 @@
 >
 > 공통 원형은 [00-archetypes.md](00-archetypes.md), 표기·스윙·그리드 한계는 [README.md](README.md).
 > 값이 안 비어 있는 트랙만 적었습니다 — 줄이 없으면 그 트랙은 쉽니다.
+> 이 파일은 `src/data/presets/01-rock.js` 에서 뽑아 적었습니다 — 값이 어긋나면 프리셋 파일이 맞습니다.
 
 **수록 49종 — 골격도 49가지입니다.**
 
 > 2026-08-17 이전에는 «골격이 같은 장르는 한 블록에 묶었습니다» 라고 적혀 있었고,
 > 실제로 골격이 7개뿐이었습니다. 상속으로 파생 프리셋이 원형을 그대로 받던 탓입니다.
-> 상속을 끊고([`_build.js`](../src/data/presets/_build.js)) 장르마다 박자를 다시 썼습니다 —
-> 이제 **묶인 블록이 없습니다.**
+> 상속을 끊고([`_build.js`](../src/data/presets/_build.js)) 장르마다 박자를 다시 썼습니다.
+
+> **2026-09-16 — 대표곡으로 교정했습니다.** 장르마다 웹에서 실재·장르 분류를 확인한
+> 곡 3~5곡([../genres/01-rock.md](../genres/01-rock.md) «대표곡» 표)의 드럼 골격과 대조했습니다.
+> 크게 바뀐 곳: 갤럽이 Heavy Metal 에서 **NWOBHM** 으로 옮겨 갔고(대표곡 4곡 모두 곧은 8분),
+> Death Metal 의 **비어 있던 심벌**을 채웠고, Sludge·Stoner·Dream Pop 을 **하프타임**으로,
+> Gothic Rock 을 **16분 햇 위 반박 체감**으로, Hardcore 를 **스캥크 비트**로 바꿨습니다.
+> 곡 단위 드럼 출처가 없는 D-beat 는 그대로 두었습니다.
 
 ---
 
 ## Psychedelic · Krautrock  (5종)
 
 ```
- Motorik                142 BPM  swing  0      ← 킥1·스네어2 교대. 16마디가 지나도 아무것도 안 변한다
-  K X---x---X---x---
+ Motorik                142 BPM  swing  0      ← 스네어 자리만 뺀 8분 킥, 필인 없음 — Hallogallo·Mother Sky
+  K X-x---x-X-x---x-
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   B 0-0-0-0-0-0-0-0-
 
- Psychedelic Rock       115 BPM  swing  0      ← 톰이 뒤 절반을 채운다 · 베이스가 화음을 돌아다님
+ Psychedelic Rock       125 BPM  swing  0      ← 탐 굴림 + 탬버린 8분 · 베이스는 한 음 오스티나토(Tomorrow Never Knows)
   K X-----x-X-------
   S ----X-------X-o-
   H x-x-x-x-x-x-x-x-
   T --------x-x-x-x-
-  B 0-0-2-0-3-0-2-0-
+  P x-x-x-x-x-x-x-x-
+  B 0-0-0-0-0-0-0-2-
 
- Acid Rock              120 BPM  swing  0      ← 리프 중심 — 킥과 기타가 같은 자리를 때린다
-  K X---x-x-X---x---
+ Acid Rock              130 BPM  swing  0      ← 퍼즈 리프에 베이스 유니즌 · 필인이 많다(모토릭과 정반대)
+  K X-----x-X-x-----
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --------------x-
-  T -------------x-x
-  B 0-0-0-3-0-0-3-0-
+  T -----------x-xxx
+  B 0-0-3-3-0-0-3-3-
 
- Space Rock             105 BPM  swing  0      ← 한 마디에 킥 둘. 여백과 긴 게이트(400)가 소리의 몸
-  K X-------X-------
+ Space Rock             120 BPM  swing  0      ← 8분으로 몰아치는 킥 + 반복 리프 베이스 — Silver Machine
+  K X-x---x-X-----x-
   S ----X-------X---
-  H x---x---x---x---
+  H x-x-x-x-x-x-x-x-
   O ------x-------x-
-  T ------------x---
-  B 0-------0-------
+  T ------------x-x-
+  B 0-0-0-0-0-0-3-2-
 
- Krautrock              135 BPM  swing  0      ← 16분 시퀀서 햇 + 건반 8분 반복 — 사람이 안 친 정확도
-  K X---X---X---X---
+ Krautrock              110 BPM  swing  0      ← Can 의 느린 펑크형 — 16분 고스트 햇 위 짧은 베이스 오스티나토
+  K X-----x-X-x-----
   S ----X-------X---
-  H XxxxXxxxXxxxXxxx
-  B 0-0-0-0-0-0-0-0-
+  H x-xxx-xxx-xxx-xx
+  B 0--0--0-3-0-----
 ```
 
 ## Hard Rock  (3종)
 
 ```
- Rock                   130 BPM  swing  0      ← 이 계열의 기준선. 8분 햇에 강세만 넣었다
-  K X-----x-X-------
+ Rock                   115 BPM  swing  0      ← 킥 1·3박(+3박 뒤) 백비트 — 대표곡 5곡이 88~125 BPM
+  K X-------X-x-----
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
   B 0-0-0-0-0-0-0-0-
 
- Southern Rock          120 BPM  swing 30      ← 셔플 30 + 스네어 고스트 + 트윈 기타(슬라이드·리조네이터)
-  K X---x-X-X---x---
+ Southern Rock          100 BPM  swing  8      ← 셔플이 아니라 뒤로 기대는 스트레이트(swing 8) + 스네어 고스트
+  K X-------X--x----
   S ----X--o----X---
   H X-x-X-x-X-x-X-x-
   T ------------x-x-
   B 0-0-3-0-5-0-3-0-
 
- Glam Rock              135 BPM  swing  0      ← 스톰프 — 킥 8분 전부 + 2·4박 핸드클랩, 햇을 아예 뺐다
-  K X-X-X-X-X-X-X-X-
+ Glam Rock              125 BPM  swing 10      ← 4분 스톰프 킥 + 2·4박 박수 + 탬버린 8분
+  K X---X---X---X---
   S ----X-------X---
   C ----X-------X---
-  H ----------------
   O --------------x-
   T ------------x-x-
-  B 0---0---0---0---
+  P x-x-x-x-x-x-x-x-
+  B 0-0-0-0-0-0-0-0-
 ```
 
 ## Punk  (7종)
 
 ```
- Punk                   180 BPM  swing  0      ← 16분 다운스트로크 · 베이스도 16분 — 여백이 없다
-  K X-x-X-x-X-x-X-x-
+ Punk                   180 BPM  swing  0      ← 8분 다운스트로크 I–IV–V — 기타·베이스가 같은 리듬
+  K X-----x-X-------
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
-  B 0000000000000000
+  B 0-0-0-0-2-2-3-3-
 
- Pop Punk               170 BPM  swing  0      ← 펑크 골격 + 오픈햇 한 방 — 후렴을 여는 자리
-  K X---X-x-X---X-x-
+ Pop Punk               170 BPM  swing  0      ← 펑크 골격 + 2·4박 핸드클랩 · 오픈햇 한 방
+  K X-----x-X-x-----
   S ----X-------X---
+  C ----X-------X---
   H X-x-X-x-X-x-X-x-
   O ------------x---
   T -------------x-x
   B 0-0-0-0-4-4-4-4-
 
- Hardcore Punk          200 BPM  swing  0      ← 킥 8분 전부 + 백비트 — 밀도를 속도로 바꾼다
-  K X-X-X-X-X-X-X-X-
-  S ----X-------X---
+ Hardcore Punk          200 BPM  swing  0      ← 스캥크 비트 — 킥과 스네어가 8분을 번갈아
+  K X---x---X---x---
+  S --X---X---X---X-
   H X-x-X-x-X-x-X-x-
   B 0-0-0-0-0-0-0-0-
 
- Punk Rock              180 BPM  swing  0      ← 정박 8분. 펑크 중에서 가장 «노래» 쪽
-  K X---X-x-X---X-x-
+ Punk Rock              175 BPM  swing  0      ← 펑크 골격 + 톰 굴림 · 리프형 선율 베이스(Neat Neat Neat)
+  K X-----x-X-------
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
-  T -------------x-x
-  B 0-0-0-0-0-0-0-0-
+  T ------------xxxx
+  B 0-0-2-2-3-3-2-2-
 
- Crust                  180 BPM  swing  0      ← D-beat 골격에 둠 리프 — 기타·베이스가 반박자로 느려진다
+ Crust                  150 BPM  swing  0      ← D-beat 골격에 톰 부족 리듬 — 원래 미드템포라 150
   K X--x--X-X--x--X-
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
-  T ------------x-x-
+  T --x---x---x-x-x-
   B 0---0---3---3---
 
- D-beat                 200 BPM  swing  0      ← 이름이 곧 패턴 — 킥 1박·2박 뒤, 스네어 2·4
+ D-beat                 200 BPM  swing  0      ← 이름이 곧 패턴 — 곡 단위 드럼 출처가 없어 이전 값 유지
   K X--x--X-X--x--X-
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   O --------------x-
   B 0-0-0-0-0-0-0-0-
 
- Powerviolence          250 BPM  swing  0      ← 한 마디 안에서 배속이 바뀐다 — 앞 절반 블래스트, 뒤 절반 하프타임
+ Powerviolence          250 BPM  swing  0      ← 한 마디 안에서 블래스트 ↔ 하프타임 급전환
   K X-X-X-X-X-------
   S -X-X-X-X----X---
   H xxxxxxxx----x---
@@ -139,173 +148,172 @@
 ## Metal  (13종)
 
 ```
- Death Metal            200 BPM  swing  0      ← 블래스트 — 킥과 스네어가 16분을 번갈아. 햇 없음
-  K X-X-X-X-X-X-X-X-
-  S -X-X-X-X-X-X-X-X
-  H ----------------
-  T ------------xxxx
+ Death Metal            200 BPM  swing  0      ← 블래스트 반 마디 + 더블킥 그루브 반 마디 · 심벌이 박을 끈다
+  K X-X-X-X-XxXxXxXx
+  S -X-X-X-X----X---
+  H X-X-X-X-X-X-X-X-
   B 0000000000000000
 
- Nu Metal                95 BPM  swing  0      ← 하프타임 신콥 + 스크래치. 베이스가 킥과 한 몸
-  K X--x--x-X-------
-  S --------X-------
-  H X-x-X-x-X-x-X-x-
+ Nu Metal                95 BPM  swing  0      ← 힙합식 싱코페 킥 + 2·4 스네어 · 스크래치 · 신스 텍스처
+  K X--x--X---X-x---
+  S ----X-------X---
+  H x-x-x-x-x-xXx-x-
   T ------------x-x-
   P ------------x-x-
-  B 0--0--0-0-------
+  B 0--0--0---0-0---
 
- Doom                    70 BPM  swing  0      ← 한 마디에 킥 둘 · 게이트 600 — 느림 자체가 무게
-  K X-------X-------
+ Doom                    70 BPM  swing  0      ← 한 마디에 킥 셋 · 게이트 600 — 느림 자체가 무게
+  K X-------X-x-----
   S ----X-------X---
   H x---x---x---x---
   T -------------x--
   B 0-------0-------
 
- Heavy Metal            140 BPM  swing  0      ← 갤럽(8분+16분 둘)을 킥·베이스·기타가 함께
-  K X-xxX-xxX-xxX-xx
+ Heavy Metal            140 BPM  swing  0      ← 곧은 8분 록 비트(갤럽 아님) · Am–F–G 리프
+  K X-------X-x-----
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   T ------------x-x-
-  B 0-000-000-000-00
+  B 0-0-0-0-5-5-6-6-
 
- Thrash Metal           200 BPM  swing  0      ← 스키 비트(스네어가 뒷박) + 다운피킹 16분
-  K X-X-X-X-X-X-X-X-
+ Thrash Metal           200 BPM  swing  0      ← 스키 비트 — 킥 4분, 스네어 뒷박 · 다운피킹 16분
+  K X---X---X---X---
   S --X---X---X---X-
-  H XxxxXxxxXxxxXxxx
+  H x-x-x-x-x-x-x-x-
   B 0000000000000000
 
- Black Metal            210 BPM  swing  0      ← 블래스트 + 16분 트레몰로 햇, 저역을 일부러 뺐다
+ Black Metal            210 BPM  swing  0      ← 블래스트 + 16분 트레몰로 햇 · 신스 패드 한 겹
   K X-X-X-X-X-X-X-X-
   S -X-X-X-X-X-X-X-X
-  H xxxxxxxxxxxxxxxx
+  H XxxxXxxxXxxxXxxx
   B 0-0-0-0-0-0-0-0-
 
- Stoner Rock            100 BPM  swing 10      ← 스윙 10의 그루브 리프. 킥이 3연음처럼 끌린다
-  K X--x--X-X--x----
+ Stoner Rock             92 BPM  swing 10      ← 끄는 그루브 리프 · 퍼즈 베이스 유니즌
+  K X-----X-X-----x-
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
   B 0--0--3-0--0--3-
 
- Power Metal            170 BPM  swing  0      ← 더블 킥 16분 연타 + 장조 신스
+ Power Metal            180 BPM  swing  0      ← 16분 더블킥 연타 + 장조 신스 · 베이스 근음 질주
   K XxxxXxxxXxxxXxxx
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   O ------------x---
   T ------------x-x-
-  B 0-000-000-000-00
+  B 0-0-0-0-0-0-0-0-
 
- Metalcore              150 BPM  swing  0      ← 하프타임 — 스네어가 3박 하나. 킥이 청크를 따라간다
-  K X--X--X---X--X--
-  S --------X-------
-  H x---x---x---x---
-  O ------------x---
+ Metalcore              150 BPM  swing  0      ← 앞 절반 더블킥 절 → 뒤 절반 브레이크다운
+  K XxXxXxXxX--X--X-
+  S ----X-------X---
+  H X---X---X---X---
   T ------------x-x-
   B 0-00-0-0--0-0-00
 
- NWOBHM                 160 BPM  swing  0      ← 갤럽 8분 · 얇게 — 트윈 리드가 3도로 겹침
-  K X-x-X-x-X-x-X-x-
+ NWOBHM                 170 BPM  swing  0      ← 갤럽은 여기서 산다 — 베이스·기타가 8분+16분 둘(The Trooper)
+  K X-----x-X-----x-
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
-  B 0-0-0-0-2-2-2-2-
+  B 0-000-000-000-00
 
- Sludge                  75 BPM  swing  0      ← 둠 리프에서 하드코어로 넘어가는 자리 — 킥이 엇박으로 붙는다
-  K X---x---X-x-----
-  S ----X-------X---
-  H x---x---x---x---
+ Sludge                 104 BPM  swing  0      ← 하프타임 — 스네어는 3박 하나, 체감 52
+  K X-----x-X--x----
+  S --------X-------
+  H X-x-X-x-X-x-X-x-
   O ------------x---
   T ------------x-x-
   B 0---0---3---0---
 
- Stoner                 100 BPM  swing 18      ← 스윙 18 + 블루스 리프 — 스네어 뒤 고스트가 뒤로 끈다
-  K X-----x-X---x---
-  S ----X-------X-o-
-  H x-x-x-x-x-x-x-x-
+ Stoner                 124 BPM  swing  8      ← 하프타임 체감 62 · 라이드 8분 · 스윙은 약하게
+  K X-------X-----x-
+  S --------X-------
+  H X-x-X-x-X-x-X-x-
   O --------------x-
   T ------------x-x-
   B 0-0-3-0-5-3-0---
 
- Symphonic Metal        150 BPM  swing  0      ← 더블 킥은 앞 절반만. 나머지 자리를 오케스트라가 채운다
-  K X-xxX---X-xxX---
+ Symphonic Metal        125 BPM  swing  0      ← 미드템포 백비트(Nemo) · 오케스트라·합창이 나머지를 채운다
+  K X-----x-X-x-----
   S ----X-------X---
-  H x-x-x-x-x-x-x-x-
+  H X-x-x-x-x-x-x-x-
   O ------------x---
-  T --------x-x-x-x-
+  T ------------x-x-
   B 0-0-0-0-3-3-3-3-
 ```
 
 ## 뿌리  (4종)
 
 ```
- Rock & Roll            160 BPM  swing 34      ← 부기우기 베이스(근음·3도·5도) + 셔플 34 + 2·4박 탬버린
-  K X-x-X---X-x-X---
+ Rock & Roll            168 BPM  swing 24      ← 부기우기 베이스 + 스윙 24 + 2·4박 탬버린 · 피아노가 뒷박
+  K X-------X-------
   S ----X--o----X---
   H X-x-X-x-X-x-X-x-
   T ------------x-x-
   P ----x-------x---
   B 0-0-3-3-5-5-3-3-
 
- Surf Rock              160 BPM  swing  0      ← 기타 16분 트레몰로가 정체성 — 드럼은 단순한 4박
-  K X---X---X---X---
+ Surf Rock              160 BPM  swing  0      ← 기타 16분 트레몰로가 정체성 · 드럼은 킥 1·3박 백비트
+  K X-------X-x-----
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T --------x-x-x-x-
   P --x---x---x---x-
   B 0-0-0-0-0-0-0-0-
 
- Garage Rock            140 BPM  swing  0      ← 스네어 끝 고스트 · 오픈햇 한 방 — 다듬지 않은 자리
-  K X---X-x-X---X---
+ Garage Rock            140 BPM  swing  0      ← 탬버린 8분 · 콤보 오르간 반복 · 스네어 끝 고스트
+  K X-----x-X-------
   S ----X-------X--o
   H X-x-X-x-X-x-X-x-
   O ------------x---
   T -------------x-x
-  P --x---x---x---x-
+  P x-x-x-x-x-x-x-x-
   B 0-0-0-0-5-5-5-5-
 
- Proto-punk             150 BPM  swing  0      ← 8분 킥을 처음부터 끝까지 — 펑크 직전의 밀도
-  K X-x-X-x-X-x-X-x-
+ Proto-punk             145 BPM  swing  0      ← 4분 킥을 끝까지 + 썰매방울 · 피아노 8분 연타
+  K X---X---X---X---
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   T -------------x-x
-  P ----x-------x---
+  P x-x-x-x-x-x-x-x-
   B 0-0-0-0-0-0-0-0-
 ```
 
 ## Post-punk 계보  (7종)
 
 ```
- Post-punk              135 BPM  swing  0      ← 베이스가 선율(0-3-5-3-0-3-5-7)이고 기타는 뒷박 질감
-  K X-----x-X-------
+ Post-punk              150 BPM  swing  0      ← 드라이한 8분 록 비트 · 베이스가 선율(0-3-5-3-0-3-5-7)
+  K X-------X-x-----
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   T -------------x-x
   B 0-3-5-3-0-3-5-7-
 
- Gothic Rock            120 BPM  swing  0      ← 드럼머신 4박 + 오픈햇 뒷박 — 사람의 흔들림을 뺀다
+ Gothic Rock             84 BPM  swing  0      ← 16분 하이햇 위 반박 체감(84) + 탐 부족 리듬
+  K X-------X-------
+  S ----X-------X---
+  H xxxxxxxxxxxxxxxx
+  T --x---x---x-x-x-
+  B 0-0-0-0-3-3-3-3-
+
+ Dance-punk             130 BPM  swing  0      ← 4/4 킥 + 스네어에 겹친 클랩 + 오픈햇·카우벨 뒷박
   K X---X---X---X---
   S ----X-------X---
-  H x-x-x-x-x-x-x-x-
-  O ------x-------x-
-  B 0---0---3---3---
-
- Dance-punk             130 BPM  swing  0      ← 4/4 댄스 킥 + 2·4박 클랩 + 오픈햇 뒷박, 스네어를 안 쓴다
-  K X---X---X---X---
-  S ----------------
   C ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --x---x---x---x-
-  B 0---3---5---3---
+  T --x---x---x---x-
+  B 0-0-3-0-5-0-3-0-
 
- Emo                    145 BPM  swing  0      ← 기타 아르페지오가 16분을 채우고 드럼은 여백을 남긴다
-  K X-----x-X---x---
+ Emo                    145 BPM  swing  0      ← 폭발부 골격 — 아르페지오 기타가 16분을 채운다
+  K X-----X-X-------
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   O ------------x---
   T ------------x-x-
   B 0---0---2---2---
 
- New Wave               130 BPM  swing  0      ← 정박 4박 + 게이트 스네어, 신스가 8분 훅을 잡는다
+ New Wave               130 BPM  swing  0      ← 정박 4분 킥 + 백비트, 신스가 8분 훅을 잡는다
   K X---X---X---X---
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
@@ -313,16 +321,16 @@
   T ------------x-x-
   B 0-0-0-0-5-5-5-5-
 
- Post-punk Revival      135 BPM  swing  0      ← 날카로운 8분 — 킥이 앞으로 당겨 붙는다
-  K X-x-X---X-x-X---
+ Post-punk Revival      135 BPM  swing  0      ← 타이트한 8분 록 · 근음 8분 베이스
+  K X-----x-X-------
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
   B 0-0-0-0-5-5-5-5-
 
- Screamo                175 BPM  swing  0      ← 16분 킥 폭발과 정지의 반복 — 급변이 곡의 형식
-  K XxxxX---XxxxX---
-  S ----X-------X---
+ Screamo                175 BPM  swing  0      ← 빠른 하드코어 스킵 비트 — 킥 8분, 스네어 뒷박
+  K X-x-X-x-X-x-X-x-
+  S --X---X---X---X-
   H XxxxXxxxXxxxXxxx
   T --------x-x-x-x-
   B 0-0-0-0-3-3-3-3-
@@ -331,68 +339,68 @@
 ## Alternative  (9종)
 
 ```
- Grunge                 110 BPM  swing  0      ← 스네어 고스트 + 킥 하나 추가 — 조용함↔폭발의 낙차
-  K X-----x-X---x---
+ Grunge                 110 BPM  swing  0      ← 스네어 고스트 + 킥 3박 뒤 · 조용함↔폭발
+  K X-----x-X-x-----
   S ----X--o----X---
   H x-x-x-x-x-x-x-x-
   O ------------x---
   T ------------x-x-
   B 0---0---5---5---
 
- Indie Rock             125 BPM  swing  0      ← 킥이 8분 뒤를 한 번 밀고, 베이스가 5도를 오간다
-  K X---X-x-X---X---
+ Indie Rock             112 BPM  swing  0      ← 킥 1·3박(+뒤) · 맞물린 기타 두 대 · 장조
+  K X-------X-x-----
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
   B 0-0-5-0-3-0-5-0-
 
- Shoegaze               120 BPM  swing  0      ← 드럼은 최소, 기타는 한 화음을 마디 내내 — 게이트 320
-  K X---X---X---X---
+ Shoegaze               120 BPM  swing  0      ← 드럼은 기타 벽 밑으로 · 크래시 워시 · 게이트 320
+  K X-----x-X-------
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
+  O --------------x-
   B 0-------0-------
 
- Dream Pop              110 BPM  swing  0      ← 킥 둘 · 4분 햇 · 오픈햇 잔향 — 텍스처가 리듬을 대신
+ Dream Pop              150 BPM  swing  0      ← 드럼머신 반박 — 스네어 3박 하나 · 뒷박 햇 · 체감 75
   K X-------X-------
-  S ----X-------X---
-  H x---x---x---x---
-  O ------x-------x-
-  T ------------x---
+  S --------X-------
+  H --x---x---x---x-
+  O --------------x-
   B 0-------3-------
 
- Britpop                125 BPM  swing  0      ← 탬버린 + 12현 8분 — 60년대 팝 구조의 재현
-  K X---X-x-X---X---
+ Britpop                125 BPM  swing  0      ← 탬버린 8분 + 오픈햇 · 장조 찬가
+  K X-----x-X-------
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   O ------------x---
   T ------------x-x-
-  P --x---x---x---x-
+  P x-x-x-x-x-x-x-x-
   B 0-0-0-0-5-5-5-5-
 
- Noise Rock             130 BPM  swing  0      ← 킥·스네어가 어긋난 자리에 놓인다 · 반음(0↔1) 불협
-  K X--x--X---x-X---
-  S ----X-----X-X---
-  H x-x-x-x-x-x-x-x-
+ Noise Rock             125 BPM  swing  0      ← 단순·반복적인 8분 비트 위에 반음(0↔1) 불협
+  K X-x---x-X-x---x-
+  S ----X-------X---
+  H X-x-X-x-X-x-X-x-
   O ----------x-----
   T --------x-------
-  B 0---1---0---1---
+  B 0-0-0-0-0-0-0-0-
 
- Alternative Rock       125 BPM  swing  0      ← 우산 개념의 기준선 — 8분 햇 강세 + 백비트
-  K X-----x-X-------
+ Alternative Rock       112 BPM  swing  0      ← 우산 개념의 기준선 — 킥 1·3박(+뒤) 백비트
+  K X-----x-X-x-----
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T -------------x-x
   B 0-0-0-0-3-3-3-3-
 
- Lo-fi Indie            115 BPM  swing  0      ← 햇이 고르지 않다(x---x-x-) — 카세트의 흔들림
-  K X-----x-X-------
+ Lo-fi Indie            115 BPM  swing  0      ← 햇이 고르지 않다(x---x-x-) — 카세트의 흔들림 · 베이스 약하게
+  K X-------X-------
   S ----X--o----X---
   H x---x-x-x---x-x-
   T ------------x---
   B 0---0---3---3---
 
- Slacker Rock           110 BPM  swing 14      ← 스윙 14로 뒤에 눕는다 — 베이스가 3연음처럼
-  K X-----x-X---x---
+ Slacker Rock           105 BPM  swing  8      ← 레이드백(swing 8) · 펑키한 베이스
+  K X-----x-X-------
   S ----X-------X---
   H x-x-x-x-x-x-x-x-
   O --------------x-
@@ -403,10 +411,10 @@
 ## 루츠와의 교차  (1종)
 
 ```
- Country Rock           120 BPM  swing  0      ← 베이스 근음↔5도 왕복 + 페달 스틸 — 컨트리 화성을 록 편성으로
-  K X---X-x-X---X---
+ Country Rock           136 BPM  swing  0      ← 근음–5도 붐칙 베이스 + 페달 스틸·밴조 · 장조
+  K X-------X-------
   S ----X-------X---
   H X-x-X-x-X-x-X-x-
   T ------------x-x-
-  B 0-0-5-5-3-3-5-5-
+  B 0---4---0---4---
 ```

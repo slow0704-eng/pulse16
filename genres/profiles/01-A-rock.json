@@ -2,8 +2,8 @@
   "batch": "A7",
   "sub": "Rock (계열 A)",
   "cat": "A",
-  "date": "2026-09-15",
-  "verdict": "49종 중 Metal 13 · Punk 7 은 선율 없음(의도). 남은 29종을 6풀 → 16풀로 갈랐다. 드럼과 편성은 이미 개별화돼 있었다(드럼 47/49 · 편성 49/49) — 선율만 하위분기에 묶여 있었다.",
+  "date": "2026-09-16",
+  "verdict": "49종 중 Metal 10 · Punk 7 은 선율 없음(대표곡 크레딧에 건반 없음). 남은 32종을 대표곡으로 다시 갈랐다. Black · Power · Symphonic Metal 은 대표곡에 건반이 있어 새로 들어왔고, 네 무리를 근거에 맞춰 쪼갰다.",
   "profiles": [
     {
       "preset": "Motorik",
@@ -50,94 +50,34 @@
         "glide": "none"
       },
       "ensemble": {
-        "lead": "keys",
+        "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-hold",
-          "keys2": "mellotron",
-          "gtr": "phase",
+          "keys": "organ",
+          "keys2": "mellotron/ep",
+          "gtr": "wah-tick/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1970년대 초 서독 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "1970년대 서독 · 7곡",
         "distinguishes": [
           {
             "from": "Psychedelic Rock",
             "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+            "note": "그쪽은 보컬은 좁은 음역에서 오래 반복하고, 곡마다 이국적 음색 하나(시타르·오르간·저그)가 간판이다"
+          },
+          {
+            "from": "Acid Rock",
+            "axis": "melody",
+            "note": "그쪽은 퍼즈 기타 리프가 주인공이고 블루스 음계다"
           },
           {
             "from": "Space Rock",
             "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+            "note": "그쪽은 보컬 선율은 약하고 딜레이 기타·오르간·신스 효과음이 주인공이다"
           },
           {
             "from": "Krautrock",
@@ -152,7 +92,7 @@
           "ant_aabb",
           "amb_aaba"
         ],
-        "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+        "note": "한 코드 드론 위에서 같은 것을 오래 민다. 모토릭은 필인 없이 스네어 자리만 뺀 8분 킥이 곧 장르이고, 크라우트록은 Can 의 느린 펑크형(110)이라 템포·드럼이 갈리지만 선율은 둘 다 정체형이다"
       }
     },
     {
@@ -200,94 +140,34 @@
         "glide": "none"
       },
       "ensemble": {
-        "lead": "keys",
+        "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-hold",
-          "keys2": "mellotron",
-          "gtr": "phase",
+          "keys": "organ",
+          "keys2": "mellotron/ep",
+          "gtr": "wah-tick/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1970년대 초 서독 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "1970년대 서독 · 7곡",
         "distinguishes": [
           {
             "from": "Psychedelic Rock",
             "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+            "note": "그쪽은 보컬은 좁은 음역에서 오래 반복하고, 곡마다 이국적 음색 하나(시타르·오르간·저그)가 간판이다"
+          },
+          {
+            "from": "Acid Rock",
+            "axis": "melody",
+            "note": "그쪽은 퍼즈 기타 리프가 주인공이고 블루스 음계다"
           },
           {
             "from": "Space Rock",
             "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+            "note": "그쪽은 보컬 선율은 약하고 딜레이 기타·오르간·신스 효과음이 주인공이다"
           },
           {
             "from": "Motorik",
@@ -302,7 +182,7 @@
           "ant_aabb",
           "amb_aaba"
         ],
-        "note": "같은 것을 오래 민다. 정박에 고정돼 있고 변화가 거의 없다 — 문서가 «모토릭» 이라 부른 그 성질이다"
+        "note": "한 코드 드론 위에서 같은 것을 오래 민다. 모토릭은 필인 없이 스네어 자리만 뺀 8분 킥이 곧 장르이고, 크라우트록은 Can 의 느린 펑크형(110)이라 템포·드럼이 갈리지만 선율은 둘 다 정체형이다"
       }
     },
     {
@@ -319,7 +199,7 @@
           "min": 0.15,
           "max": 0.45
         },
-        "contour": "zigzag",
+        "contour": "static",
         "range": {
           "min": 4,
           "max": 6
@@ -336,9 +216,9 @@
           "lastBarEmpty": false,
           "endDegree": 0
         },
-        "repetition": "mid",
+        "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Dorian"
       },
       "harmony": {
         "chordType": "triad",
@@ -348,7 +228,7 @@
         "role": "root",
         "octaveJump": false,
         "gate": "mid",
-        "kickRelation": "offset",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
@@ -357,104 +237,39 @@
         "roles": {
           "keys": "organ",
           "keys2": "mellotron",
-          "gtr": "fuzz-phase",
-          "gtr2": "none"
+          "gtr": "phase",
+          "gtr2": "sitar"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 후반 미국·영국 · 11곡",
+        "evidenceBasis": "1960년대 후반 영국·미국 · 5곡",
         "distinguishes": [
           {
             "from": "Motorik",
             "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+            "note": "그쪽은 한 코드 드론 위에서 같은 것을 오래 민다"
+          },
+          {
+            "from": "Acid Rock",
+            "axis": "melody",
+            "note": "그쪽은 퍼즈 기타 리프가 주인공이고 블루스 음계다"
           },
           {
             "from": "Space Rock",
             "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Acid Rock",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 보컬 선율은 약하고 딜레이 기타·오르간·신스 효과음이 주인공이다"
           }
         ],
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
           "rock_abab",
-          "blues_aabb",
+          "wor_aaba",
           "rock_aabb"
         ],
-        "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+        "note": "보컬은 좁은 음역에서 오래 반복하고, 곡마다 이국적 음색 하나(시타르·오르간·저그)가 간판이다. 그래서 월드 장식음 재료를 섞고 스케일을 도리안으로 옮겼다"
       }
     },
     {
@@ -499,114 +314,49 @@
       "bass": {
         "role": "root",
         "octaveJump": false,
-        "gate": "mid",
-        "kickRelation": "offset",
+        "gate": "short",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
-        "lead": "keys",
+        "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "mellotron",
-          "gtr": "fuzz-phase",
-          "gtr2": "none"
+          "keys": "organ-low",
+          "keys2": "none",
+          "gtr": "fuzz",
+          "gtr2": "phase"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1960년대 후반 미국·영국 · 11곡",
+        "confidence": "medium",
+        "evidenceBasis": "1960년대 후반 미국·영국 · 4곡",
         "distinguishes": [
           {
             "from": "Motorik",
             "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+            "note": "그쪽은 한 코드 드론 위에서 같은 것을 오래 민다"
+          },
+          {
+            "from": "Psychedelic Rock",
+            "axis": "melody",
+            "note": "그쪽은 보컬은 좁은 음역에서 오래 반복하고, 곡마다 이국적 음색 하나(시타르·오르간·저그)가 간판이다"
           },
           {
             "from": "Space Rock",
             "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 보컬 선율은 약하고 딜레이 기타·오르간·신스 효과음이 주인공이다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Psychedelic Rock",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
           "rock_abab",
           "blues_aabb",
           "rock_aabb"
         ],
-        "note": "모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다. 블루스 어휘가 섞인다"
+        "note": "퍼즈 기타 리프가 주인공이고 블루스 음계다. 건반은 4곡 중 In-A-Gadda-Da-Vida 1곡뿐이라 오르간을 낮췄고, 베이스는 리프와 유니즌이다"
       }
     },
     {
@@ -649,99 +399,39 @@
       "bass": {
         "role": "root",
         "octaveJump": false,
-        "gate": "long",
-        "kickRelation": "free",
+        "gate": "short",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
         "lead": "keys2",
         "off": [],
         "roles": {
-          "keys": "pad",
-          "keys2": "texture",
-          "gtr": "phase",
-          "gtr2": "none"
+          "keys": "farfisa",
+          "keys2": "synth-fx",
+          "gtr": "phase-echo",
+          "gtr2": "fuzz"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1970년대 영국 · 8곡",
+        "evidenceBasis": "1960~70년대 영국 · 4곡",
         "distinguishes": [
           {
             "from": "Motorik",
             "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+            "note": "그쪽은 한 코드 드론 위에서 같은 것을 오래 민다"
           },
           {
             "from": "Psychedelic Rock",
             "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+            "note": "그쪽은 보컬은 좁은 음역에서 오래 반복하고, 곡마다 이국적 음색 하나(시타르·오르간·저그)가 간판이다"
           },
           {
-            "from": "Southern Rock",
+            "from": "Acid Rock",
             "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "timbre",
-            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+            "note": "그쪽은 퍼즈 기타 리프가 주인공이고 블루스 음계다"
           }
         ],
         "poolDecision": "own",
@@ -751,7 +441,7 @@
           "amb_aabb",
           "bal_aaba"
         ],
-        "note": "건반이 패드다. 105 BPM 으로 이 분기에서 가장 느리고 음이 가장 적다"
+        "note": "보컬 선율은 약하고 딜레이 기타·오르간·신스 효과음이 주인공이다. 베이스는 긴 음이 아니라 반복 리프(Silver Machine·Set the Controls)라 8분으로 바꿨고, 템포도 출처 곡들(98~132)에 맞춰 올렸다"
       }
     },
     {
@@ -803,91 +493,21 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "strings",
+          "keys": "piano",
+          "keys2": "organ",
           "gtr": "slide",
           "gtr2": "twin"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1970년대 미국 남부 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "1970년대 미국 남부 · 4곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
           {
             "from": "Rock",
             "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+            "note": "그쪽은 기타 리프가 주인공이고 훅이 크게 벌어진다"
           }
         ],
         "poolDecision": "own",
@@ -897,7 +517,7 @@
           "blues_aabb",
           "rootbl_aabb"
         ],
-        "note": "슬라이드 기타에 스윙 30. 형제 둘(Rock·Glam)이 스윙 0 인데 여기만 흔들리고 블루스 어휘를 쓴다"
+        "note": "트윈·슬라이드 기타와 피아노(3/4곡). 4곡 모두 셔플이 아니라 뒤로 기대는 스트레이트라 스윙을 30 에서 8 로 내렸다 — 형제와 가르는 것은 스윙이 아니라 편성과 블루스 어휘다"
       }
     },
     {
@@ -949,91 +569,21 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "strings",
-          "gtr": "hi",
-          "gtr2": "hi"
+          "keys": "organ-low/piano",
+          "keys2": "piano/sax",
+          "gtr": "crunch",
+          "gtr2": "crunch"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 영국·미국 · 12곡",
+        "evidenceBasis": "1970~80년대 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
           {
             "from": "Southern Rock",
             "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+            "note": "그쪽은 트윈·슬라이드 기타와 피아노(3/4곡)"
           },
           {
             "from": "Glam Rock",
@@ -1047,7 +597,7 @@
           "rkant_aabb",
           "rkant_abab"
         ],
-        "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+        "note": "기타 리프가 주인공이고 훅이 크게 벌어진다. 10곡 중 오르간은 Smoke on the Water 1곡, 기타는 하이게인이 아니라 크런치라 편성을 그쪽으로 옮겼다. 글램은 색소폰·탬버린과 4분 스톰프가 몸이다"
       }
     },
     {
@@ -1099,91 +649,21 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "strings",
-          "gtr": "hi",
-          "gtr2": "hi"
+          "keys": "organ-low/piano",
+          "keys2": "piano/sax",
+          "gtr": "crunch",
+          "gtr2": "crunch"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 영국·미국 · 12곡",
+        "evidenceBasis": "1970~80년대 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
           {
             "from": "Southern Rock",
             "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+            "note": "그쪽은 트윈·슬라이드 기타와 피아노(3/4곡)"
           },
           {
             "from": "Rock",
@@ -1197,7 +677,7 @@
           "rkant_aabb",
           "rkant_abab"
         ],
-        "note": "앤섬 스톰프. 훅이 크게 벌어져 도약 비율이 형제 중 가장 높다"
+        "note": "기타 리프가 주인공이고 훅이 크게 벌어진다. 10곡 중 오르간은 Smoke on the Water 1곡, 기타는 하이게인이 아니라 크런치라 편성을 그쪽으로 옮겼다. 글램은 색소폰·탬버린과 4분 스톰프가 몸이다"
       }
     },
     {
@@ -1258,82 +738,17 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1950년대 후반 미국 · 10곡",
+        "evidenceBasis": "1950~60년대 미국 · 5곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
           {
             "from": "Surf Rock",
             "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+            "note": "그쪽은 록 계열에서 거의 유일하게 **기타가 선율을 맡는다**"
           },
           {
             "from": "Garage Rock",
             "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+            "note": "그쪽은 두세 코드를 최면적으로 되풀이한다"
           }
         ],
         "poolDecision": "own",
@@ -1343,7 +758,7 @@
           "rootbl_aaba",
           "root_aaba"
         ],
-        "note": "스윙 34 에 업라이트 베이스, 7화음. 록 계열에서 유일하게 부기 어법이다"
+        "note": "피아노가 5곡 모두에 있고 색소폰이 3곡이다. 스윙은 곡마다 갈려(드럼은 스윙, 기타는 스트레이트) 34 에서 24 로 낮췄다"
       }
     },
     {
@@ -1395,91 +810,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "none",
-          "gtr": "clean-reverb",
-          "gtr2": "none"
+          "keys": "ep",
+          "keys2": "organ",
+          "gtr": "clean-reverb-tremolo",
+          "gtr2": "twelve"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 초 미국 서부 · 9곡",
+        "evidenceBasis": "1960년대 초 미국 서부 · 5곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
           {
             "from": "Rock & Roll",
             "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+            "note": "그쪽은 피아노가 5곡 모두에 있고 색소폰이 3곡이다"
           },
           {
             "from": "Garage Rock",
             "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+            "note": "그쪽은 두세 코드를 최면적으로 되풀이한다"
           }
         ],
         "poolDecision": "own",
@@ -1489,7 +839,7 @@
           "cin_aaba",
           "rock_aabb"
         ],
-        "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다. 그래서 음역이 형제보다 한 도수 넓다"
+        "note": "록 계열에서 거의 유일하게 **기타가 선율을 맡는다**. Pipeline 의 일렉트릭 피아노와 장르 문서의 «배경 오르간» 이 있어 건반을 켰다(배경으로만)"
       }
     },
     {
@@ -1540,91 +890,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "none",
-          "gtr": "fuzz",
+          "keys": "combo-organ/piano",
+          "keys2": "harmonica/organ",
+          "gtr": "fuzz/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 중반 미국 · 10곡",
+        "evidenceBasis": "1960~70년대 미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
           {
             "from": "Rock & Roll",
             "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+            "note": "그쪽은 피아노가 5곡 모두에 있고 색소폰이 3곡이다"
           },
           {
             "from": "Surf Rock",
             "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+            "note": "그쪽은 록 계열에서 거의 유일하게 **기타가 선율을 맡는다**"
           },
           {
             "from": "Proto-punk",
@@ -1639,7 +924,7 @@
           "rock_aabb",
           "blues_abab"
         ],
-        "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+        "note": "두세 코드를 최면적으로 되풀이한다. 개러지는 콤보 오르간(96 Tears)과 탬버린, 프로토펑크는 피아노 8분 연타(Waiting for the Man)와 4분 킥이 몸이다"
       }
     },
     {
@@ -1690,91 +975,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "none",
-          "gtr": "fuzz",
+          "keys": "combo-organ/piano",
+          "keys2": "harmonica/organ",
+          "gtr": "fuzz/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 중반 미국 · 10곡",
+        "evidenceBasis": "1960~70년대 미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
           {
             "from": "Rock & Roll",
             "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+            "note": "그쪽은 피아노가 5곡 모두에 있고 색소폰이 3곡이다"
           },
           {
             "from": "Surf Rock",
             "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+            "note": "그쪽은 록 계열에서 거의 유일하게 **기타가 선율을 맡는다**"
           },
           {
             "from": "Garage Rock",
@@ -1789,7 +1009,7 @@
           "rock_aabb",
           "blues_abab"
         ],
-        "note": "거칠고 단순하다. 서프와 달리 선율이 기타 뒤로 물러나 세 음을 되풀이한다"
+        "note": "두세 코드를 최면적으로 되풀이한다. 개러지는 콤보 오르간(96 Tears)과 탬버린, 프로토펑크는 피아노 8분 연타(Waiting for the Man)와 4분 킥이 몸이다"
       }
     },
     {
@@ -1823,7 +1043,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -1840,99 +1060,39 @@
         "lead": "bass",
         "off": [],
         "roles": {
-          "keys": "poly",
-          "keys2": "pad",
-          "gtr": "chorus",
-          "gtr2": "none"
+          "keys": "pad-low",
+          "keys2": "none",
+          "gtr": "clean/flanger",
+          "gtr2": "twelve/chorus"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "evidenceBasis": "1970~80년대 영국 · 8곡",
         "distinguishes": [
           {
-            "from": "Motorik",
+            "from": "Post-punk Revival",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
           },
           {
             "from": "Dance-punk",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
+          },
+          {
+            "from": "New Wave",
+            "axis": "melody",
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Emo",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다"
           },
           {
             "from": "Gothic Rock",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "Post-punk Revival",
             "axis": "none",
             "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
           }
@@ -1944,7 +1104,7 @@
           "ant_aaba",
           "amb_aabb"
         ],
-        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+        "note": "**베이스가 높은 음역에서 선율을 가져간다** — 곡 문서 3곳과 고딕록 장르 문서가 명시한다. 건반은 8곡 중 A Forest 신스 1곡뿐이다. 고딕록은 16분 하이햇 위의 반박 체감(84)과 플랜저 기타다"
       }
     },
     {
@@ -1978,7 +1138,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -1995,99 +1155,39 @@
         "lead": "bass",
         "off": [],
         "roles": {
-          "keys": "poly",
-          "keys2": "pad",
-          "gtr": "chorus",
-          "gtr2": "none"
+          "keys": "pad-low",
+          "keys2": "none",
+          "gtr": "clean/flanger",
+          "gtr2": "twelve/chorus"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "evidenceBasis": "1970~80년대 영국 · 8곡",
         "distinguishes": [
           {
-            "from": "Motorik",
+            "from": "Post-punk Revival",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
           },
           {
             "from": "Dance-punk",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
+          },
+          {
+            "from": "New Wave",
+            "axis": "melody",
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Emo",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다"
           },
           {
             "from": "Post-punk",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "Post-punk Revival",
             "axis": "none",
             "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
           }
@@ -2099,7 +1199,7 @@
           "ant_aaba",
           "amb_aabb"
         ],
-        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+        "note": "**베이스가 높은 음역에서 선율을 가져간다** — 곡 문서 3곳과 고딕록 장르 문서가 명시한다. 건반은 8곡 중 A Forest 신스 1곡뿐이다. 고딕록은 16분 하이햇 위의 반박 체감(84)과 플랜저 기타다"
       }
     },
     {
@@ -2109,14 +1209,14 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 1,
-          "max": 3
+          "min": 3,
+          "max": 5
         },
         "leapRatio": {
-          "min": 0.35,
-          "max": 0.6
+          "min": 0.15,
+          "max": 0.4
         },
-        "contour": "static",
+        "contour": "arch",
         "range": {
           "min": 4,
           "max": 6
@@ -2124,137 +1224,72 @@
         "degrees": [
           0,
           2,
-          4
+          4,
+          1
         ],
-        "rhythm": "offbeat",
+        "rhythm": "onbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
-        "repetition": "high",
+        "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
         "comping": "rock_8th"
       },
       "bass": {
-        "role": "walking",
-        "octaveJump": true,
+        "role": "root",
+        "octaveJump": false,
         "gate": "short",
-        "kickRelation": "offset",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
-        "lead": "bass",
+        "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "poly",
-          "keys2": "pad",
-          "gtr": "chorus",
-          "gtr2": "none"
+          "keys": "none",
+          "keys2": "none",
+          "gtr": "crunch",
+          "gtr2": "clean"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1970년대 후반 영국 · 11곡",
+        "confidence": "medium",
+        "evidenceBasis": "2000년대 초 미국·영국 · 4곡",
         "distinguishes": [
           {
-            "from": "Motorik",
+            "from": "Post-punk",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 **베이스가 높은 음역에서 선율을 가져간다**"
           },
           {
             "from": "Dance-punk",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
+          },
+          {
+            "from": "New Wave",
+            "axis": "melody",
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Emo",
             "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "Gothic Rock",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Post-punk",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "ant_abab",
-          "ant_aaba",
-          "amb_aabb"
+          "rock_abab",
+          "rock_aabb"
         ],
-        "note": "**베이스가 선율을 맡는다** — 문서가 높은 베이스를 장르의 정의라고 못박은 자리다(Oct 36 유지). 건반은 비켜 준다"
+        "note": "보컬과 맞물린 기타 두 대가 주인공이다. 원조와 달리 베이스는 근음 8분이라(선율 베이스는 Interpol 1곡) 포스트펑크 무리에서 떼어 냈고, 레퍼런스 표의 오르간은 4곡 어디에도 없었다"
       }
     },
     {
@@ -2289,7 +1324,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -2303,99 +1338,39 @@
         "glide": "none"
       },
       "ensemble": {
-        "lead": "keys",
+        "lead": "bass",
         "off": [],
         "roles": {
           "keys": "lead",
           "keys2": "poly",
-          "gtr": "wah",
-          "gtr2": "none"
+          "gtr": "clean-angular",
+          "gtr2": "crunch"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "2000년대 초 미국·영국 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "1970~2000년대 영국·미국 · 4곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
           {
             "from": "Post-punk",
             "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+            "note": "그쪽은 **베이스가 높은 음역에서 선율을 가져간다**"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "melody",
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
+          },
+          {
+            "from": "New Wave",
+            "axis": "melody",
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Emo",
             "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "New Wave",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다"
           }
         ],
         "poolDecision": "own",
@@ -2405,7 +1380,7 @@
           "funk_aabb",
           "funk_aaab"
         ],
-        "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+        "note": "디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다. 신스는 LCD 계열에만 있다"
       }
     },
     {
@@ -2415,12 +1390,12 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 4,
+          "min": 3,
           "max": 6
         },
         "leapRatio": {
-          "min": 0.05,
-          "max": 0.35
+          "min": 0.1,
+          "max": 0.3
         },
         "contour": "zigzag",
         "range": {
@@ -2433,24 +1408,24 @@
           4,
           1
         ],
-        "rhythm": "offbeat16",
+        "rhythm": "offbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
         "comping": "disco_stab"
       },
       "bass": {
-        "role": "octave",
-        "octaveJump": true,
+        "role": "root",
+        "octaveJump": false,
         "gate": "short",
-        "kickRelation": "offset",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
@@ -2459,104 +1434,43 @@
         "roles": {
           "keys": "lead",
           "keys2": "poly",
-          "gtr": "wah",
-          "gtr2": "none"
+          "gtr": "clean",
+          "gtr2": "chorus"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "2000년대 초 미국·영국 · 9곡",
+        "evidenceBasis": "1970~80년대 미국 · 5곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
           {
             "from": "Post-punk",
             "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+            "note": "그쪽은 **베이스가 높은 음역에서 선율을 가져간다**"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "melody",
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
+          },
+          {
+            "from": "Dance-punk",
+            "axis": "melody",
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
           },
           {
             "from": "Emo",
             "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Dance-punk",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "funk_abab",
-          "funk_aabb",
-          "funk_aaab"
+          "pop_abab",
+          "funk_abab"
         ],
-        "note": "댄스 그루브에 와우 기타. 신스 리드가 앞에 나와 형제 중 밀도가 가장 높다"
+        "note": "신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다. 베이스는 근음 8분이라 댄스펑크와 떼어 냈고, 게이트 스네어는 80년대 중반의 것이라 1978~80 대표곡에 맞춰 뺐다"
       }
     },
     {
@@ -2591,7 +1505,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -2608,91 +1522,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "pad",
-          "keys2": "poly",
-          "gtr": "arp-crunch",
-          "gtr2": "none"
+          "keys": "pad-low",
+          "keys2": "none",
+          "gtr": "crunch/hi",
+          "gtr2": "clean-arp"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1990년대 이후 미국 · 9곡",
+        "evidenceBasis": "1990~2010년대 미국 · 7곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
           {
             "from": "Post-punk",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 **베이스가 높은 음역에서 선율을 가져간다**"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "melody",
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
           },
           {
             "from": "Dance-punk",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
           },
           {
-            "from": "Shoegaze",
+            "from": "New Wave",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Screamo",
@@ -2707,7 +1566,7 @@
           "bal_aabb",
           "bal_abab"
         ],
-        "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+        "note": "보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다. 건반은 배경층일 때만 있고 스크리모는 4곡 모두 없다"
       }
     },
     {
@@ -2742,7 +1601,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -2759,91 +1618,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "pad",
-          "keys2": "poly",
-          "gtr": "arp-crunch",
-          "gtr2": "none"
+          "keys": "pad-low",
+          "keys2": "none",
+          "gtr": "crunch/hi",
+          "gtr2": "clean-arp"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1990년대 이후 미국 · 9곡",
+        "evidenceBasis": "1990~2010년대 미국 · 7곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
           {
             "from": "Post-punk",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 **베이스가 높은 음역에서 선율을 가져간다**"
+          },
+          {
+            "from": "Post-punk Revival",
+            "axis": "melody",
+            "note": "그쪽은 보컬과 맞물린 기타 두 대가 주인공이다"
           },
           {
             "from": "Dance-punk",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 디스코 하이햇·카우벨·스네어에 겹친 클랩이 계열 공통 표지이고, 장르 문서가 선율 베이스와 싱코페이션을 본질로 든다"
           },
           {
-            "from": "Shoegaze",
+            "from": "New Wave",
             "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+            "note": "그쪽은 신스 리프가 5곡 중 4곡에 있고 조성은 장조가 우세하다"
           },
           {
             "from": "Emo",
@@ -2858,7 +1662,7 @@
           "bal_aabb",
           "bal_abab"
         ],
-        "note": "기타 아르페지오가 선율을 대신한다. 건반은 패드라 음이 적고, 형제 포스트펑크와 달리 베이스도 앞에 안 나온다"
+        "note": "보컬 선율이 음역 꼭대기에서 긴장하고, 기타는 클린 아르페지오와 디스토션을 오간다. 건반은 배경층일 때만 있고 스크리모는 4곡 모두 없다"
       }
     },
     {
@@ -2892,7 +1696,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -2909,91 +1713,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "pad",
-          "keys2": "texture",
-          "gtr": "wall",
-          "gtr2": "none"
+          "keys": "pad/organ",
+          "keys2": "arp",
+          "gtr": "fuzz-overdub/clean-reverb",
+          "gtr2": "twelve/chorus"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 초 영국 · 10곡",
+        "evidenceBasis": "1980~2010년대 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "timbre",
-            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
+          },
+          {
+            "from": "Slacker Rock",
+            "axis": "melody",
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 조용한 벌스 → 터지는 코러스가 이 무리의 틀이다"
           },
           {
             "from": "Dream Pop",
@@ -3008,7 +1757,7 @@
           "amb_aabb",
           "bal_aaba"
         ],
-        "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+        "note": "기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다. 슈게이즈는 한 대의 코러스가 아니라 퍼즈를 대량으로 겹친 소리였고(Only Shallow), 드림팝은 패드보다 오르간·아르페지오와 드럼머신, 반박 체감이다"
       }
     },
     {
@@ -3042,7 +1791,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -3059,91 +1808,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "pad",
-          "keys2": "texture",
-          "gtr": "wall",
-          "gtr2": "none"
+          "keys": "pad/organ",
+          "keys2": "arp",
+          "gtr": "fuzz-overdub/clean-reverb",
+          "gtr2": "twelve/chorus"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 초 영국 · 10곡",
+        "evidenceBasis": "1980~2010년대 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "timbre",
-            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
+          },
+          {
+            "from": "Slacker Rock",
+            "axis": "melody",
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
             "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+            "note": "그쪽은 조용한 벌스 → 터지는 코러스가 이 무리의 틀이다"
           },
           {
             "from": "Shoegaze",
@@ -3158,7 +1852,7 @@
           "amb_aabb",
           "bal_aaba"
         ],
-        "note": "문서 그대로 **기타가 패드처럼 기능한다**. 텍스처가 먼저라 선율이 가장 성기다 — 스페이스 록과 같은 처리"
+        "note": "기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다. 슈게이즈는 한 대의 코러스가 아니라 퍼즈를 대량으로 겹친 소리였고(Only Shallow), 드림팝은 패드보다 오르간·아르페지오와 드럼머신, 반박 체감이다"
       }
     },
     {
@@ -3193,7 +1887,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -3211,90 +1905,35 @@
         "off": [],
         "roles": {
           "keys": "organ",
-          "keys2": "strings",
-          "gtr": "twelve",
-          "gtr2": "none"
+          "keys2": "piano",
+          "gtr": "crunch",
+          "gtr2": "acoustic"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1990년대 중반 영국 · 11곡",
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 중반 영국 · 4곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
+          },
+          {
+            "from": "Slacker Rock",
+            "axis": "melody",
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
             "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+            "note": "그쪽은 조용한 벌스 → 터지는 코러스가 이 무리의 틀이다"
           }
         ],
         "poolDecision": "own",
@@ -3304,7 +1943,7 @@
           "pop_aaba",
           "pop_abab"
         ],
-        "note": "문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다. 합창 훅이라 순차 진행이 형제 중 가장 많다"
+        "note": "4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다. «12현» 은 출처에서 확인되지 않아 크런치와 어쿠스틱으로 바꿨다"
       }
     },
     {
@@ -3314,147 +1953,87 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 5,
-          "max": 7
-        },
-        "leapRatio": {
-          "min": 0.2,
-          "max": 0.45
-        },
-        "contour": "zigzag",
-        "range": {
           "min": 3,
           "max": 5
+        },
+        "leapRatio": {
+          "min": 0.1,
+          "max": 0.3
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
         },
         "degrees": [
           0,
           2,
           4,
-          1
+          5
         ],
-        "rhythm": "offbeat",
+        "rhythm": "onbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
-        "repetition": "mid",
+        "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
-        "comping": "ballad_pad"
+        "comping": "pop_pulse"
       },
       "bass": {
         "role": "root",
         "octaveJump": false,
         "gate": "mid",
-        "kickRelation": "offset",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "ep",
-          "keys2": "none",
-          "gtr": "clean-chorus",
-          "gtr2": "none"
+          "keys": "chord-organ",
+          "keys2": "piano",
+          "gtr": "thin-crunch",
+          "gtr2": "acoustic"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "medium",
-        "evidenceBasis": "1990년대 이후 미국 · 8곡",
+        "confidence": "low",
+        "evidenceBasis": "1980~90년대 미국 · 4곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
+          },
+          {
+            "from": "Slacker Rock",
+            "axis": "melody",
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Slacker Rock",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 조용한 벌스 → 터지는 코러스가 이 무리의 틀이다"
           }
         ],
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
-          "jazbal_aaba",
-          "jazbal_abab"
+          "pop_aabb",
+          "pop_aaba"
         ],
-        "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+        "note": "곡의 훅과 장조 파워팝·포크 진행이 몸이다. 이전 판의 «EP 라서 재즈 어휘» 는 근거가 없었다 — 건반은 코드 오르간·피아노이고 베이스는 약하다"
       }
     },
     {
@@ -3464,17 +2043,17 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 5,
-          "max": 7
-        },
-        "leapRatio": {
-          "min": 0.2,
-          "max": 0.45
-        },
-        "contour": "zigzag",
-        "range": {
           "min": 3,
           "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.45
+        },
+        "contour": "fall",
+        "range": {
+          "min": 4,
+          "max": 6
         },
         "degrees": [
           0,
@@ -3482,129 +2061,69 @@
           4,
           1
         ],
-        "rhythm": "offbeat",
+        "rhythm": "onbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
-        "comping": "ballad_pad"
+        "comping": "rock_8th"
       },
       "bass": {
-        "role": "root",
+        "role": "walking",
         "octaveJump": false,
         "gate": "mid",
         "kickRelation": "offset",
         "glide": "none"
       },
       "ensemble": {
-        "lead": "keys",
+        "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "ep",
+          "keys": "none",
           "keys2": "none",
-          "gtr": "clean-chorus",
-          "gtr2": "none"
+          "gtr": "chorus-wobble",
+          "gtr2": "fuzz"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "medium",
-        "evidenceBasis": "1990년대 이후 미국 · 8곡",
+        "confidence": "low",
+        "evidenceBasis": "1980~2010년대 미국·호주 · 4곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
+          },
+          {
+            "from": "Lo-fi Indie",
+            "axis": "melody",
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
           },
           {
             "from": "Alternative Rock",
             "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Country Rock",
-            "axis": "melody",
-            "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 조용한 벌스 → 터지는 코러스가 이 무리의 틀이다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Lo-fi Indie",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "jazbal_aaba",
-          "jazbal_abab"
+          "rock_aaba",
+          "blues_aabb"
         ],
-        "note": "건반이 EP 다 — 록 계열에서 이 둘뿐이다. 늘어지는 그루브라 재즈 물든 어휘가 맞는다"
+        "note": "늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다. 셔플이 아니라 레이드백이라 스윙을 8 로 낮췄고, 건반은 4곡에 없다"
       }
     },
     {
@@ -3639,7 +2158,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -3656,91 +2175,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-pad",
+          "keys": "organ-low",
           "keys2": "strings",
           "gtr": "crunch-fuzz",
-          "gtr2": "none"
+          "gtr2": "chorus/mandolin"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 미국 · 12곡",
+        "evidenceBasis": "1980~2000년대 미국·영국 · 17곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
           },
           {
-            "from": "Country Rock",
+            "from": "Slacker Rock",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Grunge",
@@ -3765,7 +2229,7 @@
           "rock_aaba",
           "rock_abab"
         ],
-        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+        "note": "조용한 벌스 → 터지는 코러스가 이 무리의 틀이다. 표준 록 선율 위에서 갈리는 것은 편성이다 — 그런지·노이즈는 건반 없음, 얼터너티브는 옅은 건반과 만돌린, 인디는 장조와 맞물린 기타"
       }
     },
     {
@@ -3800,7 +2264,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -3817,91 +2281,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-pad",
+          "keys": "organ-low",
           "keys2": "strings",
           "gtr": "crunch-fuzz",
-          "gtr2": "none"
+          "gtr2": "chorus/mandolin"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 미국 · 12곡",
+        "evidenceBasis": "1980~2000년대 미국·영국 · 17곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
           },
           {
-            "from": "Country Rock",
+            "from": "Slacker Rock",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
@@ -3926,7 +2335,7 @@
           "rock_aaba",
           "rock_abab"
         ],
-        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+        "note": "조용한 벌스 → 터지는 코러스가 이 무리의 틀이다. 표준 록 선율 위에서 갈리는 것은 편성이다 — 그런지·노이즈는 건반 없음, 얼터너티브는 옅은 건반과 만돌린, 인디는 장조와 맞물린 기타"
       }
     },
     {
@@ -3961,7 +2370,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -3978,91 +2387,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-pad",
+          "keys": "organ-low",
           "keys2": "strings",
           "gtr": "crunch-fuzz",
-          "gtr2": "none"
+          "gtr2": "chorus/mandolin"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 미국 · 12곡",
+        "evidenceBasis": "1980~2000년대 미국·영국 · 17곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
           },
           {
-            "from": "Country Rock",
+            "from": "Slacker Rock",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
@@ -4087,7 +2441,7 @@
           "rock_aaba",
           "rock_abab"
         ],
-        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+        "note": "조용한 벌스 → 터지는 코러스가 이 무리의 틀이다. 표준 록 선율 위에서 갈리는 것은 편성이다 — 그런지·노이즈는 건반 없음, 얼터너티브는 옅은 건반과 만돌린, 인디는 장조와 맞물린 기타"
       }
     },
     {
@@ -4122,7 +2476,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -4139,91 +2493,36 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-pad",
+          "keys": "organ-low",
           "keys2": "strings",
           "gtr": "crunch-fuzz",
-          "gtr2": "none"
+          "gtr2": "chorus/mandolin"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 미국 · 12곡",
+        "evidenceBasis": "1980~2000년대 미국·영국 · 17곡",
         "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
-          },
           {
             "from": "Shoegaze",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 기타 텍스처가 주인공이고 보컬은 한 겹으로 묻힌다"
           },
           {
             "from": "Britpop",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 4곡 모두 건반(피아노·해먼드·멜로트론)과 탬버린이 있고 장조 찬가형 후렴이다"
           },
           {
             "from": "Lo-fi Indie",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 곡의 훅과 장조 파워팝·포크 진행이 몸이다"
           },
           {
-            "from": "Country Rock",
+            "from": "Slacker Rock",
             "axis": "melody",
-            "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+            "note": "그쪽은 늘어지는 무표정 보컬이 박 뒤에 앉아 내려온다"
           },
           {
             "from": "Alternative Rock",
@@ -4248,7 +2547,7 @@
           "rock_aaba",
           "rock_abab"
         ],
-        "note": "문서가 «우산 개념에 가깝다» 고 적은 무리다. 표준 록 비트에 표준 록 선율 — 여기서 벗어나는 형제만 따로 뺐다"
+        "note": "조용한 벌스 → 터지는 코러스가 이 무리의 틀이다. 표준 록 선율 위에서 갈리는 것은 편성이다 — 그런지·노이즈는 건반 없음, 얼터너티브는 옅은 건반과 만돌린, 인디는 장조와 맞물린 기타"
       }
     },
     {
@@ -4283,7 +2582,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "triad",
@@ -4300,93 +2599,17 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ",
-          "keys2": "strings",
+          "keys": "none",
+          "keys2": "none",
           "gtr": "pedal-steel",
-          "gtr2": "none"
+          "gtr2": "banjo"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1970년대 미국 · 8곡",
-        "distinguishes": [
-          {
-            "from": "Motorik",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Psychedelic Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Space Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Southern Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Rock & Roll",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Surf Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Garage Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Post-punk",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Dance-punk",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Emo",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Shoegaze",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Britpop",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Lo-fi Indie",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          },
-          {
-            "from": "Alternative Rock",
-            "axis": "melody",
-            "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
-          }
-        ],
+        "confidence": "medium",
+        "evidenceBasis": "1960~70년대 미국 · 4곡",
+        "distinguishes": [],
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
@@ -4394,7 +2617,247 @@
           "rootbl_aaba",
           "root_aabb"
         ],
-        "note": "페달 스틸과 플랫와운드 베이스. 록 계열에서 유일하게 컨트리 쪽 어휘를 쓴다"
+        "note": "페달 스틸·B-벤더와 밴조, 3~4성부 화음 보컬. 4곡 모두 장조라 스케일을 Major 로 바꿨고 건반은 한 곡에도 없다"
+      }
+    },
+    {
+      "preset": "Black Metal",
+      "sub": "Metal",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 1,
+          "max": 2
+        },
+        "leapRatio": {
+          "min": 0.3,
+          "max": 0.5
+        },
+        "contour": "static",
+        "range": {
+          "min": 3,
+          "max": 5
+        },
+        "degrees": [
+          0,
+          2,
+          4
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "punk_quarter"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "pad",
+          "keys2": "choir",
+          "gtr": "hi-tremolo",
+          "gtr2": "fuzz"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990년대 노르웨이 · 4곡",
+        "distinguishes": [
+          {
+            "from": "Power Metal",
+            "axis": "melody",
+            "note": "그쪽은 고음 클린 보컬의 상행 찬가형 후렴이 주인공이다"
+          },
+          {
+            "from": "Symphonic Metal",
+            "axis": "melody",
+            "note": "그쪽은 4곡 모두 오케스트라·합창·건반이 크레딧에 있고 보컬 선율이 주인공이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "amb_aaab",
+          "amb_aaba"
+        ],
+        "note": "트레몰로 기타가 긴 음 선율을 그리고, 4곡 중 2곡(Emperor·Burzum)은 신스가 분위기와 느린 모티프를 맡는다 — 성긴 앰비언트 재료가 맞다"
+      }
+    },
+    {
+      "preset": "Power Metal",
+      "sub": "Metal",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.25,
+          "max": 0.6
+        },
+        "contour": "rise",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          7
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Major"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "punk_quarter"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "supersaw",
+          "keys2": "strings",
+          "gtr": "hi-twin",
+          "gtr2": "hi"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1980~2000년대 독일·핀란드·영국 · 4곡",
+        "distinguishes": [
+          {
+            "from": "Black Metal",
+            "axis": "melody",
+            "note": "그쪽은 트레몰로 기타가 긴 음 선율을 그리고, 4곡 중 2곡(Emperor·Burzum)은 신스가 분위기와 느린 모티프를 맡는다"
+          },
+          {
+            "from": "Symphonic Metal",
+            "axis": "melody",
+            "note": "그쪽은 4곡 모두 오케스트라·합창·건반이 크레딧에 있고 보컬 선율이 주인공이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "rkant_aabb",
+          "cin_aabb"
+        ],
+        "note": "고음 클린 보컬의 상행 찬가형 후렴이 주인공이다. 건반은 북유럽·영국형 2곡(Stratovarius·DragonForce)에만 있고 초기 Helloween 은 없다"
+      }
+    },
+    {
+      "preset": "Symphonic Metal",
+      "sub": "Metal",
+      "cat": "A",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.15,
+          "max": 0.4
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5
+        ],
+        "rhythm": "onbeat",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Natural Minor"
+      },
+      "harmony": {
+        "chordType": "power",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "strings",
+          "keys2": "choir",
+          "gtr": "hi",
+          "gtr2": "hi"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1990~2000년대 핀란드·네덜란드·이탈리아 · 4곡",
+        "distinguishes": [
+          {
+            "from": "Black Metal",
+            "axis": "melody",
+            "note": "그쪽은 트레몰로 기타가 긴 음 선율을 그리고, 4곡 중 2곡(Emperor·Burzum)은 신스가 분위기와 느린 모티프를 맡는다"
+          },
+          {
+            "from": "Power Metal",
+            "axis": "melody",
+            "note": "그쪽은 고음 클린 보컬의 상행 찬가형 후렴이 주인공이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "cin_aabb",
+          "cinbal_aabb",
+          "cin_abab"
+        ],
+        "note": "4곡 모두 오케스트라·합창·건반이 크레딧에 있고 보컬 선율이 주인공이다. 기타는 단순한 받침이라(장르 문서) 시네마틱 재료가 맞다"
       }
     }
   ]

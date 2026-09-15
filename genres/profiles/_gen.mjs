@@ -19,7 +19,9 @@ if (!srcPath || !outPath) {
   console.log('사용법: node genres/profiles/_gen.mjs <배치모듈.mjs> <출력.json>');
   process.exit(2);
 }
-const { batch, sub, cat, date, verdict, groups, CAT = {}, SUB = {}, PHRASES = {} }
+/* SCALE — 프리셋별 실제 스케일. 무리 한 칸(mel.scale)으로는 형제끼리 스케일이 갈릴 때
+   (Indie Rock 은 Major, 형제 Grunge 는 Natural Minor) 거짓 값이 들어간다. */
+const { batch, sub, cat, date, verdict, groups, CAT = {}, SUB = {}, PHRASES = {}, SCALE = {} }
   = await import(pathToFileURL(resolve(srcPath)).href);
 
 const keys = Object.keys(groups).filter(k => groups[k].members.length);
@@ -30,13 +32,25 @@ for (const gk of keys) {
   for (const m of g.members) {
     const isAnchor = m === g.anchor;
     const dist = [];
-    /* 다른 무리 — 풀이 같으면 선율로 갈리는 게 아니다. 축을 그렇게 적는다 */
+    /* 다른 무리 — 풀이 같으면 선율로 갈리는 게 아니다. 축을 그렇게 적는다.
+
+       ⚠ 2026-09-16 두 가지를 고쳤다. 근거 패널이 «형제와 무엇이 다른가» 로 이 칸을 그대로 보여 준다.
+         · 같은 하위분기의 무리만 형제다. 계열 전체와 비교하면 Symphonic Metal 옆에
+           Space Rock · Rock & Roll 이 «형제» 로 줄줄이 붙었다.
+         · note 는 **그쪽 무리**의 설명이어야 한다. 전에는 자기 설명(g.why)을 모든 줄에
+           복사해서, «Space Rock — 4곡 모두 오케스트라·합창…» 처럼 남의 이름 옆에
+           내 성질이 적혔다.
+       하위분기가 하나뿐인 배치(SUB 를 안 쓰는 배치)는 모든 무리가 같은 분기라 전과 같다. */
+    const mySub = SUB[m] || sub;
     for (const ok of keys) {
       if (ok === gk) continue;
-      const same = groups[ok].pool.join('|') === g.pool.join('|');
-      dist.push({ from: groups[ok].anchor,
+      const og = groups[ok];
+      if (!og.members.some(x => (SUB[x] || sub) === mySub)) continue;
+      const same = og.pool.join('|') === g.pool.join('|');
+      dist.push({ from: og.anchor,
                   axis: same ? 'timbre' : 'melody',
-                  note: same ? '선율 풀이 같다. 갈리는 것은 편성·음색이다' : g.why });
+                  note: same ? '선율 풀이 같다. 갈리는 것은 편성·음색이다'
+                             : '그쪽은 ' + og.why.split(/\s—\s|\.\s/)[0].trim() });
     }
     /* 같은 무리 — 선율로는 구분되지 않는다는 것이 판정이다 */
     for (const sib of g.members) if (sib !== m)
@@ -52,7 +66,7 @@ for (const gk of keys) {
         degrees: g.mel.degrees, rhythm: g.mel.rhythm,
         cadence: { lastBarEmpty: false, endDegree: 0 },
         repetition: g.mel.repetition, voicing: g.mel.voicing || 'single',
-        scale: g.mel.scale || 'Minor Pentatonic',
+        scale: SCALE[m] || g.mel.scale || 'Minor Pentatonic',
       },
       harmony: { chordType: g.chordType, comping: g.comping },
       bass: { role: g.bass.role, octaveJump: g.bass.oct, gate: g.bass.gate,

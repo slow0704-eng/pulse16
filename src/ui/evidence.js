@@ -111,9 +111,23 @@ function evidenceHtml(name){
   const R = evidenceRef(name);
   out.push(`<h3>이 장르의 대표 <i>(genres/ 레퍼런스)</i></h3>`);
   if(R){
-    out.push(`<p class="ev-warn">편성을 정할 때 쓴 <b>판단 근거</b>입니다. 아티스트는 대체로 확실하지만`
+    /* 대표곡 — 곡이 실재하고 출처가 그 장르로 분류한 것만 들어온다(build-refdata.mjs) */
+    if(R.tr && R.tr.length){
+      out.push(`<p class="ev-warn"><b>대표곡</b>은 곡이 실제로 있고 출처가 그 장르로 분류한 것만 남겼습니다.`
+             + ` BPM·조성도 출처가 있는 값만 적었습니다. 프리셋은 이 곡들의 <b>성질</b>(템포·편성·선율의 윤곽과 밀도)에`
+             + ` 맞췄고, 선율 자체를 옮겨 적지는 않았습니다.</p>`);
+      out.push(`<ul class="ev-chart">` + R.tr.map(([t,a,y,k,bpm,key,url]) =>
+        `<li><span class="ev-y">${evEsc(y||'—')}</span> ${evEsc(t)} <i>— ${evEsc(a)}</i>`
+        + (k==='1위' ? ` <span class="ev-axis">1위</span>` : '')
+        + (bpm ? ` <span class="ev-axis">${evEsc(bpm)} BPM</span>` : '')
+        + (key ? ` <span class="ev-axis">${evEsc(key)}</span>` : '')
+        + (/^https?:\/\//.test(url) ? ` <a href="${evEsc(url)}" target="_blank" rel="noopener">출처</a>` : '')
+        + `</li>`).join('') + `</ul>`);
+    }
+    out.push(`<p class="ev-warn">아래는 편성을 정할 때 쓴 <b>판단 근거</b>입니다. 아티스트는 대체로 확실하지만`
            + ` 앨범명은 기억에 의존해 적은 값이라 <b>미검증</b>이고, <b>?</b> 는 문서가 «확인 필요» 로 표시한 것입니다.`
-           + ` 이 표에는 곡 단위 목록이 없습니다 — 곡을 지어내 채우지 않습니다.</p>`);
+           + (R.tr && R.tr.length ? '' : ` 이 장르에는 아직 검증한 대표곡이 없습니다 — 곡을 지어내 채우지 않습니다.`)
+           + `</p>`);
     out.push(`<dl class="ev">`);
     out.push(`<dt>아티스트</dt><dd>${R.a.length ? R.a.map(evEsc).join(' · ') : '<i>표에 적힌 이름 없음</i>'}</dd>`);
     if(R.al.length)
@@ -177,7 +191,12 @@ function updateMotif(){
   }
   /* 대표 아티스트는 곡이 아니라 사람이다 — 1위 기록과 라벨을 따로 둔다 */
   const R = evidenceRef(name);
-  if(R && R.a.length){
+  if(R && R.tr && R.tr.length){
+    /* 검증한 대표곡이 있으면 그것이 먼저다 — 아티스트보다 구체적이다 */
+    out.push(`<span class="k">대표곡</span>`);
+    out.push(R.tr.slice(0,2).map(([t,a]) =>
+      `<span class="art">${evEsc(t)} <i>— ${evEsc(a)}</i></span>`).join(' · '));
+  }else if(R && R.a.length){
     out.push(`<span class="k">대표</span>`);
     out.push(`<span class="art">${R.a.slice(0,3).map(evEsc).join(' · ')}</span>`);
   }

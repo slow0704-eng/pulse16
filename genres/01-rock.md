@@ -520,7 +520,7 @@ snare  -X-X-X-X-X-X-X-X
 |---|---|---|---|---|
 | **Post-punk** | 120~150 | 반복적 8분, 높은 베이스 | 코러스 걸린 클린 기타 | 베이스가 멜로디를 담당 |
 | Gothic Rock | 100~140 | 드럼머신 또는 기계적 비트 | 리버브 기타, 낮은 보컬 | 어두운 화성 |
-| New Wave | 110~150 | 정박, 게이트 스네어 | 신스 + 밴드 | 신스팝이 여기서 갈라져 나옴 |
+| New Wave | 110~160 | 정박 백비트 (게이트 스네어는 80년대 중반부터) | 신스 리프 + 클린 기타 | 신스팝이 여기서 갈라져 나옴 |
 | (Synth-pop) | 110~140 | 기계적 정박, 게이트 스네어 | 아날로그 폴리, LinnDrum | 뉴웨이브의 전자 갈래 → [02-pop.md](02-pop.md) §3 |
 | Post-punk Revival | 120~150 | 날카로운 8분 | 얇은 기타, 타이트 드럼 | 2000년대 재해석 |
 | Dance-punk | 120~140 | 4/4 댄스 킥 + 펑크 기타 | 신스 + 밴드 | 록과 클럽의 접점 |
@@ -606,8 +606,12 @@ snare  -X-X-X-X-X-X-X-X
 차트 문서에서 `A · Industrial Rock` 으로 표기한 것이 이쪽입니다.
 
 **Shoegaze 제작 노트**
-기타를 "여러 대 겹치는" 것이 아니라 **한 대를 리버브와 코러스로 벽처럼
-만드는** 것입니다. 보컬은 일부러 기타 밑에 묻어 악기 중 하나로 취급합니다.
+~~기타를 "여러 대 겹치는" 것이 아니라 한 대를 리버브와 코러스로 벽처럼 만드는 것입니다.~~
+**2026-09-16 정정 — 대표곡 출처와 반대였습니다.** My Bloody Valentine «Only Shallow» 는
+퍼즈 기타를 트레몰로 암을 누른 채 긁고(glide guitar) **대량으로 겹쳤고**(«massively
+overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입니다. 핵심 도구는 코러스가
+아니라 퍼즈·트레몰로·오버더브·리버브입니다. 보컬을 기타 밑에 묻어 악기 중 하나로
+취급한다는 앞 문장의 뒷부분은 출처와 맞습니다.
 
 <!-- chart-auto:start -->
 
@@ -836,6 +840,12 @@ snare  -X-X-X-X-X-X-X-X
 > 돌려도 소리가 안 변한다고 해서 고장이 아닙니다. 실제로 듣는 데 관여하는 것은
 > **엔진 · Oct · Length(gate) · Drive · Duck** 다섯입니다.
 
+> **2026-09-16 — 대표곡으로 교정했습니다.** 아래 표는 교정 뒤의 값입니다
+> (`src/data/presets/01-rock.js` 에서 다시 뽑았습니다). 무엇을 왜 바꿨는지는
+> 문서 끝 «대표곡» 절과 [../patterns/01-rock.md](../patterns/01-rock.md) 에 있습니다.
+> 템포가 크게 움직인 곳: Rock 130→115 · Southern 120→100 · Krautrock 135→110 ·
+> Gothic 120→84(반박 체감) · Sludge 75→104 · Stoner 100→124(하프타임) · Dream Pop 110→150(하프타임).
+
 ### Psychedelic · Krautrock
 
 **드럼 — 킷 엔진 · 튠**
@@ -843,19 +853,19 @@ snare  -X-X-X-X-X-X-X-X
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | Motorik | 142 | 0 | `tight` | `crack` | `tight` | `noise` | `synth` | 0/0/0/0 |
-| ·Psychedelic Rock | 115 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Acid Rock | 120 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Space Rock | 105 | 0 | `punch` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
-| ·Krautrock | 135 | 0 | `punch` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
+| ·Psychedelic Rock | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Acid Rock | 130 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Space Rock | 120 | 0 | `punch` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
+| ·Krautrock | 110 | 0 | `punch` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Motorik | `finger` | 24 | 94 | 0 | 56 | 50 | 150 | 5600 | 52 | 28 | 20 | Minor Pentatonic |
-| ·Psychedelic Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Psychedelic Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Dorian |
 | ·Acid Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Space Rock | `finger` | 24 | 400 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Space Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Krautrock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### Hard Rock
@@ -864,9 +874,9 @@ snare  -X-X-X-X-X-X-X-X
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| Rock | 130 | 0 | `punch` | `body` | `tight` | `noise` | `wood` | -1/0/-1/0 |
-| ·Southern Rock | 120 | 30 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Glam Rock | 135 | 0 | `punch` | `body` | `spread` | `noise` | `analog` | -2/0/-2/0 |
+| Rock | 115 | 0 | `punch` | `body` | `tight` | `noise` | `wood` | -1/0/-1/0 |
+| ·Southern Rock | 100 | 8 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Glam Rock | 125 | 10 | `punch` | `body` | `spread` | `noise` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
@@ -885,8 +895,8 @@ snare  -X-X-X-X-X-X-X-X
 | Punk | 180 | 0 | `tight` | `crack` | `tight` | `noise` | `analog` | 1/2/1/2 |
 | ·Pop Punk | 170 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/2 |
 | ·Hardcore Punk | 200 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
-| ·Punk Rock | 180 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
-| ·Crust | 180 | 0 | `tight` | `lofi` | `tight` | `metal` | `analog` | 1/-4/1/-2 |
+| ·Punk Rock | 175 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
+| ·Crust | 150 | 0 | `tight` | `lofi` | `tight` | `metal` | `analog` | 1/-4/1/-2 |
 | ·D-beat | 200 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
 | ·Powerviolence | 250 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
 
@@ -914,13 +924,13 @@ snare  -X-X-X-X-X-X-X-X
 | ·Heavy Metal | 140 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Thrash Metal | 200 | 0 | `tight` | `tight` | `tight` | `noise` | `analog` | 1/2/1/0 |
 | ·Black Metal | 210 | 0 | `tight` | `crack` | `tight` | `noise` | `analog` | -4/2/1/2 |
-| ·Stoner Rock | 100 | 10 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Power Metal | 170 | 0 | `tight` | `body` | `tight` | `noise` | `synth` | 1/2/1/2 |
+| ·Stoner Rock | 92 | 10 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Power Metal | 180 | 0 | `tight` | `body` | `tight` | `noise` | `synth` | 1/2/1/2 |
 | ·Metalcore | 150 | 0 | `tight` | `tight` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·NWOBHM | 160 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Sludge | 75 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -5/0/-5/0 |
-| ·Stoner | 100 | 18 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Symphonic Metal | 150 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·NWOBHM | 170 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Sludge | 104 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -5/0/-5/0 |
+| ·Stoner | 124 | 8 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Symphonic Metal | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
@@ -929,16 +939,16 @@ snare  -X-X-X-X-X-X-X-X
 | Death Metal | `pick` | 24 | 50 | 0 | 64 | 70 | 100 | 4000 | 52 | 34 | 18 | Natural Minor |
 | Nu Metal | `pick` | 24 | 180 | 0 | 54 | 62 | 85 | 3000 | 66 | 38 | 30 | Minor Pentatonic |
 | Doom | `finger` | 24 | 600 | 0 | 48 | 58 | 80 | 2400 | 72 | 36 | 22 | Natural Minor |
-| ·Heavy Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Heavy Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Thrash Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Black Metal | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Stoner Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Stoner Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Power Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Metalcore | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·NWOBHM | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·NWOBHM | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Sludge | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Stoner | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Symphonic Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Stoner | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Symphonic Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 뿌리
 
@@ -946,10 +956,10 @@ snare  -X-X-X-X-X-X-X-X
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Rock & Roll | 160 | 34 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Rock & Roll | 168 | 24 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Surf Rock | 160 | 0 | `punch` | `body` | `hall` | `noise` | `analog` | -2/0/-2/0 |
 | ·Garage Rock | 140 | 0 | `punch` | `lofi` | `tight` | `noise` | `analog` | -2/-4/-2/0 |
-| ·Proto-punk | 150 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Proto-punk | 145 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
@@ -966,11 +976,11 @@ snare  -X-X-X-X-X-X-X-X
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Post-punk | 135 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Gothic Rock | 120 | 0 | `punch` | `body` | `hall` | `noise` | `analog` | -2/0/-2/0 |
-| ·Dance-punk | 130 | 0 | `wood` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
+| ·Post-punk | 150 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Gothic Rock | 84 | 0 | `punch` | `body` | `hall` | `noise` | `analog` | -2/0/-2/0 |
+| ·Dance-punk | 130 | 0 | `wood` | `body` | `tight` | `noise` | `cowbell` | -2/0/-2/0 |
 | ·Emo | 145 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·New Wave | 130 | 0 | `wood` | `tight` | `tight` | `noise` | `synth` | -2/0/-2/0 |
+| ·New Wave | 130 | 0 | `wood` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
 | ·Post-punk Revival | 135 | 0 | `tight` | `tight` | `tight` | `noise` | `analog` | -1/2/-2/2 |
 | ·Screamo | 175 | 0 | `tight` | `body` | `tight` | `noise` | `analog` | 1/2/1/0 |
 
@@ -982,8 +992,8 @@ snare  -X-X-X-X-X-X-X-X
 | ·Gothic Rock | `finger` | 36 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Dance-punk | `finger` | 36 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
 | ·Emo | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·New Wave | `finger` | 36 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
-| ·Post-punk Revival | `pick` | 36 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·New Wave | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 22 | Major |
+| ·Post-punk Revival | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Screamo | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### Alternative
@@ -993,28 +1003,28 @@ snare  -X-X-X-X-X-X-X-X
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | ·Grunge | 110 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Indie Rock | 125 | 0 | `wood` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Indie Rock | 112 | 0 | `wood` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Shoegaze | 120 | 0 | `punch` | `body` | `hall` | `noise` | `analog` | -2/0/-2/0 |
-| ·Dream Pop | 110 | 0 | `punch` | `body` | `hall` | `noise` | `analog` | -2/0/-2/0 |
+| ·Dream Pop | 150 | 0 | `punch` | `rim` | `hall` | `noise` | `analog` | -2/0/-2/0 |
 | ·Britpop | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/2/-2/2 |
-| ·Noise Rock | 130 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Alternative Rock | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Noise Rock | 125 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Alternative Rock | 112 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Lo-fi Indie | 115 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Slacker Rock | 110 | 14 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Slacker Rock | 105 | 8 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ·Grunge | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Indie Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
+| ·Indie Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 22 | Major |
 | ·Shoegaze | `finger` | 24 | 320 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Dream Pop | `finger` | 24 | 300 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Dream Pop | `finger` | 24 | 300 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Britpop | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Noise Rock | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Alternative Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Lo-fi Indie | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Slacker Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Lo-fi Indie | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Slacker Rock | `finger` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 루츠와의 교차
 
@@ -1022,13 +1032,13 @@ snare  -X-X-X-X-X-X-X-X
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Country Rock | 120 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Country Rock | 136 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Country Rock | `flatwound` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Country Rock | `flatwound` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 <!-- chart-auto:start -->
 
@@ -1044,7 +1054,278 @@ snare  -X-X-X-X-X-X-X-X
 |---|---|---|---|---|
 | Stoner Rock | 2013 | ...Like Clockwork | Queens of the Stone Age | BB200 |
 
-<!-- chart-auto:end -->
+<!-- cha## 대표곡 — 웹으로 확인한 곡 (2026-09-16)
+
+장르마다 곡 3~5곡을 골라 **곡이 실재하는지, 출처가 그 장르로 분류했는지**를 웹에서
+확인한 것만 적었습니다. 확인하지 못한 후보는 버렸습니다(표에 없습니다).
+
+> - **출처** 칸은 장르 분류를 확인한 페이지입니다. 곡 문서가 없어 앨범·장르 문서·비평으로
+>   대신한 줄이 있습니다 — Crust · Powerviolence · Slacker Rock 이 그렇고, 제목 칸에 «음반 단위» 로 적었습니다.
+> - **1위** 는 빌보드 Hot 100 1위이고 장르 태그는 저장소가 붙인 것입니다([../billboard/](../billboard/)).
+>   Hot Child in the City(위키: 파워팝) · Heartache Tonight(위키: 블루스 록)은 위키 장르가 다릅니다 — 참고로만 쓰십시오.
+> - **BPM · 조성**은 출처가 있는 값만 적었습니다. 대부분 자동 분석(songbpm 등)이라 반 속도·두 배로
+>   읽힌 곡이 있어 괄호에 체감값을 함께 두었습니다. 장조/단조 판정은 신뢰도가 낮습니다.
+> - **곡의 선율·리프는 옮겨 적지 않았습니다.** 프리셋은 이 곡들의 성질 — 템포 범위 · 건반 유무 ·
+>   기타 음색 · 베이스 역할 · 드럼 골격 — 에만 맞췄습니다.
+> - 앱의 «지금 장르» 줄과 근거 패널이 이 표를 보여 줍니다(`tools/build-refdata.mjs` → `src/data/references.js`).
+>   **표를 고쳤으면 그 스크립트를 다시 돌리십시오.**
+
+| 프리셋 | 곡 | 아티스트 | 연도 | 구분 | BPM | 조성 | 출처 |
+|---|---|---|---|---|---|---|---|
+| Motorik | Hallogallo | Neu! | 1972 | 대표 | 153 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Motorik) |
+| Motorik | Mother Sky | Can | 1970 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Krautrock) |
+| Motorik | Autobahn (마지막 구간) | Kraftwerk | 1974 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Motorik) |
+| Motorik | Opa-Loka | Hawkwind | 1975 | 대표 | 137 | C♯/D♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Motorik) |
+| Rock | Whole Lotta Love | Led Zeppelin | 1969 | 대표 | 92 | E 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Whole_Lotta_Love) |
+| Rock | Smoke on the Water | Deep Purple | 1972 | 대표 | 114 | G 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Smoke_on_the_Water) |
+| Rock | All Right Now | Free | 1970 | 대표 | 120 | D | [wikipedia.org](https://en.wikipedia.org/wiki/All_Right_Now) |
+| Rock | Back in Black | AC/DC | 1980 | 대표 | 94 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Back_in_Black_(song)) |
+| Rock | Sweet Child o' Mine | Guns N' Roses | 1988 | 1위 | 125 | F♯/G♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Sweet_Child_o%27_Mine) |
+| Punk | Blitzkrieg Bop | Ramones | 1976 | 대표 | 177 | A장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Blitzkrieg_Bop) |
+| Punk | Anarchy in the U.K. | Sex Pistols | 1976 | 대표 | 134 | F | [wikipedia.org](https://en.wikipedia.org/wiki/Anarchy_in_the_U.K.) |
+| Punk | White Riot | The Clash | 1977 | 대표 | 205 | D | [wikipedia.org](https://en.wikipedia.org/wiki/White_Riot) |
+| Death Metal | Zombie Ritual | Death | 1987 | 대표 | 114 (배속 228) | G | [wikipedia.org](https://en.wikipedia.org/wiki/Zombie_Ritual) |
+| Death Metal | Hammer Smashed Face | Cannibal Corpse | 1992 | 대표 | 97 (배속 194) | F♯/G♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Hammer_Smashed_Face) |
+| Death Metal | Slowly We Rot | Obituary | 1989 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Slowly_We_Rot) |
+| Death Metal | Symbolic | Death | 1995 | 대표 | 114 | F♯/G♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Symbolic_(Death_album)) |
+| Nu Metal | Freak on a Leash | Korn | 1999 | 대표 | 103 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Freak_on_a_Leash) |
+| Nu Metal | Break Stuff | Limp Bizkit | 1999 | 대표 | 110 (하프 55) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Break_Stuff) |
+| Nu Metal | One Step Closer | Linkin Park | 2000 | 대표 | 95 | A | [wikipedia.org](https://en.wikipedia.org/wiki/One_Step_Closer_(Linkin_Park_song)) |
+| Nu Metal | Wait and Bleed | Slipknot | 1999 | 대표 | 93 (더블 186) | G | [wikipedia.org](https://en.wikipedia.org/wiki/Wait_and_Bleed) |
+| Doom | Black Sabbath | Black Sabbath | 1970 | 대표 | 133 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Black_Sabbath_(song)) |
+| Doom | Solitude | Candlemass | 1986 | 대표 | 81 | B | [wikipedia.org](https://en.wikipedia.org/wiki/Solitude_(Candlemass_song)) |
+| Doom | Born Too Late | Saint Vitus | 1986 | 대표 | 74 | G♯/A♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Born_Too_Late) |
+| Rock & Roll | Johnny B. Goode | Chuck Berry | 1958 | 대표 | 168 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Johnny_B._Goode) |
+| Rock & Roll | Tutti Frutti | Little Richard | 1955 | 대표 | 185 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Tutti_Frutti_(song)) |
+| Rock & Roll | Rock Around the Clock | Bill Haley & His Comets | 1954 | 대표 | 180 | A 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Rock_Around_the_Clock) |
+| Rock & Roll | Great Balls of Fire | Jerry Lee Lewis | 1957 | 대표 | 167 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Great_Balls_of_Fire) |
+| Rock & Roll | Oh, Pretty Woman | Roy Orbison | 1964 | 1위 | 127 | A 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Oh,_Pretty_Woman) |
+| Surf Rock | Misirlou | Dick Dale & His Del-Tones | 1962 | 대표 | 173 | E | [wikipedia.org](https://en.wikipedia.org/wiki/Misirlou) |
+| Surf Rock | Let's Go Trippin' | Dick Dale & His Del-Tones | 1961 | 대표 | 148 | E 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Let%27s_Go_Trippin%27) |
+| Surf Rock | Pipeline | The Chantays | 1962 | 대표 | 152 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Pipeline_(instrumental)) |
+| Surf Rock | Wipe Out | The Surfaris | 1963 | 대표 | 169 | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Wipe_Out_(song)) |
+| Surf Rock | Surf City | Jan and Dean | 1963 | 1위 | 148 | A♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Surf_City_(song)) |
+| Garage Rock | Louie Louie | The Kingsmen | 1963 | 대표 | 122 | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Louie_Louie) |
+| Garage Rock | The Witch | The Sonics | 1964 | 대표 | 172 | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/The_Witch_(song)) |
+| Garage Rock | Psychotic Reaction | Count Five | 1966 | 대표 | 165 | F♯ | [wikipedia.org](https://en.wikipedia.org/wiki/Psychotic_Reaction) |
+| Garage Rock | 96 Tears | ? and the Mysterians | 1966 | 1위 | 119.88 | F♯ | [wikipedia.org](https://en.wikipedia.org/wiki/96_Tears) |
+| Garage Rock | Wild Thing | The Troggs | 1966 | 1위 | ≈102 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Wild_Thing_(The_Wild_Ones_song)) |
+| Psychedelic Rock | Tomorrow Never Knows | The Beatles | 1966 | 대표 | 126 | C Mixolydian | [wikipedia.org](https://en.wikipedia.org/wiki/Tomorrow_Never_Knows) |
+| Psychedelic Rock | White Rabbit | Jefferson Airplane | 1967 | 대표 | 105 | F♯ minor | [wikipedia.org](https://en.wikipedia.org/wiki/White_Rabbit_(song)) |
+| Psychedelic Rock | You're Gonna Miss Me | The 13th Floor Elevators | 1966 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/You%27re_Gonna_Miss_Me_(song)) |
+| Psychedelic Rock | Paint It Black | The Rolling Stones | 1966 | 1위 | 159 | C♯/D♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Paint_It_Black) |
+| Psychedelic Rock | Light My Fire | The Doors | 1967 | 1위 | 125 | A minor | [wikipedia.org](https://en.wikipedia.org/wiki/Light_My_Fire) |
+| Pop Punk | Basket Case | Green Day | 1994 | 대표 | 85 (더블타임 170) | E♭장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Basket_Case_(Green_Day_song)) |
+| Pop Punk | All the Small Things | Blink-182 | 1999 | 대표 | 150 | C장조 | [wikipedia.org](https://en.wikipedia.org/wiki/All_the_Small_Things) |
+| Pop Punk | Girlfriend | Avril Lavigne | 2007 | 1위 | 164 | D장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Girlfriend_(Avril_Lavigne_song)) |
+| Pop Punk | Good 4 U | Olivia Rodrigo | 2021 | 1위 | 85 | F♯단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Good_4_U) |
+| Hardcore Punk | Pay to Cum | Bad Brains | 1980 | 대표 | 161 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Pay_to_Cum) |
+| Hardcore Punk | Straight Edge | Minor Threat | 1981 | 대표 | 189 | F | [wikipedia.org](https://en.wikipedia.org/wiki/Straight_Edge_(song)) |
+| Hardcore Punk | Rise Above | Black Flag | 1981 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Damaged_(Black_Flag_album)) |
+| Post-punk | Love Will Tear Us Apart | Joy Division | 1980 | 대표 | 147 | D major | [wikipedia.org](https://en.wikipedia.org/wiki/Love_Will_Tear_Us_Apart) |
+| Post-punk | Transmission | Joy Division | 1979 | 대표 | 154 | G major | [wikipedia.org](https://en.wikipedia.org/wiki/Transmission_(song)) |
+| Post-punk | She's Lost Control | Joy Division | 1979 | 대표 | 144 | B minor | [wikipedia.org](https://en.wikipedia.org/wiki/She%27s_Lost_Control) |
+| Post-punk | Damaged Goods | Gang of Four | 1978 | 대표 | 157 | C major | [wikipedia.org](https://en.wikipedia.org/wiki/Damaged_Goods_(Gang_of_Four_song)) |
+| Gothic Rock | Bela Lugosi's Dead | Bauhaus | 1979 | 대표 | 150 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Bela_Lugosi%27s_Dead) |
+| Gothic Rock | A Forest | The Cure | 1980 | 대표 | 163 (반박 82) | C major | [wikipedia.org](https://en.wikipedia.org/wiki/A_Forest) |
+| Gothic Rock | Spellbound | Siouxsie and the Banshees | 1981 | 대표 | 149 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Spellbound_(Siouxsie_and_the_Banshees_song)) |
+| Gothic Rock | Temple of Love (1983) | The Sisters of Mercy | 1983 | 대표 | 171 (반박 86) | B minor | [wikipedia.org](https://en.wikipedia.org/wiki/Temple_of_Love_(The_Sisters_of_Mercy_song)) |
+| Dance-punk | Losing My Edge | LCD Soundsystem | 2002 | 대표 | 116 | C♯/D♭ major | [wikipedia.org](https://en.wikipedia.org/wiki/Losing_My_Edge) |
+| Dance-punk | Daft Punk Is Playing at My House | LCD Soundsystem | 2005 | 대표 | 136 | G major | [wikipedia.org](https://en.wikipedia.org/wiki/Daft_Punk_Is_Playing_at_My_House) |
+| Dance-punk | House of Jealous Lovers | The Rapture | 2002 | 대표 | 130 | C♯/D♭ | [wikipedia.org](https://en.wikipedia.org/wiki/House_of_Jealous_Lovers) |
+| Dance-punk | Damaged Goods | Gang of Four | 1978 | 대표 | 157 | C major | [wikipedia.org](https://en.wikipedia.org/wiki/Damaged_Goods_(Gang_of_Four_song)) |
+| Emo | Seven | Sunny Day Real Estate | 1994 | 대표 | 191 (반박 96) | F major | [wikipedia.org](https://en.wikipedia.org/wiki/Emo) |
+| Emo | The Middle | Jimmy Eat World | 2001 | 대표 | 162 | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Middle_(Jimmy_Eat_World_song)) |
+| Emo | Helena | My Chemical Romance | 2005 | 대표 | 126 | E major | [wikipedia.org](https://en.wikipedia.org/wiki/Helena_(My_Chemical_Romance_song)) |
+| Grunge | Smells Like Teen Spirit | Nirvana | 1991 | 대표 | 117 | F단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Smells_Like_Teen_Spirit) |
+| Grunge | Black Hole Sun | Soundgarden | 1994 | 대표 | 105 | F♯ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Black_Hole_Sun) |
+| Grunge | Alive | Pearl Jam | 1991 | 대표 | 161 (반박 81) | G장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Alive_(Pearl_Jam_song)) |
+| Grunge | Would? | Alice in Chains | 1992 | 대표 | 100 | F♯ | [wikipedia.org](https://en.wikipedia.org/wiki/Would%3F) |
+| Grunge | Touch Me I'm Sick | Mudhoney | 1988 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Touch_Me_I%27m_Sick) |
+| Indie Rock | Cut Your Hair | Pavement | 1994 | 대표 | 111 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Cut_Your_Hair) |
+| Indie Rock | Last Nite | The Strokes | 2001 | 대표 | 104 | C장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Last_Nite) |
+| Indie Rock | Maps | Yeah Yeah Yeahs | 2003 | 대표 | 120 | G장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Maps_(Yeah_Yeah_Yeahs_song)) |
+| Indie Rock | Float On | Modest Mouse | 2004 | 대표 | 101 | F♯ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Float_On_(Modest_Mouse_song)) |
+| Indie Rock | A-Punk | Vampire Weekend | 2008 | 대표 | 175 (반박 88) | — | [wikipedia.org](https://en.wikipedia.org/wiki/A-Punk) |
+| Shoegaze | Only Shallow | My Bloody Valentine | 1991 | 대표 | 170 (반박 85) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Only_Shallow) |
+| Shoegaze | Soon | My Bloody Valentine | 1990 | 대표 | 110 | F♯단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Soon_(My_Bloody_Valentine_song)) |
+| Shoegaze | When You Sleep | My Bloody Valentine | 1991 | 대표 | 129 | B | [wikipedia.org](https://en.wikipedia.org/wiki/When_You_Sleep) |
+| Shoegaze | Vapour Trail | Ride | 1990 | 대표 | 108 | C♯단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Vapour_Trail_(song)) |
+| Shoegaze | Alison | Slowdive | 1993 | 대표 | 102 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Souvlaki_(album)) |
+| Dream Pop | Song to the Siren | This Mortal Coil | 1983 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Song_to_the_Siren) |
+| Dream Pop | Heaven or Las Vegas | Cocteau Twins | 1990 | 대표 | 180 (반박 90) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Heaven_or_Las_Vegas_(song)) |
+| Dream Pop | Fade into You | Mazzy Star | 1993 | 대표 | 52 (배박 104) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Fade_into_You) |
+| Dream Pop | Myth | Beach House | 2012 | 대표 | 142 (반박 71) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Myth_(Beach_House_song)) |
+| Dream Pop | Space Song | Beach House | 2015 | 대표 | 147 (반박 74) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Space_Song) |
+| Britpop | Live Forever | Oasis | 1994 | 대표 | 92 | G장조끝에 A단조로 전조, | [wikipedia.org](https://en.wikipedia.org/wiki/Live_Forever_(Oasis_song)) |
+| Britpop | Parklife | Blur | 1994 | 대표 | 138 | E장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Parklife_(song)) |
+| Britpop | Common People | Pulp | 1995 | 대표 | 144 | C장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Common_People) |
+| Britpop | Wonderwall | Oasis | 1995 | 대표 | 175 | F♯단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Wonderwall_(song)) |
+| Noise Rock | Death Valley '69 | Sonic Youth & Lydia Lunch | 1984 | 대표 | 137 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Death_Valley_%2769) |
+| Noise Rock | 100% | Sonic Youth | 1992 | 대표 | 117 | G | [wikipedia.org](https://en.wikipedia.org/wiki/100%25_(Sonic_Youth_song)) |
+| Noise Rock | Mouth Breather | The Jesus Lizard | 1990 | 대표 | 105 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Mouth_Breather) |
+| Heavy Metal | Breaking the Law | Judas Priest | 1980 | 대표 | 164 (반속 82) | A 에올리안Am–F–G | [wikipedia.org](https://en.wikipedia.org/wiki/Breaking_the_Law) |
+| Heavy Metal | Paranoid | Black Sabbath | 1970 | 대표 | 163 (반속 82) | E 단조E 마이너 펜타토닉 | [wikipedia.org](https://en.wikipedia.org/wiki/Paranoid_(Black_Sabbath_song)) |
+| Heavy Metal | Crazy Train | Ozzy Osbourne | 1980 | 대표 | 138 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Crazy_Train) |
+| Heavy Metal | Holy Diver | Dio | 1983 | 대표 | 92 (배속 184) | G♯/A♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Holy_Diver_(song)) |
+| Thrash Metal | Master of Puppets | Metallica | 1986 | 대표 | 105 | E 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Master_of_Puppets_(song)) |
+| Thrash Metal | Angel of Death | Slayer | 1986 | 대표 | 210 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Angel_of_Death_(Slayer_song)) |
+| Thrash Metal | Peace Sells | Megadeth | 1986 | 대표 | 144 | F♯/G♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Peace_Sells) |
+| Thrash Metal | Holy Wars... The Punishment Due | Megadeth | 1990 | 대표 | 125 (배속 250) | A | [wikipedia.org](https://en.wikipedia.org/wiki/Holy_Wars..._The_Punishment_Due) |
+| Black Metal | Freezing Moon | Mayhem | 1994 | 대표 | 93 (배속 186) | — | [wikipedia.org](https://en.wikipedia.org/wiki/De_Mysteriis_Dom_Sathanas) |
+| Black Metal | Transilvanian Hunger | Darkthrone | 1994 | 대표 | 139 | E 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Transilvanian_Hunger) |
+| Black Metal | I Am the Black Wizards | Emperor | 1994 | 대표 | 104 | C | [wikipedia.org](https://en.wikipedia.org/wiki/In_the_Nightside_Eclipse) |
+| Black Metal | Dunkelheit | Burzum | 1996 | 대표 | 55 (배속 110) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Filosofem) |
+| Stoner Rock | Green Machine | Kyuss | 1992 | 대표 | 90 (더블 180) | C | [wikipedia.org](https://en.wikipedia.org/wiki/Green_Machine_(song)) |
+| Stoner Rock | No One Knows | Queens of the Stone Age | 2002 | 대표 | 171 (하프 86) | C | [wikipedia.org](https://en.wikipedia.org/wiki/No_One_Knows) |
+| Stoner Rock | Space Lord | Monster Magnet | 1998 | 대표 | 96 | C minor | [wikipedia.org](https://en.wikipedia.org/wiki/Space_Lord) |
+| Stoner Rock | Sweet Leaf | Black Sabbath | 1971 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sweet_Leaf) |
+| Power Metal | I Want Out | Helloween | 1988 | 대표 | 91 (배속 182) | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/I_Want_Out_(Helloween_song)) |
+| Power Metal | Eagle Fly Free | Helloween | 1988 | 대표 | 157 (배속 314) | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Keeper_of_the_Seven_Keys:_Part_II) |
+| Power Metal | Hunting High and Low | Stratovarius | 2000 | 대표 | 94 (배속 188) | F♯/G♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Infinite_(Stratovarius_album)) |
+| Power Metal | Through the Fire and Flames | DragonForce | 2006 | 대표 | 200 | C 단조E♭ 장조 구간 | [wikipedia.org](https://en.wikipedia.org/wiki/Through_the_Fire_and_Flames) |
+| Metalcore | The End of Heartache | Killswitch Engage | 2004 | 대표 | 124 (하프 62) | C | [wikipedia.org](https://en.wikipedia.org/wiki/The_End_of_Heartache_(song)) |
+| Metalcore | My Curse | Killswitch Engage | 2006 | 대표 | 177 (하프 89) | A♯/B♭ minor | [wikipedia.org](https://en.wikipedia.org/wiki/My_Curse_(song)) |
+| Metalcore | Tears Don't Fall | Bullet for My Valentine | 2005 | 대표 | 162 (하프 81) | G minor | [wikipedia.org](https://en.wikipedia.org/wiki/Tears_Don%27t_Fall) |
+| Proto-punk | I Wanna Be Your Dog | The Stooges | 1969 | 대표 | 121 | E | [wikipedia.org](https://en.wikipedia.org/wiki/I_Wanna_Be_Your_Dog) |
+| Proto-punk | Kick Out the Jams | MC5 | 1969 | 대표 | 145 | F♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Kick_Out_the_Jams_(song)) |
+| Proto-punk | I'm Waiting for the Man | The Velvet Underground | 1967 | 대표 | 126 | G | [wikipedia.org](https://en.wikipedia.org/wiki/I%27m_Waiting_for_the_Man) |
+| Proto-punk | Roadrunner | The Modern Lovers | 1972 | 대표 | 76 (두 배 152) | D | [wikipedia.org](https://en.wikipedia.org/wiki/Roadrunner_(Jonathan_Richman_song)) |
+| Proto-punk | Search and Destroy | Iggy and the Stooges | 1973 | 대표 | 155 | B♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Search_and_Destroy_(The_Stooges_song)) |
+| Acid Rock | Psychotic Reaction | Count Five | 1966 | 대표 | 165 | F♯ | [wikipedia.org](https://en.wikipedia.org/wiki/Psychotic_Reaction) |
+| Acid Rock | In-A-Gadda-Da-Vida | Iron Butterfly | 1968 | 대표 | 126 | D | [wikipedia.org](https://en.wikipedia.org/wiki/In-A-Gadda-Da-Vida_(song)) |
+| Acid Rock | Purple Haze | The Jimi Hendrix Experience | 1967 | 대표 | 108 | E | [wikipedia.org](https://en.wikipedia.org/wiki/Acid_rock) |
+| Acid Rock | Summertime Blues | Blue Cheer | 1968 | 대표 | 140 | F | [wikipedia.org](https://en.wikipedia.org/wiki/Vincebus_Eruptum) |
+| Space Rock | Interstellar Overdrive | Pink Floyd | 1967 | 대표 | 98 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Interstellar_Overdrive) |
+| Space Rock | Astronomy Domine | Pink Floyd | 1967 | 대표 | 123 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Astronomy_Domine) |
+| Space Rock | Set the Controls for the Heart of the Sun | Pink Floyd | 1968 | 대표 | 131 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Set_the_Controls_for_the_Heart_of_the_Sun) |
+| Space Rock | Silver Machine | Hawkwind | 1972 | 대표 | 132 | C♯/D♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Silver_Machine) |
+| Krautrock | Halleluhwah | Can | 1971 | 대표 | 92 | G | [wikipedia.org](https://en.wikipedia.org/wiki/Halleluhwah) |
+| Krautrock | Spoon | Can | 1972 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Spoon_(Can_song)) |
+| Krautrock | Krautrock | Faust | 1973 | 대표 | 123 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Krautrock) |
+| Krautrock | Mother Sky | Can | 1970 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Mother_Sky) |
+| Southern Rock | Sweet Home Alabama | Lynyrd Skynyrd | 1974 | 대표 | 98 | G | [wikipedia.org](https://en.wikipedia.org/wiki/Sweet_Home_Alabama) |
+| Southern Rock | Free Bird | Lynyrd Skynyrd | 1973 | 대표 | 118 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Free_Bird) |
+| Southern Rock | Ramblin' Man | The Allman Brothers Band | 1973 | 대표 | 182 (절반 91) | A♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Ramblin%27_Man_(Allman_Brothers_Band_song)) |
+| Southern Rock | Can't You See | The Marshall Tucker Band | 1973 | 대표 | 164 (절반 82) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Can%27t_You_See_(The_Marshall_Tucker_Band_song)) |
+| Glam Rock | Get It On | T. Rex | 1971 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Get_It_On_(T._Rex_song)) |
+| Glam Rock | The Jean Genie | David Bowie | 1972 | 대표 | 129 | E | [wikipedia.org](https://en.wikipedia.org/wiki/The_Jean_Genie) |
+| Glam Rock | Cum On Feel the Noize | Slade | 1973 | 대표 | 138 | G | [wikipedia.org](https://en.wikipedia.org/wiki/Cum_On_Feel_the_Noize) |
+| Glam Rock | The Ballroom Blitz | Sweet | 1973 | 대표 | 109 | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Ballroom_Blitz) |
+| Glam Rock | Hot Child in the City | Nick Gilder | 1978 | 1위 | ≈110 | E | [wikipedia.org](https://en.wikipedia.org/wiki/Hot_Child_in_the_City) |
+| NWOBHM | The Trooper | Iron Maiden | 1983 | 대표 | 88 (배속 176) | E 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/The_Trooper) |
+| NWOBHM | Run to the Hills | Iron Maiden | 1982 | 대표 | 178 | G 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Run_to_the_Hills) |
+| NWOBHM | Wheels of Steel | Saxon | 1980 | 대표 | 133 | D♯/E♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Wheels_of_Steel) |
+| NWOBHM | Am I Evil? | Diamond Head | 1980 | 대표 | 89 (배속 178) | A♯/B♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Am_I_Evil%3F) |
+| Sludge | Hooch | Melvins | 1993 | 대표 | 104 (하프 52) | G | [wikipedia.org](https://en.wikipedia.org/wiki/Houdini_(album)) |
+| Sludge | All I Had (I Gave) | Crowbar | 1993 | 대표 | 116 (하프 58) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Crowbar_(album)) |
+| Sludge | Sisterfucker (Part I) | Eyehategod | 1993 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Take_as_Needed_for_Pain) |
+| Sludge | Blood and Thunder | Mastodon | 2004 | 대표 | 93 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Leviathan_(Mastodon_album)) |
+| Stoner | Dopesmoker | Sleep | 2003 | 대표 | 97 | F | [wikipedia.org](https://en.wikipedia.org/wiki/Jerusalem_(Sleep_album)) |
+| Stoner | Dragonaut | Sleep | 1992 | 대표 | 124 (하프 62) | F | [wikipedia.org](https://en.wikipedia.org/wiki/Sleep's_Holy_Mountain) |
+| Stoner | Funeralopolis | Electric Wizard | 2000 | 대표 | 63 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Dopethrone) |
+| Symphonic Metal | Nemo | Nightwish | 2004 | 대표 | 125 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Nemo_(song)) |
+| Symphonic Metal | Wishmaster | Nightwish | 2000 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Wishmaster_(album)) |
+| Symphonic Metal | Ice Queen | Within Temptation | 2001 | 대표 | 92 (배속 184) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ice_Queen_(song)) |
+| Symphonic Metal | Emerald Sword | Rhapsody | 1998 | 대표 | 90 (배속 180) | C 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Symphonic_metal) |
+| Punk Rock | New Rose | The Damned | 1976 | 대표 | 174 | C♯/D♭ | [wikipedia.org](https://en.wikipedia.org/wiki/New_Rose) |
+| Punk Rock | Neat Neat Neat | The Damned | 1977 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Neat_Neat_Neat) |
+| Punk Rock | Ever Fallen in Love (With Someone You Shouldn't've) | Buzzcocks | 1978 | 대표 | 175 | E장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Ever_Fallen_in_Love_(With_Someone_You_Shouldn%27t%27ve)) |
+| Crust | Arise! (동명 앨범 수록) | Amebix | 1985 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Arise!_(Amebix_album)) |
+| Crust | Out from the Void | Antisect | 1985 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Crust_punk) |
+| Crust | Police Bastard | Doom (UK) | 1989 | 대표 | — | — | [negativeinsight.com](https://www.negativeinsight.com/niblog/doom-police-bastard) |
+| Crust | Tech-No-Logic-Kill | Nausea | 1990 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Extinction_(album)) |
+| D-beat | Realities of War | Discharge | 1980 | 대표 | 133 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Discharge_(band)) |
+| D-beat | Raped Ass (동명 EP 수록) | Anti Cimex | 1983 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/D-beat) |
+| D-beat | Get It Off | Disfear | 2008 | 대표 | 154 | D♯/E♭ | [stereogum.com](https://stereogum.com/1979559/looking-back-on-the-legacy-of-d-beat-10-years-of-disfears-masterpiece-live-the-storm/columns/sounding-board) |
+| Powerviolence | Drop Dead (6곡 데모 — 음반 단위) | Siege | 1984 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Drop_Dead_(album)) |
+| Powerviolence | My World... My Way (No Man's Slave 마지막 곡) | Infest | 2002 | 대표 | — | — | [sputnikmusic.com](https://www.sputnikmusic.com/review/32312/Infest-No-Mans-Slave/) |
+| Powerviolence | Charles Bronson / Spazz 스플릿 7" (음반 단위) | Charles Bronson · Spazz | 1995 | 대표 | — | — | [heavyblogisheavy.com](https://www.heavyblogisheavy.com/2016/01/13/starter-kit-powerviolence/) |
+| New Wave | Heart of Glass | Blondie | 1979 | 1위 | 115 | D major | [wikipedia.org](https://en.wikipedia.org/wiki/Heart_of_Glass_(song)) |
+| New Wave | My Sharona | The Knack | 1979 | 1위 | 148 | — | [wikipedia.org](https://en.wikipedia.org/wiki/My_Sharona) |
+| New Wave | Once in a Lifetime | Talking Heads | 1980 | 대표 | 117 | D major | [wikipedia.org](https://en.wikipedia.org/wiki/Once_in_a_Lifetime_(Talking_Heads_song)) |
+| New Wave | Whip It | Devo | 1980 | 대표 | 158 | E major | [wikipedia.org](https://en.wikipedia.org/wiki/Whip_It_(Devo_song)) |
+| New Wave | Just What I Needed | The Cars | 1978 | 대표 | 127 | E major | [wikipedia.org](https://en.wikipedia.org/wiki/Just_What_I_Needed) |
+| Post-punk Revival | Take Me Out | Franz Ferdinand | 2004 | 대표 | 104 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Take_Me_Out_(song)) |
+| Post-punk Revival | Obstacle 1 | Interpol | 2002 | 대표 | 121 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Obstacle_1) |
+| Post-punk Revival | Mr. Brightside | The Killers | 2003 | 대표 | 148 | D♭ major | [wikipedia.org](https://en.wikipedia.org/wiki/Mr._Brightside) |
+| Post-punk Revival | I Bet You Look Good on the Dancefloor | Arctic Monkeys | 2005 | 대표 | 103 (배박 206) | F♯ minor | [wikipedia.org](https://en.wikipedia.org/wiki/I_Bet_You_Look_Good_on_the_Dancefloor) |
+| Screamo | Bang Yer Head | Portraits of Past | 1996 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Screamo) |
+| Screamo | Cross Out the Eyes | Thursday | 2001 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Screamo) |
+| Screamo | Ohio Is for Lovers | Hawthorne Heights | 2004 | 대표 | 170 | G♯/A♭ minor | [wikipedia.org](https://en.wikipedia.org/wiki/Ohio_Is_for_Lovers) |
+| Screamo | Fly by Night | Loma Prieta | 2012 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Screamo) |
+| Alternative Rock | Losing My Religion | R.E.M. | 1991 | 대표 | 126 | A단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Losing_My_Religion) |
+| Alternative Rock | Creep | Radiohead | 1992 | 대표 | 92 | G장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Creep_(Radiohead_song)) |
+| Alternative Rock | Fake Plastic Trees | Radiohead | 1995 | 대표 | 74 (배박 148) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Fake_Plastic_Trees) |
+| Alternative Rock | With or Without You | U2 | 1987 | 1위 | 110 | D장조 | [wikipedia.org](https://en.wikipedia.org/wiki/With_or_Without_You) |
+| Lo-fi Indie | Walking the Cow | Daniel Johnston | 1983 | 대표 | 142 (반박 71) | B♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Walking_the_Cow) |
+| Lo-fi Indie | Brand New Love (1986 4트랙판) | Lou Barlow (Sentridoh) / Sebadoh | 1986 | 대표 | 105 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Brand_New_Love) |
+| Lo-fi Indie | Summer Babe (Winter Version) | Pavement | 1991 | 대표 | 98 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Slanted_and_Enchanted) |
+| Lo-fi Indie | Game of Pricks | Guided by Voices | 1995 | 대표 | 139 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Alien_Lanes) |
+| Slacker Rock | Freak Scene | Dinosaur Jr. | 1988 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Freak_Scene) |
+| Slacker Rock | Loser | Beck | 1993 | 대표 | 86 | D장조 | [ultimateclassicrock.com](https://ultimateclassicrock.com/beck-loser-song/) |
+| Slacker Rock | Avant Gardener | Courtney Barnett | 2013 | 대표 | 115 | C | [americansongwriter.com](https://americansongwriter.com/the-meaning-behind-avant-gardener-by-courtney-barnett-and-her-harrowing-slacker-anthem/) |
+| Slacker Rock | Salad Days | Mac DeMarco | 2014 | 대표 | 201 (반박 101) | F장조 | [nme.com](https://www.nme.com/reviews/reviews-mac-demarco-15233-311836) |
+| Country Rock | You Ain't Goin' Nowhere | The Byrds | 1968 | 대표 | 132 | G | [wikipedia.org](https://en.wikipedia.org/wiki/You_Ain%27t_Goin%27_Nowhere) |
+| Country Rock | Take It Easy | Eagles | 1972 | 대표 | 139 | G | [wikipedia.org](https://en.wikipedia.org/wiki/Take_It_Easy) |
+| Country Rock | Peaceful Easy Feeling | Eagles | 1972 | 대표 | 143 | E | [wikipedia.org](https://en.wikipedia.org/wiki/Peaceful_Easy_Feeling) |
+| Country Rock | Heartache Tonight | Eagles | 1979 | 1위 | 113 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Heartache_Tonight) |
+
+### 이 곡들로 고친 것
+
+프리셋 파일(`src/data/presets/01-rock.js`)과 선율 배정(`src/data/melody.js`)을 함께 고쳤습니다.
+드럼 패턴은 [../patterns/01-rock.md](../patterns/01-rock.md), 선율 판정은 `genres/profiles/01-A-rock.json` 에 있습니다.
+
+| 프리셋 | 어긋났던 것 | 곡이 말한 것 | 고친 값 |
+|---|---|---|---|
+| Rock | 130 BPM · 오르간 · 하이게인 | 5곡 88~125 BPM · 오르간 1곡 · 크런치 | 115 · 크런치 트윈 · 오르간 낮춤 |
+| Southern Rock | swing 30 («셔플이 빠지면 하드록») | 4곡 모두 레이드백 스트레이트 · 피아노 3/4곡 | swing 8 · 100 · 피아노 |
+| Glam Rock | 오르간 · 하이게인 · 8분 킥 | 오르간 0곡 · 색소폰·탬버린 · 4분 스톰프 | 125 · 색소폰 · 탬버린 · 4분 킥 |
+| Rock & Roll | swing 34 | 드럼은 스윙·기타는 스트레이트 · 색소폰 3/5곡 | swing 24 · 168 · 색소폰 |
+| Surf Rock | 건반 없음 · 4분 킥 | Pipeline 일렉트릭 피아노 · 장르 문서의 배경 오르간 | EP·오르간(배경) · 킥 1·3박 |
+| Garage Rock | — | 콤보 오르간 반복 · 탬버린 · 하모니카 | 탬버린 8분 · 하모니카 |
+| Proto-punk | 오르간 | 피아노 2 · 오르간 1 · 없음 2 · 4분 킥 | 피아노 8분 연타 · 4분 킥 · 썰매방울 · 145 |
+| Country Rock | Minor Pentatonic · 120 | 4곡 모두 장조 · 132~143 · 밴조 | Major · 136 · 밴조 · 붐칙 베이스 · 건반 끔 |
+| Psychedelic Rock | 115 · 형제와 같은 선율 | 105~159 · 선법 드론 · 시타르 · 탬버린 | 125 · Dorian · 탬버린 · 월드 장식음 재료 |
+| Acid Rock | 형제와 오르간 공유 | 건반 1/4곡 · 퍼즈 베이스 유니즌 | 오르간 낮춤 · 베이스 = 기타 리프 · 130 |
+| Space Rock | 105 · 긴 베이스(gate 400) · 패드 | 98~132 · 반복 리프 베이스 · Farfisa | 120 · 8분 오스티나토 · 오르간 |
+| Motorik | 킥이 스네어 자리와 겹침 | 스네어 자리만 뺀 8분 킥 · 필인 없음 · 와우 리듬 기타 | 킥 `X-x---x-X-x---x-` · wah |
+| Krautrock | 135 · 16분 시퀀서 건반 | Can 92~123 펑크형 · Farfisa·EP · 시퀀서는 확인 안 됨 | 110 · 오르간·EP |
+| Heavy Metal | 갤럽 킥·베이스·기타 | 4곡 모두 곧은 8분 | 곧은 8분 · Am–F–G · 크런치 |
+| NWOBHM | 8분 | 갤럽이 여기서 뚜렷(The Trooper · Run to the Hills) | 갤럽 베이스·기타 · 170 · 트윈 크런치 |
+| Thrash Metal | 킥 8분 전부 | 스키 비트 | 킥 4분 · 스네어 뒷박 |
+| Death Metal | **심벌이 하나도 안 울림**(이전 절 «편성과 어긋나는 것») | 미드템포 구간이 섞이고 심벌이 박을 끈다 | 라이드 8분 · 블래스트 반 + 그루브 반 |
+| Black Metal | 건반 없음 | 신스 2/4곡(Emperor · Burzum) | 패드 켬 · 선율 풀 부여 |
+| Power Metal | 선율 없음 | 157~200 · 고음 클린 찬가 · 건반 2/4곡 | 180 · 근음 질주 · 선율 풀 부여 |
+| Symphonic Metal | 150 · Major · 선율 없음 | 오케스트라·합창 4/4곡 · 단조 · 미드템포 90~125 | 125 · Natural Minor · 선율 풀 부여 |
+| Nu Metal | 건반 끔 · 하프타임 스네어 | 턴테이블·신스 3/4곡 · 2·4 스네어 | 패드 텍스처 · 백비트 |
+| Metalcore | 브레이크다운만 | 빠른 절 ↔ 브레이크다운 낙차 | 한 마디에 둘 |
+| Sludge | 75 · 백비트 | 하프타임 체감 52~58 | 104 + 스네어 3박 |
+| Stoner | 100 · swing 18 · 오르간 | 하프 체감 50~65 · 3인조, 건반 없음 | 124 하프타임 · swing 8 |
+| Stoner Rock | 100 · Stoner 와 «값이 완전히 같음» | 85~100 · 스토너 둠과 템포·골격이 다름 | 92 · 킥 골격 |
+| Pop Punk | 건반 끔 | 키보드·신시사이저 3/4곡 · 핸드클랩 | 신스(poly) 켬 · 클랩 2·4 |
+| Punk | 16분 베이스·기타 | 8분 다운스트로크 | 8분 I–IV–V |
+| Hardcore Punk | 킥 8분 전부 | 스캥크 비트 | 킥·스네어 교대 |
+| Crust | 180 | 원래 미드템포(장르 문서) | 150 · 톰 |
+| Post-punk | 135 · 코러스 기타 · 건반 | 144~157 · 코러스 기타 확인 안 됨 · 건반 0/4 | 150 · 클린·12현 · 건반 끔 |
+| Gothic Rock | 120 · 8분 햇 | 16분 햇 위 반박 체감(82~86) · 플랜저 · 탐 부족 리듬 | 84 · 16분 햇 · phase 기타 · 탐 |
+| Post-punk Revival | 오르간 · 선율 베이스(Oct 36) | 오르간 0/4 · 근음 8분 베이스 | 건반 끔 · Oct 24 · 선율 무리 분리 |
+| Dance-punk | 스네어 없음 · 와우 기타 | 스네어에 겹친 클랩 · 카우벨 · 앵귤러 클린 기타 | 스네어+클랩 · 카우벨 · 클린 |
+| New Wave | Natural Minor · 게이트 스네어 · 높은 베이스 | 장조 우세 · 1978~80 곡에 게이트 스네어 없음 · 근음 8분 | Major · body 스네어 · Oct 24 |
+| Screamo | 16분 킥 폭발 | 빠른 하드코어 스킵 비트 | 킥 8분 · 스네어 뒷박 |
+| Grunge | — | 조용한 벌스의 코러스 기타(Small Clone) | 2번 기타 chorus |
+| Indie Rock | Natural Minor · 125 | 장조 우세 · 101~120 | Major · 112 |
+| Noise Rock | 어긋난 스네어 · 반음 베이스 | «불안정한 비트» 가 아니라 단순 반복 비트 위 노이즈 | 스네어 2·4 · 드론 베이스 · 125 |
+| Shoegaze | «한 대 코러스 벽» · 4분 킥 | 퍼즈 대량 오버더브 · 12현 두 대 | 12현 · 킥 골격 |
+| Dream Pop | 110 · 패드 · 12현 | 드럼머신 반박 체감 52~90 · 오르간·아르페지오 · 장조 | 150 하프타임 · 오르간·pluck · rim 스네어 · Major |
+| Britpop | 12현 | 12현 확인 안 됨 · 건반 4/4곡 · 탬버린 | 크런치+어쿠스틱 · 탬버린 8분 |
+| Alternative Rock | 125 | 92~126 · 옅은 건반 · 만돌린 | 112 · 만돌린 · 건반 낮춤 |
+| Lo-fi Indie | EP · 재즈 선율 재료 | 코드 오르간·피아노 · 장조 파워팝 훅 · 약한 베이스 | 오르간·피아노 · 팝 선율 재료 · Major |
+| Slacker Rock | swing 14 · EP | 레이드백 · 건반 없음 · 장조 | swing 8 · 건반 끔 · Major |
+
+> **고치지 않은 곳** — D-beat · Powerviolence 는 곡 단위 드럼·BPM 출처가 없어 이전 값을 두었습니다.
+> Doom · Emo 는 곡이 이전 값과 맞았습니다(Doom 킥 한 칸만 더했습니다).
+> 조성의 장/단은 자동 분석 판정이라 **네 곳 이상의 곡이 한쪽으로 모인 경우에만** 바꿨습니다.
 
 ---
 
@@ -1055,123 +1336,102 @@ snare  -X-X-X-X-X-X-X-X
 **이 목록을 AI 프롬프트에 그대로 넣으면 안 됩니다.**
 앨범명은 미검증이며 `(확인 필요)` 표시가 있습니다.
 
-### Alternative
+> 2026-09-16 — 아티스트는 위 «대표곡» 표에서 확인한 이름으로 넓혔고, «뽑아낸 속성» 은
+> 교정 뒤의 값으로 다시 적었습니다. 이전 판의 속성 칸(오르간·하이게인·12현 등)은
+> 대표곡으로 확인되지 않은 것이 많았습니다 — «이 곡들로 고친 것» 표를 보십시오.
+
+### 뿌리
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Grunge | Nirvana · Soundgarden | Nevermind | 퍼즈 기타 · 조용함↔폭발 · **건반 없음** · 드럼 룸 큼 |
-| Alternative Rock | R.E.M. · Radiohead | The Bends | 크런치 기타 · 아르페지오 · 건반 옅게 |
-| Britpop | Oasis · Blur | (What's the Story) Morning Glory? | 밝은 크런치 · **12현** · 건반 있음 |
-| Shoegaze | My Bloody Valentine | Loveless | 기타가 **패드처럼**(퍼즈) · 드럼 묻힘 |
-| Dream Pop | Cocteau Twins · Mazzy Star | Heaven or Las Vegas | **12현** + 코러스 · 부드러운 드럼 · 패드 |
-| Noise Rock | Sonic Youth | Daydream Nation | 불협 튜닝 · **드라이한 드럼** · 건반 없음 |
-| Indie Rock | Pavement · The Strokes | Slanted and Enchanted | 얇은 기타 · 타이트 드럼 · 건반 없음 |
-| Lo-fi Indie | Guided by Voices | Bee Thousand | 대역 좁음 · 노이즈 · 저역 얇음 |
-| Slacker Rock | Mac DeMarco | Salad Days | 코러스 클린 기타 · 느슨한 타이밍 |
+| Rock & Roll | Chuck Berry · Little Richard · Bill Haley & His Comets · Jerry Lee Lewis | (확인 필요) | **피아노 5/5곡** · 크런치 · 업라이트 · 색소폰 |
+| Surf Rock | Dick Dale · The Chantays · The Surfaris | (확인 필요) | **스프링 리버브 트레몰로 기타**가 선율 · EP·오르간은 배경 |
+| Garage Rock | The Kingsmen · The Sonics · ? and the Mysterians · The Troggs | (확인 필요) | 콤보 오르간 반복 · 퍼즈·크런치 · 탬버린 |
+| Proto-punk | The Stooges · MC5 · The Velvet Underground · The Modern Lovers | Fun House (확인 필요) | **피아노 8분 연타**(오르간은 1곡) · 크런치 · 4분 킥 |
+| Rhythm & Blues | Ray Charles | (확인 필요) | **혼 섹션** · 피아노 |
+| Traditional Pop · Brill Building | — | — | 스트링 · 피아노 · 업라이트 |
+
+### Psychedelic · Krautrock
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Psychedelic Rock | The Beatles · Jefferson Airplane · The 13th Floor Elevators · The Doors | Surrealistic Pillow (확인 필요) | 오르간 · **시타르** · 페이저 기타 · 탬버린 · 도리안 |
+| Acid Rock | Count Five · Iron Butterfly · The Jimi Hendrix Experience · Blue Cheer | (확인 필요) | **퍼즈 리프**가 주인공 · 건반 1/4곡 · 베이스 유니즌 |
+| Krautrock | Can · Faust | Tago Mago (확인 필요) | Farfisa 오르간·EP · **느린 펑크 그루브**(110) |
+| Motorik | Neu! · Can · Kraftwerk · Hawkwind | Neu! (확인 필요) | **필인 없는 8분 킥** · 와우 리듬 기타 · 142 BPM |
+| Space Rock | Pink Floyd · Hawkwind | (확인 필요) | Farfisa 오르간 · 딜레이 기타 · 신스 효과음 · **반복 리프 베이스** |
+
+> **Motorik** 은 리듬 형식의 이름입니다 — 필인 없이 «앞으로만 가는» 8분 4/4 골격이
+> 곧 장르입니다. 킥은 스네어 자리만 비우고 8분을 채웁니다(Hallogallo 출처 격자).
+
+### Hard Rock · 루츠와의 교차
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Rock | — ※1 | — | 크런치 트윈 기타 · 픽 베이스 · 115 BPM · 오르간 옅게 |
+| Glam Rock | T. Rex · David Bowie · Slade · Sweet | Electric Warrior (확인 필요) | 크런치 · **4분 스톰프 + 박수·탬버린** · 색소폰 |
+| Southern Rock | Lynyrd Skynyrd · The Allman Brothers Band · The Marshall Tucker Band | (확인 필요) | 슬라이드·트윈 기타 · **피아노** · 레이드백 스트레이트 |
+| Country Rock | The Byrds · Eagles | Sweetheart of the Rodeo (확인 필요) | 페달 스틸·밴조 · 화음 보컬 · **장조** |
+
+> ※1 «Rock» 은 특정 씬이 아니라 **계열의 기본값**으로 둔 프리셋입니다.
+> 대표를 세우는 것이 맞지 않아 비웁니다. 기준을 잡을 때는 위 «대표곡» 표의 하드록 5곡을 씁니다.
 
 ### Metal
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Heavy Metal | Judas Priest | British Steel | 크런치 · 갤럽 · 건반 없음 |
-| NWOBHM | Iron Maiden | The Number of the Beast | 트윈 리드 · 달리는 픽 베이스 |
-| Thrash Metal | Metallica · Slayer | Master of Puppets | **팜뮤트** · 더블킥 · 드라이 |
-| Death Metal | Death · Cannibal Corpse | Symbolic | 블래스트 · 극단 하이게인 |
-| Black Metal | Mayhem · Darkthrone | (확인 필요) | 얇고 거친 기타 · 트레몰로 · 저역 없음 |
-| Doom | Black Sabbath | Master of Reality | 느림 · 두꺼운 **퍼즈** · 긴 감쇠 |
-| Sludge | Eyehategod | (확인 필요) | 느림 + 거침 · **퍼즈** |
-| Stoner Rock · Stoner | Kyuss · Sleep | Blues for the Red Sun | **퍼즈** · 리버브 · 그루브 |
-| Power Metal | Helloween | Keeper of the Seven Keys | 빠름 · **건반 있음(슈퍼소)** |
-| Nu Metal | Korn · Deftones | Follow the Leader | 하프타임 · 팜뮤트 · **스크래치** |
-| Metalcore | Killswitch Engage | Alive or Just Breathing | 브레이크다운 · 타이트 |
-| Symphonic Metal | Nightwish | (확인 필요) | **스트링** · 하이게인 |
-
-### 뿌리 · Punk · Post-punk
-
-| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
-|---|---|---|---|
-| Rock & Roll | Chuck Berry · Little Richard | (확인 필요) | **피아노** · 크런치 · 업라이트 |
-| Surf Rock | The Ventures · Dick Dale | (확인 필요) | **리버브 기타가 전부** · 건반 없음 |
-| Garage Rock | The Sonics · The Stooges | (확인 필요) | 오르간 · 거친 크런치 |
-| Rhythm & Blues | Ray Charles | (확인 필요) | **혼 섹션** · 피아노 |
-| Traditional Pop · Brill Building | — | — | 스트링 · 피아노 · 업라이트 |
-| Punk · Punk Rock · Pop Punk | Ramones · Green Day | (확인 필요) | 크런치 · 픽 베이스 · **건반 없음** |
-| Hardcore Punk · D-beat | Discharge | (확인 필요) | 하이게인 · 빠름 |
-| Crust | — | — | **퍼즈** · 거침 |
-| Post-punk | Joy Division | Unknown Pleasures | **베이스가 선율** · 클린 기타 |
-| New Wave | Talking Heads · Blondie | (확인 필요) | 신스 리드 · 클린 기타 |
-| Gothic Rock | The Cure · Bauhaus | (확인 필요) | 패드 · 코러스 클린 기타 |
-| Screamo | — | — | 하이게인 · 건반 없음 |
-
-### Psychedelic · Krautrock
-
-다섯 프리셋이 **오르간 + 크런치 기타 + 핑거 베이스**를 공유합니다.
-갈리는 것은 템포와 드럼 골격입니다.
-
-| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
-|---|---|---|---|
-| **Psychedelic Rock** | Jefferson Airplane · The 13th Floor Elevators | Surrealistic Pillow (확인 필요) | 오르간 · 크런치 기타 · 115 BPM · analog 톰 |
-| Acid Rock | Blue Cheer · Iron Butterfly | (확인 필요) | 같은 편성 · 120 BPM · 더 무거운 쪽 |
-| **Krautrock** | Can · Faust | Tago Mago (확인 필요) | 오르간 · **synth 톰** · 135 BPM |
-| **Motorik** | Neu! · Kraftwerk(초기) | Neu! (확인 필요) | **tight 킥 + crack 스네어** · 142 BPM · 기계적 4/4 |
-| Space Rock | Hawkwind · Pink Floyd(초기) | (확인 필요) | 오르간 · synth 톰 · **105 BPM**(가장 느림) |
-
-> **Motorik** 은 리듬 형식의 이름입니다 — «앞으로만 가는» 8분 4/4 골격이
-> 곧 장르입니다. 그래서 킥·스네어를 가장 단단한 `tight`/`crack` 으로 잡았습니다.
-> 사이키델릭 계열에는 **페이저**가 정체성인데, 이번에 `phase` 기타 엔진을
-> 만들었으므로 프리셋에 반영할 수 있습니다(아직 안 했습니다).
+| Heavy Metal | Judas Priest · Black Sabbath · Ozzy Osbourne · Dio | British Steel | 크런치 · **곧은 8분**(갤럽 아님) · 건반 없음(인트로 신스 1곡) |
+| NWOBHM | Iron Maiden · Saxon · Diamond Head | The Number of the Beast | **갤럽** · 트윈 리드 · 달리는 베이스 |
+| Thrash Metal | Metallica · Slayer · Megadeth | Master of Puppets | **팜뮤트** 다운피킹 · 스키 비트 · 드라이 |
+| Death Metal | Death · Cannibal Corpse · Obituary | Symbolic | 블래스트 ↔ 미드템포 · **심벌이 박을 끈다** · 극단 하이게인 |
+| Black Metal | Mayhem · Darkthrone · Emperor · Burzum | (확인 필요) | 트레몰로 기타 · 저역 없음 · **신스 패드 2/4곡** |
+| Doom | Black Sabbath · Candlemass · Saint Vitus | Master of Reality | 느림 · 두꺼운 **퍼즈** · 긴 감쇠 · 트라이톤 |
+| Sludge | Melvins · Crowbar · Eyehategod · Mastodon | (확인 필요) | **하프타임** · 퍼즈 · 피드백 |
+| Stoner Rock | Kyuss · Queens of the Stone Age · Monster Magnet | Blues for the Red Sun | **퍼즈** 리프 · 베이스 유니즌 · 건반 없음 |
+| Stoner | Sleep · Electric Wizard | Dopesmoker | **하프타임 체감 50~65** · 극단 퍼즈 · 건반 없음 |
+| Power Metal | Helloween · Stratovarius · DragonForce | Keeper of the Seven Keys | 16분 더블킥 · 고음 클린 찬가 · 건반 2/4곡(북유럽·영국형) |
+| Nu Metal | Korn · Limp Bizkit · Linkin Park · Slipknot | Follow the Leader | 싱코페 킥 · 팜뮤트 · **스크래치·신스 텍스처** |
+| Metalcore | Killswitch Engage · Bullet for My Valentine | Alive or Just Breathing | 빠른 절 ↔ 브레이크다운 · 타이트 |
+| Symphonic Metal | Nightwish · Within Temptation · Rhapsody | (확인 필요) | **오케스트라·합창 4/4곡** · 하이게인 받침 |
 
 ### Punk
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Punk** | Ramones · Sex Pistols · The Clash | Ramones (1976) | **크런치 기타 · 픽 베이스 · 건반 없음** · 180 BPM · **crack 스네어** |
-| Punk Rock | The Damned · Buzzcocks | (확인 필요) | 같은 편성 · 180 BPM · body 스네어(조금 더 무딤) |
-| **Hardcore Punk** | Black Flag · Minor Threat | Damaged (확인 필요) | **하이게인 기타** · 200 BPM |
-| **D-beat** | Discharge | Hear Nothing See Nothing Say Nothing (확인 필요) | 하이게인 · 200 BPM · 이름이 곧 드럼 패턴 |
-| **Powerviolence** | Man Is the Bastard · Infest | (확인 필요) | 하이게인 · **250 BPM**(이 라이브러리에서 가장 빠름) |
-| Pop Punk | Green Day · blink-182 | Dookie (확인 필요) | **크런치**(하이게인 아님) · 픽 베이스 · 170 BPM |
-| Proto-punk | The Stooges · MC5 · The Velvet Underground | Fun House (확인 필요) | 오르간 · 크런치 · 픽 베이스 · 150 BPM |
+| Punk | Ramones · Sex Pistols · The Clash | Ramones (1976) | 크런치 · 픽 베이스 · **8분 다운스트로크** · 건반 없음 |
+| Punk Rock | The Damned · Buzzcocks | (확인 필요) | 크런치 · **선율 베이스 리프** · 톰 |
+| Pop Punk | Green Day · blink-182 · Avril Lavigne · Olivia Rodrigo | Dookie (확인 필요) | 크런치~하이게인 · **신스 3/4곡** · 핸드클랩 |
+| Hardcore Punk | Bad Brains · Minor Threat · Black Flag | Damaged (확인 필요) | 하이게인 버즈소 · **스캥크 비트** |
+| D-beat | Discharge · Anti Cimex · Disfear | Hear Nothing See Nothing Say Nothing (확인 필요) | 하이게인 · 이름이 곧 드럼 패턴 |
+| Crust | Amebix · Antisect · Doom · Nausea | (확인 필요) | **퍼즈 베이스 전면** · 톰 부족 리듬 · 원래 미드템포 |
+| Powerviolence | Siege · Infest · Spazz | (확인 필요) | 블래스트 ↔ 슬러지 하프타임 급전환 |
 
-> Punk 하위분기는 `off:['keys']` 로 건반을 꺼 둡니다 — 펑크에 건반이 없는 것은
-> 의도입니다. **Proto-punk 만 예외**로 오르간을 직접 지정합니다
-> (Stooges·Velvet Underground 에는 오르간이 있었습니다).
->
-> D-beat 은 Discharge 의 드럼 패턴에서 이름을 딴 장르입니다 —
-> **밴드 이름이 곧 리듬형이 된** 드문 경우입니다.
-
-### 편성과 어긋나는 것 — Metal (고치지 않고 기록만)
-
-| 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
-|---|---|---|
-| **Death Metal** | `chat`·`ohat` 이 **둘 다 완전히 비어 있음** | 심벌이 하나도 안 울립니다. 블래스트 비트는 라이드·차이나가 박자를 끌고 가는 음악인데 지금은 킥·스네어뿐입니다. `kit` 에 `chat:'metal'` 이 지정돼 있는데 **패턴이 비어** 소리가 안 납니다 |
-
-### Hard Rock · 그 밖
-
-| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
-|---|---|---|---|
-| **Rock** | — ※1 | — | 오르간 · 하이게인 · 픽 베이스 · 130 BPM · **wood 톰** |
-| Glam Rock | T. Rex · Slade · Sweet | Electric Warrior (확인 필요) | 오르간 · 하이게인 · **spread 클랩**(스탠딩 박수) · 135 BPM |
-| **Southern Rock** | Lynyrd Skynyrd · The Allman Brothers Band | (확인 필요) | 오르간 · 하이게인 · **swing 30**(셔플) · 120 BPM |
-| Country Rock | The Byrds · Eagles | Sweetheart of the Rodeo (확인 필요) | 120 BPM · analog 톰 |
-| **Stoner** | Kyuss · Sleep · Fu Manchu | Blues for the Red Sun (확인 필요) | 오르간 · **퍼즈 기타** · 핑거 베이스 · 100 BPM |
-| Stoner Rock | Queens of the Stone Age · Monster Magnet | (확인 필요) | Stoner 와 값이 완전히 같습니다 — 이름만 둘입니다 |
-
-> ※1 «Rock» 은 특정 씬이 아니라 **계열의 기본값**으로 둔 프리셋입니다.
-> 대표를 세우는 것이 맞지 않아 비웁니다.
->
-> Southern Rock 의 **swing 30** 이 이 계열을 다른 하드록과 가르는 값입니다 —
-> 셔플이 빠지면 그냥 하드록이 됩니다.
-> Stoner 와 Stoner Rock 은 값이 완전히 같습니다 — 이름만 둘입니다.
+> Punk 하위분기는 `off:['keys']` 로 건반을 꺼 둡니다. **Pop Punk 는 예외** — 대표곡 4곡 중
+> 3곡에 키보드·신시사이저 크레딧이 있어 켰습니다. D-beat 은 Discharge 의 드럼 패턴에서
+> 이름을 딴 장르입니다 — **밴드 이름이 곧 리듬형이 된** 드문 경우입니다.
 
 ### Post-punk 계보
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Dance-punk** | LCD Soundsystem · The Rapture · !!! | (확인 필요) | **리드 신스 + 클린 기타** · 핑거 베이스 · **wood 킥** · 130 BPM |
-| **Post-punk Revival** | Interpol · The Strokes · Franz Ferdinand | Turn On the Bright Lights (확인 필요) | 오르간 · **크런치 기타 + 픽 베이스** · tight 킥/스네어 · 135 BPM |
-| **Emo** | Sunny Day Real Estate · American Football · My Chemical Romance | (확인 필요) | **패드** · 크런치 기타 · 픽 베이스 · 145 BPM |
+| Post-punk | Joy Division · Gang of Four | Unknown Pleasures | **베이스가 선율** · 클린·12현 기타 · 건반 없음 |
+| Gothic Rock | Bauhaus · The Cure · Siouxsie and the Banshees · The Sisters of Mercy | (확인 필요) | **플랜저·에코 클린 기타** · 16분 햇 반박 체감 · 탐 |
+| New Wave | Blondie · Talking Heads · Devo · The Cars | (확인 필요) | 신스 리프 4/5곡 · 클린 기타 · 장조 |
+| Dance-punk | LCD Soundsystem · The Rapture | (확인 필요) | 디스코 하이햇 · **카우벨·클랩** · 선율 베이스 |
+| Post-punk Revival | Interpol · Franz Ferdinand · The Killers · Arctic Monkeys | Turn On the Bright Lights (확인 필요) | 크런치+클린 맞물림 · 근음 8분 베이스 · 건반 없음 |
+| Emo | Sunny Day Real Estate · Jimmy Eat World · My Chemical Romance | (확인 필요) | 클린 아르페지오 ↔ 디스토션 · 배경 패드 |
+| Screamo | Portraits of Past · Thursday · Hawthorne Heights | — | 하이게인 · 노래 ↔ 절규 · 건반 없음 |
 
-> 댄스펑크는 이름 그대로 **춤출 수 있는 포스트펑크**입니다 — 그래서 혼자
-> `lead` 신스와 `clean` 기타를 쓰고 킥도 `wood` 로 가볍습니다.
-> 나머지 둘은 크런치 기타 + 픽 베이스라는 록 편성을 지킵니다.
+### Alternative
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Grunge | Nirvana · Soundgarden · Pearl Jam · Alice in Chains | Nevermind | 퍼즈 기타 · 조용함↔폭발 · **건반 없음** · 드럼 룸 큼 |
+| Alternative Rock | R.E.M. · Radiohead · U2 | The Bends | 크런치 · 만돌린·아르페지오 · 건반 옅게 |
+| Britpop | Oasis · Blur · Pulp | (What's the Story) Morning Glory? | 밝은 크런치 + 어쿠스틱 · **건반 4/4곡** · 탬버린 · 장조 |
+| Shoegaze | My Bloody Valentine · Ride · Slowdive | Loveless | **퍼즈 오버더브**·글라이드 기타 · 묻힌 보컬 · 드럼 묻힘 |
+| Dream Pop | Cocteau Twins · Mazzy Star · Beach House | Heaven or Las Vegas | 클린 리버브 아르페지오 · **오르간·드럼머신** · 반박 체감 · 장조 |
+| Noise Rock | Sonic Youth · The Jesus Lizard | Daydream Nation | 불협 튜닝·피드백 · **드라이한 드럼** · 건반 없음 |
+| Indie Rock | Pavement · The Strokes · Yeah Yeah Yeahs · Modest Mouse | Slanted and Enchanted | 맞물린 얇은 기타 · 타이트 8분 · 장조 · 건반 없음(90년대) |
+| Lo-fi Indie | Daniel Johnston · Guided by Voices · Sebadoh | Bee Thousand | 대역 좁음 · 코드 오르간·피아노 · 저역 얇음 · 장조 훅 |
+| Slacker Rock | Dinosaur Jr. · Beck · Mac DeMarco · Courtney Barnett | Salad Days | 코러스·워블 클린 기타 · **레이드백**(셔플 아님) · 건반 없음 |

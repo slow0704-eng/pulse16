@@ -240,11 +240,41 @@ for (const f of refFiles) {
   }
 }
 
+/* ── 대표곡 — `| 프리셋 | 곡 | 아티스트 | 연도 | 구분 | BPM | 조성 | 출처 |` ──
+   2026-09-16 부터 계열 파일에 붙인다. 웹에서 곡이 실재하고 출처가 그 장르로
+   분류한 것만 적는 표라, 앨범 칸과 달리 «확인 필요» 가 없다.
+   출처 칸의 첫 URL 을 들고 간다 — 화면이 링크로 건다. */
+const TRACK_HEAD = /^\|\s*프리셋\s*\|\s*곡\s*\|\s*아티스트\s*\|/;
+let trackRows = 0;
+for (const f of refFiles) {
+  let on = false;
+  for (const raw of readFileSync(join(abs('genres'), f), 'utf8').split('\n')) {
+    const l = raw.trim();
+    if (TRACK_HEAD.test(l)) { on = true; continue; }
+    if (!on) continue;
+    if (/^\|[\s|:-]+\|$/.test(l)) continue;
+    if (!l.startsWith('|')) { on = false; continue; }
+    const [pc = '', title = '', artist = '', year = '', kind = '', bpm = '', key = '', srcCell = '']
+      = l.split('|').slice(1, -1).map(s => s.trim());
+    const n = unmark(pc);
+    if (!PRESET_NAMES.has(n)) { refMiss.push(`${f} (대표곡) — ${n}`); continue; }
+    trackRows++;
+    const e = REF[n] ||= { a: [], al: [], at: '', no: [], src: [] };
+    e.tr ||= [];
+    const url = (/\((https?:\/\/[^)\s]+)\)/.exec(srcCell) || [])[1] || '';
+    const val = s => isBlank(s) ? '' : unmark(s);
+    if (!e.tr.some(t => nameKey(t[0]) === nameKey(title) && nameKey(t[1]) === nameKey(artist)))
+      e.tr.push([unmark(title), unmark(artist), val(year), val(kind), val(bpm), val(key), url]);
+    addUniq(e.src, f);
+  }
+}
+
 const refNames = Object.keys(REF);
 const refNoArtist = refNames.filter(n => !REF[n].a.length);
 const refAbsent = [...PRESET_NAMES].filter(n => !REF[n]);
 console.log(`표 ${refRows}줄 (파일 ${refFiles.length}개) · 프리셋 이름 ${PRESET_NAMES.size}종`);
 console.log(`레퍼런스가 붙은 프리셋 ${refNames.length}종 · 그중 아티스트 없음 ${refNoArtist.length}종`);
+console.log(`대표곡 ${trackRows}줄 · 대표곡이 붙은 프리셋 ${refNames.filter(n => REF[n].tr).length}종`);
 if (refAbsent.length)
   console.log(`${WARN} 표에 없는 프리셋 ${refAbsent.length}종 — ${refAbsent.join(' · ')}`);
 if (refMiss.length) {
@@ -256,7 +286,9 @@ const rJs = `/* 생성물 — tools/build-refdata.mjs 가 genres/*.md 의 «레�
    손으로 고치지 마십시오. 원본 표를 고친 뒤 다시 돌리십시오.
 
    한 항목: { a: 대표 아티스트[], al: [앨범, 확인필요?][], at: 뽑아낸 속성,
-             no: 각주·이름을 세우지 않은 이유[], src: 출처 파일[] }
+             no: 각주·이름을 세우지 않은 이유[], src: 출처 파일[],
+             tr: 대표곡 [곡, 아티스트, 연도, 구분, BPM, 조성, 출처 URL][] — 있을 때만 }
+   대표곡은 웹에서 실재·장르 분류를 확인한 것만 들어옵니다(계열 파일의 «대표곡» 표).
 
    ⚠ 앨범명은 작성자 기억에 의존한 미검증 값입니다(genres/00-reference.md).
      곡 단위 목록은 원본에 없습니다 — 여기에도 없습니다.

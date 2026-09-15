@@ -585,7 +585,7 @@ const MELODY_KIT_CAT = {
   X:['pop_aabb'],
 };
 const MELODY_KIT = {
-  'Metal'                  :[],            // 메탈은 건반을 안 씁니다
+  'Metal'                  :[],            // 메탈은 대체로 건반을 안 씁니다 — Black·Power·Symphonic 은 MELODY_KIT_PRESET 이 덮는다
   'Punk'                   :[],
   'Hard Rock'              :['rock_aaba','ant_aaba','blues_aaba','pwr_aaab'],
   'Alternative'            :['rock_aabb','amb_aaba','bal_aaba'],
@@ -850,55 +850,66 @@ const MELODY_KIT_PRESET = {
   'Synthwave'             :['chip_aabb','chip_abab','chip_aaab'],
   /* 6) 퓨처펑크 — 잘라 붙인 디스코. 신스웨이브와 밀도는 같고 윤곽이 다르다 */
   'Future Funk'           :['dis_abab','dis_aabb','dis_aaab'],
-  /* A. Rock 계열 29종 — 2026-09-15 배치 A7 (genres/profiles/01-A-rock.json)
-     Metal 13 · Punk 7 은 선율 없음이라 여기 없다. 드럼과 편성은 이미
-     개별화돼 있었고(드럼 47/49 · 편성 49/49) 선율만 하위분기에 묶여 있었다.
-     근거는 genres/01-rock.md 의 장르별 분석표와 실제 kit 이다. */
-  /* 같은 것을 오래 민다 */
+  /* A. Rock 계열 32종 — 2026-09-15 배치 A7 → 2026-09-16 대표곡 교정
+     (genres/profiles/01-A-rock.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/01-rock.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
+  /* Metal 10 · Punk 7 은 선율 없음이라 여기 없다. 아래 Metal 셋은 대표곡에 건반이
+     실제로 있어서(Black 2/4 · Power 2/4 · Symphonic 4/4) 하위분기의 빈 배열을 덮는다. */
+  /* 필인 없는 8분 킥 위 한 코드 드론 — 같은 것을 오래 민다 */
   'Motorik'                 :['ant_abab','ant_aabb','amb_aaba'],
   'Krautrock'               :['ant_abab','ant_aabb','amb_aaba'],
-  /* 모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다 */
-  'Psychedelic Rock'        :['rock_abab','blues_aabb','rock_aabb'],
+  /* 좁은 음역의 반복 보컬 + 곡마다 이국적 음색 하나(시타르·오르간) */
+  'Psychedelic Rock'        :['rock_abab','wor_aaba','rock_aabb'],
+  /* 퍼즈 기타 리프가 주인공, 블루스 음계 */
   'Acid Rock'               :['rock_abab','blues_aabb','rock_aabb'],
-  /* 건반이 패드다 */
+  /* 보컬은 약하고 음향 층이 주인공 */
   'Space Rock'              :['amb_aaba','amb_aabb','bal_aaba'],
-  /* 슬라이드 기타에 스윙 30 */
+  /* 트윈·슬라이드 기타와 피아노, 블루스 어휘 */
   'Southern Rock'           :['blues_aaba','blues_aabb','rootbl_aabb'],
-  /* 앤섬 스톰프 */
+  /* 기타 리프 위 크게 벌어지는 훅 */
   'Rock'                    :['rkant_aabb','rkant_abab'],
   'Glam Rock'               :['rkant_aabb','rkant_abab'],
-  /* 스윙 34 에 업라이트 베이스, 7화음 */
+  /* 피아노 5/5 · 12마디 블루스 */
   'Rock & Roll'             :['blues_aaba','rootbl_aaba','root_aaba'],
   /* 록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다 */
   'Surf Rock'               :['cin_aabb','cin_aaba','rock_aabb'],
-  /* 거칠고 단순하다 */
+  /* 두세 코드를 최면적으로 되풀이 */
   'Garage Rock'             :['rock_aaba','rock_aabb','blues_abab'],
   'Proto-punk'              :['rock_aaba','rock_aabb','blues_abab'],
-  /* **베이스가 선율을 맡는다** */
+  /* **베이스가 선율을 맡는다** — 곡 문서 3곳·고딕록 장르 문서 */
   'Post-punk'               :['ant_abab','ant_aaba','amb_aabb'],
   'Gothic Rock'             :['ant_abab','ant_aaba','amb_aabb'],
-  'Post-punk Revival'       :['ant_abab','ant_aaba','amb_aabb'],
-  /* 댄스 그루브에 와우 기타 */
+  /* 보컬과 맞물린 기타 두 대 — 베이스는 근음 8분이라 원조와 떼어 냈다 */
+  'Post-punk Revival'       :['rock_abab','rock_aabb'],
+  /* 디스코 하이햇·카우벨·클랩 위 선율 베이스와 싱코페이션 */
   'Dance-punk'              :['funk_abab','funk_aabb','funk_aaab'],
-  'New Wave'                :['funk_abab','funk_aabb','funk_aaab'],
-  /* 기타 아르페지오가 선율을 대신한다 */
+  /* 신스 리프 4/5 · 장조 우세 */
+  'New Wave'                :['pop_abab','funk_abab'],
+  /* 음역 꼭대기에서 긴장하는 보컬, 클린 아르페지오 ↔ 디스토션 */
   'Emo'                     :['bal_aaba','bal_aabb','bal_abab'],
   'Screamo'                 :['bal_aaba','bal_aabb','bal_abab'],
-  /* 문서 그대로 **기타가 패드처럼 기능한다** */
+  /* 기타 텍스처가 주인공, 보컬은 한 겹으로 묻힌다 */
   'Shoegaze'                :['amb_aaba','amb_aabb','bal_aaba'],
   'Dream Pop'               :['amb_aaba','amb_aabb','bal_aaba'],
-  /* 문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다 */
+  /* 4곡 모두 건반 · 장조 찬가형 후렴 */
   'Britpop'                 :['pop_aabb','pop_aaba','pop_abab'],
-  /* 건반이 EP 다 */
-  'Lo-fi Indie'             :['jazbal_aaba','jazbal_abab'],
-  'Slacker Rock'            :['jazbal_aaba','jazbal_abab'],
-  /* 문서가 «우산 개념에 가깝다» 고 적은 무리다 */
+  /* 장조 파워팝·포크 훅 */
+  'Lo-fi Indie'             :['pop_aabb','pop_aaba'],
+  /* 박 뒤에 앉아 늘어지며 내려오는 무표정 보컬 */
+  'Slacker Rock'            :['rock_aaba','blues_aabb'],
+  /* 조용한 벌스 → 터지는 코러스, 표준 록 선율 */
   'Alternative Rock'        :['rock_aabb','rock_aaba','rock_abab'],
   'Grunge'                  :['rock_aabb','rock_aaba','rock_abab'],
   'Indie Rock'              :['rock_aabb','rock_aaba','rock_abab'],
   'Noise Rock'              :['rock_aabb','rock_aaba','rock_abab'],
-  /* 페달 스틸과 플랫와운드 베이스 */
+  /* 페달 스틸·밴조 · 전곡 장조 · 화음 보컬 */
   'Country Rock'            :['rootbl_aabb','rootbl_aaba','root_aabb'],
+  /* 트레몰로 기타의 긴 음 + 신스의 느린 모티프(Emperor·Burzum) */
+  'Black Metal'             :['amb_aaab','amb_aaba'],
+  /* 고음 클린 보컬의 상행 찬가형 후렴 */
+  'Power Metal'             :['rkant_aabb','cin_aabb'],
+  /* 오케스트라·합창과 보컬 선율이 같은 비중 */
+  'Symphonic Metal'         :['cin_aabb','cinbal_aabb','cin_abab'],
   /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
      드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 선율 풀뿐이다.
      근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
@@ -1588,55 +1599,49 @@ const RIFF_KIT_PRESET = {
   'Lounge'                :['jazz_gtr_swing','jazz_gtr_comp'],
   'Synthwave'             :['edm_arp','rock_alt'],
   'Future Funk'           :['funk_cut','funk_groove'],    // 잘라 붙인 디스코 커팅
-  /* A. Rock 계열 29종 — 2026-09-15 배치 A7 (genres/profiles/01-A-rock.json)
-     Metal 13 · Punk 7 은 선율 없음이라 여기 없다. 드럼과 편성은 이미
-     개별화돼 있었고(드럼 47/49 · 편성 49/49) 선율만 하위분기에 묶여 있었다.
-     근거는 genres/01-rock.md 의 장르별 분석표와 실제 kit 이다. */
-  /* 같은 것을 오래 민다 */
+  /* A. Rock 계열 34종 — 2026-09-15 배치 A7 → 2026-09-16 대표곡 교정
+     (genres/profiles/01-A-rock.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/01-rock.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
   'Motorik'                 :['rock_alt','rock_drive'],
   'Krautrock'               :['rock_alt','rock_drive'],
-  /* 모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다 */
   'Psychedelic Rock'        :['rock_alt','rock_power'],
   'Acid Rock'               :['rock_alt','rock_power'],
-  /* 건반이 패드다 */
-  'Space Rock'              :['arp_folk','rock_alt'],
-  /* 슬라이드 기타에 스윙 30 */
+  /* 반복 리프(오스티나토)가 뼈대 */
+  'Space Rock'              :['rock_alt','rock_drive'],
   'Southern Rock'           :['arp_country','rock_drive'],
-  /* 앤섬 스톰프 */
   'Rock'                    :['rock_power','rock_drive'],
   'Glam Rock'               :['rock_power','rock_drive'],
-  /* 스윙 34 에 업라이트 베이스, 7화음 */
   'Rock & Roll'             :['rock_drive','arp_country'],
-  /* 록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다 */
   'Surf Rock'               :['rock_drive','arp_swing'],
-  /* 거칠고 단순하다 */
   'Garage Rock'             :['rock_drive','rock_power'],
   'Proto-punk'              :['rock_drive','rock_power'],
-  /* **베이스가 선율을 맡는다** */
   'Post-punk'               :['arp_folk','rock_alt'],
   'Gothic Rock'             :['arp_folk','rock_alt'],
-  'Post-punk Revival'       :['arp_folk','rock_alt'],
-  /* 댄스 그루브에 와우 기타 */
+  /* 맞물린 기타 두 대의 리프 */
+  'Post-punk Revival'       :['rock_drive','rock_alt'],
   'Dance-punk'              :['funk_cut','rock_alt'],
-  'New Wave'                :['funk_cut','rock_alt'],
-  /* 기타 아르페지오가 선율을 대신한다 */
+  /* 짧은 뮤트 컷 */
+  'New Wave'                :['funk_cut','rock_drive'],
   'Emo'                     :['arp_folk','rock_drive'],
   'Screamo'                 :['arp_folk','rock_drive'],
-  /* 문서 그대로 **기타가 패드처럼 기능한다** */
   'Shoegaze'                :['rock_power','arp_folk'],
-  'Dream Pop'               :['rock_power','arp_folk'],
-  /* 문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다 */
+  /* 반짝이는 기타 아르페지오 */
+  'Dream Pop'               :['arp_folk','rock_power'],
   'Britpop'                 :['rock_alt','arp_folk'],
-  /* 건반이 EP 다 */
-  'Lo-fi Indie'             :['arp_folk','arp_swing'],
-  'Slacker Rock'            :['arp_folk','arp_swing'],
-  /* 문서가 «우산 개념에 가깝다» 고 적은 무리다 */
+  /* 파워팝 코드 스트럼 */
+  'Lo-fi Indie'             :['rock_alt','arp_folk'],
+  'Slacker Rock'            :['arp_folk','rock_alt'],
   'Alternative Rock'        :['rock_power','rock_alt'],
   'Grunge'                  :['rock_power','rock_alt'],
   'Indie Rock'              :['rock_power','rock_alt'],
   'Noise Rock'              :['rock_power','rock_alt'],
-  /* 페달 스틸과 플랫와운드 베이스 */
   'Country Rock'            :['arp_country','rock_drive'],
+  /* Metal — 갤럽은 Heavy Metal 이 아니라 NWOBHM(Iron Maiden)의 것이었다 */
+  'Heavy Metal'             :['rock_power','metal_riff'],
+  'NWOBHM'                  :['metal_gallop','metal_riff'],
+  'Black Metal'             :['metal_riff','metal_chug'],
+  'Power Metal'             :['metal_gallop','rock_power'],
+  'Symphonic Metal'         :['rock_power','metal_riff'],
   /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
      드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 리프 풀뿐이다.
      근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
@@ -2283,55 +2288,48 @@ const BLINE_KIT_PRESET = {
   'Lounge'                :['bwal_abab','bwal_aabb'],
   'Synthwave'             :['bdis_abab','bhou_aabb'],  // 80년대 옥타브
   'Future Funk'           :['bdis_aabb','bfun_abab'],
-  /* A. Rock 계열 29종 — 2026-09-15 배치 A7 (genres/profiles/01-A-rock.json)
-     Metal 13 · Punk 7 은 선율 없음이라 여기 없다. 드럼과 편성은 이미
-     개별화돼 있었고(드럼 47/49 · 편성 49/49) 선율만 하위분기에 묶여 있었다.
-     근거는 genres/01-rock.md 의 장르별 분석표와 실제 kit 이다. */
-  /* 같은 것을 오래 민다 */
+  /* A. Rock 계열 34종 — 2026-09-15 배치 A7 → 2026-09-16 대표곡 교정
+     (genres/profiles/01-A-rock.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/01-rock.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
   'Motorik'                 :['brock_abab','brock_aaba'],
   'Krautrock'               :['brock_abab','brock_aaba'],
-  /* 모달 즉흥이 몸이라 모토릭과 달리 계속 움직인다 */
   'Psychedelic Rock'        :['brock_aaba','brock_abab'],
   'Acid Rock'               :['brock_aaba','brock_abab'],
-  /* 건반이 패드다 */
-  'Space Rock'              :['brock_abab','breg_aaba'],
-  /* 슬라이드 기타에 스윙 30 */
+  /* 긴 음이 아니라 킥에 붙은 반복 리프 */
+  'Space Rock'              :['brock_aaba','brock_abab'],
   'Southern Rock'           :['bcou_aabb','bwal_aabb'],
-  /* 앤섬 스톰프 */
   'Rock'                    :['brock_aaba','bmet_aabb'],
   'Glam Rock'               :['brock_aaba','bmet_aabb'],
-  /* 스윙 34 에 업라이트 베이스, 7화음 */
   'Rock & Roll'             :['bwal_aabb','bcou_aabb'],
-  /* 록 계열에서 거의 유일하게 **기타가 선율을 맡는** 장르다 */
   'Surf Rock'               :['brock_aabb','bcou_aaba'],
-  /* 거칠고 단순하다 */
   'Garage Rock'             :['brock_aabb','brock_aaba'],
   'Proto-punk'              :['brock_aabb','brock_aaba'],
-  /* **베이스가 선율을 맡는다** */
   'Post-punk'               :['brock_abab','bdis_abab'],
   'Gothic Rock'             :['brock_abab','bdis_abab'],
-  'Post-punk Revival'       :['brock_abab','bdis_abab'],
-  /* 댄스 그루브에 와우 기타 */
+  /* 근음 8분 — 선율 베이스는 Interpol 1곡뿐 */
+  'Post-punk Revival'       :['brock_aabb','brock_aaba'],
   'Dance-punk'              :['bdis_abab','bfun_abab'],
-  'New Wave'                :['bdis_abab','bfun_abab'],
-  /* 기타 아르페지오가 선율을 대신한다 */
+  /* 근음 8분 페달, Heart of Glass 는 디스코 옥타브 */
+  'New Wave'                :['brock_aabb','bdis_aabb'],
   'Emo'                     :['brock_abab','brock_aaba'],
   'Screamo'                 :['brock_abab','brock_aaba'],
-  /* 문서 그대로 **기타가 패드처럼 기능한다** */
   'Shoegaze'                :['brock_aabb','breg_aaba'],
   'Dream Pop'               :['brock_aabb','breg_aaba'],
-  /* 문서가 «60년대 팝 구조의 재현» 이라 적은 그대로다 */
   'Britpop'                 :['brock_aabb','bdis_aabb'],
-  /* 건반이 EP 다 */
-  'Lo-fi Indie'             :['bwal_aaba','brock_aabb'],
-  'Slacker Rock'            :['bwal_aaba','brock_aabb'],
-  /* 문서가 «우산 개념에 가깝다» 고 적은 무리다 */
+  /* 베이스가 약하거나 없다(초기 Pavement) */
+  'Lo-fi Indie'             :['brock_aaba'],
+  /* 펑키한 선율 베이스(Salad Days) */
+  'Slacker Rock'            :['bfun_aabb','brock_abab'],
   'Alternative Rock'        :['brock_aabb','bmet_aaab'],
   'Grunge'                  :['brock_aabb','bmet_aaab'],
   'Indie Rock'              :['brock_aabb','bmet_aaab'],
   'Noise Rock'              :['brock_aabb','bmet_aaab'],
-  /* 페달 스틸과 플랫와운드 베이스 */
   'Country Rock'            :['bcou_aabb','brock_aabb'],
+  'Heavy Metal'             :['brock_aabb','bmet_aaab'],
+  'NWOBHM'                  :['bmet_aabb'],
+  'Black Metal'             :['bmet_aaab'],
+  'Power Metal'             :['bmet_aabb','brock_aabb'],
+  'Symphonic Metal'         :['brock_aabb','bmet_aaab'],
   /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
      드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 베이스 풀뿐이다.
      근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */

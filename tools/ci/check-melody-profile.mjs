@@ -510,8 +510,10 @@ const covered = new Set(profiles.map(x => x.p.preset));
    비었나» 를 다시 묻고, 그 답을 모르면 채워 넣게 된다. 그 순간 그것이
    지어낸 값이 된다.
 
-   1. 선율 없음 — Metal 13 · Punk 7. 건반을 안 쓰는 것이 그 장르의 성질이라
+   1. 선율 없음 — Metal 10 · Punk 7. 건반을 안 쓰는 것이 그 장르의 성질이라
       melodyPoolFor() 가 빈 배열을 돌려준다. 빈 것이 곧 결론이다.
+      (2026-09-16 — Black · Power · Symphonic Metal 은 대표곡에 건반이 있어서
+      프리셋 단위 풀을 받았다. 13 → 10. 수는 여기서 세지 않고 live 에서 센다.)
    2. 계열 X «예제» — Play Along · Casio Cells. 이 둘은 장르가 아니다.
       Tone.js 의 샘플 로더가 도는지 보여 주려고 둔 데모다(12-example.js —
       drum-samples/CR78/* · casio/* 를 실제로 내려받는다). UI 에서 붉은 칩으로
