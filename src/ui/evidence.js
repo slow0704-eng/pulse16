@@ -9,12 +9,15 @@
    들어갈 문법 자리가 없고, tools/ci/check-melody-profile.mjs 의 P2 가
    그 형식을 검사합니다.
 
-   그래서 이 패널은 두 가지를 나란히 보여 줍니다.
-     위  — 프로파일에서 **뽑아낸 수치** (밀도·도약·음역·윤곽·표기 …)
-     아래 — 그 장르로 태그된 **실제 빌보드 1위 곡** (billboard/, 출처 위키백과)
+   그래서 이 패널은 세 가지를 나란히 보여 줍니다.
+     위   — 프로파일에서 **뽑아낸 수치** (밀도·도약·음역·윤곽·표기 …)
+     가운데 — genres/*.md 의 **대표 아티스트·앨범** (GENRE_REF, 편성의 판단 근거)
+     아래  — 그 장르로 태그된 **실제 빌보드 1위 곡** (billboard/, 출처 위키백과)
 
-   둘은 성격이 다릅니다. 아래 목록은 «무엇이 실제로 팔렸나» 이지
-   «이 프리셋이 베낀 곡» 이 아닙니다 — 패널에도 그렇게 적어 둡니다. */
+   셋은 성격이 다릅니다. 가운데는 «이 장르를 대표하는 사람» 이고 앨범명은
+   미검증입니다. 아래 목록은 «무엇이 실제로 팔렸나» 이지 «이 프리셋이 베낀 곡»
+   이 아닙니다 — 패널에도 그렇게 적어 둡니다. 가운데 표에는 곡 목록이 없으므로
+   곡을 지어내 채우지 않습니다. */
 'use strict';
 
 /* ═══ §15 근거 패널 ═══════════════════════════════════════════ */
@@ -45,6 +48,13 @@ function evidenceCharts(genreName){
                            .sort((a,b) => (b[7]||0)-(a[7]||0) || a[0]-b[0]);
   return { hot: pick(BILLBOARD.hot100), bb: pick(BILLBOARD.bb200) };
 }
+
+/** genres/*.md 의 레퍼런스 — 대표 아티스트·앨범·뽑아낸 속성. 표에 없으면 null */
+function evidenceRef(name){
+  return (typeof GENRE_REF !== 'undefined' && GENRE_REF[name]) || null;
+}
+/* 원본 표의 **굵게** 를 살린다. 이스케이프한 뒤에 바꾸므로 태그가 새지 않는다 */
+const evBold = s => evEsc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 
 function evidenceHtml(name){
   const L = (typeof LIB !== 'undefined' && LIB[name]) || null;
@@ -97,6 +107,25 @@ function evidenceHtml(name){
            + ` 배치 작업이 이 프리셋에 닿으면 여기에 수치가 생깁니다.</p>`);
   }
 
+  /* ── 대표 아티스트·앨범 (genres/*.md) ── */
+  const R = evidenceRef(name);
+  out.push(`<h3>이 장르의 대표 <i>(genres/ 레퍼런스)</i></h3>`);
+  if(R){
+    out.push(`<p class="ev-warn">편성을 정할 때 쓴 <b>판단 근거</b>입니다. 아티스트는 대체로 확실하지만`
+           + ` 앨범명은 기억에 의존해 적은 값이라 <b>미검증</b>이고, <b>?</b> 는 문서가 «확인 필요» 로 표시한 것입니다.`
+           + ` 이 표에는 곡 단위 목록이 없습니다 — 곡을 지어내 채우지 않습니다.</p>`);
+    out.push(`<dl class="ev">`);
+    out.push(`<dt>아티스트</dt><dd>${R.a.length ? R.a.map(evEsc).join(' · ') : '<i>표에 적힌 이름 없음</i>'}</dd>`);
+    if(R.al.length)
+      out.push(`<dt>앨범</dt><dd>${R.al.map(([t,u]) => evEsc(t) + (u ? ' <i>?</i>' : '')).join(' · ')}</dd>`);
+    if(R.at) out.push(`<dt>뽑아낸 것</dt><dd>${evBold(R.at)}</dd>`);
+    out.push(`<dt>출처</dt><dd><i>${R.src.map(f => 'genres/' + evEsc(f)).join(' · ')}</i></dd>`);
+    out.push(`</dl>`);
+    for(const n of R.no) out.push(`<p class="ev-note">${evBold(n)}</p>`);
+  } else {
+    out.push(`<p class="ev-note">genres/ 의 레퍼런스 표에 이 프리셋이 없습니다.</p>`);
+  }
+
   /* ── 실제 차트 ── */
   const ch = evidenceCharts(name);
   const tot = ch.hot.length + ch.bb.length;
@@ -145,6 +174,12 @@ function updateMotif(){
     out.push(`<span class="k">밀도 ${P.mel.d[0]}~${P.mel.d[1]}</span>`);
     out.push(`<span class="k">${evLbl('contour',P.mel.c)}</span>`);
     out.push(`<span class="k">${evLbl('rhythm',P.mel.y)}</span>`);
+  }
+  /* 대표 아티스트는 곡이 아니라 사람이다 — 1위 기록과 라벨을 따로 둔다 */
+  const R = evidenceRef(name);
+  if(R && R.a.length){
+    out.push(`<span class="k">대표</span>`);
+    out.push(`<span class="art">${R.a.slice(0,3).map(evEsc).join(' · ')}</span>`);
   }
   out.push(`<span class="k">1위 기록</span>`);
   if(top.length){

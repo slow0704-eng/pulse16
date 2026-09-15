@@ -191,6 +191,9 @@ a.util{display:inline-flex;align-items:center;justify-content:center;text-decora
   border-radius:3px;padding:1px 5px;white-space:nowrap}
 .motif .song{color:var(--silk)}
 .motif .song i{color:var(--silk-dim);font-style:normal}
+/* 대표 아티스트 — genres/*.md 의 레퍼런스 표. 1위 기록과 달리 «이 장르를 대표하는
+   사람» 이고, 곡이 아니라 아티스트다(그 표에 곡 목록은 없다). */
+.motif .art{color:var(--silk)}
 .motif .wk{font-family:'Space Mono',monospace;font-size:10px;color:var(--t-bass)}
 .motif .more{margin-left:auto;font-size:11px}
 .motif .more button{background:none;border:0;color:var(--live);cursor:pointer;

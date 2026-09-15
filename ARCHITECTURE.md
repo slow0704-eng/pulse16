@@ -76,6 +76,9 @@ src/
                            fetch 할 수 없으므로 스크립트로 굳혀 둔다
     profiles.js             (생성물) 장르 프로파일. genres/profiles/*.json 에서
                            같은 이유로 굳힌다. ⚠ 곡·아티스트 이름은 없다
+    references.js           (생성물) 대표 아티스트·앨범. genres/*.md 의
+                           «레퍼런스» 표에서 같은 이유로 굳힌다. 사람이 읽는
+                           자료라 이름이 있다 — 앨범명은 미검증(00-reference.md)
     fills.js                필인 라이브러리(FILLS) · fillPoolFor()
     melody.js               16마디 선율·리프·베이스 라이브러리(MELODY·RIFF·
                            BLINE) · PHRASE·FORM(프레이즈 결합 폼, 곡 구조의
@@ -112,8 +115,9 @@ src/
     build.js           §12 UI 구성
     edit.js            §12.5 실행취소 · 자동 저장 · 패널 · 드래그
     evidence.js        §15 근거 패널 — 이 프리셋이 무엇에서 나왔는가.
-                           위는 프로파일에서 뽑은 수치, 아래는 그 장르로 태그된
-                           실제 빌보드 1위 곡. 둘의 성격이 다르다는 것을
+                           위는 프로파일에서 뽑은 수치, 가운데는 genres/ 의
+                           대표 아티스트·앨범, 아래는 그 장르로 태그된
+                           실제 빌보드 1위 곡. 셋의 성격이 다르다는 것을
                            패널에 적어 둔다 (참고한 곡이 아니라 1위 기록이다).
                            ⚠ events.js 가 로드 시점에 showEvidence 를 바인딩하므로
                              **반드시 events.js 앞**에 와야 한다
@@ -127,8 +131,8 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   verify-*.html        DSP 단위 검증
   _app-harness.js      src/ 를 직접 로드해 위 하네스들에게 진짜 앱 그래프를
                        내어주는 공용 모듈 (아래 "주의" 참고)
-  build-refdata.mjs    billboard/*.md + genres/profiles/*.json →
-                       src/data/billboard.js · src/data/profiles.js 로 굳힌다.
+  build-refdata.mjs    billboard/*.md + genres/profiles/*.json + genres/*.md →
+                       src/data/billboard.js · profiles.js · references.js 로 굳힌다.
                        원본을 고쳤으면 이것을 다시 돌려야 한다
   render-melody.mjs    **선율을 켠 채** 녹음해 renders/ 에 WAV 를 남긴다.
                        melOn 기본값이 false 라 mcp 의 render_wav 로는 16마디
