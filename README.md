@@ -74,7 +74,14 @@ push·PR 마다 GitHub Actions 가 자동으로 돕니다(`.github/workflows/ci.
 node tools/ci/check-syntax.mjs        # 모든 .js/.mjs 문법
 node tools/ci/check-globals.mjs       # 전역 이름 충돌  ← 가장 중요
 node tools/ci/check-load-order.mjs    # HTML ↔ 디스크 ↔ ARCHITECTURE.md 지도
+node tools/ci/check-css-vars.mjs      # 정의 없는 var()
 ```
+
+`check-css-vars.mjs` 는 눈으로만 보이는 부류를 잡습니다. 정의되지 않은 CSS
+변수는 색만 빠지는 게 아니라 **그 선언 전체가 계산 시점에 무효** 가 됩니다 —
+`border:1px solid var(--없음)` 은 `border-style` 까지 `none` 이 되어 선이 아예
+안 그려지고, `background:var(--없음)` 은 배경이 통째로 날아갑니다. 콘솔에는
+아무것도 안 남습니다.
 
 `check-globals.mjs` 가 가장 중요합니다. 이 앱은 클래식 `<script>` 라 `src/` 의
 최상위 선언 485개가 **하나의 전역 렉시컬 스코프**를 공유합니다. 두 파일이 같은
@@ -87,7 +94,14 @@ node tools/ci/check-load-order.mjs    # HTML ↔ 디스크 ↔ ARCHITECTURE.md �
 node tools/ci/smoke.mjs               # 실제로 뜨는가 · 콘솔 에러 0건 · file:// · axe
 node tools/ci/regression.mjs          # docs/qa/01-신뢰성.md 의 결함 재발 검사
 node tools/ci/regression.mjs --quick  # 45초 재생 구간을 10초로 (손으로 볼 때만)
+node tools/ci/check-melody-profile.mjs  # 장르 프로파일 ↔ melody.js
+node tools/ci/check-layout.mjs        # 고르기·Play·첫 패드가 첫 화면 안에 있는가
 ```
+
+`check-layout.mjs` 는 «뭐가 자꾸 묻힌다» 를 숫자로 바꾼 것입니다. 컨트롤을
+하나씩 얹다 보면 그리드가 조금씩 접힘선 아래로 밀려 내려갑니다 — 한 번에
+알아채기 어렵고 쌓이면 못 쓰게 됩니다. 1440×900 에서 **장르 칩 · Play ·
+첫 패드** 셋이 스크롤 없이 보여야 통과합니다.
 
 회귀 시험은 **아직 안 고친 결함을 «예상된 실패» 로 따로 셉니다.** 그 목록은
 `tools/ci/regression.mjs` 의 `KNOWN` 에 있습니다. 결함이 고쳐지면 시험이

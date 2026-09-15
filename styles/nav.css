@@ -1,0 +1,20 @@
+/* ── 페이지 이동 메뉴 ──
+   시퀀서 · 빌보드 차트 · 설명서 세 페이지가 **같은 파일** 을 씁니다.
+   예전에는 세 페이지가 저마다 다른 방식으로 돌아왔습니다 — 시퀀서는 메뉴,
+   빌보드는 글 속 링크, 설명서는 버튼 하나. 그래서 설명서에서 빌보드로는
+   갈 길이 아예 없었습니다. 한 군데서 고치면 셋이 같이 바뀌게 둡니다.
+
+   쓰는 쪽은 현재 페이지만 <span class="on"> 으로 바꿉니다:
+     <nav class="nav" aria-label="페이지 이동">
+       <span class="on" aria-current="page">시퀀서</span>
+       <a href="billboard.html">빌보드 차트</a>
+       <a href="manual.html">설명서</a>
+     </nav>
+   tokens.css 뒤에 오세요 — var(--line) 등을 씁니다. */
+.nav{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+.nav a,.nav span{font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:.12em;
+  text-transform:uppercase;text-decoration:none;color:var(--silk-dim);
+  padding:4px 10px;border:1px solid transparent;border-radius:5px;line-height:1.4;white-space:nowrap}
+.nav a:hover{color:var(--silk);background:rgba(255,255,255,.05);border-color:var(--line)}
+.nav a:focus-visible{outline:2px solid var(--live);outline-offset:1px}
+.nav .on{color:var(--silk);background:rgba(255,255,255,.07);border-color:var(--line)}

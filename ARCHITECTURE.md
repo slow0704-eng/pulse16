@@ -49,7 +49,9 @@ fonts/
 styles/
   fonts.css            위 woff2 의 @font-face. tokens.css 앞에 옵니다
   tokens.css           디자인 토큰 (색·간격 변수)
-  layout.css           레이아웃 뼈대 · 헤더 · 반응형
+  nav.css              페이지 이동 메뉴 — 시퀀서·빌보드·설명서 **세 페이지가 공유**
+                       합니다. 세 쪽이 저마다 다른 방식으로 돌아오던 것을 모았습니다
+  layout.css           레이아웃 뼈대 · 헤더 · 구역 머리말(.sect) · 반응형
   rack.css             패턴 라이브러리 · 샘플 뱅크 · 트랜스포트 · FX · 미터
   sequencer.css        시퀀서 그리드 · 피아노롤
   controls.css         폼 컨트롤 공통 · 단축키 오버레이
@@ -140,6 +142,11 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
                        (브라우저와 같은 규칙), 따로 전수 조사도 한다.
                        id 와 같은 이름의 최상위 function 은 경고 (duck 사고)
     check-load-order.mjs  HTML 의 <script> 목록 ↔ 디스크 ↔ 이 지도 대조
+    check-css-vars.mjs 정의 없는 var() 찾기. 정의가 없으면 색만 빠지는 게
+                       아니라 **그 선언이 통째로 무효** 가 된다 —
+                       `border:1px solid var(--없음)` 은 선이 아예 안 그려지고
+                       `background:var(--없음)` 은 배경이 날아간다. 콘솔에도
+                       안 남는 부류라 기계가 대신 본다
     _browser.mjs       브라우저 검사 공용: 정적 서버 · 콘솔/예외 수집 · 타임아웃.
                        playwright·axe-core 는 mcp/pulse-audit/node_modules
                        에서 가져온다 — 루트에 package.json 을 두지 않는다
@@ -153,6 +160,9 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
                        자기 프로파일 수치를 만족하는지, 근거 형식(곡 제목이
                        못 들어가게)이 맞는지, «차이가 없는데 다른 풀» 과
                        «차이가 있는데 같은 풀» 을 양방향으로 본다
+    check-layout.mjs   «무엇이 접힘선 아래로 묻혔는가». 고르기(칩)·Play·첫 패드
+                       셋이 1440×900 첫 화면 안에 있어야 한다. 컨트롤을 하나씩
+                       얹다 보면 그리드가 조금씩 밀려 내려간다 — 그 누적을 잰다
 genres/profiles/       장르 프로파일 — 선율·리프·베이스 배정의 «왜» 를 담은
   *.json               근거 자료. 배치(하위분기) 하나 = 파일 하나.
                        ⚠ 런타임에 읽지 않습니다. 앱이 읽는 것은 melody.js 이고

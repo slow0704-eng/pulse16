@@ -8,6 +8,7 @@
      접속하지 않습니다(샘플을 고를 때만 예외). docs/perf/04-외부의존성.md -->
 <link rel="stylesheet" href="styles/fonts.css">
 <link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/nav.css">
 
 <style>
   *{box-sizing:border-box}
@@ -22,10 +23,7 @@
   .brand b{color:var(--t-kick,#e0a044)}
   .sub{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;
        text-transform:uppercase;color:var(--silk-dim,#9a948a)}
-  .back{margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:.14em;
-       text-transform:uppercase;text-decoration:none;color:#20242a;background:var(--t-kick,#e0a044);
-       padding:7px 15px;border-radius:3px;font-weight:600;white-space:nowrap}
-  .back:hover{filter:brightness(1.1)}
+  .topin .nav{margin-left:auto}
 
   h2{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:600;letter-spacing:.04em;
      margin:56px 0 6px;padding-bottom:7px;border-bottom:2px solid var(--t-kick,#e0a044)}
@@ -68,7 +66,11 @@
 <header class="top"><div class="topin">
   <span class="brand">PULSE<b>·</b>16</span>
   <span class="sub">사용법 · 동작 원리</span>
-  <a class="back" href="pulse16-mk16.html">← 도구로 돌아가기</a>
+  <nav class="nav" aria-label="페이지 이동">
+    <a href="pulse16-mk16.html">시퀀서</a>
+    <a href="billboard.html">빌보드 차트</a>
+    <span class="on" aria-current="page">설명서</span>
+  </nav>
 </div></header>
 
 <div class="wrap">

@@ -1,6 +1,28 @@
 /* ── 4. 패턴 라이브러리 · 샘플 뱅크 ─────────────────────────── */
 .library{padding:14px 20px;border-bottom:1px solid var(--edge);background:#242930}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+/* 머리줄 — 왼쪽은 개수, 오른쪽은 범례와 근거 버튼. 예전에는 셋이 한 문장에
+   붙어 «357종 · 357종 표시 · ·붙은 칩은…» 으로 읽혀 어디가 어디인지
+   구분이 안 됐습니다. */
+.libhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
+.libhead .lbl{margin:0}
+.libhead .legend{display:flex;align-items:center;gap:4px;margin-left:auto;
+  font-size:11px;color:var(--silk-dim)}
+.libhead .legend em{font-style:normal;margin-left:9px;opacity:.75}
+.libhead .legend em.gen{color:var(--silk)}
+.libhead .legend em.tone{color:var(--t-tone);font-size:8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+#cats{margin-bottom:7px}
+#subs{margin-bottom:9px}
+/* 프리셋 칩은 357개라 다 펼치면 화면을 다 먹습니다. 잘라 두되,
+   «잘린 것» 과 «스크롤되는 것» 이 구분돼야 합니다 — 아래쪽에 그림자를
+   깔되 background-attachment:local 로 «끝까지 내려가면 사라지는» 그림자를
+   만듭니다. 자바스크립트 없이 더 있는지 없는지가 보입니다. */
+#chips{max-height:188px;overflow-y:auto;padding-bottom:2px;
+  background:
+    linear-gradient(#242930 40%,rgba(36,41,48,0)) top/100% 16px no-repeat local,
+    linear-gradient(rgba(36,41,48,0),#242930 60%) bottom/100% 16px no-repeat local,
+    radial-gradient(farthest-side at 50% 0,rgba(0,0,0,.5),rgba(0,0,0,0)) top/100% 9px no-repeat scroll,
+    radial-gradient(farthest-side at 50% 100%,rgba(0,0,0,.5),rgba(0,0,0,0)) bottom/100% 9px no-repeat scroll}
 .chip{cursor:pointer;padding:6px 11px;border-radius:3px;border:1px solid var(--edge);
   background:linear-gradient(180deg,#3b424c,#2c323a);color:var(--silk-dim);
   font-family:'Barlow Condensed',sans-serif;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
@@ -35,6 +57,7 @@
 .brow:last-child{margin-bottom:0}
 .bankbar select{height:28px}
 .kstat{font-family:'Space Mono',monospace;font-size:11px;color:var(--silk-dim);padding-bottom:6px;flex:1;min-width:200px}
+#savestat{text-align:right}
 .kstat.ok{color:var(--t-bass)} .kstat.err{color:#e0868a} .kstat.load{color:var(--t-kick)}
 .loops{display:flex;gap:5px;flex-wrap:wrap}
 .lbtn{cursor:pointer;padding:5px 10px;border-radius:3px;border:1px solid var(--edge);
@@ -44,12 +67,21 @@
 .lbtn[data-dead="1"]{opacity:.3;text-decoration:line-through;cursor:not-allowed}
 
 /* ── 5. 트랜스포트 · FX 랙 ──────────────────────────────────── */
+/* 그리드는 세로로 1400px 쯤 됩니다. 베이스 롤을 보고 있으면 Play 가 900px
+   위에 있어 매번 되감아 올라가야 했습니다. 이 줄만 화면에 붙여 둡니다.
+   .unit 의 overflow 를 clip 으로 바꾼 것이 이것 때문입니다(layout.css).
+   Chance 는 변주로, Help·사용법은 다듬기 바로 옮겨 한 줄에 들어옵니다. */
 .transport{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end;
-  padding:15px 20px;border-bottom:1px solid var(--edge);background:var(--recess)}
+  padding:15px 20px;border-bottom:1px solid var(--edge);background:var(--recess);
+  position:sticky;top:0;z-index:20;box-shadow:0 8px 16px -6px rgba(0,0,0,.55)}
+/* 좁은 화면에서는 이 줄이 3단으로 접혀 화면의 절반을 먹습니다 — 떼어 둡니다. */
+@media (max-width:760px){.transport{position:static;box-shadow:none}}
 /* 패널 토글 바 — FX 랙 4개를 개별로 열고 닫음 */
 .rackbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;
   padding:9px 20px;border-bottom:1px solid var(--edge);background:#1a1f25}
 .rackbar .lbl{margin:0 8px 0 0}
+.rsep{width:1px;height:20px;background:var(--edge);
+  box-shadow:1px 0 0 rgba(255,255,255,.05);margin:0 3px;flex:none}
 .pbtn{cursor:pointer;padding:5px 12px;border-radius:3px;border:1px solid var(--edge);
   background:linear-gradient(180deg,#343b45,#282e35);color:var(--silk-dim);
   font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
@@ -127,6 +159,8 @@ a.util{display:inline-flex;align-items:center;justify-content:center;text-decora
    재생 중에 만지는 것들이므로 트랜스포트 바로 아래에 둔다. */
 .varbar{background:var(--panel);border:1px solid var(--edge);border-radius:5px;
   padding:9px 12px 11px;margin-bottom:9px}
+/* 제목 줄(«Variation — …»)은 구역 머리말 ③ 이 대신합니다. */
+.varbar{margin:9px 12px}
 .varbar > .lbl{display:block;margin-bottom:8px}
 .varbar .vrow{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:flex-end}
 /* 필인·선율 처럼 한 줄에 select 가 여럿인 컨트롤은 좁은 화면에서

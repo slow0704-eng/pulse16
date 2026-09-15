@@ -8,13 +8,16 @@
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="styles/fonts.css">
 <link rel="stylesheet" href="styles/tokens.css">
+<link rel="stylesheet" href="styles/nav.css">
 <style>
 /* 이 페이지만 쓰는 최소 레이아웃. 앱의 토큰(tokens.css)을 그대로 쓴다 —
    색을 따로 정의하면 두 페이지가 곧 어긋난다. */
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--silk);
      font-family:'Barlow',system-ui,sans-serif;font-size:14px;line-height:1.5}
-header{padding:20px 24px 14px;border-bottom:1px solid var(--line)}
+header{padding:20px 24px 14px;border-bottom:1px solid var(--line);
+       display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+header .nav{margin-left:auto;padding-bottom:2px}
 h1{font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:600;
    margin:0 0 4px;letter-spacing:.02em}
 .sub{font-family:'Space Mono',monospace;font-size:11px;color:var(--silk-dim);margin:0}
@@ -48,9 +51,15 @@ tr:hover td{background:rgba(255,255,255,.03)}
 <body>
 
 <header>
-  <h1>빌보드 차트 조회</h1>
-  <p class="sub">Hot 100 1위 싱글 · Billboard 200 1위 앨범 · 1960~2020년대
-    — <a href="pulse16-mk16.html">PULSE·16 으로 돌아가기</a></p>
+  <div>
+    <h1>빌보드 차트 조회</h1>
+    <p class="sub">Hot 100 1위 싱글 · Billboard 200 1위 앨범 · 1960~2020년대</p>
+  </div>
+  <nav class="nav" aria-label="페이지 이동">
+    <a href="pulse16-mk16.html">시퀀서</a>
+    <span class="on" aria-current="page">빌보드 차트</span>
+    <a href="manual.html">설명서</a>
+  </nav>
 </header>
 
 <main>

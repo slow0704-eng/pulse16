@@ -46,6 +46,11 @@ jobs:
       - name: 로드 순서 · 지도 대조
         run: node tools/ci/check-load-order.mjs
 
+      # 정의 없는 var() 는 색만 빠지는 게 아니라 **선언 전체를 무효화**한다.
+      # billboard.html 의 body 배경이 그렇게 통째로 날아가 있었다(흰 바탕).
+      - name: CSS 변수 검사
+        run: node tools/ci/check-css-vars.mjs
+
       # src/data/billboard.js · profiles.js 는 생성물이다. 원본(billboard/*.md ·
       # genres/profiles/*.json)을 고치고 다시 만들지 않으면 화면이 낡은 것을 보여 준다.
       - name: 생성물이 원본과 일치하는가
@@ -104,3 +109,8 @@ jobs:
       # 프로파일이 아직 없으면 «검사할 것 없음» 으로 조용히 통과한다.
       - name: 장르 프로파일 검사
         run: node tools/ci/check-melody-profile.mjs
+
+      # «고르기 · Play · 첫 패드» 가 첫 화면 안에 있는가. 컨트롤을 하나 더
+      # 얹을 때마다 그리드가 조금씩 접힘선 아래로 밀려 내려간다 — 그걸 잰다.
+      - name: 레이아웃 · 접힘선 검사
+        run: node tools/ci/check-layout.mjs

@@ -70,4 +70,5 @@ ul.ev-chart li i{color:var(--silk-dim);font-style:normal}
 .ev-axis{font-family:'Space Mono',monospace;font-size:9.5px;color:var(--silk-dim);
          border:1px solid var(--line);border-radius:3px;padding:1px 4px;margin-left:4px}
 #why .close{margin-top:20px;width:100%}
+#whybtn{margin-left:8px}
 a.util{display:inline-block;text-decoration:none;line-height:1.7}

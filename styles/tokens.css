@@ -18,4 +18,13 @@
   --t-bass:#8fbf5f; --t-loop:#7fa8d9; --t-tone:#f2726f;
   --t-keys:#9d8ede; --t-gtr:#e0894a;
   --cell:34px; --gap:4px; --strip:300px;
+  /* --line · --bg 는 19곳에서 쓰이는데 정의가 없었습니다.
+     정의 없는 var() 는 색만 빠지는 게 아니라 **선언 전체가 계산 시점에
+     무효** 가 되어 초기값으로 돌아갑니다 — `border:1px solid var(--line)`
+     은 border-style 까지 none 이 되어 선이 아예 안 그려지고,
+     billboard.html 의 `background:var(--bg)` 는 배경이 통째로 날아가
+     흰 바탕에 크림색 글씨가 됩니다. tools/ci/check-css-vars.mjs 가
+     이제 이 부류를 막습니다. */
+  --line:#3a414b;
+  --bg:#1a1d22;
 }
