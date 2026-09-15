@@ -18,7 +18,9 @@
      P5 프레이즈가 **자기 프로파일의** 밀도·도약·음역 범위를 실제로 만족
      P6 새 프레이즈가 기존 PHRASE / RIFF_PHRASE / BASS_PHRASE 와 문자열 일치 안 함
      P7 차별화 — 양방향 (아래 참고. **아직 임계값을 두지 않는다**)
-     P8 커버리지 — 프로파일이 없는 프리셋 (Metal·Punk 제외)
+     P8 커버리지 — 프로파일이 없는 프리셋. 두 부류는 대상이 아니다 —
+        선율 없음(Metal·Punk) 과 계열 X «예제»(장르가 아닌 Tone.js 데모).
+        이유는 P8 블록 주석에 적혀 있다
      P9 melody.js 의 MELODY_KIT 과 JSON 의 meta.pool 이 어긋남
      P10 confidence:"high" 인데 근거 곡 수가 5 미만
 
@@ -502,12 +504,32 @@ for (const [sub, list] of Object.entries(bySub)) {
 
 head('P8 — 커버리지');
 const covered = new Set(profiles.map(x => x.p.preset));
-const skip = new Set(live.noMelody);               // Metal·Punk — 의도된 «선율 없음»
+
+/* 대상에서 빠지는 두 부류. 둘 다 «아직 안 한 것» 이 아니라 «할 것이 없는 것»
+   이므로 여기에 이유를 적어 둔다 — 안 그러면 다음 사람이 «336·337 은 왜
+   비었나» 를 다시 묻고, 그 답을 모르면 채워 넣게 된다. 그 순간 그것이
+   지어낸 값이 된다.
+
+   1. 선율 없음 — Metal 13 · Punk 7. 건반을 안 쓰는 것이 그 장르의 성질이라
+      melodyPoolFor() 가 빈 배열을 돌려준다. 빈 것이 곧 결론이다.
+   2. 계열 X «예제» — Play Along · Casio Cells. 이 둘은 장르가 아니다.
+      Tone.js 의 샘플 로더가 도는지 보여 주려고 둔 데모다(12-example.js —
+      drum-samples/CR78/* · casio/* 를 실제로 내려받는다). UI 에서 붉은 칩으로
+      따로 표시되는 것도 그래서다. 프로파일의 내용은 «이 세부장르의 구조적
+      성질 + 근거(19xx년대 · N곡)» 인데, 데모에는 장르도 없고 근거로 삼을
+      곡 무리도 없다. 쓰려면 없는 장르를 지어내야 한다. */
+const noMelody = new Set(live.noMelody);
+const demo = live.presets.filter(n => live.cat[n] === 'X');
+const skip = new Set([...noMelody, ...demo]);
 const todo = live.presets.filter(n => !covered.has(n) && !skip.has(n));
+
 console.log(`프로파일 ${covered.size}종 / 대상 ${live.presets.length - skip.size}종`
-          + `  (선율 없음 ${skip.size}종 제외 — Metal·Punk)`);
-console.log(`남은 ${todo.length}종`);
+          + `   (전체 ${live.presets.length}종)`);
+console.log(`  제외 · 선율 없음 ${noMelody.size}종 — Metal·Punk (건반을 안 씁니다)`);
+console.log(`  제외 · 계열 X   ${demo.length}종 — ${demo.join(' · ')} (장르가 아닌 Tone.js 예제)`);
+console.log(`남은 ${todo.length}종${todo.length ? ' — ' + todo.join(' · ') : ''}`);
 if (todo.length) warn(`아직 ${todo.length}종에 프로파일이 없습니다 (작업 진행 중이면 정상)`);
+else console.log(`${OK} 장르인 프리셋 ${live.presets.length - skip.size}종이 모두 프로파일을 갖습니다`);
 
 /* ═══ 정리 ═══ */
 
