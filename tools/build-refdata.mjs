@@ -245,6 +245,23 @@ for (const f of refFiles) {
    분류한 것만 적는 표라, 앨범 칸과 달리 «확인 필요» 가 없다.
    출처 칸의 첫 URL 을 들고 간다 — 화면이 링크로 건다. */
 const TRACK_HEAD = /^\|\s*프리셋\s*\|\s*곡\s*\|\s*아티스트\s*\|/;
+
+/* 위키 주소에는 «…_(song)» 처럼 괄호가 들어간다. `[^)]+` 로 끊으면 닫는 괄호가
+   잘려 링크가 죽는다 — 2026-09-16 에 352줄 중 122줄이 그렇게 잘려 있었다.
+   여는 괄호를 세어 짝이 맞는 자리에서 끝낸다. */
+function trackUrl(cell) {
+  const i = cell.indexOf('](http');
+  if (i >= 0) {
+    let depth = 1, j = i + 2;
+    for (; j < cell.length; j++) {
+      if (cell[j] === '(') depth++;
+      else if (cell[j] === ')' && --depth === 0) break;
+    }
+    return cell.slice(i + 2, j);
+  }
+  return (/(https?:\/\/\S+?)[)\s]*$/.exec(cell) || [])[1] || '';
+}
+
 let trackRows = 0;
 for (const f of refFiles) {
   let on = false;
@@ -261,7 +278,7 @@ for (const f of refFiles) {
     trackRows++;
     const e = REF[n] ||= { a: [], al: [], at: '', no: [], src: [] };
     e.tr ||= [];
-    const url = (/\((https?:\/\/[^)\s]+)\)/.exec(srcCell) || [])[1] || '';
+    const url = trackUrl(srcCell);
     const val = s => isBlank(s) ? '' : unmark(s);
     if (!e.tr.some(t => nameKey(t[0]) === nameKey(title) && nameKey(t[1]) === nameKey(artist)))
       e.tr.push([unmark(title), unmark(artist), val(year), val(kind), val(bpm), val(key), url]);

@@ -910,9 +910,9 @@ const MELODY_KIT_PRESET = {
   'Power Metal'             :['rkant_aabb','cin_aabb'],
   /* 오케스트라·합창과 보컬 선율이 같은 비중 */
   'Symphonic Metal'         :['cin_aabb','cinbal_aabb','cin_abab'],
-  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
-     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 선율 풀뿐이다.
-     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 → 2026-09-16 대표곡 교정
+     (genres/profiles/02-B-pop.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/02-pop.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
   /* 슈퍼소우가 드롭을 끌고 간다 */
   'EDM-pop'                 :['dis_aabb','dis_abab','dis_aaab'],
   'Eurodance'               :['dis_aabb','dis_abab','dis_aaab'],
@@ -921,17 +921,17 @@ const MELODY_KIT_PRESET = {
   'Euro-pop'                :['pop_aabb','pop_aaba','pop_abab'],
   /* 벨 리드에 라틴계 싱코페 */
   'Freestyle'               :['cin_aabb','cin_aaba','cin_abab'],
-  /* 155~160 BPM 에 칩튠 어휘 */
+  /* 155~160 BPM 에 칩튠 어휘 — 주인공은 처리된 보컬이고 신스는 훅이다 */
   'Hyperpop'                :['chip_aabb','chip_abab','chip_aaab'],
   'Digicore'                :['chip_aabb','chip_abab','chip_aaab'],
   /* 신스 훅이 몇 음으로 앤섬을 만든다 */
   'Electropop'              :['ant_aaba','ant_aabb','ant_abab'],
   'New Romantic'            :['ant_aaba','ant_aabb','ant_abab'],
-  /* 80년대 아르페지오가 쉬지 않고 돈다 */
+  /* 80년대 아르페지오가 쉬지 않고 돈다 — 리드가 아니라 반주의 성질이다 */
   'Retrowave'               :['chip_aabb','chip_abab','chip_aaab'],
   'Synthwave'               :['chip_aabb','chip_abab','chip_aaab'],
-  /* 스윙 50 에 업라이트, 7화음 */
-  'Traditional Pop'         :['jazz_aaba','jazz_abab','jazbal_aaba'],
+  /* 크루너의 긴 음과 순차 진행 — 빅밴드 스윙이 아니라 12/8 발라드였다 */
+  'Traditional Pop'         :['bal_aaba','cinbal_aabb','cin_aaba'],
   /* 작곡가 공장의 3분 팝 */
   'Brill Building'          :['pop_aaba','rock_aaba','blues_aaba'],
   /* 합창 훅이라 순차가 많고 반복이 강하다 */
@@ -944,32 +944,35 @@ const MELODY_KIT_PRESET = {
   /* 하프시코드·현·목관 */
   'Chamber Pop'             :['cin_aaba','cin_aabb','cin_abab'],
   'Baroque Pop'             :['cin_aaba','cin_aabb','cin_abab'],
-  /* 슬랩 베이스에 9화음 */
+  /* 9화음에 펑크 핑거 베이스 */
   'City Pop'                :['jazbal_aaba','jazbal_abab','jazz_aaba'],
-  /* 플랫와운드에 라디오용 매끈함 */
+  /* 전자피아노에 라디오용 매끈함 */
   'Soft Rock'               :['cinbal_aaba','cinbal_aabb','bal_aaba'],
   'AOR'                     :['cinbal_aaba','cinbal_aabb','bal_aaba'],
-  /* 현이 두껍게 깔리고 전조가 잦다 */
+  /* 피아노와 현이 깔리고 후렴에서 상행한다 */
   'J-pop'                   :['cin_aabb','cin_aaba','cinbal_aabb'],
   'Mandopop'                :['cin_aabb','cin_aaba','cinbal_aabb'],
   'Cantopop'                :['cin_aabb','cin_aaba','cinbal_aabb'],
   'Kayōkyoku'               :['cin_aabb','cin_aaba','cinbal_aabb'],
-  /* 요나누키 5음계에 꺾는 창법 */
+  /* 요나누키 음계에 꺾는 창법 */
   'Enka'                    :['wor_aaba','wor_aabb','worcin_aaba'],
   'Trot'                    :['wor_aaba','wor_aabb','worcin_aaba'],
-  /* 지역색이 관·아코디언·나일론으로 나온다 */
+  /* 출신 리듬이 곡마다 다르다 — 관·나일론 기타·안데스 관 */
   'Latin Pop'               :['lat_aabb','lat_abab','latbos_aabb'],
-  'Schlager'                :['lat_aabb','lat_abab','latbos_aabb'],
-  'Shibuya-kei'             :['lat_aabb','lat_abab','latbos_aabb'],
-  'C-pop'                   :['lat_aabb','lat_abab','latbos_aabb'],
+  /* 짧은 반복 후렴의 장조 팝 — 아코디언은 대표곡에 없었다 */
+  'Schlager'                :['pop_aabb','pop_aaba'],
+  /* 재즈·보사·라운지 인용 */
+  'Shibuya-kei'             :['bos_aabb','bos_aaba','latbos_aabb'],
+  /* 중국 5음계(궁조식)와 민요풍 반복 */
+  'C-pop'                   :['wor_aaba','cin_aabb'],
   /* 장식음이 많고 인접 도수를 스친다 */
   'Arabic Pop'              :['wor_aabb','wor_abab','worcin_aabb'],
   'Rumba Flamenca'          :['wor_aabb','wor_abab','worcin_aabb'],
   'Turbo-folk'              :['wor_aabb','wor_abab','worcin_aabb'],
-  /* 시타르에 돌 리듬 */
+  /* 돌(dhol) 골격 — 시타르가 아니라 툼비의 짧은 반복이다 */
   'Desi Beats'              :['afr_aabb','afr_aaab','wor_aaba'],
   'UK Bhangra'              :['afr_aabb','afr_aaab','wor_aaba'],
-  /* 스틸팬에 카리브 오프비트 */
+  /* 쿠두루·뭄바톤 — 선율 악기가 주인공인 사례가 없다 */
   'Tropical Bass'           :['car_aabb','car_aaba','lat_abab'],
   /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
      41종 → 24무리.
@@ -1642,66 +1645,49 @@ const RIFF_KIT_PRESET = {
   'Black Metal'             :['metal_riff','metal_chug'],
   'Power Metal'             :['metal_gallop','rock_power'],
   'Symphonic Metal'         :['rock_power','metal_riff'],
-  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
-     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 리프 풀뿐이다.
-     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
-  /* 슈퍼소우가 드롭을 끌고 간다 */
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 → 2026-09-16 대표곡 교정
+     (genres/profiles/02-B-pop.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/02-pop.md «대표곡» 표). 곡의 리프을 옮기지 않고 성질만 맞췄다. */
   'EDM-pop'                 :['edm_build','edm_alt'],
   'Eurodance'               :['edm_build','edm_alt'],
-  /* 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다 */
   'Dance-pop'               :['funk_cut','arp_folk'],
   'Euro-pop'                :['funk_cut','arp_folk'],
-  /* 벨 리드에 라틴계 싱코페 */
   'Freestyle'               :['edm_arp','funk_cut'],
-  /* 155~160 BPM 에 칩튠 어휘 */
   'Hyperpop'                :['edm_arp','edm_alt'],
-  'Digicore'                :['edm_arp','edm_alt'],
-  /* 신스 훅이 몇 음으로 앤섬을 만든다 */
+  /* 팝펑크·이모 기타 갈래가 있다(nowhere to go · Frailty) */
+  'Digicore'                :['rock_power','edm_arp'],
   'Electropop'              :['rock_alt','arp_folk'],
   'New Romantic'            :['rock_alt','arp_folk'],
-  /* 80년대 아르페지오가 쉬지 않고 돈다 */
   'Retrowave'               :['edm_arp','rock_alt'],
   'Synthwave'               :['edm_arp','rock_alt'],
-  /* 스윙 50 에 업라이트, 7화음 */
   'Traditional Pop'         :['jazz_gtr_swing','jazz_gtr_comp'],
-  /* 작곡가 공장의 3분 팝 */
   'Brill Building'          :['rock_drive','arp_country'],
-  /* 합창 훅이라 순차가 많고 반복이 강하다 */
   'Teen Pop'                :['rock_alt','arp_folk'],
   'Bubblegum'               :['rock_alt','arp_folk'],
-  /* 다듬지 않은 프로덕션 */
   'Indie Pop'               :['arp_folk','rock_alt'],
-  'Twee Pop'                :['arp_folk','rock_alt'],
+  'Twee Pop'                :['rock_alt','arp_folk'],
   'Bedroom Pop'             :['arp_folk','rock_alt'],
-  /* 하프시코드·현·목관 */
   'Chamber Pop'             :['arp_folk','arp_swing'],
   'Baroque Pop'             :['arp_folk','arp_swing'],
-  /* 슬랩 베이스에 9화음 */
   'City Pop'                :['funk_cut','soul_chank'],
-  /* 플랫와운드에 라디오용 매끈함 */
   'Soft Rock'               :['arp_folk','soul_prog'],
   'AOR'                     :['arp_folk','soul_prog'],
-  /* 현이 두껍게 깔리고 전조가 잦다 */
   'J-pop'                   :['arp_folk','rock_alt'],
   'Mandopop'                :['arp_folk','rock_alt'],
   'Cantopop'                :['arp_folk','rock_alt'],
   'Kayōkyoku'               :['arp_folk','rock_alt'],
-  /* 요나누키 5음계에 꺾는 창법 */
   'Enka'                    :['arp_folk','arp_swing'],
   'Trot'                    :['arp_folk','arp_swing'],
-  /* 지역색이 관·아코디언·나일론으로 나온다 */
   'Latin Pop'               :['latin_montuno','arp_folk'],
-  'Schlager'                :['latin_montuno','arp_folk'],
-  'Shibuya-kei'             :['latin_montuno','arp_folk'],
-  'C-pop'                   :['latin_montuno','arp_folk'],
-  /* 장식음이 많고 인접 도수를 스친다 */
+  'Schlager'                :['arp_folk','rock_alt'],
+  /* 네오아코·재즈 커팅 */
+  'Shibuya-kei'             :['jazz_gtr_comp','soul_chank'],
+  'C-pop'                   :['arp_folk','latin_montuno'],
   'Arabic Pop'              :['arp_folk','latin_montuno'],
   'Rumba Flamenca'          :['arp_folk','latin_montuno'],
   'Turbo-folk'              :['arp_folk','latin_montuno'],
-  /* 시타르에 돌 리듬 */
   'Desi Beats'              :['arp_folk','highlife_gtr'],
   'UK Bhangra'              :['arp_folk','highlife_gtr'],
-  /* 스틸팬에 카리브 오프비트 */
   'Tropical Bass'           :['skank_up','latin_montuno'],
   /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
      41종 → 24무리.
@@ -2330,66 +2316,48 @@ const BLINE_KIT_PRESET = {
   'Black Metal'             :['bmet_aaab'],
   'Power Metal'             :['bmet_aabb','brock_aabb'],
   'Symphonic Metal'         :['brock_aabb','bmet_aaab'],
-  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 (genres/profiles/02-B-pop.json)
-     드럼(39/39)과 편성(39/39)은 이미 전부 달랐다. 묶여 있던 것은 베이스 풀뿐이다.
-     근거는 genres/02-pop.md 의 장르별 분석과 실제 kit 이다. */
-  /* 슈퍼소우가 드롭을 끌고 간다 */
+  /* B. Pop 계열 39종 — 2026-09-15 배치 A8 → 2026-09-16 대표곡 교정
+     (genres/profiles/02-B-pop.json). 근거는 웹에서 실재·장르 분류를 확인한
+     대표곡이다(genres/02-pop.md «대표곡» 표). 곡의 베이스을 옮기지 않고 성질만 맞췄다. */
   'EDM-pop'                 :['bdis_abab','bhou_aaab'],
   'Eurodance'               :['bdis_abab','bhou_aaab'],
-  /* 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다 */
   'Dance-pop'               :['bdis_aabb','bhou_aabb'],
   'Euro-pop'                :['bdis_aabb','bhou_aabb'],
-  /* 벨 리드에 라틴계 싱코페 */
   'Freestyle'               :['bdis_abab','bfun_abab'],
-  /* 155~160 BPM 에 칩튠 어휘 */
   'Hyperpop'                :['bhou_aaab','bmet_aaab'],
-  'Digicore'                :['bhou_aaab','bmet_aaab'],
-  /* 신스 훅이 몇 음으로 앤섬을 만든다 */
+  'Digicore'                :['b808_aaab','bhou_aaab'],
   'Electropop'              :['bdis_abab','bhou_aabb'],
   'New Romantic'            :['bdis_abab','bhou_aabb'],
-  /* 80년대 아르페지오가 쉬지 않고 돈다 */
   'Retrowave'               :['bdis_abab','bdis_aaab'],
   'Synthwave'               :['bdis_abab','bdis_aaab'],
-  /* 스윙 50 에 업라이트, 7화음 */
-  'Traditional Pop'         :['bwal_abab','bwal_aaba'],
-  /* 작곡가 공장의 3분 팝 */
+  'Traditional Pop'         :['bcou_aaba','bwal_aaba'],
   'Brill Building'          :['bwal_aabb','bcou_aabb'],
-  /* 합창 훅이라 순차가 많고 반복이 강하다 */
   'Teen Pop'                :['brock_aabb','bdis_aabb'],
   'Bubblegum'               :['brock_aabb','bdis_aabb'],
-  /* 다듬지 않은 프로덕션 */
   'Indie Pop'               :['brock_aabb','breg_aaba'],
   'Twee Pop'                :['brock_aabb','breg_aaba'],
   'Bedroom Pop'             :['brock_aabb','breg_aaba'],
-  /* 하프시코드·현·목관 */
   'Chamber Pop'             :['bwal_aabb','bwal_aaba'],
   'Baroque Pop'             :['bwal_aabb','bwal_aaba'],
-  /* 슬랩 베이스에 9화음 */
   'City Pop'                :['bfun_abab','bfun_aabb'],
-  /* 플랫와운드에 라디오용 매끈함 */
   'Soft Rock'               :['bdis_aabb','bwal_aabb'],
   'AOR'                     :['bdis_aabb','bwal_aabb'],
-  /* 현이 두껍게 깔리고 전조가 잦다 */
   'J-pop'                   :['bdis_aabb','brock_aabb'],
   'Mandopop'                :['bdis_aabb','brock_aabb'],
-  'Cantopop'                :['bdis_aabb','brock_aabb'],
+  /* 초기 광둥어 팝은 거의 모든 곡이 하행 베이스라인이다 */
+  'Cantopop'                :['bwal_aabb','bwal_aaba'],
   'Kayōkyoku'               :['bdis_aabb','brock_aabb'],
-  /* 요나누키 5음계에 꺾는 창법 */
   'Enka'                    :['bwal_aaba','breg_aaba'],
-  'Trot'                    :['bwal_aaba','breg_aaba'],
-  /* 지역색이 관·아코디언·나일론으로 나온다 */
+  'Trot'                    :['bcou_aabb','bcou_aaba'],
   'Latin Pop'               :['blat_aabb','blat_abab'],
-  'Schlager'                :['blat_aabb','blat_abab'],
-  'Shibuya-kei'             :['blat_aabb','blat_abab'],
-  'C-pop'                   :['blat_aabb','blat_abab'],
-  /* 장식음이 많고 인접 도수를 스친다 */
+  'Schlager'                :['bdis_aabb','brock_aabb'],
+  'Shibuya-kei'             :['bwal_aabb','blat_aabb'],
+  'C-pop'                   :['blat_aabb','brock_aabb'],
   'Arabic Pop'              :['blat_aaba','bafr_aabb'],
   'Rumba Flamenca'          :['blat_aaba','bafr_aabb'],
   'Turbo-folk'              :['blat_aaba','bafr_aabb'],
-  /* 시타르에 돌 리듬 */
   'Desi Beats'              :['bafr_aabb','blat_aabb'],
   'UK Bhangra'              :['bafr_aabb','blat_aabb'],
-  /* 스틸팬에 카리브 오프비트 */
   'Tropical Bass'           :['breg_aabb','blat_abab'],
   /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
      41종 → 24무리.

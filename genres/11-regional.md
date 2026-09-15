@@ -156,7 +156,7 @@
 |---|---|---|---|---|---|---|---|---|
 | Bhangra | 145 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -3/1/4/2 |
 | ·Desi Beats | 133 | 0 | `punch` | `tight` | `spread` | `metal` | `tabla` | -2/0/-2/0 |
-| ·UK Bhangra | 132 | 0 | `wood` | `tight` | `spread` | `noise` | `tabla` | -2/0/-2/0 |
+| ·UK Bhangra | 100 | 0 | `wood` | `tight` | `spread` | `noise` | `djembe` | -2/0/-2/0 |
 
 **베이스**
 
@@ -172,15 +172,15 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Trot | 120 | 18 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Trot | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·C-pop | 100 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Trot | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·C-pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·Trot | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·C-pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### 서아시아 · 지중해
 
@@ -189,14 +189,14 @@
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | ·Arabic Pop | 110 | 0 | `wood` | `tight` | `spread` | `noise` | `darbuka` | -2/0/-2/0 |
-| ·Rumba Flamenca | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Rumba Flamenca | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `bongo` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Arabic Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Rumba Flamenca | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Arabic Pop | `fretless` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Rumba Flamenca | `guitarron` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 
 ### 동유럽 · 발칸
 
@@ -204,13 +204,13 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Turbo-folk | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `darbuka` | -2/0/-2/0 |
+| ·Turbo-folk | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `analog` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Turbo-folk | `sub` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Turbo-folk | `tuba` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 하이브리드 · 인터넷 장르
 
@@ -218,7 +218,7 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Tropical Bass | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Tropical Bass | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `timbale` | -2/0/-2/0 |
 
 **베이스**
 
@@ -245,59 +245,74 @@
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
 | **Bhangra** | Gurdas Maan · Malkit Singh | (확인 필요) | **시타르** + EP · 셰이커 8분 · **wood 킥/톰**(돌 통) · 145 BPM |
-| UK Bhangra | Panjabi MC · Bally Sagoo | (확인 필요) | 시타르 · wood 킥 · **noise 햇**(클럽 프로덕션) · 132 BPM |
-| Desi Beats | — ※1 | — | 시타르 · **punch 킥 + metal 햇**(서구 클럽 킷) · 133 BPM |
+| UK Bhangra | Panjabi MC · Bally Sagoo | (확인 필요) | **툼비**(만돌린 음색) · wood 킥 · **noise 햇**(클럽 프로덕션) · **100 BPM** · 젬베가 돌 chaal |
+| Desi Beats | — ※1 | — | 시타르 · **punch 킥 + metal 햇**(서구 클럽 킷) · 133 BPM · **대표곡 0곡** |
 
 > ※1 «Desi Beats» 는 특정 씬의 이름이라기보다 남아시아계 클럽 음악을 묶는
 > 상업적 분류명입니다. 대표를 한 사람으로 세우기 어려워 비웁니다.
 >
-> 셋 다 하위분기가 준 `sitar` 를 씁니다. 실제 방그라의 주역은 **돌(dhol) 북**이고
-> 시타르가 아닙니다 — 지금 편성은 «남아시아» 라는 큰 묶음의 기본값이지
-> 방그라 고유의 소리가 아닙니다. `wood` 킥·톰이 돌 자리를 대신합니다.
+> 실제 방그라의 주역은 **돌(dhol) 북**이고 시타르가 아닙니다.
+>
+> **2026-09-16 — UK Bhangra 는 고쳤습니다.** 확인한 세 곡이 98~105 BPM 이고 돌이 그 두 배로
+> 치는 구조라 132→100 으로 내렸고, 기타를 `mandolin`(툼비 자리)으로, 톰을 `djembe` 로 바꿔
+> 돌의 chaal 골격을 톰이 치게 했습니다. `Bhangra`(K 계열 프리셋)는 이번 교정 대상(B 계열)이
+> 아니어서 아직 `sitar` 그대로입니다 — 아래 표에 남겨 둡니다.
 
 ### 동아시아
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| C-pop | Jay Chou · Faye Wong | (확인 필요) | EP · 클린 기타 · **핑거 베이스** · 100 BPM 발라드 |
-| **Trot** | Lee Mi-ja · Na Hoon-a · Song Ga-in | (확인 필요) | EP · 클린 기타 · 핑거 베이스 · **120 BPM 2박** · spread 클랩 |
+| C-pop | Jay Chou · Faye Wong | (확인 필요) | 스트링 + **디지·고쟁** · **핑거 베이스** · 100 BPM · **5음계 궁조식(宮調式)** |
+| **Trot** | Lee Mi-ja · Na Hoon-a · Song Ga-in | (확인 필요) | 스트링 + EP · 클린 기타 · 핑거 베이스 · **120 BPM 2박(정박)** · spread 클랩 |
 
 > Trot 의 정체성은 **2박(뽕짝) 리듬과 꺾기 창법**입니다. 창법은 이 도구가
 > 표현할 수 없고, 남는 것은 2박 골격뿐입니다. 그래서 이 프리셋은 실제 트로트보다
 > 훨씬 밋밋하게 들립니다 — 알고 쓰는 편이 낫습니다.
+>
+> **2026-09-16 — swing 18 을 0 으로 내렸습니다.** 뽕짝 2박은 **정박**이고, 확인한 다섯 곡의
+> 출처 어디에도 스윙·셔플을 말하는 대목이 없었습니다. 스케일도 `Minor Pentatonic` 에서
+> 요나누키 장조에 가까운 `Major` 로 바꿨습니다([02-pop.md](02-pop.md) «대표곡» 절).
 
 ### 서아시아 · 지중해
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Arabic Pop | Amr Diab · Fairuz | (확인 필요) | **사즈** + EP · 핑거 베이스 · **wood 킥**(다르부카 자리) · 110 BPM |
-| **Rumba Flamenca** | Gipsy Kings | (확인 필요) | 사즈 · **spread 클랩**(팔마스) · punch 킥 · 115 BPM |
+| Arabic Pop | Amr Diab · Fairuz | (확인 필요) | **나일론 기타 + 우드** · 패드 · **프렛리스 베이스** · **다르부카 톰** · 110 BPM |
+| **Rumba Flamenca** | Gipsy Kings | (확인 필요) | **나일론 기타 두 대** · **spread 클랩**(팔마스) · punch 킥 · 115 BPM |
 
 > Rumba Flamenca 에서 **손뼉(팔마스)이 곧 리듬 악기**입니다. `spread` 클랩이
-> 그 자리를 맡습니다. 다만 하위분기가 준 기타는 `saz` 인데 실제로는
-> **나일론 기타**여야 맞습니다 — 아래 «편성과 어긋나는 것» 에 적었습니다.
+> 그 자리를 맡습니다.
+>
+> **2026-09-16 — `saz` 를 `nylon` 두 대로 고쳤습니다.** 룸바 플라멩카는 스페인 기타
+> 음악이고, 확인한 네 곡(Bamboléo · Djobi Djoba · Borriquito · Me quedo contigo)에
+> 사즈가 들어갈 자리가 없습니다. Arabic Pop 의 `saz` 도 같은 이유로 나일론 + 우드로 바꿨습니다.
 
 ### 동유럽 · 발칸
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Turbo-folk | Ceca · Lepa Brena | (확인 필요) | **아코디언** + 사즈 · 탬버린 4분 · 125 BPM |
+| Turbo-folk | Ceca · Lepa Brena | (확인 필요) | **아코디언 + 부주키** · 트럼펫 · 탬버린 · 125 BPM |
 
 ### 하이브리드 · 인터넷 장르
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
 | Global Bass | — ※2 | — | **벨** · 클린 기타 · body 스네어 · analog 톰 · 115 BPM |
-| Tropical Bass | — ※2 | — | 벨 · 클린 기타 · spread 클랩 · metal 햇 · 115 BPM |
+| Tropical Bass | — ※2 | — | 벨 + 패드 · **팀발레 트레실로** · spread 클랩 · metal 햇 · 115 BPM |
 
 > ※2 둘 다 **인터넷에서 만들어진 묶음 이름**이고 특정 씬·인물이 없습니다.
 > 여러 지역 리듬을 클럽 템포로 옮긴다는 방법론이 곧 정체성이라
 > 대표 아티스트를 세우는 것 자체가 맞지 않습니다.
 
-### 편성과 어긋나는 것 — 고치지 않고 기록만
+### 편성과 어긋나는 것
+
+2026-09-16 에 **세 줄 중 세 줄을 고쳤습니다**(B 계열 대표곡 교정). 남은 한 줄은
+K 계열 프리셋이라 이번 대상이 아니었습니다.
 
 | 프리셋 | 지금 편성 | 레퍼런스가 말하는 것 |
 |---|---|---|
-| Rumba Flamenca | `saz` 기타 (하위분기 «서아시아 · 지중해» 기본값) | **나일론 기타**. 룸바 플라멩카는 스페인 기타 음악입니다 |
-| Bhangra · UK Bhangra | `sitar` (하위분기 «남아시아» 기본값) | **돌 북**이 주역. 시타르는 방그라의 악기가 아닙니다 |
-| Trot | 일반 4/4 골격 | **2박 뽕짝**. 프리셋 패턴이 이 골격을 아직 안 씁니다 |
+| Rumba Flamenca | ~~`saz` 기타~~ → **고침**: `nylon` 두 대 | 나일론 기타. 룸바 플라멩카는 스페인 기타 음악입니다 |
+| Arabic Pop | ~~`saz` 기타~~ → **고침**: `nylon` + `oud` | 아랍 팝의 현악은 우드와 나일론 기타입니다 |
+| UK Bhangra | ~~`sitar`~~ → **고침**: `mandolin`(툼비) + `djembe` 톰이 돌 chaal | **돌 북**이 주역입니다 |
+| Trot | ~~swing 18 의 4/4~~ → **고침**: swing 0 · 2박 골격 | **2박 뽕짝**은 정박입니다 |
+| **Bhangra** | `sitar` (하위분기 «남아시아» 기본값) — **아직 안 고침** | 돌 북이 주역. K 계열 프리셋이라 B 계열 교정에서 빠졌습니다 |

@@ -2,8 +2,8 @@
   "batch": "A8",
   "sub": "Pop (계열 B)",
   "cat": "B",
-  "date": "2026-09-15",
-  "verdict": "39종 → 14무리. 드럼과 편성은 이미 전부 달랐고(39/39) 선율만 12풀로 묶여 있었다. 베이스 엔진이 분기 안에서 획일적이던 것도 장르 성격에 맞춰 갈랐다.",
+  "date": "2026-09-16",
+  "verdict": "39종 → 23무리. 대표곡으로 다시 갈랐고 두 무리를 쪼갰다(지역 팝 넷으로 · 남아시아 둘로). Dance-pop·Teen Pop·Latin Pop 은 대표곡이 단조라 스케일을 바꿨고, Desi Beats 는 대표곡 0곡이라 확신도를 낮췄다.",
   "profiles": [
     {
       "preset": "EDM-pop",
@@ -37,7 +37,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -63,97 +63,17 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 이후 유럽 · 11곡",
+        "evidenceBasis": "1990~2010년대 유럽·미국 · 10곡",
         "distinguishes": [
           {
             "from": "Dance-pop",
             "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다"
           },
           {
             "from": "Freestyle",
             "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 벨 리드에 라틴계 싱코페"
           },
           {
             "from": "Eurodance",
@@ -168,7 +88,7 @@
           "dis_abab",
           "dis_aaab"
         ],
-        "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+        "note": "드롭의 신스 훅이 곡을 끈다. 유로댄스는 정전 5곡의 중앙이 128 이라 140 에서 내렸고, 장르 문서대로 2·4박 스네어를 조용히 깔았다"
       }
     },
     {
@@ -203,7 +123,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -229,97 +149,17 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 이후 유럽 · 11곡",
+        "evidenceBasis": "1990~2010년대 유럽·미국 · 10곡",
         "distinguishes": [
           {
             "from": "Dance-pop",
             "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다"
           },
           {
             "from": "Freestyle",
             "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 벨 리드에 라틴계 싱코페"
           },
           {
             "from": "EDM-pop",
@@ -334,7 +174,7 @@
           "dis_abab",
           "dis_aaab"
         ],
-        "note": "슈퍼소우가 드롭을 끌고 간다. 형제 중 밀도가 가장 높고 거의 모든 이동이 도약이다"
+        "note": "드롭의 신스 훅이 곡을 끈다. 유로댄스는 정전 5곡의 중앙이 128 이라 140 에서 내렸고, 장르 문서대로 2·4박 스네어를 조용히 깔았다"
       }
     },
     {
@@ -369,7 +209,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -395,97 +235,17 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 미국·영국 · 12곡",
+        "evidenceBasis": "1970~2010년대 미국·유럽 · 10곡",
         "distinguishes": [
           {
             "from": "EDM-pop",
             "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+            "note": "그쪽은 드롭의 신스 훅이 곡을 끈다"
           },
           {
             "from": "Freestyle",
             "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+            "note": "그쪽은 벨 리드에 라틴계 싱코페"
           },
           {
             "from": "Euro-pop",
@@ -500,7 +260,7 @@
           "pop_aaba",
           "pop_abab"
         ],
-        "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+        "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 댄스팝 대표곡은 5곡 중 4곡이 단조라 스케일을 옮겼고, «스네어를 안 쓴다» 는 Kylie 와 어긋나 2·4박을 넣었다"
       }
     },
     {
@@ -535,7 +295,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -561,97 +321,17 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 미국·영국 · 12곡",
+        "evidenceBasis": "1970~2010년대 미국·유럽 · 10곡",
         "distinguishes": [
           {
             "from": "EDM-pop",
             "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+            "note": "그쪽은 드롭의 신스 훅이 곡을 끈다"
           },
           {
             "from": "Freestyle",
             "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+            "note": "그쪽은 벨 리드에 라틴계 싱코페"
           },
           {
             "from": "Dance-pop",
@@ -666,7 +346,7 @@
           "pop_aaba",
           "pop_abab"
         ],
-        "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 드롭이 아니라 아치다"
+        "note": "후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다. 댄스팝 대표곡은 5곡 중 4곡이 단조라 스케일을 옮겼고, «스네어를 안 쓴다» 는 Kylie 와 어긋나 2·4박을 넣었다"
       }
     },
     {
@@ -701,15 +381,15 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
         "comping": "disco_stab"
       },
       "bass": {
-        "role": "octave",
-        "octaveJump": true,
+        "role": "root",
+        "octaveJump": false,
         "gate": "short",
         "kickRelation": "offset",
         "glide": "none"
@@ -726,98 +406,18 @@
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "medium",
-        "evidenceBasis": "1980년대 미국 동부 · 9곡",
+        "confidence": "high",
+        "evidenceBasis": "1980년대 미국 동부 · 5곡",
         "distinguishes": [
           {
             "from": "EDM-pop",
             "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
+            "note": "그쪽은 드롭의 신스 훅이 곡을 끈다"
           },
           {
             "from": "Dance-pop",
             "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
+            "note": "그쪽은 후렴 훅이 노래가 되어야 하므로 순차 진행이 가장 많다"
           }
         ],
         "poolDecision": "own",
@@ -827,7 +427,7 @@
           "cin_aaba",
           "cin_abab"
         ],
-        "note": "벨 리드에 라틴계 싱코페. 형제 넷이 정박인데 여기만 16분으로 쪼갠다"
+        "note": "벨 리드에 라틴계 싱코페. 기준곡 Let the Music Play 의 베이스는 808 롱 서브가 아니라 **쉬지 않는 TB-303 음형**이라 엔진과 게이트를 바꿨다"
       }
     },
     {
@@ -862,7 +462,7 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -881,104 +481,24 @@
         "roles": {
           "keys": "lead",
           "keys2": "glocken",
-          "gtr": "none",
+          "gtr": "none/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "2010년대 후반 인터넷 · 9곡",
+        "evidenceBasis": "2010~2020년대 인터넷 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
           {
             "from": "Electropop",
             "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 신스 훅이 몇 음으로 앤섬을 만든다"
           },
           {
             "from": "Retrowave",
             "axis": "timbre",
             "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
           },
           {
             "from": "Digicore",
@@ -993,7 +513,7 @@
           "chip_abab",
           "chip_aaab"
         ],
-        "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
+        "note": "칩튠 어휘의 고밀도 도약이 몸이다. 주인공은 신스가 아니라 **처리된 보컬**이고, 디지코어에는 팝펑크·이모 기타 갈래가 있어 기타를 켰다"
       }
     },
     {
@@ -1028,7 +548,7 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -1047,104 +567,24 @@
         "roles": {
           "keys": "lead",
           "keys2": "glocken",
-          "gtr": "none",
+          "gtr": "none/crunch",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "2010년대 후반 인터넷 · 9곡",
+        "evidenceBasis": "2010~2020년대 인터넷 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
           {
             "from": "Electropop",
             "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
+            "note": "그쪽은 신스 훅이 몇 음으로 앤섬을 만든다"
           },
           {
             "from": "Retrowave",
             "axis": "timbre",
             "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
           },
           {
             "from": "Hyperpop",
@@ -1159,7 +599,7 @@
           "chip_abab",
           "chip_aaab"
         ],
-        "note": "155~160 BPM 에 칩튠 어휘. 팝에서 가장 빠르고 거의 모든 이동이 도약이다"
+        "note": "칩튠 어휘의 고밀도 도약이 몸이다. 주인공은 신스가 아니라 **처리된 보컬**이고, 디지코어에는 팝펑크·이모 기타 갈래가 있어 기타를 켰다"
       }
     },
     {
@@ -1193,7 +633,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -1210,106 +650,26 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "lead",
+          "keys": "lead/brass",
           "keys2": "choir",
-          "gtr": "chorus",
+          "gtr": "none/clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 영국 · 11곡",
+        "evidenceBasis": "1980~2010년대 영국·미국 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
           {
             "from": "Hyperpop",
             "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+            "note": "그쪽은 칩튠 어휘의 고밀도 도약이 몸이다"
           },
           {
             "from": "Retrowave",
             "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+            "note": "그쪽은 아르페지오가 곡 내내 돈다"
           },
           {
             "from": "New Romantic",
@@ -1324,7 +684,7 @@
           "ant_aabb",
           "ant_abab"
         ],
-        "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+        "note": "신스 훅이 몇 음으로 앤섬을 만든다. 일렉트로팝 4곡은 기타가 없고(«보컬 외 전부 프로그래밍»), 뉴로맨틱은 밴드형 2곡에 실제 기타가 있어 한쪽만 켰다"
       }
     },
     {
@@ -1358,7 +718,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -1375,106 +735,26 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "lead",
+          "keys": "lead/brass",
           "keys2": "choir",
-          "gtr": "chorus",
+          "gtr": "none/clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 영국 · 11곡",
+        "evidenceBasis": "1980~2010년대 영국·미국 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
           {
             "from": "Hyperpop",
             "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+            "note": "그쪽은 칩튠 어휘의 고밀도 도약이 몸이다"
           },
           {
             "from": "Retrowave",
             "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+            "note": "그쪽은 아르페지오가 곡 내내 돈다"
           },
           {
             "from": "Electropop",
@@ -1489,7 +769,7 @@
           "ant_aabb",
           "ant_abab"
         ],
-        "note": "신스 훅이 몇 음으로 앤섬을 만든다. 하이퍼팝과 어휘는 같은 계보인데 밀도가 4분의 1이다"
+        "note": "신스 훅이 몇 음으로 앤섬을 만든다. 일렉트로팝 4곡은 기타가 없고(«보컬 외 전부 프로그래밍»), 뉴로맨틱은 밴드형 2곡에 실제 기타가 있어 한쪽만 켰다"
       }
     },
     {
@@ -1524,7 +804,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "nine",
@@ -1549,24 +829,9 @@
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "2000년대 후반 이후 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 이후 · 6곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
           {
             "from": "Hyperpop",
             "axis": "timbre",
@@ -1575,72 +840,7 @@
           {
             "from": "Electropop",
             "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
+            "note": "그쪽은 신스 훅이 몇 음으로 앤섬을 만든다"
           },
           {
             "from": "Synthwave",
@@ -1655,7 +855,7 @@
           "chip_abab",
           "chip_aaab"
         ],
-        "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
+        "note": "아르페지오가 곡 내내 돈다 — 고밀도 도약은 그 반주의 성질이고 신스웨이브 대표곡의 리드는 느린 보컬이다. 레트로웨이브는 대표곡이 130~147 이라 99 에서 올렸다"
       }
     },
     {
@@ -1690,7 +890,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "nine",
@@ -1715,99 +915,9 @@
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "2000년대 후반 이후 · 9곡",
+        "confidence": "medium",
+        "evidenceBasis": "2010년대 이후 · 6곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "timbre",
-            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
-          },
           {
             "from": "Retrowave",
             "axis": "none",
@@ -1821,7 +931,7 @@
           "chip_abab",
           "chip_aaab"
         ],
-        "note": "80년대 아르페지오가 쉬지 않고 돈다. 하이퍼팝과 재료는 같고 템포가 60 느리다"
+        "note": "아르페지오가 곡 내내 돈다 — 고밀도 도약은 그 반주의 성질이고 신스웨이브 대표곡의 리드는 느린 보컬이다. 레트로웨이브는 대표곡이 130~147 이라 99 에서 올렸다"
       }
     },
     {
@@ -1831,8 +941,8 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 5,
-          "max": 7
+          "min": 2,
+          "max": 4
         },
         "leapRatio": {
           "min": 0.2,
@@ -1856,16 +966,16 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "sev",
         "comping": "ballad_pad"
       },
       "bass": {
-        "role": "walking",
+        "role": "root",
         "octaveJump": false,
-        "gate": "mid",
+        "gate": "long",
         "kickRelation": "free",
         "glide": "none"
       },
@@ -1874,115 +984,30 @@
         "off": [],
         "roles": {
           "keys": "strings",
-          "keys2": "trumpet",
+          "keys2": "flute-horn",
           "gtr": "clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1940~50년대 미국 · 10곡",
+        "confidence": "medium",
+        "evidenceBasis": "1950~60년대 미국 · 3곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
           {
             "from": "Brill Building",
             "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
+            "note": "그쪽은 작곡가 공장의 3분 팝"
           }
         ],
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
-          "jazz_aaba",
-          "jazz_abab",
-          "jazbal_aaba"
+          "bal_aaba",
+          "cinbal_aabb",
+          "cin_aaba"
         ],
-        "note": "스윙 50 에 업라이트, 7화음. 빅밴드 어법이라 팝에서 유일하게 재즈 쪽이다"
+        "note": "크루너의 긴 음과 순차 진행이 몸이다. 검증 3곡은 69~91 의 스트레이트·12/8 발라드였고 빅밴드 스윙이 아니었다 — 소리에 닿지 않던 swing 50 을 0 으로 내리고 재즈 어휘 대신 발라드 재료를 줬다"
       }
     },
     {
@@ -2017,7 +1042,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "triad",
@@ -2035,105 +1060,20 @@
         "off": [],
         "roles": {
           "keys": "piano",
-          "keys2": "strings",
+          "keys2": "sax",
           "gtr": "clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1960년대 초 미국 뉴욕 · 10곡",
+        "confidence": "medium",
+        "evidenceBasis": "1960년대 초 미국 뉴욕 · 3곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
           {
             "from": "Traditional Pop",
             "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
+            "note": "그쪽은 크루너의 긴 음과 순차 진행이 몸이다"
           }
         ],
         "poolDecision": "own",
@@ -2143,7 +1083,7 @@
           "rock_aaba",
           "blues_aaba"
         ],
-        "note": "작곡가 공장의 3분 팝. 피아노가 훅을 쓰고 구조가 단단해 반복이 강하다"
+        "note": "작곡가 공장의 3분 팝. 피아노가 세 곡 모두에 있고 색소폰이 둘이라 2번 건반을 색소폰으로 바꿨다"
       }
     },
     {
@@ -2178,7 +1118,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "add9",
@@ -2196,105 +1136,25 @@
         "off": [],
         "roles": {
           "keys": "piano-organ",
-          "keys2": "glocken",
-          "gtr": "clean",
+          "keys2": "piano",
+          "gtr": "wah-clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 이후 미국·영국 · 12곡",
+        "evidenceBasis": "1960~2010년대 미국 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
           {
             "from": "Indie Pop",
             "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+            "note": "그쪽은 다듬지 않은 프로덕션에 훅 하나"
           },
           {
             "from": "Chamber Pop",
             "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+            "note": "그쪽은 하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다"
           },
           {
             "from": "Bubblegum",
@@ -2309,7 +1169,7 @@
           "pop_abab",
           "cinbal_aaba"
         ],
-        "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+        "note": "한 번 듣고 따라 부르는 훅이 몸이다. 틴팝 대표곡 4곡 중 3곡이 단조(Max Martin 시대)라 스케일을 옮겼고 와와 기타를 넣었다"
       }
     },
     {
@@ -2344,7 +1204,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -2362,105 +1222,25 @@
         "off": [],
         "roles": {
           "keys": "piano-organ",
-          "keys2": "glocken",
-          "gtr": "clean",
+          "keys2": "piano",
+          "gtr": "wah-clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1990년대 이후 미국·영국 · 12곡",
+        "evidenceBasis": "1960~2010년대 미국 · 8곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
           {
             "from": "Indie Pop",
             "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+            "note": "그쪽은 다듬지 않은 프로덕션에 훅 하나"
           },
           {
             "from": "Chamber Pop",
             "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+            "note": "그쪽은 하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다"
           },
           {
             "from": "Teen Pop",
@@ -2475,7 +1255,7 @@
           "pop_abab",
           "cinbal_aaba"
         ],
-        "note": "합창 훅이라 순차가 많고 반복이 강하다. 한 번 듣고 따라 부를 수 있어야 한다"
+        "note": "한 번 듣고 따라 부르는 훅이 몸이다. 틴팝 대표곡 4곡 중 3곡이 단조(Max Martin 시대)라 스케일을 옮겼고 와와 기타를 넣었다"
       }
     },
     {
@@ -2510,7 +1290,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -2527,106 +1307,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-ep",
-          "keys2": "glocken",
-          "gtr": "twelve",
+          "keys": "whistle-piano",
+          "keys2": "none",
+          "gtr": "acoustic-jangle",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 영국·미국 · 11곡",
+        "evidenceBasis": "1980~2020년대 영국·미국 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
           {
             "from": "Teen Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 한 번 듣고 따라 부르는 훅이 몸이다"
           },
           {
             "from": "Chamber Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다"
           },
           {
             "from": "Twee Pop",
@@ -2646,7 +1346,7 @@
           "bal_aabb",
           "bal_abab"
         ],
-        "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+        "note": "다듬지 않은 프로덕션에 훅 하나. 오르간·12현·비브라폰·로즈는 검증곡에 없었고, 대신 휘파람 훅·어쿠스틱 스트럼·봉고·싼 신스가 반복해 나왔다"
       }
     },
     {
@@ -2681,7 +1381,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -2698,106 +1398,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-ep",
-          "keys2": "glocken",
-          "gtr": "twelve",
+          "keys": "whistle-piano",
+          "keys2": "none",
+          "gtr": "acoustic-jangle",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 영국·미국 · 11곡",
+        "evidenceBasis": "1980~2020년대 영국·미국 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
           {
             "from": "Teen Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 한 번 듣고 따라 부르는 훅이 몸이다"
           },
           {
             "from": "Chamber Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다"
           },
           {
             "from": "Indie Pop",
@@ -2817,7 +1437,7 @@
           "bal_aabb",
           "bal_abab"
         ],
-        "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+        "note": "다듬지 않은 프로덕션에 훅 하나. 오르간·12현·비브라폰·로즈는 검증곡에 없었고, 대신 휘파람 훅·어쿠스틱 스트럼·봉고·싼 신스가 반복해 나왔다"
       }
     },
     {
@@ -2852,7 +1472,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -2869,106 +1489,26 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "organ-ep",
-          "keys2": "glocken",
-          "gtr": "twelve",
+          "keys": "whistle-piano",
+          "keys2": "none",
+          "gtr": "acoustic-jangle",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 영국·미국 · 11곡",
+        "evidenceBasis": "1980~2020년대 영국·미국 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
           {
             "from": "Teen Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 한 번 듣고 따라 부르는 훅이 몸이다"
           },
           {
             "from": "Chamber Pop",
             "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+            "note": "그쪽은 하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다"
           },
           {
             "from": "Indie Pop",
@@ -2988,7 +1528,7 @@
           "bal_aabb",
           "bal_abab"
         ],
-        "note": "다듬지 않은 프로덕션. 12현 기타가 앞이라 건반은 비켜 주고 음이 적다"
+        "note": "다듬지 않은 프로덕션에 훅 하나. 오르간·12현·비브라폰·로즈는 검증곡에 없었고, 대신 휘파람 훅·어쿠스틱 스트럼·봉고·싼 신스가 반복해 나왔다"
       }
     },
     {
@@ -3023,7 +1563,7 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -3040,106 +1580,26 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "strings-harpsi",
-          "keys2": "clarinet",
-          "gtr": "nylon",
-          "gtr2": "none"
+          "keys": "piano-harpsi",
+          "keys2": "strings-flute",
+          "gtr": "steel",
+          "gtr2": "harp"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 이후 영국·미국 · 9곡",
+        "evidenceBasis": "1960년대 이후 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
           {
             "from": "Teen Pop",
             "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+            "note": "그쪽은 한 번 듣고 따라 부르는 훅이 몸이다"
           },
           {
             "from": "Indie Pop",
             "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+            "note": "그쪽은 다듬지 않은 프로덕션에 훅 하나"
           },
           {
             "from": "Baroque Pop",
@@ -3154,7 +1614,7 @@
           "cin_aabb",
           "cin_abab"
         ],
-        "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+        "note": "하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다. 검증곡에서 가장 흔한 건반은 피아노였고 Yesterday 는 나일론이 아니라 스틸현이다"
       }
     },
     {
@@ -3189,7 +1649,7 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "add9",
@@ -3206,106 +1666,26 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "strings-harpsi",
-          "keys2": "clarinet",
-          "gtr": "nylon",
-          "gtr2": "none"
+          "keys": "piano-harpsi",
+          "keys2": "strings-flute",
+          "gtr": "steel",
+          "gtr2": "harp"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 이후 영국·미국 · 9곡",
+        "evidenceBasis": "1960년대 이후 영국·미국 · 10곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
           {
             "from": "Teen Pop",
             "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+            "note": "그쪽은 한 번 듣고 따라 부르는 훅이 몸이다"
           },
           {
             "from": "Indie Pop",
             "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+            "note": "그쪽은 다듬지 않은 프로덕션에 훅 하나"
           },
           {
             "from": "Chamber Pop",
@@ -3320,7 +1700,7 @@
           "cin_aabb",
           "cin_abab"
         ],
-        "note": "하프시코드·현·목관. 관현악 편성이라 음역이 형제보다 한 도수 넓고 반복이 약하다"
+        "note": "하프시코드·현·목관이 박을 새기고 드럼은 없거나 아주 여리다. 검증곡에서 가장 흔한 건반은 피아노였고 Yesterday 는 나일론이 아니라 스틸현이다"
       }
     },
     {
@@ -3356,7 +1736,7 @@
         },
         "repetition": "low",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Dorian"
       },
       "harmony": {
         "chordType": "nine",
@@ -3376,103 +1756,18 @@
           "keys": "ep",
           "keys2": "brass",
           "gtr": "clean-cut",
-          "gtr2": "none"
+          "gtr2": "clean-cut"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1980년대 일본 · 10곡",
+        "confidence": "medium",
+        "evidenceBasis": "1980년대 일본 · 4곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
           {
             "from": "Soft Rock",
             "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
+            "note": "그쪽은 라디오용 매끈함"
           }
         ],
         "poolDecision": "own",
@@ -3482,7 +1777,7 @@
           "jazbal_abab",
           "jazz_aaba"
         ],
-        "note": "슬랩 베이스에 9화음. 팝에서 재즈 화성을 가장 많이 쓰는 자리라 밀도가 높다"
+        "note": "9화음에 펑크 베이스. 네 곡 어디에도 슬랩 크레딧이 없어 핑거로 되돌렸고(문서 노트와도 일치), 커팅 기타 두 대가 좌우로 갈린다"
       }
     },
     {
@@ -3517,7 +1812,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "sev",
@@ -3534,8 +1829,8 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "piano-poly",
-          "keys2": "strings",
+          "keys": "ep-poly",
+          "keys2": "piano",
           "gtr": "clean",
           "gtr2": "none"
         },
@@ -3543,97 +1838,12 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 미국 · 10곡",
+        "evidenceBasis": "1970~80년대 미국 · 7곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
           {
             "from": "City Pop",
             "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
+            "note": "그쪽은 9화음에 펑크 베이스"
           },
           {
             "from": "AOR",
@@ -3648,7 +1858,7 @@
           "cinbal_aabb",
           "bal_aaba"
         ],
-        "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
+        "note": "라디오용 매끈함. 소프트록 3곡은 모두 전자피아노(Wurlitzer·Rhodes)이고 현악 크레딧은 없어 건반을 바꿨다. AOR 은 폴리신스와 피아노 리프가 짝이다"
       }
     },
     {
@@ -3683,7 +1893,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "sev",
@@ -3700,8 +1910,8 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "piano-poly",
-          "keys2": "strings",
+          "keys": "ep-poly",
+          "keys2": "piano",
           "gtr": "clean",
           "gtr2": "none"
         },
@@ -3709,97 +1919,12 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1970년대 미국 · 10곡",
+        "evidenceBasis": "1970~80년대 미국 · 7곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
           {
             "from": "City Pop",
             "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
+            "note": "그쪽은 9화음에 펑크 베이스"
           },
           {
             "from": "Soft Rock",
@@ -3814,7 +1939,7 @@
           "cinbal_aabb",
           "bal_aaba"
         ],
-        "note": "플랫와운드에 라디오용 매끈함. 시티팝과 편성은 이웃인데 싱코페가 없고 훨씬 성기다"
+        "note": "라디오용 매끈함. 소프트록 3곡은 모두 전자피아노(Wurlitzer·Rhodes)이고 현악 크레딧은 없어 건반을 바꿨다. AOR 은 폴리신스와 피아노 리프가 짝이다"
       }
     },
     {
@@ -3849,7 +1974,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
@@ -3875,97 +2000,27 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 동아시아 · 12곡",
+        "evidenceBasis": "1960~2010년대 동아시아 · 16곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
-            "from": "Arabic Pop",
+            "from": "Schlager",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
-            "from": "Desi Beats",
+            "from": "Shibuya-kei",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           },
           {
             "from": "Mandopop",
@@ -3990,7 +2045,7 @@
           "cin_aaba",
           "cinbal_aabb"
         ],
-        "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+        "note": "피아노와 현이 깔리고 후렴에서 상행한다. J-pop 검증곡은 87~130 이라 135 에서 내렸고, 초기 광둥어 팝은 «거의 모든 곡이 하행 베이스라인» 이라 베이스만 따로 바꿨다"
       }
     },
     {
@@ -4025,7 +2080,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
@@ -4051,97 +2106,27 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 동아시아 · 12곡",
+        "evidenceBasis": "1960~2010년대 동아시아 · 16곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
-            "from": "Arabic Pop",
+            "from": "Schlager",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
-            "from": "Desi Beats",
+            "from": "Shibuya-kei",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           },
           {
             "from": "J-pop",
@@ -4166,7 +2151,7 @@
           "cin_aaba",
           "cinbal_aabb"
         ],
-        "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+        "note": "피아노와 현이 깔리고 후렴에서 상행한다. J-pop 검증곡은 87~130 이라 135 에서 내렸고, 초기 광둥어 팝은 «거의 모든 곡이 하행 베이스라인» 이라 베이스만 따로 바꿨다"
       }
     },
     {
@@ -4201,7 +2186,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
@@ -4227,97 +2212,27 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 동아시아 · 12곡",
+        "evidenceBasis": "1960~2010년대 동아시아 · 16곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
-            "from": "Arabic Pop",
+            "from": "Schlager",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
-            "from": "Desi Beats",
+            "from": "Shibuya-kei",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           },
           {
             "from": "J-pop",
@@ -4342,7 +2257,7 @@
           "cin_aaba",
           "cinbal_aabb"
         ],
-        "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+        "note": "피아노와 현이 깔리고 후렴에서 상행한다. J-pop 검증곡은 87~130 이라 135 에서 내렸고, 초기 광둥어 팝은 «거의 모든 곡이 하행 베이스라인» 이라 베이스만 따로 바꿨다"
       }
     },
     {
@@ -4377,7 +2292,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
@@ -4403,97 +2318,27 @@
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1980년대 이후 동아시아 · 12곡",
+        "evidenceBasis": "1960~2010년대 동아시아 · 16곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
-            "from": "Arabic Pop",
+            "from": "Schlager",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
-            "from": "Desi Beats",
+            "from": "Shibuya-kei",
             "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           },
           {
             "from": "J-pop",
@@ -4518,7 +2363,7 @@
           "cin_aaba",
           "cinbal_aabb"
         ],
-        "note": "현이 두껍게 깔리고 전조가 잦다. 음역이 서구 팝보다 넓고 9화음을 기본으로 쓴다"
+        "note": "피아노와 현이 깔리고 후렴에서 상행한다. J-pop 검증곡은 87~130 이라 135 에서 내렸고, 초기 광둥어 팝은 «거의 모든 곡이 하행 베이스라인» 이라 베이스만 따로 바꿨다"
       }
     },
     {
@@ -4553,7 +2398,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "sev",
@@ -4570,106 +2415,36 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "strings-sax",
-          "keys2": "flute",
-          "gtr": "koto",
-          "gtr2": "none"
+          "keys": "strings",
+          "keys2": "sax",
+          "gtr": "clean",
+          "gtr2": "shamisen"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 이후 일본·한국 · 10곡",
+        "evidenceBasis": "1930~2000년대 일본·한국 · 9곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
           {
             "from": "J-pop",
             "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+            "note": "그쪽은 피아노와 현이 깔리고 후렴에서 상행한다"
           },
           {
             "from": "Latin Pop",
             "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
-            "from": "Arabic Pop",
+            "from": "Schlager",
             "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
-            "from": "Desi Beats",
+            "from": "Shibuya-kei",
             "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           },
           {
             "from": "Trot",
@@ -4684,7 +2459,7 @@
           "wor_aabb",
           "worcin_aaba"
         ],
-        "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+        "note": "요나누키 음계에 꺾는 창법(코부시), 하행 윤곽. 위키 두 곳이 드는 악기는 기타·바이올린·샤미센·샤쿠하치이고 **코토는 없어** 바꿨다. 트로트의 2박은 정박이라 스윙 18 을 0 으로 내렸다"
       }
     },
     {
@@ -4719,7 +2494,7 @@
         },
         "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "sev",
@@ -4736,106 +2511,21 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "strings-sax",
-          "keys2": "flute",
-          "gtr": "koto",
-          "gtr2": "none"
+          "keys": "strings",
+          "keys2": "sax",
+          "gtr": "clean",
+          "gtr2": "shamisen"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "high",
-        "evidenceBasis": "1960년대 이후 일본·한국 · 10곡",
+        "evidenceBasis": "1930~2000년대 일본·한국 · 9곡",
         "distinguishes": [
           {
-            "from": "EDM-pop",
+            "from": "C-pop",
             "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+            "note": "그쪽은 중국 5음계(궁조식)가 반복 출처로 확인됐고 비파·고쟁·얼후·피리가 편성에 든다"
           },
           {
             "from": "Enka",
@@ -4850,7 +2540,7 @@
           "wor_aabb",
           "worcin_aaba"
         ],
-        "note": "요나누키 5음계에 꺾는 창법. 하행 윤곽이 이 계열에서 유일하고 코토·색소폰이 앞에 선다"
+        "note": "요나누키 음계에 꺾는 창법(코부시), 하행 윤곽. 위키 두 곳이 드는 악기는 기타·바이올린·샤미센·샤쿠하치이고 **코토는 없어** 바꿨다. 트로트의 2박은 정박이라 스윙 18 을 0 으로 내렸다"
       }
     },
     {
@@ -4885,7 +2575,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "nine",
@@ -4902,121 +2592,36 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "horns-accordion",
+          "keys": "horns",
           "keys2": "piano",
           "gtr": "nylon",
-          "gtr2": "none"
+          "gtr2": "clean"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1970년대 이후 유럽·중남미·일본 · 11곡",
+        "evidenceBasis": "1980~2000년대 중남미·미국 · 4곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
           {
             "from": "J-pop",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 피아노와 현이 깔리고 후렴에서 상행한다"
           },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Schlager",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           },
           {
             "from": "Shibuya-kei",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "C-pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           }
         ],
         "poolDecision": "own",
@@ -5026,7 +2631,7 @@
           "lat_abab",
           "latbos_aabb"
         ],
-        "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+        "note": "곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스). 확인된 곡 3/4 가 단조라 스케일을 옮기고 클라베를 치는 콩가를 넣었다"
       }
     },
     {
@@ -5040,8 +2645,8 @@
           "max": 5
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.45
+          "min": 0.05,
+          "max": 0.35
         },
         "contour": "arch",
         "range": {
@@ -5054,155 +2659,69 @@
           4,
           5
         ],
-        "rhythm": "offbeat",
+        "rhythm": "onbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
-        "repetition": "mid",
+        "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
-        "comping": "ballad_pad"
+        "comping": "pop_pulse"
       },
       "bass": {
-        "role": "root",
-        "octaveJump": false,
-        "gate": "mid",
-        "kickRelation": "offset",
+        "role": "octave",
+        "octaveJump": true,
+        "gate": "short",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "horns-accordion",
-          "keys2": "piano",
-          "gtr": "nylon",
+          "keys": "synth-pad",
+          "keys2": "strings",
+          "gtr": "clean",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1970년대 이후 유럽·중남미·일본 · 11곡",
+        "evidenceBasis": "1960~2010년대 독일 · 5곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
           {
             "from": "J-pop",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 피아노와 현이 깔리고 후렴에서 상행한다"
           },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
             "from": "Shibuya-kei",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "C-pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Latin Pop",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "lat_aabb",
-          "lat_abab",
-          "latbos_aabb"
+          "pop_aabb",
+          "pop_aaba"
         ],
-        "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+        "note": "짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다. 다섯 곡 어디에도 아코디언 크레딧이 없어 신스로 바꾸고 라틴 선율 재료에서 떼어 냈다"
       }
     },
     {
@@ -5212,17 +2731,17 @@
       "stage": "mine",
       "melody": {
         "density": {
-          "min": 3,
-          "max": 5
+          "min": 1,
+          "max": 3
         },
         "leapRatio": {
-          "min": 0.15,
-          "max": 0.45
+          "min": 0.3,
+          "max": 0.5
         },
-        "contour": "arch",
+        "contour": "zigzag",
         "range": {
-          "min": 4,
-          "max": 6
+          "min": 3,
+          "max": 5
         },
         "degrees": [
           0,
@@ -5237,14 +2756,14 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
         "chordType": "nine",
         "comping": "ballad_pad"
       },
       "bass": {
-        "role": "root",
+        "role": "walking",
         "octaveJump": false,
         "gate": "mid",
         "kickRelation": "offset",
@@ -5254,131 +2773,46 @@
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "horns-accordion",
-          "keys2": "piano",
-          "gtr": "nylon",
-          "gtr2": "none"
+          "keys": "organ",
+          "keys2": "flute",
+          "gtr": "jazzbox",
+          "gtr2": "nylon"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1970년대 이후 유럽·중남미·일본 · 11곡",
+        "evidenceBasis": "1990년대 일본 · 4곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
           {
             "from": "J-pop",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 피아노와 현이 깔리고 후렴에서 상행한다"
           },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           },
           {
             "from": "Latin Pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 곡마다 출신 리듬이 다르다(살사·콩가·셔플·안데스)"
           },
           {
             "from": "Schlager",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "C-pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "melody",
+            "note": "그쪽은 짧은 반복 후렴의 장조 팝이고 현대형은 **디스코폭스**(4/4 약 120)다"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Latin Pop",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "lat_aabb",
-          "lat_abab",
+          "bos_aabb",
+          "bos_aaba",
           "latbos_aabb"
         ],
-        "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+        "note": "보사·재즈·라운지를 인용해 붙이는 «컷 앤드 페이스트» 가 정체성이라 곡마다 리듬이 다르다. 비브라폰·12현은 확인되지 않아 재즈 아치톱과 오르간으로 바꿨다"
       }
     },
     {
@@ -5392,7 +2826,7 @@
           "max": 5
         },
         "leapRatio": {
-          "min": 0.15,
+          "min": 0.2,
           "max": 0.45
         },
         "contour": "arch",
@@ -5406,155 +2840,54 @@
           4,
           5
         ],
-        "rhythm": "offbeat",
+        "rhythm": "onbeat",
         "cadence": {
           "lastBarEmpty": false,
           "endDegree": 0
         },
-        "repetition": "mid",
+        "repetition": "high",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Major"
       },
       "harmony": {
-        "chordType": "nine",
+        "chordType": "sev",
         "comping": "ballad_pad"
       },
       "bass": {
         "role": "root",
         "octaveJump": false,
         "gate": "mid",
-        "kickRelation": "offset",
+        "kickRelation": "locked",
         "glide": "none"
       },
       "ensemble": {
         "lead": "keys",
         "off": [],
         "roles": {
-          "keys": "horns-accordion",
-          "keys2": "piano",
-          "gtr": "nylon",
-          "gtr2": "none"
+          "keys": "strings",
+          "keys2": "dizi-flute",
+          "gtr": "clean",
+          "gtr2": "guzheng"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1970년대 이후 유럽·중남미·일본 · 11곡",
+        "evidenceBasis": "1920~2010년대 중국 · 4곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
           {
             "from": "Enka",
             "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "Schlager",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          },
-          {
-            "from": "Shibuya-kei",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "note": "그쪽은 요나누키 음계에 꺾는 창법(코부시), 하행 윤곽"
           }
         ],
-        "poolDecision": "share",
-        "shareWith": "Latin Pop",
+        "poolDecision": "own",
+        "shareWith": null,
         "pool": [
-          "lat_aabb",
-          "lat_abab",
-          "latbos_aabb"
+          "wor_aaba",
+          "cin_aabb"
         ],
-        "note": "지역색이 관·아코디언·나일론으로 나온다. J-pop 과 달리 오프비트가 몸이다"
+        "note": "중국 5음계(궁조식)가 반복 출처로 확인됐고 비파·고쟁·얼후·피리가 편성에 든다. 도리안을 뒷받침하는 출처는 없어 장조로 바꿨다"
       }
     },
     {
@@ -5589,7 +2922,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "triad",
@@ -5606,107 +2939,17 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "ep",
-          "keys2": "strings",
-          "gtr": "nylon-saz",
-          "gtr2": "none"
+          "keys": "pad-accordion",
+          "keys2": "strings-trumpet",
+          "gtr": "nylon-bouzouki",
+          "gtr2": "oud"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1980년대 이후 서아시아·발칸 · 9곡",
+        "evidenceBasis": "1970~2000년대 서아시아·지중해·발칸 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
           {
             "from": "Rumba Flamenca",
             "axis": "none",
@@ -5725,7 +2968,7 @@
           "wor_abab",
           "worcin_aabb"
         ],
-        "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
+        "note": "장식음이 많고 인접 도수를 스친다 — 선율 어휘는 셋이 같다. 갈리는 것은 악기다: 아랍 팝은 나일론 기타와 다르부카, 룸바 플라멩카는 플라멩코 기타와 팔마스·봉고, 터보포크는 아코디언과 부주키다(사즈 근거는 어디에도 없었다)"
       }
     },
     {
@@ -5777,107 +3020,17 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "ep",
-          "keys2": "strings",
-          "gtr": "nylon-saz",
-          "gtr2": "none"
+          "keys": "pad-accordion",
+          "keys2": "strings-trumpet",
+          "gtr": "nylon-bouzouki",
+          "gtr2": "oud"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1980년대 이후 서아시아·발칸 · 9곡",
+        "evidenceBasis": "1970~2000년대 서아시아·지중해·발칸 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
           {
             "from": "Arabic Pop",
             "axis": "none",
@@ -5896,7 +3049,7 @@
           "wor_abab",
           "worcin_aabb"
         ],
-        "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
+        "note": "장식음이 많고 인접 도수를 스친다 — 선율 어휘는 셋이 같다. 갈리는 것은 악기다: 아랍 팝은 나일론 기타와 다르부카, 룸바 플라멩카는 플라멩코 기타와 팔마스·봉고, 터보포크는 아코디언과 부주키다(사즈 근거는 어디에도 없었다)"
       }
     },
     {
@@ -5931,7 +3084,7 @@
         },
         "repetition": "mid",
         "voicing": "single",
-        "scale": "Minor Pentatonic"
+        "scale": "Natural Minor"
       },
       "harmony": {
         "chordType": "triad",
@@ -5948,107 +3101,17 @@
         "lead": "gtr",
         "off": [],
         "roles": {
-          "keys": "ep",
-          "keys2": "strings",
-          "gtr": "nylon-saz",
-          "gtr2": "none"
+          "keys": "pad-accordion",
+          "keys2": "strings-trumpet",
+          "gtr": "nylon-bouzouki",
+          "gtr2": "oud"
         },
         "lvlHint": {}
       },
       "meta": {
         "confidence": "medium",
-        "evidenceBasis": "1980년대 이후 서아시아·발칸 · 9곡",
+        "evidenceBasis": "1970~2000년대 서아시아·지중해·발칸 · 12곡",
         "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
-          },
           {
             "from": "Arabic Pop",
             "axis": "none",
@@ -6067,7 +3130,83 @@
           "wor_abab",
           "worcin_aabb"
         ],
-        "note": "장식음이 많고 인접 도수를 스친다. 나일론·사즈가 선율을 맡아 건반은 받친다"
+        "note": "장식음이 많고 인접 도수를 스친다 — 선율 어휘는 셋이 같다. 갈리는 것은 악기다: 아랍 팝은 나일론 기타와 다르부카, 룸바 플라멩카는 플라멩코 기타와 팔마스·봉고, 터보포크는 아코디언과 부주키다(사즈 근거는 어디에도 없었다)"
+      }
+    },
+    {
+      "preset": "UK Bhangra",
+      "sub": "남아시아",
+      "cat": "B",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 3,
+          "max": 5
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "arch",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          1
+        ],
+        "rhythm": "offbeat16",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "high",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "triad",
+        "comping": "trap_pad"
+      },
+      "bass": {
+        "role": "root",
+        "octaveJump": false,
+        "gate": "short",
+        "kickRelation": "locked",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "gtr",
+        "off": [],
+        "roles": {
+          "keys": "ep",
+          "keys2": "strings",
+          "gtr": "tumbi",
+          "gtr2": "clean"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1970~2000년대 영국 · 3곡",
+        "distinguishes": [
+          {
+            "from": "Desi Beats",
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
+          }
+        ],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "afr_aabb",
+          "afr_aaab",
+          "wor_aaba"
+        ],
+        "note": "돌(dhol)의 «chaal» 이 골격이고 훅은 샘플된 신스 베이스다. 곡은 98~105 BPM 이고 돌이 그 두 배로 친다 — 132 는 둘 다와 맞지 않았다. 시타르 근거는 없어 툼비 쪽 음색으로 바꿨다"
       }
     },
     {
@@ -6122,108 +3261,18 @@
           "keys": "ep",
           "keys2": "strings",
           "gtr": "sitar",
-          "gtr2": "none"
+          "gtr2": "nylon"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1990년대 이후 영국·펀자브 · 9곡",
+        "confidence": "low",
+        "evidenceBasis": "2000년대 이후 영국·남아시아 디아스포라 · 0곡",
         "distinguishes": [
           {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
             "from": "UK Bhangra",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
+            "axis": "timbre",
+            "note": "선율 풀이 같다. 갈리는 것은 편성·음색이다"
           }
         ],
         "poolDecision": "own",
@@ -6233,173 +3282,7 @@
           "afr_aaab",
           "wor_aaba"
         ],
-        "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-      }
-    },
-    {
-      "preset": "UK Bhangra",
-      "sub": "남아시아",
-      "cat": "B",
-      "stage": "mine",
-      "melody": {
-        "density": {
-          "min": 3,
-          "max": 5
-        },
-        "leapRatio": {
-          "min": 0.2,
-          "max": 0.45
-        },
-        "contour": "arch",
-        "range": {
-          "min": 4,
-          "max": 6
-        },
-        "degrees": [
-          0,
-          2,
-          4,
-          1
-        ],
-        "rhythm": "offbeat16",
-        "cadence": {
-          "lastBarEmpty": false,
-          "endDegree": 0
-        },
-        "repetition": "high",
-        "voicing": "single",
-        "scale": "Minor Pentatonic"
-      },
-      "harmony": {
-        "chordType": "triad",
-        "comping": "trap_pad"
-      },
-      "bass": {
-        "role": "root",
-        "octaveJump": false,
-        "gate": "short",
-        "kickRelation": "locked",
-        "glide": "none"
-      },
-      "ensemble": {
-        "lead": "gtr",
-        "off": [],
-        "roles": {
-          "keys": "ep",
-          "keys2": "strings",
-          "gtr": "sitar",
-          "gtr2": "none"
-        },
-        "lvlHint": {}
-      },
-      "meta": {
-        "confidence": "high",
-        "evidenceBasis": "1990년대 이후 영국·펀자브 · 9곡",
-        "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Tropical Bass",
-            "axis": "melody",
-            "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "none",
-            "note": "선율로 구분되지 않는다. 같은 풀이 맞다"
-          }
-        ],
-        "poolDecision": "share",
-        "shareWith": "Desi Beats",
-        "pool": [
-          "afr_aabb",
-          "afr_aaab",
-          "wor_aaba"
-        ],
-        "note": "시타르에 돌 리듬. 132~133 BPM 으로 서아시아 형제보다 20 빠르고 16분으로 쪼갠다"
+        "note": "**대표곡이 0곡이다.** «desi 는 장르가 아니라 문화 정체성» 이라는 출처가 곡을 하나도 들지 않고, 11-regional.md ※1 도 같은 판단이다. 이전 판의 «확신도 high · 9곡» 은 근거가 없었다 — 값은 UK 방그라의 인도 하우스 해석을 빌려 둔 것이고 그렇게 적어 둔다"
       }
     },
     {
@@ -6451,107 +3334,16 @@
         "off": [],
         "roles": {
           "keys": "bell",
-          "keys2": "steelpan",
-          "gtr": "clean",
+          "keys2": "pad",
+          "gtr": "none",
           "gtr2": "none"
         },
         "lvlHint": {}
       },
       "meta": {
-        "confidence": "medium",
-        "evidenceBasis": "2010년대 인터넷·중남미 · 8곡",
-        "distinguishes": [
-          {
-            "from": "EDM-pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Dance-pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Freestyle",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Hyperpop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Electropop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Retrowave",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Traditional Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Brill Building",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Teen Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Indie Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Chamber Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "City Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Soft Rock",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "J-pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Enka",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Latin Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Arabic Pop",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          },
-          {
-            "from": "Desi Beats",
-            "axis": "melody",
-            "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
-          }
-        ],
+        "confidence": "low",
+        "evidenceBasis": "2000~2010년대 앙골라·포르투갈 · 3곡",
+        "distinguishes": [],
         "poolDecision": "own",
         "shareWith": null,
         "pool": [
@@ -6559,7 +3351,7 @@
           "car_aaba",
           "lat_abab"
         ],
-        "note": "스틸팬에 카리브 오프비트. 팝 계열에 있지만 어휘는 카리브 쪽이다"
+        "note": "방법론의 이름이라 곡 단위 장르 태그가 드물고, 확인된 3곡은 모두 한 팀(Buraka Som Sistema)의 쿠두루다. 선율 악기가 주인공인 사례가 없어 스틸팬을 빼고 트레실로 타악을 넣었다"
       }
     }
   ]

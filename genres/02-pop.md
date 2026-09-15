@@ -1077,27 +1077,30 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 > 엔진 11종과 그 이유는 [00-instruments.md](00-instruments.md) §7-2.
 
 
+> 2026-09-16 에 이 표의 값을 **대표곡 기준으로 다시 맞췄습니다.** 바꾼 칸과 이유는
+> 아래 «이 곡들로 고친 것» 표에 있습니다. 박자는 [../patterns/02-pop.md](../patterns/02-pop.md) 가 원본입니다.
+
 ### Dance-pop 계보
 
 **드럼 — 킷 엔진 · 튠**
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| Eurodance | 140 | 0 | `punch` | `crack` | `spread` | `metal` | `synth` | -1/1/0/2 |
-| ·Dance-pop | 124 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Freestyle | 120 | 0 | `deep` | `tight` | `spread` | `metal` | `synth` | -4/0/-4/0 |
-| ·Euro-pop | 130 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
-| ·EDM-pop | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| Eurodance | 130 | 0 | `punch` | `crack` | `spread` | `metal` | `synth` | -1/1/0/2 |
+| ·Dance-pop | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Freestyle | 116 | 0 | `deep` | `tight` | `spread` | `metal` | `synth` | -4/0/-4/0 |
+| ·Euro-pop | 105 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
+| ·EDM-pop | 128 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Eurodance | `pluckbs` | 36 | 44 | 0 | 58 | 46 | 145 | 5400 | 52 | 32 | 62 | Natural Minor |
-| ·Dance-pop | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Freestyle | `pluckbs` | 24 | 420 | 36 | 18 | 32 | 78 | 2500 | 70 | 32 | 28 | Major |
-| ·Euro-pop | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·EDM-pop | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Dance-pop | `pluckbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Freestyle | `acid` | 24 | 80 | 0 | 18 | 32 | 78 | 2500 | 70 | 32 | 28 | Major |
+| ·Euro-pop | `square` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·EDM-pop | `reese` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### Synth-pop 계보
 
@@ -1105,10 +1108,10 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| Hyperpop | 155 | 0 | `tight` | `crack` | `spread` | `tick` | `synth` | 2/5/4/5 |
-| ·Electropop | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| Hyperpop | 145 | 0 | `tight` | `crack` | `spread` | `tick` | `synth` | 2/5/4/5 |
+| ·Electropop | 122 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·New Romantic | 125 | 0 | `wood` | `tight` | `spread` | `noise` | `synth` | -2/0/-2/0 |
-| ·Retrowave | 99 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Retrowave | 130 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 | ·Digicore | 160 | 0 | `tight` | `crack` | `spread` | `tick` | `synth` | -2/-4/-2/-2 |
 
 **베이스**
@@ -1117,9 +1120,9 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Hyperpop | `square` | 36 | 120 | 30 | 70 | 66 | 140 | 6400 | 56 | 52 | 72 | Major |
 | ·Electropop | `square` | 36 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·New Romantic | `square` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Retrowave | `square` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Digicore | `square` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·New Romantic | `organbs` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Retrowave | `moog` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Digicore | `s808` | 36 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 뿌리
 
@@ -1127,8 +1130,8 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Traditional Pop | 90 | 50 | `jazz` | `brush` | `spread` | `sizzle` | `wood` | -2/0/-2/0 |
-| ·Brill Building | 125 | 0 | `punch` | `tight` | `tight` | `metal` | `synth` | -2/0/-2/0 |
+| ·Traditional Pop | 82 | 0 | `jazz` | `brush` | `spread` | `sizzle` | `wood` | -2/0/-2/0 |
+| ·Brill Building | 125 | 0 | `punch` | `tight` | `tight` | `metal` | `wood` | -2/0/-2/0 |
 
 **베이스**
 
@@ -1143,22 +1146,22 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·Teen Pop | 118 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
+| ·Teen Pop | 105 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
 | ·Bedroom Pop | 95 | 12 | `punch` | `lofi` | `spread` | `noise` | `synth` | -2/-4/-2/-2 |
-| ·Indie Pop | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Indie Pop | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `bongo` | -2/0/-2/0 |
 | ·Bubblegum | 125 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
-| ·Twee Pop | 130 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Chamber Pop | 105 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Baroque Pop | 110 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Twee Pop | 130 | 0 | `punch` | `tight` | `spread` | `metal` | `wood` | -2/0/-2/0 |
+| ·Chamber Pop | 95 | 0 | `wood` | `rim` | `spread` | `tick` | `wood` | -2/0/-2/0 |
+| ·Baroque Pop | 110 | 0 | `punch` | `tight` | `spread` | `tick` | `wood` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Teen Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Bedroom Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Teen Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Bedroom Pop | `tapewound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Indie Pop | `finger` | 24 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Bubblegum | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Bubblegum | `pick` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Twee Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Chamber Pop | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Baroque Pop | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
@@ -1169,15 +1172,15 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·City Pop | 112 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Soft Rock | 110 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
-| ·AOR | 115 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·City Pop | 106 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Soft Rock | 110 | 0 | `wood` | `tight` | `spread` | `noise` | `conga` | -2/0/-2/0 |
+| ·AOR | 112 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
 
 **베이스**
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·City Pop | `slap` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
+| ·City Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Dorian |
 | ·Soft Rock | `flatwound` | 24 | 120 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 22 | Major |
 | ·AOR | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
@@ -1187,14 +1190,14 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| ·J-pop | 135 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Shibuya-kei | 115 | 16 | `wood` | `body` | `tight` | `tick` | `synth` | -2/0/-2/0 |
+| ·J-pop | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Shibuya-kei | 121 | 16 | `wood` | `body` | `tight` | `tick` | `synth` | -2/0/-2/0 |
 | ·Enka | 85 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -5/0/-5/0 |
 | ·Mandopop | 95 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Schlager | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
-| ·Kayōkyoku | 100 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
+| ·Schlager | 124 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/2/-2/2 |
+| ·Kayōkyoku | 95 | 0 | `wood` | `tight` | `spread` | `noise` | `wood` | -2/0/-2/0 |
 | ·Cantopop | 100 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
-| ·Latin Pop | 110 | 0 | `punch` | `tight` | `spread` | `metal` | `synth` | -2/0/-2/0 |
+| ·Latin Pop | 120 | 0 | `punch` | `tight` | `spread` | `metal` | `conga` | -2/0/-2/0 |
 
 **베이스**
 
@@ -1202,12 +1205,237 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ·J-pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Shibuya-kei | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
-| ·Enka | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Enka | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Mandopop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Schlager | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Kayōkyoku | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Kayōkyoku | `flatwound` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Cantopop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Latin Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Latin Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+
+---
+
+## 대표곡 — 웹으로 확인한 곡 (2026-09-16)
+
+장르마다 곡 3~5곡을 골라 **곡이 실재하는지, 출처가 그 장르로 분류했는지**를 웹에서
+확인한 것만 적었습니다. 확인하지 못한 후보는 버렸습니다(표에 없습니다).
+
+> - **출처** 칸은 장르 분류를 확인한 페이지입니다. 곡 문서가 없어 앨범·장르 문서·비평으로
+>   대신한 줄이 있습니다.
+> - **1위** 는 그 곡이 1위에 오른 차트를 뜻합니다 — 미국 곡은 빌보드 Hot 100,
+>   일본·한국·중화권 곡은 자국 차트(오리콘 등)입니다. 같은 «1위» 라도 무게가 다릅니다.
+> - **BPM · 조성**은 출처가 있는 값만 적었습니다. 대부분 자동 분석이라 반 속도·두 배로
+>   읽힌 곡이 있어 괄호에 체감값을 함께 두었습니다. 장조/단조 판정은 신뢰도가 낮습니다.
+> - **곡의 선율·리프는 옮겨 적지 않았습니다.** 프리셋은 이 곡들의 성질 — 템포 범위 · 건반 유무 ·
+>   기타 음색 · 베이스 역할 · 드럼 골격 — 에만 맞췄습니다.
+> - **Desi Beats 는 한 곡도 못 채웠습니다.** «desi 는 장르가 아니라 문화 정체성» 이라는 출처가
+>   곡을 하나도 들지 않습니다 — [11-regional.md](11-regional.md) ※1 과 같은 결론입니다.
+>   그래서 이 프리셋의 프로파일 확신도를 `low` 로 내리고 근거를 «0곡» 으로 적었습니다.
+> - 앱의 «지금 장르» 줄과 근거 패널이 이 표를 보여 줍니다(`tools/build-refdata.mjs` → `src/data/references.js`).
+>   **표를 고쳤으면 그 스크립트를 다시 돌리십시오.**
+
+| 프리셋 | 곡 | 아티스트 | 연도 | 구분 | BPM | 조성 | 출처 |
+|---|---|---|---|---|---|---|---|
+| Synthwave | Nightcall | Kavinsky (feat. Lovefoxxx) | 2010 | 대표 | 91 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Nightcall_(song)) |
+| Synthwave | A Real Hero | College & Electric Youth | 2010 | 대표 | 112 | B♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Synthwave) |
+| Synthwave | Blinding Lights | The Weeknd | 2019 | 1위 | 171 (반속 86) | F 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Blinding_Lights) |
+| Eurodance | What Is Love | Haddaway | 1993 | 대표 | 123 | G 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/What_Is_Love_(Haddaway_song)) |
+| Eurodance | Rhythm Is a Dancer | Snap! | 1992 | 대표 | 124 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Rhythm_Is_a_Dancer) |
+| Eurodance | No Limit | 2 Unlimited | 1993 | 대표 | 144 | E♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/No_Limit_(2_Unlimited_song)) |
+| Eurodance | The Rhythm of the Night | Corona | 1993 | 대표 | 128 | F 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/The_Rhythm_of_the_Night) |
+| Eurodance | Believe | Cher | 1998 | 1위 | 133 | F♯ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Believe_(Cher_song)) |
+| Hyperpop | Money Machine | 100 gecs | 2019 | 대표 | 99 (배속 198) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Money_Machine_(song)) |
+| Hyperpop | Immaterial | SOPHIE | 2018 | 대표 | 138 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Immaterial_(song)) |
+| Hyperpop | Vroom Vroom | Charli XCX | 2016 | 대표 | 151 | B | [wikipedia.org](https://en.wikipedia.org/wiki/Vroom_Vroom_(song)) |
+| Hyperpop | SugarCrash! | ElyOtto | 2020 | 대표 | 98 (배속 196) | C | [wikipedia.org](https://en.wikipedia.org/wiki/SugarCrash!) |
+| Traditional Pop | Strangers in the Night | Frank Sinatra | 1966 | 1위 | 91 | F 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Strangers_in_the_Night) |
+| Traditional Pop | Everybody Loves Somebody | Dean Martin | 1964 | 1위 | 81 | E♭ (출처는 단조 표기) | [wikipedia.org](https://en.wikipedia.org/wiki/Everybody_Loves_Somebody) |
+| Traditional Pop | In the Wee Small Hours of the Morning | Frank Sinatra | 1955 | 대표 | 69 | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/In_the_Wee_Small_Hours_of_the_Morning) |
+| Dance-pop | Can't Get You Out of My Head | Kylie Minogue | 2001 | 대표 | 125 | 자료 갈림 | [wikipedia.org](https://en.wikipedia.org/wiki/Can%27t_Get_You_Out_of_My_Head) |
+| Dance-pop | Into the Groove | Madonna | 1985 | 대표 | 116 | C 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Into_the_Groove) |
+| Dance-pop | Just Dance | Lady Gaga feat. Colby O'Donis | 2008 | 대표 | 119 | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Just_Dance_(song)) |
+| Dance-pop | I Wanna Dance with Somebody (Who Loves Me) | Whitney Houston | 1987 | 1위 | 119 | — | [wikipedia.org](https://en.wikipedia.org/wiki/I_Wanna_Dance_with_Somebody_(Who_Loves_Me)) |
+| Dance-pop | Vogue | Madonna | 1990 | 1위 | 116 | A♭ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Vogue_(Madonna_song)) |
+| Freestyle | Let the Music Play | Shannon | 1983 | 대표 | 116 | C 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Let_the_Music_Play_(Shannon_song)) |
+| Freestyle | I Wonder If I Take You Home | Lisa Lisa & Cult Jam with Full Force | 1985 | 대표 | 115 | G♭ 단조 (갈림) | [wikipedia.org](https://en.wikipedia.org/wiki/I_Wonder_If_I_Take_You_Home) |
+| Freestyle | Show Me | The Cover Girls | 1986 | 대표 | 113 | C 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Show_Me_(The_Cover_Girls_song)) |
+| Freestyle | Come Go with Me | Exposé | 1987 | 대표 | 120 | G 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Come_Go_with_Me_(Expos%C3%A9_song)) |
+| Freestyle | Head to Toe | Lisa Lisa & Cult Jam | 1987 | 1위 | 114 | D 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Head_to_Toe_(Lisa_Lisa_and_Cult_Jam_song)) |
+| Electropop | Poker Face | Lady Gaga | 2008 | 1위 | 120 | G♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Poker_Face_(Lady_Gaga_song)) |
+| Electropop | Bad Guy | Billie Eilish | 2019 | 1위 | 135 | G 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Bad_Guy_(Billie_Eilish_song)) |
+| Electropop | Bulletproof | La Roux | 2009 | 대표 | 123 | E♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Bulletproof_(La_Roux_song)) |
+| Electropop | Dancing On My Own | Robyn | 2010 | 대표 | 117 | G♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Dancing_On_My_Own) |
+| Teen Pop | ...Baby One More Time | Britney Spears | 1998 | 1위 | 93 | C 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/...Baby_One_More_Time_(song)) |
+| Teen Pop | Call Me Maybe | Carly Rae Jepsen | 2012 | 1위 | 120 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Call_Me_Maybe) |
+| Teen Pop | Oops!... I Did It Again | Britney Spears | 2000 | 대표 | 95 | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Oops!..._I_Did_It_Again_(song)) |
+| Teen Pop | Tearin' Up My Heart | NSYNC | 1997 | 대표 | 110 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Tearin'_Up_My_Heart) |
+| Bedroom Pop | Pretty Girl | Clairo | 2017 | 대표 | 112 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Pretty_Girl_(Clairo_song)) |
+| Bedroom Pop | Everytime | boy pablo | 2017 | 대표 | 204 (체감 102) | D | [boypablo.bandcamp.com](https://boypablo.bandcamp.com/track/everytime) |
+| Bedroom Pop | Drivers License | Olivia Rodrigo | 2021 | 1위 | 144 (체감 72) | B♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Drivers_License_(song)) |
+| Bedroom Pop | Bad Habit | Steve Lacy | 2022 | 1위 | 84 | F 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Bad_Habit_(Steve_Lacy_song)) |
+| Indie Pop | Young Folks | Peter Bjorn and John | 2006 | 대표 | 138 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Young_Folks) |
+| Indie Pop | 1234 | Feist | 2007 | 대표 | 110 | D | [wikipedia.org](https://en.wikipedia.org/wiki/1234_(Feist_song)) |
+| Indie Pop | Pumped Up Kicks | Foster the People | 2010 | 대표 | 128 | F | [wikipedia.org](https://en.wikipedia.org/wiki/Pumped_Up_Kicks) |
+| Indie Pop | Heat Waves | Glass Animals | 2020 | 1위 | 81 | B 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Heat_Waves) |
+| City Pop | Plastic Love | 竹内まりや Mariya Takeuchi | 1984 | 대표 | 103 | D (모드 미표기) | [wikipedia.org](https://en.wikipedia.org/wiki/City_pop) |
+| City Pop | 真夜中のドア〜Stay With Me | 松原みき Miki Matsubara | 1979 | 대표 | 108 | F 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/City_pop) |
+| City Pop | Ride on Time | 山下達郎 Tatsuro Yamashita | 1980 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ride_on_Time_(Tatsuro_Yamashita_song)) |
+| City Pop | Sparkle | 山下達郎 Tatsuro Yamashita | 1982 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/For_You_(Tatsuro_Yamashita_album)) |
+| J-pop | Automatic | 宇多田ヒカル (Utada Hikaru) | 1998 | 대표 | 95 (배속 190) | C♯ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Automatic/Time_Will_Tell) |
+| J-pop | 世界に一つだけの花 (Sekai ni Hitotsu Dake no Hana) | SMAP | 2003 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sekai_ni_Hitotsu_Dake_no_Hana) |
+| J-pop | Lemon | 米津玄師 (Kenshi Yonezu) | 2018 | 1위 | 87 | B | [wikipedia.org](https://en.wikipedia.org/wiki/Lemon_(Kenshi_Yonezu_song)) |
+| J-pop | 夜に駆ける (Yoru ni Kakeru) | YOASOBI | 2019 | 1위 | 130 | A♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Yoru_ni_Kakeru) |
+| Shibuya-kei | 恋とマシンガン (Koi to Mashingan) | フリッパーズ・ギター (Flipper's Guitar) | 1990 | 대표 | 121 | A 장조 | [wikipedia.org](https://ja.wikipedia.org/wiki/恋とマシンガン) |
+| Shibuya-kei | Sweet Soul Revue | ピチカート・ファイヴ (Pizzicato Five) | 1993 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Shibuya-kei) |
+| Shibuya-kei | 東京は夜の七時 (Tōkyō wa Yoru no Shichiji) | ピチカート・ファイヴ (Pizzicato Five) | 1993 | 대표 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/東京は夜の七時) |
+| Shibuya-kei | STAR FRUITS SURF RIDER | Cornelius | 1997 | 대표 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/STAR_FRUITS_SURF_RIDER) |
+| Enka | 星影のワルツ (Hoshikage no Warutsu) | 千昌夫 (Masao Sen) | 1966 | 1위 | — | 3/4 왈츠 | [wikipedia.org](https://ja.wikipedia.org/wiki/星影のワルツ) |
+| Enka | 北国の春 (Kitaguni no Haru) | 千昌夫 (Masao Sen) | 1977 | 대표 | — | 요나누키 **장조** | [wikipedia.org](https://ja.wikipedia.org/wiki/北国の春) |
+| Enka | 津軽海峡・冬景色 (Tsugaru Kaikyō Fuyu-geshiki) | 石川さゆり (Sayuri Ishikawa) | 1977 | 대표 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/津軽海峡・冬景色) |
+| Enka | 天城越え (Amagi-goe) | 石川さゆり (Sayuri Ishikawa) | 1986 | 1위 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/%E5%A4%A9%E5%9F%8E%E8%B6%8A%E3%81%88_(%E6%9B%B2)) |
+| Trot | 목포의 눈물 (Mokpo-ui Nunmul) | 이난영 | 1935 | 대표 | — | — | [wikipedia.org](https://ko.wikipedia.org/wiki/목포의_눈물) |
+| Trot | 동백 아가씨 (Dongbaek Agassi) | 이미자 | 1964 | 대표 | — | — | [wikipedia.org](https://ko.wikipedia.org/wiki/동백_아가씨) |
+| Trot | 돌아와요 부산항에 (Dorawayo Busanhang-e) | 조용필 | 1976 | 대표 | — | — | [wikipedia.org](https://ko.wikipedia.org/wiki/트로트) |
+| Trot | 어머나 (Eomeona) | 장윤정 | 2004 | 대표 | — | — | [wikipedia.org](https://ko.wikipedia.org/wiki/%EC%96%B4%EB%A8%B8%EB%82%98) |
+| Trot | 사랑의 배터리 (Sarang-ui Baeteori) | 홍진영 | 2009 | 대표 | — | — | [wikipedia.org](https://ko.wikipedia.org/wiki/사랑의_배터리) |
+| Mandopop | 月亮代表我的心 (The Moon Represents My Heart) | 鄧麗君 (Teresa Teng) | 1977 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Moon_Represents_My_Heart) |
+| Mandopop | 甜蜜蜜 (Tiánmìmì) | 鄧麗君 (Teresa Teng) | 1979 | 대표 | — | — | [wikipedia.org](https://zh.wikipedia.org/zh-tw/%E7%94%9C%E8%9C%9C%E8%9C%9C_(%E9%84%A7%E9%BA%97%E5%90%9B%E6%AD%8C%E6%9B%B2)) |
+| Mandopop | 吻別 (The Goodbye Kiss) | 張學友 (Jacky Cheung) | 1993 | 대표 | — | G♭ 장조 | [wikipedia.org](https://zh.wikipedia.org/wiki/吻別_(歌曲)) |
+| Mandopop | 晴天 (Qíngtiān) | 周杰倫 (Jay Chou) | 2003 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ye_Hui_Mei) |
+| Arabic Pop | تملي معاك · Tamally Maak | عمرو دياب · Amr Diab | 2000 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Tamally_Maak) |
+| Arabic Pop | آه ونص · Ah W Noss | نانسي عجرم · Nancy Ajram | 2004 | 대표 | 142 (체감 71) | G | [wikipedia.org](https://en.wikipedia.org/wiki/Ah_W_Noss) |
+| Arabic Pop | أخاصمك آه · Akhasmak Ah | نانسي عجرم · Nancy Ajram | 2002 | 대표 | 151 (체감 75) | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Ya_Salam) |
+| Arabic Pop | يا طبطب ودلع · Ya Tabtab Wa Dallaa | نانسي عجرم · Nancy Ajram | 2006 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ya_Tabtab...Wa_Dallaa) |
+| Schlager | Atemlos durch die Nacht | Helene Fischer | 2013 | 대표 | 128 | B 장조 | [wikipedia.org](https://de.wikipedia.org/wiki/Atemlos_durch_die_Nacht) |
+| Schlager | Ein bißchen Frieden | Nicole | 1982 | 대표 | 118 | F♯ 장조 | [wikipedia.org](https://de.wikipedia.org/wiki/Ein_bißchen_Frieden) |
+| Schlager | Griechischer Wein | Udo Jürgens | 1974 | 대표 | 148 (체감 74) | C 단조 | [wikipedia.org](https://de.wikipedia.org/wiki/Griechischer_Wein) |
+| Schlager | Ganz in Weiß | Roy Black | 1965 | 대표 | — | — | [schlagerprofis.de](https://schlagerprofis.de/1532-2/) |
+| Schlager | Ein Bett im Kornfeld | Jürgen Drews | 1976 | 대표 | — | — | [wikipedia.org](https://de.wikipedia.org/wiki/Ein_Bett_im_Kornfeld) |
+| Turbo-folk | Sitnije, Cile, sitnije | Лепа Брена · Lepa Brena & Slatki Greh | 1983 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sitnije,_Cile,_sitnije) |
+| Turbo-folk | Moja štikla | Severina | 2006 | 대표 | 106 | E 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Moja_%C5%A1tikla) |
+| Turbo-folk | Crveno | Цеца · Ceca | 1999 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ceca_2000) |
+| Turbo-folk | Kad bi bio ranjen | Цеца · Ceca | 1996 | 대표 | — | — | [scalar.usc.edu](https://scalar.usc.edu/works/turbofolk/ceca-three-decades-of-fame-and-the-power-of-a-brand) |
+| Brill Building | Will You Love Me Tomorrow | The Shirelles | 1960 | 1위 | 139 | F (모드 미표기) | [wikipedia.org](https://en.wikipedia.org/wiki/Will_You_Love_Me_Tomorrow) |
+| Brill Building | The Loco-Motion | Little Eva | 1962 | 1위 | 129 | E♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Brill_Building) |
+| Brill Building | Breaking Up Is Hard to Do (1962 원곡) | Neil Sedaka | 1962 | 1위 | 117 | G♯/A♭ (출처는 단조 표기) | [wikipedia.org](https://en.wikipedia.org/wiki/Brill_Building) |
+| Soft Rock | (They Long to Be) Close to You | Carpenters | 1970 | 1위 | 89 | C 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/(They_Long_to_Be)_Close_to_You) |
+| Soft Rock | Dreams | Fleetwood Mac | 1977 | 1위 | 120 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Dreams_(Fleetwood_Mac_song)) |
+| Soft Rock | It's Too Late | Carole King | 1971 | 대표 | 103 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Soft_rock) |
+| AOR | Africa | Toto | 1982 | 1위 | 92 | A 장조 | [loudersound.com](https://www.loudersound.com/features/50-greatest-aor-albums) |
+| AOR | Rosanna | Toto | 1982 | 대표 | 82 (배속 164) | G (출처는 단조 표기) | [wikipedia.org](https://en.wikipedia.org/wiki/Toto_IV) |
+| AOR | Don't Stop Believin' | Journey | 1981 | 대표 | 118 | E 장조 | [loudersound.com](https://www.loudersound.com/features/50-greatest-aor-albums) |
+| AOR | Waiting for a Girl Like You | Foreigner | 1981 | 대표 | 101 | — | [melodicrock.nl](https://www.melodicrock.nl/adult-oriented-rock-aor-general-indication-of-the-genre/) |
+| New Romantic | Fade to Grey | Visage | 1980 | 대표 | 113 | D 단조 | [thatericalper.com](https://www.thatericalper.com/2025/05/26/the-best-songs-from-the-new-romantic-era/) |
+| New Romantic | Vienna | Ultravox | 1981 | 대표 | 81 (배속 162) | — | [thatericalper.com](https://www.thatericalper.com/2025/05/26/the-best-songs-from-the-new-romantic-era/) |
+| New Romantic | To Cut a Long Story Short | Spandau Ballet | 1980 | 대표 | 142 | — | [thatericalper.com](https://www.thatericalper.com/2025/05/26/the-best-songs-from-the-new-romantic-era/) |
+| New Romantic | Planet Earth | Duran Duran | 1981 | 대표 | 131 | C | [thatericalper.com](https://www.thatericalper.com/2025/05/26/the-best-songs-from-the-new-romantic-era/) |
+| Retrowave | Turbo Killer | Carpenter Brut | 2015 | 대표 | 147 | F 단조 | [thesoundatlas.org](https://thesoundatlas.org/discover/retrowave) |
+| Retrowave | Tech Noir | Gunship | 2015 | 대표 | 86 (배속 172) | B♭ | [thesoundatlas.org](https://thesoundatlas.org/discover/retrowave) |
+| Retrowave | Ocean Drive | Miami Nights 1984 | 2012 | 대표 | 130 | 단조 | [thesoundatlas.org](https://thesoundatlas.org/discover/retrowave) |
+| Digicore | Pressure | Yungster Jack & David Shawty | 2020 | 대표 | 85 (체감 170) | C♯ | [wikipedia.org](https://en.wikipedia.org/wiki/Pressure_(Yungster_Jack_and_David_Shawty_song)) |
+| Digicore | NEVER MET! | CMTEN feat. Glitch Gum | 2020 | 대표 | 160 (반속 80) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Digicore) |
+| Digicore | homeswitcher | dltzk feat. kmoe | 2021 | 대표 | — | — | [nobells.blog](https://nobells.blog/eoy_2021-digicore-takes-shape/) |
+| Digicore | nowhere to go | juno feat. dltzk | 2021 | 대표 | — | — | [nobells.blog](https://nobells.blog/eoy_2021-digicore-takes-shape/) |
+| Euro-pop | The Sign | Ace of Base | 1993 | 1위 | 97 | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Sign_(song)) |
+| Euro-pop | All That She Wants | Ace of Base | 1992 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/All_That_She_Wants) |
+| Euro-pop | Dancing Queen | ABBA | 1976 | 대표 | 100 | A 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Dancing_Queen) |
+| Euro-pop | Barbie Girl | Aqua | 1997 | 대표 | 130 | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Barbie_Girl) |
+| Euro-pop | Gimme! Gimme! Gimme! (A Man After Midnight) | ABBA | 1979 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Gimme!_Gimme!_Gimme!_(A_Man_After_Midnight)) |
+| EDM-pop | We Found Love | Rihanna feat. Calvin Harris | 2011 | 1위 | 128 | G♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/We_Found_Love) |
+| EDM-pop | I Gotta Feeling | The Black Eyed Peas | 2009 | 1위 | 128 | G 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/I_Gotta_Feeling) |
+| EDM-pop | Titanium | David Guetta feat. Sia | 2011 | 대표 | 126 | E♭ 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Titanium_(David_Guetta_song)) |
+| EDM-pop | Wake Me Up | Avicii | 2013 | 대표 | 124 | B 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Wake_Me_Up_(Avicii_song)) |
+| EDM-pop | Summer | Calvin Harris | 2014 | 대표 | 128 | G 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Summer_(Calvin_Harris_song)) |
+| Bubblegum | Sugar, Sugar | The Archies | 1969 | 1위 | 122 | D 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Sugar,_Sugar) |
+| Bubblegum | Dizzy | Tommy Roe | 1969 | 1위 | 105 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Dizzy_(Tommy_Roe_song)) |
+| Bubblegum | Simon Says | 1910 Fruitgum Company | 1968 | 대표 | 135 | E | [wikipedia.org](https://en.wikipedia.org/wiki/Simon_Says_(1910_Fruitgum_Company_song)) |
+| Bubblegum | Yummy Yummy Yummy | Ohio Express | 1968 | 대표 | 131 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Yummy_Yummy_Yummy) |
+| Twee Pop | Indian Summer | Beat Happening | 1988 | 대표 | 140 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Look_Around_(Beat_Happening_album)) |
+| Twee Pop | Talulah Gosh | Talulah Gosh | 1987 | 대표 | 132 | — | [themicmagazine.uk](https://www.themicmagazine.uk/post/a-ten-song-introduction-to-twee-pop) |
+| Twee Pop | Atta Girl | Heavenly | 1993 | 대표 | 126 | E | [themicmagazine.uk](https://www.themicmagazine.uk/post/a-ten-song-introduction-to-twee-pop) |
+| Twee Pop | Puzzle Pieces | Tiger Trap | 1993 | 대표 | 141 | D | [wikipedia.org](https://en.wikipedia.org/wiki/Tiger_Trap_(album)) |
+| Chamber Pop | Yesterday | The Beatles | 1965 | 1위 | 97 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Yesterday_(Beatles_song)) |
+| Chamber Pop | Wonderful (Smile 판) | The Beach Boys | 1966 | 대표 | 79 | E♭ | [wikipedia.org](https://en.wikipedia.org/wiki/Wonderful_(Beach_Boys_song)) |
+| Chamber Pop | Two Weeks | Grizzly Bear | 2009 | 대표 | 160 (체감 80) | F | [wikipedia.org](https://en.wikipedia.org/wiki/Two_Weeks_(Grizzly_Bear_song)) |
+| Chamber Pop | The Boy with the Arab Strap | Belle and Sebastian | 1998 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Boy_with_the_Arab_Strap) |
+| Chamber Pop | Lose You to Love Me | Selena Gomez | 2019 | 1위 | 102 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Lose_You_to_Love_Me) |
+| Baroque Pop | Walk Away Renée | The Left Banke | 1966 | 대표 | 118 | A | [wikipedia.org](https://en.wikipedia.org/wiki/Walk_Away_Renée) |
+| Baroque Pop | God Only Knows | The Beach Boys | 1966 | 대표 | 117 | E 와 A 사이 | [wikipedia.org](https://en.wikipedia.org/wiki/Baroque_pop) |
+| Baroque Pop | Eleanor Rigby | The Beatles | 1966 | 대표 | 137 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Eleanor_Rigby) |
+| Baroque Pop | Penny Lane | The Beatles | 1967 | 1위 | 114 | B 장조 (절) | [wikipedia.org](https://en.wikipedia.org/wiki/Penny_Lane) |
+| Baroque Pop | Ruby Tuesday | The Rolling Stones | 1967 | 1위 | 105 | C | [wikipedia.org](https://en.wikipedia.org/wiki/Ruby_Tuesday_(song)) |
+| Kayōkyoku | 上を向いて歩こう (Sukiyaki) | 坂本九 (Kyu Sakamoto) | 1961 | 1위 | 146 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sukiyaki_(song)) |
+| Kayōkyoku | ブルー・ライト・ヨコハマ (Burū Raito Yokohama) | いしだあゆみ (Ayumi Ishida) | 1968 | 1위 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/ブルー・ライト・ヨコハマ) |
+| Kayōkyoku | UFO | ピンク・レディー (Pink Lady) | 1977 | 1위 | 163 (체감 82) | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/UFO_(Pink_Lady_song)) |
+| Kayōkyoku | 川の流れのように (Kawa no Nagare no Yō ni) | 美空ひばり (Hibari Misora) | 1989 | 1위 | — | — | [wikipedia.org](https://ja.wikipedia.org/wiki/川の流れのように) |
+| Cantopop | 上海灘 (The Bund) | 葉麗儀 (Frances Yip) | 1980 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Bund_(song)) |
+| Cantopop | 風繼續吹 (The Wind Blows On) | 張國榮 (Leslie Cheung) | 1982 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Leslie_Cheung) |
+| Cantopop | 月半小夜曲 (Half Moon Serenade) | 李克勤 (Hacken Lee) | 1987 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Hacken_Lee) |
+| Cantopop | 千千闋歌 (Cin-cin Kyut Go) | 陳慧嫻 (Priscilla Chan) | 1989 | 1위 | — | — | [wikipedia.org](https://zh.wikipedia.org/wiki/千千闋歌) |
+| Latin Pop | Livin' la Vida Loca | Ricky Martin | 1999 | 1위 | 140 (체감 89) | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Livin%27_la_Vida_Loca) |
+| Latin Pop | Bailamos | Enrique Iglesias | 1999 | 1위 | 100 | A 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Bailamos) |
+| Latin Pop | Conga | Miami Sound Machine | 1985 | 대표 | 123 | E 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Conga_(song)) |
+| Latin Pop | Whenever, Wherever | Shakira | 2001 | 대표 | 108 | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Whenever,_Wherever) |
+| Rumba Flamenca | Bamboléo | Gipsy Kings | 1987 | 대표 | 120 | F♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Bambol%C3%A9o) |
+| Rumba Flamenca | Djobi Djoba | Gipsy Kings | 1987 | 대표 | 108 | F 장조 | [wikipedia.org](https://en.wikipedia.org/wiki/Djobi_Djoba) |
+| Rumba Flamenca | Borriquito | Peret | 1971 | 대표 | 96 (체감 192) | C♯ 단조 | [wikipedia.org](https://en.wikipedia.org/wiki/Peret) |
+| Rumba Flamenca | Me quedo contigo | Los Chunguitos | 1980 | 대표 | — | — | [sites.google.com](https://sites.google.com/site/composguitar/ritmos-y-estilos/espana/flamenco/rumba/me-quedo-contigo) |
+| C-pop | 毛毛雨 (Drizzle) | 黎明暉 (Li Minghui) | 1927 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/C-pop) |
+| C-pop | 青花瓷 (Blue and White Porcelain) | 周杰倫 (Jay Chou) | 2007 | 대표 | — | 5음계 宮調式 | [wikipedia.org](https://en.wikipedia.org/wiki/Blue_and_White_Porcelain) |
+| C-pop | 最炫民族風 (Zuì Xuàn Mínzú Fēng) | 鳳凰傳奇 (Phoenix Legend) | 2009 | 대표 | — | — | [wikipedia.org](https://zh.wikipedia.org/wiki/最炫民族风) |
+| C-pop | 小蘋果 (Little Apple) | 筷子兄弟 (Chopstick Brothers) | 2014 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Little_Apple_(song)) |
+| Tropical Bass | Sound of Kuduro | Buraka Som Sistema ft. M.I.A. · Saborosa · Puto Prata | 2008 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sound_of_Kuduro) |
+| Tropical Bass | Kalemba (Wegue Wegue) | Buraka Som Sistema | 2008 | 대표 | — | — | [remezcla.com](https://remezcla.com/lists/music/5-buraka-som-sistema-moments-that-changed-the-game/) |
+| Tropical Bass | Stoopid | Buraka Som Sistema x Vhils | 2014 | 대표 | — | — | [tropicalbass.com](http://www.tropicalbass.com/2014/04/buraka-som-sistema-x-vhils-stoopid/) |
+| UK Bhangra | ਮੁੰਡਿਆਂ ਤੋਂ ਬਚ ਕੇ · Mundian To Bach Ke | Panjabi MC | 1998 | 대표 | 98 (체감 196) | — | [wikipedia.org](https://en.wikipedia.org/wiki/Mundian_To_Bach_Ke) |
+| UK Bhangra | ਜੋਗੀ · Jogi | Panjabi MC | 2003 | 대표 | 105 (체감 210) | D | [wikipedia.org](https://en.wikipedia.org/wiki/Jogi_(Panjabi_MC_song)) |
+| UK Bhangra | ਭਾਬੀਏ ਅੱਖ ਲੜ ਗਈ · Bhabiye Akh Larr Gayee | Bhujhangy Group | 1970 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Bhangra_(music)) |
+
+### 이 곡들로 고친 것
+
+위 표와 대조해 **어긋난 칸만** 고쳤습니다. 곡을 흉내 낸 것이 아니라, 곡이 공유하는
+성질과 프리셋이 어긋난 자리를 맞춘 것입니다.
+
+| 프리셋 | 바꾼 것 | 근거 |
+|---|---|---|
+| Traditional Pop | 90→82 BPM · swing 50→0 · 탬버린 제거 · `trumpet`→`flute` · 선율 재즈→발라드 | 확인한 3곡은 69~91 의 스트레이트·12/8 발라드였고 빅밴드 스윙이 아닙니다. swing 50 은 짝수 스텝뿐이라 **소리에 0 ms** 였습니다 |
+| Brill Building | `strings`→`sax` · `twelve`→`clean` · 톰 `synth`→`wood` | 세 곡 모두 피아노가 중심이고 색소폰이 둘입니다 |
+| Soft Rock | `piano`→`ep` · 2번 건반 `strings`→`piano` · 톰 `wood`→`conga` | 세 곡 모두 전자피아노(Wurlitzer·Rhodes)이고 현악 크레딧이 없습니다 |
+| AOR | 115→112 BPM · 2번 건반 `strings`→`piano` | Journey·Toto 의 피아노 리프가 표지입니다 |
+| City Pop | 112→106 BPM · 베이스 슬랩→`finger` · `wah`→`clean` | 네 곡 어디에도 슬랩 크레딧이 없고, 커팅 기타가 좌우로 갈립니다 |
+| Dance-pop | 124→120 BPM · Major→**Natural Minor** · 2·4 스네어 추가 · 8분 베이스 | 5곡 중 4곡이 단조입니다. «스네어를 안 쓴다» 는 Kylie 와 반대였습니다 |
+| Euro-pop | 130→105 BPM · `pluck`→`percflut` · 오픈햇 오프비트 | 확인값이 97·100·130 입니다. The Sign 의 훅은 신스 플루트입니다 |
+| Eurodance | 140→130 BPM · 조용한 2·4 스네어 | 정전 5곡의 중앙이 128 입니다 |
+| EDM-pop | 125→128 BPM | 5곡이 124~128 에 몰려 있습니다 |
+| Freestyle | 120→116 BPM · 808 롱 서브→**TB-303**(gate 420→80 · glide 36→0) | Let the Music Play 의 베이스는 쉬지 않는 303 음형입니다 |
+| Synthwave | 킥 골격만 정리 | 91~112 안이라 템포는 그대로 뒀습니다 |
+| Retrowave | 99→130 BPM · 네 박 킥 · 오픈햇 오프비트 | 확인한 3곡이 130~147 입니다 |
+| Electropop | 115→122 BPM · 기타 끔 | 네 곡이 117~135 이고 «보컬 외 전부 프로그래밍» 입니다 |
+| New Romantic | 코러스 기타 추가(lvl .35) | 밴드형 2곡에 실제 기타가 있습니다 |
+| Hyperpop | 155→145 BPM · 킥·햇 재작성 | 확인값이 138~151 입니다 |
+| Digicore | 트랩 하프타임 골격 · 베이스 `buzz`→`s808` · 크런치 기타 추가 | 팝펑크·이모 기타 갈래가 있습니다(Frailty · nowhere to go) |
+| Teen Pop | 118→105 BPM · Major→**Natural Minor** · `chorus`→`wah` | 네 곡 중 셋이 단조(Max Martin 시대)이고 ...Baby One More Time 은 와와 기타입니다 |
+| Bubblegum | 2번 건반 `glocken`→`piano` | 오르간과 피아노가 짝입니다 |
+| Indie Pop | `organ`→`flute`(휘파람 훅) · `ep`→`piano` · `twelve`→`steel` · 톰→`bongo` | 오르간·12현은 확인곡에 없고 휘파람 훅과 어쿠스틱 스트럼이 반복됩니다 |
+| Twee Pop | 건반 끔 · `twelve`→`clean` · 베이스 `hollow`→`finger` | 네 곡 중 셋에 건반이 없습니다 |
+| Bedroom Pop | `ep`→`pluck`(싼 신스) · `pad`→`piano` | 로즈가 아니라 값싼 신스와 로파이 기타입니다 |
+| Chamber Pop | 105→95 BPM · `strings`→`piano` · `nylon`→`steel` · 킷 전체를 여리게 | Yesterday 는 스틸현이고, 드럼이 없거나 아주 여린 곡들입니다 |
+| Baroque Pop | `nylon`→`steel` · 2번 건반→`flute` · 건반 음형 단순화 | 하프시코드·현·목관이 편성의 몸입니다 |
+| J-pop | 135→120 BPM | 확인값이 87·95·130 으로 135 보다 모두 느립니다 |
+| Kayōkyoku | 표기와 코드 불일치 정리(`flatwound`) | 표에는 `finger`, 코드에는 `flatwound` 로 적혀 있었습니다 |
+| Shibuya-kei | `vibes`→`organ` · `twelve`→`jazzbox` · `clean`→`nylon` | 비브라폰·12현 근거가 없고 재즈·보사·라운지 인용이 정체성입니다 |
+| Enka | `koto`→`shamisen` · `flute`→`sax` · Minor Pentatonic→**Natural Minor** · 78→85 BPM | 출처의 편성은 기타·바이올린·샤미센·샤쿠하치이고 코토가 없습니다. 津軽海峡・冬景色 는 테너 색소폰으로 엽니다. 요나누키는 5음이지만 반음 위치가 펜타토닉과 다릅니다 |
+| Trot | swing 18→**0** · Minor Pentatonic→**Major** · 2번 건반 `sax`→`ep` | 뽕짝 2박은 정박이고, 출처 어디에도 스윙이 없습니다 |
+| Mandopop | 2번 기타→`fiddle`(얼후 자리) | 편성에 얼후가 듭니다 |
+| Cantopop | 베이스 `0---6---5---4---`(하행) · 선율 재료도 하행형으로 | 초기 광둥어 팝은 «거의 모든 곡이 하행 베이스라인» 입니다 |
+| C-pop | Dorian→**Major** · `clean`→`guzheng` · `strings`→`flute`(디즈) | 출처는 宮調式(5음 장조)이고 도리안 근거가 없습니다 |
+| Latin Pop | 110→120 BPM · Major→**Natural Minor** · 톰→`conga` 클라베 3-2 · `guitarron`→`finger` | 네 곡 중 셋이 단조이고 출신 리듬이 곡마다 다릅니다 |
+| Schlager | 120→124 BPM · **아코디언→신스 패드** · `tuba`→`finger` 옥타브 · 선율 라틴→팝 | 다섯 곡 어디에도 아코디언 크레딧이 없고, 현대형은 디스코폭스(4/4 약 120)입니다 |
+| Arabic Pop | `ep`→`pad` · 기타 `saz`→`nylon` + `oud` | 확인한 편성은 나일론 기타·우드·다르부카입니다 |
+| Rumba Flamenca | `saz`→**나일론 두 대** · 톰→`bongo` · `sticks`→`guiro` | 룸바 플라멩카는 스페인 기타 음악입니다 |
+| Turbo-folk | `saz`→`bouzouki` · 2번 건반→`trumpet` · 톰 `darbuka`→`analog` | 아코디언·부주키·관이 편성이고 다르부카 근거가 없습니다 |
+| UK Bhangra | 132→**100** BPM · `sitar`→`mandolin`(툼비 자리) · 톰→`djembe` 로 돌 chaal | 곡이 98~105 이고 돌이 그 두 배로 칩니다. 시타르는 방그라의 악기가 아닙니다 |
+| Desi Beats | 프로파일 확신도 `high`→**`low`** · 근거 «9곡»→«0곡» | **대표곡을 한 곡도 못 찾았습니다.** 이전 «9곡» 은 근거 없는 숫자였습니다 |
+| Tropical Bass | `steelpan`→`pad` · 톰→`timbale` 트레실로 | 스틸팬 근거가 없고, 확인된 3곡은 모두 한 팀의 쿠두루입니다 |
 
 ---
 
@@ -1222,8 +1450,8 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Traditional Pop** | Frank Sinatra · Nat King Cole · Ella Fitzgerald | In the Wee Small Hours (Sinatra, 1955) | **스트링** · 클린 기타 · **업라이트 베이스** · swing 50 · 90 BPM · 탬버린 |
-| Brill Building | The Shirelles · The Ronettes · Carole King | Tapestry (King, 1971) | **피아노** · 클린 기타 · 업라이트 베이스 · swing 0 · 125 BPM · 강한 백비트 |
+| **Traditional Pop** | Frank Sinatra · Nat King Cole · Ella Fitzgerald | In the Wee Small Hours (Sinatra, 1955) | **스트링** · 클린 기타 · **업라이트 베이스** · swing 0 · 82 BPM · 12/8 발라드 |
+| Brill Building | The Shirelles · The Ronettes · Carole King | Tapestry (King, 1971) | **피아노 + 색소폰** · 클린 기타 · 업라이트 베이스 · swing 0 · 125 BPM · 탬버린 16분 |
 
 > Traditional Pop 은 크루너 시대의 편성입니다 — 노래를 오케스트라가 받칩니다.
 > 그래서 하위분기 기본값 `piano` 를 쓰지 않고 프리셋이 직접 `strings` 를 지정하고,
@@ -1239,6 +1467,9 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 > 값으로 해결되지 않습니다 — 그때까지 이 계열의 «재지함» 은 스윙이 아니라
 > **화성(`chord:'sev'` + Major)과 브러시 음색**이 만듭니다.
 >
+> **2026-09-16 — 값을 0 으로 내렸습니다.** 위 «대표곡» 절에서 확인한 세 곡이 모두
+> 스트레이트·12/8 발라드라, 소리에 닿지 않는다는 문제 이전에 **셋잇단 근거 자체가 없었습니다.**
+>
 > Brill Building 은 **작곡 분업 시스템**의 이름이지 사운드의 이름이 아닙니다.
 > 그래서 «대표 앨범» 자리에 곡 모음이 아니라 그 시스템에서 나온 작곡가의
 > 솔로 앨범을 적었습니다. 실제 사운드의 본보기는 개별 싱글 쪽입니다.
@@ -1247,61 +1478,71 @@ K-pop은 **단일 리듬 골격을 갖지 않습니다.** 한 곡 안에서
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Baroque Pop** | The Beach Boys · The Left Banke | Pet Sounds | **하프시코드** · 스트링 · 업라이트 |
-| Chamber Pop | Belle and Sebastian | (확인 필요) | 스트링 · 나일론 기타 |
-| Twee Pop | — | — | **비브라폰** · 12현 기타 |
-| Indie Pop | — | — | 오르간 · **12현 기타** |
-| Bedroom Pop | — | — | 로즈 · 클린 기타 · 로파이 |
-| Teen Pop | Britney Spears · NSYNC · Backstreet Boys | (확인 필요) | **피아노** · 클린 기타 · 118 BPM · spread 클랩 |
-| Bubblegum | The Archies · 1910 Fruitgum Company | (확인 필요) | **오르간** · 클린 기타 · 125 BPM · 단순 반복 훅 |
+| **Baroque Pop** | The Beach Boys · The Left Banke | Pet Sounds | **하프시코드 + 플루트** · 스틸현 기타 · 업라이트 |
+| Chamber Pop | Belle and Sebastian | (확인 필요) | **피아노 + 스트링** · 스틸현 기타 · 95 BPM · 아주 여린 킷 |
+| Twee Pop | — | — | **건반 없음** · 징글 기타 · 130 BPM |
+| Indie Pop | — | — | **휘파람 훅**(플루트 자리) · 어쿠스틱 스트럼 · 봉고 |
+| Bedroom Pop | — | — | **값싼 신스** · 코러스 기타 · 로파이 |
+| Teen Pop | Britney Spears · NSYNC · Backstreet Boys | (확인 필요) | **피아노** · 와와 기타 · 105 BPM · **Natural Minor** |
+| Bubblegum | The Archies · 1910 Fruitgum Company | (확인 필요) | **오르간 + 피아노** · 크런치 기타 · 125 BPM · 탬버린 16분 |
 
 > Teen Pop 과 Bubblegum 은 **다른 프리셋**입니다. 예전에 한 행으로 묶어 두었는데,
 > 실제로는 건반이 갈립니다 — Teen Pop 은 `piano`, Bubblegum 은 `organ` 입니다.
-> BPM 도 118 대 125 로 다릅니다.
+> BPM 도 105 대 125 로 다릅니다 — 2026-09-16 에 Teen Pop 을 118→105 로 내렸습니다
+> (...Baby One More Time 93 · Oops!... I Did It Again 95 · Tearin' Up My Heart 110).
 
 ### Soft Rock · AOR 계보
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Soft Rock | The Carpenters · Fleetwood Mac | Rumours | 피아노 · 클린 기타 · 핑거 베이스 · **wood 킥 + noise 햇**(작은 룸) |
-| AOR | Toto · Journey · Foreigner | Toto IV | 피아노 · 클린 기타 · 핑거 베이스 · 정교한 백비트 |
-| **City Pop** | Tatsuro Yamashita · Mariya Takeuchi | For You | 피아노 · **커팅 클린 기타** · 핑거 베이스 · 4/4 킥 + 오프비트 오픈햇 |
+| Soft Rock | The Carpenters · Fleetwood Mac | Rumours | **전자피아노(Rhodes·Wurlitzer)** · 클린 기타 · 플랫와운드 · **wood 킥 + noise 햇**(작은 룸) · 콩가 |
+| AOR | Toto · Journey · Foreigner | Toto IV | **폴리신스 + 피아노 리프** · 클린 기타 · 플랫와운드 · 112 BPM · 정교한 백비트 |
+| **City Pop** | Tatsuro Yamashita · Mariya Takeuchi | For You | 전자피아노 · **커팅 클린 기타 두 대** · 핑거 베이스 · 106 BPM · 16분 싱코페 킥 |
 
-> City Pop 은 하위분기가 준 `finger` 베이스를 씁니다. 문서 §2 의 제작 노트가
-> 말하는 **슬랩**은 아직 프리셋에 반영돼 있지 않습니다.
+> City Pop 은 `finger` 베이스를 씁니다. 문서 §2 의 제작 노트는 **슬랩**을 말하지만,
+> 2026-09-16 에 확인한 네 곡(Plastic Love · 真夜中のドア · Ride on Time · Sparkle) 어디에도
+> 슬랩 크레딧이 없었습니다. 시티팝의 그 튀는 베이스는 슬랩이 아니라 **펑크 핑거 주법**입니다 —
+> 그래서 핑거로 되돌렸습니다.
 
 ### Synth-pop 계보
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Electropop | La Roux · Robyn · Goldfrapp | (확인 필요) | 신스 리드 · **무그 베이스** · drive 62(왜곡) · 기타 비어 있음 |
-| New Romantic | Duran Duran · Spandau Ballet · Visage | Rio (확인 필요) | 신스 리드 · 무그 베이스 · **wood 킥 + noise 햇** |
-| Retrowave | Kavinsky · Com Truise | OutRun (확인 필요) | 신스 리드 · 무그 베이스 · 99 BPM 정박 · Synthwave 와 같은 자리 |
-| **Hyperpop** | 100 gecs · SOPHIE · Charli XCX | 1000 gecs | **tick 햇 + crack 스네어** · 신스 리드 · 무그 베이스 · 155 BPM |
-| Digicore | glaive · ericdoa · Jane Remover | Frailty | 하이퍼팝 + 트랩 · 신스 리드 · 무그 베이스 · 160 BPM |
+| Electropop | La Roux · Robyn · Goldfrapp | (확인 필요) | 신스 리드 · **스퀘어 베이스** · drive 62(왜곡) · 122 BPM · **기타 비어 있음** |
+| New Romantic | Duran Duran · Spandau Ballet · Visage | Rio (확인 필요) | 신스 브라스 · 오르간 베이스 · **wood 킥 + noise 햇** · 코러스 기타(밴드형) |
+| Retrowave | Kavinsky · Com Truise | OutRun (확인 필요) | 신스 리드 · 무그 베이스 · **130 BPM** 정박 · Synthwave 와 같은 자리 |
+| **Hyperpop** | 100 gecs · SOPHIE · Charli XCX | 1000 gecs | **tick 햇 + crack 스네어** · 신스 리드 · 145 BPM · 주인공은 **처리된 보컬** |
+| Digicore | glaive · ericdoa · Jane Remover | Frailty | 하이퍼팝 + **트랩 하프타임** · 808 베이스 · 크런치 기타 · 160 BPM |
 
 ### Dance-pop 계보
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Dance-pop** | Madonna · Kylie Minogue | True Blue | **신스 리드** · 4/4 킥 + 클랩 · 서브 베이스 · **기타 비어 있음** |
-| Eurodance | 2 Unlimited · Haddaway · Corona | No Limits | 신스 리드 · 오프비트 오픈햇 · drive 46 서브 · Natural Minor · 140 BPM |
-| Euro-pop | ABBA · Ace of Base · Roxette | (확인 필요) | 밝은 신스 리드 · 단순한 4/4 · **Major** |
-| EDM-pop | Avicii · Calvin Harris · David Guetta | True | 페스티벌 신스 리드 · 4/4 · 서브 베이스 · 기타 비어 있음 |
-| Freestyle | Shannon · Lisa Lisa & Cult Jam · Exposé | Let the Music Play | **808 롱 서브** · deep 킥 · 신스 리드 · 일렉트로 신콥 |
+| **Dance-pop** | Madonna · Kylie Minogue | True Blue | **신스 리드** · 4/4 킥 + 2·4 스네어·클랩 · 120 BPM · **Natural Minor** |
+| Eurodance | 2 Unlimited · Haddaway · Corona | No Limits | **슈퍼소우** · 오프비트 오픈햇 · drive 46 · Natural Minor · **130 BPM** |
+| Euro-pop | ABBA · Ace of Base · Roxette | (확인 필요) | **신스 플루트 훅** · 단순한 4/4 · 105 BPM · **Major** |
+| EDM-pop | Avicii · Calvin Harris · David Guetta | True | 페스티벌 슈퍼소우 · 4/4 · 리즈 베이스 · **128 BPM** · 기타 비어 있음 |
+| Freestyle | Shannon · Lisa Lisa & Cult Jam · Exposé | Let the Music Play | **TB-303 음형** · deep 킥 · 벨 리드 · 116 BPM · 라틴 신콥 |
 
 ### 지역 팝
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **J-pop** | Utada Hikaru | First Love | 피아노 · 클린 기타 · 핑거 베이스 · 135 BPM 백비트 |
-| **Shibuya-kei** | Pizzicato Five · Cornelius | Fantasma | **비브라폰 + 12현 기타** · 업라이트 · wood 킥 + tick 햇 |
-| Kayōkyoku | Hibari Misora · Momoe Yamaguchi | (확인 필요) | **스트링** · 클린 기타 · 핑거 베이스 · wood 킥/톰 |
-| Enka | Hibari Misora · Saburō Kitajima | (확인 필요) | 스트링 · **나일론 기타** · 업라이트 · 느린 2박 · 킥 튠 -5 |
-| Mandopop | Teresa Teng · Jay Chou | (확인 필요) | 스트링 · 클린 기타 · 핑거 베이스 · 발라드 템포(95) |
-| Cantopop | Leslie Cheung · Anita Mui | (확인 필요) | 피아노 · 클린 기타 · 핑거 베이스 · Mandopop 과 같은 골격 |
-| Latin Pop | Gloria Estefan · Ricky Martin | (확인 필요) | **혼 섹션 + 나일론 기타** · 귀로 · 핑거 베이스 |
-| Schlager | Helene Fischer · Roy Black | (확인 필요) | **아코디언** · 클린 기타 · 단순한 4/4 · Major |
+| **J-pop** | Utada Hikaru | First Love | 피아노 + 스트링 · 클린 기타 · 핑거 베이스 · **120 BPM** 백비트 |
+| **Shibuya-kei** | Pizzicato Five · Cornelius | Fantasma | **재즈 아치톱 + 오르간** · 나일론 · 업라이트 · wood 킥 + tick 햇 |
+| Kayōkyoku | Hibari Misora · Momoe Yamaguchi | (확인 필요) | **스트링 + 브라스** · 클린 기타 · **플랫와운드** · wood 킥/톰 |
+| Enka | Hibari Misora · Saburō Kitajima | (확인 필요) | 스트링 + **색소폰** · **샤미센** · 업라이트 · 느린 2박 · 킥 튠 -5 |
+| Mandopop | Teresa Teng · Jay Chou | (확인 필요) | 스트링 · 클린 기타 + **얼후 자리** · 핑거 베이스 · 발라드 템포(95) |
+| Cantopop | Leslie Cheung · Anita Mui | (확인 필요) | 피아노 · 클린 기타 · **하행 베이스라인** · 100 BPM |
+| Latin Pop | Gloria Estefan · Ricky Martin | (확인 필요) | **혼 섹션 + 나일론 기타** · 콩가 클라베 3-2 · 120 BPM · **Natural Minor** |
+| Schlager | Helene Fischer · Roy Black | (확인 필요) | **신스 패드**(아코디언 아님) · 클린 기타 · 디스코폭스 4/4 · 124 BPM · Major |
+
+> **Enka 에는 3/4 왈츠 정전이 있습니다** — 星影のワルツ(1968 오리콘 1위). 이 도구의 16스텝
+> 격자는 4/4 전용이라 옮길 수 없어 기록만 합니다.
+>
+> 엔카·트로트의 **요나누키** 음계도 5음이지만 반음 자리가 `Minor Pentatonic` 과 다릅니다.
+> 있는 스케일 중 가장 가까운 것을 골랐습니다 — 엔카는 `Natural Minor`,
+> 트로트는 `Major`(北国の春 처럼 요나누키 **장조**가 정전인 쪽)입니다.
 
 ### Disco
 
@@ -1330,7 +1571,7 @@ B 계열 §4 에 함께 놓여 있어 여기 적습니다.
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Synthwave | Kavinsky · College · Perturbator | (확인 필요) | **신스 리드 + 무그 베이스** · hall 클랩(게이트 감각) · 100 BPM 정박 |
+| Synthwave | Kavinsky · College · Perturbator | (확인 필요) | **아르페지오 신스 + 무그 베이스** · hall 클랩(게이트 감각) · 100 BPM 정박 · 리드는 보컬 |
 
 > Synthwave 는 [05-electronic.md](05-electronic.md) 의 표에도 한 줄이 있습니다.
 > 프리셋이 `keys:'lead'` 와 `bass:'moog'` 를 직접 적어 하위분기 기본값(`pad`)을

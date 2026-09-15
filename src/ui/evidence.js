@@ -87,7 +87,9 @@ function evidenceHtml(name){
     out.push(`<dt>주인공</dt><dd>${evEsc(P.lead)}</dd>`);
     out.push(`<dt>근거</dt><dd>${evEsc(P.ev)} <i>(확신도 ${evLbl('conf',P.conf)})</i></dd>`);
     out.push(`</dl>`);
-    if(P.why) out.push(`<p class="ev-note">${evEsc(P.why)}</p>`);
+    /* why 도 사람이 쓴 문장이라 **굵게** 를 쓴다 — R.at·R.no 와 같은 규칙이다.
+       2026-09-16 까지 여기만 evEsc 라 별표가 화면에 그대로 찍혔다(5개 계열 10곳). */
+    if(P.why) out.push(`<p class="ev-note">${evBold(P.why)}</p>`);
     out.push(`<p class="ev-pool">선율 풀 · ${P.pool.map(evEsc).join(' · ')}`
            + (P.share ? ` <i>(${evEsc(P.share)} 와 공유)</i>` : '') + `</p>`);
 
@@ -96,7 +98,8 @@ function evidenceHtml(name){
     if(diff.length){
       out.push(`<h3>형제와 무엇이 다른가</h3><ul class="ev-diff">`);
       for(const [from,axis,note] of diff.slice(0,8))
-        out.push(`<li><b>${evEsc(from)}</b> <span class="ev-axis">${evLbl('axis',axis)}</span> ${evEsc(note)}</li>`);
+        /* note 는 형제 무리의 why 를 따온 문장이라 거기 있던 **굵게** 가 그대로 딸려 온다 */
+        out.push(`<li><b>${evEsc(from)}</b> <span class="ev-axis">${evLbl('axis',axis)}</span> ${evBold(note)}</li>`);
       out.push(`</ul>`);
     }
     if(same.length)
