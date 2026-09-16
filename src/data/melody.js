@@ -974,73 +974,81 @@ const MELODY_KIT_PRESET = {
   'UK Bhangra'              :['afr_aabb','afr_aaab','wor_aaba'],
   /* 쿠두루·뭄바톤 — 선율 악기가 주인공인 사례가 없다 */
   'Tropical Bass'           :['car_aabb','car_aaba','lat_abab'],
-  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
-     41종 → 24무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 샘플에 스윙 30~38 */
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9 → 2026-09-17 대표곡 교정
+     41종 → 27무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/03-hiphop.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
+  /* 스윙 퀀타이즈가 장르 정의의 일부다 — 두세 음을 되풀이해 랩 자리를 비운다 */
   'Boom Bap'                :['hip_aaab','hip_aaba','hip_abab'],
   'Golden Age'              :['hip_aaab','hip_aaba','hip_abab'],
   'Hardcore Hip Hop'        :['hip_aaab','hip_aaba','hip_abab'],
-  /* 업라이트에 트럼펫 */
+  /* 공포영화 스코어에서 온 음색 — 골격은 붐뱁 그대로다 */
+  'Horrorcore'              :['hip_aaba','amb_aabb','bal_aaba'],
+  /* 재즈 원반이 화성의 출처다. 업라이트가 워킹으로 걷는다 */
   'Jazz Rap'                :['jazz_aaba','jazbal_aaba','jazz_abab'],
-  /* 108 BPM 에 디스코·펑크 루프 */
+  /* 디스코·펑크를 라이브 밴드가 다시 연주한다 */
   'Old School Hip Hop'      :['funk_aabb','funk_abab','funk_aaab'],
-  /* 현·합창이 깔리고 가사가 주역이다 */
+  /* 가사가 주역이라 골격을 시대에서 빌린다 — 관과 피아노가 사이를 메운다 */
   'Conscious Hip Hop'       :['amb_aaba','amb_aabb','bal_aaba'],
-  'Horrorcore'              :['amb_aaba','amb_aabb','bal_aaba'],
-  /* 벨 오스티나토 두세 음이 훅이다 */
+  /* 벨이 아니라 목관·현이 두세 음을 놓는다. 808 이 저역을 다 가져간다 */
   'Trap'                    :['trp_aaab','trp_aaba','trp_abab'],
-  'Plugg'                   :['trp_aaab','trp_aaba','trp_abab'],
-  /* 트랩 골격에 노래가 얹힌다 */
+  'Mumble Rap'              :['trp_aaab','trp_aaba','trp_abab'],
+  /* 실로폰 음색과 복고풍 게임기 소리, 그리고 덧쌓인 화성 */
+  'Plugg'                   :['cin_aabb','cinbal_aaba','cinbal_aabb'],
+  'Pluggnb'                 :['cin_aabb','cinbal_aaba','cinbal_aabb'],
+  /* 트랩 골격에 노래가 얹힌다 — 7화음이 들어간다 */
   'Melodic Trap'            :['cinbal_aaba','cinbal_aabb','bal_aaba'],
-  'Pluggnb'                 :['cinbal_aaba','cinbal_aabb','bal_aaba'],
-  /* 디스토션 슈퍼소우가 리드다 */
+  /* 짧고 반복되고 스테레오로 벌린 신스 훅. 드럼은 단순하다 */
   'Rage'                    :['chip_aaab','chip_aabb','chip_abab'],
-  'Trap Metal'              :['chip_aaab','chip_aabb','chip_abab'],
-  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
-  'Mumble Rap'              :['afr_aabb','afr_aaab','lat_abab'],
-  /* 74~82 BPM 에 스윙 30~44 */
+  /* 리드가 슈퍼소우가 아니라 왜곡 기타다 */
+  'Trap Metal'              :['pwr_aaab','pwr_abab'],
+  /* 로즈·펠트 피아노가 9화음을 굴린다 — 힙합에서 가장 느린 축 */
   'Lo-fi'                   :['jazbal_aaba','jazbal_abab'],
   'Chillhop'                :['jazbal_aaba','jazbal_abab'],
-  /* 스윙 50 에 피아노·색소폰 */
+  /* 사전적으로 «재즈홉» 은 1990년대 재즈랩을 가리킨다 */
   'Jazzhop'                 :['jazz_aaba','jazz_aabb','jazbal_abab'],
-  /* 140 BPM 에 스퀘어 신스 */
+  /* 140 BPM 에 각진 스퀘어 베이스 — 영국 개러지에서 나왔다 */
   'Grime'                   :['chip_abab','chip_aabb','chip_aaab'],
-  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
+  /* 아프로비츠·댄스홀이 영국 랩과 만난 자리. 스네어가 셋째 박에 온다 */
   'Afroswing'               :['afr_aabb','afr_abab','car_aabb'],
-  /* 어둡고 성기다 */
+  /* 우산 이름이라 하나의 성질로 적을 수 없다 — 계열 기본값 자리다 */
   'UK Rap'                  :['amb_aaab','amb_aaba','bal_aabb'],
+  /* 미국 갱스터랩 쪽 프로덕션. 그라임보다 느리고 성기다 */
   'Road Rap'                :['amb_aaab','amb_aaba','bal_aabb'],
-  /* **미끄러지는 808 이 선율을 맡는다 */
+  /* 미끄러지는 808 이 선율을 맡는다 — 다섯 갈래 중 여기만 출처가 확인된다 */
   'UK Drill'                :['amb_aaba','amb_aabb','amb_aaab'],
-  'Chicago Drill'           :['amb_aaba','amb_aabb','amb_aaab'],
   'NY / Bronx Drill'        :['amb_aaba','amb_aabb','amb_aaab'],
-  'Sample Drill'            :['amb_aaba','amb_aabb','amb_aaab'],
-  /* 저지 클럽 박자가 드릴에 얹힌다 */
+  /* 시카고는 미끄러지지 않는다 — 신스 브라스와 벨, 바쁜 스네어 */
+  'Chicago Drill'           :['trp_aaba','trp_abab','amb_aabb'],
+  /* 선율을 샘플 루프가 가져간다(옛 R&B·소울·펑크) */
+  'Sample Drill'            :['cin_aabb','cinbal_aaba','cinbal_aabb'],
+  /* 저지 클럽 킥이 박자를 만든다 — 넷이 성긴데 여기만 16분으로 쪼갠다 */
   'Jersey Drill'            :['gar_abab','gar_aabb','funk_abab'],
-  /* 로파이 카우벨에 어두운 벨 */
+  /* 로파이 카우벨에 어두운 벨. 두세 음을 흐릿하게 되풀이한다 */
   'Phonk'                   :['trp_aaab','trp_abab','amb_aabb'],
   'Memphis Rap'             :['trp_aaab','trp_abab','amb_aabb'],
+  /* 카우벨이 정의 조건이다(TR-808 cowbells) */
   'Drift Phonk'             :['trp_aaab','trp_abab','amb_aabb'],
-  /* 떼창을 위한 신스 브라스 스탭 */
+  /* 신스 오스티나토 + 떼창. «신스 브라스» 는 출처에 없었다 */
   'Crunk'                   :['ant_aabb','ant_abab','ant_aaba'],
-  'Bounce'                  :['ant_aabb','ant_abab','ant_aaba'],
-  /* 808 일렉트로에 빠른 신스 */
+  /* 트리거맨 브레이크 반복이 전부다 — 이 계열에서 유일한 장조 */
+  'Bounce'                  :['funk_aabb','funk_abab','car_aabb'],
+  /* 808 일렉트로에 빠른 정박 — 힙합 중 유일하게 디스코 옥타브 어법 */
   'Miami Bass'              :['dis_aabb','dis_abab','dis_aaab'],
   'Booty Bass'              :['dis_aabb','dis_abab','dis_aaab'],
-  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
+  /* 스네어가 없다. 스틸팬과 휘파람이 몇 음을 놓는다 */
   'Snap'                    :['amb_aaba','amb_aaab','amb_aabb'],
-  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
+  /* 높고 얇은 포르타멘토 리드가 P-펑크 위를 미끄러진다 */
   'G-Funk'                  :['funk_abab','funk_aabb','disfun_abab'],
-  /* 103~110 BPM 에 바운시한 신스 */
+  /* 808 과 크렁크 프로덕션 위의 바운시한 신스 */
   'Hyphy'                   :['gar_aabb','gar_abab','funk_aaab'],
   'Jerk'                    :['gar_aabb','gar_abab','funk_aaab'],
-  /* 70 BPM 에 패드와 합창뿐 */
+  /* 에테리얼한 샘플 + 트랩 드럼. 리버브가 정체성 */
   'Cloud Rap'               :['amb_aaba','amb_aabb','bal_aaba'],
-  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
+  /* 이모 기타가 트랩 위에 얹힌다 — 7화음 자연단조 */
   'Emo Rap'                 :['bal_aaba','bal_aabb','bal_abab'],
+  /* 정의가 «음색의 실패» 다 — 왜곡과 나쁜 믹스 */
   'SoundCloud Rap'          :['bal_aaba','bal_aabb','bal_abab'],
-  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
+  /* 탐보르장 «Bum-Cha-Cha» 골격. 화성 재료는 브라질 밖에서 온다 */
   'Brazilian Phonk'         :['lat_abab','lat_aabb','car_aabb'],
   /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
      24종 → 16무리.
@@ -1689,73 +1697,51 @@ const RIFF_KIT_PRESET = {
   'Desi Beats'              :['arp_folk','highlife_gtr'],
   'UK Bhangra'              :['arp_folk','highlife_gtr'],
   'Tropical Bass'           :['skank_up','latin_montuno'],
-  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
-     41종 → 24무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 샘플에 스윙 30~38 */
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9 → 2026-09-17 대표곡 교정
+     41종 → 27무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/03-hiphop.md «대표곡» 표). 곡의 리프을 옮기지 않고 성질만 맞췄다. */
   'Boom Bap'                :['jazz_gtr_comp','funk_cut'],
   'Golden Age'              :['jazz_gtr_comp','funk_cut'],
   'Hardcore Hip Hop'        :['jazz_gtr_comp','funk_cut'],
-  /* 업라이트에 트럼펫 */
-  'Jazz Rap'                :['jazz_gtr_comp','jazz_gtr_swing'],
-  /* 108 BPM 에 디스코·펑크 루프 */
-  'Old School Hip Hop'      :['funk_cut','funk_call'],
-  /* 현·합창이 깔리고 가사가 주역이다 */
-  'Conscious Hip Hop'       :['arp_folk','jazz_gtr_comp'],
   'Horrorcore'              :['arp_folk','jazz_gtr_comp'],
-  /* 벨 오스티나토 두세 음이 훅이다 */
+  'Jazz Rap'                :['jazz_gtr_comp','jazz_gtr_swing'],
+  'Old School Hip Hop'      :['funk_cut','funk_call'],
+  'Conscious Hip Hop'       :['arp_folk','jazz_gtr_comp'],
   'Trap'                    :['edm_arp','edm_alt'],
-  'Plugg'                   :['edm_arp','edm_alt'],
-  /* 트랩 골격에 노래가 얹힌다 */
-  'Melodic Trap'            :['edm_arp','arp_folk'],
+  'Mumble Rap'              :['edm_arp','edm_alt'],
+  'Plugg'                   :['edm_arp','arp_folk'],
   'Pluggnb'                 :['edm_arp','arp_folk'],
-  /* 디스토션 슈퍼소우가 리드다 */
-  'Rage'                    :['edm_build','metal_riff'],
-  'Trap Metal'              :['edm_build','metal_riff'],
-  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
-  'Mumble Rap'              :['highlife_gtr','edm_arp'],
-  /* 74~82 BPM 에 스윙 30~44 */
+  'Melodic Trap'            :['edm_arp','arp_folk'],
+  'Rage'                    :['edm_build','edm_alt'],
+  /* 기타 리프가 장르 정의에 들어 있다 */
+  'Trap Metal'              :['metal_riff','rock_power'],
+  /* 기타가 선율 악기다 — 여태 패턴이 비어 울리지 않았다 */
   'Lo-fi'                   :['jazz_gtr_comp','arp_swing'],
   'Chillhop'                :['jazz_gtr_comp','arp_swing'],
-  /* 스윙 50 에 피아노·색소폰 */
   'Jazzhop'                 :['jazz_gtr_swing','jazz_gtr_comp'],
-  /* 140 BPM 에 스퀘어 신스 */
   'Grime'                   :['edm_alt','edm_build'],
-  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
   'Afroswing'               :['highlife_gtr','skank_offbeat'],
-  /* 어둡고 성기다 */
   'UK Rap'                  :['arp_folk','edm_arp'],
   'Road Rap'                :['arp_folk','edm_arp'],
-  /* **미끄러지는 808 이 선율을 맡는다 */
   'UK Drill'                :['edm_arp','edm_alt'],
-  'Chicago Drill'           :['edm_arp','edm_alt'],
   'NY / Bronx Drill'        :['edm_arp','edm_alt'],
-  'Sample Drill'            :['edm_arp','edm_alt'],
-  /* 저지 클럽 박자가 드릴에 얹힌다 */
+  'Chicago Drill'           :['edm_arp','edm_alt'],
+  'Sample Drill'            :['soul_prog','jazz_gtr_comp'],
   'Jersey Drill'            :['funk_cut','edm_alt'],
-  /* 로파이 카우벨에 어두운 벨 */
   'Phonk'                   :['edm_arp','edm_alt'],
   'Memphis Rap'             :['edm_arp','edm_alt'],
   'Drift Phonk'             :['edm_arp','edm_alt'],
-  /* 떼창을 위한 신스 브라스 스탭 */
   'Crunk'                   :['edm_build','funk_cut'],
-  'Bounce'                  :['edm_build','funk_cut'],
-  /* 808 일렉트로에 빠른 신스 */
+  'Bounce'                  :['funk_cut','funk_call'],
   'Miami Bass'              :['edm_arp','funk_cut'],
   'Booty Bass'              :['edm_arp','funk_cut'],
-  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
   'Snap'                    :['edm_arp'],
-  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
   'G-Funk'                  :['funk_cut','funk_groove'],
-  /* 103~110 BPM 에 바운시한 신스 */
   'Hyphy'                   :['edm_alt','funk_cut'],
   'Jerk'                    :['edm_alt','funk_cut'],
-  /* 70 BPM 에 패드와 합창뿐 */
   'Cloud Rap'               :['arp_folk','edm_arp'],
-  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
   'Emo Rap'                 :['arp_folk','rock_drive'],
   'SoundCloud Rap'          :['arp_folk','rock_drive'],
-  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
   'Brazilian Phonk'         :['latin_montuno','edm_arp'],
   /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
      24종 → 16무리.
@@ -2359,73 +2345,54 @@ const BLINE_KIT_PRESET = {
   'Desi Beats'              :['bafr_aabb','blat_aabb'],
   'UK Bhangra'              :['bafr_aabb','blat_aabb'],
   'Tropical Bass'           :['breg_aabb','blat_abab'],
-  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9
-     41종 → 24무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 샘플에 스윙 30~38 */
+  /* C. Hip Hop (계열 C) — 2026-09-15 배치 A9 → 2026-09-17 대표곡 교정
+     41종 → 27무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/03-hiphop.md «대표곡» 표). 곡의 베이스을 옮기지 않고 성질만 맞췄다. */
   'Boom Bap'                :['bwal_aaba','bfun_aabb'],
   'Golden Age'              :['bwal_aaba','bfun_aabb'],
   'Hardcore Hip Hop'        :['bwal_aaba','bfun_aabb'],
-  /* 업라이트에 트럼펫 */
-  'Jazz Rap'                :['bwal_abab','bwal_aaba'],
-  /* 108 BPM 에 디스코·펑크 루프 */
-  'Old School Hip Hop'      :['bfun_aabb','bfun_abab'],
-  /* 현·합창이 깔리고 가사가 주역이다 */
-  'Conscious Hip Hop'       :['breg_aaba','bwal_aaba'],
   'Horrorcore'              :['breg_aaba','bwal_aaba'],
-  /* 벨 오스티나토 두세 음이 훅이다 */
+  /* 더블베이스가 워킹으로 걷는다 — 이 장르의 몸이다 */
+  'Jazz Rap'                :['bwal_abab','bwal_aaba'],
+  /* 사람이 켠 일렉트릭 베이스가 곡을 끈다(808 은 여기서 드럼이다) */
+  'Old School Hip Hop'      :['bfun_aabb','bfun_abab'],
+  'Conscious Hip Hop'       :['breg_aaba','bwal_aaba'],
   'Trap'                    :['b808_aaab','b808_aaba'],
-  'Plugg'                   :['b808_aaab','b808_aaba'],
-  /* 트랩 골격에 노래가 얹힌다 */
-  'Melodic Trap'            :['b808_aaba','b808_aabb'],
+  'Mumble Rap'              :['b808_aaab','b808_aaba'],
+  /* 두껍고 단단하고 «일정한» 808 — 미끄러지지 않는다 */
+  'Plugg'                   :['b808_aaab','b808_aabb'],
   'Pluggnb'                 :['b808_aaba','b808_aabb'],
-  /* 디스토션 슈퍼소우가 리드다 */
-  'Rage'                    :['bmet_aaab','bhou_aaab'],
-  'Trap Metal'              :['bmet_aaab','bhou_aaab'],
-  /* 마림바가 리드라 형제 트랩의 벨과 음색이 갈린다 */
-  'Mumble Rap'              :['b808_aaab','bafr_aabb'],
-  /* 74~82 BPM 에 스윙 30~44 */
+  'Melodic Trap'            :['b808_aaba','b808_aabb'],
+  /* 통통 튀고 과포화되고 «탄력적인» 808 */
+  'Rage'                    :['b808_aaab','bhou_aaab'],
+  'Trap Metal'              :['b808_aaab','bmet_aaab'],
   'Lo-fi'                   :['bwal_aaba','breg_aaba'],
   'Chillhop'                :['bwal_aaba','breg_aaba'],
-  /* 스윙 50 에 피아노·색소폰 */
   'Jazzhop'                 :['bwal_abab','bwal_aabb'],
-  /* 140 BPM 에 스퀘어 신스 */
   'Grime'                   :['bhou_aaab','bmet_aaab'],
-  /* 아프로비츠와 댄스홀이 영국 랩과 만난 자리 */
   'Afroswing'               :['bafr_aabb','breg_aabb'],
-  /* 어둡고 성기다 */
   'UK Rap'                  :['b808_aabb','breg_aaba'],
   'Road Rap'                :['b808_aabb','breg_aaba'],
-  /* **미끄러지는 808 이 선율을 맡는다 */
   'UK Drill'                :['b808_aaba','b808_aaab'],
-  'Chicago Drill'           :['b808_aaba','b808_aaab'],
   'NY / Bronx Drill'        :['b808_aaba','b808_aaab'],
-  'Sample Drill'            :['b808_aaba','b808_aaab'],
-  /* 저지 클럽 박자가 드릴에 얹힌다 */
-  'Jersey Drill'            :['bfun_abab','bhou_abab'],
-  /* 로파이 카우벨에 어두운 벨 */
+  'Chicago Drill'           :['b808_aaab','b808_aabb'],
+  'Sample Drill'            :['b808_aabb','b808_aaab'],
+  'Jersey Drill'            :['b808_aabb','bhou_abab'],
   'Phonk'                   :['b808_aaab','bmet_aaab'],
   'Memphis Rap'             :['b808_aaab','bmet_aaab'],
   'Drift Phonk'             :['b808_aaab','bmet_aaab'],
-  /* 떼창을 위한 신스 브라스 스탭 */
+  /* 길게 끄는 서브가 아니라 짧게 찍는 스탭 */
   'Crunk'                   :['b808_aabb','bhou_aaab'],
-  'Bounce'                  :['b808_aabb','bhou_aaab'],
-  /* 808 일렉트로에 빠른 신스 */
+  'Bounce'                  :['bfun_aabb','bfun_abab'],
   'Miami Bass'              :['bdis_abab','bhou_aaab'],
   'Booty Bass'              :['bdis_abab','bhou_aaab'],
-  /* 75 BPM 에 손가락 스냅과 벨 몇 음 */
   'Snap'                    :['b808_aabb','breg_aaba'],
-  /* 높은 신스 리드가 P-펑크 위를 미끄러진다 */
   'G-Funk'                  :['bfun_abab','bfun_aabb'],
-  /* 103~110 BPM 에 바운시한 신스 */
   'Hyphy'                   :['bhou_abab','bfun_abab'],
   'Jerk'                    :['bhou_abab','bfun_abab'],
-  /* 70 BPM 에 패드와 합창뿐 */
   'Cloud Rap'               :['breg_aaba','b808_aabb'],
-  /* 이모 기타 아르페지오가 트랩 위에 얹힌다 */
-  'Emo Rap'                 :['brock_aabb','b808_aaba'],
-  'SoundCloud Rap'          :['brock_aabb','b808_aaba'],
-  /* 펑키 카리오카의 타악이 폰크에 들어온다 */
+  'Emo Rap'                 :['b808_aaba','brock_aabb'],
+  'SoundCloud Rap'          :['b808_aaba','brock_aabb'],
   'Brazilian Phonk'         :['blat_abab','b808_aaab'],
   /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
      24종 → 16무리.
