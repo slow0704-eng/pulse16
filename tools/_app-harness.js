@@ -121,6 +121,8 @@ function offlineBoot(seconds){
   if(typeof gtrRef2    !== 'undefined') gtrRef2 = null;
   if(typeof bassStrRef !== 'undefined') bassStrRef = null;
   if(typeof tubaRef    !== 'undefined') tubaRef = null;
+  if(typeof arcoRef    !== 'undefined') arcoRef = null;
+  if(typeof keysGlideHz !== 'undefined') Object.keys(keysGlideHz).forEach(k => delete keysGlideHz[k]);
   /* PeriodicWave 는 컨텍스트에 묶여 있어 반드시 버려야 한다.
      (AudioBuffer 는 컨텍스트 독립이라 현·타현 캐시는 그대로 둔다 —
       샘플레이트가 항상 48k 로 같으므로 안전하고, 굽는 비용도 아낀다) */

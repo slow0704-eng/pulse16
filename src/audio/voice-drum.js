@@ -486,8 +486,39 @@ const SNARE = {
   /* 팻 — 통이 깊고 와이어가 낮습니다. 소울·모타운·베이퍼비트. */
   fat    :{hp:900, dec:0.28, tone:0.68,tdec:0.17, bp:0,crush:0},
 };
+/* ── 주법 변형 3종 (engines.js «주법(technique) 변형») ──
+   flam · roll 은 음색이 아니라 **타격을 몇 번, 언제 하느냐** 입니다. 한 번 치는
+   소리(snareHit)는 원 악기 그대로 두고 그것을 여러 번 부릅니다. 약하게 친 타는
+   위의 세기→음색 규칙이 알아서 어둡고 짧게 만듭니다 — 따로 적을 게 없습니다. */
+Object.assign(SNARE, {
+  /* 오픈 림샷 — 스틱이 헤드와 테를 **동시에** 때린다. 와이어는 그대로 울고,
+     테가 부딪히는 금속성 «딱» 이 얹힌다. (위 rim 은 와이어가 안 우는 크로스스틱 쪽이다)
+     crack 의 대역·길이는 문헌값이 아니라 body 와 견줘 들리게 잡은 조정값이다. */
+  rimshot :{...SNARE.body, amp:1.0, tone:0.62, crack:{f:3400,q:1.3,dec:0.028,amp:0.55}},
+  /* 플램 — 약한 장식음(42%)이 24ms 먼저 떨어진다 */
+  flam    :{...SNARE.body, flam:0.024},
+  /* 버즈 롤 — 스틱을 헤드에 눌러 튕기게 한다. 27ms 간격 일곱 번, 튈 때마다 약해진다.
+     타 하나하나가 길면 뭉개지므로 와이어 꼬리를 march 의 1/3 로 줄인다. */
+  buzzroll:{...SNARE.march, dec:0.10, tone:0.22, tdec:0.05, roll:{n:7,gap:0.027,decay:0.86}},
+});
+
 function snare(t,v,e){
-  const S=SNARE[e]||SNARE.body, mul=st2r(knob('stune'));
+  const S=SNARE[e]||SNARE.body;
+  if(S.flam){
+    /* 장식음을 박 앞에 두되, 이미 지난 시각으로는 못 보낸다 — 그때만 본음이 밀린다 */
+    const tg=Math.max(t-S.flam, ctx.currentTime+0.002);
+    snareHit(tg, v*0.42, S);
+    return snareHit(tg+S.flam, v, S);
+  }
+  if(S.roll){
+    const R=S.roll;
+    for(let i=0;i<R.n;i++) snareHit(t+i*R.gap, v*Math.pow(R.decay,i), S);
+    return;
+  }
+  snareHit(t,v,S);
+}
+function snareHit(t,v,S){
+  const mul=st2r(knob('stune'));
   const u=v>1?1:(v<0?0:v);
   /* 와이어는 헤드가 들어올려야 웁니다(위 ②). 문턱 아래로 내려갈수록
      크기·꼬리가 함께 줄고, 몸통(삼각파 «퉁»)은 상대적으로 덜 줄어
@@ -522,6 +553,13 @@ function snare(t,v,e){
     env(og,t,v*S.tone*(i?0.55:1)*(0.7+PUN()*0.5),tdec,0.002);
     o.connect(og);
   });
+
+  /* 테를 때리는 금속성 «딱» — 오픈 림샷만. 접촉시간 규칙대로 약하면 어둡고 짧다 */
+  if(S.crack){
+    const K=S.crack, kd=K.dec*vTone(v,0.40), ce=t+kd+0.08;
+    const cg=G('snare',ce), cf=BQ('bandpass',K.f*mul*vTone(v,0.35),K.q,ce);
+    env(cg,t,v*K.amp*vTone(v,0.50),kd,0.0006); cf.connect(cg); tapNoise(cf,ce);
+  }
 }
 
 const CLAP = {
@@ -589,13 +627,20 @@ const HAT = {
   foot  :{hp:5200, pk:8000, pq:1.4, pd:3, amp:0.55, dm:0.60},
   /* 하우스·테크노의 좁고 단단한 클로즈드 — 피킹 Q 를 높여 대역을 좁힙니다 */
   crisp :{hp:8600, pk:12500,pq:3.0, pd:7, amp:0.55, dm:0.80},
+
+  /* ── 주법 변형 — 하프 오픈 ──
+     발을 반쯤 풀어 두 심벌이 느슨하게 스친다. 닫힌 햇(48ms)과 열린 햇(360ms)
+     사이의 «치—» 라 트랙이 정하는 길이 대신 dAbs(초)를 쓴다 — 어느 트랙에
+     놓아도 하프 오픈이어야 하기 때문이다. 스치는 소리라 대역이 조금 낮다. */
+  half     :{hp:6200, pk:9500, pq:1.0, pd:4, amp:0.55, dm:1, dAbs:0.15},
+  halfmetal:{metal:1, bp:8500,                 amp:0.34, dm:1, dAbs:0.15},
 };
 function hat(t,v,e,dec,open){
   if(openHat){ fadeOut(openHat.gain,t,open?0.005:0.007); openHat=null; }  // 초크
   const id=open?'ohat':'chat', mul=st2r(knob('htune'));
   const S=HAT[e]||HAT.noise;
   const u=v>1?1:(v<0?0:v);
-  const d=dec*rnd(0.10*H()), end=t+d+0.15;
+  const d=(S.dAbs??dec)*rnd(0.10*H()), end=t+d+0.15;
   const g=G(id,end);
   /* 세기 의존이 **드럼 다섯 중 가장 큰** 자리입니다. 심벌은 큰 진폭에서
      비선형 모드 결합이 고차 모드에 계속 에너지를 퍼올려 «샤—» 가 길게

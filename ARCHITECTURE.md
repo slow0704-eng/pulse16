@@ -59,7 +59,9 @@ styles/
 src/
   core/
     config.js          §1  HAS_TONE · STEPS · TRACKS · ENGINES
-    engines.js             건반 엔진표(KENG) · 기타 엔진표(GTR)
+    engines.js             건반 엔진표(KENG) · 기타 엔진표(GTR) · 현 베이스표(BSTR)
+                           · 합성 베이스표(BSYN) · 찰현표(BOW) · 주법(technique) 변형
+                           36종 — 원 악기를 펼쳐 만든다(펑크 커팅 · 하모닉스 · 플램 …)
     scale.js               NOTES · SCALES · 튠 노브 대응 · 계열(CATS)
   data/
     preset-index.js        PRESET_SUB(하위 분기) · PRESET_CAT(계열)
@@ -99,8 +101,9 @@ src/
     params.js          §8  파라미터 적용
     voice-drum.js      §9  킥·스네어·클랩·하이햇·톰·퍼커션 · 사이드체인
     string.js              뜯은 현 코어 (Karplus-Strong) — 기타와 베이스가 공용
-    voice-bass.js      §9  베이스 (합성 5종 + 현 4종)
-    struck.js               타현(비조화 가법합성) — keys/piano·vibes·marimba 등
+    voice-bass.js      §9  베이스 — 합성 · 현(string.js) · 관(튜바) · 찰현(업라이트 아르코)
+    struck.js               타현(비조화 가법합성) — keys/piano·vibes·marimba·
+                           피치카토·우나 코르다·펠트 피아노 등
     voice-keys.js      §9-B 건반 · 신스
     voice-gtr.js       §9-C 기타 · 밴조 · 만돌린 · 시타르 · 피들(찰현)
   seq/

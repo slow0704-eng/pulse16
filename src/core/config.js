@@ -79,13 +79,17 @@ const ENGINES = {
   snare:{body:'Analog Body',crack:'Crack',tight:'Gated',lofi:'Lo-fi Crush',
          brush:'Brush',rim:'Rimshot',
          eight08:'808',nine09:'909',piccolo:'Piccolo',march:'Marching',
-         dnb:'DnB Break',trap:'Trap',fat:'Fat'},
+         dnb:'DnB Break',trap:'Trap',fat:'Fat',
+         /* 주법 변형 3종 */
+         rimshot:'Open Rimshot',flam:'Flam',buzzroll:'Buzz Roll'},
   clap :{spread:'Spread',tight:'Tight',hall:'Hall Tail',snap:'Finger Snap',
          eight08:'808',nine09:'909',stack:'Stack',room:'Room',dry:'Dry'},
   chat :{metal:'6-Osc Metal',noise:'Noise',tick:'Tick',
-         sizzle:'Sizzle',dark:'Dark',foot:'Foot',crisp:'Crisp'},
+         sizzle:'Sizzle',dark:'Dark',foot:'Foot',crisp:'Crisp',
+         half:'Half-Open',halfmetal:'Half-Open Metal'},
   ohat :{metal:'6-Osc Metal',noise:'Noise',tick:'Tick',
-         sizzle:'Sizzle',dark:'Dark',foot:'Foot',crisp:'Crisp'},
+         sizzle:'Sizzle',dark:'Dark',foot:'Foot',crisp:'Crisp',
+         half:'Half-Open',halfmetal:'Half-Open Metal'},
   tom  :{analog:'Analog',synth:'Synth',wood:'Acoustic',
          conga:'Conga',bongo:'Bongo',timbale:'Timbale',
          logdrum:'Log Drum',cowbell:'Cowbell',
@@ -109,7 +113,10 @@ const ENGINES = {
          muted:'Palm Muted',guitarron:'Guitarrón',piccolo:'Piccolo Bass',bass6:'6-String',
          /* 합성 스택 7종 (BSYN) */
          square:'Square',pluckbs:'Pluck',growl:'Growl',organbs:'Organ',
-         hollow:'Hollow',buzz:'Buzz',warm:'Warm'},
+         hollow:'Hollow',buzz:'Buzz',warm:'Warm',
+         /* 주법 변형 7종 */
+         thumb:'Thumb Pluck',pop:'Slap Pop',bassharm:'Bass Harmonics',bassslide:'Finger Slide',
+         pickmute:'Pick Mute',uprightslap:'Upright Slap',arco:'Upright Arco'},
   keys :{pad:'Analog Pad',ep:'Electric Piano',pluck:'Pluck',supersaw:'Supersaw',
          organ:'Drawbar Organ',poly:'Poly Brass',bell:'FM Bell',
          piano:'Acoustic Piano',clav:'Clavinet',strings:'String Ensemble',
@@ -127,7 +134,12 @@ const ENGINES = {
          trumpet:'Trumpet',trombone:'Trombone',panflute:'Pan Flute',
          /* 그 밖 6종 */
          choir:'Choir',mellotron:'Mellotron',glassharm:'Glass Harmonica',
-         toypiano:'Toy Piano',synclead:'Sync Lead',brassens:'Brass Ensemble'},
+         toypiano:'Toy Piano',synclead:'Sync Lead',brassens:'Brass Ensemble',
+         /* 주법 변형 11종 */
+         pizz:'String Pizzicato',tremstr:'String Tremolo',staccato:'String Staccato',
+         leslie:'Organ Leslie Fast',chorale:'Organ Leslie Slow',organperc:'Organ Percussion',
+         eptrem:'EP Suitcase Tremolo',epbark:'EP Bark',
+         pianosoft:'Piano Una Corda',felt:'Felt Piano',leadglide:'Lead Glide'},
   gtr  :{clean:'Electric Clean',crunch:'Crunch',hi:'Hi-Gain',mute:'Palm Mute',
          steel:'Acoustic Steel',nylon:'Nylon',
          fuzz:'Fuzz',twelve:'12-String',pedal:'Pedal Steel',
@@ -138,5 +150,10 @@ const ENGINES = {
          koto:'Koto',shamisen:'Shamisen',guzheng:'Guzheng',pipa:'Pipa',
          charango:'Charango',cuatro:'Cuatro',tres:'Tres',kora:'Kora',
          harp:'Harp',dulcimer:'Dulcimer',zither:'Zither',
-         jazzbox:'Jazz Archtop',resonator:'Resonator',slide:'Slide'},
+         jazzbox:'Jazz Archtop',resonator:'Resonator',slide:'Slide',
+         /* 주법 변형 11종 — engines.js «주법(technique) 변형» */
+         harmonic:'Clean Harmonics',chank:'Funk Chank',strum:'Strum Down',strumup:'Strum Up',
+         fingerpick:'Fingerpicked',slidein:'Slide-in',bend:'Crunch Bend',
+         pinch:'Pinch Harmonic',rasgueado:'Rasgueado',nylontrem:'Nylon Tremolo',
+         nylonharm:'Nylon Harmonics'},
 };

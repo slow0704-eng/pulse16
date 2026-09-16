@@ -43,6 +43,7 @@ python -m http.server 8000
 **자료**
 
 - [`genres/`](genres/) — 세부장르별 특징과 대표 레퍼런스
+- [`genres/00-technique.md`](genres/00-technique.md) — 주법 변형 36종 · 프리셋 배정과 그 근거
 - [`melody/`](melody/) — 화성·선율 이론과 선율 라이브러리의 근거
 - [`patterns/`](patterns/) — 패턴 표기법과 리듬 자료
 - [`consulting/`](consulting/) — ISP · EA · ISMP

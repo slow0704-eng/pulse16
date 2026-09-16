@@ -83,7 +83,26 @@ const STRUCK = {
      아주 길게 울립니다 — 교회종·오케스트라. */
   tubular :{parts:4, ratios:[1,1.414,2.0,2.828], tilt:0.85, t60:6.0, t60n:0.22,
           unison:[0,1.5], hammer:{f:3000,q:1.0,dec:0.005,amp:0.24}},
+
+  /* ══ 주법 변형 3종 (engines.js «주법(technique) 변형») ══ */
+
+  /* 스트링 피치카토 — 활 대신 손가락으로 뜯는다. 켜는 스트링(keys/strings)과 달리
+     음이 곧바로 잦아든다. 현이라 비조화성은 아주 작고, 여러 명이 동시에 뜯으므로
+     unison 을 넓게(±6cent) 벌린다. 손가락 살이라 잡음이 약하다. */
+  pizz     :{parts:12, B:0.00003, tilt:1.30, t60:0.60, t60n:0.55, vsens:0.8,
+             unison:[0,-6,5], hammer:{f:1500,q:0.8,dec:0.006,amp:0.10}},
 };
+/* 피아노 주법은 piano 를 펼쳐 만든다 — 객체 리터럴 안에서는 STRUCK 을 아직 못 읽는다 */
+Object.assign(STRUCK, {
+  /* 우나 코르다(소프트 페달) — 액션이 옆으로 밀려 해머가 세 줄 중 두 줄만 친다.
+     한 줄이 빠지니 맥놀이가 줄고, 해머의 덜 닳은 면이 닿아 어둡고 여리다. */
+  pianosoft:{...STRUCK.piano, unison:[0,-1.4], tilt:1.40, vsens:0.8,
+             hammer:{f:1600,q:0.8,dec:0.008,amp:0.10}},
+  /* 펠트 피아노 — 해머와 현 사이에 천을 끼운다. 고역이 크게 죽고(tilt·t60n)
+     음이 짧아지며, 대신 «툭» 하는 해머 소리가 낮게 두드러진다. */
+  felt     :{...STRUCK.piano, tilt:1.90, t60:2.2, t60n:0.85, vsens:0.6,
+             hammer:{f:700,q:0.7,dec:0.012,amp:0.32}},
+});
 
 /** 한 음을 통째로 구워 AudioBuffer 로 돌려준다 */
 function bakeStruck(hz, S){

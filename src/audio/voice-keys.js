@@ -139,6 +139,14 @@ const KEYS_TEX = {
   bell     :{kt:0.40,kd:0.55},
 };
 const TEX_DEFAULT={kt:0.40,kd:0.35};
+/* 주법 변형은 원 악기의 몸통을 그대로 쓴다 — 연주법이 바뀌어도 통은 같다 */
+for(const [k,base] of [['pizz','strings'],['tremstr','strings'],['staccato','strings'],
+                       ['leslie','organ'],['chorale','organ'],['organperc','organ'],
+                       ['eptrem','ep'],['epbark','ep'],['leadglide','lead'],
+                       ['pianosoft','piano'],['felt','piano']]) KEYS_TEX[k]=KEYS_TEX[base];
+
+/* 포르타멘토(E.glide) — 채널마다 마지막 음의 Hz. glide 가 있는 엔진만 쓰고 읽는다. */
+const keysGlideHz={};
 
 let keysVox=[];
 /* ch — 어느 채널로 낼지. 2번 건반 트랙은 'keys2' 를 넘긴다.
@@ -162,6 +170,8 @@ function keysVoice(t,midi,dur,vel,name,ch){
   const ktD = Math.pow(kt, -X.kd);
   const fHz = Math.min(E.f.hz*ktF, 16000);
   const dcy = E.a.d*ktD, rel = E.a.r*ktD;
+  const pHz = E.glide ? keysGlideHz[ch] : 0;
+  if(E.glide) keysGlideHz[ch]=hz;
 
   /* 보이스 스틸 — 오래된 것부터 */
   while(keysVox.length>=E.poly){
@@ -229,6 +239,24 @@ function keysVoice(t,midi,dur,vel,name,ch){
     const b=BQ('peaking',bh,bq,end,bd);
     node.connect(b); node=b;
   });
+  /* 트레몰로·레슬리(E.trem) — 음량을 LFO 로 흔들고, pan 이 있으면 좌우도 같이 돌린다.
+     레슬리 혼은 가까워질 때 크고 한쪽으로 쏠리므로 한 LFO 가 둘을 함께 움직인다.
+     VCA 앞에 두어 ADSR 과 곱해지게 한다. */
+  if(E.trem){
+    const T=E.trem;
+    const tg=acqGain(); tg.gain.value=1-T.depth*0.5; retire(tg,'gain',end+0.05);
+    const l=osc('sine',t,life); l.frequency.value=T.hz;
+    const lg=acqGain(); lg.gain.value=T.depth*0.5; retire(lg,'gain',end+0.05);
+    l.connect(lg).connect(tg.gain); node.connect(tg); oscs.push(l);
+    node=tg;
+    if(T.pan && ctx.createStereoPanner){
+      const p=ctx.createStereoPanner(); p.pan.value=0;
+      const pg=acqGain(); pg.gain.value=T.pan; retire(pg,'gain',end+0.05);
+      l.connect(pg).connect(p.pan);
+      retire({disconnect:()=>{try{p.disconnect();}catch(e){}}},'x',end+0.05);
+      node.connect(p); node=p;
+    }
+  }
   node.connect(vca);
 
   /* 필터 엔벨로프 — 벨로시티가 깊이를 바꾼다 */
@@ -265,7 +293,11 @@ function keysVoice(t,midi,dur,vel,name,ch){
   }else{
     E.osc.forEach(([semi,kind,g,cent,pan])=>{
       const o=oscW(kind,t,life);
-      o.frequency.setValueAtTime(hz*Math.pow(2,semi/12),t);
+      const fo=hz*Math.pow(2,semi/12);
+      if(pHz){                           /* 포르타멘토 — 앞 음에서 미끄러져 온다 */
+        o.frequency.setValueAtTime(pHz*Math.pow(2,semi/12),t);
+        o.frequency.exponentialRampToValueAtTime(fo,t+E.glide);
+      }else o.frequency.setValueAtTime(fo,t);
       o.detune.setValueAtTime(cent,t);
       const og=acqGain(); og.gain.value=g; retire(og,'gain',end+0.05);
       o.connect(og);
@@ -284,6 +316,14 @@ function keysVoice(t,midi,dur,vel,name,ch){
     });
   }
 
+  if(E.perc){                            /* 해먼드 퍼커션 — [반음, 게인, 감쇠(초)] */
+    /* 드로바와 달리 한 번 울리고 사라진다. 해먼드는 벨로시티가 없어 세기를 안 받는다. */
+    const [ps,pg,pd]=E.perc;
+    const po=oscW('sine',t,life), pgn=acqGain(); retire(pgn,'gain',end+0.05);
+    po.frequency.setValueAtTime(hz*Math.pow(2,ps/12),t);
+    env(pgn,t,pg,pd,0.002);
+    po.connect(pgn).connect(mix); oscs.push(po);
+  }
   if(E.click){                           /* 플럭 어택 · 오르간 키클릭 */
     const [f,q,dec,amp]=E.click, ce=t+dec+0.02;
     const cg=G(ch,ce), cf=BQ('bandpass',f,q,ce);

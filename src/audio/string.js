@@ -176,21 +176,28 @@ function ksRender(hz,S){
   /* 상한 3.2초는 페달 스틸(설계 T60 8.49s)을 −22.6dB 지점에서 잘랐다.
      서스테인이 정체성인 악기라 9초까지 열어 둔다 — 캐시가 커지지만
      엔진별 24개 상한(makeStringCache)이 있어 메모리는 유계다. */
-  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15, 9.0);
+  /* rolls — 라스게아도·트레몰로처럼 같은 코드를 여러 번 다시 친다(engines.js 주법 변형).
+     없으면 rolls 1 · 간격 0 이라 아래 두 식은 예전 값에 0 을 더하고 1 을 곱할 뿐이다. */
+  const rolls=S.rolls||1, rGap=S.rollGap||0;
+  const sec=Math.min(S.t60*Math.pow(82.41/hz,S.t60k)*1.1+0.15+rGap*(rolls-1), 9.0);
   const buf=ctx.createBuffer(1,Math.ceil(SR*sec),SR);
   const out=buf.getChannelData(0);
 
-  S.chord.forEach((iv,si)=>{
-    const det=((si*7)%5-2)*S.det;
-    const f=hz*Math.pow(2,(iv+det/100)/12);
-    const off=Math.round(SR*S.strum*si), amp=Math.pow(0.88,si);
-    ksInto(out, off, f, S, amp, SR);
-    /* 복현 — 만돌린·12현은 한 음을 두 줄로 낸다. 두 줄이 절대 안 맞으므로
-       그 미세한 어긋남이 곧 음색이다. 시간차도 1ms 남짓 준다. */
-    if(S.course)
-      ksInto(out, Math.min(off+Math.round(SR*0.0013), out.length-1),
-             f*Math.pow(2,S.course/1200), S, amp*0.85, SR);
-  });
+  for(let r=0;r<rolls;r++){
+    const rOff=Math.round(SR*rGap*r), rAmp=Math.pow(S.rollDecay??0.8,r);
+    S.chord.forEach((iv,si)=>{
+      const det=((si*7)%5-2)*S.det;
+      const f=hz*Math.pow(2,(iv+det/100)/12);
+      /* chAmp — 줄마다 세기를 따로(피킹 하모닉스는 기음을 거의 죽인다) */
+      const off=rOff+Math.round(SR*S.strum*si), amp=(S.chAmp?S.chAmp[si]:Math.pow(0.88,si))*rAmp;
+      ksInto(out, off, f, S, amp, SR);
+      /* 복현 — 만돌린·12현은 한 음을 두 줄로 낸다. 두 줄이 절대 안 맞으므로
+         그 미세한 어긋남이 곧 음색이다. 시간차도 1ms 남짓 준다. */
+      if(S.course)
+        ksInto(out, Math.min(off+Math.round(SR*0.0013), out.length-1),
+               f*Math.pow(2,S.course/1200), S, amp*0.85, SR);
+    });
+  }
 
   /* 공명현 — 뜯지 않아도 같이 우는 줄. 시타르의 배경 울림. */
   if(S.symp) S.symp.forEach((iv,i)=>{
@@ -221,6 +228,18 @@ function ksRender(hz,S){
   const ref=Math.max(pkSus, pk*0.5);
   if(ref>1e-6){ const k=S.lvl/ref; for(let i=0;i<out.length;i++) out[i]*=k; }
   return buf;
+}
+
+/** 벤딩·슬라이드 — 구운 버퍼의 재생 속도를 굽힌다(engines.js 주법 변형).
+    둘 다 [반음, 초] 아래에서 출발한다. 벤딩은 손가락이 줄을 미는 것이라
+    처음이 빠르고 끝이 느리고(setTarget), 슬라이드는 프렛을 일정하게 지나간다.
+    필드가 없는 엔진에서는 아무것도 안 한다. */
+function bendRate(src,t,S){
+  const P=S.bend||S.gliss; if(!P) return;
+  const r0=src.playbackRate.value;
+  src.playbackRate.setValueAtTime(r0*Math.pow(2,-P[0]/12),t);
+  if(S.bend) src.playbackRate.setTargetAtTime(r0,t,P[1]/3);
+  else src.playbackRate.exponentialRampToValueAtTime(r0,t+P[1]);
 }
 
 /** 엔진·음정별 버퍼 캐시. 굽는 비용이 커서 반드시 캐시해야 한다. */

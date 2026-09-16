@@ -361,7 +361,7 @@ Object.assign(RAW, {
   keys:'0---0---3---3---',gtr:'0-0-0-0-3-3-3-3-'},
 'Nuevo Tango':{bpm:120,swing:0,cat:'H',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',
-       keys:'bandoneon',keys2:'piano',gtr:'nylon',gtr2:'clean',bass:'upright',chord:'sev'},
+       keys:'bandoneon',keys2:'piano',gtr:'nylon',gtr2:'clean',bass:'arco',chord:'sev'},
   tune:{kick:-2,snare:0,tom:-2,hat:0},
   lvl:{keys:0.58,bass:0.74},
   bcfg:{eng:'sub',oct:24,semi:0,gate:80,glide:0,blend:40,drive:32,xover:120,tone:4000,

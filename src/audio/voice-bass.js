@@ -14,7 +14,9 @@ const bassBuf=makeStringCache(20);
 let bassStrRef=null;
 
 function stringBass(t,midi,dur,e,vel){
-  const S=BSTR[e], hz=440*Math.pow(2,(midi-69)/12);
+  const S=BSTR[e];
+  midi+=(S.shift||0);                        // 하모닉스 — engines.js 주법 변형
+  const hz=440*Math.pow(2,(midi-69)/12);
 
   if(bassStrRef){
     try{ fadeOut(bassStrRef.g.gain,t,0.012); }catch(err){}
@@ -38,6 +40,7 @@ function stringBass(t,midi,dur,e,vel){
   const cents=(Math.random()*2-1)*3*H();
   if(s.detune) s.detune.value=cents;
   else s.playbackRate.value=Math.pow(2,cents/1200);
+  bendRate(s,t,S);                           // 슬라이드 인 — 필드가 없으면 아무것도 안 한다
   s.connect(g); s.start(t); s.stop(end);
   s.onended=()=>{ try{s.disconnect();}catch(err){} };
 
@@ -101,6 +104,20 @@ function windBass(t,midi,dur,vel){
   retire({disconnect:()=>{ if(tubaRef && tubaRef.g===g) tubaRef=null; }},'x',end+0.05);
 }
 
+/* ── 업라이트 아르코 ──
+   활로 켜는 더블베이스. 뜯은 현 코어로는 못 낸다 — 활은 에너지를 계속 밀어 넣는다.
+   피들과 같은 찰현 회로(voice-gtr.js fiddleVoice)에 BOW.arco 값만 넣는다.
+   베이스는 모노라, 새 음이 오면 앞 음의 활을 뗀다(30ms — 활을 바꾸는 시간). */
+let arcoRef=null;
+function arcoBass(t,midi,dur,vel){
+  const hz=440*Math.pow(2,(midi-69)/12);
+  if(arcoRef){ try{ fadeOut(arcoRef.gain,t,0.03); }catch(err){} arcoRef=null; }
+  const g=fiddleVoice(t,dur,hz,0.9*rnd(0.08*H())*(vel??1),'bass','arco');
+  arcoRef=g;
+  /* g 는 풀로 돌아가 다른 보이스가 쓴다 — 회수(end+0.05)보다 먼저 참조를 놓는다 */
+  retire({disconnect:()=>{ if(arcoRef===g) arcoRef=null; }},'x',t+dur+BOW.arco.rel+0.10);
+}
+
 /* ── 합성 베이스 ──
    공통: 사인 서브(gsub) + 배음부(gh). 배음부는 드라이브·X-Over·Tone 을 거칩니다.
    엔진별로 mixIn 에 들어가는 소스만 달라집니다. */
@@ -130,6 +147,7 @@ function bassVoice(t,deg,dur,e,vel){
      현 모델의 기음이 이미 최강 배음이라 덧붙이면 오히려 뭉갠다. */
   if(BSTR[e]) return stringBass(t,midi,dur,e,vel);
   if(e==='tuba') return windBass(t,midi,dur,vel);
+  if(e==='arco') return arcoBass(t,midi,dur,vel);
 
   /* 모노 신스 — 이전 음을 짧게 페이드아웃 */
   /* 이전 노트의 주파수 — 포르타멘토의 출발점 */

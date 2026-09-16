@@ -16,41 +16,44 @@ let gtrRef=null;
    ⚠ 예전에는 이 인자가 없어 **gtr2 로 피들을 골라도 소리가 chan.gtr 로 갔다.**
      계측에서 gtr2/fiddle 만 chan.gtr2 가 무음으로 나와 드러났다.
      keysVoice 가 chan.keys 를 하드코딩하던 것과 똑같은 버그다. */
-function fiddleVoice(t,dur,hz,v,ch){
-  const rel=0.10, life=dur+rel+0.15, end=t+life;
+/* bow — BOW 표(engines.js)의 이름. 안 주면 피들이다. 업라이트 아르코가 'arco' 로 부른다.
+   게인 노드를 돌려준다 — 모노로 쓰는 쪽(베이스)이 다음 음에서 이것을 죽인다. */
+function fiddleVoice(t,dur,hz,v,ch,bow){
+  const B=BOW[bow]||BOW.fiddle;
+  const rel=B.rel, life=dur+rel+0.15, end=t+life;
   const g=G(ch||'gtr',end);
 
   /* 몸통 공진 — 바이올린의 대표 공진 3개 (A0 · B1− · B1+) */
   const mix=acqGain(); mix.gain.value=1; retire(mix,'gain',end+0.05);
-  const body=[[280,2.4,5.0],[460,3.0,4.0],[720,2.2,3.0],[2800,1.4,4.5]];
   let node=mix;
-  body.forEach(([f,q,db])=>{ const b=BQ('peaking',f,q,end,db); node.connect(b); node=b; });
-  const lp=BQ('lowpass',7000,0.707,end);
+  B.body.forEach(([f,q,db])=>{ const b=BQ('peaking',f,q,end,db); node.connect(b); node=b; });
+  const lp=BQ('lowpass',B.lp,0.707,end);
   node.connect(lp).connect(g);
 
   const o=osc('sawtooth',t,life);
   o.frequency.setValueAtTime(hz,t);
-  const og=acqGain(); og.gain.value=0.55; retire(og,'gain',end+0.05);
+  const og=acqGain(); og.gain.value=B.og; retire(og,'gain',end+0.05);
   o.connect(og).connect(mix);
 
   /* 활 잡음 — 송진이 현을 긁는 소리 */
-  const nf=BQ('bandpass',2600,0.9,end), ng=acqGain();
-  ng.gain.value=0.05; retire(ng,'gain',end+0.05);
+  const nf=BQ('bandpass',B.nz[0],B.nz[1],end), ng=acqGain();
+  ng.gain.value=B.nz[2]; retire(ng,'gain',end+0.05);
   nf.connect(ng).connect(mix); tapNoise(nf,end);
 
   /* 비브라토 — 켜기 시작하고 조금 지나서 걸린다 */
-  const l=osc('sine',t,life); l.frequency.value=5.4;
+  const l=osc('sine',t,life); l.frequency.value=B.vib[0];
   const lg=acqGain(); retire(lg,'gain',end+0.05);
   lg.gain.setValueAtTime(0,t);
-  lg.gain.setValueAtTime(0,t+0.18);
-  lg.gain.linearRampToValueAtTime(16,t+0.45);
+  lg.gain.setValueAtTime(0,t+B.vib[2]);
+  lg.gain.linearRampToValueAtTime(B.vib[1],t+B.vib[3]);
   l.connect(lg).connect(o.detune);
 
-  /* 활은 어택이 느리다 — 30ms 는 줘야 켜는 소리가 된다 */
+  /* 활은 어택이 느리다 — 피들도 30ms 는 줘야 켜는 소리가 된다 */
   g.gain.setValueAtTime(0,t);
-  g.gain.linearRampToValueAtTime(v*0.62,t+0.030);
-  hold(g.gain,t+dur,v*0.62);
+  g.gain.linearRampToValueAtTime(v*B.lvl,t+B.atk);
+  hold(g.gain,t+dur,v*B.lvl);
   g.gain.linearRampToValueAtTime(0,t+dur+rel);
+  return g;
 }
 
 /* vel — **선택** 인자(0~1 남짓). 안 넘기면 (vel??1)=1 이라 예전과
@@ -61,7 +64,8 @@ function fiddleVoice(t,dur,hz,v,ch){
 function guitarVoice(t,deg,dur,e,vel){
   const S=GTR[e]||GTR.clean;
   applyGtrFx(e);                    // 버스 이펙트 — 엔진이 바뀔 때만 실제로 움직인다
-  const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg];
+  /* shift — 하모닉스처럼 울리는 음이 짚은 음보다 높을 때(engines.js 주법 변형) */
+  const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg]+(S.shift||0);
   const hz=440*Math.pow(2,(midi-69)/12);
 
   if(gtrRef){                              /* 모노 — 왼손 뮤트 */
@@ -88,6 +92,7 @@ function guitarVoice(t,deg,dur,e,vel){
   const cents=(Math.random()*2-1)*4*H();
   if(s.detune) s.detune.value=cents;
   else s.playbackRate.value=Math.pow(2,cents/1200);
+  bendRate(s,t,S);                  // 벤딩·슬라이드 — 필드가 없으면 아무것도 안 한다
   s.connect(g); s.start(t); s.stop(end);
   s.onended=()=>{ try{s.disconnect();}catch(err){} };
 
@@ -122,7 +127,7 @@ function guitarVoice(t,deg,dur,e,vel){
 let gtrRef2=null;
 function guitarVoice2(t,deg,dur,e,vel){        // vel — 선택 인자. guitarVoice 와 같은 계약
   const S=GTR[e]||GTR.clean;
-  const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg];
+  const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg]+(S.shift||0);
   const hz=440*Math.pow(2,(midi-69)/12);
 
   if(gtrRef2){
@@ -145,6 +150,7 @@ function guitarVoice2(t,deg,dur,e,vel){        // vel — 선택 인자. guitarV
   const cents=(Math.random()*2-1)*4*H();
   if(s2.detune) s2.detune.value=cents;
   else s2.playbackRate.value=Math.pow(2,cents/1200);
+  bendRate(s2,t,S);
   s2.connect(g); s2.start(t); s2.stop(end);
   s2.onended=()=>{ try{s2.disconnect();}catch(err){} };
 
