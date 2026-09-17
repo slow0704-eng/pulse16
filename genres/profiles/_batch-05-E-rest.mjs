@@ -33,7 +33,7 @@ export const groups = {
     chordType: 'triad', comping: 'trap_pad',
     pool: ['amb_aaba', 'amb_aaab', 'amb_aabb'], riff: ['edm_arp'], bline: ['bhou_aaab', 'bhou_abab'],
     ev: '1990년대 이후 유럽 · 11곡', conf: 'high',
-    why: '플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다',
+    why: '플럭 몇 음이 루프를 돈다. 반복이 목적이라 건반이 거의 움직이지 않는다 — 출처가 그것을 직접 말한다: 「**Vocals and melodies are uncommon.**」·「a repetitive **four on the floor** beat」·「tempos being in the range from **120 to 150** bpm」. ⚠ **Microhouse 를 이 무리에 둔 것은 출처와 어긋난다** — 정의가 「**a subgenre of house music** strongly influenced by minimalism and 1990s techno」이고 템포도 「**115 and 130** BPM」이다. 계열 문서 §2 Techno 표의 자리도 같은 문제라 함께 표시했다',
   },
   detroit: {
     anchor: 'Detroit Techno', members: ['Detroit Techno', 'Dub Techno'],
@@ -62,8 +62,8 @@ export const groups = {
     roles: { keys: 'lead', keys2: 'poly-fmlead-choir', gtr: 'crunch', gtr2: 'none' },
     chordType: 'triad', comping: 'disco_stab',
     pool: ['chip_aaab', 'chip_abab', 'chip_aabb'], riff: ['edm_build', 'metal_riff'], bline: ['bmet_aaab', 'bhou_aaab'],
-    ev: '2000년대 이후 유럽 · 9곡', conf: 'high',
-    why: '150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다',
+    ev: '2000년대 이후 유럽 · 0곡', conf: 'low',
+    why: '150~155 BPM 에 왜곡 리드. 테크노 형제가 성긴데 여기만 빽빽하고 거의 다 도약이다. ⚠ **이 무리는 근거가 거의 없다** — `Hard techno` 는 위키백과에 단독 문서가 없어 Hardcore(EDM) 로 리다이렉트되고 그 문서에는 하드 테크노를 정의하는 문장이 없으며 「160 to 200 BPM」은 **하드코어 전체**의 값이다. `Schranz` 는 표제어 자체가 없다. 셋 중 문서가 있는 것은 Industrial Techno 뿐인데 그마저 「a subgenre of **techno and industrial dance music**」이라 계보가 달라 한 무리로 둘 근거가 아니다. 곡 0건이라 확신도를 내렸다 — 이 방식으로는 교정할 수 없는 자리다',
   },
   minimal: {
     anchor: 'Minimal Techno', members: ['Minimal Techno'],
@@ -71,9 +71,9 @@ export const groups = {
     bass: B('root', 'short', 'offset'), lead: 'keys',
     roles: { keys: 'bell', keys2: 'pluck', gtr: 'none', gtr2: 'none' },
     chordType: 'triad', comping: 'trap_pad',
-    pool: ['amb_aabb', 'amb_aaba', 'bal_aabb'], riff: ['edm_arp'], bline: ['bhou_abab', 'bhou_aabb'],
+    pool: ['amb_aaba', 'amb_aaab', 'amb_aabb'], riff: ['edm_arp'], bline: ['bhou_abab', 'bhou_aabb'],
     ev: '1990년대 이후 독일 · 8곡', conf: 'medium',
-    why: '벨 한두 음이 16분 격자에서 자리를 바꾼다. 테크노 중 가장 적은 재료로 버틴다',
+    why: '테크노와 **선율로는 갈리지 않는다** — 출처가 미니멀을 가르는 축은 「average tempo … between **125 and 130** bpm」과 「less afrocentric and focuses more on **middle frequencies rather than deep basses**」와 「**rhythm and repetition instead of melody** and linear progression」 셋이고, 셋 다 템포·음역·반복이지 선율 재료가 아니다. 그래서 CI 가 「수치가 같은데 풀이 다르다」고 경고하던 자리를 **풀을 형제와 맞추는 쪽**으로 정리했다 — 없는 차이를 숫자로 만들어 내지 않는다',
   },
 
   dnb: {
@@ -94,7 +94,7 @@ export const groups = {
     chordType: 'sev', comping: 'disco_stab',
     pool: ['chip_abab', 'chip_aabb', 'chip_aaab'], riff: ['edm_build', 'edm_alt'], bline: ['bmet_aaab', 'bhou_aaab'],
     ev: '2000년대 이후 영국 · 10곡', conf: 'high',
-    why: '리스 베이스가 주역이고 신스가 위에서 쏘아 댄다. DnB 형제의 패드와 정반대 끝이다',
+    why: '베이스가 주역이고 신스가 위에서 쏘아 댄다 — DnB 형제의 패드와 정반대 끝이다. 다만 **«리스 베이스» 는 이 셋의 공통 표식이 아니다**: 리스를 갈래의 이름으로 지목하는 곳은 테크스텝 문서뿐이고(「the trademark stepping beats and distorted **Reese bassline which would become symbolic of the techstep genre**」), **뉴로펑크 문서에는 Reese 라는 낱말이 없다.** 그쪽이 말하는 것은 음색 설계다 — 「**wavetable synthesis, frequency modulation synthesis**, filtering, distortion, and **resampling**」·「bass sounds with **complex, changing timbres**」. 그래서 리스는 테크스텝에 남기고 뉴로펑크는 FM 쪽으로 두었다. 출처가 잇는 것도 「the progression from **techstep**」뿐이고 **Jump-up 과는 잇는 문장도 대비하는 문장도 없다**',
   },
   jungle: {
     anchor: 'Jungle', members: ['Jungle', 'Drumfunk'],
@@ -135,7 +135,7 @@ export const groups = {
     chordType: 'sus4', comping: 'trap_pad',
     pool: ['chip_aaab', 'chip_abab', 'chip_aabb'], riff: ['edm_arp', 'edm_alt'], bline: ['bhou_abab', 'bhou_aaab'],
     ev: '1990년대 이후 인도·이스라엘·유럽 · 11곡', conf: 'high',
-    why: '303 계열 베이스가 16분을 쉬지 않고 구른다. 트랜스 형제의 긴 상행과 달리 지그재그다',
+    why: '베이스가 쉬지 않고 두드린다 — 「a very distinctive bass beat that **pounds constantly** throughout the song」. 트랜스 형제의 긴 상행과 달리 지그재그다. 다만 **«303» 은 다섯 전부의 것이 아니다**: TB-303 을 명시하는 것은 **고아 문서뿐**이고(「popular analogue synthesizers such as the **Roland TB-303**…」), **Psychedelic trance 문서와 Full-on 절에는 TB-303·Roland 가 없다.** 「16분 세 개」도 출처에 없다. 템포는 사이트랜스 「**125 to 150**」·고아 「**130–150**」·풀온 「usually **140–148** bpm」이고, 고아의 베이스는 「**drone-like basslines**」다. ⚠ **Forest·Hi-tech 은 위키백과에 이름뿐**(NAME ONLY)이라 템포도 음색도 근거가 없다 — 한 무리로 두는 지금이 옳고, 가를 근거가 생기기 전에는 수치를 지어내지 않는다',
   },
   hardstyle: {
     anchor: 'Hardstyle', members: ['Hardstyle', 'Rawstyle'],
@@ -166,7 +166,7 @@ export const groups = {
     chordType: 'power', comping: 'disco_stab',
     pool: ['chip_abab', 'chip_aaab', 'chip_aabb'], riff: ['edm_build', 'metal_riff'], bline: ['bmet_aaab', 'bmet_aabb'],
     ev: '1990년대 이후 네덜란드·프랑스 · 10곡', conf: 'high',
-    why: '180~205 BPM 에 왜곡 킥. 저장소에서 가장 빠르고 파워코드 화음을 쓴다',
+    why: '왜곡 킥에 파워코드 — 저장소에서 가장 빠른 무리다. 다만 셋의 템포가 한 덩어리가 아니다: 개버는 「generally between **140 and 190** beats per minute」이고 프렌치코어는 「usually above 160–185 BPM」·「around **200** bpm」·「from 180 BPM all the way to **220** or more」다. **«음정이 생긴 킥» 도 개버의 것이 아니다** — 개버 문서는 「superfast BPMs, **distorted kickdrums**, and roared vocals」로 왜곡까지만 말하고, 음정을 명시하는 것은 프렌치코어다(「**pitched kick and bass**, just like hardstyle or mainstream hardcore」). 이 킥은 엔진이 없어 못 내던 것이 아니라 세 프리셋이 `gabber` 킥 기본값을 덮어쓰고 있던 것이라, 덮어쓰기를 지웠다',
   },
   happyhardcore: {
     anchor: 'Happy Hardcore', members: ['Happy Hardcore', 'Breakbeat Hardcore'],
@@ -176,7 +176,7 @@ export const groups = {
     chordType: 'power', comping: 'disco_stab',
     pool: ['dis_aaab', 'dis_aabb', 'dis_abab'], riff: ['edm_build', 'edm_arp'], bline: ['bdis_abab', 'bhou_aaab'],
     ev: '1990년대 영국·네덜란드 · 9곡', conf: 'high',
-    why: '피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다',
+    why: '피아노 스탭에 밝은 훅. 가버와 템포는 이웃인데 장조 어휘이고 반복이 강하다. 둘을 한 무리로 두는 것은 출처가 지지한다 — 브레이크비트 하드코어는 「often upbeat **house piano riffs** and vocals」이고 해피 하드코어를 「retaining **piano rolls** and more uplifting vocals」로 잇는다. 드럼도 같은 축이다: 「It **combines four-on-the-floor rhythms with breakbeats** usually sampled from hip-hop」. 갈리는 것은 템포뿐이라 브레이크비트 하드코어를 출처값 「**145–155** bpm」 안으로 되돌리고, 빠져 있던 정박 킥과 피아노를 채웠다',
   },
 
   nudisco: {
@@ -197,6 +197,6 @@ export const groups = {
     chordType: 'triad', comping: 'disco_stab',
     pool: ['ant_abab', 'ant_aabb', 'ant_aaba'], riff: ['edm_alt', 'edm_arp'], bline: ['b808_aaab', 'bdis_abab'],
     ev: '1980년대 이후 미국·유럽 · 9곡', conf: 'high',
-    why: '808 에 보코더. 120~128 BPM 으로 테크노보다 느리고 신스 리드가 각지게 튄다',
+    why: '808 에 보코더 — 출처가 못 박는다: 「**It is defined by the prominent use of the Roland TR-808 drum machine.**」·「Classic (1980s) electro drum patterns tend to be electronic emulations of breakbeats with a **syncopated kick drum**」·「electro tends to be more **mechanical**」. 그래서 `kit.bass` 가 `bcfg.eng:"s808"` 을 덮어 808 이 소리 경로에서 빠져 있던 것을 고쳤다. ⚠ 이 장르는 **계열 D 의 `Electro-funk` 와 같은 문서다** — 「Electro (**also known as electro-funk**, and sometimes referred to as electro-pop)」. 위키백과 기준으로는 중복이고 가를 근거가 없다',
   },
 };

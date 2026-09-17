@@ -62,7 +62,7 @@ export const groups = {
     chordType: 'triad', comping: 'disco_stab',
     pool: ['gar_abab', 'gar_aabb', 'funk_abab'],
     ev: '2000년대 이후 미국 동부 · 10곡', conf: 'medium',
-    why: '쪼갠 스탭이 몸이라 UK 개러지와 어법이 같다. 134~135 BPM 으로 형제 중 가장 느리지 않다',
+    why: '쪼갠 스탭이 몸이라 UK 개러지와 어법이 같다 — 「vocals are **chopped, fragmented and layered** over heavy bass kicks」. 셋은 한 계보지만 출처가 실제로 가른다: 볼티모어는 「heavy **breakbeats** and **call and response** stanzas」에 「tempos around **130**」, 저지는 「heavy **tresillo or shuffled triplet** kick patterns」에 「**130–140** BPM」이고 「Jersey producers prioritize **harder kick sounds** and more extensively chopped samples」, 필리는 「**much faster than** Baltimore club music and includes elements of hardstyle such as **sirens**」다. 전까지 적어 둔 「134~135 BPM」과 「5타 킥」은 지웠다 — 앞은 셋을 같게 만든 값이고, 뒤는 출처에 없는 표현이다',
   },
   moombahton: {
     anchor: 'Moombahton',

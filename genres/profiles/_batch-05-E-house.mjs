@@ -37,7 +37,7 @@ export const groups = {
     chordType: 'sev', comping: 'disco_stab',
     pool: ['dis_abab', 'dis_aabb', 'dis_aaab'],
     ev: '1990년대 후반 프랑스 파리 · 10곡', conf: 'high',
-    why: '디스코 루프를 필터로 여닫는다. 긴 상행 프레이즈가 한 덩어리로 움직인다',
+    why: '디스코 루프를 필터로 여닫는다 — 「The defining characteristics of the genre are **filter and phaser effects** both on and alongside **samples from late 1970s and early 1980s European disco** tracks」. 둘을 한 무리로 두는 것은 출처가 직접 지지한다: 「**French house (also referred to as French touch, filter house, or tekfunk)**」— 필터 하우스는 **별칭**이지 다른 장르가 아니다. 템포는 「**110–130** bpm」',
   },
   deep: {
     anchor: 'Deep House', members: ['Deep House', 'Melodic House & Techno', 'Tech House', 'Future House'],
@@ -58,7 +58,7 @@ export const groups = {
     chordType: 'sev', comping: 'disco_stab',
     pool: ['gar_aabb', 'gar_abab', 'funk_abab'],
     ev: '1990년대 후반 영국 런던 · 12곡', conf: 'high',
-    why: '16분 싱코페. 하우스의 정박도 레게의 오프비트도 아닌 스텝 0·3·6·10·13 이다',
+    why: '16분 싱코페가 몸이다 — 「**syncopated kick drums that skip a beat**, with shuffled rhythm or triplets」·「**off-beat snare** placements」. 다만 다섯이 한 골격은 아니다: 스피드 개러지는 「sped-up NY garage **4-to-the-floor** rhythms」, 베이스라인은 「comprises a **four-to-the-floor** beat with a tempo of around **135–142** bpm」이라 **네 박이 맞고**, 2-step 만 그 킥을 빼는 쪽이다. 전까지 적어 둔 「스텝 0·3·6·10·13」은 출처에 없는 수치라 지웠다',
     phrases: 'garage',
   },
   bigroom: {
@@ -99,6 +99,6 @@ export const groups = {
     chordType: 'sev', comping: 'disco_stab',
     pool: ['afr_aabb', 'afr_aaab', 'lat_abab'],
     ev: '2010년대 남아프리카·서아프리카 · 11곡', conf: 'high',
-    why: '타악이 선율을 대신한다. 아마피아노는 113 BPM 스윙 28 로 형제 22종과 템포부터 다르다',
+    why: '타악이 선율을 대신한다 — 출처가 이것을 못 박는다: 「In many tribal house tracks, **it is rare to find a core melody or prolonged synth sound**, such as those found in house music and similar electronic music styles.」·「Instead, tribal house tracks rely on **sophisticated drum patterns** for their rhythm.」·「elements of indigenous musical percussions (typically **conga drums**)」. 그래서 프리셋의 건반 선율 트랙을 비웠다. **BPM 은 출처에 수치가 없다**(기원만 「Late 1980s, United States」). ⚠ 아마피아노·아프로하우스를 이 무리에 넣은 것은 출처가 지지하지 않는다 — 아프로하우스 쪽이 트라이벌하우스를 재료로 든다는 **한 방향** 관계뿐이고 아마피아노를 잇는 근거는 없다. 계열 J 교정 때 가를 것',
   },
 };

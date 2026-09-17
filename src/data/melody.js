@@ -1235,8 +1235,8 @@ const MELODY_KIT_PRESET = {
   'Hard Techno'             :['chip_aaab','chip_abab','chip_aabb'],
   'Schranz'                 :['chip_aaab','chip_abab','chip_aabb'],
   'Industrial'              :['chip_aaab','chip_abab','chip_aabb'],
-  /* 벨 한두 음이 16분 격자에서 자리를 바꾼다 */
-  'Minimal Techno'          :['amb_aabb','amb_aaba','bal_aabb'],
+  /* 테크노와 선율로는 갈리지 않는다 — 출처가 가르는 축은 템포·음역·반복뿐이다 */
+  'Minimal Techno'          :['amb_aaba','amb_aaab','amb_aabb'],
   /* 174 BPM 이지만 화성은 하프타임으로 느리게 흐른다 */
   'Drum & Bass'             :['bal_aaba','amb_aaba','bal_aabb'],
   'Liquid Funk'             :['bal_aaba','amb_aaba','bal_aabb'],
