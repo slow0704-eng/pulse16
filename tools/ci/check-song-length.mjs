@@ -43,7 +43,8 @@ const soft = m => { console.log(`${WARN} ${m}`); warn++; };
 /* ── 곡 형식 ─────────────────────────────────────────────── */
 const A = new Function(
   strip(read('src/data/songform.js')) + strip(read('src/seq/arrange.js')) +
-  '\n; return {SONG_FORM, SONG_FORM_POOL_CAT, SONG_FORM_POOL_SUB, SECTION_RULE, SECTION_KINDS};'
+  '\n; return {SONG_FORM, SONG_FORM_POOL_CAT, SONG_FORM_POOL_SUB, SONG_FORM_POOL_PRESET,'
+  + ' SECTION_RULE, SECTION_KINDS};'
 )();
 
 const MEL_LENS = [64, 32, 16];
@@ -166,6 +167,15 @@ head('D — 배정표가 실재하는 계열·하위분기·폼만 가리키는�
   }
   const noCat = [...realCats].filter(c => !A.SONG_FORM_POOL_CAT[c]);
   if (noCat.length) bad(`기본형이 없는 계열 — ${noCat.join(' ')}`);
+  /* 프리셋 단위 예외 — 이름이 틀리면 조용히 무시되므로 기계가 봐야 한다 */
+  const realPresets = new Set(P.LIB_NAMES);
+  for (const [n, v] of Object.entries(A.SONG_FORM_POOL_PRESET || {})) {
+    if (!realPresets.has(n)) bad(`SONG_FORM_POOL_PRESET 에 없는 프리셋 — ${n}`);
+    for (const f of v.pool) if (!A.SONG_FORM[f]) bad(`프리셋 예외 ${n} 이 없는 폼을 가리킨다 — ${f}`);
+    if (!v.why) bad(`프리셋 예외 ${n} 에 why 가 없다 — 계보와 다르다는 근거를 적어야 한다`);
+  }
+  if (Object.keys(A.SONG_FORM_POOL_PRESET || {}).length)
+    console.log(`${OK} 프리셋 단위 예외 ${Object.keys(A.SONG_FORM_POOL_PRESET).length}건 — 전부 실재하는 프리셋·폼이고 근거가 있다`);
   const covered = new Set(Object.keys(A.SONG_FORM_POOL_SUB));
   const inherited = [...realSubs].filter(s => !covered.has(s));
   console.log(`${OK} 분기 ${realSubs.size}개 — 따로 배정 ${covered.size}개 · 계열 기본형 상속 ${inherited.length}개`);
@@ -203,6 +213,8 @@ head('E — 선율·리프·베이스 재료마다 64마디판이 있는가');
 head('F — 프리셋이 자기 폼의 선율 길이를 실제로 받는가');
 {
   const poolFor = n => {
+    const one = A.SONG_FORM_POOL_PRESET[n];
+    if (one && one.pool) return one.pool;
     const hit = A.SONG_FORM_POOL_SUB[subKey(n)];
     return (hit && hit.pool) || A.SONG_FORM_POOL_CAT[catFor(n)] || Object.keys(A.SONG_FORM);
   };
@@ -257,6 +269,8 @@ head('G — 형식의 대비가 그 프리셋에서 실제로 유효한가');
     });
   };
   const poolFor = n => {
+    const one = A.SONG_FORM_POOL_PRESET[n];
+    if (one && one.pool) return one.pool;
     const hit = A.SONG_FORM_POOL_SUB[subKey(n)];
     return (hit && hit.pool) || A.SONG_FORM_POOL_CAT[catFor(n)] || [];
   };
@@ -278,14 +292,16 @@ head('G — 형식의 대비가 그 프리셋에서 실제로 유효한가');
       const a = row(thin), b = row(thick);
       let swing = 0;
       for (let i = 0; i < live.length; i++) if ((a[i] === 0) !== (b[i] === 0)) swing++;
-      if (swing === 0) (flatFor[fname] = flatFor[fname] || []).push(n);
+      if (swing <= 1) (flatFor[fname] = flatFor[fname] || []).push(`${n}(${swing})`);
     }
   }
   const names = Object.keys(flatFor);
-  if (!names.length) console.log(`${OK} build 형식은 전부, 배정된 프리셋에서 켜고 꺼지는 트랙이 있다`);
+  if (!names.length) console.log(`${OK} build 형식은 전부, 배정된 프리셋에서 켜고 꺼지는 트랙이 둘 이상이다`);
   for (const f of names)
-    soft(`${f} — 켜고 꺼지는 트랙이 0인 프리셋 ${flatFor[f].length}종 (${flatFor[f].slice(0, 4).join(' ')}…).`
-       + ` 레벨만으로는 컴프를 잘 못 넘는다 — 프리셋에 트랙이 없거나 규칙이 그 트랙을 안 건드린다`);
+    soft(`${f} — 켜고 꺼지는 트랙이 0~1개인 프리셋 ${flatFor[f].length}종 (${flatFor[f].slice(0, 5).join(' ')}…).`
+       + ` 대비가 레벨에 기대게 되고 마스터 컴프가 그것을 누른다.`
+       + ` 대개 **프리셋에 층이 없어서**다(펑크·메탈은 드럼 셋 + 베이스·기타뿐이라 끄고 켤 것이 없다) —`
+       + ` 그럴 때는 형식의 결함이 아니다. 실측으로 가려야 한다: tools/measure-sections.mjs`);
 }
 
 

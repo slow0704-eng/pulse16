@@ -353,9 +353,11 @@ if (existsSync(abs(FDIR))) {
                     total, melLen, secs: f.secs, why: f.basis,
                     ...(rule ? { rule, ruleWhy } : {}) };
   }
-  const sub = {};
+  const sub = {}, pre = {};
   for (const [k, v] of Object.entries(fJson.assignSub || {}))
     sub[k] = { pool: v.forms, why: v.why };
+  for (const [k, v] of Object.entries(fJson.assignPreset || {}))
+    pre[k] = { pool: v.forms, why: v.why };
   const sJs = `/* 생성물 — tools/build-refdata.mjs 가 genres/forms/forms.json 에서 만듭니다.
    손으로 고치지 마십시오 — 원본은 genres/forms/forms.json 이고
    그 값의 근거는 genres/00-form.md 에 출처와 함께 있습니다.
@@ -367,12 +369,14 @@ if (existsSync(abs(FDIR))) {
 
 const SONG_FORM = ${JSON.stringify(forms)};
 const SONG_FORM_POOL_SUB = ${JSON.stringify(sub)};
+const SONG_FORM_POOL_PRESET = ${JSON.stringify(pre)};
 const SONG_FORM_POOL_CAT = ${JSON.stringify(fJson.assignCat)};
 `;
   if (emit('src/data/songform.js', sJs)) {
     const lens = [...new Set(Object.values(forms).map(f => f.total))].sort((a, b) => a - b);
     console.log(`${OK} src/data/songform.js — 형식 ${Object.keys(forms).length}종 · `
-      + `총 마디 ${lens.join('·')} · 분기 배정 ${Object.keys(sub).length}건`);
+      + `총 마디 ${lens.join('·')} · 분기 배정 ${Object.keys(sub).length}건`
+      + `${Object.keys(pre).length ? ` · 프리셋 예외 ${Object.keys(pre).length}건` : ''}`);
     const low = Object.entries(forms).filter(([, f]) => f.conf === 'low').map(([n]) => n);
     if (low.length) console.log(`   ${WARN} 확신도 low — ${low.join(' ')} (출처가 얇다는 기록입니다)`);
     if (fJson.unresearched && fJson.unresearched.length)

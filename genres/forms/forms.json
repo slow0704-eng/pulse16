@@ -90,13 +90,37 @@
       "arc": "build"
     },
     "aaba32": {
-      "label": "32마디 AABA",
+      "label": "32마디 AABA ×2 + BA",
       "cat": "band",
       "confidence": "high",
-      "basis": "위키백과 Thirty-two-bar form — 8마디 A · 8마디 A · 8마디 B · 8마디 A. 1950~60년대 록에도 쓰였다고 명시",
+      "basis": "위키백과 Thirty-two-bar form — 8마디 A · 8마디 A · 8마디 B · 8마디 A. 1950~60년대 록에도 쓰였다고 명시. 한 곡은 «거의 언제나 완전한 AABA 한 바퀴 뒤에 또 한 바퀴, 또는 불완전한 한 바퀴(보통 BA)» 라고 학술 자료(Open Music Theory)가 적는다 — 두 바퀴(64) 뒤에 BA(16)를 붙여 80마디로 단다. 1960년대 1위 곡이 2분 안팎이라는 집계와도 맞는다(168 BPM 에 80마디 = 1분 54초)",
       "secs": [
         {
           "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "bridge",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "bridge",
           "bars": 8
         },
         {
@@ -149,10 +173,10 @@
       "arc": "unsourced"
     },
     "blues12": {
-      "label": "12마디 블루스 ×4",
+      "label": "12마디 블루스 ×8",
       "cat": "roots",
       "confidence": "high",
-      "basis": "위키백과 Twelve-bar blues — 한 코러스가 12마디. 넷을 이어 한 바퀴(48)로 둔다. 64로는 나누어지지 않는 형식이다",
+      "basis": "위키백과 Twelve-bar blues — 한 코러스가 12마디. 64로는 나누어지지 않는 형식이다. 바퀴 수는 곡 길이에서 나왔다 — 12마디 블루스 계보의 Hot 100 1위 곡(2:34)이 168 BPM 에 약 9바퀴이고, 블루스 프리셋 BPM(90~160)에서 8바퀴(96마디)면 2분 17초~4분 16초가 되어 실제 곡 길이에 든다. 4바퀴(48마디)는 168 BPM 에 1분 8초라 곡이 아니었다",
       "secs": [
         {
           "k": "verse",
@@ -160,6 +184,22 @@
         },
         {
           "k": "verse",
+          "bars": 12
+        },
+        {
+          "k": "chorus",
+          "bars": 12
+        },
+        {
+          "k": "verse",
+          "bars": 12
+        },
+        {
+          "k": "verse",
+          "bars": 12
+        },
+        {
+          "k": "chorus",
           "bars": 12
         },
         {
@@ -709,27 +749,35 @@
       "label": "그루브 유지",
       "cat": "loop",
       "confidence": "medium",
-      "basis": "아프로비트는 10~30분대에 긴 기악 구간 · 펑크는 한 코드 위를 곡 전체로 탄다 · 크라우트록은 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심». 섹션이 안 바뀌는 것이 형식이다",
+      "basis": "아프로비트는 10~30분대에 긴 기악 구간 · 펑크는 한 코드 위를 곡 전체로 탄다 · 크라우트록은 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심». 섹션이 안 바뀌는 것이 형식이다. ⚠ 길이도 이 형식의 일부다 — 출처가 드는 곡이 아프로비트 10~30분 · 사이키델릭 록 앨범판 7분대다. 64마디는 125 BPM 에 2분 3초라 «붙잡을 그루브» 가 될 시간이 없었다. 192마디(64×3)로 늘려 110~142 BPM 에서 5분 24초~6분 59초가 된다",
       "secs": [
         {
           "k": "intro",
-          "bars": 8
-        },
-        {
-          "k": "verse",
           "bars": 16
         },
         {
           "k": "verse",
-          "bars": 16
+          "bars": 32
         },
         {
           "k": "verse",
-          "bars": 16
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
         },
         {
           "k": "outro",
-          "bars": 8
+          "bars": 16
         }
       ],
       "rule": {
@@ -858,12 +906,163 @@
         }
       ],
       "arc": "unsourced"
+    },
+    "rockVerseChorus": {
+      "label": "록 벌스·프리코러스·코러스 (기타 솔로)",
+      "cat": "band",
+      "confidence": "medium",
+      "arc": "build",
+      "basis": "1980년대 이후 대중가요의 최빈 형식이 벌스-프리코러스-코러스라는 학술 조사(Summach) · 록·헤비메탈에는 «보통 기타 솔로가 하나 이상 있고 가운데 코러스 뒤에 온다»(위키백과 Song structure) · 록 인트로는 역사적으로 16~32마디로 길다(제작 자료) · 총 마디는 계열 A 의 Hot 100 1위 곡 실측에서 나왔다(95~138마디, 표본 5곡)",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "bridge",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 8
+        }
+      ],
+      "rule": {
+        "_why": "록의 인트로는 리프다 — 기본 규칙은 인트로에서 기타를 끄는데 그러면 록 인트로가 아니라 팝 인트로가 된다. 브릿지 자리는 **기타 솔로**이고(출처가 록·메탈에 대해 명시한다) 솔로는 «한 목소리가 앞에 나오는 것» 이므로 기타를 올리고 건반을 물린다. 벌스의 기타도 0.62 로 내리지 않는다 — 록에서 기타는 반주가 아니다. ⚠ 솔로를 **코러스보다 크게** 만들지는 않는다 — 출처는 «솔로가 있고 가운데 코러스 뒤에 온다» 고만 하지 «더 크다» 고 하지 않는다. 기타를 코러스와 같은 1.55 로 두고 건반·둘째기타를 빼서 «누가 앞에 있는가» 만 바꾼다. 세베네와 같은 원리다",
+        "intro": {
+          "off": [
+            "clap",
+            "tom",
+            "perc",
+            "keys",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "gtr": 1.2,
+            "bass": 0.9
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "verse": {
+          "off": [
+            "clap",
+            "ohat",
+            "tom",
+            "perc",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "keys": 0.8,
+            "gtr": 0.85,
+            "bass": 0.95
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "prechorus": {
+          "off": [
+            "clap",
+            "tom",
+            "perc",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "gtr": 1.15,
+            "keys": 1.1,
+            "snare": 1.1
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [
+            "tom",
+            "perc"
+          ],
+          "lvl": {
+            "gtr": 1.55,
+            "gtr2": 1.35,
+            "keys": 1.25,
+            "keys2": 1.2,
+            "snare": 1.2,
+            "bass": 1.15,
+            "clap": 1.1,
+            "chat": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        },
+        "bridge": {
+          "off": [
+            "clap",
+            "perc",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "gtr": 1.55,
+            "keys": 0.55,
+            "tom": 1.15,
+            "snare": 1.05
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "outro": {
+          "off": [
+            "clap",
+            "ohat",
+            "tom",
+            "perc",
+            "keys",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "gtr": 0.9,
+            "bass": 0.85
+          },
+          "fillOut": false,
+          "bank": false
+        }
+      }
     }
   },
   "assignCat": {
     "A": [
-      "verseChorusBridge",
-      "verseChorus"
+      "rockVerseChorus"
     ],
     "B": [
       "verseChorus",
@@ -914,9 +1113,9 @@
     "A:뿌리": {
       "forms": [
         "aaba32",
-        "verseChorus"
+        "rockVerseChorus"
       ],
-      "why": "위키백과가 32마디 AABA 를 «1950~60년대 록에 자주 쓰였다» 고 명시한다"
+      "why": "위키백과가 32마디 AABA 를 «1950~60년대 록에 자주 쓰였다» 고 명시한다. 이 분기의 Hot 100 1위 곡이 2분 안팎이라는 집계와도 맞는다"
     },
     "B:Downtempo · Ambient · Retro": {
       "forms": [
@@ -1023,6 +1222,42 @@
         "djTool"
       ],
       "why": "E:House 계열과 같다"
+    },
+    "A:Hard Rock": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "A:Metal": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "A:Punk": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "A:Post-punk 계보": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "A:Alternative": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "A:루츠와의 교차": {
+      "forms": [
+        "rockVerseChorus"
+      ],
+      "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
     }
   },
   "unresearched": [
@@ -1047,5 +1282,15 @@
     "K:하이브리드 · 인터넷 장르"
   ],
   "ruleNote": "형식마다 섹션 규칙을 덮어쓴다. 키가 있으면 arrange.js 의 SECTION_RULE 기본값을 그 섹션에 대해 **통째로 대신한다**(off·lvl 둘 다). 덮지 않은 섹션은 기본값 그대로다. _why 는 왜 기본값으로는 안 되는지 — genres/00-form.md §5.",
-  "arcNote": "arc 는 «출처가 셈여림에 대해 무엇을 말했는가» 다. build=출처가 쌓였다 터지는 형태를 서술한다 · flat=출처가 «안 변하는 것이 형식» 이라고 서술한다 — 벌어짐이 작아야 맞다 · unsourced=출처가 셈여림을 말하지 않는다. 값을 지어내지 않고 «모른다» 로 둔다 — 재기만 하고 판정하지 않는다. tools/measure-sections.mjs 가 이 값으로 판정 기준을 바꾼다."
+  "arcNote": "arc 는 «출처가 셈여림에 대해 무엇을 말했는가» 다. build=출처가 쌓였다 터지는 형태를 서술한다 · flat=출처가 «안 변하는 것이 형식» 이라고 서술한다 — 벌어짐이 작아야 맞다 · unsourced=출처가 셈여림을 말하지 않는다. 값을 지어내지 않고 «모른다» 로 둔다 — 재기만 하고 판정하지 않는다. tools/measure-sections.mjs 가 이 값으로 판정 기준을 바꾼다.",
+  "assignPreset": {
+    "Rock & Roll": {
+      "forms": [
+        "blues12",
+        "aaba32"
+      ],
+      "why": "이 저장소 자신의 계열 A 조사가 Rock & Roll 의 핵심 포인트를 «12마디 블루스 구조» 라고 적는다(genres/01-rock.md). 같은 분기의 Surf Rock·Garage Rock·Proto-punk 에는 그런 서술이 없어 분기 전체가 아니라 이 프리셋만 예외로 둔다. AABA 도 함께 두는 것은 위키백과가 32마디 형식을 1950~60년대 록에 자주 쓰였다고 명시하기 때문이다"
+    }
+  },
+  "assignNote": "폼 풀은 프리셋 > 하위분기 > 계열 순으로 찾는다. 프리셋 단위 예외는 «그 프리셋만 계보와 다르다» 는 근거가 있을 때만 둔다 — MELODY_KIT_PRESET 이 하위분기 상속을 끊은 것과 같은 순서다."
 }

@@ -61,7 +61,7 @@ function catFor(name){
   return (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name] || 'K';
 }
 
-/* 폼 풀은 **하위분기 우선 · 계열 폴백**이다.
+/* 폼 풀은 **프리셋 > 하위분기 > 계열** 순으로 찾는다.
    src/data/songform.js 의 SONG_FORM_POOL_SUB 키는 '계열:하위분기' 다 —
    하위분기 이름이 계열마다 겹치기 때문이다(E 와 J 둘 다 'House 계열',
    B 와 K 둘 다 '하이브리드 · 인터넷 장르').
@@ -71,6 +71,8 @@ function catFor(name){
 function formPoolFor(presetName){
   const cat = catFor(presetName);
   const sub = (typeof PRESET_SUB!=='undefined' && PRESET_SUB[presetName]) || '';
+  const one = SONG_FORM_POOL_PRESET[presetName];
+  if(one && one.pool) return one.pool;
   const hit = sub && SONG_FORM_POOL_SUB[cat+':'+sub];
   return (hit && hit.pool) || SONG_FORM_POOL_CAT[cat] || SONG_FORM_NAMES;
 }
@@ -79,6 +81,8 @@ function formPoolFor(presetName){
 function formWhyFor(presetName){
   const cat = catFor(presetName);
   const sub = (typeof PRESET_SUB!=='undefined' && PRESET_SUB[presetName]) || '';
+  const one = SONG_FORM_POOL_PRESET[presetName];
+  if(one && one.why) return one.why;
   const hit = sub && SONG_FORM_POOL_SUB[cat+':'+sub];
   return (hit && hit.why) || '';
 }
