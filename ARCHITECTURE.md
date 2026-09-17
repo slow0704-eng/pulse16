@@ -81,6 +81,10 @@ src/
     references.js           (생성물) 대표 아티스트·앨범. genres/*.md 의
                            «레퍼런스» 표에서 같은 이유로 굳힌다. 사람이 읽는
                            자료라 이름이 있다 — 앨범명은 미검증(00-reference.md)
+    songform.js             (생성물) 곡 형식 13종과 배정표. genres/forms/forms.json
+                           ← genres/00-form.md(출처 인용). 폼마다 total 이 다르고
+                           (32·48·64·96·128·224) melLen 이 그것을 나누는 가장 긴
+                           선율 길이다 — **폼이 선율 길이를 정한다**
     fills.js                필인 라이브러리(FILLS) · fillPoolFor()
     melody.js               선율·리프·베이스 라이브러리(MELODY·RIFF·BLINE).
                            16·32·64마디판을 함께 만든다 — buildLongP(표, plan)
@@ -109,9 +113,9 @@ src/
     voice-keys.js      §9-B 건반 · 신스
     voice-gtr.js       §9-C 기타 · 밴조 · 만돌린 · 시타르 · 피들(찰현)
   seq/
-    arrange.js              곡 구조(섹션)·트랙별 그루브 — SONG_FORM·
-                           SONG_FORM_BARS(=64, 폼은 전부 이 길이)·
-                           SONG_FORM_NAMES·formOn/formMode·GROOVE·
+    arrange.js              곡 구조(섹션)·트랙별 그루브 — 폼 사전은 여기 없고
+                           data/songform.js 가 준다. SONG_FORM_NAMES·
+                           formOn/formMode·formPoolFor·formMelLen·GROOVE·
                            GROOVE_NAMES·grooveOn/grooveMode. voice-gtr.js
                            다음, seq/sequencer.js 앞
     sequencer.js       §10 스텝 스케줄링 — progOn·chordRoot 등 harmony.js ·

@@ -80,10 +80,21 @@ function pickComp(){
    melLenPref 는 사용자가 고른 길이('auto'|'16'|'32'|'64')다.
    'auto' 는 장르 풀에 짧은 것과 긴 것을 함께 놓아 섞이게 한다. */
 const MEL_BARS=16;                    // 아무것도 안 걸렸을 때의 기본 길이
-/* 기본은 64루프다 — 선율·리프·베이스 모두 64마디판이 있고, 곡 구조(SONG_FORM)도
-   전부 64마디라 «선율 한 바퀴 = 곡 한 번» 이 된다. 'auto'·'16'·'32' 는 그대로
-   고를 수 있다(짧은 루프로 패턴을 찍는 작업 흐름을 남겨 둔다). */
+/* 기본은 64루프다. 'auto'·'16'·'32' 는 그대로 고를 수 있다(짧은 루프로 패턴을
+   찍는 작업 흐름을 남겨 둔다).
+
+   ⚠ 다만 **곡 구조가 켜져 있으면 폼이 이긴다.** 폼마다 총 마디가 다르고
+   (32·48·64·96·128·224) 선율이 그것을 나누지 못하면 코러스가 선율의 브릿지
+   위에 얹힌다. 12마디 블루스 네 바퀴(48마디)에 64마디 선율을 물리면 둘이
+   192마디마다 한 번 만난다. 그래서 lenPref() 가 폼의 melLen 을 먼저 본다 —
+   genres/00-form.md §2. */
 let melLen=MEL_BARS, melLenPref='64';
+
+/** 지금 써야 할 길이 선호. 곡 구조가 켜져 있으면 폼이 정하고, 아니면 사용자 선택 */
+function lenPref(){
+  const f = (typeof formMelLen==='function') ? formMelLen() : null;
+  return f ? String(f) : melLenPref;
+}
 /* 선율 한 바퀴가 시작된 loopNo. 늘 MEL_BARS 의 배수다 —
    이것이 선율을 셔플·필인과 같은 격자에 묶어 두는 고리다. */
 let melAnchor=0;
@@ -437,18 +448,19 @@ function pickFill(size, mode){
 /** 대선율용 두 번째 선율 — 본 선율과 겹치지 않게 다른 것을 고른다 */
 function pickMelody2(){
   const pool = melodyLenPool(melMode==='genre' ? melodyPoolFor(src.keys) : MELODY_NAMES,
-                             melLenPref);
+                             lenPref());
   const other = pool.filter(n => MELODY[n] !== melNow);
   const use = other.length ? other : pool;
   return use.length ? MELODY[use[(Math.random()*use.length)|0]] : null;
 }
 
-/** 다음에 연주할 선율을 고른다. 길이는 melLenPref(기본 64루프)를 따른다.
+/** 다음에 연주할 선율을 고른다. 길이는 lenPref() — 곡 구조가 켜져 있으면
+    폼이 정하고, 아니면 사용자가 고른 값(기본 64루프)이다.
     모드가 이름이면 그것으로 고정. */
 function pickMelody(){
   if(melMode!=='genre' && melMode!=='all') return MELODY[melMode] || null;
   const pool = melodyLenPool(melMode==='genre' ? melodyPoolFor(src.keys) : MELODY_NAMES,
-                             melLenPref);
+                             lenPref());
   if(!pool.length) return null;          // 메탈처럼 건반을 안 쓰는 장르
   return MELODY[pool[(Math.random()*pool.length)|0]] || null;
 }
@@ -458,14 +470,14 @@ function pickMelody(){
     되풀이했다. */
 function pickRiff(){
   if(melMode!=='genre' && melMode!=='all') return RIFF[melMode] || null;
-  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, melLenPref);
+  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, lenPref());
   if(!pool.length) return null;
   return RIFF[pool[(Math.random()*pool.length)|0]] || null;
 }
 
 /** 2번 기타용 리프 — 1번과 다른 것을 고른다 */
 function pickRiff2(){
-  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, melLenPref);
+  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, lenPref());
   const other = pool.filter(n => RIFF[n] !== riffNow);
   const use = other.length ? other : pool;
   return use.length ? RIFF[use[(Math.random()*use.length)|0]] : null;
@@ -474,7 +486,7 @@ function pickRiff2(){
 /** 다음에 칠 베이스 라인을 고른다. 리프와 같은 이유로 길이 선호를 거친다. */
 function pickBline(){
   if(melMode!=='genre' && melMode!=='all') return BLINE[melMode] || null;
-  const pool = blineLenPool(melMode==='genre' ? blinePoolFor(src.bass) : BLINE_NAMES, melLenPref);
+  const pool = blineLenPool(melMode==='genre' ? blinePoolFor(src.bass) : BLINE_NAMES, lenPref());
   if(!pool.length) return null;
   return BLINE[pool[(Math.random()*pool.length)|0]] || null;
 }
@@ -569,8 +581,14 @@ function onLoopWrap(){
       melNowB = pickMelody2(); riffNowB = pickRiff2();
       calcMelLen();
     };
+    /* 격자는 **폼이 있으면 폼의 선율 길이**, 없으면 MEL_BARS(16) 다.
+       16에만 붙이면 총 224마디 폼(덥스텝)에서 어긋난다 — 224는 32의 배수라
+       폼 경계가 32격자 위에 있는데, 앵커가 16 mod 32 에 잡히면 선율 경계가
+       폼 경계와 **영영 안 만난다.** 폼 길이로 붙이면 total % melLen === 0
+       이므로 모든 폼 경계가 곧 선율 경계가 된다. */
+    const grid = (typeof formMelLen==='function' && formMelLen()) || MEL_BARS;
     if(!melNow && !riffNow && !blineNow){
-      melAnchor = loopNo - (loopNo % MEL_BARS);   // 격자에 붙여서 시작
+      melAnchor = loopNo - (loopNo % grid);       // 격자에 붙여서 시작
       pickAll();
     }else if(loopNo - melAnchor >= melLen){
       melAnchor = loopNo;                          // 이 자리도 16의 배수다
@@ -636,6 +654,11 @@ function restartSong(){
     if(HAS_TONE){ Tone.Transport.position=0; }
     else{ fbStep=0; fbNext=(ctx?ctx.currentTime:0)+0.08; }
   }
+  /* ⚠ 폼을 **선율보다 먼저** 뽑는다. onLoopWrap 과 같은 순서다.
+     lenPref() 가 formMelLen() 을 보기 때문이다 — 뒤집으면 formRestart() 로
+     비워진 formNow 때문에 선율이 사용자 선호(기본 64)로 뽑히고, 48마디
+     블루스 폼에 64마디 선율이 얹힌다. 2026-09-17 에 실제로 그랬다. */
+  formTick(src.kick, loopNo);
   /* 선율 모드가 켜져 있으면 지금 바로 새 장르에서 뽑아 둔다 —
      다음 루프 경계까지 기다리면 한 바퀴 동안 선율이 비어 있다. */
   if(melOn){
@@ -644,8 +667,7 @@ function restartSong(){
     melNowB = pickMelody2(); riffNowB = pickRiff2();
     calcMelLen();
   }
-  /* 같은 이유로 폼·진행·그루브도 즉시 새로 골라 둔다 (loopNo 는 이미 0) */
-  formTick(src.kick, loopNo);
+  /* 진행·그루브도 같은 이유로 즉시 새로 골라 둔다 (loopNo 는 이미 0) */
   if(progOn){
     progAnchor=0; progNow=pickProg(); compNow=pickComp();
     chordRoot = (progNow && typeof chordDegAt==='function') ? chordDegAt(progNow,0) : null;

@@ -24,59 +24,26 @@
    그래서 섹션 위치는 loopNo 를 되돌리지 않고, loopNo 자체에서 "지금 이
    폼의 몇 번째 마디인가"를 그때그때 계산한다(sectionAt). */
 
-/* ⚠ 기본 켜짐(2026-09-16). 64마디 한 바퀴가 인트로·벌스·코러스·아웃트로를
-   한 번 도는 것이 «한 곡» 이고, 그 편성 변화가 없으면 64마디는 길어진 것이
-   아니라 늘어진 것이다. 끄면 섹션 마스크가 전부 빠져 예전처럼 들린다. */
+/* ⚠ 기본 켜짐(2026-09-16). 한 바퀴가 인트로·벌스·코러스·아웃트로를 한 번
+   도는 것이 «한 곡» 이고, 그 편성 변화가 없으면 길어진 것이 아니라 늘어진
+   것이다. 끄면 섹션 마스크가 전부 빠져 예전처럼 들린다. */
 let formOn   = true;
 let formMode = 'genre';   // 'genre' | 'all' | SONG_FORM 의 이름(고정)
 
-/* ── 폼 사전 ──
-   ⚠ 총 마디는 **전부 정확히 64** 다. 섹션 길이는 4·8·16마디만 쓴다.
+/* ── 폼 사전은 여기 없다 ──
+   SONG_FORM · SONG_FORM_POOL_CAT · SONG_FORM_POOL_SUB 는 **생성물**이다
+   (src/data/songform.js ← genres/forms/forms.json ← genres/00-form.md).
+   arrange.js 보다 먼저 로드되므로 여기서는 그냥 쓴다.
 
-   예전에는 «16의 배수» 까지만 맞췄고 48·64·80 이 섞여 있었다. 선율이
-   16마디일 때는 그래도 됐지만, 선율·리프·베이스가 64마디가 된 지금은
-   48마디 폼이 64마디 선율과 **192마디마다 한 번만** 자리가 맞는다(최소공배수).
-   80마디 폼은 320마디다. 그 사이에는 코러스가 선율의 브릿지 위에 얹히고
-   브레이크가 재현부를 덮는다 — 섹션과 선율이 서로 다른 곡을 연주한다.
+   ⚠ 2026-09-17 에 이 자리에 손으로 쓴 폼 일곱 개가 있었다. 마디 배분이
+     **어디에서도 오지 않은 값**이었고, 357종이 계열 12개를 거쳐 그 일곱 개로
+     뭉개졌다. 지금은 형식마다 출처가 있고 하위분기 단위로 배정된다.
 
-   64 로 맞춰 두면 **선율 한 바퀴 = 곡 한 번**이라 제시·전개·브릿지·재현이
-   인트로·벌스·코러스·아웃트로와 늘 같은 자리에서 만난다.
-   tools/ci/check-song-length.mjs 가 이 불변식을 지킨다. */
-const SONG_FORM = {
-  /* 브릿지가 없는 대신 마지막 코러스를 두 배로 — popLong 과 길이는 같고
-     «어디서 쉬어 가는가» 가 다르다 */
-  popAABA:{label:'팝 절-후렴 (브릿지 없음)', cat:'band', secs:[
-    {k:'intro',bars:4},{k:'verse',bars:16},{k:'prechorus',bars:4},{k:'chorus',bars:8},
-    {k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:16},{k:'outro',bars:4},
-  ]},                                                                          // 64마디
-  popLong:{label:'팝 절-후렴 (브릿지 포함)', cat:'band', secs:[
-    {k:'intro',bars:4},{k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},
-    {k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},{k:'bridge',bars:8},
-    {k:'chorus',bars:8},{k:'outro',bars:4},
-  ]},                                                                          // 64마디
-  /* 드롭을 16마디로 — 8마디 드롭은 «터졌다» 가 아니라 «스쳤다» 로 들린다 */
-  edmDrop:{label:'EDM 빌드업-드롭', cat:'edm', secs:[
-    {k:'intro',bars:8},{k:'prechorus',bars:8},{k:'chorus',bars:16},{k:'break',bars:8},
-    {k:'prechorus',bars:4},{k:'chorus',bars:16},{k:'outro',bars:4},
-  ]},                                                                          // 64마디. prechorus=빌드업, chorus=드롭, break=브레이크다운
-  loopMinimal:{label:'루프 반복형 (힙합·로파이)', cat:'loop', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:16},{k:'chorus',bars:8},{k:'verse',bars:16},
-    {k:'chorus',bars:8},{k:'outro',bars:8},
-  ]},                                                                          // 64마디. 훅이 두 번 짧게 끼는 반복형
-  /* 헤드 16 · 솔로 16 · 헤드 16 — 실제 재즈 형식의 비율 */
-  jazzHead:{label:'재즈 헤드-솔로-헤드', cat:'jazz', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:16},{k:'bridge',bars:16},{k:'verse',bars:16},{k:'outro',bars:8},
-  ]},                                                                          // 64마디. bridge 자리를 솔로 트레이딩으로 씀
-  worldLoop:{label:'월드·라틴 반복형', cat:'world', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:16},{k:'chorus',bars:16},{k:'verse',bars:16},{k:'outro',bars:8},
-  ]},                                                                          // 64마디
-  balladBuild:{label:'발라드 빌드업', cat:'ballad', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:16},{k:'prechorus',bars:4},{k:'chorus',bars:16},
-    {k:'bridge',bars:8},{k:'chorus',bars:8},{k:'outro',bars:4},
-  ]},                                                                          // 64마디
-};
-/* 폼 길이 — 하나라도 64 가 아니면 섹션이 선율과 어긋난다(§ 위 주석) */
-const SONG_FORM_BARS = 64;
+   ⚠ 그때 세웠던 «총 마디는 전부 정확히 64» 는 **틀렸다.** 12마디 블루스가
+     64를 안 나눈다(최소공배수 192). 형식이 음악의 사실이고 선율 길이는
+     우리가 만든 눈금이므로, 폼이 선율 길이를 정하는 쪽으로 뒤집었다 —
+     폼마다 melLen(64·32·16 중 그 폼을 나누는 가장 긴 것)이 붙어 있다.
+     genres/00-form.md §2 · tools/ci/check-song-length.mjs 가 지킨다. */
 const SONG_FORM_NAMES = Object.keys(SONG_FORM);
 
 const SECTION_KINDS = ['intro','verse','prechorus','chorus','bridge','break','outro'];
@@ -85,7 +52,7 @@ const SECTION_LABEL_KR = {
   bridge:'브릿지', break:'브레이크', outro:'아웃트로',
 };
 
-/* ── 하위분기가 아니라 계열(cat) 단위로 고른다 ──
+/* ── 계열(cat) 판정 ──
    프리셋 357종 전부가 raw 정의에 cat:'A'~'K' 를 직접 적어 두므로(LIB[name].cat)
    PRESET_CAT(수동 예외표)보다 이쪽이 훨씬 촘촘하다. catOf() 는 ui/build.js 에
    있고 arrange.js 는 sequencer.js 보다 먼저 로드되므로 그 함수에 기대지 않고
@@ -94,25 +61,26 @@ function catFor(name){
   return (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name] || 'K';
 }
 
-/* A 록 B 팝 C 힙합 D R&B·소울·펑크 E 일렉트로닉 F 재즈
-   G 블루스·컨트리·포크 H 라틴 I 카리브 J 아프리카 K 기타지역 X 그 외 */
-const SONG_FORM_POOL_CAT = {
-  A:['popLong','popAABA','balladBuild'],
-  B:['popAABA','popLong'],
-  C:['loopMinimal','popAABA'],
-  D:['loopMinimal','balladBuild','popAABA'],
-  E:['edmDrop','loopMinimal'],
-  F:['jazzHead'],
-  G:['popAABA','balladBuild','worldLoop'],
-  H:['worldLoop','popAABA'],
-  I:['worldLoop','loopMinimal'],
-  J:['worldLoop','loopMinimal'],
-  K:['worldLoop','popAABA'],
-  X:['popAABA','loopMinimal'],
-};
-/** 지금 걸린 프리셋에 어울리는 폼 이름 목록 */
+/* 폼 풀은 **하위분기 우선 · 계열 폴백**이다.
+   src/data/songform.js 의 SONG_FORM_POOL_SUB 키는 '계열:하위분기' 다 —
+   하위분기 이름이 계열마다 겹치기 때문이다(E 와 J 둘 다 'House 계열',
+   B 와 K 둘 다 '하이브리드 · 인터넷 장르').
+
+   분기를 따로 안 적으면 계열 기본형을 물려받는다. 그것이 곧 «출처가 이 분기를
+   따로 말하지 않았다» 는 기록이다(genres/00-form.md §4). */
 function formPoolFor(presetName){
-  return SONG_FORM_POOL_CAT[catFor(presetName)] || SONG_FORM_NAMES;
+  const cat = catFor(presetName);
+  const sub = (typeof PRESET_SUB!=='undefined' && PRESET_SUB[presetName]) || '';
+  const hit = sub && SONG_FORM_POOL_SUB[cat+':'+sub];
+  return (hit && hit.pool) || SONG_FORM_POOL_CAT[cat] || SONG_FORM_NAMES;
+}
+
+/** 이 프리셋에 폼이 배정된 근거(있으면). UI 근거 패널이 읽는다 */
+function formWhyFor(presetName){
+  const cat = catFor(presetName);
+  const sub = (typeof PRESET_SUB!=='undefined' && PRESET_SUB[presetName]) || '';
+  const hit = sub && SONG_FORM_POOL_SUB[cat+':'+sub];
+  return (hit && hit.why) || '';
 }
 
 /** f 는 SONG_FORM 항목. bar 는 곡 시작부터의 마디(0부터, loopNo 를 그대로 넘긴다).
@@ -205,6 +173,16 @@ function formTick(presetName, loopNo){
 }
 /** 장르가 바뀌었을 때(restartSong) 폼을 처음부터 다시 고르게 비운다 */
 function formRestart(){ formNow=null; sectionNow=null; }
+
+/** 지금 걸린 폼이 요구하는 선율 길이(64·32·16). 폼이 없으면 null.
+
+    **폼이 선율 길이를 정한다.** 반대가 아니다 — 형식은 음악의 사실이고
+    선율 길이는 우리가 만든 눈금이다(genres/00-form.md §2). 48마디 블루스에
+    64마디 선율을 물리면 둘이 192마디마다 한 번만 만나므로, 사용자가 고른
+    길이보다 이쪽이 우선한다. 폼을 끄면 사용자 선택으로 돌아간다. */
+function formMelLen(){
+  return (formOn && formNow && formNow.melLen) || null;
+}
 
 /** UI 표시용 — 예: '코러스 3/8' */
 function sectionLabel(){

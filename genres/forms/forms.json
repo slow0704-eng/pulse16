@@ -1,0 +1,601 @@
+{
+  "date": "2026-09-17",
+  "doc": "genres/00-form.md",
+  "note": "곡 형식 — 섹션 배분과 총 마디. 왜 이 값인지는 genres/00-form.md 에 출처와 함께 있다. 곡·아티스트 이름은 여기 안 들어간다(genres/profiles/README.md §2).",
+  "forms": {
+    "verseChorus": {
+      "label": "벌스·코러스",
+      "cat": "band",
+      "confidence": "medium",
+      "basis": "작곡 교육 자료 · 벌스 8~16 · 코러스 8~16 · 섹션은 2의 배수. 백과 출처는 마디 수를 말하지 않는다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 4
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 4
+        }
+      ]
+    },
+    "verseChorusBridge": {
+      "label": "벌스·코러스 (브릿지 포함)",
+      "cat": "band",
+      "confidence": "medium",
+      "basis": "verseChorus 와 같은 근거. 브릿지를 둔 판 — 출처들이 bridge 를 표준 섹션으로 든다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 4
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "bridge",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 4
+        }
+      ]
+    },
+    "aaba32": {
+      "label": "32마디 AABA",
+      "cat": "band",
+      "confidence": "high",
+      "basis": "위키백과 Thirty-two-bar form — 8마디 A · 8마디 A · 8마디 B · 8마디 A. 1950~60년대 록에도 쓰였다고 명시",
+      "secs": [
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        },
+        {
+          "k": "bridge",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 8
+        }
+      ]
+    },
+    "blues12": {
+      "label": "12마디 블루스 ×4",
+      "cat": "roots",
+      "confidence": "high",
+      "basis": "위키백과 Twelve-bar blues — 한 코러스가 12마디. 넷을 이어 한 바퀴(48)로 둔다. 64로는 나누어지지 않는 형식이다",
+      "secs": [
+        {
+          "k": "verse",
+          "bars": 12
+        },
+        {
+          "k": "verse",
+          "bars": 12
+        },
+        {
+          "k": "chorus",
+          "bars": 12
+        },
+        {
+          "k": "verse",
+          "bars": 12
+        }
+      ]
+    },
+    "headSolos": {
+      "label": "헤드·솔로·헤드",
+      "cat": "jazz",
+      "confidence": "high",
+      "basis": "1940년대 이후 주류 재즈는 head-solos-head. 헤드는 그 곡 형식 한 바퀴이고 스탠더드는 32마디 AABA — 그래서 32×4",
+      "secs": [
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "bridge",
+          "bars": 32
+        },
+        {
+          "k": "bridge",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        }
+      ]
+    },
+    "buildDrop": {
+      "label": "빌드업·드롭",
+      "cat": "edm",
+      "confidence": "medium",
+      "basis": "제작 자료 — 인트로는 16의 배수 · 드롭은 16 또는 32마디. 위키백과 Drop (music) 은 마디 수를 말하지 않는다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "break",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "outro",
+          "bars": 16
+        }
+      ]
+    },
+    "dubstep224": {
+      "label": "덥스텝 두 드롭",
+      "cat": "edm",
+      "confidence": "medium",
+      "basis": "제작 자료가 마디 수를 전부 명시 — 인트로 32 · 빌드 16 · 드롭 32 · 가운데 16~32 · 브레이크다운 32 · 빌드 16 · 드롭 32 · 아웃트로 32. 가운데를 범위 안에서 32로 잡아 합 224",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 32
+        },
+        {
+          "k": "prechorus",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "break",
+          "bars": 32
+        },
+        {
+          "k": "prechorus",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 32
+        },
+        {
+          "k": "outro",
+          "bars": 32
+        }
+      ]
+    },
+    "djTool": {
+      "label": "디제이용 긴 인트로·아웃트로",
+      "cat": "edm",
+      "confidence": "medium",
+      "basis": "디스코 12인치 싱글이 클럽에 긴 인트로·아웃트로와 브레이크다운을 준 것이 이 형식의 기원. 포맷과 브레이크다운 둘 다 같은 리믹서의 것으로 기록된다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "break",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "outro",
+          "bars": 16
+        }
+      ]
+    },
+    "largoMontuno": {
+      "label": "라르고·몬투노",
+      "cat": "world",
+      "confidence": "high",
+      "basis": "위키백과 Salsa (musical structure) — 벌스 뒤에 몬투노가 오고 «몬투노가 시작되면 보통 곡이 끝날 때까지 이어진다». 벌스·코러스가 번갈지 않는다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 32
+        }
+      ]
+    },
+    "rumbaSebene": {
+      "label": "룸바·세베네",
+      "cat": "world",
+      "confidence": "high",
+      "basis": "위키백과 Sebene · Soukous — 노래 구간에서 «천천히 쌓아 올려» 기타가 이끄는 세베네로 넘어가고 곡 끝까지 간다. largoMontuno 와 같은 두 부분 형식인데 앞이 더 길다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 24
+        }
+      ]
+    },
+    "grooveHold": {
+      "label": "그루브 유지",
+      "cat": "loop",
+      "confidence": "medium",
+      "basis": "아프로비트는 10~30분대에 긴 기악 구간 · 펑크는 한 코드 위를 곡 전체로 탄다 · 크라우트록은 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심». 섹션이 안 바뀌는 것이 형식이다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "outro",
+          "bars": 8
+        }
+      ]
+    },
+    "verse16hook8": {
+      "label": "16마디 벌스 · 8마디 훅",
+      "cat": "loop",
+      "confidence": "medium",
+      "basis": "제작 자료 — 벌스 16 · 훅 8 · 훅은 3~4회 반복 · 곡 전체 60~72마디. 예시가 68마디이고 64가 그 범위 한가운데다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 4
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "bridge",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 4
+        }
+      ]
+    },
+    "riddimVersion": {
+      "label": "리딤 · 버전",
+      "cat": "loop",
+      "confidence": "low",
+      "basis": "출처가 섹션도 길이도 말하지 않는다. 리딤은 곡의 형식이 아니라 재사용되는 반주이고 그 위에 얹히는 것이 곡마다 다르다 — 근거가 얇다는 사실을 값으로 남긴다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 8
+        }
+      ]
+    }
+  },
+  "assignCat": {
+    "A": [
+      "verseChorusBridge",
+      "verseChorus"
+    ],
+    "B": [
+      "verseChorus",
+      "verseChorusBridge"
+    ],
+    "C": [
+      "verse16hook8"
+    ],
+    "D": [
+      "verseChorus",
+      "verseChorusBridge"
+    ],
+    "E": [
+      "buildDrop",
+      "djTool"
+    ],
+    "F": [
+      "headSolos"
+    ],
+    "G": [
+      "verseChorus",
+      "aaba32"
+    ],
+    "H": [
+      "verseChorus"
+    ],
+    "I": [
+      "riddimVersion"
+    ],
+    "J": [
+      "grooveHold",
+      "verseChorus"
+    ],
+    "K": [
+      "verseChorus"
+    ],
+    "X": [
+      "verseChorus"
+    ]
+  },
+  "assignSub": {
+    "A:Psychedelic · Krautrock": {
+      "forms": [
+        "grooveHold"
+      ],
+      "why": "저장소 자신의 박자 조사가 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심» 이라 적었다"
+    },
+    "A:뿌리": {
+      "forms": [
+        "aaba32",
+        "verseChorus"
+      ],
+      "why": "위키백과가 32마디 AABA 를 «1950~60년대 록에 자주 쓰였다» 고 명시한다"
+    },
+    "B:Downtempo · Ambient · Retro": {
+      "forms": [
+        "grooveHold"
+      ],
+      "why": "섹션이 바뀌지 않는 것이 이 분기의 성질이다"
+    },
+    "D:Funk": {
+      "forms": [
+        "grooveHold"
+      ],
+      "why": "한 코드 뱀프를 곡 전체로 탄다 — 관심이 화성이 아니라 리듬에 있다"
+    },
+    "D:Disco": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "디스코 12인치가 이 형식의 기원이다"
+    },
+    "E:House 계열": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "디제이가 섞어 넣을 자리를 앞뒤에 두는 것이 이 음악의 포맷이다"
+    },
+    "E:Techno 계열": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "같은 이유"
+    },
+    "E:Dubstep · Bass Music": {
+      "forms": [
+        "dubstep224"
+      ],
+      "why": "제작 자료가 여덟 섹션의 마디 수를 전부 명시한다"
+    },
+    "E:Downtempo · Ambient · Retro": {
+      "forms": [
+        "grooveHold"
+      ],
+      "why": "댄스플로어용 형식이 아니다"
+    },
+    "E:Disco": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "D:Disco 와 같다"
+    },
+    "E:Electro": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "클럽 재생용 포맷을 공유한다"
+    },
+    "F:Latin Jazz": {
+      "forms": [
+        "headSolos",
+        "largoMontuno"
+      ],
+      "why": "헤드·솔로 골격에 몬투노 구간이 들어온다 — 둘 다 걸릴 수 있어 풀로 둔다"
+    },
+    "G:Blues": {
+      "forms": [
+        "blues12"
+      ],
+      "why": "위키백과가 12마디를 못 박는다"
+    },
+    "G:Country": {
+      "forms": [
+        "verseChorus",
+        "aaba32"
+      ],
+      "why": "같은 시기 미국 대중가요 형식을 공유한다"
+    },
+    "H:쿠바": {
+      "forms": [
+        "largoMontuno"
+      ],
+      "why": "손 몬투노 모델이 이 분기의 형식 그 자체다"
+    },
+    "H:푸에르토리코 · 도미니카": {
+      "forms": [
+        "largoMontuno",
+        "verseChorus"
+      ],
+      "why": "살사는 몬투노 형식이지만 메렝게·밤바는 확인하지 않았다 — 둘을 함께 둔다"
+    },
+    "J:중앙아프리카": {
+      "forms": [
+        "rumbaSebene"
+      ],
+      "why": "위키백과 Sebene 이 이 형식을 콩고 룸바의 것으로 서술한다"
+    },
+    "J:서아프리카": {
+      "forms": [
+        "grooveHold",
+        "verseChorus"
+      ],
+      "why": "아프로비트는 긴 기악 형식이고 현대 아프로비츠는 대중가요 형식이다 — 한 분기에 둘이 섞여 있다"
+    },
+    "J:House 계열": {
+      "forms": [
+        "djTool"
+      ],
+      "why": "E:House 계열과 같다"
+    }
+  },
+  "unresearched": [
+    "G:Folk — 유절형일 가능성이 높은데 확인하지 않았다",
+    "G:Gospel · 지역 장르 — 뱀프 구조를 확인하지 않았다",
+    "H:브라질 — 보사노바 스탠더드는 32마디 AABA 일 가능성이 높다",
+    "H:멕시코",
+    "H:콜롬비아",
+    "H:아르헨티나 · 남미 남부",
+    "H:현대 크로스오버",
+    "I:트리니다드 · 바베이도스",
+    "I:프랑스어권 카리브",
+    "J:남아프리카 — 아마피아노는 디제이용 형식일 수 있다",
+    "J:동아프리카",
+    "J:북아프리카",
+    "B:지역 팝",
+    "B:동아시아",
+    "B:서아시아 · 지중해",
+    "B:동유럽 · 발칸",
+    "B:남아시아",
+    "K:남아시아",
+    "K:하이브리드 · 인터넷 장르"
+  ]
+}

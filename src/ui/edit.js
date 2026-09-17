@@ -156,7 +156,16 @@ function loadState(){
        못 가른다. progMode 는 harmony.js 쪽에 모드 개념이 없어 아예 없다
        (events.js 참고) — 복원 대상에서 뺀다. */
     try{
-      if(typeof SONG_FORM_NAMES!=='undefined') formMode = (o.sels && o.sels.formmode) || 'genre';
+      /* ⚠ 2026-09-17 — 폼 이름이 전부 바뀌었다(손으로 쓴 일곱 개 → 생성물 열셋).
+         옛 저장본에는 popAABA·jazzHead 같은 **없어진 이름**이 박혀 있고, 그대로
+         넣으면 pickForm() 이 null 을 돌려 곡 구조가 조용히 안 걸린다.
+         실재하는 이름이 아니면 'genre' 로 되돌린다. */
+      if(typeof SONG_FORM_NAMES!=='undefined'){
+        const want = (o.sels && o.sels.formmode) || 'genre';
+        formMode = (want==='genre' || want==='all' || SONG_FORM_NAMES.includes(want))
+                     ? want : 'genre';
+        if(UI.formmode) UI.formmode.value = formMode;
+      }
       if(typeof GROOVE!=='undefined')          grooveMode = (o.sels && o.sels.grvmode) || 'genre';
     }catch(err){ console.warn('[edit] 곡 구조·그루브 모드 복원 실패 — 전역 이름을 확인하세요', err); }
     /* 패턴 셔플은 복원하지 않는다 — 켜진 채로 새로 열면

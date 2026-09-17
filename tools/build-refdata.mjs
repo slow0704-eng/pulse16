@@ -9,6 +9,7 @@
      src/data/billboard.js   billboard/*.md   → const BILLBOARD
      src/data/profiles.js    genres/profiles/*.json → const GENRE_PROFILE
      src/data/references.js  genres/*.md 의 레퍼런스 표 → const GENRE_REF
+     src/data/songform.js    genres/forms/forms.json → const SONG_FORM 외 둘
 
    ⚠ 이 둘은 **생성물**이다. 손으로 고치지 말고 원본을 고친 뒤 다시 돌려라.
      원본과 어긋나면 CI 가 `--check` 로 잡는다.
@@ -317,6 +318,56 @@ const GENRE_REF = ${JSON.stringify(REF)};
 `;
 if(emit('src/data/references.js', rJs))
   console.log(`${OK} src/data/references.js — 프리셋 ${refNames.length}종 (${(rJs.length / 1024).toFixed(0)} KB)`);
+
+/* ═══ 4. 곡 형식 ═══════════════════════════════════════════════════
+   genres/forms/forms.json 의 섹션 배분을 그대로 굳힌다. 근거는 genres/00-form.md.
+
+   두 가지를 여기서 계산해 넣는다 — 앱이 매 루프 다시 세지 않게.
+     total   섹션 마디의 합
+     melLen  이 폼을 나누는 **가장 긴 선율 길이**(64·32·16).
+             선율이 폼을 정하는 것이 아니라 폼이 선율을 정한다
+             (genres/00-form.md §2). 12마디 블루스는 48마디라 16이 된다.     */
+
+head('곡 형식');
+const FDIR = 'genres/forms/forms.json';
+const MEL_LENS = [64, 32, 16];
+if (existsSync(abs(FDIR))) {
+  const fJson = JSON.parse(readFileSync(abs(FDIR), 'utf8'));
+  const forms = {};
+  for (const [name, f] of Object.entries(fJson.forms)) {
+    const total = f.secs.reduce((s, x) => s + x.bars, 0);
+    const melLen = MEL_LENS.find(L => total % L === 0) || null;
+    if (!melLen)
+      console.log(`${NG} ${name} 이 ${total}마디라 16·32·64 어느 것으로도 나누어지지 않습니다`);
+    forms[name] = { label: f.label, cat: f.cat, conf: f.confidence,
+                    total, melLen, secs: f.secs, why: f.basis };
+  }
+  const sub = {};
+  for (const [k, v] of Object.entries(fJson.assignSub || {}))
+    sub[k] = { pool: v.forms, why: v.why };
+  const sJs = `/* 생성물 — tools/build-refdata.mjs 가 genres/forms/forms.json 에서 만듭니다.
+   손으로 고치지 마십시오 — 원본은 genres/forms/forms.json 이고
+   그 값의 근거는 genres/00-form.md 에 출처와 함께 있습니다.
+
+   total  섹션 마디의 합.   melLen  이 폼을 나누는 가장 긴 선율 길이.
+   ⚠ 폼마다 total 이 다릅니다(32·48·64·96·128·224). 예전에는 전부 64였고,
+     그것 때문에 12마디 블루스가 표현되지 못했습니다. */
+'use strict';
+
+const SONG_FORM = ${JSON.stringify(forms)};
+const SONG_FORM_POOL_SUB = ${JSON.stringify(sub)};
+const SONG_FORM_POOL_CAT = ${JSON.stringify(fJson.assignCat)};
+`;
+  if (emit('src/data/songform.js', sJs)) {
+    const lens = [...new Set(Object.values(forms).map(f => f.total))].sort((a, b) => a - b);
+    console.log(`${OK} src/data/songform.js — 형식 ${Object.keys(forms).length}종 · `
+      + `총 마디 ${lens.join('·')} · 분기 배정 ${Object.keys(sub).length}건`);
+    const low = Object.entries(forms).filter(([, f]) => f.conf === 'low').map(([n]) => n);
+    if (low.length) console.log(`   ${WARN} 확신도 low — ${low.join(' ')} (출처가 얇다는 기록입니다)`);
+    if (fJson.unresearched && fJson.unresearched.length)
+      console.log(`   ${WARN} 조사 안 한 분기 ${fJson.unresearched.length}개 — 계열 기본형을 물려받았습니다`);
+  }
+}
 
 if(CHECK){
   console.log('');
