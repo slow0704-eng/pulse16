@@ -124,7 +124,7 @@
         </div>
 
         <!-- 2번 트랙 — 1번과 따로 도는 별개 트랙입니다.
-             16마디 선율 모드에서 라이브러리가 1번과 다른 선율/리프를 배정합니다.
+             선율 모드에서 라이브러리가 1번과 다른 선율/리프를 배정합니다.
              팬이 반대쪽이라 스테레오에서 자리가 나뉩니다. -->
         <div class="roll k2">
           <div class="rollhead">
@@ -213,16 +213,16 @@
         </select>
         <select id="fillmodeL" aria-label="큰 필인 종류" style="width:122px"></select>
       </div></div>
-    <div class="knob"><span class="lbl">선율 · 기타 리프 — 길이는 루프 개수로 셉니다</span>
+    <div class="knob"><span class="lbl">선율 · 기타 리프 — 길이는 루프 개수로 셉니다 (한 루프 = 한 마디)</span>
       <div class="slots">
-        <button class="util" id="mel" data-on="0">꺼짐</button>
+        <button class="util" id="mel" data-on="1">켜짐</button>
         <select id="melmode" aria-label="선율 종류" style="width:150px"></select>
         <span class="tag2">길이</span>
         <select id="mellen" aria-label="선율 길이" style="width:96px">
-          <option value="auto" selected>자동</option>
-          <option value="16">16 루프</option>
+          <option value="64" selected>64 루프</option>
           <option value="32">32 루프</option>
-          <option value="64">64 루프</option>
+          <option value="16">16 루프</option>
+          <option value="auto">자동 (섞어서)</option>
         </select>
         <span class="tag2">겹침</span>
         <select id="mellayer" aria-label="선율 겹침" style="width:104px">
@@ -236,7 +236,7 @@
       </div></div>
     <div class="knob" id="formrow" hidden><span class="lbl">곡 구조 — 벌스·코러스처럼 섹션이 바뀝니다</span>
       <div class="slots">
-        <button class="util" id="form" data-on="0">꺼짐</button>
+        <button class="util" id="form" data-on="1">켜짐</button>
         <select id="formmode" aria-label="곡 구조 모드" style="width:150px"></select>
       </div></div>
     <div class="knob" id="prgrow" hidden><span class="lbl">화성 진행 — 코드가 마디마다 바뀝니다</span>

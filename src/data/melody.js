@@ -1,4 +1,4 @@
-/* 16마디 선율 라이브러리
+/* 선율 라이브러리 — 16 · 32 · 64마디
    pulse16-mk16.html 에서 분리. 클래식 스크립트라 최상위 선언은
    전역 렉시컬 스코프를 공유한다 — 로드 순서가 곧 의존 순서다.
 
@@ -439,8 +439,12 @@ const MEL_OPS = {retro, invert, rotate, augment, diminish};
     16마디짜리(0.38~0.50)보다 오히려 성겼다. 그래서 두 번째 덩어리는
     모방진행으로 한 단 올려 새 재료를 만든다. 마지막 덩어리는
     첫 덩어리로 되돌아온다 — 재현부라 반복이 흠이 아니라 형식이다. */
-function buildLong(a, b, plan){
-  const pa=PHRASE[a], pb=PHRASE[b];
+function buildLong(a, b, plan){ return buildLongP(PHRASE[a], PHRASE[b], plan); }
+/** 프레이즈 표를 직접 받는 판 — RIFF_PHRASE · BASS_PHRASE 도 같은 생성기를 쓴다.
+    buildBarsP·openEnd·seqUp 이 전부 «마디 문자열» 만 보므로 표기 계열(단음 a~h ·
+    도수 0~7)이 달라도 그대로 돈다. 기타·베이스가 16마디에 묶여 있던 이유는
+    생성기가 PHRASE 를 하드코딩하고 있었던 것뿐이다. */
+function buildLongP(pa, pb, plan){
   const out=[];
   plan.forEach(([form,shift,op,arg], k) => {
     const chunk = shift ? buildBarsP(seqPhrase(pa,shift), seqPhrase(pb,shift), form)
@@ -479,6 +483,21 @@ const LONG_FORMS = {
            돌아오는 자리라, 반사를 견디는 유일한 위치입니다. */
   '32b':[['AABA',0],['AABB',0,'@op']],
   '64b':[['AABA',0],['AABB',1],['ABAB',2,'invert'],['AABA',0]],
+
+  /* ── 훅형 64마디 ──
+     위 64 는 «제시 → 전개(+1) → 더 밀기(+2) → 재현» 이라 덩어리마다 도수가
+     올라갑니다. 두세 음 훅이 정체성인 계열(힙합·트랩·EDM·칩튠·디스코·
+     아프로·라틴·카리브)에 그걸 물리면 **훅이 훅이 아니게 됩니다** — 그래서
+     처음에는 이 계열들에 64마디를 아예 안 달았습니다.
+
+     길이를 포기하는 대신, 훅을 **제자리에 두고 전개 순서만 바꾸는** plan 을
+     따로 둡니다. 셋째 덩어리(브릿지 자리)만 한 단 올려 대비를 만들고
+     나머지 셋은 도수를 안 건드립니다. 실제로 이 계열들이 64마디를 버티는
+     방법은 선율 전개가 아니라 **편성 변화**이고, 그쪽은 곡 구조(arrange.js)가
+     맡습니다 — 여기서는 훅이 살아 있게만 합니다.
+
+       제시(AAAB) → 순서 바꾸기(AABA) → 한 단 올린 브릿지(AAAB+1) → 재현(AAAB) */
+  '64h':[['AAAB',0],['AABA',0],['AAAB',1],['AAAB',0]],
 };
 /* 32b 의 '@op' 자리에 무엇이 들어가는지는 **계열이 정합니다.**
    리듬 자리를 흔드는 rotate 는 «모티프가 어긋나며 겹치는» 것이 정체성인
@@ -510,16 +529,36 @@ const OP_LABEL = {retro:'역행', invert:'반사', rotate:'회전', augment:'확
    그 16마디만으로 비율이 0.25 씩 내려갑니다. 재료가 성긴 것이 아니라
    같은 재료를 되풀이하도록 **설계한** 자리입니다.
    긴 폼은 '덩어리별 새 재료 비율'로 따로 재야 합니다. */
-/* 64루프는 긴 호흡이 어울리는 재료에만 답니다 —
-   힙합·트랩처럼 두세 음 훅이 정체성인 계열에 64마디를 물리면
-   같은 두 음을 64번 듣는 꼴이 됩니다. */
-const LONG_64 = ['rock','pop','bal','cin','ant','jazz','amb','root'];
+/* ── 64루프는 이제 34개 재료 전부에 답니다 ──
+   예전에는 여덟 개뿐이었습니다. «힙합·트랩처럼 두세 음 훅이 정체성인 계열에
+   64마디를 물리면 같은 두 음을 64번 듣는 꼴» 이라는 이유였고, 그것은
+   **전개형 plan(64)을 물렸을 때** 맞는 말입니다. 훅을 제자리에 두는
+   plan('64h', § LONG_FORMS)을 따로 두어 나머지 26개도 채웁니다.
+
+   어느 쪽을 거는지는 재료가 «전개를 견디는가» 로 가릅니다.
+     전개형(64)  — 도수를 한 단·두 단 올려 브릿지를 만드는 것이 자연스러운 재료.
+                   록·팝·발라드·시네마틱·앤섬·재즈·앰비언트·루츠에 블루스·가스펠·
+                   월드·성가와 교차분(재즈발라드·루츠블루스·월드시네마틱·
+                   시네마틱발라드·록앤섬)·보사·펑크를 더했습니다.
+     훅형(64h)   — 모티프가 곧 정체성이라 도수를 올리면 다른 곡이 되는 재료.
+                   힙합·트랩·EDM·칩튠·디스코·개러지·래가·아프로댄스홀·아프로·
+                   라틴·카리브·파워코드와 그 교차분.
+   16·32루프는 한 글자도 안 건드렸습니다 — 기존 선율의 소리는 변화가 0 입니다. */
+const LONG_64  = ['rock','pop','bal','cin','ant','jazz','amb','root',
+                  'blues','gos','wor','hym','bos','funk',
+                  'rkant','cinbal','jazbal','rootbl','worcin'];
+const LONG_64H = ['hip','edm','lat','car','rag','afd','gar','afr',
+                  'chip','dis','trp','pwr','disfun','edmchp','latbos'];
 MEL_SRC.forEach(([a,b,forms]) => {
   const base=a.replace(/A$/,'');
   const first=Object.values(forms)[0];
   MELODY[base+'_l32']={label:first+' 32루프', bars:buildLong(a,b,LONG_FORMS[32])};
+  /* 이름은 둘 다 _l64 입니다 — 길이 선택(melodyLenPool)이 접미사로 찾으므로
+     여기서 이름을 가르면 훅형 재료만 64루프를 못 고르게 됩니다. */
   if(LONG_64.includes(base))
     MELODY[base+'_l64']={label:first+' 64루프', bars:buildLong(a,b,LONG_FORMS[64])};
+  else if(LONG_64H.includes(base))
+    MELODY[base+'_l64']={label:first+' 64루프(훅 유지)', bars:buildLong(a,b,LONG_FORMS['64h'])};
 
   /* 변형판 — 새 이름(_l32b·_l64b)으로만 나갑니다(§ LONG_FORMS 주석) */
   if(LONG_32B.includes(base)){
@@ -567,6 +606,32 @@ function melodyLenPool(pool, pref){
   const hit = swapped.filter(n => MELODY[n] && MELODY[n].rows.length===want);
   return hit.length ? hit : swapped;      // 그 길이가 없으면 원래 풀로
 }
+
+/** 리프·베이스의 길이 선호. 선율(melodyLenPool)과 달리 **이름으로 형제를 찾지
+    않습니다** — 리프 이름은 `rock_power` 처럼 폼 접미사가 아니라 별명이라
+    `_[a-z0-9]+$` 치환이 `rock_l32` 가 아니라 엉뚱한 이름을 만듭니다.
+    대신 항목에 걸어 둔 연결(l32·l64)을 따라갑니다. */
+function longLenPool(table, pool, pref){
+  if(!pool || !pool.length) return pool || [];
+  if(pref==='auto'){
+    const out=[...pool];
+    pool.forEach(n => ['l32','l64'].forEach(k => {
+      const sib = table[n] && table[n][k];
+      if(sib && table[sib] && !out.includes(sib)) out.push(sib);
+    }));
+    return out;
+  }
+  const want=+pref;
+  if(!(want>0)) return pool;
+  const swapped = pool.map(n => {
+    const sib = table[n] && table[n]['l'+want];
+    return (want>16 && sib && table[sib]) ? sib : n;
+  });
+  const hit = swapped.filter(n => table[n] && table[n].rows.length===want);
+  return hit.length ? hit : swapped;      // 그 길이가 없으면 원래 풀로
+}
+const riffLenPool  = (pool,pref) => longLenPool(RIFF,  pool, pref);
+const blineLenPool = (pool,pref) => longLenPool(BLINE, pool, pref);
 
 /* ── 하위분기 → 어울리는 선율 ──
    이름은 `프레이즈쌍_폼` 입니다 (예: pop_aabb). */
@@ -1413,42 +1478,76 @@ function buildRiff(a,b,form){
 }
 
 const RIFF = {
-  rock_power   :{label:'록 파워코드',  bars:buildRiff('rockA','rockB','AABA')},
-  rock_drive   :{label:'록 드라이브',  bars:buildRiff('rockA','rockB','AABB')},
-  metal_chug   :{label:'메탈 척',      bars:buildRiff('metalA','metalB','AAAB')},
-  metal_gallop :{label:'메탈 갤럽',    bars:buildRiff('metalA','metalB','AABB')},
-  funk_cut     :{label:'펑크 커팅',    bars:buildRiff('funkA','funkB','AABB')},
-  funk_call    :{label:'펑크 주고받기',bars:buildRiff('funkA','funkB','ABAB')},
-  skank        :{label:'레게 스킹크',  bars:buildRiff('skankA','skankB','AABA')},
-  skank_up     :{label:'스카 업비트',  bars:buildRiff('skankA','skankB','AABB')},
-  arp_folk     :{label:'포크 아르페지오',bars:buildRiff('arpA','arpB','AABA')},
-  arp_country  :{label:'컨트리 아르페지오',bars:buildRiff('arpA','arpB','AABB')},
-  edm_arp      :{label:'EDM 아르페지오',bars:buildRiff('edmA','edmB','AAAB')},
-  latin_montuno:{label:'라틴 몬투노',  bars:buildRiff('latA','latB','AABB')},
+  rock_power   :{label:'록 파워코드',  src:['rockA','rockB','AABA']},
+  rock_drive   :{label:'록 드라이브',  src:['rockA','rockB','AABB']},
+  metal_chug   :{label:'메탈 척',      src:['metalA','metalB','AAAB']},
+  metal_gallop :{label:'메탈 갤럽',    src:['metalA','metalB','AABB']},
+  funk_cut     :{label:'펑크 커팅',    src:['funkA','funkB','AABB']},
+  funk_call    :{label:'펑크 주고받기',src:['funkA','funkB','ABAB']},
+  skank        :{label:'레게 스킹크',  src:['skankA','skankB','AABA']},
+  skank_up     :{label:'스카 업비트',  src:['skankA','skankB','AABB']},
+  arp_folk     :{label:'포크 아르페지오',src:['arpA','arpB','AABA']},
+  arp_country  :{label:'컨트리 아르페지오',src:['arpA','arpB','AABB']},
+  edm_arp      :{label:'EDM 아르페지오',src:['edmA','edmB','AAAB']},
+  latin_montuno:{label:'라틴 몬투노',  src:['latA','latB','AABB']},
 
   /* ── 보강분 — 기존 6쌍에 폼을 더 걸어서(MELODY 가 MEL_SRC 로 하는 것과 같은 방식)
      늘렸다. 새 재료를 새로 쓴 것이 아니라 같은 4마디 재료를 다른 폼으로 다시
      이었을 뿐이지만, AABA·AABB·ABAB 는 재현 지점이 달라 실제로 다른 16마디가
      된다(melody.js 파일 머리의 MEL_SRC 설계 참고). */
-  rock_alt        :{label:'록 교대',        bars:buildRiff('rockA','rockB','ABAB')},
-  metal_riff      :{label:'메탈 리프',      bars:buildRiff('metalA','metalB','AABA')},
-  funk_groove     :{label:'펑크 반복',      bars:buildRiff('funkA','funkB','AAAB')},
-  skank_offbeat   :{label:'스킹크 교대',    bars:buildRiff('skankA','skankB','ABAB')},
-  arp_swing       :{label:'아르페지오 교대',bars:buildRiff('arpA','arpB','ABAB')},
-  edm_build       :{label:'EDM 빌드',       bars:buildRiff('edmA','edmB','AABB')},
-  edm_alt         :{label:'EDM 교대',       bars:buildRiff('edmA','edmB','ABAB')},
-  latin_montuno_alt :{label:'몬투노 교대',  bars:buildRiff('latA','latB','ABAB')},
-  latin_montuno_loop:{label:'몬투노 반복',  bars:buildRiff('latA','latB','AAAB')},
+  rock_alt        :{label:'록 교대',        src:['rockA','rockB','ABAB']},
+  metal_riff      :{label:'메탈 리프',      src:['metalA','metalB','AABA']},
+  funk_groove     :{label:'펑크 반복',      src:['funkA','funkB','AAAB']},
+  skank_offbeat   :{label:'스킹크 교대',    src:['skankA','skankB','ABAB']},
+  arp_swing       :{label:'아르페지오 교대',src:['arpA','arpB','ABAB']},
+  edm_build       :{label:'EDM 빌드',       src:['edmA','edmB','AABB']},
+  edm_alt         :{label:'EDM 교대',       src:['edmA','edmB','ABAB']},
+  latin_montuno_alt :{label:'몬투노 교대',  src:['latA','latB','ABAB']},
+  latin_montuno_loop:{label:'몬투노 반복',  src:['latA','latB','AAAB']},
 
   /* ── 새 재료 — 재즈·소울·아프리카는 계열이 있는데도 리프가 없어
      RIFF_KIT_CAT 이 펑크로 대체하고 있었다(§ 위 주석). 진짜 재료를 채운다. */
-  soul_chank   :{label:'소울 클린 커팅', bars:buildRiff('soulA','soulB','AABA')},
-  soul_prog    :{label:'소울 진행',      bars:buildRiff('soulA','soulB','AABB')},
-  highlife_gtr :{label:'하이라이프 기타',bars:buildRiff('afrA','afrB','AABB')},
-  highlife_loop:{label:'하이라이프 반복',bars:buildRiff('afrA','afrB','AAAB')},
-  jazz_gtr_comp :{label:'재즈 컴핑 기타',  bars:buildRiff('jazzA','jazzB','ABAB')},
-  jazz_gtr_swing:{label:'재즈 스윙 컴핑',  bars:buildRiff('jazzA','jazzB','AABA')},
+  soul_chank   :{label:'소울 클린 커팅', src:['soulA','soulB','AABA']},
+  soul_prog    :{label:'소울 진행',      src:['soulA','soulB','AABB']},
+  highlife_gtr :{label:'하이라이프 기타',src:['afrA','afrB','AABB']},
+  highlife_loop:{label:'하이라이프 반복',src:['afrA','afrB','AAAB']},
+  jazz_gtr_comp :{label:'재즈 컴핑 기타',  src:['jazzA','jazzB','ABAB']},
+  jazz_gtr_swing:{label:'재즈 스윙 컴핑',  src:['jazzA','jazzB','AABA']},
 };
+/* 위 표는 bars 를 직접 적지 않고 재료(src)만 적습니다 — 같은 재료의 32·64루프를
+   여기서 함께 만들기 위해서입니다. 16마디 결과는 예전 표기와 한 글자도 다르지
+   않습니다(buildRiff 를 그대로 부릅니다).
+
+   ── 기타 리프가 16마디에 묶여 있던 이유 ──
+   buildLong() 이 PHRASE(건반 프레이즈 표)를 하드코딩하고 있었을 뿐입니다.
+   그래서 64마디 선율 밑에서 리프만 네 번 되풀이됐습니다 — 선율은 흘러가는데
+   기타는 같은 16마디를 반복하니 «길어진» 것이 아니라 «늘어진» 소리였습니다.
+   buildLongP() 로 표를 인자로 받게 고쳐 리프·베이스도 같은 생성기를 씁니다.
+
+   plan 은 재료에 따라 가릅니다(선율과 같은 기준, § LONG_64).
+     전개형  록·메탈·아르페지오·소울·재즈 — 리프가 브릿지에서 도수를 옮기는
+             것이 그 장르의 어법입니다
+     훅형    펑크 커팅·스킹크·몬투노·EDM 아르페지오·하이라이프 — 리듬 자리가
+             곧 정체성이라 도수를 올리면 다른 리프가 됩니다 */
+const RIFF_LONG_DEV = ['rockA','metalA','arpA','soulA','jazzA'];
+for(const r of Object.values(RIFF)) r.bars = buildRiff(...r.src);
+/* 긴 판은 **재료쌍마다 하나씩**입니다. 폼(AABA·AABB…)은 16마디를 잇는 방식이고
+   긴 판은 자기 plan 이 폼을 정하므로, 같은 쌍의 세 폼에서 긴 판을 따로 만들면
+   내용이 똑같은 항목이 셋 생깁니다. 대신 원본 항목에 **연결(l32·l64)** 을 걸어
+   길이 선택이 «이 리프의 64마디판» 을 찾아갈 수 있게 합니다. */
+for(const [k,r] of Object.entries({...RIFF})){
+  const [a,b] = r.src, base = a.replace(/A$/,'');
+  r.l32 = base+'_l32'; r.l64 = base+'_l64';
+  if(RIFF[r.l64]) continue;                       // 같은 쌍의 다른 폼이 이미 만들었다
+  const pa=RIFF_PHRASE[a], pb=RIFF_PHRASE[b];
+  const plan64 = RIFF_LONG_DEV.includes(a) ? LONG_FORMS[64] : LONG_FORMS['64h'];
+  const lb = RIFF_LONG_DEV.includes(a) ? ' 64루프' : ' 64루프(훅 유지)';
+  /* 이름은 내부 키(base)가 아니라 **그 쌍의 첫 항목 이름**을 씁니다 — 이 반복문은
+     삽입 순서대로 도니 첫 항목이 그 쌍의 대표입니다(edm → «EDM 아르페지오»).
+     base 를 쓰면 도구 출력에 «edm 64루프» 같은 내부 키가 그대로 샙니다. */
+  RIFF[r.l32]={label:r.label+' 32루프', src:r.src, bars:buildLongP(pa,pb,LONG_FORMS[32]), l32:r.l32, l64:r.l64};
+  RIFF[r.l64]={label:r.label+lb,        src:r.src, bars:buildLongP(pa,pb,plan64),         l32:r.l32, l64:r.l64};
+}
 const RIFF_NAMES = Object.keys(RIFF);
 Object.values(RIFF).forEach(r => { r.rows = r.bars.map(bpat); });
 
@@ -2119,6 +2218,31 @@ BLINE_SRC.forEach(([a,b,forms]) => {
   const base=a.replace(/A$/,'');
   for(const [form,label] of Object.entries(forms))
     BLINE[base+'_'+form.toLowerCase()] = {label, bars:buildBass(a,b,form)};
+});
+/* ── 베이스도 32·64루프 ──
+   리프와 같은 이유로 16마디에 묶여 있었습니다(§ RIFF 위 주석).
+   plan 은 재료가 «걸어 다니는가» 로 가릅니다.
+     전개형  워킹(재즈)·록 근음·컨트리 붐칙 — 화성을 따라 움직이는 것이 몸이라
+             덩어리마다 도수가 올라가는 편이 자연스럽습니다
+     훅형    펑크·디스코 옥타브·레게·808·하우스·툼바오·아프로·메탈 연타 —
+             한 음형이 곧 그루브라 도수를 올리면 그루브가 사라집니다 */
+const BLINE_LONG_DEV = ['brockA','bwalA','bcouA'];
+BLINE_SRC.forEach(([a,b,forms]) => {
+  const base=a.replace(/A$/,'');
+  const pa=BASS_PHRASE[a], pb=BASS_PHRASE[b];
+  const plan64 = BLINE_LONG_DEV.includes(a) ? LONG_FORMS[64] : LONG_FORMS['64h'];
+  const lb = BLINE_LONG_DEV.includes(a) ? ' 64루프' : ' 64루프(훅 유지)';
+  const first=Object.values(forms)[0];
+  const l32=base+'_l32', l64=base+'_l64';
+  BLINE[l32]={label:first+' 32루프', bars:buildLongP(pa,pb,LONG_FORMS[32])};
+  BLINE[l64]={label:first+lb,        bars:buildLongP(pa,pb,plan64)};
+  /* 원본 항목에서 자기 긴 판으로 가는 연결 (§ RIFF 위 주석과 같은 이유) */
+  for(const form of Object.keys(forms)){
+    const o=BLINE[base+'_'+form.toLowerCase()];
+    if(o){ o.l32=l32; o.l64=l64; }
+  }
+  BLINE[l32].l32=l32; BLINE[l32].l64=l64;
+  BLINE[l64].l32=l32; BLINE[l64].l64=l64;
 });
 const BLINE_NAMES = Object.keys(BLINE);
 Object.values(BLINE).forEach(l => { l.rows = l.bars.map(bpat); });

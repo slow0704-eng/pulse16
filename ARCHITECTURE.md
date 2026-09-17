@@ -82,9 +82,11 @@ src/
                            «레퍼런스» 표에서 같은 이유로 굳힌다. 사람이 읽는
                            자료라 이름이 있다 — 앨범명은 미검증(00-reference.md)
     fills.js                필인 라이브러리(FILLS) · fillPoolFor()
-    melody.js               16마디 선율·리프·베이스 라이브러리(MELODY·RIFF·
-                           BLINE) · PHRASE·FORM(프레이즈 결합 폼, 곡 구조의
-                           SONG_FORM 과 다름 — 아래 "이름 충돌" 참고)
+    melody.js               선율·리프·베이스 라이브러리(MELODY·RIFF·BLINE).
+                           16·32·64마디판을 함께 만든다 — buildLongP(표, plan)
+                           이 세 표(PHRASE·RIFF_PHRASE·BASS_PHRASE)를 공유한다.
+                           PHRASE·FORM(프레이즈 결합 폼)은 곡 구조의 SONG_FORM
+                           과 다름 — 아래 "이름 충돌" 참고
     harmony.js              화성 진행(PROG·PROG_NAMES)·컴핑(COMP)·
                            chordDegAt·chordSemis·snapDeg — melody.js 다음,
                            core/dom.js 앞
@@ -107,7 +109,8 @@ src/
     voice-keys.js      §9-B 건반 · 신스
     voice-gtr.js       §9-C 기타 · 밴조 · 만돌린 · 시타르 · 피들(찰현)
   seq/
-    arrange.js              (신규) 곡 구조(섹션)·트랙별 그루브 — SONG_FORM·
+    arrange.js              곡 구조(섹션)·트랙별 그루브 — SONG_FORM·
+                           SONG_FORM_BARS(=64, 폼은 전부 이 길이)·
                            SONG_FORM_NAMES·formOn/formMode·GROOVE·
                            GROOVE_NAMES·grooveOn/grooveMode. voice-gtr.js
                            다음, seq/sequencer.js 앞
@@ -138,9 +141,9 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
                        src/data/billboard.js · profiles.js · references.js 로 굳힌다.
                        원본을 고쳤으면 이것을 다시 돌려야 한다
   render-melody.mjs    **선율을 켠 채** 녹음해 renders/ 에 WAV 를 남긴다.
-                       melOn 기본값이 false 라 mcp 의 render_wav 로는 16마디
-                       선율이 한 음도 안 난다 — MELODY·RIFF·BLINE 을 고치고
-                       귀로 확인하려면 이쪽을 쓴다
+                       melOn 기본값이 true 가 된 뒤로는 render_wav 로도 선율이
+                       나지만, 이쪽은 **어느 선율·리프·베이스가 걸렸는지 찍고**
+                       --mel(고정) · --off(대조군) · --len(길이)을 줄 수 있다
   ci/                  자동 검사 — 브라우저 없이, 외부 의존성 없이 도는 Node 스크립트
     _lib.mjs           공용: 파일 훑기 · 주석/문자열 지우기 · 최상위 선언 수집 ·
                        HTML 의 <script src> · id 목록

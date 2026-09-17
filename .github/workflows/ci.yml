@@ -51,6 +51,11 @@ jobs:
       - name: CSS 변수 검사
         run: node tools/ci/check-css-vars.mjs
 
+      # 선율·리프·베이스가 64마디인데 곡 구조가 48마디면 섹션이 선율의
+      # 엉뚱한 자리에 얹힌다. 소리는 나므로 스모크도 회귀도 못 잡는다.
+      - name: 곡 길이 · 섹션 격자 검사
+        run: node tools/ci/check-song-length.mjs
+
       # src/data/billboard.js · profiles.js · references.js 는 생성물이다. 원본(billboard/*.md ·
       # genres/profiles/*.json · genres/*.md)을 고치고 다시 만들지 않으면 화면이 낡은 것을 보여 준다.
       - name: 생성물이 원본과 일치하는가

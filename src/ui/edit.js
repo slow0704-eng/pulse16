@@ -102,6 +102,7 @@ function saveState(){
                            keys2:b.keys2,gtr2:b.gtr2})), bank,
       src, eng, probT, mute, lvl, rootNote, scaleName, baseOct,
       keysOct, gtrOct, shufOn, knobs, sels, panels,
+      len64:1,                 // 선율 길이 기본값 64루프 전환을 한 번 겪었다는 표식
     }));
     UI.savestat.textContent='자동 저장됨';
   }catch(e){
@@ -138,7 +139,11 @@ function loadState(){
     fillEveryL=(o.sels && o.sels.fillnL!=null) ? +o.sels.fillnL : 16;
     fillModeL=(o.sels && o.sels.fillmodeL) || 'genre';
     melMode  =(o.sels && o.sels.melmode)  || 'genre';
-    melLenPref=(o.sels && o.sels.mellen) || 'auto';
+    /* 2026-09-16 — 기본 길이를 64루프로 바꿨다. 예전 저장본에는 sels.mellen 에
+       'auto' 가 박혀 있어, 그대로 읽으면 바뀐 기본값이 영영 안 걸린다.
+       표식(len64)이 없는 저장본은 **한 번만** 64 로 올리고, 그 뒤 사용자가
+       고른 값은 그대로 지킨다(다음 저장부터 표식이 남는다). */
+    melLenPref = o.len64 ? ((o.sels && o.sels.mellen) || '64') : '64';
     layerMode=(o.sels && o.sels.mellayer) || 'off';
     layerEng =(o.sels && o.sels.mellayereng) || 'same';
     UI.mellayereng.disabled = layerMode==='off';

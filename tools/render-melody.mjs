@@ -1,9 +1,11 @@
 /* tools/render-melody.mjs — **선율을 켠 채** 앱을 녹음해 WAV 로 남긴다.
 
-   왜 따로 필요한가: `melOn` 의 기본값은 false 다(src/seq/sequencer.js:24).
-   그래서 mcp/pulse-audit 의 render_wav 로 프리셋을 렌더하면 프리셋 자신의
-   1마디 `keys` 패턴만 울리고 **16마디 선율 라이브러리는 한 음도 나지 않는다.**
-   MELODY·RIFF·BLINE 을 고쳐 놓고 귀로 확인할 방법이 없었던 이유다.
+   왜 따로 필요한가: 예전에는 `melOn` 의 기본값이 false 라 render_wav 로
+   렌더하면 선율이 한 음도 안 났다. 2026-09-17 부터 기본이 true 이므로 그
+   이유는 사라졌지만 이 도구는 남는다 — **어느 선율·리프·베이스가 실제로
+   걸렸는지 찍어 주고**(풀에서 뽑으므로 회차마다 다르다), 특정 선율로 고정
+   하거나(`--mel`) 끈 대조군(`--off`)을 만들거나, 길이를 바꿔(`--len`)
+   재현부까지 한 바퀴를 담을 수 있다.
 
    마스터를 가로채는 방식은 mcp/pulse-audit/server.js 의 recordApp() 과 같다 —
    앱 스크립트보다 먼저 AudioNode.prototype.connect 를 감싸 destination 으로
@@ -14,8 +16,12 @@
      node tools/render-melody.mjs Dancehall Ragga Afro-dancehall --sec 40
      node tools/render-melody.mjs Ragga --mel rag_aaba     ← 특정 선율로 고정
      node tools/render-melody.mjs Dancehall --off          ← 선율 끈 대조군
+     node tools/render-melody.mjs Trap --len 16 --sec 40   ← 16루프만 (빠른 확인)
 
-   16마디를 한 바퀴 들으려면 100 BPM 기준 약 39초가 필요하다(기본 40초).
+   한 바퀴에 드는 시간은 100 BPM 기준 16루프 39초 · 32루프 77초 · 64루프 154초다.
+   앱 기본값이 64루프라 기본 40초는 **앞 4분의 1**만 담는다 — 브릿지·재현부까지
+   들으려면 `--sec 160` 을 주거나 `--len 16` 으로 줄인다. 실행할 때마다 «한 바퀴
+   대비 몇 %» 를 찍어 주므로 눈으로 확인할 수 있다.
    결과는 renders/ 에 쌓인다 — .gitignore 의 *.wav 로 저장소에는 안 들어간다. */
 
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -32,9 +38,16 @@ const flag = (name, def) => {
 };
 const SEC = +flag('sec', 40);
 const MEL = flag('mel', 'genre');            // 'genre' | 'all' | MELODY 의 키
+const LEN = String(flag('len', ''));         // '' (앱 기본값) | 'auto' | '16' | '32' | '64'
 const MEL_OFF = argv.includes('--off');
+const VALFLAGS = ['--sec', '--mel', '--len'];
 const presets = argv.filter((a, i) =>
-  !a.startsWith('--') && argv[i - 1] !== '--sec' && argv[i - 1] !== '--mel');
+  !a.startsWith('--') && !VALFLAGS.includes(argv[i - 1]));
+
+if (LEN && !['auto', '16', '32', '64'].includes(LEN)) {
+  console.log(`--len 은 auto·16·32·64 중 하나입니다 (받은 값: ${LEN})`);
+  process.exit(2);
+}
 
 if (!presets.length) {
   console.log('프리셋 이름을 하나 이상 주십시오.');
@@ -85,23 +98,31 @@ try {
     if (!found) { console.log(`${NG} 프리셋 '${preset}' 없음 — 건너뜁니다`); await page.close(); continue; }
 
     /* ── 선율 켜기 ── 이 도구의 존재 이유다 */
-    const mel = await page.evaluate(({ mode, off }) => {
+    const mel = await page.evaluate(({ mode, off, len }) => {
       const sel = document.getElementById('melmode');
       if (!off) sel.value = mode;
       sel.dispatchEvent(new Event('change', { bubbles: true }));
+      /* 길이는 모드보다 **뒤에** 건다 — melmode 의 change 가 풀을 다시 짜기 때문 */
+      const lenSel = document.getElementById('mellen');
+      if (len) { lenSel.value = len; lenSel.dispatchEvent(new Event('change', { bubbles: true })); }
       const btn = document.getElementById('mel');
       if (!off && btn.dataset.on !== '1') btn.click();
       if (off && btn.dataset.on === '1') btn.click();
-      return { on: btn.dataset.on === '1', mode: sel.value,
+      return { on: btn.dataset.on === '1', mode: sel.value, len: lenSel.value,
                pool: (() => { try { return melodyPoolFor(src.keys).join('|'); } catch { return '?'; } })(),
                riff: (() => { try { return riffPoolFor(src.gtr).join('|'); } catch { return '?'; } })(),
                bass: (() => { try { return blinePoolFor(src.bass).join('|'); } catch { return '?'; } })(),
                bpm: +document.getElementById('bpm').value };
-    }, { mode: MEL, off: MEL_OFF });
+    }, { mode: MEL, off: MEL_OFF, len: LEN });
 
     if (!MEL_OFF && !mel.on) { console.log(`${NG} ${preset} — 선율을 켜지 못했습니다`); await page.close(); continue; }
-    const bars = (SEC * mel.bpm / 60 / 4).toFixed(1);
-    console.log(`\n▶ ${preset}  선율 ${mel.on ? mel.mode : '꺼짐'} · ${mel.bpm} BPM · ${SEC}초 ≈ ${bars}마디`);
+    const bars = SEC * mel.bpm / 60 / 4;
+    /* 한 바퀴 대비 얼마나 담았는가 — 64루프에서 기본 40초면 4분의 1이다.
+       'auto' 는 회차마다 길이가 달라지므로 한 바퀴를 못 박지 않는다. */
+    const loop = +mel.len > 0 ? +mel.len : null;
+    const cover = loop ? ` · 한 바퀴(${loop}마디 ${(loop * 4 * 60 / mel.bpm).toFixed(0)}초)의 `
+                       + `${Math.round(bars / loop * 100)}%` : '';
+    console.log(`\n▶ ${preset}  선율 ${mel.on ? mel.mode : '꺼짐'} · 길이 ${mel.len} · ${mel.bpm} BPM · ${SEC}초 ${bars.toFixed(1)}마디${cover}`);
     console.log(`   선율 풀 ${mel.pool}`);
     console.log(`   리프    ${mel.riff}`);
     console.log(`   베이스  ${mel.bass}`);
@@ -152,7 +173,7 @@ try {
 
     const safe = preset.replace(/[^\w가-힣-]+/g, '_');
     const tag = MEL_OFF ? 'mel-off' : (MEL === 'genre' ? 'mel' : `mel-${MEL}`);
-    const out = join(OUTDIR, `${safe}-${tag}-${SEC}s.wav`);
+    const out = join(OUTDIR, `${safe}-${tag}-L${mel.len}-${SEC}s.wav`);
     writeFileSync(out, toWav(L, R, sr));
     console.log(`   울린 선율 ${picked.mel || '(없음)'} · 리프 ${picked.riff || '(없음)'} · 베이스 ${picked.bass || '(없음)'}`);
     console.log(`${OK} ${out}  (${sr} Hz · ${(total / sr).toFixed(1)}초)`);

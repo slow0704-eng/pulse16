@@ -21,7 +21,11 @@ let fillEveryL=16, fillModeL='genre';    // 큰 필인
    melNow 가 걸리면 건반 트랙이 여러 루프를 한 바퀴 돌며 연주한다.
    melBar 는 지금 몇 루프째인지 — loopNo 가 아니라 따로 센다.
    재생을 멈췄다 다시 틀어도 선율이 처음부터 시작하는 편이 자연스럽기 때문. */
-let melOn=false, melMode='genre', melNow=null, melBar=0, riffNow=null, blineNow=null;
+/* ⚠ melOn 은 **기본 켜짐**이다(2026-09-16). 꺼 두면 프리셋의 1마디(16스텝)
+   패턴이 무한 반복될 뿐이라 «장르 음원» 이 아니라 «그루브 루프» 가 된다.
+   이제 선율·리프·베이스가 전부 64마디판을 갖고 있으므로, 앱을 열고 Play 만
+   눌러도 64마디 한 바퀴가 흐른다. 끄면 예전 동작(1마디 루프)으로 돌아간다. */
+let melOn=true, melMode='genre', melNow=null, melBar=0, riffNow=null, blineNow=null;
 
 /* ── 겹침(레이어) ──
    한 트랙을 음색 두 겹으로 쌓습니다. 실제 편곡에서 가장 흔한 변주 수단이라
@@ -76,7 +80,10 @@ function pickComp(){
    melLenPref 는 사용자가 고른 길이('auto'|'16'|'32'|'64')다.
    'auto' 는 장르 풀에 짧은 것과 긴 것을 함께 놓아 섞이게 한다. */
 const MEL_BARS=16;                    // 아무것도 안 걸렸을 때의 기본 길이
-let melLen=MEL_BARS, melLenPref='auto';
+/* 기본은 64루프다 — 선율·리프·베이스 모두 64마디판이 있고, 곡 구조(SONG_FORM)도
+   전부 64마디라 «선율 한 바퀴 = 곡 한 번» 이 된다. 'auto'·'16'·'32' 는 그대로
+   고를 수 있다(짧은 루프로 패턴을 찍는 작업 흐름을 남겨 둔다). */
+let melLen=MEL_BARS, melLenPref='64';
 /* 선율 한 바퀴가 시작된 loopNo. 늘 MEL_BARS 의 배수다 —
    이것이 선율을 셔플·필인과 같은 격자에 묶어 두는 고리다. */
 let melAnchor=0;
@@ -191,7 +198,7 @@ function voicesAt(i,t){
   }
 
   /* 건반 — 비트마스크의 켜진 음도를 전부 발음 (화음)
-     선율 모드면 P.keys 대신 16마디 선율의 '지금 마디'를 읽는다.
+     선율 모드면 P.keys 대신 선율의 '지금 마디'를 읽는다(16·32·64마디).
      P.keys 를 덮어쓰지 않으므로 선율을 꺼도 사용자가 찍은 패턴이 그대로 남는다. */
   let m = melNow ? barOf(melNow)[i] : P.keys[i];
   /* 화성 진행 — 강박의 **단음만** 그 마디 화음으로 당긴다(snapKeyMask 주석).
@@ -436,7 +443,8 @@ function pickMelody2(){
   return use.length ? MELODY[use[(Math.random()*use.length)|0]] : null;
 }
 
-/** 다음에 연주할 16마디 선율을 고른다. 모드가 이름이면 그것으로 고정. */
+/** 다음에 연주할 선율을 고른다. 길이는 melLenPref(기본 64루프)를 따른다.
+    모드가 이름이면 그것으로 고정. */
 function pickMelody(){
   if(melMode!=='genre' && melMode!=='all') return MELODY[melMode] || null;
   const pool = melodyLenPool(melMode==='genre' ? melodyPoolFor(src.keys) : MELODY_NAMES,
@@ -445,26 +453,28 @@ function pickMelody(){
   return MELODY[pool[(Math.random()*pool.length)|0]] || null;
 }
 
-/** 다음에 칠 16마디 기타 리프를 고른다 */
+/** 다음에 칠 기타 리프를 고른다. 길이(16·32·64)는 선율과 같은 선호를 따른다 —
+    예전에는 리프만 길이 선택을 안 거쳐 64마디 선율 밑에서 16마디를 네 번
+    되풀이했다. */
 function pickRiff(){
   if(melMode!=='genre' && melMode!=='all') return RIFF[melMode] || null;
-  const pool = melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES;
+  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, melLenPref);
   if(!pool.length) return null;
   return RIFF[pool[(Math.random()*pool.length)|0]] || null;
 }
 
 /** 2번 기타용 리프 — 1번과 다른 것을 고른다 */
 function pickRiff2(){
-  const pool = melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES;
+  const pool = riffLenPool(melMode==='genre' ? riffPoolFor(src.gtr) : RIFF_NAMES, melLenPref);
   const other = pool.filter(n => RIFF[n] !== riffNow);
   const use = other.length ? other : pool;
   return use.length ? RIFF[use[(Math.random()*use.length)|0]] : null;
 }
 
-/** 다음에 칠 16마디 베이스 라인을 고른다 */
+/** 다음에 칠 베이스 라인을 고른다. 리프와 같은 이유로 길이 선호를 거친다. */
 function pickBline(){
   if(melMode!=='genre' && melMode!=='all') return BLINE[melMode] || null;
-  const pool = melMode==='genre' ? blinePoolFor(src.bass) : BLINE_NAMES;
+  const pool = blineLenPool(melMode==='genre' ? blinePoolFor(src.bass) : BLINE_NAMES, melLenPref);
   if(!pool.length) return null;
   return BLINE[pool[(Math.random()*pool.length)|0]] || null;
 }

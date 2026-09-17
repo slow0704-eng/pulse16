@@ -24,42 +24,59 @@
    그래서 섹션 위치는 loopNo 를 되돌리지 않고, loopNo 자체에서 "지금 이
    폼의 몇 번째 마디인가"를 그때그때 계산한다(sectionAt). */
 
-let formOn   = false;     // 곡 구조 사용 여부 — 기본은 꺼짐. 꺼져 있으면 지금과 완전히 같게 들린다.
+/* ⚠ 기본 켜짐(2026-09-16). 64마디 한 바퀴가 인트로·벌스·코러스·아웃트로를
+   한 번 도는 것이 «한 곡» 이고, 그 편성 변화가 없으면 64마디는 길어진 것이
+   아니라 늘어진 것이다. 끄면 섹션 마스크가 전부 빠져 예전처럼 들린다. */
+let formOn   = true;
 let formMode = 'genre';   // 'genre' | 'all' | SONG_FORM 의 이름(고정)
 
 /* ── 폼 사전 ──
-   총 마디는 16의 배수로 맞춘다 — 선율 라이브러리가 16·32·64마디이고
-   MEL_BARS=16 격자 위에서 돌기 때문에(sequencer.js), 폼의 길이가 16의
-   배수가 아니면 섹션 경계와 선율/필인/셔플 경계가 계속 어긋난다.
-   섹션 길이는 4·8·16마디만 쓴다. */
+   ⚠ 총 마디는 **전부 정확히 64** 다. 섹션 길이는 4·8·16마디만 쓴다.
+
+   예전에는 «16의 배수» 까지만 맞췄고 48·64·80 이 섞여 있었다. 선율이
+   16마디일 때는 그래도 됐지만, 선율·리프·베이스가 64마디가 된 지금은
+   48마디 폼이 64마디 선율과 **192마디마다 한 번만** 자리가 맞는다(최소공배수).
+   80마디 폼은 320마디다. 그 사이에는 코러스가 선율의 브릿지 위에 얹히고
+   브레이크가 재현부를 덮는다 — 섹션과 선율이 서로 다른 곡을 연주한다.
+
+   64 로 맞춰 두면 **선율 한 바퀴 = 곡 한 번**이라 제시·전개·브릿지·재현이
+   인트로·벌스·코러스·아웃트로와 늘 같은 자리에서 만난다.
+   tools/ci/check-song-length.mjs 가 이 불변식을 지킨다. */
 const SONG_FORM = {
-  popAABA:{label:'팝 절-후렴 (짧게)', cat:'band', secs:[
-    {k:'intro',bars:4},{k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},
-    {k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},{k:'outro',bars:4},
-  ]},                                                                          // 48마디
+  /* 브릿지가 없는 대신 마지막 코러스를 두 배로 — popLong 과 길이는 같고
+     «어디서 쉬어 가는가» 가 다르다 */
+  popAABA:{label:'팝 절-후렴 (브릿지 없음)', cat:'band', secs:[
+    {k:'intro',bars:4},{k:'verse',bars:16},{k:'prechorus',bars:4},{k:'chorus',bars:8},
+    {k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:16},{k:'outro',bars:4},
+  ]},                                                                          // 64마디
   popLong:{label:'팝 절-후렴 (브릿지 포함)', cat:'band', secs:[
     {k:'intro',bars:4},{k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},
     {k:'verse',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},{k:'bridge',bars:8},
     {k:'chorus',bars:8},{k:'outro',bars:4},
   ]},                                                                          // 64마디
+  /* 드롭을 16마디로 — 8마디 드롭은 «터졌다» 가 아니라 «스쳤다» 로 들린다 */
   edmDrop:{label:'EDM 빌드업-드롭', cat:'edm', secs:[
-    {k:'intro',bars:8},{k:'prechorus',bars:4},{k:'chorus',bars:8},{k:'break',bars:8},
-    {k:'prechorus',bars:4},{k:'chorus',bars:8},{k:'outro',bars:8},
-  ]},                                                                          // 48마디. prechorus=빌드업, chorus=드롭, break=브레이크다운
+    {k:'intro',bars:8},{k:'prechorus',bars:8},{k:'chorus',bars:16},{k:'break',bars:8},
+    {k:'prechorus',bars:4},{k:'chorus',bars:16},{k:'outro',bars:4},
+  ]},                                                                          // 64마디. prechorus=빌드업, chorus=드롭, break=브레이크다운
   loopMinimal:{label:'루프 반복형 (힙합·로파이)', cat:'loop', secs:[
-    {k:'intro',bars:4},{k:'verse',bars:16},{k:'chorus',bars:8},{k:'verse',bars:16},{k:'outro',bars:4},
-  ]},                                                                          // 48마디. 훅이 짧게 한 번만 끼는 반복형
+    {k:'intro',bars:8},{k:'verse',bars:16},{k:'chorus',bars:8},{k:'verse',bars:16},
+    {k:'chorus',bars:8},{k:'outro',bars:8},
+  ]},                                                                          // 64마디. 훅이 두 번 짧게 끼는 반복형
+  /* 헤드 16 · 솔로 16 · 헤드 16 — 실제 재즈 형식의 비율 */
   jazzHead:{label:'재즈 헤드-솔로-헤드', cat:'jazz', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:8},{k:'bridge',bars:16},{k:'verse',bars:8},{k:'outro',bars:8},
-  ]},                                                                          // 48마디. bridge 자리를 솔로 트레이딩으로 씀
+    {k:'intro',bars:8},{k:'verse',bars:16},{k:'bridge',bars:16},{k:'verse',bars:16},{k:'outro',bars:8},
+  ]},                                                                          // 64마디. bridge 자리를 솔로 트레이딩으로 씀
   worldLoop:{label:'월드·라틴 반복형', cat:'world', secs:[
     {k:'intro',bars:8},{k:'verse',bars:16},{k:'chorus',bars:16},{k:'verse',bars:16},{k:'outro',bars:8},
   ]},                                                                          // 64마디
   balladBuild:{label:'발라드 빌드업', cat:'ballad', secs:[
-    {k:'intro',bars:8},{k:'verse',bars:16},{k:'prechorus',bars:8},{k:'chorus',bars:16},
-    {k:'bridge',bars:8},{k:'chorus',bars:16},{k:'outro',bars:8},
-  ]},                                                                          // 80마디
+    {k:'intro',bars:8},{k:'verse',bars:16},{k:'prechorus',bars:4},{k:'chorus',bars:16},
+    {k:'bridge',bars:8},{k:'chorus',bars:8},{k:'outro',bars:4},
+  ]},                                                                          // 64마디
 };
+/* 폼 길이 — 하나라도 64 가 아니면 섹션이 선율과 어긋난다(§ 위 주석) */
+const SONG_FORM_BARS = 64;
 const SONG_FORM_NAMES = Object.keys(SONG_FORM);
 
 const SECTION_KINDS = ['intro','verse','prechorus','chorus','bridge','break','outro'];
@@ -129,19 +146,27 @@ function sectionAt(f, bar){
    bank    : 이 섹션의 첫 마디에 다른(채워진) 패턴 뱅크로 넘어갈지.
 
    드럼 7트랙 + bass·keys·gtr·keys2·gtr2 = 총 12개 id 기준으로 셌을 때
-   동시에 켜지는 트랙 수: 인트로 3 · 벌스 4 · 프리코러스 7 · 코러스 10 ·
-   브릿지 6 · 브레이크 2 · 아웃트로 4. (최종 보고의 실측표 참고)
+   동시에 켜지는 트랙 수: 인트로 3 · 벌스 5 · 프리코러스 7 · 코러스 10 ·
+   브릿지 6 · 브레이크 2 · 아웃트로 4.
 
    ⚠ lvl 배율만으로는 벌스↔코러스 단구간 라우드니스 차이가 크게 안 났다
    (1차 실측 2.33 LU — 마스터 체인의 글루 컴프·리미터가 구간별 편차를
    눌러 버린다. graph.js §6 의 glueComp/limComp 참고). 그래서 레벨을
    더 벌리는 것과 함께 **벌스에서 트랙을 하나 더 뺐다**(chat) — 압축기를
-   거쳐도 살아남는 건 "게인 배율" 보다 "안 울리는 트랙 수" 쪽이다. */
+   거쳐도 살아남는 건 "게인 배율" 보다 "안 울리는 트랙 수" 쪽이다.
+
+   ⚠⚠ 2026-09-16 — **벌스에서 keys 를 되살렸다.** 예전에는 선율이 기본으로
+   꺼져 있어 keys 가 «패드 한 겹» 이었고, 그래서 벌스에서 통째로 빼는 것이
+   대비를 버는 가장 싼 방법이었다. 지금은 keys 가 **선율 트랙**이다 —
+   64마디 선율을 만들어 놓고 벌스·인트로·아웃트로에서 끄면 64마디 중 32마디에
+   가락이 없다. 끄는 대신 0.72 로 낮춰 둔다: 코러스의 1.40 과 5.8dB 차이라
+   «벌스에서 조용히 흐르다 코러스에서 앞으로 나온다» 가 된다. 대비는 여전히
+   chat·clap·perc·keys2·gtr2 다섯 트랙이 만든다. */
 const SECTION_RULE = {
   intro:     {off:['snare','clap','ohat','tom','perc','keys','gtr','keys2','gtr2'],
               lvl:{bass:0.80}, fillOut:true,  bank:false},
-  verse:     {off:['clap','chat','ohat','tom','perc','keys','keys2','gtr2'],
-              lvl:{gtr:0.62, bass:0.85, snare:0.85}, fillOut:true,  bank:false},
+  verse:     {off:['clap','chat','ohat','tom','perc','keys2','gtr2'],
+              lvl:{keys:0.72, gtr:0.62, bass:0.85, snare:0.85}, fillOut:true,  bank:false},
   prechorus: {off:['clap','tom','perc','keys2','gtr2'],
               lvl:{gtr:1.10, keys:1.10}, fillOut:true,  bank:false},
   chorus:    {off:['tom','perc'],

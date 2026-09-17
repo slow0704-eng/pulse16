@@ -111,9 +111,13 @@ node tools/ci/check-layout.mjs        # 고르기·Play·첫 패드가 첫 화�
 
 ## 선율을 들어 보기
 
-`melOn` 기본값이 `false` 라(`src/seq/sequencer.js:24`) 그냥 렌더하면 프리셋
-자신의 1마디 `keys` 패턴만 울리고 **16마디 선율 라이브러리는 한 음도 나지
-않습니다.** 선율·리프·베이스를 고친 뒤 귀로 확인하려면 이것을 쓰세요.
+2026-09-17 부터 `melOn` 기본값이 **`true`** 입니다(`src/seq/sequencer.js`).
+그래서 `mcp` 의 `render_wav` 로 그냥 렌더해도 선율이 납니다 — 예전에는 기본이
+`false` 라 프리셋 자신의 1마디 `keys` 패턴만 울렸습니다.
+
+그래도 선율·리프·베이스를 고친 뒤에는 이 도구를 쓰는 편이 낫습니다. **어느
+선율이 걸렸는지 찍어 주고**, 특정 선율로 고정하거나 끈 대조군을 만들 수 있기
+때문입니다.
 
 ```
 node tools/render-melody.mjs Dancehall Ragga Afro-dancehall --sec 40
@@ -121,7 +125,9 @@ node tools/render-melody.mjs Ragga --mel rag_aaba    # 특정 선율로 고정
 node tools/render-melody.mjs Dancehall --off         # 선율 끈 대조군
 ```
 
-100 BPM 기준 16마디 한 바퀴가 약 39초입니다. 결과는 `renders/` 에 쌓이고
+기본 길이가 64루프라 100 BPM 기준 한 바퀴가 약 2분 34초입니다(16마디는 39초).
+`--sec` 를 짧게 주면 그 앞부분만 듣게 되므로, 브릿지·재현부까지 확인하려면
+길이를 `16`·`32` 로 낮추거나 `--sec` 를 늘리세요. 결과는 `renders/` 에 쌓이고
 `.gitignore` 의 `*.wav` 로 저장소에는 들어가지 않습니다. 어느 선율이 실제로
 걸렸는지도 같이 찍습니다 — 풀에서 고르므로 회차마다 다를 수 있습니다.
 

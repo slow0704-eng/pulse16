@@ -62,7 +62,7 @@ for(const [n,p] of Object.entries(RAW)){
     keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys, kit.chord, bcfg.scale),
     gtr : (blankGtr || !p.gtr) ? new Array(STEPS).fill(-1) : bpat(p.gtr),
     /* 2번 트랙은 프리셋이 적으면 쓰고, 없으면 빈 패턴.
-       16마디 선율 모드에서는 라이브러리가 채웁니다. */
+       선율 모드에서는 라이브러리가 채웁니다. */
     keys2: p.keys2 ? kpat(p.keys2, kit.chord, bcfg.scale) : new Array(STEPS).fill(0),
     gtr2 : p.gtr2  ? bpat(p.gtr2)  : new Array(STEPS).fill(-1),
     drums:Object.fromEntries(TRACKS.map(t =>

@@ -193,8 +193,9 @@ UI.filln.onchange    = e => { fillEvery =+e.target.value; syncVariation(); markD
 UI.fillnL.onchange   = e => { fillEveryL=+e.target.value; syncVariation(); markDirty(); };
 UI.fillmodeL.onchange= e => { fillModeL = e.target.value; markDirty(); };
 
-/* ── 16마디 선율 ──
-   건반 트랙이 1마디 반복 대신 16마디를 한 바퀴 돕니다.
+/* ── 선율 ──
+   건반 트랙이 1마디 반복 대신 한 바퀴를 돕니다 — 기본 64마디이고
+   길이(#mellen)로 16·32·64·자동 중에서 고릅니다.
    P.keys 를 덮어쓰지 않으므로 끄면 원래 패턴이 그대로 돌아옵니다. */
 {
   const add=(v,t)=>UI.melmode.add(new Option(t,v));
@@ -215,10 +216,10 @@ UI.mel.onclick = () => {
   if(melOn && melMode==='genre'){
     const pool=melodyPoolFor(src.keys);
     setStat(pool.length
-      ? `16마디 선율 — ${pool.length}종 중에서 (16마디마다 새로 뽑음)`
+      ? `선율 — ${pool.length}종 중에서 (한 바퀴마다 새로 뽑음 · 기본 64마디)`
       : '이 장르는 건반을 안 씁니다 — 선율 종류를 직접 고르세요','' );
   }else{
-    setStat(melOn ? '16마디 선율 켜짐' : '16마디 선율 꺼짐 — 원래 건반 패턴으로');
+    setStat(melOn ? '선율 켜짐' : '선율 꺼짐 — 프리셋의 1마디 패턴만 반복합니다');
   }
   markDirty();
 };
@@ -343,7 +344,7 @@ fillSel(UI.geng, ENGINES.gtr , eng.gtr );
 
 /* ── 2번 트랙 ──
    1번과 따로 도는 별개 트랙입니다. 자기 음색·볼륨·음소거를 갖습니다.
-   패턴 롤은 아직 없고 16마디 선율 모드가 라이브러리에서 채웁니다. */
+   패턴 롤은 아직 없고 선율 모드가 라이브러리에서 채웁니다. */
 [['keys2','k'],['gtr2','g']].forEach(([id,pre]) => {
   const eSel=UI[pre+'eng2'], vEl=UI[pre+'vol2'], mEl=UI[pre+'mute2'];
   fillSel(eSel, ENGINES[id==='keys2'?'keys':'gtr'], eng[id]);
