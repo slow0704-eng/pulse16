@@ -41,7 +41,8 @@
           "k": "outro",
           "bars": 4
         }
-      ]
+      ],
+      "arc": "build"
     },
     "verseChorusBridge": {
       "label": "벌스·코러스 (브릿지 포함)",
@@ -85,7 +86,8 @@
           "k": "outro",
           "bars": 4
         }
-      ]
+      ],
+      "arc": "build"
     },
     "aaba32": {
       "label": "32마디 AABA",
@@ -109,7 +111,42 @@
           "k": "verse",
           "bars": 8
         }
-      ]
+      ],
+      "rule": {
+        "_why": "B 구간은 «대비되는 화성 또는 느낌» 이라고 출처가 적는다. 대비는 «더 얇게» 가 아니라 «다르게» 다 — 그래서 브릿지를 조용하게 만들지 않고 건반 쪽으로 무게를 옮긴다. A 구간 셋은 같은 자리이므로 셋 다 verse 규칙 하나를 쓴다",
+        "verse": {
+          "off": [
+            "clap",
+            "tom",
+            "perc",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "keys": 1.0,
+            "gtr": 0.95
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "bridge": {
+          "off": [
+            "clap",
+            "tom",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "keys": 1.3,
+            "gtr": 0.75,
+            "bass": 1.05,
+            "perc": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "unsourced"
     },
     "blues12": {
       "label": "12마디 블루스 ×4",
@@ -133,7 +170,43 @@
           "k": "verse",
           "bars": 12
         }
-      ]
+      ],
+      "rule": {
+        "_why": "블루스에서 기타는 반주가 아니라 곡 자체다 — 기본 verse 의 gtr 0.62 는 이 장르에서 곡을 지운다. 12마디마다 오는 턴어라운드는 섹션 끝 필인이 맡는다(fillOut). keys2·gtr2 는 이 계열 편성에 없다시피 해서 끈 채로 둔다",
+        "verse": {
+          "off": [
+            "clap",
+            "ohat",
+            "tom",
+            "perc",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "keys": 0.9,
+            "gtr": 0.95,
+            "bass": 0.9
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [
+            "tom",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "gtr": 1.45,
+            "keys": 1.2,
+            "snare": 1.15,
+            "bass": 1.1
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "unsourced"
     },
     "headSolos": {
       "label": "헤드·솔로·헤드",
@@ -157,7 +230,43 @@
           "k": "verse",
           "bars": 32
         }
-      ]
+      ],
+      "rule": {
+        "_why": "헤드는 선율을 «적힌 대로» 제시하는 자리이므로 건반을 내리면 안 된다(기본 verse 는 0.72). 브릿지 자리는 솔로라, 한 목소리만 앞에 두고 나머지는 컴핑으로 물러난다 — 트랙을 더 끄는 것이 아니라 **레벨로 거리를 만드는** 것이 재즈의 방식이다",
+        "verse": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "clap",
+            "tom"
+          ],
+          "lvl": {
+            "keys": 1.2,
+            "gtr": 1.0,
+            "bass": 0.95
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "bridge": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "clap",
+            "tom",
+            "perc"
+          ],
+          "lvl": {
+            "keys": 1.45,
+            "gtr": 0.65,
+            "bass": 1.05,
+            "chat": 1.1
+          },
+          "fillOut": true,
+          "bank": false
+        }
+      },
+      "arc": "unsourced"
     },
     "buildDrop": {
       "label": "빌드업·드롭",
@@ -193,7 +302,73 @@
           "k": "outro",
           "bars": 16
         }
-      ]
+      ],
+      "rule": {
+        "_why": "빌드업의 서술이 구체적이다 — 라이저가 올라가고 스네어 롤이 촘촘해지고 «서브가 아예 빠진다». 그래서 prechorus 에서 bass 를 끈다. 드롭은 그 서브가 돌아오는 순간이라 bass 를 가장 크게 올린다. 브레이크다운은 드럼을 빼고 패드만 남긴다",
+        "intro": {
+          "off": [
+            "snare",
+            "clap",
+            "tom",
+            "keys2",
+            "gtr2",
+            "gtr"
+          ],
+          "lvl": {
+            "bass": 0.85
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "prechorus": {
+          "off": [
+            "bass",
+            "tom",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "chat": 1.25,
+            "snare": 1.2,
+            "keys": 1.2,
+            "ohat": 1.15
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [
+            "tom"
+          ],
+          "lvl": {
+            "bass": 1.45,
+            "kick": 1.1,
+            "gtr": 1.4,
+            "keys": 1.5,
+            "keys2": 1.25,
+            "gtr2": 1.25,
+            "clap": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        },
+        "break": {
+          "off": [
+            "kick",
+            "snare",
+            "clap",
+            "tom",
+            "bass"
+          ],
+          "lvl": {
+            "keys": 1.25,
+            "keys2": 1.2
+          },
+          "fillOut": true,
+          "bank": false
+        }
+      },
+      "arc": "build"
     },
     "dubstep224": {
       "label": "덥스텝 두 드롭",
@@ -233,7 +408,100 @@
           "k": "outro",
           "bars": 32
         }
-      ]
+      ],
+      "rule": {
+        "_why": "출처가 인트로를 «리드 베이스 없는 드럼과 분위기» 라고 못 박는다 — 덥스텝에서 베이스는 인트로에 없는 것이 규칙이다. 드롭은 그 베이스가 하프타임으로 들어오는 순간이고, 이 장르에서 저역이 곧 곡이라 가장 크게 올린다",
+        "intro": {
+          "off": [
+            "bass",
+            "gtr",
+            "gtr2",
+            "keys2",
+            "clap",
+            "tom"
+          ],
+          "lvl": {
+            "keys": 0.9
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "prechorus": {
+          "off": [
+            "bass",
+            "tom",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "chat": 1.25,
+            "snare": 1.2,
+            "keys": 1.2
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [
+            "tom",
+            "ohat"
+          ],
+          "lvl": {
+            "bass": 1.55,
+            "kick": 1.15,
+            "snare": 1.2,
+            "keys": 1.3,
+            "gtr": 1.3
+          },
+          "fillOut": true,
+          "bank": true
+        },
+        "verse": {
+          "off": [
+            "clap",
+            "tom",
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "bass": 1.0,
+            "keys": 1.0,
+            "gtr": 0.8
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "break": {
+          "off": [
+            "kick",
+            "snare",
+            "clap",
+            "tom",
+            "bass"
+          ],
+          "lvl": {
+            "keys": 1.25
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "outro": {
+          "off": [
+            "bass",
+            "gtr",
+            "gtr2",
+            "keys2",
+            "clap",
+            "tom"
+          ],
+          "lvl": {
+            "keys": 0.85
+          },
+          "fillOut": false,
+          "bank": false
+        }
+      },
+      "arc": "build"
     },
     "djTool": {
       "label": "디제이용 긴 인트로·아웃트로",
@@ -265,7 +533,54 @@
           "k": "outro",
           "bars": 16
         }
-      ]
+      ],
+      "rule": {
+        "_why": "인트로·아웃트로의 존재 이유가 «디제이가 섞어 넣을 비트» 다. 기본 규칙은 인트로에서 스네어를 끄는데, 스네어가 없으면 섞을 격자가 없다. 드럼과 퍼커션을 남기고 선율 악기만 뺀다. 브레이크다운은 반대로 드럼을 빼고 패드를 남긴다 — 드럼이 다시 들어오는 순간이 이 음악의 사건이다",
+        "intro": {
+          "off": [
+            "keys",
+            "keys2",
+            "gtr",
+            "gtr2",
+            "tom"
+          ],
+          "lvl": {
+            "bass": 0.9
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "break": {
+          "off": [
+            "kick",
+            "snare",
+            "clap",
+            "tom",
+            "bass"
+          ],
+          "lvl": {
+            "keys": 1.2,
+            "keys2": 1.15
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "outro": {
+          "off": [
+            "keys",
+            "keys2",
+            "gtr",
+            "gtr2",
+            "tom"
+          ],
+          "lvl": {
+            "bass": 0.85
+          },
+          "fillOut": false,
+          "bank": false
+        }
+      },
+      "arc": "build"
     },
     "largoMontuno": {
       "label": "라르고·몬투노",
@@ -289,7 +604,50 @@
           "k": "chorus",
           "bars": 32
         }
-      ]
+      ],
+      "rule": {
+        "_why": "앞(라르고)은 리드 보컬을 세우는 자리라 건반을 죽이면 안 된다 — 기본 규칙의 verse 는 keys 를 0.72 로 내린다. 뒤(몬투노)는 코로가 받아치는 자리라 keys2·gtr2 를 답하는 목소리로 올리고 퍼커션을 전부 켠다. 살사에서 퍼커션을 끄는 것은 곡을 끄는 것이다",
+        "verse": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "clap"
+          ],
+          "lvl": {
+            "keys": 1.0,
+            "gtr": 0.75,
+            "bass": 0.9
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "prechorus": {
+          "off": [
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {
+            "keys": 1.1,
+            "perc": 1.15
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [],
+          "lvl": {
+            "perc": 1.3,
+            "tom": 1.15,
+            "keys2": 1.35,
+            "gtr2": 1.3,
+            "keys": 1.15,
+            "chat": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "build"
     },
     "rumbaSebene": {
       "label": "룸바·세베네",
@@ -313,7 +671,39 @@
           "k": "chorus",
           "bars": 24
         }
-      ]
+      ],
+      "rule": {
+        "_why": "세베네는 «리드 기타와 리듬 기타가 춤을 이끄는» 자리다. 기본 규칙의 chorus 는 건반(1.40)과 기타(1.55)를 같이 올려 리드가 누구인지 흐려진다. 여기서는 건반을 내리고 기타 둘만 앞으로 낸다. 앞 구간(룸바)은 노래라 반대로 건반을 세운다",
+        "verse": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "clap"
+          ],
+          "lvl": {
+            "keys": 1.0,
+            "gtr": 0.8
+          },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": [
+            "keys2"
+          ],
+          "lvl": {
+            "gtr": 1.6,
+            "gtr2": 1.45,
+            "keys": 0.7,
+            "perc": 1.25,
+            "tom": 1.1,
+            "chat": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "build"
     },
     "grooveHold": {
       "label": "그루브 유지",
@@ -341,7 +731,44 @@
           "k": "outro",
           "bars": 8
         }
-      ]
+      ],
+      "rule": {
+        "_why": "출처가 «8마디 16마디가 지나도 아무것도 변하지 않는 것이 핵심» 이라고 한다. 기본 규칙은 인트로에서 9트랙을 끄는데 그것이 정확히 반대다. 움직이는 것은 층(keys2·gtr2·perc)뿐이고 골격은 안 건드린다 — 아프로비트가 길이를 버는 방법이 «층을 더하고 빼는 것» 이라는 서술 그대로다",
+        "intro": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "perc",
+            "clap"
+          ],
+          "lvl": {},
+          "fillOut": false,
+          "bank": false
+        },
+        "verse": {
+          "off": [
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {},
+          "fillOut": false,
+          "bank": false
+        },
+        "outro": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "perc",
+            "clap"
+          ],
+          "lvl": {
+            "bass": 0.9
+          },
+          "fillOut": false,
+          "bank": false
+        }
+      },
+      "arc": "flat"
     },
     "verse16hook8": {
       "label": "16마디 벌스 · 8마디 훅",
@@ -377,7 +804,27 @@
           "k": "outro",
           "bars": 4
         }
-      ]
+      ],
+      "rule": {
+        "_why": "출처가 «벌스는 훅보다 악기가 적다» 고 명시한다 — 기본 규칙이 이미 그 모양이라 그대로 쓴다. 다만 이 계열에서 건반은 훅을 연주하는 트랙이라 벌스에서 통째로 죽이지 않고 낮추기만 한다(2026-09-16 에 고친 것과 같은 이유)",
+        "chorus": {
+          "off": [
+            "tom"
+          ],
+          "lvl": {
+            "keys": 1.45,
+            "gtr": 1.3,
+            "keys2": 1.3,
+            "gtr2": 1.25,
+            "bass": 1.2,
+            "clap": 1.2,
+            "chat": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "build"
     },
     "riddimVersion": {
       "label": "리딤 · 버전",
@@ -409,7 +856,8 @@
           "k": "outro",
           "bars": 8
         }
-      ]
+      ],
+      "arc": "unsourced"
     }
   },
   "assignCat": {
@@ -597,5 +1045,7 @@
     "B:남아시아",
     "K:남아시아",
     "K:하이브리드 · 인터넷 장르"
-  ]
+  ],
+  "ruleNote": "형식마다 섹션 규칙을 덮어쓴다. 키가 있으면 arrange.js 의 SECTION_RULE 기본값을 그 섹션에 대해 **통째로 대신한다**(off·lvl 둘 다). 덮지 않은 섹션은 기본값 그대로다. _why 는 왜 기본값으로는 안 되는지 — genres/00-form.md §5.",
+  "arcNote": "arc 는 «출처가 셈여림에 대해 무엇을 말했는가» 다. build=출처가 쌓였다 터지는 형태를 서술한다 · flat=출처가 «안 변하는 것이 형식» 이라고 서술한다 — 벌어짐이 작아야 맞다 · unsourced=출처가 셈여림을 말하지 않는다. 값을 지어내지 않고 «모른다» 로 둔다 — 재기만 하고 판정하지 않는다. tools/measure-sections.mjs 가 이 값으로 판정 기준을 바꾼다."
 }

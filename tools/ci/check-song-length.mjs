@@ -20,10 +20,15 @@
    검사
      A  폼마다 total 을 나누는 선율 길이(64·32·16)가 있는가
      B  섹션 길이·종류가 성한가 · 폼 경계가 16격자 위에 있는가
-     C  SECTION_RULE 이 실제 트랙만 가리키고 코러스가 벌스보다 두꺼운가
+     C  섹션 규칙이 실제 트랙만 가리키는가 · 형식별 규칙이 성한가
      D  배정표가 실재하는 계열·하위분기·폼만 가리키는가 (오타 잡기)
      E  선율·리프·베이스 재료마다 64마디판이 있는가
-     F  프리셋 357종이 자기 폼의 melLen 으로 뽑았을 때 그 길이만 받는가     */
+     F  프리셋 357종이 자기 폼의 melLen 으로 뽑았을 때 그 길이만 받는가
+     G  형식의 대비가 **그 프리셋에서** 유효한가 (없는 트랙을 끄는 규칙 잡기)
+
+   ⚠ 여기까지는 전부 **표의 성질**이다. 소리로 나오는지는 표로 알 수 없다 —
+     마스터의 글루 컴프·리미터가 구간별 편차를 눌러 버린다.
+     실측은 tools/measure-sections.mjs 가 한다(genres/00-form.md §5).        */
 
 import fs from 'node:fs';
 import { ROOT, OK, NG, WARN, head } from './_lib.mjs';
@@ -93,6 +98,39 @@ head('C — 섹션 규칙이 실제 트랙만 가리키는가');
   const chorus = ALL.length - A.SECTION_RULE.chorus.off.length;
   const verse = ALL.length - A.SECTION_RULE.verse.off.length;
   if (chorus <= verse) bad(`코러스(${chorus})가 벌스(${verse})보다 안 두껍다 — 쌓였다 터지는 형태가 안 된다`);
+
+  /* ── 형식별 규칙 — 조사한 것이 실제로 소리에 닿는 자리다 ── */
+  console.log('');
+  let ruled = 0;
+  for (const [name, f] of Object.entries(A.SONG_FORM)) {
+    if (!f.rule) continue;
+    ruled++;
+    const used = new Set(f.secs.map(x => x.k));
+    for (const [k, r] of Object.entries(f.rule)) {
+      if (!A.SECTION_KINDS.includes(k)) { bad(`${name}.rule 에 모르는 섹션 — ${k}`); continue; }
+      if (!used.has(k)) soft(`${name}.rule.${k} 은 이 폼에 없는 섹션이다 — 소리에 닿지 않는다`);
+      for (const id of r.off || []) if (!ALL.includes(id)) bad(`${name}.rule.${k}.off 에 없는 트랙 — ${id}`);
+      for (const id of Object.keys(r.lvl || {})) if (!ALL.includes(id)) bad(`${name}.rule.${k}.lvl 에 없는 트랙 — ${id}`);
+    }
+    if (!f.ruleWhy) bad(`${name}.rule 에 _why 가 없다 — 왜 기본값으로 안 되는지 적어야 한다`);
+    /* 벌스와 코러스가 둘 다 있으면 코러스가 더 두껍거나 더 커야 한다 */
+    const thick = k => {
+      const r = f.rule[k] || A.SECTION_RULE[k];
+      const on = ALL.filter(id => !(r.off || []).includes(id));
+      const gain = on.reduce((t, id) => t + ((r.lvl || {})[id] || 1), 0);
+      return { n: on.length, gain };
+    };
+    if (used.has('verse') && used.has('chorus')) {
+      const v = thick('verse'), c = thick('chorus');
+      if (c.gain <= v.gain)
+        bad(`${name} — 코러스 무게 ${c.gain.toFixed(1)} 가 벌스 ${v.gain.toFixed(1)} 이하다 (트랙 ${c.n} vs ${v.n})`);
+      else console.log(`${OK} ${name.padEnd(14)} 벌스 ${v.n}트랙/${v.gain.toFixed(1)} → 코러스 ${c.n}트랙/${c.gain.toFixed(1)}`);
+    } else {
+      const ks = [...used].map(k => `${k} ${thick(k).n}`).join(' · ');
+      console.log(`${OK} ${name.padEnd(14)} ${ks}`);
+    }
+  }
+  console.log(`   형식 ${ruled}종이 자기 규칙을 갖는다 · 나머지 ${Object.keys(A.SONG_FORM).length - ruled}종은 기본 규칙`);
 }
 
 /* ── 프리셋 · 선율 라이브러리 ────────────────────────────── */
@@ -199,6 +237,57 @@ head('F — 프리셋이 자기 폼의 선율 길이를 실제로 받는가');
     + Object.entries(lenTally).sort((a, b) => b[0] - a[0]).map(([l, c]) => `${l}마디 ${c}건`).join(' · '));
   if (noKeys) console.log(`   (선율 풀이 비는 조합 ${noKeys}건은 건반을 안 쓰는 장르다 — 메탈·펑크)`);
 }
+
+/* ── G. 형식의 대비가 **그 프리셋에서** 실제로 유효한가 ──────
+   표의 12개 트랙을 다 세면 거짓말이 된다. 블루스 프리셋은 kick·snare·chat +
+   bass·keys·gtr 여섯뿐이라 clap·ohat·tom·perc 를 끄고 켜는 규칙이 통째로
+   무효다. 그러면 남는 것은 레벨뿐인데, 마스터의 글루 컴프·리미터가 그것을
+   눌러 버린다(arrange.js §SECTION_RULE «1차 실측 2.33 LU»).
+   실측은 tools/measure-sections.mjs 가 하고, 여기서는 **공짜로 잡히는 것**만
+   본다 — 「이 프리셋에서는 켜고 꺼지는 트랙이 하나도 없다」. */
+head('G — 형식의 대비가 그 프리셋에서 실제로 유효한가');
+{
+  const TRACK_IDS2 = new Function('window', strip(read('src/core/config.js')) + ';return TRACK_IDS;')({ Tone: undefined });
+  const ALL = [...TRACK_IDS2, 'bass', 'keys', 'gtr', 'keys2', 'gtr2'];
+  const liveOf = n => {
+    const L = P.LIB[n], d = (L && L.drums) || {};
+    return ALL.filter(id => {
+      const a = TRACK_IDS2.includes(id) ? d[id] : L && L[id];
+      return Array.isArray(a) && a.some(v => v);
+    });
+  };
+  const poolFor = n => {
+    const hit = A.SONG_FORM_POOL_SUB[subKey(n)];
+    return (hit && hit.pool) || A.SONG_FORM_POOL_CAT[catFor(n)] || [];
+  };
+  const flatFor = {};
+  for (const n of P.LIB_NAMES) {
+    const live = liveOf(n);
+    if (!live.length) continue;
+    for (const fname of poolFor(n)) {
+      const f = A.SONG_FORM[fname];
+      if (!f || f.arc !== 'build') continue;        // 평평한 것이 맞는 형식은 뺀다
+      const kinds = [...new Set(f.secs.map(x => x.k))];
+      const row = k => {
+        const r = (f.rule && f.rule[k]) || A.SECTION_RULE[k];
+        return live.map(id => (r.off || []).includes(id) ? 0 : ((r.lvl || {})[id] || 1));
+      };
+      const w = k => { const g = row(k); return g.filter(v => v > 0).length * 100 + g.reduce((s, v) => s + v, 0); };
+      const thin = kinds.reduce((a, b) => w(a) <= w(b) ? a : b);
+      const thick = kinds.reduce((a, b) => w(a) >= w(b) ? a : b);
+      const a = row(thin), b = row(thick);
+      let swing = 0;
+      for (let i = 0; i < live.length; i++) if ((a[i] === 0) !== (b[i] === 0)) swing++;
+      if (swing === 0) (flatFor[fname] = flatFor[fname] || []).push(n);
+    }
+  }
+  const names = Object.keys(flatFor);
+  if (!names.length) console.log(`${OK} build 형식은 전부, 배정된 프리셋에서 켜고 꺼지는 트랙이 있다`);
+  for (const f of names)
+    soft(`${f} — 켜고 꺼지는 트랙이 0인 프리셋 ${flatFor[f].length}종 (${flatFor[f].slice(0, 4).join(' ')}…).`
+       + ` 레벨만으로는 컴프를 잘 못 넘는다 — 프리셋에 트랙이 없거나 규칙이 그 트랙을 안 건드린다`);
+}
+
 
 console.log();
 if (fail) { console.log(`${NG} 곡 형식 검사 실패 — ${fail}건`); process.exit(1); }

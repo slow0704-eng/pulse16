@@ -144,6 +144,10 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
   build-refdata.mjs    billboard/*.md + genres/profiles/*.json + genres/*.md →
                        src/data/billboard.js · profiles.js · references.js 로 굳힌다.
                        원본을 고쳤으면 이것을 다시 돌려야 한다
+  measure-sections.mjs 곡 형식이 **소리로** 나오는가를 잰다. 실제로 재생해
+                       녹음하고 섹션마다 RMS·편성 변화·필인 위치를 보여 준다.
+                       표(check-song-length.mjs)로는 못 보는 자리다 —
+                       마스터 컴프가 레벨 차이를 눌러 버리기 때문이다
   render-melody.mjs    **선율을 켠 채** 녹음해 renders/ 에 WAV 를 남긴다.
                        melOn 기본값이 true 가 된 뒤로는 render_wav 로도 선율이
                        나지만, 이쪽은 **어느 선율·리프·베이스가 걸렸는지 찍고**

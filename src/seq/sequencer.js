@@ -501,7 +501,12 @@ function onLoopWrap(){
   /* 두 단이 같은 루프에 겹치면 **큰 필인이 이깁니다.**
      16마디째에 작은 필인이 나오면 섹션이 안 넘어간 것처럼 들립니다. */
   const nx = loopNo + 1;
-  const bigDue   = fillOn && fillEveryL > 0 && nx % fillEveryL === 0;
+  /* ⚠ 큰 필인은 «구간이 바뀐다» 는 신호다. 곡 구조가 켜져 있으면 그 신호를
+     **형식이 갖는다** — 고정 16격자로 치면 12마디 블루스에서 15·31마디째에
+     남의 자리에서 울리고, 정작 12마디 턴어라운드는 그냥 지나간다.
+     그래서 폼이 있을 때는 주기적 큰 필인을 끄고 섹션 끝(sectionWantsFill)에
+     맡긴다. 작은 필인은 그루브에 속하는 것이라 그대로 둔다. */
+  const bigDue   = fillOn && !formOn && fillEveryL > 0 && nx % fillEveryL === 0;
   const smallDue = fillOn && fillEvery  > 0 && nx % fillEvery  === 0;
   if(bigDue){        fillNow = pickFill('L', fillModeL); fillTier = '큰'; }
   else if(smallDue){ fillNow = pickFill('S', fillMode);  fillTier = '작은'; }

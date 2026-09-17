@@ -193,27 +193,41 @@ function sectionLabel(){
 
 /** 이 트랙이 지금 섹션에서 꺼져 있는가(필인 구간에는 적용하지 않는다 —
     필인은 섹션이 바뀐다는 신호라 섹션의 off 마스크보다 우선한다) */
+/** 지금 섹션에 적용할 규칙. **형식이 자기 규칙을 갖고 있으면 그것이 이긴다.**
+
+    SECTION_RULE 하나로 열세 형식을 다 처리하면 조사한 것이 소리로 안 나온다 —
+    «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심» 인 형식이 인트로에서
+    트랙 아홉을 끄고, «기타가 이끈다» 는 세베네에서 건반이 더 크다.
+    형식별 규칙은 생성물이다(genres/forms/forms.json 의 rule · 00-form.md §5).
+
+    덮어쓰기는 **섹션 단위로 통째로** 다 — 기본값과 섞지 않는다. 섞으면
+    «기본값이 뭐였더라» 를 매번 되짚어야 하고, 그러면 표를 읽어서 소리를
+    짐작할 수 없다. 안 적은 섹션은 기본값을 그대로 쓴다. */
+function ruleAt(k){
+  return (formNow && formNow.rule && formNow.rule[k]) || SECTION_RULE[k];
+}
+
 function sectionOff(id){
   if(!formOn || !sectionNow) return false;
-  const r = SECTION_RULE[sectionNow.k];
+  const r = ruleAt(sectionNow.k);
   return !!(r && r.off && r.off.includes(id));
 }
 /** 지금 섹션의 레벨 배율. 기본 1(안 바뀜) */
 function sectionLvl(id){
   if(!formOn || !sectionNow) return 1;
-  const r = SECTION_RULE[sectionNow.k];
+  const r = ruleAt(sectionNow.k);
   return (r && r.lvl && r.lvl[id]) || 1;
 }
 /** 지금이 섹션의 마지막 마디이고, 그 섹션이 필인으로 넘겨야 하는 자리인가 */
 function sectionWantsFill(){
   if(!formOn || !sectionNow || !sectionNow.last) return false;
-  const r = SECTION_RULE[sectionNow.k];
+  const r = ruleAt(sectionNow.k);
   return !!(r && r.fillOut);
 }
 /** 지금이 섹션의 첫 마디이고, 그 섹션이 뱅크를 바꿔야 하는 자리인가 */
 function sectionWantsBank(){
   if(!formOn || !sectionNow || !sectionNow.first) return false;
-  const r = SECTION_RULE[sectionNow.k];
+  const r = ruleAt(sectionNow.k);
   return !!(r && r.bank);
 }
 

@@ -339,8 +339,19 @@ if (existsSync(abs(FDIR))) {
     const melLen = MEL_LENS.find(L => total % L === 0) || null;
     if (!melLen)
       console.log(`${NG} ${name} 이 ${total}마디라 16·32·64 어느 것으로도 나누어지지 않습니다`);
-    forms[name] = { label: f.label, cat: f.cat, conf: f.confidence,
-                    total, melLen, secs: f.secs, why: f.basis };
+    /* 섹션 규칙 — _why 는 사람이 읽는 칸이라 폼 바깥으로 뺀다(런타임은 안 본다) */
+    let rule = null, ruleWhy = '';
+    if (f.rule) {
+      rule = {};
+      for (const [k, v] of Object.entries(f.rule)) {
+        if (k === '_why') { ruleWhy = v; continue; }
+        rule[k] = { off: v.off || [], lvl: v.lvl || {},
+                    fillOut: v.fillOut !== false, bank: !!v.bank };
+      }
+    }
+    forms[name] = { label: f.label, cat: f.cat, conf: f.confidence, arc: f.arc || 'unsourced',
+                    total, melLen, secs: f.secs, why: f.basis,
+                    ...(rule ? { rule, ruleWhy } : {}) };
   }
   const sub = {};
   for (const [k, v] of Object.entries(fJson.assignSub || {}))
