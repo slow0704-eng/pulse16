@@ -1115,48 +1115,53 @@ const MELODY_KIT_PRESET = {
   'SoundCloud Rap'          :['bal_aaba','bal_aabb','bal_abab'],
   /* 탐보르장 «Bum-Cha-Cha» 골격. 화성 재료는 브라질 밖에서 온다 */
   'Brazilian Phonk'         :['lat_abab','lat_aabb','car_aabb'],
-  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
-     24종 → 16무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 클라비넷 16분에 슬랩 */
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10 → 2026-09-18 대표곡 교정
+     24종 → 21무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/04-rnb-soul-funk.md «대표곡» 표). 곡의 선율을 옮기지 않고 성질만 맞췄다. */
+  /* «On the one» — 정박을 비우고 그 앞뒤에 음을 둔다 */
   'Funk'                    :['funk_aabb','funk_abab','funk_aaab'],
   'JB Funk'                 :['funk_aabb','funk_abab','funk_aaab'],
-  /* 현이 옥타브로 오르내린다 */
+  /* 현과 혼이 옥타브로 오르내린다 */
   'Disco Funk'              :['dis_aabb','dis_abab','dis_aaab'],
-  'Post-disco'              :['dis_aabb','dis_abab','dis_aaab'],
-  /* 보코더와 무그가 앞에 선다 */
+  /* 오케스트라를 신스로 갈아 끼운 자리 */
+  'Post-disco'              :['dis_abab','dis_aaab'],
+  /* 보코더와 무그가 앞에 선다 — 혼 섹션은 The Horny Horns */
   'P-Funk'                  :['funk_abab','disfun_abab','funk_aaab'],
-  'Electro-funk'            :['funk_abab','disfun_abab','funk_aaab'],
-  /* 슬랩에 트럼펫과 EP */
+  /* 808 과 시퀀서. 사람 느낌의 반대쪽(mechanical)이다 */
+  'Electro-funk'            :['edm_aaab','edm_abab','chip_aaab'],
+  /* 리프 하나 위에 솔로가 길게 얹힌다 */
   'Jazz-Funk'               :['jazz_aabb','jazz_abab','jazbal_abab'],
-  /* 디스코가 신스로 넘어간 자리 */
+  /* 디스코가 신스로 넘어간 자리 — 네 박을 버리고 2·4 로 갔다 */
   'Boogie'                  :['dis_abab','dis_aaab','dis_aabb'],
-  /* 스윙 34 에 신스 브라스 */
+  /* 스윙된 16분 셋잇단 — 이 계열에서 유일하게 실제로 셔플이다 */
   'New Jack Swing'          :['funk_aaab','funk_aabb','disfun_abab'],
-  /* 72~75 BPM */
-  'Quiet Storm'             :['bal_aaba','bal_aabb','amb_aaba'],
-  'Alternative R&B'         :['bal_aaba','bal_aabb','amb_aaba'],
-  /* 스윙 30 에 EP 9화음 */
+  /* 느리고 비어 있다. 음색이 선율을 대신한다 */
+  'Quiet Storm'             :['bal_aaba','bal_aabb','bal_abab'],
+  /* 잔향과 여백이 악기다 — 필터드 드럼 위의 성긴 선율 */
+  'Alternative R&B'         :['amb_aaba','amb_aabb','amb_aaab'],
+  /* EP 9화음에 보컬 스택 */
   '90s R&B'                 :['cinbal_aaba','cinbal_aabb','bal_abab'],
   'Hip Hop Soul'            :['cinbal_aaba','cinbal_aabb','bal_abab'],
-  /* 808 에 R&B 보컬 */
+  /* 808 에 R&B 보컬 — 건반이 두세 음으로 줄어든다 */
   'Trap Soul'               :['trp_aaba','trp_aaab','trp_abab'],
-  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
+  /* 빠른 백비트에 합창 훅. 소울에서 가장 팝에 가깝다 */
   'Motown'                  :['pop_aabb','pop_aaba','pop_abab'],
   'Northern Soul'           :['pop_aabb','pop_aaba','pop_abab'],
-  /* 현과 하프의 스위트 사운드 */
+  /* 필라델피아 오케스트라의 현 — 음역이 한 도수 넓다 */
   'Philadelphia Soul'       :['cin_aaba','cin_aabb','cin_abab'],
-  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
+  /* 혼이 유니즌으로 불고 오르간이 받친다. 12마디 블루스 어휘 */
   'Memphis Soul'            :['blues_aaba','blues_aabb','rootbl_aabb'],
-  /* 와우 기타와 오르간 */
+  /* 와우와 퍼즈, 그리고 긴장된 반복 베이스 */
   'Psychedelic Soul'        :['funk_aabb','disfun_aabb','funk_abab'],
-  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
+  /* 베이스가 근음과 옥타브를 왕복한다 — 디스코의 정의 */
   'Disco'                   :['dis_aabb','dis_abab','dis_aaab'],
-  'Euro Disco'              :['dis_aabb','dis_abab','dis_aaab'],
-  /* 124~134 BPM 에 신스 리드 */
+  /* 같은 골격인데 베이스가 사람 손이 아니라 시퀀서다 */
+  'Euro Disco'              :['dis_aabb','edm_abab','edm_aaab'],
+  /* 120~140 에 맥동하는 옥타브 시퀀스 */
   'Hi-NRG'                  :['chip_aabb','chip_abab','chip_aaab'],
+  /* 같은 장비인데 리듬이 아니라 노래가 앞에 선다 */
   'Italo Disco'             :['chip_aabb','chip_abab','chip_aaab'],
-  /* 스윙 30 에 혼과 피아노 */
+  /* 12마디 블루스와 부기 — 계열의 뿌리 */
   'Rhythm & Blues'          :['blues_abab','blues_aaba','root_aaba'],
   /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
      32종 → 18무리.
@@ -1842,48 +1847,35 @@ const RIFF_KIT_PRESET = {
   'Emo Rap'                 :['arp_folk','rock_drive'],
   'SoundCloud Rap'          :['arp_folk','rock_drive'],
   'Brazilian Phonk'         :['latin_montuno','edm_arp'],
-  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
-     24종 → 16무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 클라비넷 16분에 슬랩 */
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10 → 2026-09-18 대표곡 교정
+     24종 → 21무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/04-rnb-soul-funk.md «대표곡» 표). 곡의 리프을 옮기지 않고 성질만 맞췄다. */
+  /* 문서가 이 주법을 아예 «the chank or chicken scratch» 라고 부른다 */
   'Funk'                    :['funk_cut','funk_call'],
   'JB Funk'                 :['funk_cut','funk_call'],
-  /* 현이 옥타브로 오르내린다 */
   'Disco Funk'              :['funk_cut','funk_groove'],
-  'Post-disco'              :['funk_cut','funk_groove'],
-  /* 보코더와 무그가 앞에 선다 */
-  'P-Funk'                  :['funk_groove','edm_arp'],
-  'Electro-funk'            :['funk_groove','edm_arp'],
-  /* 슬랩에 트럼펫과 EP */
+  'Post-disco'              :['funk_cut','edm_arp'],
+  'P-Funk'                  :['funk_groove','funk_cut'],
+  /* 기타가 없는 갈래 — 신스 아르페지오가 그 자리다 */
+  'Electro-funk'            :['edm_arp','edm_alt'],
   'Jazz-Funk'               :['jazz_gtr_comp','funk_groove'],
-  /* 디스코가 신스로 넘어간 자리 */
   'Boogie'                  :['funk_cut','edm_arp'],
-  /* 스윙 34 에 신스 브라스 */
   'New Jack Swing'          :['funk_cut','edm_alt'],
-  /* 72~75 BPM */
+  /* 대표곡 5곡 중 4곡이 기타 연주자를 이름째로 적는다 */
   'Quiet Storm'             :['arp_folk','jazz_gtr_comp'],
-  'Alternative R&B'         :['arp_folk','jazz_gtr_comp'],
-  /* 스윙 30 에 EP 9화음 */
+  'Alternative R&B'         :['arp_folk','edm_arp'],
   '90s R&B'                 :['soul_prog','soul_chank'],
   'Hip Hop Soul'            :['soul_prog','soul_chank'],
-  /* 808 에 R&B 보컬 */
   'Trap Soul'               :['edm_arp','edm_alt'],
-  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
   'Motown'                  :['soul_chank','funk_cut'],
   'Northern Soul'           :['soul_chank','funk_cut'],
-  /* 현과 하프의 스위트 사운드 */
   'Philadelphia Soul'       :['soul_prog','arp_folk'],
-  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
   'Memphis Soul'            :['soul_chank','funk_cut'],
-  /* 와우 기타와 오르간 */
   'Psychedelic Soul'        :['funk_groove','funk_cut'],
-  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
   'Disco'                   :['funk_cut','funk_groove'],
-  'Euro Disco'              :['funk_cut','funk_groove'],
-  /* 124~134 BPM 에 신스 리드 */
+  'Euro Disco'              :['edm_arp','funk_cut'],
   'Hi-NRG'                  :['edm_arp','edm_alt'],
   'Italo Disco'             :['edm_arp','edm_alt'],
-  /* 스윙 30 에 혼과 피아노 */
   'Rhythm & Blues'          :['rock_drive','jazz_gtr_swing'],
   /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
      32종 → 18무리.
@@ -2518,48 +2510,39 @@ const BLINE_KIT_PRESET = {
   'Emo Rap'                 :['b808_aaba','brock_aabb'],
   'SoundCloud Rap'          :['b808_aaba','brock_aabb'],
   'Brazilian Phonk'         :['blat_abab','b808_aaab'],
-  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10
-     24종 → 16무리.
-     근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
-  /* 클라비넷 16분에 슬랩 */
+  /* D. R&B · Soul · Funk (계열 D) — 2026-09-15 배치 A10 → 2026-09-18 대표곡 교정
+     24종 → 21무리. 근거는 웹에서 실재·장르 분류를 확인한 대표곡이다
+     (genres/04-rnb-soul-funk.md «대표곡» 표). 곡의 베이스을 옮기지 않고 성질만 맞췄다. */
+  /* 슬랩/팝 — 발명자가 Sly 의 Larry Graham 이다 */
   'Funk'                    :['bfun_aabb','bfun_abab'],
+  /* JB 쪽은 핑거다(Bootsy·Catfish 형제의 리프) */
   'JB Funk'                 :['bfun_aabb','bfun_abab'],
-  /* 현이 옥타브로 오르내린다 */
   'Disco Funk'              :['bdis_aabb','bdis_abab'],
-  'Post-disco'              :['bdis_aabb','bdis_abab'],
-  /* 보코더와 무그가 앞에 선다 */
-  'P-Funk'                  :['bfun_abab','bhou_aaab'],
-  'Electro-funk'            :['bfun_abab','bhou_aaab'],
-  /* 슬랩에 트럼펫과 EP */
-  'Jazz-Funk'               :['bwal_abab','bfun_abab'],
-  /* 디스코가 신스로 넘어간 자리 */
+  'Post-disco'              :['bdis_abab','bfun_abab'],
+  /* 미니무그 세 대가 일렉 베이스를 대신했다 */
+  'P-Funk'                  :['bfun_abab','bfun_aaab'],
+  'Electro-funk'            :['bhou_aaab','b808_aaab'],
+  'Jazz-Funk'               :['bfun_abab','bwal_abab'],
   'Boogie'                  :['bdis_abab','bdis_aaab'],
-  /* 스윙 34 에 신스 브라스 */
   'New Jack Swing'          :['bfun_aaab','bhou_aabb'],
-  /* 72~75 BPM */
   'Quiet Storm'             :['breg_aaba','bwal_aaba'],
-  'Alternative R&B'         :['breg_aaba','bwal_aaba'],
-  /* 스윙 30 에 EP 9화음 */
+  /* 왜곡된 808 — 프리셋 안에서 kit 과 bcfg 가 어긋나 있던 자리 */
+  'Alternative R&B'         :['b808_aabb','breg_aaba'],
   '90s R&B'                 :['bfun_aabb','breg_aabb'],
   'Hip Hop Soul'            :['bfun_aabb','breg_aabb'],
-  /* 808 에 R&B 보컬 */
   'Trap Soul'               :['b808_aaba','b808_aabb'],
-  /* 125~130 BPM 의 빠른 백비트에 합창 훅 */
+  /* 제임스 제이머슨 — 반음 경과음과 고스트 노트 */
   'Motown'                  :['bfun_aabb','bwal_aabb'],
   'Northern Soul'           :['bfun_aabb','bwal_aabb'],
-  /* 현과 하프의 스위트 사운드 */
   'Philadelphia Soul'       :['bfun_abab','bdis_aabb'],
-  /* 혼 섹션이 거칠게 밀고 오르간이 받친다 */
   'Memphis Soul'            :['bfun_aabb','bcou_aabb'],
-  /* 와우 기타와 오르간 */
   'Psychedelic Soul'        :['bfun_abab','bfun_aaab'],
-  /* 현이 옥타브로 오르내리고 베이스가 근음과 옥타브를 왕복한다 */
+  /* broken octaves — 베이스 «기타» 로 친다 */
   'Disco'                   :['bdis_aabb','bdis_abab'],
-  'Euro Disco'              :['bdis_aabb','bdis_abab'],
-  /* 124~134 BPM 에 신스 리드 */
+  /* 시퀀서가 친다 — 좌우 딜레이로 벌린 16분 루프 */
+  'Euro Disco'              :['bdis_abab','bhou_aaab'],
   'Hi-NRG'                  :['bdis_abab','bhou_aaab'],
   'Italo Disco'             :['bdis_abab','bhou_aaab'],
-  /* 스윙 30 에 혼과 피아노 */
   'Rhythm & Blues'          :['bwal_aabb','bcou_aabb'],
   /* F. Jazz · Roots · Regional (계열 F·G·K) — 2026-09-15 배치 A11
      32종 → 18무리.
