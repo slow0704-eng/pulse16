@@ -341,7 +341,7 @@ Object.assign(RAW, {
   kick:'X-x---x-X-----x-',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'------x-------x-',tom:'------------x-x-',
   bass:'0-0-0-0-0-0-3-2-',
-  keys:'0---------------',gtr:'0-------4-------'},
+  keys:'0---------------',keys2:'0---------------',gtr:'0-------4-------'},
 'Krautrock':{bpm:110,swing:0,cat:'A',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'synth',
        keys:'organ',keys2:'ep',gtr:'crunch',gtr2:'phase',bass:'finger',chord:'triad'},

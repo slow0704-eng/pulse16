@@ -179,7 +179,11 @@ Object.assign(RAW, {
   keys:'acegacegdfacdfac',gtr:'----------------'},
 'Plugg':{bpm:140,swing:0,cat:'C',gen:1,
   kit:{kick:'tight',snare:'crack',clap:'hall',chat:'tick',ohat:'tick',tom:'analog',
-       keys:'marimba',keys2:'pad',gtr:'clean',gtr2:'clean',bass:'s808',chord:'nine',off:['gtr']},
+  /* 조사가 「lush chords, **xylophone tones**」를 인용하고 이 프리셋의 얼굴을
+     «실로폰 음색» 이라고 적었다(genres/03-hiphop.md · patterns/03-hiphop.md).
+     그때는 실로폰이 없다고 보고 marimba 로 대신했는데(「실로폰 자리」),
+     xylophone 엔진이 ENGINES.keys 에 등록돼 있다 — 조사한 악기를 그대로 쓴다. */
+       keys:'xylophone',keys2:'pad',gtr:'clean',gtr2:'clean',bass:'s808',chord:'nine',off:['gtr']},
   tune:{kick:-4,snare:0,tom:-2,hat:0},
   lvl:{keys:0.44,bass:0.82},
   bcfg:{eng:'s808',oct:24,semi:0,gate:700,glide:0,blend:18,drive:32,xover:78,tone:2500,
@@ -262,7 +266,7 @@ Object.assign(RAW, {
   kick:'X-------X-------',snare:'--------X-------',clap:'--------x-------',
   chat:'x-xx--x-x-xx--x-',ohat:'----------------',tom:'----------------',
   bass:'0---------------',
-  keys:'0---------------',gtr:'----------------'},
+  keys:'0---------------',keys2:'0---------------',gtr:'----------------'},
 'Emo Rap':{bpm:155,swing:0,cat:'C',gen:1,
   kit:{kick:'tight',snare:'crack',clap:'spread',chat:'tick',ohat:'tick',tom:'analog',
        keys:'pad',keys2:'strings',gtr:'crunch',gtr2:'clean',bass:'s808',chord:'sev'},
@@ -313,7 +317,7 @@ Object.assign(RAW, {
   kick:'X-------X---x---',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'----------------',tom:'----------------',perc:'--x---x---x---x-',
   bass:'0-------5---3---',
-  keys:'0---0-----5---5-',gtr:'----------------'},
+  keys:'0---0-----5---5-',keys2:'0---------------',gtr:'----------------'},
 'Horrorcore':{bpm:90,swing:30,cat:'C',gen:1,
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',perc:'shaker',
        keys:'piano',keys2:'tremstr',gtr:'clean',gtr2:'clean',bass:'sub',chord:'sev'},
@@ -440,7 +444,7 @@ Object.assign(RAW, {
   kick:'X--x--x-X---x---',snare:'----X-------X---',clap:'----------------',
   chat:'x-x-x-x-x-x-x-x-',ohat:'--------------x-',tom:'----------------',
   bass:'0--0--0-5---3---',
-  keys:'0-------4-------',gtr:'----------------'},
+  keys:'0-------4-------',keys2:'0---------------',gtr:'----------------'},
 'Road Rap':{bpm:93,swing:0,cat:'C',gen:1,
   kit:{kick:'tight',snare:'crack',clap:'spread',chat:'tick',ohat:'tick',tom:'analog',
        keys:'pad',keys2:'strings',gtr:'clean',gtr2:'clean',bass:'sub',chord:'triad'},
@@ -450,6 +454,6 @@ Object.assign(RAW, {
   kick:'X-----x-X-------',snare:'--------X-------',clap:'--------x-------',
   chat:'x---x-x-x---x-x-',ohat:'----------------',tom:'----------------',
   bass:'0-----5---3-----',
-  keys:'0-------2-------',gtr:'----------------'},
+  keys:'0-------2-------',keys2:'0---------------',gtr:'----------------'},
 
 });

@@ -56,6 +56,12 @@ jobs:
       - name: 곡 형식 · 선율 격자 검사
         run: node tools/ci/check-song-length.mjs
 
+      # 엔진 이름을 잘못 적으면 예외도 안 나고 소리도 난다 — 다만 그 장르의
+      # 소리가 아니라 기본값이 난다(voice-keys.js 의 KENG[name]||KENG.pad).
+      # 2026-09-18 에 열한 건이 이 상태였다.
+      - name: kit 엔진 이름 검사
+        run: node tools/ci/check-kit-engines.mjs
+
       # src/data/billboard.js · profiles.js · references.js 는 생성물이다. 원본(billboard/*.md ·
       # genres/profiles/*.json · genres/*.md)을 고치고 다시 만들지 않으면 화면이 낡은 것을 보여 준다.
       - name: 생성물이 원본과 일치하는가

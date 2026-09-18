@@ -231,7 +231,10 @@ Object.assign(RAW, {
   keys:'0---0---3---3---',keys2:'0-------4-------',gtr:'--0---0---0---0-'},
 'Soft Rock':{bpm:110,swing:0,cat:'B',gen:1,
   kit:{kick:'wood',snare:'tight',clap:'spread',chat:'noise',ohat:'noise',tom:'conga',
-       keys:'ep',keys2:'piano',gtr:'strum',gtr2:'twelve',bass:'flatwound',chord:'sev'},
+  /* 조사가 「세 곡 모두 전자피아노(Wurlitzer·Rhodes)」라고 적는다
+     (genres/02-pop.md). ep 는 Rhodes 쪽이고 wurli 는 Wurlitzer 쪽이다 —
+     둘 다 등록돼 있으므로 1번에 Wurlitzer, 2번에 피아노를 둔다. */
+       keys:'wurli',keys2:'piano',gtr:'strum',gtr2:'twelve',bass:'flatwound',chord:'sev'},
   tune:{kick:-2,snare:0,tom:-2,hat:0},
   lvl:{keys:0.56},
   bcfg:{eng:'sub',oct:24,semi:0,gate:120,glide:0,blend:40,drive:30,xover:120,tone:4000,

@@ -241,7 +241,11 @@ Object.assign(RAW, {
   bass:'0-0-0-0-5-5-3-3-',
   keys:'0---0---4---4---',keys2:'----0-------4---',gtr:'----0-------4---'},
 'Psychedelic Soul':{bpm:105,swing:0,cat:'D',gen:1,
-  kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',perc:'conga',
+  /* 콩가는 perc 가 아니라 tom 엔진이다 — 조사(genres/04-rnb-soul-funk.md,
+     「Cloud Nine」의 타악은 콩가)가 perc:'conga' 로 적혀 있어 엔진 표에 없는
+     이름이 되었고 기본값으로 조용히 떨어졌다. 콩가를 tom 으로 옮겨 실제로
+     울리게 하고, perc 는 D 계열의 원래 값(탬버린)으로 되돌린다. */
+  kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'conga',perc:'tamb',
        keys:'organ',keys2:'strings',gtr:'wah',gtr2:'fuzz',bass:'flatwound',chord:'sev'},
   tune:{kick:-2,snare:0,tom:-2,hat:0},
   lvl:{keys:0.44,perc:0.38},
