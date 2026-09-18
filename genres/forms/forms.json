@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-17",
+  "date": "2026-09-18",
   "doc": "genres/00-form.md",
   "note": "곡 형식 — 섹션 배분과 총 마디. 왜 이 값인지는 genres/00-form.md 에 출처와 함께 있다. 곡·아티스트 이름은 여기 안 들어간다(genres/profiles/README.md §2).",
   "forms": {
@@ -7,7 +7,7 @@
       "label": "벌스·코러스",
       "cat": "band",
       "confidence": "medium",
-      "basis": "작곡 교육 자료 · 벌스 8~16 · 코러스 8~16 · 섹션은 2의 배수. 백과 출처는 마디 수를 말하지 않는다",
+      "basis": "작곡 교육 자료 · 벌스 8~16 · 코러스 8~16 · 섹션은 2의 배수. 백과 출처는 마디 수를 말하지 않는다. 총 64마디는 1960년대 단면이다 — Hot 100 1위 곡 실측에서 B:뿌리 68곡의 중앙값 2:42 와 −8% 로 맞는다. 1970년대 이후 분기는 popVerseChorus 로 간다(00-form.md §7)",
       "secs": [
         {
           "k": "intro",
@@ -48,7 +48,7 @@
       "label": "벌스·코러스 (브릿지 포함)",
       "cat": "band",
       "confidence": "medium",
-      "basis": "verseChorus 와 같은 근거. 브릿지를 둔 판 — 출처들이 bridge 를 표준 섹션으로 든다",
+      "basis": "verseChorus 와 같은 근거. 브릿지를 둔 판 — 출처들이 bridge 를 표준 섹션으로 든다. 64마디가 맞는 자리도 verseChorus 와 같다(1960년대 분기)",
       "secs": [
         {
           "k": "intro",
@@ -547,7 +547,7 @@
       "label": "디제이용 긴 인트로·아웃트로",
       "cat": "edm",
       "confidence": "medium",
-      "basis": "디스코 12인치 싱글이 클럽에 긴 인트로·아웃트로와 브레이크다운을 준 것이 이 형식의 기원. 포맷과 브레이크다운 둘 다 같은 리믹서의 것으로 기록된다",
+      "basis": "디스코 12인치 싱글이 클럽에 긴 인트로·아웃트로와 브레이크다운을 준 것이 이 형식의 기원. 포맷과 브레이크다운 둘 다 같은 리믹서의 것으로 기록된다 | 총 마디는 실측에서 왔다 — D:Disco 43곡 3:58(+4%) · E:House 계열 6곡 3:50(+6%). 위키백과 House music 이 「클럽용은 7~8분 12인치 믹스, 라디오용은 3분 30초 편집본」이라고 둘을 나란히 적는데, 차트에 오른 것은 편집본 쪽이고 이 앱의 다른 형식도 전부 싱글 길이에 맞춰져 있어 그쪽을 골랐다. 브레이크다운을 둘로 늘린 것이 늘어난 32마디다",
       "secs": [
         {
           "k": "intro",
@@ -555,6 +555,14 @@
         },
         {
           "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "break",
           "bars": 16
         },
         {
@@ -626,7 +634,7 @@
       "label": "라르고·몬투노",
       "cat": "world",
       "confidence": "high",
-      "basis": "위키백과 Salsa (musical structure) — 벌스 뒤에 몬투노가 오고 «몬투노가 시작되면 보통 곡이 끝날 때까지 이어진다». 벌스·코러스가 번갈지 않는다",
+      "basis": "위키백과 Salsa (musical structure) — 벌스 뒤에 몬투노가 오고 «몬투노가 시작되면 보통 곡이 끝날 때까지 이어진다». 벌스·코러스가 번갈지 않는다. 64마디는 그 «끝까지 이어지는» 몬투노에 32마디밖에 못 줬다 — 96마디로 하면 몬투노가 곡의 3분의 2다. 실측 표본은 두 곡뿐이라(H:푸에르토리코 · 도미니카 3:52) 길이 쪽 근거는 얇다",
       "secs": [
         {
           "k": "intro",
@@ -642,7 +650,7 @@
         },
         {
           "k": "chorus",
-          "bars": 32
+          "bars": 64
         }
       ],
       "rule": {
@@ -693,7 +701,7 @@
       "label": "룸바·세베네",
       "cat": "world",
       "confidence": "high",
-      "basis": "위키백과 Sebene · Soukous — 노래 구간에서 «천천히 쌓아 올려» 기타가 이끄는 세베네로 넘어가고 곡 끝까지 간다. largoMontuno 와 같은 두 부분 형식인데 앞이 더 길다",
+      "basis": "위키백과 Sebene · Soukous — 노래 구간에서 «천천히 쌓아 올려» 기타가 이끄는 세베네로 넘어가고 곡 끝까지 간다. largoMontuno 와 같은 두 부분 형식인데 앞이 더 길다. 길이는 매체가 남긴 기록에서 왔다 — 위키백과 Congolese rumba 가 「끊지 않고 길게 연주하던 악단이, 녹음기 바늘이 3분이면 디스크 중심에 닿는 제약에 부딪혔다」·「3분 포맷이 더 조인 구조를 강요했다」고 적는다. 3분조차 음악이 아니라 매체가 정한 값이고, Soukous 문서가 드는 대표곡은 8분이다. 64마디는 145 BPM 에 1분 46초라 그 제약보다도 짧았다",
       "secs": [
         {
           "k": "intro",
@@ -709,7 +717,7 @@
         },
         {
           "k": "chorus",
-          "bars": 24
+          "bars": 88
         }
       ],
       "rule": {
@@ -749,7 +757,7 @@
       "label": "그루브 유지",
       "cat": "loop",
       "confidence": "medium",
-      "basis": "아프로비트는 10~30분대에 긴 기악 구간 · 펑크는 한 코드 위를 곡 전체로 탄다 · 크라우트록은 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심». 섹션이 안 바뀌는 것이 형식이다. ⚠ 길이도 이 형식의 일부다 — 출처가 드는 곡이 아프로비트 10~30분 · 사이키델릭 록 앨범판 7분대다. 64마디는 125 BPM 에 2분 3초라 «붙잡을 그루브» 가 될 시간이 없었다. 192마디(64×3)로 늘려 110~142 BPM 에서 5분 24초~6분 59초가 된다",
+      "basis": "아프로비트는 10~30분대에 긴 기악 구간 · 펑크는 한 코드 위를 곡 전체로 탄다 · 크라우트록은 «8마디 16마디가 지나도 아무것도 안 변하는 것이 핵심». 섹션이 안 바뀌는 것이 형식이다. ⚠ 길이도 이 형식의 일부다 — 출처가 드는 곡이 아프로비트 10~30분 · 사이키델릭 록 앨범판 7분대다. 64마디는 125 BPM 에 2분 3초라 «붙잡을 그루브» 가 될 시간이 없었다. 192마디(64×3)로 늘려 110~142 BPM 에서 5분 24초~6분 59초가 된다. ⚠ 펑크는 이 길이를 안 쓴다 — 싱글로 차트에 오른 장르라 grooveHoldSingle(128마디)로 뺐다(00-form.md §7)",
       "secs": [
         {
           "k": "intro",
@@ -822,11 +830,19 @@
       "label": "16마디 벌스 · 8마디 훅",
       "cat": "loop",
       "confidence": "medium",
-      "basis": "제작 자료 — 벌스 16 · 훅 8 · 훅은 3~4회 반복 · 곡 전체 60~72마디. 예시가 68마디이고 64가 그 범위 한가운데다",
+      "basis": "제작 자료 — 벌스 16 · 훅 8 · 훅은 3~4회 반복. 벌스 셋 · 훅 셋으로 한 바퀴를 돈다. 실측 — C:뿌리 · 골든에이지 21곡 4:07(−5%) · West Coast 11곡 4:04(−8%). 같은 출처의 「곡 전체 60~72마디」와 갈리는 자리는 00-form.md §7 에 적었다",
       "secs": [
         {
           "k": "intro",
-          "bars": 4
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 8
         },
         {
           "k": "verse",
@@ -850,7 +866,7 @@
         },
         {
           "k": "outro",
-          "bars": 4
+          "bars": 8
         }
       ],
       "rule": {
@@ -878,7 +894,7 @@
       "label": "리딤 · 버전",
       "cat": "loop",
       "confidence": "low",
-      "basis": "출처가 섹션도 길이도 말하지 않는다. 리딤은 곡의 형식이 아니라 재사용되는 반주이고 그 위에 얹히는 것이 곡마다 다르다 — 근거가 얇다는 사실을 값으로 남긴다",
+      "basis": "출처가 섹션도 길이도 말하지 않는다. 리딤은 곡의 형식이 아니라 재사용되는 반주이고 그 위에 얹히는 것이 곡마다 다르다 — 근거가 얇다는 사실을 값으로 남긴다. 총 마디만 실측으로 옮겼다 — I:Dancehall 계보 16곡의 중앙값 3:46 에 96마디가 +2% 다. 확신도는 low 그대로다 — 늘어난 것은 총 마디뿐이고 섹션 배분의 근거는 여전히 없다",
       "secs": [
         {
           "k": "intro",
@@ -901,8 +917,16 @@
           "bars": 8
         },
         {
-          "k": "outro",
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
           "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 16
         }
       ],
       "arc": "unsourced"
@@ -1058,6 +1082,221 @@
           "bank": false
         }
       }
+    },
+    "popVerseChorus": {
+      "label": "벌스·코러스 (1970년대 이후 · 96마디)",
+      "cat": "band",
+      "confidence": "medium",
+      "basis": "verseChorus 와 같은 섹션 근거다. 달라지는 것은 총 마디뿐이고 그것은 실측에서 왔다 — billboard/hot100/ 의 1위 곡 979곡을 계열·분기별로 재니, 1970년대 이후 분기 16개에서 96마디의 곡 수 가중 평균 절대오차가 13.6% 로 가장 작다(64마디 35.6% · 128마디 28.9%). 섹션을 늘이지 않고 한 바퀴를 더 도는 쪽으로 늘렸다 — 출처가 못 박는 것은 섹션 길이이지 곡 길이가 아니다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 4
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "outro",
+          "bars": 4
+        }
+      ],
+      "arc": "build"
+    },
+    "popVerseChorusBridge": {
+      "label": "벌스·코러스 (브릿지 포함 · 96마디)",
+      "cat": "band",
+      "confidence": "medium",
+      "basis": "verseChorus 와 같은 섹션 근거다. 달라지는 것은 총 마디뿐이고 그것은 실측에서 왔다 — billboard/hot100/ 의 1위 곡 979곡을 계열·분기별로 재니, 1970년대 이후 분기 16개에서 96마디의 곡 수 가중 평균 절대오차가 13.6% 로 가장 작다(64마디 35.6% · 128마디 28.9%). 섹션을 늘이지 않고 한 바퀴를 더 도는 쪽으로 늘렸다 — 출처가 못 박는 것은 섹션 길이이지 곡 길이가 아니다. 브릿지를 둔 판 — verseChorusBridge 와 같은 이유로 둘을 함께 풀에 넣는다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 4
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 16
+        },
+        {
+          "k": "prechorus",
+          "bars": 4
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "bridge",
+          "bars": 8
+        },
+        {
+          "k": "chorus",
+          "bars": 8
+        },
+        {
+          "k": "outro",
+          "bars": 4
+        }
+      ],
+      "arc": "build"
+    },
+    "verse16hook8Half": {
+      "label": "16마디 벌스 · 8마디 훅 (하프타임 표기 · 128마디)",
+      "cat": "loop",
+      "confidence": "medium",
+      "basis": "verse16hook8 과 같은 형식인데 표기 템포가 두 배인 분기용이다. data/genres.json 이 이미 feltBpm 을 적고 있다 — Trap 140 → 체감 70 · Chicago Drill 138 → 69 · Crunk 150 → 75. 체감으로 16마디인 벌스가 표기로는 32마디다. 실측 — C:Southern 24곡 3:53(0%) · C:Trap 계열 43곡 3:19(+10%). 체감 마디로 세면 64마디라 출처의 「60~72마디」 안에 들어온다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 8
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "chorus",
+          "bars": 16
+        },
+        {
+          "k": "bridge",
+          "bars": 16
+        },
+        {
+          "k": "outro",
+          "bars": 8
+        }
+      ],
+      "rule": {
+        "_why": "verse16hook8 과 같은 규칙이다 — 형식이 같고 표기 템포만 두 배라 섹션 규칙이 갈릴 근거가 없다",
+        "chorus": {
+          "off": [
+            "tom"
+          ],
+          "lvl": {
+            "keys": 1.45,
+            "gtr": 1.3,
+            "keys2": 1.3,
+            "gtr2": 1.25,
+            "bass": 1.2,
+            "clap": 1.2,
+            "chat": 1.15
+          },
+          "fillOut": true,
+          "bank": true
+        }
+      },
+      "arc": "build"
+    },
+    "grooveHoldSingle": {
+      "label": "그루브 유지 (싱글 길이 · 128마디)",
+      "cat": "loop",
+      "confidence": "medium",
+      "basis": "grooveHold 와 같은 형식이고 길이만 다르다. 아프로비트의 그루브는 앨범 한 면에 살지만 펑크의 그루브는 싱글로 차트에 올랐다 — Hot 100 1위 곡이 44곡이고(Funk 3:55 · Disco Funk 5:06 · Post-disco 4:39 · Minneapolis Sound 4:00) 중앙값이 4:07 이다. 192마디는 112 BPM 에 6분 50초라 +66% 였다. 128마디면 4분 33초다. 벌스를 다섯에서 셋으로 줄인 것뿐이고 섹션 규칙은 그대로다",
+      "secs": [
+        {
+          "k": "intro",
+          "bars": 16
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "verse",
+          "bars": 32
+        },
+        {
+          "k": "outro",
+          "bars": 16
+        }
+      ],
+      "rule": {
+        "_why": "grooveHold 와 같은 규칙이다 — 형식이 같고 길이만 다르니 규칙이 갈릴 근거가 없다",
+        "intro": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "perc",
+            "clap"
+          ],
+          "lvl": {},
+          "fillOut": false,
+          "bank": false
+        },
+        "verse": {
+          "off": [
+            "keys2",
+            "gtr2"
+          ],
+          "lvl": {},
+          "fillOut": false,
+          "bank": false
+        },
+        "outro": {
+          "off": [
+            "keys2",
+            "gtr2",
+            "perc",
+            "clap"
+          ],
+          "lvl": {
+            "bass": 0.9
+          },
+          "fillOut": false,
+          "bank": false
+        }
+      },
+      "arc": "flat"
     }
   },
   "assignCat": {
@@ -1065,15 +1304,15 @@
       "rockVerseChorus"
     ],
     "B": [
-      "verseChorus",
-      "verseChorusBridge"
+      "popVerseChorus",
+      "popVerseChorusBridge"
     ],
     "C": [
       "verse16hook8"
     ],
     "D": [
-      "verseChorus",
-      "verseChorusBridge"
+      "popVerseChorus",
+      "popVerseChorusBridge"
     ],
     "E": [
       "buildDrop",
@@ -1083,24 +1322,24 @@
       "headSolos"
     ],
     "G": [
-      "verseChorus",
+      "popVerseChorus",
       "aaba32"
     ],
     "H": [
-      "verseChorus"
+      "popVerseChorus"
     ],
     "I": [
       "riddimVersion"
     ],
     "J": [
       "grooveHold",
-      "verseChorus"
+      "popVerseChorus"
     ],
     "K": [
-      "verseChorus"
+      "popVerseChorus"
     ],
     "X": [
-      "verseChorus"
+      "popVerseChorus"
     ]
   },
   "assignSub": {
@@ -1125,9 +1364,9 @@
     },
     "D:Funk": {
       "forms": [
-        "grooveHold"
+        "grooveHoldSingle"
       ],
-      "why": "한 코드 뱀프를 곡 전체로 탄다 — 관심이 화성이 아니라 리듬에 있다"
+      "why": "한 코드 뱀프를 곡 전체로 탄다 — 관심이 화성이 아니라 리듬에 있다. 길이는 아프로비트가 아니라 싱글 쪽이다(Hot 100 1위 44곡의 중앙값 4:07)"
     },
     "D:Disco": {
       "forms": [
@@ -1186,10 +1425,10 @@
     },
     "G:Country": {
       "forms": [
-        "verseChorus",
+        "popVerseChorus",
         "aaba32"
       ],
-      "why": "같은 시기 미국 대중가요 형식을 공유한다"
+      "why": "같은 시기 미국 대중가요 형식을 공유한다. 96마디로 올린 것은 실측이다 — Hot 100 1위 컨트리 35곡의 중앙값이 3:16 인데 64마디는 110 BPM 에서 −29% 였다"
     },
     "H:쿠바": {
       "forms": [
@@ -1200,9 +1439,9 @@
     "H:푸에르토리코 · 도미니카": {
       "forms": [
         "largoMontuno",
-        "verseChorus"
+        "popVerseChorus"
       ],
-      "why": "살사는 몬투노 형식이지만 메렝게·밤바는 확인하지 않았다 — 둘을 함께 둔다"
+      "why": "살사는 몬투노 형식이지만 메렝게·밤바는 확인하지 않았다 — 둘을 함께 둔다. 팝 쪽 판을 96마디로 올린 것은 이 분기 실측 2곡의 중앙값이 3:52 이기 때문이다"
     },
     "J:중앙아프리카": {
       "forms": [
@@ -1213,9 +1452,9 @@
     "J:서아프리카": {
       "forms": [
         "grooveHold",
-        "verseChorus"
+        "popVerseChorus"
       ],
-      "why": "아프로비트는 긴 기악 형식이고 현대 아프로비츠는 대중가요 형식이다 — 한 분기에 둘이 섞여 있다"
+      "why": "아프로비트는 긴 기악 형식이고 현대 아프로비츠는 대중가요 형식이다 — 한 분기에 둘이 섞여 있다. 저장소 자신의 조사도 「Afrobeat 곡 길이 10~20분 / Afrobeats 팝 구조 3~4분」이라 적는다(10-african.md)"
     },
     "J:House 계열": {
       "forms": [
@@ -1258,6 +1497,38 @@
         "rockVerseChorus"
       ],
       "why": "계열 A 의 Hot 100 1위 곡을 실측하니 95~138마디였다 — 64마디 폼은 절반이다. 기타 솔로 자리도 출처가 록에 대해 명시한다"
+    },
+    "B:뿌리": {
+      "forms": [
+        "verseChorus",
+        "verseChorusBridge"
+      ],
+      "why": "Hot 100 1위 곡 68곡(Traditional Pop · Girl Group · Brill Building …)의 중앙값이 2:42 다. 64마디가 103 BPM 에 2:28 로 −8% — 계열 B 에서 이 분기만 1960년대 단면이 그대로 맞는다"
+    },
+    "D:뿌리": {
+      "forms": [
+        "verseChorus",
+        "aaba32"
+      ],
+      "why": "두왑 · R&B 13곡의 중앙값이 2:29 다. 64마디는 130 BPM 에 −21% 이고 80마디(aaba32)가 −1% 다. 32마디 AABA 를 함께 두는 것은 위키백과가 그 형식을 1950~60년대에 자주 쓰였다고 명시하기 때문이다"
+    },
+    "C:Trap 계열": {
+      "forms": [
+        "verse16hook8Half"
+      ],
+      "why": "표기 템포가 체감의 두 배인 분기다(data/genres.json 의 feltBpm — Trap 140→70 · Drill 138→69 · Crunk 150→75). 같은 3분대 곡이 표기로는 두 배의 마디로 적힌다 — 실측도 그렇게 말한다(C:Southern 3:53 · C:Trap 계열 3:19)"
+    },
+    "C:Southern": {
+      "forms": [
+        "verse16hook8Half"
+      ],
+      "why": "표기 템포가 체감의 두 배인 분기다(data/genres.json 의 feltBpm — Trap 140→70 · Drill 138→69 · Crunk 150→75). 같은 3분대 곡이 표기로는 두 배의 마디로 적힌다 — 실측도 그렇게 말한다(C:Southern 3:53 · C:Trap 계열 3:19)"
+    },
+    "C:Drill": {
+      "forms": [
+        "verse16hook8Half"
+      ],
+      "why": "표기 템포가 체감의 두 배인 분기다(data/genres.json 의 feltBpm — Trap 140→70 · Drill 138→69 · Crunk 150→75). 같은 3분대 곡이 표기로는 두 배의 마디로 적힌다 — 실측도 그렇게 말한다(C:Southern 3:53 · C:Trap 계열 3:19)"
     }
   },
   "unresearched": [
