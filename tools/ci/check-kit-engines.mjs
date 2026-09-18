@@ -29,7 +29,10 @@ for (const f of ['src/core/config.js', 'src/core/scale.js', 'src/data/preset-ind
                  'src/data/pattern-codec.js', 'src/data/presets/_raw.js',
                  ...fs.readdirSync(ROOT + '/src/data/presets').filter(x => /^\d\d-/.test(x)).sort()
                     .map(x => 'src/data/presets/' + x),
-                 'src/data/presets/_build.js', 'src/data/harmony.js'])
+                 /* melody.js 는 harmony.js 의 compPoolFor() 가 melodyPoolFor() 를
+                    보기 때문에 필요하다 — 안 실으면 «건반 없음» 판정이 통째로
+                    빠져 검사만 다른 답을 낸다(실제로 한 번 그랬다). */
+                 'src/data/presets/_build.js', 'src/data/melody.js', 'src/data/harmony.js'])
   src += '\n' + strip(read(f));
 
 const P = new Function('window', 'console', src +
@@ -111,31 +114,32 @@ head('건반 컴핑 — 프리셋 패턴과 COMP 가 같은 것을 가리키는�
     if (!bySub.has(k)) bySub.set(k, []);
     bySub.get(k).push(n);
   }
-  const off = [];
-  let ok = 0, none = 0;
-  for (const [k, ns] of [...bySub.entries()].sort()) {
-    const freq = new Map();
+  /* 프리셋마다 잰다 — 분기 대표 하나로 보면 그 분기 안의 차이를 놓친다
+     (compPoolFor 는 프리셋 단위로도 갈릴 수 있다) */
+  let ok = 0, bad = 0;
+  const bySubBad = new Map();
+  for (const [k, ns] of bySub) {
     for (const n of ns) {
-      const r = rhythm(P.RAW[n]?.keys);
-      if (!r) continue;
-      freq.set(r, (freq.get(r) || 0) + 1);
+      const top = rhythm(P.RAW[n]?.keys);
+      if (top === null) continue;
+      const pool = P.compPoolFor(n) || [];
+      const rows = pool.flatMap(nm => (P.COMP[nm]?.rows || []).map(rhythm));
+      /* 둘 다 «건반 없음» 이면 그것도 일치다 — 패턴이 비었고 컴핑 풀도 비었다 */
+      const agree = (!pool.length && !/x/.test(top)) || rows.includes(top);
+      if (agree) { ok++; continue; }
+      bad++;
+      if (!bySubBad.has(k)) bySubBad.set(k, { n: 0, top, pool: pool.join('/'), rows: [...new Set(rows)] });
+      bySubBad.get(k).n++;
     }
-    if (!freq.size) { none++; continue; }
-    const top = [...freq.entries()].sort((a, b) => b[1] - a[1])[0][0];
-    /* pickComp() 는 풀에서 무작위로 고른다 — 풀 안의 **어느 것이든** 맞으면 일치다 */
-    const pool = P.compPoolFor(ns[0]) || [];
-    const rows = pool.flatMap(nm => (P.COMP[nm]?.rows || []).map(rhythm));
-    if (rows.includes(top)) ok++;
-    else off.push({ k, n: ns.length, top, pool: pool.join('/'), rows: [...new Set(rows)] });
   }
-  console.log(`${OK} 분기 ${ok}개가 두 표에서 같은 리듬을 가리킨다`
-    + ` · ${off.length}개가 어긋난다 · ${none}개는 건반을 안 쓴다`);
-  if (off.length) {
-    const big = off.sort((a, b) => b.n - a.n).slice(0, 6);
-    for (const o of big)
-      console.log(`   ${WARN} ${o.k.padEnd(26)} ${String(o.n).padStart(2)}종 · 패턴 ${o.top}`
-        + ` · COMP(${o.pool}) ${o.rows.join(' ')}`);
-    if (off.length > big.length) console.log(`   … 그 밖 ${off.length - big.length}개`);
+  console.log(`${OK} 프리셋 ${ok}종이 두 표에서 같은 리듬을 가리킨다 · ${bad}종이 어긋난다`
+    + ` (분기 ${bySubBad.size}개)`);
+  if (bySubBad.size) {
+    const big = [...bySubBad.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, 6);
+    for (const [k, o] of big)
+      console.log(`   ${WARN} ${k.padEnd(26)} ${String(o.n).padStart(2)}종 · 패턴 ${o.top}`
+        + ` · COMP(${o.pool || '빔'}) ${o.rows.join(' ')}`);
+    if (bySubBad.size > big.length) console.log(`   … 그 밖 분기 ${bySubBad.size - big.length}개`);
     console.log('   근거와 남은 목록은 patterns/00-harmony.md §5-3 · §5-8');
   }
 }

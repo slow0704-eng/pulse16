@@ -322,9 +322,30 @@ const COMP_KIT_CAT = {
   K:['balkan_brass','montuno'], X:['pop_pulse'],
 };
 
-/** 지금 걸린 프리셋에 어울리는 컴핑 리듬 이름 목록. progPoolFor() 와
-    같은 규칙 — 빈 배열을 주지 않는다. */
+/** 지금 걸린 프리셋에 어울리는 컴핑 리듬 이름 목록.
+
+    ⚠ 2026-09-18 — progPoolFor() 와 달리 **빈 배열을 줄 수 있다.**
+    컴핑은 keys2 에서 나오는데, 「화성 진행」을 켜면 **건반이 없어야 할 장르에
+    건반이 들어왔다.** patterns/00-harmony.md §2 가 「메탈에 건반이 없는 것은
+    의도입니다 — 기타 벽이 중역을 다 채우므로 건반을 넣으면 탁해집니다」라고
+    적는데, COMP_KIT 은 그 분기에 punk_quarter 를 주고 있었다.
+
+    다만 `kit.off` 에 `keys` 가 있다는 것만으로는 부족하다 — 쿠바 룸바 계열은
+    1번 건반을 끄고 **2번을 리드로 쓴다**(조사 roles.keys2 = choir-piano-horns).
+    그래서 세 곳이 모두 «이 장르엔 건반이 없다» 고 할 때만 비운다.
+
+      ① kit.off 에 keys 가 있다        ② keys2 패턴도 비어 있다
+      ③ 선율 라이브러리에도 풀이 없다 (melodyPoolFor 가 빈 배열)
+
+    지금 걸리는 것은 메탈·펑크 15종이다. 빈 배열을 주면 pickComp() 가 null 을
+    돌려주고 시퀀서는 원래의 keys2 가지로 떨어진다 — 그쪽도 비어 있으므로
+    결과는 «안 울림» 이고, 그것이 이 장르들의 편성이다. */
 function compPoolFor(name){
+  const L = LIB[name];
+  if(L && (L.kit.off || []).includes('keys')
+       && !L.keys2.some(v => v)
+       && typeof melodyPoolFor === 'function' && !(melodyPoolFor(name) || []).length)
+    return [];
   const sub = COMP_KIT[PRESET_SUB[name]];
   if(sub) return sub;
   return COMP_KIT_CAT[PRESET_CAT[name]] || ['pop_pulse'];

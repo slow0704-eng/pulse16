@@ -377,13 +377,6 @@ E:Dubstep · Bass Music  16종   E:Trance 계열  11종   E:Techno 계열 10종
 A:Metal                 13종   G:Country      10종   E:Downtempo   10종
 ```
 
-`A:Metal` 은 성격이 다릅니다 — 프리셋 패턴이 **비어 있는 것이 의도**인데
-(`kit.off` 에 `keys`, 「기타 벽이 중역을 다 채우므로 건반을 넣으면 탁해집니다」)
-`COMP_KIT` 은 `punk_quarter` 를 가리킵니다. 「화성 진행」을 켜면 **메탈에 없어야
-할 건반이 들어옵니다.** 고치려면 `compPoolFor()` 가 빈 풀을 돌려줄 수 있어야
-하는데(지금 주석은 「빈 배열을 주지 않는다」입니다) 그것은 계약을 바꾸는
-일이라 이번에는 손대지 않았습니다.
-
 **② `COMP` 20종은 여전히 기본 상태에서 안 울립니다.** 「화성 진행」을 켜야
 `keys2` 에서 나옵니다. 이 문서는 그 사실을 기록만 하고 기본값은 안 바꿨습니다 —
 켜고 끄는 것은 사용자의 선택이고, 기본값을 바꾸면 모든 프리셋의 소리가
@@ -398,3 +391,36 @@ A:Metal                 13종   G:Country      10종   E:Downtempo   10종
 `punk_quarter`·`gospel_swell`)만 씁니다. 그래서 재즈 아홉 종이 `jazz_comp` 를,
 라틴 서른아홉 종이 `montuno` 를, 카리브 스물셋이 `reggae_skank` 를 **한 번도
 안 씁니다** — 표에는 있는데 말입니다. 프로파일을 다시 돌릴 때 고칠 자리입니다.
+
+### 5-9. 「화성 진행」이 메탈에 건반을 넣고 있었습니다
+
+위 목록에서 `A:Metal` 은 성격이 달랐습니다 — 프리셋 패턴이 **비어 있는 것이
+의도**인데(`kit.off` 에 `keys`, §2 「기타 벽이 중역을 다 채우므로 건반을 넣으면
+탁해집니다」) `COMP_KIT` 은 `punk_quarter` 를 가리켰습니다. 컴핑은 `keys2` 에서
+나오므로 **「화성 진행」을 켜면 그 장르에 없어야 할 건반이 들어왔습니다.**
+
+`compPoolFor()` 가 **빈 배열을 줄 수 있게** 했습니다. 빈 풀이면 `pickComp()` 가
+`null` 을 돌려주고 시퀀서는 원래의 `keys2` 가지로 떨어지는데, 그쪽도 비어 있어
+결과가 «안 울림» 입니다 — 그것이 이 장르들의 편성입니다.
+
+**다만 `kit.off` 에 `keys` 가 있다는 것만으로는 부족합니다.** 쿠바 룸바 계열은
+1번 건반을 끄고 **2번을 리드로 씁니다**(조사 `roles.keys2` = `choir-piano-horns`,
+§5-6). 그래서 세 곳이 모두 «이 장르엔 건반이 없다» 고 할 때만 비웁니다.
+
+```
+① kit.off 에 keys 가 있다   ② keys2 패턴도 비어 있다   ③ 선율 풀도 비어 있다
+```
+
+걸리는 것은 **15종**입니다 — Punk · Death Metal · Doom · Hardcore Punk ·
+Heavy Metal · Thrash Metal · Stoner Rock · Metalcore · NWOBHM · Sludge ·
+Stoner · Punk Rock · Crust · D-beat · Powerviolence.
+
+같은 `A:Metal` 안에서도 **Nu Metal · Black Metal · Power Metal · Symphonic Metal
+넷은 그대로 컴핑을 받습니다.** 저장소 자신의 조사가 「이 셋은 대표곡에 건반이
+있어서 프리셋 단위 풀을 받았다」고 적은 자리이기 때문입니다.
+
+> 이 규칙은 `melodyPoolFor()` 를 봅니다. 검사기(`check-kit-engines.mjs`)에
+> `melody.js` 를 안 실었더니 판정이 통째로 빠져 **검사만 다른 답을 냈습니다** —
+> 한 번 겪고 고쳤습니다. 검사가 앱과 같은 파일을 같은 순서로 실어야 합니다.
+
+  두 표가 같은 것을 가리키는 프리셋 94종 → **109종** / 357종
