@@ -245,8 +245,12 @@ const COMP = {
   pop_pulse    :{label:'팝 8분 펄스',       cat:'B', rows:['X-x-X-x-X-x-X-x-']},
   ballad_pad   :{label:'발라드 온음표 패드', cat:'B', rows:['X---------------']},
 
-  /* ── C. Hip Hop ── */
+  /* ── C. Hip Hop ──
+     trap_pad 하나로 계열 C 를 다 덮고 있었는데, 붐뱁·웨스트코스트는 온음표 패드가
+     아니라 루프 위의 네 타점이다 — patterns/00-harmony.md 의 `hh_loop` 아키타입이
+     그것을 이미 적고 있었다(건반 `0---0-----3---3-`). 그 자리를 옮겨 온다. */
   trap_pad     :{label:'트랩 패드(랩 자리 비움)', cat:'C', rows:['X---------------']},
+  hh_loop      :{label:'힙합 루프 컴핑',          cat:'C', rows:['X---X-----X---X-']},
 
   /* ── D. R&B·Funk — funk_chank(patterns/00-harmony.md) 의 16분 자리를 그대로 옮김 ── */
   funk_16th_stab:{label:'펑크 16분 스탭',    cat:'D', rows:['--X-X---x-X-X---']},
@@ -266,6 +270,10 @@ const COMP = {
 
   /* ── H. Latin — montuno 는 마디마다 엇박이 미세하게 다르다(살사 특징) ── */
   montuno      :{label:'몬투노 엇박',      cat:'H', rows:['--x-x---x-x-----','--x-x---x-x---x-']},
+  /* 몬투노는 쿠바 계보의 것이다. 멕시코·콜롬비아까지 몬투노로 덮고 있었는데
+     patterns/00-harmony.md 는 그 둘을 `latin_strum`(정박 네 타점)으로 적는다.
+     리듬은 tango_marcato 와 같지만 이름이 가리키는 곳이 달라 따로 둔다. */
+  latin_strum  :{label:'라틴 정박 스트럼', cat:'H', rows:['X---X---X---X---']},
   bossa_comp   :{label:'보사노바 싱코페 컴핑', cat:'H', rows:['X--x--x-X--x--x-']},
   tango_marcato:{label:'탱고 마르카토',     cat:'H', rows:['X---X---X---X---']},
 
@@ -290,14 +298,19 @@ const COMP_KIT = {
   'House 계열':['house_offbeat'], 'Techno 계열':['techno_pulse'],
   'Trance 계열':['techno_pulse'], 'Breakbeat 계열':['breaks_stab'],
   'Trap 계열':['trap_pad'], 'Drill':['trap_pad'], 'Southern':['trap_pad'],
+  '뿌리 · 골든에이지':['hh_loop'], 'West Coast':['hh_loop'],
   'Lo-fi':['jazz_comp'],
   'Bebop 계보':['jazz_comp'], 'Latin Jazz':['montuno','bossa_comp'],
   'Fusion 계보':['jazz_comp'], '현대 갈래':['jazz_comp'],
   'Country':['country_strum'], 'Folk':['country_strum'], 'Blues':['country_strum'],
   'Reggae 갈래':['reggae_skank'], '자메이카':['reggae_skank'],
   'Dancehall 계보':['dancehall_stab'],
-  '쿠바':['montuno'], '브라질':['bossa_comp'], '멕시코':['montuno'],
-  '콜롬비아':['montuno'], '아르헨티나 · 남미 남부':['tango_marcato'],
+  '쿠바':['montuno'], '브라질':['bossa_comp'], '멕시코':['latin_strum'],
+  '콜롬비아':['latin_strum'], '아르헨티나 · 남미 남부':['tango_marcato'],
+  /* 아마피아노는 줄루어로 «피아노들» 이고 이 장르에서 건반이 주역이다.
+     8분 펄스가 아니라 하우스와 같은 엇박 스탭이다(patterns/00-harmony.md 의
+     `amapiano` 아키타입도 House 계열과 같은 자리를 쓴다). */
+  '남아프리카':['house_offbeat'],
   '서아프리카':['african_pulse'], '동아프리카':['african_pulse'],
 };
 const COMP_KIT_CAT = {

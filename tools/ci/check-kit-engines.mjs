@@ -29,11 +29,12 @@ for (const f of ['src/core/config.js', 'src/core/scale.js', 'src/data/preset-ind
                  'src/data/pattern-codec.js', 'src/data/presets/_raw.js',
                  ...fs.readdirSync(ROOT + '/src/data/presets').filter(x => /^\d\d-/.test(x)).sort()
                     .map(x => 'src/data/presets/' + x),
-                 'src/data/presets/_build.js'])
+                 'src/data/presets/_build.js', 'src/data/harmony.js'])
   src += '\n' + strip(read(f));
 
 const P = new Function('window', 'console', src +
-  '\n; return {RAW, LIB_NAMES, ENGINES};')({ Tone: undefined }, { warn() {}, log() {} });
+  '\n; return {RAW, LIB_NAMES, ENGINES, PRESET_SUB, PRESET_CAT, LIB, COMP, compPoolFor};')(
+  { Tone: undefined }, { warn() {}, log() {} });
 
 /* kit 칸 → 엔진 표. 2번 레이어는 1번과 같은 표를 쓴다. */
 const SLOT_FAMILY = {
@@ -92,6 +93,51 @@ for (const [slot, fam] of Object.entries(SLOT_FAMILY)) {
     .map(([k, c]) => `${k} ${c}`).join(' · ');
   console.log(`   ${slot.padEnd(6)} ${String(used.size).padStart(2)}종 / ${String(all).padStart(2)}종 등록`
     + `  — 가장 많은 것: ${top}`);
+}
+
+/* ── 건반 컴핑이 두 표에서 같은 것을 가리키는가 (보고만) ──
+   이 저장소에는 건반 컴핑 리듬을 적은 표가 둘이다(patterns/00-harmony.md §5-3).
+     · 아키타입 39종 — patterns/00-harmony.md §2. 프리셋 패턴으로 **구워져 있다**
+     · COMP 20종  — src/data/harmony.js. 「화성 진행」이 켜졌을 때 **런타임**에 돈다
+   둘이 어긋나면 버튼 하나로 건반 주법이 장르 밖으로 나간다. 실패시키지 않는다 —
+   어느 쪽이 맞는지는 자리마다 조사가 필요하고, 지금은 그 목록을 보이게만 한다. */
+head('건반 컴핑 — 프리셋 패턴과 COMP 가 같은 것을 가리키는가 (보고만)');
+{
+  const catFor = n => (P.LIB[n] && P.LIB[n].cat) || P.PRESET_CAT[n] || 'K';
+  const rhythm = s => (s ? s.split('').map(c => (c === '-' ? '-' : 'x')).join('') : null);
+  const bySub = new Map();
+  for (const n of P.LIB_NAMES) {
+    const k = catFor(n) + ':' + (P.PRESET_SUB[n] || '');
+    if (!bySub.has(k)) bySub.set(k, []);
+    bySub.get(k).push(n);
+  }
+  const off = [];
+  let ok = 0, none = 0;
+  for (const [k, ns] of [...bySub.entries()].sort()) {
+    const freq = new Map();
+    for (const n of ns) {
+      const r = rhythm(P.RAW[n]?.keys);
+      if (!r) continue;
+      freq.set(r, (freq.get(r) || 0) + 1);
+    }
+    if (!freq.size) { none++; continue; }
+    const top = [...freq.entries()].sort((a, b) => b[1] - a[1])[0][0];
+    /* pickComp() 는 풀에서 무작위로 고른다 — 풀 안의 **어느 것이든** 맞으면 일치다 */
+    const pool = P.compPoolFor(ns[0]) || [];
+    const rows = pool.flatMap(nm => (P.COMP[nm]?.rows || []).map(rhythm));
+    if (rows.includes(top)) ok++;
+    else off.push({ k, n: ns.length, top, pool: pool.join('/'), rows: [...new Set(rows)] });
+  }
+  console.log(`${OK} 분기 ${ok}개가 두 표에서 같은 리듬을 가리킨다`
+    + ` · ${off.length}개가 어긋난다 · ${none}개는 건반을 안 쓴다`);
+  if (off.length) {
+    const big = off.sort((a, b) => b.n - a.n).slice(0, 6);
+    for (const o of big)
+      console.log(`   ${WARN} ${o.k.padEnd(26)} ${String(o.n).padStart(2)}종 · 패턴 ${o.top}`
+        + ` · COMP(${o.pool}) ${o.rows.join(' ')}`);
+    if (off.length > big.length) console.log(`   … 그 밖 ${off.length - big.length}개`);
+    console.log('   근거와 남은 목록은 patterns/00-harmony.md §5-3 · §5-8');
+  }
 }
 
 console.log('');
