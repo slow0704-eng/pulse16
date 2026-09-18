@@ -244,6 +244,11 @@ const COMP = {
   /* ── B. Pop ── */
   pop_pulse    :{label:'팝 8분 펄스',       cat:'B', rows:['X-x-X-x-X-x-X-x-']},
   ballad_pad   :{label:'발라드 온음표 패드', cat:'B', rows:['X---------------']},
+  /* §2 B 의 `pop_chord`·`dance_stab`·`synth_arp` 가 COMP 에 없어서 팝 분기 열다섯이
+     전부 pop_pulse(8분)로 떨어지고 있었다. 세 리듬 다 §2 표에 이미 적혀 있다. */
+  pop_chord    :{label:'팝 4분 코드',       cat:'B', rows:['X---X---X---X---']},
+  dance_stab   :{label:'댄스팝 엇박 스탭',   cat:'B', rows:['--X---X---X---X-']},
+  synth_arp    :{label:'신스팝 16분 아르페지오', cat:'B', rows:['XxxxXxxxXxxxXxxx']},
 
   /* ── C. Hip Hop ──
      trap_pad 하나로 계열 C 를 다 덮고 있었는데, 붐뱁·웨스트코스트는 온음표 패드가
@@ -251,16 +256,31 @@ const COMP = {
      그것을 이미 적고 있었다(건반 `0---0-----3---3-`). 그 자리를 옮겨 온다. */
   trap_pad     :{label:'트랩 패드(랩 자리 비움)', cat:'C', rows:['X---------------']},
   hh_loop      :{label:'힙합 루프 컴핑',          cat:'C', rows:['X---X-----X---X-']},
+  /* §2 C 는 Southern·UK 를 `hh_sparse`(2타), Lo-fi 를 `lofi_ep` 로 적는데 둘 다
+     COMP 에 없어서 각각 trap_pad(1타)·jazz_comp 로 떨어지고 있었다. */
+  hh_sparse    :{label:'힙합 성긴 2타',           cat:'C', rows:['X-------X-------']},
+  lofi_ep      :{label:'로파이 EP 컴핑',          cat:'C', rows:['X-----X-X-----X-']},
 
   /* ── D. R&B·Funk — funk_chank(patterns/00-harmony.md) 의 16분 자리를 그대로 옮김 ── */
-  funk_16th_stab:{label:'펑크 16분 스탭',    cat:'D', rows:['--X-X---x-X-X---']},
+  /* §2 D 의 `funk_chank` 건반은 `--0-0---3-3-----` 인데 여기 옮겨 적을 때 스텝 12 에
+     타점이 하나 더 붙어 있었다. 프리셋 여덟 종은 전부 §2 쪽이다 — 표를 맞춘다. */
+  funk_16th_stab:{label:'펑크 16분 스탭',    cat:'D', rows:['--X-X---X-X-----']},
   gospel_swell  :{label:'가스펠 온비트 스웰', cat:'D', rows:['X---X---X---X---']},
   disco_stab    :{label:'디스코 오프비트 스탭', cat:'D', rows:['--X---X---X---X-']},
+  /* §2 D `njs_stab` — Contemporary R&B 여섯 종이 쓰는 리듬인데 COMP 에 없었다 */
+  njs_stab      :{label:'뉴잭스윙 스탭',      cat:'D', rows:['X-X-----X-X-----']},
 
   /* ── E. Electronic — house_skank 의 엇박 자리(patterns/00-harmony.md) ── */
   house_offbeat:{label:'하우스 오프비트 스탭', cat:'E', rows:['--x---x---x---x-']},
   techno_pulse :{label:'테크노 8분 펄스',      cat:'E', rows:['x-x-x-x-x-x-x-x-']},
   breaks_stab  :{label:'브레이크비트 스탭',    cat:'E', rows:['X---X-----X---X-']},
+  /* §2 E 는 Techno·Hardcore 를 `techno_stab`, Trance 를 `trance_arp`,
+     Dubstep 을 `bass_music` 으로 적는데 셋 다 COMP 에 없었다. 그래서 테크노는
+     8분 펄스로, 트랜스는 아르페지오 대신 8분으로, 덥스텝은 계열 기본 셋으로
+     떨어지고 있었다. `techno_pulse` 는 §2 에 대응하는 아키타입이 없다. */
+  techno_stab  :{label:'테크노 엇박 스탭',     cat:'E', rows:['--X-------X-----']},
+  trance_arp   :{label:'트랜스 16분 아르페지오', cat:'E', rows:['XxxxXxxxXxxxXxxx']},
+  bass_music   :{label:'베이스뮤직 2타',       cat:'E', rows:['X-------X-------']},
 
   /* ── F. Jazz — jazz_comp 의 불규칙 자리(patterns/00-harmony.md) ── */
   jazz_comp    :{label:'재즈 컴핑(불규칙 스탭)', cat:'F', rows:['--x----x--X---x-']},
@@ -269,7 +289,9 @@ const COMP = {
   country_strum:{label:'컨트리 스트럼',        cat:'G', rows:['X-x-X-x-X-x-X-x-']},
 
   /* ── H. Latin — montuno 는 마디마다 엇박이 미세하게 다르다(살사 특징) ── */
-  montuno      :{label:'몬투노 엇박',      cat:'H', rows:['--x-x---x-x-----','--x-x---x-x---x-']},
+  /* §2 H `montuno` 건반은 `--0-0---0-0-3---` 이다. 두 행 모두 그 자리와 어긋나
+     있어서 쿠바 10종·푸에르토리코 6종이 한 번도 안 맞았다 — 첫 행을 §2 에 맞춘다. */
+  montuno      :{label:'몬투노 엇박',      cat:'H', rows:['--X-X---X-X-X---','--x-x---x-x---x-']},
   /* 몬투노는 쿠바 계보의 것이다. 멕시코·콜롬비아까지 몬투노로 덮고 있었는데
      patterns/00-harmony.md 는 그 둘을 `latin_strum`(정박 네 타점)으로 적는다.
      리듬은 tango_marcato 와 같지만 이름이 가리키는 곳이 달라 따로 둔다. */
@@ -279,7 +301,11 @@ const COMP = {
 
   /* ── I. Caribbean — reggae_skank 의 뒷박(patterns/00-harmony.md) ── */
   reggae_skank :{label:'레게 뒷박 스캥크',   cat:'I', rows:['--X---X---X---X-']},
-  dancehall_stab:{label:'댄스홀 싱코페 스탭', cat:'I', rows:['--X---X--X----X-']},
+  /* §2 I `dancehall` 건반은 `--0---0---3---3-` 로 스캥크와 같은 자리다. 여기 적힌
+     싱코페 행은 §2 에 없는 값이었고 댄스홀 6종이 전부 어긋나 있었다. */
+  dancehall_stab:{label:'댄스홀 뒷박 스탭',   cat:'I', rows:['--X---X---X---X-']},
+  /* §2 I `soca` — 트리니다드·프랑스어권 카리브 9종이 쓰는데 COMP 에 없었다 */
+  soca_stab    :{label:'소카 엇박 3연타',     cat:'I', rows:['--X-X-X---X-X-X-']},
 
   /* ── J. African ── */
   african_pulse:{label:'아프리칸 8분 펄스', cat:'J', rows:['x-x-x-x-x-x-x-x-']},
@@ -293,13 +319,29 @@ const COMP_KIT = {
   'Hard Rock':['rock_8th'], 'Alternative':['rock_8th'],
   'Punk':['punk_quarter'], 'Metal':['punk_quarter'],
   'Funk':['funk_16th_stab'], 'Disco':['disco_stab'], 'Soul':['gospel_swell'],
-  'Contemporary R&B':['funk_16th_stab','gospel_swell'],
+  /* §2 D 표가 `njs_stab` 의 «쓰이는 곳» 을 이 분기로 적는다. 여섯 종이 전부
+     `0-0-----3-3-----` 인데 펑크 16분·가스펠 4분을 가리키고 있었다. */
+  'Contemporary R&B':['njs_stab'],
   'Gospel · 지역 장르':['gospel_swell'],
-  'House 계열':['house_offbeat'], 'Techno 계열':['techno_pulse'],
-  'Trance 계열':['techno_pulse'], 'Breakbeat 계열':['breaks_stab'],
-  'Trap 계열':['trap_pad'], 'Drill':['trap_pad'], 'Southern':['trap_pad'],
+  'House 계열':['house_offbeat'], 'Techno 계열':['techno_stab'],
+  'Trance 계열':['trance_arp'], 'Breakbeat 계열':['breaks_stab'],
+  'Hardcore 계열':['techno_stab'], 'Dubstep · Bass Music':['bass_music'],
+  'Downtempo · Ambient · Retro':['ballad_pad'],
+  'Trap 계열':['trap_pad'], 'Drill':['trap_pad'], 'Southern':['hh_sparse'],
+  'UK 계열':['hh_sparse'],
   '뿌리 · 골든에이지':['hh_loop'], 'West Coast':['hh_loop'],
-  'Lo-fi':['jazz_comp'],
+  'Lo-fi':['lofi_ep'],
+  /* §2 B 가 적어 둔 세 리듬을 쓰는 분기들 — 전까지 전부 pop_pulse 로 떨어졌다.
+     ⚠ `'뿌리'` 는 일부러 안 넣는다. COMP_KIT 은 분기 «이름» 만 보고 계열을 안 보는데
+     이 이름을 A(Rock & Roll·Surf Rock)·B(Traditional Pop·Brill Building)·
+     D(Rhythm & Blues) 셋이 공유한다. B 를 맞추려다 A 의 건반 주법까지 바꾸게 되고,
+     록은 §5-8 ⓪ 이 「바깥 출처를 못 찾아 열어 둔다」고 적은 자리다. */
+  '지역 팝':['pop_chord'], '동아시아':['pop_chord'],
+  '남아시아':['pop_chord'], '서아시아 · 지중해':['pop_chord'],
+  'Teen Pop · Indie Pop':['pop_chord'],
+  'Dance-pop 계보':['dance_stab'], 'Synth-pop 계보':['synth_arp'],
+  '푸에르토리코 · 도미니카':['montuno'],
+  '트리니다드 · 바베이도스':['soca_stab'], '프랑스어권 카리브':['soca_stab'],
   'Bebop 계보':['jazz_comp'], 'Latin Jazz':['montuno','bossa_comp'],
   'Fusion 계보':['jazz_comp'], '현대 갈래':['jazz_comp'],
   'Country':['country_strum'], 'Folk':['country_strum'], 'Blues':['country_strum'],
