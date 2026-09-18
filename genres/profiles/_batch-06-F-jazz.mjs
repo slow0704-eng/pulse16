@@ -6,7 +6,10 @@ export const batch = 'A11';
 export const sub = 'Jazz · Roots · Regional (계열 F·G·K)';
 export const cat = 'F';
 export const date = '2026-09-15';
-export const verdict = '32종 → 18무리. 재즈 9 · 루츠 21 · 기타 지역 2 를 한 배치로 돌렸다.';
+export const verdict = '32종 → 22무리. 재즈 9 · 루츠 21 · 기타 지역 2 를 한 배치로 돌렸다. '
+  + '2026-09-19 에 West Coast Jazz 를 «Bebop 계보» 에서 빼 `coolwest` 로 갈랐다 — '
+  + '출처가 쿨 재즈를 「a reaction to bop」으로 적는다. '
+  + '덧붙여 이 줄의 «18무리» 는 처음부터 틀린 수였다(실제 21). _gen 이 세어 준 값으로 바로잡는다.';
 
 export const CAT = {
   'Chicago Blues':'G','Texas Blues':'G','Jump Blues':'G','Blues Rock':'G','Country Blues':'G','Electric Blues':'G',
@@ -16,7 +19,7 @@ export const CAT = {
   'Bhangra':'K','Global Bass':'K',
 };
 export const SUB = {
-  'Jazz Fusion':'Fusion 계보','Soul Jazz':'Bebop 계보','West Coast Jazz':'Bebop 계보',
+  'Jazz Fusion':'Fusion 계보','Soul Jazz':'Bebop 계보','West Coast Jazz':'Cool · West Coast',
   'Smooth Jazz':'현대 갈래','Acid Jazz':'현대 갈래',
   'Latin Jazz':'Latin Jazz','Afro-Cuban Jazz':'Latin Jazz','Bossa Jazz':'Latin Jazz','Samba Jazz':'Latin Jazz',
   'Chicago Blues':'Blues','Texas Blues':'Blues','Jump Blues':'Blues','Blues Rock':'Blues',
@@ -33,14 +36,29 @@ const B = (role, gate, kick, oct = false, glide = 'none') => ({ role, oct, gate,
 export const groups = {
   /* ── F. 재즈 9종 ── */
   bebop: {
-    anchor: 'West Coast Jazz', members: ['West Coast Jazz', 'Soul Jazz'],
+    anchor: 'Soul Jazz', members: ['Soul Jazz'],
     mel: { density: [5, 7], leap: [0.20, 0.45], contour: 'zigzag', range: [4, 6], degrees: [0, 2, 4, 5, 6], rhythm: 'triplet-feel', repetition: 'low', voicing: 'single' },
     bass: B('walking', 'mid', 'free'), lead: 'keys',
-    roles: { keys: 'piano-organ', keys2: 'clarinet-sax', gtr: 'comp', gtr2: 'none' },
+    roles: { keys: 'organ', keys2: 'sax', gtr: 'comp', gtr2: 'none' },
     chordType: 'nine', comping: 'ballad_pad',
     pool: ['jazz_abab', 'jazz_aaba', 'jazz_aabb'], riff: ['jazz_gtr_swing', 'jazz_gtr_comp'], bline: ['bwal_abab', 'bwal_aaba'],
-    ev: '1950년대 미국 · 11곡', conf: 'high',
-    why: '워킹 베이스에 스윙. 방향을 계속 바꾸므로 반복이 가장 약하다 — 재즈의 기본형이다',
+    ev: '1950~1960년대 미국 · 6곡', conf: 'high',
+    why: '**비밥 계보가 맞다** — 출처가 사슬로 잇는다: 「**Hard bop is a subgenre of jazz that is an extension of bebop.**」이고 「Soul jazz … **incorporates strong influences from hard bop**」이다. 소리의 정체는 오르간이다 — 「often characterized by **organ trios featuring the Hammond organs** and small combos」. 워킹 베이스도 이 갈래만 근거가 있다(Jimmy Smith 가 「walking bass lines on the **bass pedals**」). 전까지 이 무리에 West Coast Jazz 가 함께 있었는데, 그쪽은 방향이 반대라 갈랐다',
+  },
+  coolwest: {
+    anchor: 'West Coast Jazz', members: ['West Coast Jazz'],
+    /* 밀도는 형제(비밥)와 같은 [5,7] 이다. 무리를 가르면서 한 번 [3,5] 로 적었다가
+       P11 에 걸렸다 — 재료(jazz_*)의 실측이 6.25 인데 그보다 낮게 지어낸 값이었다.
+       출처가 말하는 「calmer」·「relaxed」·「relied relatively more on composition
+       and arrangement」는 다이내믹과 편곡에 대한 것이지 마디당 음 개수가 아니다.
+       성기다는 근거가 없으므로 수치를 지어내지 않고 재료 실측에 맞춘다. */
+    mel: { density: [5, 7], leap: [0.20, 0.45], contour: 'arch', range: [4, 6], degrees: [0, 2, 4, 5], rhythm: 'triplet-feel', repetition: 'mid', voicing: 'single' },
+    bass: B('walking', 'mid', 'free'), lead: 'keys',
+    roles: { keys: 'piano', keys2: 'none', gtr: 'comp', gtr2: 'none' },
+    chordType: 'nine', comping: 'ballad_pad',
+    pool: ['jazz_aaba', 'jazbal_aaba', 'jazz_aabb'], riff: ['jazz_gtr_swing', 'arp_swing'], bline: ['bwal_aaba', 'bwal_abab'],
+    ev: '1950년대 미국 서해안 · 5곡', conf: 'high',
+    why: '**비밥의 연장이 아니라 반작용이다** — 「West Coast jazz is often seen as a **subgenre of cool jazz**, which consisted of a calmer style **than bebop or hard bop**」이고 쿨 재즈 자체가 「**emerged as a reaction to bop**」이다. 그래서 Soul Jazz 와 한 무리에 둘 수 없다. 정의로 드는 것은 「relied relatively more on **composition and arrangement**」와 **피아노 없는 편성**이다 — 「formed an innovative and successful **piano-less quartet**」·「a rhythm section that **omitted the use of a piano, guitar, or any chordal instrument**」. 2번 건반은 **근거가 없는 층이다** — 프리셋에 적힌 `clarinet` 을 말하는 출처가 없고(있는 것은 프렌치 호른·튜바·첼로), 패턴이 비어 있어 **울리지도 않는다.** 소리에 영향이 없어 값은 그대로 두고 여기 적어만 둔다. 1번 건반의 피아노도 마찬가지로 두었다 — 출처가 특징으로 드는 것은 피아노 없는 편성이지만, 피아노가 있는 확인된 녹음도 있어 «틀렸다» 고 단정할 수 없다. 템포는 「moderate」·「relaxed」까지가 출처이고 **수치는 없다**',
   },
   fusion: {
     anchor: 'Jazz Fusion', members: ['Jazz Fusion'],
@@ -80,17 +98,17 @@ export const groups = {
     chordType: 'nine', comping: 'ballad_pad',
     pool: ['lat_aabb', 'lat_abab', 'latbos_aabb'], riff: ['latin_montuno', 'latin_montuno_alt'], bline: ['blat_aabb', 'bwal_abab'],
     ev: '1940년대 이후 미국·쿠바 · 11곡', conf: 'high',
-    why: '170~190 BPM 에 클라베. 재즈 화성 위에 몬투노가 돌아 형제 중 유일하게 라틴 어법이다',
+    why: '클라베가 골격이다 — 「It mixes **Afro-Cuban clave-based rhythms** with jazz harmonies」. 재즈 화성 위에 구아헤오(북미에서는 **몬투노**)가 돌아 형제 중 유일하게 쿠바 어법이다. 두 무리로 가른 것은 출처와 맞는다 — 「The **two main categories** are **Afro-Cuban jazz** … and **Afro-Brazilian jazz**, which includes samba and bossa nova」. ⚠ 전까지 적어 둔 「170~190 BPM」은 **출처가 없다**: 조사한 장르 문서 다섯(Latin jazz·Afro-Cuban jazz·Bossa nova·Samba-jazz·Samba) 중 BPM 수치를 적은 것이 하나도 없다. 기타도 마찬가지다 — Afro-Cuban jazz 의 악기 목록(피아노·콩가·트럼펫·트롬본·베이스·클라베·팀발레·봉고·색소폰·클라리넷)에 **기타가 없어** 껐다',
   },
   bossajazz: {
     anchor: 'Bossa Jazz', members: ['Bossa Jazz', 'Samba Jazz'],
     mel: { density: [1, 3], leap: [0.30, 0.55], contour: 'arch', range: [3, 5], degrees: [0, 2, 4], rhythm: 'offbeat', repetition: 'mid', voicing: 'single' },
     bass: B('walking', 'mid', 'offset'), lead: 'keys',
-    roles: { keys: 'piano', keys2: 'flute-trombone', gtr: 'nylon', gtr2: 'none' },
+    roles: { keys: 'piano', keys2: 'sax-trumpet', gtr: 'nylon', gtr2: 'none' },
     chordType: 'nine', comping: 'ballad_pad',
-    pool: ['bos_aabb', 'bos_aaba', 'bos_abab'], riff: ['latin_montuno_loop', 'arp_swing'], bline: ['bwal_aaba', 'blat_aaba'],
-    ev: '1960년대 이후 브라질 · 10곡', conf: 'high',
-    why: '나일론 기타에 긴 음. 라틴 재즈 형제보다 40~90 느리고 음이 절반 이하다',
+    pool: ['bos_aabb', 'bos_aaba', 'bos_abab'], riff: ['arp_swing', 'jazz_gtr_comp'], bline: ['bwal_aaba', 'blat_aaba'],
+    ev: '1960년대 이후 브라질 · 15곡', conf: 'high',
+    why: '나일론 기타가 정의다 — 「One of the major innovations of bossa nova was the way to **synthesize the rhythm of samba on the classical guitar**」이고 「**played with the fingers rather than with a pick**」이다. **쿠바 클라베를 복사해 두었던 것을 지웠다**: 출처는 보사 패턴이 손 클라베와 「**dissimilar in that the ‘two’ side of the clave is pushed by an eighth note**」라 하고, 만든 Jobim 본인은 「**merely a rhythmic motif and not a clave**」로 보았다. 대신 출처가 직접 말한 둘을 넣었다 — 「the **cabasa**, which plays a steady **sixteenth-note** pattern」과 「As in samba, the **surdo** plays an ostinato figure on the downbeat of beat one, the ‘ah’ of beat one, the downbeat of beat two and the ‘ah’ of beat two」. 삼바재즈와 갈리는 축도 템포가 아니라 세기다 — 「Unlike bossa nova … **the restraint of sound elements**, samba-jazz has many elements present in **improvising and stridency**」. ⚠ BPM 은 출처 없음(곡 악보 표기는 오히려 ♩=145·148 로 프리셋 130 보다 빠르다)',
   },
 
   /* ── G. 블루스 6종 ── */

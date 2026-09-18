@@ -1167,7 +1167,7 @@ const MELODY_KIT_PRESET = {
      32종 → 18무리.
      근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
   /* 워킹 베이스에 스윙 */
-  'West Coast Jazz'         :['jazz_abab','jazz_aaba','jazz_aabb'],
+  'West Coast Jazz'         :['jazz_aaba','jazbal_aaba','jazz_aabb'],
   'Soul Jazz'               :['jazz_abab','jazz_aaba','jazz_aabb'],
   /* 프렛리스에 13화음 */
   'Jazz Fusion'             :['jazz_aabb','jazbal_abab','jazz_abab'],
@@ -1881,7 +1881,7 @@ const RIFF_KIT_PRESET = {
      32종 → 18무리.
      근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
   /* 워킹 베이스에 스윙 */
-  'West Coast Jazz'         :['jazz_gtr_swing','jazz_gtr_comp'],
+  'West Coast Jazz'         :['jazz_gtr_swing','arp_swing'],
   'Soul Jazz'               :['jazz_gtr_swing','jazz_gtr_comp'],
   /* 프렛리스에 13화음 */
   'Jazz Fusion'             :['jazz_gtr_comp','funk_groove'],
@@ -1893,8 +1893,8 @@ const RIFF_KIT_PRESET = {
   'Latin Jazz'              :['latin_montuno','latin_montuno_alt'],
   'Afro-Cuban Jazz'         :['latin_montuno','latin_montuno_alt'],
   /* 나일론 기타에 긴 음 */
-  'Bossa Jazz'              :['latin_montuno_loop','arp_swing'],
-  'Samba Jazz'              :['latin_montuno_loop','arp_swing'],
+  'Bossa Jazz'              :['arp_swing','jazz_gtr_comp'],
+  'Samba Jazz'              :['arp_swing','jazz_gtr_comp'],
   /* 스윙 30~50 의 셔플에 하모니카·크런치 기타 */
   'Chicago Blues'           :['rock_power','arp_country'],
   'Electric Blues'          :['rock_power','arp_country'],

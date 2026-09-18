@@ -356,7 +356,7 @@ const PRESET_SUB = {
   "Vallenato":"콜롬비아",
   "Vaporwave":"Downtempo · Ambient · Retro",
   "Wave":"Dubstep · Bass Music",
-  "West Coast Jazz":"Bebop 계보",
+  "West Coast Jazz":"Cool · West Coast",
   "Zouk":"프랑스어권 카리브",
   "Zouk Love":"프랑스어권 카리브",
   "Zydeco / Cajun":"Gospel · 지역 장르",
@@ -555,6 +555,13 @@ const TONE_KIT = {
   /* ── F. Jazz — 업라이트가 기본입니다 ── */
   /* 재즈 기타는 아치탑 넥픽업 — 배음이 없는 것이 정체성입니다 */
   'Bebop 계보'             :{scale:'Dorian', chord:'nine', keys:'piano',   gtr:'jazzbox',bass:'upright',
+                            kick:'jazz',   snare:'brush',  chat:'foot',
+                            lvl:{keys:0.62,bass:0.78,gtr:0.40}},
+  /* 2026-09-19 — West Coast Jazz 를 «Bebop 계보» 에서 뺐습니다(출처가 쿨 재즈를
+     「a reaction to bop」으로 적습니다). 그 프리셋은 kit·bcfg·lvl 을 전부 직접
+     적고 있어 실제로 덮일 칸은 없지만, 하위분기가 이 표에 없으면 조용히 기본값으로
+     떨어지는 구조라 자리를 비워 두지 않습니다 — 값은 «Bebop 계보» 와 같습니다. */
+  'Cool · West Coast'      :{scale:'Dorian', chord:'nine', keys:'piano',   gtr:'jazzbox',bass:'upright',
                             kick:'jazz',   snare:'brush',  chat:'foot',
                             lvl:{keys:0.62,bass:0.78,gtr:0.40}},
   'Latin Jazz'             :{scale:'Dorian', chord:'nine', keys:'piano',   gtr:'nylon',  bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
