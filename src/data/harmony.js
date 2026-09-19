@@ -287,6 +287,12 @@ const COMP = {
 
   /* ── G. Roots ── */
   country_strum:{label:'컨트리 스트럼',        cat:'G', rows:['X-x-X-x-X-x-X-x-']},
+  /* 2026-09-19 — 컨트리 10종이 이 8분과 어긋나 있었다. patterns/00-harmony.md §5-5 가
+     2026-09-18 에 통키통크의 래그타임 서술(「선율·화성보다 리듬을 앞세운다」)을 근거로
+     컨트리 프리셋을 **4타**로 고치면서 COMP 쪽을 함께 옮기지 않은 자리다.
+     같은 country_strum 을 쓰는 블루스는 8분이 맞으므로(부기우기 「eight to the bar」)
+     그쪽은 그대로 두고 컨트리에만 4타를 준다. */
+  country_quarter:{label:'컨트리 4분 코드',     cat:'G', rows:['X---X---X---X---']},
 
   /* ── H. Latin — montuno 는 마디마다 엇박이 미세하게 다르다(살사 특징) ── */
   /* §2 H `montuno` 건반은 `--0-0---0-0-3---` 이다. 두 행 모두 그 자리와 어긋나
@@ -342,9 +348,17 @@ const COMP_KIT = {
   'Dance-pop 계보':['dance_stab'], 'Synth-pop 계보':['synth_arp'],
   '푸에르토리코 · 도미니카':['montuno'],
   '트리니다드 · 바베이도스':['soca_stab'], '프랑스어권 카리브':['soca_stab'],
-  'Bebop 계보':['jazz_comp'], 'Latin Jazz':['montuno','bossa_comp'],
+  'Bebop 계보':['jazz_comp'],
+  /* 2026-09-19 — West Coast Jazz 를 «Bebop 계보» 에서 갈라 `Cool · West Coast` 로
+     옮기면서 이 표에 새 이름을 등록하지 않아, 그 프리셋이 계열 기본값으로 떨어져
+     건반 리듬이 어긋나 있었다(두 표 일치 220종 → 219종). 값은 형제와 같다. */
+  'Cool · West Coast':['jazz_comp'], 'Latin Jazz':['montuno','bossa_comp'],
   'Fusion 계보':['jazz_comp'], '현대 갈래':['jazz_comp'],
-  'Country':['country_strum'], 'Folk':['country_strum'], 'Blues':['country_strum'],
+  /* 컨트리만 4타로 옮긴다(§5-5 가 프리셋을 그렇게 고쳤다). 블루스는 8분이 맞다 —
+     부기우기 「eight to the bar」. 포크는 **일부러 비워 둔다**: §5-8 이 `folk_strum` 의
+     건반 행을 「기타 행에서 근음만 남긴 값」이라 적어 열어 두었고, 2026-09-19 조사에서도
+     세 포크 장르 문서 모두 건반을 말하지 않음이 확인됐다 — 근거 없이 채우지 않는다. */
+  'Country':['country_quarter'], 'Folk':['country_strum'], 'Blues':['country_strum'],
   'Reggae 갈래':['reggae_skank'], '자메이카':['reggae_skank'],
   'Dancehall 계보':['dancehall_stab'],
   '쿠바':['montuno'], '브라질':['bossa_comp'], '멕시코':['latin_strum'],

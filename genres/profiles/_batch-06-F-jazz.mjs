@@ -120,7 +120,7 @@ export const groups = {
     chordType: 'sev', comping: 'rock_8th',
     pool: ['blues_aaba', 'blues_aabb', 'blues_abab'], riff: ['rock_power', 'arp_country'], bline: ['bcou_aabb', 'bwal_aabb'],
     ev: '1950년대 이후 미국 · 12곡', conf: 'high',
-    why: '스윙 30~50 의 셔플에 하모니카·크런치 기타. 12마디 형식이 뼈대다',
+    why: '하모니카와 크런치 기타 — 출처가 편성을 적는다: 「Chicago blues is based on the sound of the **solid-body electric guitar and the harmonica** … a heavy rhythm section of drums and bass (**double bass at first, and later electric bass guitar**) **with piano** depending on the song or performer」. ⚠ **세 문서(Chicago·Texas·Electric blues) 모두 리듬을 말하지 않는다** — 셔플·스윙·셋잇단·백비트가 전부 없다. 그래서 전까지 적어 둔 「스윙 30~50」은 **출처에 없는 차이**였고, 혼자 30 이던 Electric Blues 를 형제와 같은 50 으로 맞췄다. Texas 문서는 자신을 Chicago·Electric 과 **구분하는 문장조차 없다**. 명시되는 건반은 **피아노**이고 오르간은 「Keyboards … **later** became widely used」(Electric blues)라 시기가 다르다. BPM 은 세 문서 모두 **수치 없음**',
   },
   jumpblues: {
     anchor: 'Jump Blues', members: ['Jump Blues'],
@@ -234,7 +234,7 @@ export const groups = {
     chordType: 'nine', comping: 'gospel_swell',
     pool: ['gos_aabb', 'gos_aaba', 'gos_abab'], riff: ['soul_chank', 'soul_prog'], bline: ['bfun_aabb', 'bwal_aaba'],
     ev: '1950년대 이후 미국 · 11곡', conf: 'high',
-    why: '오르간 코드 스웰과 합창. 계열에서 유일하게 **3화음 표기가 몸**이다',
+    why: '오르간 코드 스웰과 합창 — 출처가 편성을 못 박는다: 「The **primary instruments are the B3 organ and the piano**」·「most Black churches relied on **hand-clapping and foot-stomping** as rhythmic accompaniment」(Black gospel music). ⚠ 전까지 여기에 「계열에서 유일하게 **3화음** 표기가 몸이다」라고 적어 두었는데 **출처와 반대**다 — 「Most harmony in Gospel music makes use of **chord extensions: usually up to an 11th**」. `voicing` 이 화음 표기인 것은 맞지만 그 이유가 «3화음이라서» 가 아니라 **오히려 확장 화음이라서**다. `chordType:"nine"` 조차 출처의 11th 에는 모자란다(값 목록을 확인하지 않아 이번에는 두었다). **피아노가 프리셋에 없는 것**도 남은 자리다 — 출처는 B3 오르간과 **나란히 주악기**로 든다. 템포·셔플은 두 문서(Gospel music · Black gospel music) 모두 **말하지 않는다** — swing 30 과 60~140 범위는 근거가 없다',
   },
   zydeco: {
     anchor: 'Zydeco / Cajun', members: ['Zydeco / Cajun'],

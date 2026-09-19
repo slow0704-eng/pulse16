@@ -523,6 +523,446 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 
 ---
 
+---
+
+## 대표곡 — 웹으로 확인한 곡 (2026-09-19)
+
+장르마다 곡을 골라 **곡이 실재하는지, 출처가 그 장르로 분류했는지**를 웹에서
+확인한 것만 적었습니다. 확인하지 못한 후보는 버렸고, **버린 이유까지 아래 4에
+남겨 두었습니다.**
+
+> - **BPM 은 103줄 중 9칸(8.7%)뿐입니다.** 전부 **곡 문서 본문의 수치**이고,
+>   **악보 템포 표기는 이 계열에 하나도 없습니다.** 장르 문서에서 나온 BPM 은
+>   **한 칸도 없습니다** — 조사 파일 셋이 모두 「장르 문서에 BPM 수치가 없다」를
+>   따로 적어 두었습니다. 추정으로 채우지 않았습니다.
+> - **곡 문서의 장르란이 프리셋 장르와 다른 줄이 38건**입니다. 버리지 않고 표에
+>   두되 §3 비고표에 전부 밝혔습니다 — **프리셋 근거로 쓸 때 가중치를 낮추라는
+>   표시**입니다. 특히 **Bro-country 는 넷 중 하나(Cruise)만**, **Countrypolitan 은
+>   여섯 중 둘(Rose Garden · The Most Beautiful Girl)만** 장르가 맞습니다.
+> - **구분** — 조사 파일이 «1위» 를 적은 줄만 `1위` 입니다. 차트 기재가 없는 줄은
+>   전부 `대표` 로 두었습니다(실제로 1위였을 곡도 출처 기재가 없으면 `대표`).
+> - **연도** — 「(음반 단위)」 줄은 앨범의 해입니다. 출처가 연도를 안 적은 전통곡
+>   넷(Cripple Creek · Soldier's Joy · Old Joe Clark · Uncle Pen)은 `—` 로 두고
+>   프리셋 안 맨 뒤에 두었습니다.
+> - **조성** 칸의 괄호는 출처가 함께 적은 **박자표**입니다(12/8 · 2/4 · 3/4 왈츠 ·
+>   Swing 2/4 등). 프리셋이 16스텝 4/4 한 마디라 왈츠·2/4 가 그대로 담기지
+>   않는다는 지적이 조사 파일 둘에 있습니다.
+> - **출처 URL 은 조사 파일에 적힌 주소를 괄호·퍼센트 인코딩까지 그대로** 옮겼습니다.
+>   URL 이 비어 있는 줄은 **없습니다**(§5).
+> - **곡의 선율·리프는 옮겨 적지 않았습니다.** 프리셋은 이 곡들의 성질 — 템포 ·
+>   드럼 골격 · 베이스 역할 · 편성 — 에만 맞추었습니다.
+> - 앱의 «지금 장르» 줄과 근거 패널이 이 표를 보여 줍니다(`tools/build-refdata.mjs` → `src/data/references.js`).
+
+| 프리셋 | 곡 | 아티스트 | 연도 | 구분 | BPM | 조성 | 출처 |
+|---|---|---|---|---|---|---|---|
+| Chicago Blues | Juke | Little Walter & His Night Cats | 1952 | 1위 | — | E | [wikipedia.org](https://en.wikipedia.org/wiki/Juke_(instrumental)) |
+| Chicago Blues | Hoochie Coochie Man | Muddy Waters | 1954 | 대표 | 72 (본문) | A장조 (12/8) | [wikipedia.org](https://en.wikipedia.org/wiki/Hoochie_Coochie_Man) |
+| Chicago Blues | My Babe | Little Walter | 1955 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/My_Babe) |
+| Chicago Blues | Mannish Boy | Muddy Waters | 1955 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Mannish_Boy) |
+| Chicago Blues | Smokestack Lightning | Howlin' Wolf | 1956 | 대표 | — | 「nominally in E major」 | [wikipedia.org](https://en.wikipedia.org/wiki/Smokestack_Lightning) |
+| Texas Blues | Rock Awhile | Goree Carter & His Hepcats | 1949 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Rock_Awhile) |
+| Texas Blues | Texas Flood | Larry Davis (원곡) / Stevie Ray Vaughan | 1958 / 1983 | 대표 | — | 원곡 A♭ · SRV G♭ (12/8) | [wikipedia.org](https://en.wikipedia.org/wiki/Texas_Flood_(song)) |
+| Texas Blues | Hide Away | Freddie King | 1960 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Hide_Away_(instrumental)) |
+| Texas Blues | Pride and Joy | Stevie Ray Vaughan and Double Trouble | 1983 | 대표 | — | E (반음 내린 튜닝이라 E♭ 표기) (4/4, 12마디) | [wikipedia.org](https://en.wikipedia.org/wiki/Pride_and_Joy_(Stevie_Ray_Vaughan_song)) |
+| Electric Blues | Boogie Chillen' | John Lee Hooker | 1948 | 1위 | — | 오픈 G 튜닝 + 카포 (1948년판 B) | [wikipedia.org](https://en.wikipedia.org/wiki/Boogie_Chillen%27) |
+| Electric Blues | Rollin' Stone | Muddy Waters | 1950 | 대표 | — | E장조 (4/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Rollin%27_Stone_(Muddy_Waters_song)) |
+| Electric Blues | 3 O'Clock Blues | B.B. King | 1951 | 1위 | 65 (본문) | C조 (12/8, 12마디) | [wikipedia.org](https://en.wikipedia.org/wiki/Three_O%27Clock_Blues) |
+| Electric Blues | The Things That I Used to Do | Guitar Slim | 1953 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Things_That_I_Used_to_Do) |
+| Electric Blues | Boom Boom | John Lee Hooker | 1962 | 대표 | 168 (본문) | F조 (2/2, 12마디) | [wikipedia.org](https://en.wikipedia.org/wiki/Boom_Boom_(John_Lee_Hooker_song)) |
+| Country Blues | Statesboro Blues | Blind Willie McTell | 1928 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Statesboro_Blues) |
+| Country Blues | Pony Blues | Charley Patton | 1929 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Pony_Blues) |
+| Country Blues | Cross Road Blues | Robert Johnson | 1936 | 대표 | 테이크1 ≈106 · 테이크2 ≈96 (본문) | B (오픈 G/스패니시 튜닝) | [wikipedia.org](https://en.wikipedia.org/wiki/Cross_Road_Blues) |
+| Country Blues | Sweet Home Chicago | Robert Johnson | 1936 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Sweet_Home_Chicago) |
+| Country Blues | Bottle Up and Go | Tommy McClennan | 1939 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Step_It_Up_and_Go) |
+| Blues Rock | Crossroads (Cream 판) | Cream | 1968 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Cross_Road_Blues) |
+| Blues Rock | Statesboro Blues (Allman Brothers 판) | The Allman Brothers Band | 1971 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Statesboro_Blues) |
+| Blues Rock | La Grange | ZZ Top | 1973 앨범 / 1974 싱글 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/La_Grange_(song)) |
+| Blues Rock | Slow Ride | Foghat | 1975 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Slow_Ride) |
+| Blues Rock | Bad to the Bone | George Thorogood and the Destroyers | 1982 | 대표 | — | 오픈 G + 슬라이드 | [wikipedia.org](https://en.wikipedia.org/wiki/Bad_to_the_Bone) |
+| Jump Blues | Flying Home | Lionel Hampton and His Orchestra | 1942 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Flying_Home) |
+| Jump Blues | Caldonia | Louis Jordan and his Tympany Five | 1945 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Caldonia) |
+| Jump Blues | Choo Choo Ch'Boogie | Louis Jordan & His Tympany Five | 1946 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Choo_Choo_Ch%27Boogie) |
+| Jump Blues | Let the Good Times Roll | Louis Jordan and his Tympany Five | 1946 녹음 / 1947 차트 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Let_the_Good_Times_Roll_(Louis_Jordan_song)) |
+| Jump Blues | Good Rocking Tonight | Roy Brown | 1947 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Good_Rocking_Tonight) |
+| Jump Blues | Saturday Night Fish Fry | Louis Jordan & His Tympany Five | 1949 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Saturday_Night_Fish_Fry) |
+| Jump Blues | Rocket 88 | Jackie Brenston and his Delta Cats | 1951 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Rocket_88) |
+| Honky-tonk | Walking the Floor Over You | Ernest Tubb | 1941 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Walking_the_Floor_Over_You) |
+| Honky-tonk | If You've Got the Money I've Got the Time | Lefty Frizzell | 1950 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/If_You%27ve_Got_the_Money_I%27ve_Got_the_Time) |
+| Honky-tonk | Your Cheatin' Heart | Hank Williams | 1953 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Your_Cheatin%27_Heart) |
+| Honky-tonk | There Stands the Glass | Webb Pierce | 1953 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/There_Stands_the_Glass) |
+| Old-time / Hillbilly | The Little Old Log Cabin in the Lane | Fiddlin' John Carson (1923 녹음) | 1871 작 / 1923 녹음 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Little_Old_Log_Cabin_in_the_Lane) |
+| Old-time / Hillbilly | Wildwood Flower | The Carter Family | 1928 녹음 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Wildwood_Flower) |
+| Old-time / Hillbilly | Single Girl, Married Girl | The Carter Family | 1928 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Single_Girl,_Married_Girl) |
+| Old-time / Hillbilly | Cripple Creek | 전통곡 (아티스트 기재 없음) | — | 대표 | — | — (악보 2/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Cripple_Creek_(folk_song)) |
+| Old-time / Hillbilly | Soldier's Joy | 전통곡 (아티스트 기재 없음) | — | 대표 | — | — (악보 2/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Soldier%27s_Joy_(fiddle_tune)) |
+| Old-time / Hillbilly | Old Joe Clark | 전통곡 (아티스트 기재 없음) | — | 대표 | — | A major Mixolydian (악보 2/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Old_Joe_Clark) |
+| Bluegrass | Blue Moon of Kentucky | Bill Monroe | 1947 | 대표 | — | — (원곡 3/4 왈츠 · 엘비스판 4/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Blue_Moon_of_Kentucky) |
+| Bluegrass | Foggy Mountain Breakdown | Foggy Mountain Boys (작곡 Earl Scruggs) | 1949 녹음 / 1950 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Foggy_Mountain_Breakdown) |
+| Bluegrass | Man of Constant Sorrow | The Stanley Brothers (1950년 판) | 1950 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Man_of_Constant_Sorrow) |
+| Bluegrass | Dueling Banjos | Eric Weissberg & Steve Mandell (1972 싱글) · 원곡은 Arthur "Guitar Boogie" Smith(4현 플렉트럼 밴조) · Don Reno(5현 블루그래스 밴조) | 1954 작곡 / 1972 싱글 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Dueling_Banjos) |
+| Bluegrass | Rocky Top | The Osborne Brothers | 1967 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Rocky_Top) |
+| Bluegrass | Uncle Pen | Bill Monroe | — | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Uncle_Pen_(song)) |
+| Nashville Sound | Gone | Ferlin Husky | 1957 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Gone_(Ferlin_Husky_song)) |
+| Nashville Sound | Four Walls | Jim Reeves | 1957 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Four_Walls_(Jim_Reeves_song)) |
+| Nashville Sound | Oh Lonesome Me | Don Gibson | 1957 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Oh_Lonesome_Me) |
+| Nashville Sound | He'll Have to Go | Jim Reeves | 1959 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/He%27ll_Have_to_Go) |
+| Nashville Sound | I Fall to Pieces | Patsy Cline | 1961 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/I_Fall_to_Pieces) |
+| Nashville Sound | Crazy | Patsy Cline (작곡 Willie Nelson) | 1961 | 대표 | — | B♭ 조 (끝에서 B major) | [wikipedia.org](https://en.wikipedia.org/wiki/Crazy_(Willie_Nelson_song)) |
+| Countrypolitan | Harper Valley PTA | Jeannie C. Riley | 1968 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Harper_Valley_PTA) |
+| Countrypolitan | Stand by Your Man | Tammy Wynette | 1968 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Stand_by_Your_Man) |
+| Countrypolitan | Wichita Lineman | Glen Campbell | 1968 | 대표 | — | F major → D major | [wikipedia.org](https://en.wikipedia.org/wiki/Wichita_Lineman) |
+| Countrypolitan | Rose Garden | Lynn Anderson | 1970 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Rose_Garden_(song)) |
+| Countrypolitan | Behind Closed Doors | Charlie Rich | 1973 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Behind_Closed_Doors_(Charlie_Rich_song)) |
+| Countrypolitan | The Most Beautiful Girl | Charlie Rich | 1973 | 1위 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Most_Beautiful_Girl) |
+| Country Pop | Harper Valley PTA | Jeannie C. Riley | 1968 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Harper_Valley_PTA) |
+| Country Pop | Take Me Home, Country Roads | John Denver | 1971 | 대표 | 82 (본문) | A major | [wikipedia.org](https://en.wikipedia.org/wiki/Take_Me_Home,_Country_Roads) |
+| Country Pop | Behind Closed Doors | Charlie Rich | 1973 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Behind_Closed_Doors_(Charlie_Rich_song)) |
+| Country Pop | Rhinestone Cowboy | Glen Campbell | 1975 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Rhinestone_Cowboy) |
+| Country Pop | Here You Come Again (음반 단위) | Dolly Parton | 1977 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Here_You_Come_Again) |
+| Country Pop | 9 to 5 | Dolly Parton | 1980 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/9_to_5_(Dolly_Parton_song)) |
+| Country Pop | Islands in the Stream | Kenny Rogers & Dolly Parton | 1983 | 대표 | — | C major ↔ A♭ major (4/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Islands_in_the_Stream_(song)) |
+| Country Pop | You're Still the One | Shania Twain | 1998 | 대표 | 67 (본문) | E♭ major (common time) | [wikipedia.org](https://en.wikipedia.org/wiki/You%27re_Still_the_One) |
+| Outlaw Country | Honky Tonk Heroes (음반 단위) | Waylon Jennings | 1973 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Honky_Tonk_Heroes) |
+| Outlaw Country | Red Headed Stranger (음반 단위) | Willie Nelson | 1975 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Red_Headed_Stranger) |
+| Outlaw Country | Wanted! The Outlaws (음반 단위) | Waylon Jennings · Willie Nelson · Jessi Colter · Tompall Glaser | 1976 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Wanted!_The_Outlaws) |
+| Outlaw Country | Luckenbach, Texas (Back to the Basics of Love) | Waylon Jennings | 1977 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Luckenbach,_Texas_(Back_to_the_Basics_of_Love)) |
+| Outlaw Country | Mammas Don't Let Your Babies Grow Up to Be Cowboys | Waylon Jennings & Willie Nelson | 1978 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Mammas_Don%27t_Let_Your_Babies_Grow_Up_to_Be_Cowboys) |
+| Alt-country | No Depression (음반 단위) | Uncle Tupelo | 1990 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/No_Depression_(album)) |
+| Alt-country | A.M. (음반 단위) | Wilco | 1995 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Box_Full_of_Letters) |
+| Alt-country | Trace (음반 단위) | Son Volt | 1995 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Trace_(Son_Volt_album)) |
+| Alt-country | Wagon Wheel | Old Crow Medicine Show | 2004 | 대표 | 76 (본문 «76 half notes per minute» — 2분음표 기준) | A major (Swing 2/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Wagon_Wheel_(song)) |
+| Americana | Revival (음반 단위) | Gillian Welch | 1996 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Revival_(Gillian_Welch_album)) |
+| Americana | Car Wheels on a Gravel Road (음반 단위) | Lucinda Williams | 1998 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Car_Wheels_on_a_Gravel_Road) |
+| Americana | Wagon Wheel | Old Crow Medicine Show | 2004 | 대표 | 76 (본문 «76 half notes per minute» — 2분음표 기준) | A major (Swing 2/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Wagon_Wheel_(song)) |
+| Americana | I Remember Everything | Zach Bryan feat. Kacey Musgraves | 2023 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/I_Remember_Everything_(Zach_Bryan_song)) |
+| Bro-country | Cruise | Florida Georgia Line | 2012 | 대표 | — | B♭ major (B♭–F–Gm7–E♭) | [wikipedia.org](https://en.wikipedia.org/wiki/Cruise_(song)) |
+| Bro-country | Drunk on You | Luke Bryan | 2012 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Drunk_on_You_(song)) |
+| Bro-country | Boys 'Round Here | Blake Shelton | 2013 | 대표 | 84 (본문) | A major | [wikipedia.org](https://en.wikipedia.org/wiki/Boys_%27Round_Here) |
+| Bro-country | Ready Set Roll | Chase Rice | 2013 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Ready_Set_Roll) |
+| Folk Revival | If I Had a Hammer | Peter, Paul and Mary (1962년 판) 외 | 1949 작 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/If_I_Had_a_Hammer) |
+| Folk Revival | Tom Dooley | The Kingston Trio | 1958 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Tom_Dooley_(song)) |
+| Folk Revival | Michael, Row the Boat Ashore | The Highwaymen | 1960 녹음 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Michael,_Row_the_Boat_Ashore) |
+| Folk Revival | Walk Right In | The Rooftop Singers | 1962 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Walk_Right_In) |
+| Folk Revival | Blowin' in the Wind | Bob Dylan | 1963 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Blowin%27_in_the_Wind) |
+| Indie Folk | Skinny Love | Bon Iver | 2007 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Skinny_Love) |
+| Indie Folk | White Winter Hymnal | Fleet Foxes | 2008 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/White_Winter_Hymnal) |
+| Indie Folk | Little Lion Man | Mumford & Sons | 2009 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Little_Lion_Man) |
+| Indie Folk | Ho Hey | The Lumineers | 2012 | 대표 | — | C major | [wikipedia.org](https://en.wikipedia.org/wiki/Ho_Hey) |
+| Folk Rock | Mr. Tambourine Man | The Byrds | 1965 | 대표 | — | — (딜런의 2/4 에서 4/4 로) | [wikipedia.org](https://en.wikipedia.org/wiki/Mr._Tambourine_Man) |
+| Folk Rock | Turn! Turn! Turn! | The Byrds | 1965 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Turn!_Turn!_Turn!) |
+| Folk Rock | The Sound of Silence | Simon & Garfunkel | 1965 (전기판) | 대표 | — | D♯ minor (D♯m·C♯·B·F♯) | [wikipedia.org](https://en.wikipedia.org/wiki/The_Sound_of_Silence) |
+| Folk Rock | Eve of Destruction | Barry McGuire | 1965 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Eve_of_Destruction_(song)) |
+| Folk Rock | A Horse with No Name | America | 1971 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/A_Horse_with_No_Name) |
+| Gospel | Take My Hand, Precious Lord | 작곡 Thomas A. Dorsey (Mahalia Jackson 1956년 녹음) | 1938 출판 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Take_My_Hand,_Precious_Lord) |
+| Gospel | Oh Happy Day | The Edwin Hawkins Singers | 1967 녹음 / 1969 미국 발매 | 대표 | — | — (찬송가 3/4 → 4/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Oh_Happy_Day) |
+| Gospel | Man in the Mirror | Michael Jackson | 1988 | 대표 | — | G major → A♭ major | [wikipedia.org](https://en.wikipedia.org/wiki/Man_in_the_Mirror) |
+| Zydeco / Cajun | Jole Blon (Jolie Blonde) | 여러 녹음 | 1929 이후 | 대표 | — | — (왈츠 3/4) | [wikipedia.org](https://en.wikipedia.org/wiki/Jolie_Blonde) |
+| Zydeco / Cajun | My Toot-Toot | Rockin' Sidney | 1985 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/My_Toot_Toot) |
+
+**말로만 적힌 템포**(수치가 아니라 표에 못 넣은 것) — Pride and Joy 「moderately
+fast tempo」 · Texas Flood 「slow-tempo twelve-bar blues」 · Saturday Night Fish Fry
+「brisk tempo」 · Let the Good Times Roll 「a mid-tempo twelve-bar blues」 ·
+Cruise 「mid-tempo」 · Rocky Top 「fast-paced」·「fast and upbeat tempo」 ·
+Soldier's Joy 「upbeat tempo」 · No Depression 「breakneck speed」.
+**전부 수치가 없어 BPM 칸은 `—` 입니다 — 추정하지 않았습니다.**
+
+---
+
+### 1. 프리셋별 곡 수 (21종 전부)
+
+| 프리셋 | 곡 수 | | 프리셋 | 곡 수 |
+|---|---:|---|---|---:|
+| Chicago Blues | 5 | | Countrypolitan | 6 |
+| Texas Blues | 4 | | Country Pop | 8 |
+| Electric Blues | 5 | | Outlaw Country | 5 |
+| Country Blues | 5 | | Alt-country | 4 |
+| Blues Rock | 5 | | Americana | 4 |
+| Jump Blues | 7 | | Bro-country | 4 |
+| Honky-tonk | 4 | | Folk Revival | 5 |
+| Old-time / Hillbilly | 6 | | Indie Folk | 4 |
+| Bluegrass | 6 | | Folk Rock | 5 |
+| Nashville Sound | 6 | | Gospel | 3 |
+| | | | Zydeco / Cajun | 2 |
+
+**0곡 프리셋은 없습니다.** 가장 얇은 것은 **Zydeco / Cajun 2곡**(자이데코 1 ·
+케이준 1)이고 그다음이 **Gospel 3곡**입니다. 조사 파일이 적어 둔 대로,
+Zydeco / Cajun 은 **출처가 서로 다른 두 장르라고 못 박는데 프리셋이 하나**라
+2곡이 각각 한쪽씩을 대는 모양입니다 — **한 프리셋의 근거로는 가장 얇은 자리**입니다.
+
+- 표 전체 **103줄**, 중복을 뺀 **고유 항목 98개**.
+- 계열별로는 블루스 6종 31줄 · 컨트리 10종 53줄 · 포크 3종 14줄 · 가스펠 3줄 ·
+  지역 2줄입니다.
+- `g3-folk-gospel.md` 는 머리에 「대표곡 후보 18곡」이라 적었는데 그 파일의
+  후보 표를 다 세면 **19줄**입니다(⚠ 표시한 White Winter Hymnal · Man in the Mirror
+  포함). 저는 **표에 있는 19줄을 다 옮겼고** 둘 다 §3 에 밝혔습니다.
+
+### 2. BPM 이 채워진 칸
+
+**103줄 중 9칸 — 8.7%.**
+
+| 프리셋 | 곡 | BPM | 출처의 말 |
+|---|---|---|---|
+| Chicago Blues | Hoochie Coochie Man | 72 | 본문 (12/8) |
+| Electric Blues | 3 O'Clock Blues | 65 | 본문 「slow (65 beats per minute)」 |
+| Electric Blues | Boom Boom | 168 | 본문 |
+| Country Blues | Cross Road Blues | ≈106 / ≈96 | 본문 (두 테이크) |
+| Country Pop | Take Me Home, Country Roads | 82 | 본문 |
+| Country Pop | You're Still the One | 67 | 본문 「a slow tempo of 67 beats per minute」 |
+| Alt-country | Wagon Wheel | 76 | 본문 「76 half notes per minute」(2분음표 기준) |
+| Americana | Wagon Wheel | 76 | 같은 문서 (두 프리셋에 걸침) |
+| Bro-country | Boys 'Round Here | 84 | 본문 |
+
+- **악보(♩=) 표기는 한 칸도 없습니다.** 재즈 표에서 여섯 칸을 채웠던 악보 템포가
+  이 계열에는 **하나도 나오지 않았습니다.** 조사 파일이 악보에서 가져온 것은
+  **박자표**(2/4 · 12/8 · 3/4)뿐이라 조성 칸 괄호에 넣었습니다.
+- **장르 문서에서 나온 BPM 은 0칸입니다.** 세 조사 파일이 각각
+  「컨트리 10종 장르 문서에 beats per minute 수치가 한 곳도 없다」(g2 §0-1) ·
+  「21곡·13문서 어디에도 BPM 이 없었다」(g3) · 「출처에 장르 BPM 범위가 없다」(g1 §7-17)
+  로 **부재를 명시**했습니다. 조사가 부족한 것이 아니라 **출처가 말하지 않는 것**입니다.
+- 채워진 9칸이 프리셋 값과 어긋나는 자리: Country Pop 67·82 대 프리셋 110 ·
+  Bro-country 84 대 115 · Chicago Blues 72 대 110 · Electric Blues 65·168 대 115.
+
+### 3. 곡 문서의 장르란이 프리셋 장르와 다른 줄 — 38건
+
+버리지 않고 표에 두되 **근거의 무게를 낮추라는 표시**입니다. 인용은 조사 파일이
+적은 원문 라벨 그대로입니다.
+
+| 프리셋 | 곡 | 곡 문서의 장르란 | 비고 |
+|---|---|---|---|
+| Chicago Blues | Mannish Boy | 「Blues standard」 | |
+| Chicago Blues | Smokestack Lightning | 「Blues」 | |
+| Texas Blues | Rock Awhile | 「rock and roll · electric blues · jump blues」 | |
+| Texas Blues | Hide Away | 「Blues guitar instrumental」 | |
+| Texas Blues | Pride and Joy | 「Electric blues · blues rock」 | 본문이 「a classic **Texas shuffle**」이라 부릅니다 |
+| Country Blues | Statesboro Blues | 「Piedmont blues」 | 조사자가 **«대표로는 권하지 않는다»** 고 적었습니다(표에는 남김) |
+| Country Blues | Pony Blues | 「Delta blues」 | 델타는 컨트리 블루스의 **하위**라고 출처가 적습니다 |
+| Country Blues | Cross Road Blues | 「Blues, Delta blues」 | 위와 같음 |
+| Country Blues | Sweet Home Chicago | 「Blues standard」 | |
+| Country Blues | Bottle Up and Go | 「hokum blues」/「Delta bluesman」 | 연 주소는 `Step_It_Up_and_Go`, **도달 제목이 「Bottle Up and Go」** |
+| Blues Rock | Crossroads (Cream 판) | 「Blues, Delta blues」 | 문서가 **Robert Johnson 원곡 문서**이고, 크림 판 서술이 그 안에 있습니다 |
+| Blues Rock | Statesboro Blues (Allman 판) | 「Piedmont blues」 | |
+| Honky-tonk | There Stands the Glass | 「Country」만 | 조사자가 «버리지 않되 표시» 로 남긴 줄 |
+| Old-time / Hillbilly | The Little Old Log Cabin in the Lane | 「Popular song, minstrel」 | |
+| Old-time / Hillbilly | Wildwood Flower | **인포박스에 장르 칸 없음**(「cataloged as a folk song」) | |
+| Old-time / Hillbilly | Single Girl, Married Girl | 「Folk song」 | |
+| Old-time / Hillbilly | Cripple Creek | 「Folk」·「bluegrass」 | 본문은 「an Appalachian-style **old time tune**」 |
+| Old-time / Hillbilly | Soldier's Joy | 「reel or country dance」 | 본문은 「top ten most-played **old time** fiddle tunes」 |
+| Old-time / Hillbilly | Old Joe Clark | 「US folk song, a mountain ballad」 | 본문은 「**old-time** fiddle sessions」 |
+| Bluegrass | Man of Constant Sorrow | 인포박스 「Folk」 | Stanley Brothers 1950년 판이 「Folk」와 **「bluegrass」**로 분류 |
+| Nashville Sound | Gone | 「Country」 | 본문 「**first example of the Nashville Sound** production approach」 |
+| Nashville Sound | Four Walls | 「Country」 | **장르 문서**가 「the first 'Nashville sound' record」로 지목 |
+| Nashville Sound | Oh Lonesome Me | 「Country」 | **장르 문서**가 지목(Chet Atkins 프로듀스) |
+| Nashville Sound | Crazy | 「Country」·「Traditional pop」 | 곡 문서도 장르 문서도 내슈빌 사운드라 하지 않습니다 |
+| Countrypolitan | Behind Closed Doors | 「Country pop」·「soft rock」 | |
+| Countrypolitan | Harper Valley PTA | 「Country, country pop」 | |
+| Countrypolitan | Stand by Your Man | 「Country」만 | |
+| Countrypolitan | Wichita Lineman | 「Country, pop, country rock」 | |
+| Country Pop | Take Me Home, Country Roads | 「Country」·「folk」 | **장르 문서**가 크로스오버 히트로 지목 |
+| Country Pop | Rhinestone Cowboy | 「Country」·「symphonic pop」 | |
+| Country Pop | Here You Come Again | 「Pop, country」 | **곡 문서가 아니라 동명 앨범 문서**입니다(그래서 «음반 단위») |
+| Americana | Revival | 「Country, folk, bluegrass」 | 본문은 「arrived on the **alt-country** scene」 |
+| Americana | I Remember Everything | 「Country」만 | |
+| Bro-country | Boys 'Round Here | 「Country music」 | **장르 문서**가 대표곡으로 지목 |
+| Bro-country | Drunk on You | 「Country」 | **장르 문서**가 지목 |
+| Bro-country | Ready Set Roll | 「Country rock」 | **장르 문서**가 지목 |
+| Indie Folk | White Winter Hymnal | 「Folk」만 | 조사 파일이 ⚠ 로 표시한 줄 |
+| Gospel | Man in the Mirror | 「Pop」과 「gospel」 — **팝이 먼저** | 조사 파일이 ⚠ 로 「가스펠 합창이 들어간 팝」이라 적었습니다 |
+
+**덧붙여 적어 둘 것 넷**
+
+1. **Bro-country 는 넷 중 «Cruise» 하나만 근거가 섭니다.** 그나마 Cruise 도
+   **인포박스는 「Country music」(원곡)·「country rap」·「country pop」(리믹스)**이고,
+   «bro-country» 는 **본문**의 「considered the foremost example of the genre of
+   country music termed 'bro-country'」입니다. 나머지 셋은 **장르 문서가 이름을 든 것**입니다.
+2. **Countrypolitan 은 여섯 중 둘**(Rose Garden · The Most Beautiful Girl)만
+   인포박스에 «Countrypolitan» 이 있습니다. The Most Beautiful Girl 은 인포박스가
+   **countrypolitan 과 country pop 을 동시에** 답니다.
+3. **Folk Revival 다섯 줄은 장르란이 전부 「Folk」 계열**이고 «folk revival» 이라
+   적은 문서가 **하나도 없습니다.** 리바이벌과의 연결이 **본문에 직접 적힌 것은
+   둘**입니다 — Tom Dooley 「starting the 'folk music boom'」, Michael, Row the Boat
+   Ashore 「introduced it into the American folk music revival」. 나머지 셋은 장르
+   라벨만 「Folk」입니다.
+4. **Electric Blues 의 두 줄(3 O'Clock Blues · Boom Boom)은 조사 파일이 장르 라벨을
+   적지 않았습니다.** 어긋난다고도 맞는다고도 쓸 수 없어 위 표에서 뺐습니다 —
+   **라벨 미확인**으로 남깁니다.
+
+### 4. 버린 후보와 이유
+
+조사 파일이 버린 것을 그대로 옮깁니다. **표에 넣지 않았습니다.**
+
+#### 404 · 단독 문서 없음 (7건)
+
+| 후보 | 이유 |
+|---|---|
+| I Can't Be Satisfied (Muddy Waters 1948) | `I_Can%27t_Be_Satisfied` · `I_Can't_Be_Satisfied` · `..._(song)` · `I_Can%E2%80%99t_Be_Satisfied` **네 주소 모두 404**. Electric blues 문서가 이름을 대지만 실재를 확인 못 함(Chicago·Electric 양쪽에서 버림) |
+| Deacon's Hop (Big Jay McNeely) | `https://en.wikipedia.org/wiki/Deacon%27s_Hop` **404**. Jump blues 문서가 이름을 댐 |
+| Les haricots sont pas salés / Zydeco Sont Pas Salés (Clifton Chenier) | **HTTP 404 — 단독 문서 없음.** Zydeco 문서 본문에 곡명이 있으나 Clifton Chenier 문서에는 없음 |
+| Sally Goodin / Sallie Gooden | **두 철자 모두 404** |
+| Soldier's Joy(모호성 문서) | 한 줄뿐이라 버리고 `Soldier%27s_Joy_(fiddle_tune)` 로 대체 — **대체본이 표에 있습니다** |
+| Uncle Pen(슬래시 없는 제목) | **인물 문서**(Pendleton Vandiver)였음 → `Uncle_Pen_(song)` 로 대체 — **대체본이 표에 있습니다** |
+| Behind Closed Doors (song) | **모호성 문서** → `..._(Charlie_Rich_song)` 로 대체 — **대체본이 표에 있습니다** |
+| Box Full of Letters(곡으로) | **A.M. 앨범 문서로 리다이렉트**되어 곡 단독 문서가 아님 → **앨범으로 바꿔 채택**(표에 있음) |
+
+#### 장르 라벨 불일치 (11건)
+
+| 후보 | 이유 |
+|---|---|
+| Call It Stormy Monday (But Tuesday Is Just as Bad) — T-Bone Walker 1947 | 실재·수치(66 BPM · G조 · 12/8 · 12마디) 다 확인됐으나 라벨이 「slow twelve-bar blues performed in the **West Coast blues**-style」. **Texas Blues 라벨이 아님**(연주자만 텍사스 출신) |
+| Born Under a Bad Sign — Albert King 1967 | 라벨이 「**Soul blues**」이고 「does not follow the typical twelve-bar blues I-IV-V progression」 — 블루스 록 대표로 부적합 |
+| Shake, Rattle and Roll — Big Joe Turner 1954 | 라벨이 「rock and roll」·「rhythm and blues」뿐, **jump blues 라벨 없음** + 편성·리듬 서술 전무 |
+| The Hucklebuck — Paul Williams 1949 | 실재·편성·형식 확인됐으나 라벨이 「**jazz and R&B dance tune**」 — jump blues 가 아님 |
+| Keep on the Sunny Side | **인포박스에 장르 칸이 없고** old-time·hillbilly 라는 말이 없음(「popular American song」·「Christian hymn」) |
+| Yankee Hotel Foxtrot | 인포박스가 「**Art rock**」·「**indie rock**」이고 **alt-country 라는 말이 없음** |
+| Ho Hey (Americana 후보로서) | 인포박스가 「Folk rock」·「indie folk」 — **Americana 라는 말이 없음.** ※ **Indie Folk 쪽에서는 라벨이 맞아 표에 있습니다** |
+| Good Hearted Woman | 곡이 아니라 **1972년 앨범 문서**이고 인포박스가 「Country」 하나뿐, **outlaw country 라 적지 않음** |
+| Cardigan — Taylor Swift 2020 | 장르가 「soft rock, folk and indie rock」으로 **«indie folk» 이 아님.** ⚠ 그런데 **g3 조사 전체에서 BPM 수치가 나온 유일한 곡**(130 BPM · E♭ major)이라 프리셋 105 와 25 차이 — 근거로 쓰지 않았습니다 |
+| Jambalaya (On the Bayou) — Hank Williams 1952 | 장르가 「Country & western」·「honky-tonk」이고 문서가 **「is not a true cajun song」**이라 직접 적음 |
+| That's My Kind of Night · This Is How We Roll · Round Here · Here's to the Good Times | **어느 문서도 bro-country 라 하지 않습니다.** 조사자가 「열린 사실만 남기고 대표곡으로는 쓰지 않는 쪽을 권합니다」라고 적어 뺐습니다(4건) |
+
+#### 곡 문서에 서술이 전무 (2건)
+
+| 후보 | 이유 |
+|---|---|
+| See That My Grave Is Kept Clean — Blind Lemon Jefferson 1927·1928 | 실재는 확인했으나 문서가 **편성·리듬·템포를 한 줄도 적지 않아** 프리셋 교정 근거로 쓸 수 없음(라벨도 「Blues」뿐) |
+| Terraplane Blues — Robert Johnson 1936/1937 | 같은 이유(기법·리듬·템포 서술 없음) |
+
+#### 곡 단독 문서를 열지 않아 규칙대로 제외 (1건)
+
+| 후보 | 이유 |
+|---|---|
+| Buckwheat Zydeco 의 곡들(It's Hard To Get · Hey Good Lookin' 등) | 아티스트 문서에 제목만 있고 **곡 단독 문서를 열어 확인하지 않음** |
+
+#### 판단을 남겨 두는 한 줄 — **Slow Ride**
+
+`g1-blues.md` 는 Slow Ride 를 **후보 표에도 올리고 «버린 후보» 에도** 적었습니다.
+버린 이유는 **장르 라벨이 아니라**(라벨에 blues rock 이 **있습니다**)
+「리듬·템포·편성 서술이 전무해 **패턴 근거로는 못 쓴다**」입니다.
+**곡의 실재와 라벨이 성립하므로 표에는 남겼고, 여기에 표시만 합니다** —
+프리셋의 `swing 0` 근거로 쓰면 안 됩니다(부기 록 문서가 Slow Ride 를
+**셔플**의 예로 듭니다).
+
+### 5. URL 이 비어 있는 줄
+
+**없습니다 — 103줄 전부 조사 파일에 URL 이 적혀 있었습니다.**
+`「문서명」 (URL 미기재)` 로 둔 줄은 하나도 없습니다.
+
+다만 **주소와 도달 제목이 다른 줄이 둘** 있어 주소를 그대로 두고 여기에 적습니다.
+
+| 프리셋 | 곡 | 적은 주소 | 도달 |
+|---|---|---|---|
+| Country Blues | Bottle Up and Go | `https://en.wikipedia.org/wiki/Step_It_Up_and_Go` | 도달 제목 **「Bottle Up and Go」** |
+| Alt-country | A.M. (음반 단위) | `https://en.wikipedia.org/wiki/Box_Full_of_Letters` | **A.M. 앨범 문서로 리다이렉트** |
+
+그리고 **한 문서를 두 프리셋이 함께 쓰는 줄이 다섯**입니다 — §6.
+
+### 6. 한 곡이 여러 프리셋에 걸친 것 — 5건
+
+| 곡 | 프리셋 | 걸치는 방식 |
+|---|---|---|
+| Cross Road Blues | **Country Blues** · **Blues Rock** | 같은 문서 한 장. Country Blues 는 Robert Johnson 1936 원곡, Blues Rock 은 그 안에 서술된 **Cream 1968 판**(「sets it to a **straight eighth-note or rock rhythm**」) |
+| Statesboro Blues | **Country Blues** · **Blues Rock** | 같은 문서. Country Blues 는 Blind Willie McTell 1928 원곡, Blues Rock 은 **Allman Brothers 1971 판**(Duane Allman 의 슬라이드) |
+| Wagon Wheel | **Alt-country** · **Americana** | 인포박스가 「Alt-country, **Americana**, folk, bluegrass」로 **둘을 동시에** 답니다. 조사 파일도 둘 다에 올렸습니다. **BPM 이 있는 9칸 중 2칸이 이 곡**입니다 |
+| Behind Closed Doors | **Countrypolitan** · **Country Pop** | 인포박스는 「Country pop」·「soft rock」 — **Countrypolitan 쪽에서는 라벨이 어긋납니다**(§3) |
+| Harper Valley PTA | **Countrypolitan** · **Country Pop** | 인포박스는 「Country, country pop」 — 위와 같습니다 |
+
+> 이 다섯은 조사 파일이 «두 프리셋을 가르는 근거» 로 삼기 어려운 자리를 그대로
+> 보여 줍니다. 특히 **Countrypolitan 과 Country Pop 은 겹치는 두 곡을 빼면 각각
+> 넷·여섯이 남고**, 조사 파일은 「세 장르(Nashville · Countrypolitan · Country Pop)
+> 어디에도 BPM·스윙·드럼 패턴 서술이 없다」고 적었습니다.
+
+
+### 7. 표를 따로 검증했다 — 103줄의 주소를 전부 다시 열었다
+
+표를 만든 사람과 **다른 눈**으로 103줄의 출처 URL 을 전부 다시 열었습니다.
+**지어낸 곡 0건 · 404 0건 · 모호성 문서 0건 · 인물 문서를 곡으로 적은 줄 0건.**
+곡 이름을 지어내는 것이 이 저장소에서 가장 나쁜 실패라, 이 확인은 생략하지 않습니다.
+
+**고친 다섯 줄** — 곡이 없어서가 아니라 **어느 판·어느 칸을 가리키느냐**가 틀린 것들입니다.
+
+| 곡 | 틀렸던 것 | 문서의 값 |
+|---|---|---|
+| Foggy Mountain Breakdown | 아티스트 칸에 **작곡자**를 적었습니다 | 인포박스 `Single by: Foggy Mountain Boys` · `Songwriter: Earl Scruggs` |
+| Dueling Banjos | 성만 「Smith」였고, **1972년 싱글의 연주자가 빠져** 있었습니다 | 인포박스 `Single by: Eric Weissberg` (1972-12) · 작곡 `Arthur "Guitar Boogie" Smith, Don Reno` |
+| Wanted! The Outlaws | 아티스트 칸이 **비어** 있었습니다 | 인포박스가 넷을 명시 — `Waylon Jennings, Willie Nelson, Jessi Colter and Tompall Glaser` |
+| Jolie Blonde | 주소가 **리다이렉트**라 도달 제목이 다릅니다 | 도달 제목 **「Jole Blon」**(표가 괄호로 병기해 둔 쪽이 실제 제목) |
+| My Toot Toot | 같은 이유 | 도달 제목 **「My Toot-Toot」**(하이픈) |
+
+**틀리지 않았지만 밝혀 둘 것** — 고치지 않았습니다.
+
+- **The Little Old Log Cabin in the Lane 의 「1923」** — 검증자는 「문서 어디에도 1923 이
+  없다」고 보고했으나 **원문을 직접 여니 분류에 「1923 singles」가 있습니다.** 본문과
+  인포박스에는 없는 것이 맞습니다(인포박스는 `Published 1871` · `Songwriter Will S. Hays`
+  뿐). **부재 주장이 과장이었던 것**이라, 근거가 있는 해를 지우지 않았습니다.
+- **Flying Home 의 「Lionel Hampton and His Orchestra / 1942」** — 인포박스는
+  `Song by Benny Goodman Sextet`(1939-11-06)이라 **인포박스와는 다릅니다.** 다만 본문에
+  「In 1942, Lionel Hampton and His Orchestra recorded the song with an epic-length
+  tenor saxophone solo by nineteen-year-old Illinois Jacquet」가 **그대로** 있고,
+  **점프 블루스의 근거로는 이쪽이 맞습니다** — 재킷의 테너 솔로가 이 장르의 표지입니다.
+- **Uncle Pen** — 인포박스가 통째로 **Ricky Skaggs 의 1984년 싱글**입니다. 표의
+  Bill Monroe 는 첫 문장(「written and originally recorded by Bill Monroe」)에서만
+  확인되고 **문서가 Monroe 녹음의 해를 적지 않아**, 연도를 `—` 로 둔 것이 맞습니다.
+- **연도 다섯 줄은 «녹음년 대 발매년»** 입니다 — Cross Road Blues(1936 녹음 / 1937 발매) ·
+  Sweet Home Chicago(1936 / 1937) · Statesboro Blues(1928 녹음 / 1929 발매) ·
+  Man of Constant Sorrow(표 1950 은 본문의 스탠리 형제 녹음, 인포박스는 1913) ·
+  Skinny Love(표 2007 은 본문, 인포박스는 2008 영국 싱글). **표가 틀린 것이 아니라
+  녹음년을 고른 것**이라 두었습니다.
+- **Crossroads (Cream 판)** 은 「Crossroads」 문서가 아니라 **Robert Johnson 의
+  「Cross Road Blues」 문서 본문**에 있습니다. 표의 1968 은 본문과 맞습니다.
+- **Boys 'Round Here 의 featuring 누락**(인포박스는 `Blake Shelton featuring Pistol
+  Annies and friends`)은 **제가 원문으로 확인하지 않았습니다** — 검증자 보고로만
+  압니다. 그래서 고치지 않고 여기 적습니다.
+
+### 이 곡들로 고친 것
+
+출처가 **정면으로 다른 말을 하는 칸만** 고쳤습니다. 조사는 세 갈래로 나눠 돌렸고,
+**구조를 바꾸는 인용은 제가 원문을 다시 열어 확인했습니다.**
+
+| 프리셋 | 바꾼 것 | 근거 |
+|---|---|---|
+| **Honky-tonk** | 16분 스네어 롤 → **백비트** · 2번 기타 `pedal`→**`fiddle`** | 저장소는 이 자리를 «트레인 비트» 로 적어 두었는데 **그런 서술이 어디에도 없습니다** — `Train beat` 은 단독 문서도 없고, 출처가 말하는 것은 「The honky-tonk sound has a full rhythm section playing a **two-beat rhythm with a crisp backbeat**」까지입니다. 편성도 「**Steel guitar and fiddle are the dominant instruments**」인데 피들이 빠져 있었습니다(기타 두 칸이 스틸·페달스틸) |
+| **Nashville Sound** | 1번 기타 `pedal`→`clean` · 2번 건반 `piano`→**`choir`** | 출처는 이 사운드를 **스틸을 «잘라낸»** 것으로 적습니다 — 「Now we've **cut out the fiddle and steel guitar** and **added choruses** to country music」·「replacing … (fiddles, steel guitar, nasal lead vocals) with 'smooth' elements (**string sections, background vocals**, crooning lead vocals)」. 그런데 프리셋은 기타 **두 칸이 모두 스틸**이었습니다. 한 칸만 남기고, 대체 목록에 있는 **합창**을 넣었습니다 |
+| **Bro-country** | 2번 기타 `pedal`→**`banjo`** | 장르 문서 악기 목록에 **페달 스틸이 없고**(부재 확인) 대신 **밴조**가 있습니다 — 「Vocals, guitar, drums, drum machines, bass guitar, keyboard, electric guitar, **banjo**」. 저장소 레퍼런스 표도 페달 스틸을 적지 않아 **내부 모순**이었습니다 |
+| **Zydeco / Cajun** | 퍼커션 `tamb`→**`guiro`** | 출처가 주악기를 못 박습니다 — 「The main instruments are **accordion and rubboard (washboard) or vest frottoir**」. 탬버린은 짤랑이는 소리라 방향이 다릅니다. ⚠ **도구에 워시보드·프로토와 엔진이 없어**(퍼커션 19종 확인) 있는 것 중 홈을 긁는 `guiro` 로 대체했습니다 — 자이데코가 귀로를 쓴다는 뜻이 **아닙니다** |
+| **Electric Blues** | swing 30 → **50** | **Chicago·Texas·Electric blues 세 문서 모두 리듬을 말하지 않습니다**(셔플·스윙·셋잇단·백비트 전부 부재). Texas 문서는 자신을 나머지 둘과 **구분하는 문장조차 없습니다.** 50/50/30 의 «30» 은 출처에 없는 차이라, 새 숫자를 지어내는 대신 **형제와 같게** 맞췄습니다 |
+| **Blues Rock** | 베이스 엔진 `reese`→`sub` · 드라이브 62→32 | 출처가 드는 것은 「electric guitar, **electric bass guitar**, drums…」입니다. `reese` 는 디튠 톱니 **신스**라 계통이 다르고, 형제 셋은 모두 `sub` 입니다 |
+| **현 베이스 7종** | `gate` **80 → 340** | Old-time · Nashville Sound · Folk Revival · Indie Folk · Folk Rock · Country Blues · Americana. `gate` 는 밀리초가 아니라 **16분음 대비 백분율**이라(`spb()*0.25*gate/100`, `spb()` 는 박당 초) 80 은 4분음의 **20%** — 걷는 베이스가 아니라 끊어 치는 소리입니다. 340 은 85% 이고 Traditional Pop 이 이미 그렇게 고쳐져 있었습니다. **Honky-tonk 64 · Bluegrass 56 은 그대로** 두었습니다 — 붐칙과 만돌린 촙은 실제로 끊어 치는 어법입니다. **Jump Blues 도 80 으로 두었습니다** — 현 베이스이긴 하나 `uprightslap`(슬랩 업라이트)이라 끊어 치는 것이 주법 자체입니다. 근거가 있어 둔 것이 아니라 **바꿀 근거가 없어 둔 것**입니다 |
+| **컴핑 표** | `country_quarter`(4타) 신설 → `Country` 연결 | §5-5 가 2026-09-18 에 컨트리 프리셋을 4타로 고치면서 `COMP` 를 함께 옮기지 않아 열 종이 8분과 어긋나 있었습니다. **블루스는 8분이 맞아** 그대로 두었습니다(「eight to the bar」) |
+
+### 고치지 않은 것 — 출처가 «없거나», 근거가 얇거나, 도구 밖인 것
+
+| 항목 | 상태 |
+|---|---|
+| **BPM 21종 전부** | **장르 문서에 수치가 한 곳도 없습니다.** 표 103줄 중 BPM 이 찬 것은 9칸(8.7%)이고 전부 **곡 문서 본문** 값입니다 — 악보 템포 표기는 이 계열에 **하나도 없었습니다**(재즈와 다른 점) |
+| **Country Blues 의 편성** | 출처는 「The **mainly solo vocal with acoustic fingerstyle guitar** accompaniment…」이고 drum·bass·band 가 **전부 부재**인데, 프리셋에는 킥·스네어·햇·업라이트가 있습니다. **가장 큰 미해결 어긋남**입니다 — 다만 「mainly」이고, 16스텝 그루브 도구에서 이 프리셋을 «거의 빈» 상태로 만드는 것이 옳은지는 따로 판단할 일이라 값을 두었습니다 |
+| **Gospel 의 피아노 부재** | 출처는 「The **primary instruments are the B3 organ and the piano**」라 피아노를 **B3 와 나란히** 듭니다. 프리셋 건반 둘은 레슬리·합창이고 **둘 다 출처가 있어**, 어느 것을 밀어낼지 근거가 없습니다 |
+| **Gospel 의 `chord:'nine'`** | 출처는 「Most harmony in Gospel music makes use of **chord extensions: usually up to an 11th**」입니다. 9화음은 **모자라지만** 유효한 화음 값 목록을 확인하지 않아 두었습니다 |
+| **Zydeco 와 Cajun 이 한 프리셋** | 출처가 「**Although they are two separate genres**…」라 못 박고(Cajun music 문서) 이 문서 §4 표도 이미 **두 줄**로 적습니다. 다만 프리셋을 쪼개면 전체 357종이 바뀌므로 기록만 남깁니다. 케이준의 **왈츠·투스텝**(「the **waltz and two-step** are the most common dances」)도 4/4 격자로는 표현되지 않습니다 |
+| **`scale:'Minor Pentatonic'` 8칸** | 조사자는 「확인된 곡 조성이 전부 장조」라 했지만 **제가 곡 문서를 직접 보지 않았습니다.** 저장소가 「초기값이라 고른 값이 아니다」라 적은 것만으로 여덟 칸을 바꾸는 것은 근거가 얇습니다 |
+| **포크 3종의 건반 리듬** | §5-8 이 `folk_strum` 의 건반 행을 「기타 행에서 근음만 남긴 값」이라 적어 **열어 둔** 자리입니다. 이번 조사에서도 **세 포크 장르 문서 모두 건반을 말하지 않음**이 확인돼 채울 근거가 없습니다 |
+| **Bluegrass 의 드럼** | 조사자는 「문서가 드럼이 없다고 적는다」고 했으나 원문은 「**exclusively on acoustic instruments**」이고 드럼은 «전통에서의 이탈» 목록에 있습니다. 드럼 킷도 어쿠스틱이라 **배제되지 않습니다** |
+| **`Old-time / Hillbilly` 이름** | 조사자는 「힐빌리는 컨트리 전체의 옛 이름」이라 했으나, 문서는 그것을 「**Appalachian and Southern fiddle-based and religious music**」에 붙인 이전 명칭으로 적고 「Some called it **hillbilly, or old-time music**」이라고도 합니다 — **이름은 방어됩니다** |
+
+### 조사 쪽 오류 — 제가 원문으로 잡은 것 11건
+
+구조를 바꾸는 인용은 전부 다시 열어 대조했습니다. **결론이 무너진 것은 둘**이고
+나머지 아홉은 **결론은 살고 인용이 틀린** 종류였습니다.
+
+**행동을 막은 둘** — 「Folk rock 문서에 건반이 없다」(실제로는 「A few bands are also
+known to **rely on keyboards**…」가 있습니다) · 「Country blues 에 슬라이드가 빠졌다」
+(그 문서에 slide·bottleneck 이 **없습니다**). 둘 다 그대로 믿었으면 근거 없이 고쳤을 자리입니다.
+
+**출처를 잘못 지목한 넷** — 「two separate genres」는 Zydeco 가 아니라 **Cajun music**
+문서 · 「오르간은 later」는 Chicago 가 아니라 **Electric blues** 문서 · 「Electric blues 가
+텍사스를 지역 갈래로 든다」(실제는 West Coast·Detroit·**Chicago**) · Alt-country 의
+하모니카 근거(그 문서는 **악기를 하나도 이름 대지 않습니다**).
+
+**과장하거나 뒤집힌 다섯** — Nashville sound 의 핵심 인용이 **그런 문장으로 존재하지
+않음**(뜻은 오히려 더 강하고, 조사자가 덧붙인 «piano» 는 대체 목록에 없음) ·
+**Countrypolitan 이 리다이렉트라는 것 미확인** · Bluegrass 「드럼 없음」 과장 ·
+힐빌리 이름 · **Old-time 문서에 하모니카가 있음**.
+
+---
+
 ## 레퍼런스 — 대표 아티스트 · 대표 앨범
 
 편성을 정할 때 쓴 판단 근거입니다. 표기 규칙과 주의사항은
@@ -553,9 +993,14 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 | Texas Blues | Stevie Ray Vaughan | (확인 필요) | 크런치 · 오르간 |
 | Country Blues | Robert Johnson | (확인 필요) | 하모니카 · **어쿠스틱 스틸** · 업라이트 |
 | Jump Blues | Louis Jordan | (확인 필요) | **혼 섹션** · 피아노 · 업라이트 |
-| Blues Rock · Electric Blues | — | — | 오르간 · 크런치 |
 
-### Blues
+> **2026-09-19 — 이 표에 있던 «Blues Rock · Electric Blues» 한 줄을 뺐습니다.**
+> 둘을 «오르간 · 크런치» 로 묶어 구분 없이 적어 두었는데, **바로 아래 절이 같은 두
+> 프리셋을 아티스트·BPM·swing 까지 붙여 갈라** 놓고 있었습니다. 한 문서가 같은
+> 자리에 대해 «구분 못 함» 과 «이렇게 구분됨» 을 동시에 말하고 있었습니다.
+> 더 자세하고 근거가 붙은 아래 절을 남깁니다.
+
+### Blues — Electric Blues 와 Blues Rock 이 갈리는 자리
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
