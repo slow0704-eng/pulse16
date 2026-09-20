@@ -73,4 +73,28 @@ console.log('\n── 지금 이 저장소에 있는 것 ' + '─'.repeat(44));
 for (const [label, n, note] of rows)
   console.log(`${label.padEnd(24)}${String(n ?? '(못 셈)').padStart(6)}   ${note}`);
 console.log(`\n엔진 내역 — ${engPer.join(' · ')}`);
+
+/* ── data/genres.json ─────────────────────────────────────────────────
+   앱은 이 파일을 읽지 않지만 죽은 파일이 아니다 — tools/chart-to-genres.mjs 가
+   읽고, genres/forms/forms.json 이 feltBpm 을 근거로 인용하며, 11-world.js 의
+   파생 프리셋이 여기서 나왔다. 그런데 프리셋 이름과의 연결을 **아무도 지키지
+   않는다.** 이름을 바꾸면 조용히 끊긴다 — 그래서 여기서 함께 센다. */
+{
+  const J = JSON.parse(read('data/genres.json'));
+  const live = new Set(Object.keys(P.RAW));
+  const genres = J.genres || [];
+  const linked = genres.filter(g => g.preset);
+  const dead = linked.filter(g => !live.has(g.preset));
+  const unlinked = [...live].filter(n => !linked.some(g => g.preset === n));
+  console.log(`\n── data/genres.json (updated ${J.updated}) ` + '─'.repeat(30));
+  console.log(`장르 ${genres.length} · 패턴 ${(J.patterns || []).length} · 프리셋 연결 ${linked.length}`);
+  console.log(`confidence — ` + Object.entries(
+    genres.reduce((a, g) => (a[g.confidence || '(없음)'] = (a[g.confidence || '(없음)'] || 0) + 1, a), {})
+  ).map(([k, v]) => `${k} ${v}`).join(' · '));
+  console.log(dead.length
+    ? `⚠ 끊긴 연결 ${dead.length}건 — ${dead.slice(0, 10).map(g => g.preset).join(' · ')}`
+    : `✅ 끊긴 연결 0건 — 연결된 이름이 전부 실재하는 프리셋이다`);
+  console.log(`연결되지 않은 프리셋 ${unlinked.length}종${unlinked.length ? ' — ' + unlinked.join(' · ') : ''}`);
+}
+
 console.log('\n이 수를 문서에 적지 마십시오. 이 명령을 가리키십시오 — CLAUDE.md §4.');
