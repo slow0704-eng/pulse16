@@ -297,7 +297,7 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Tango | `upright` | 24 | 44 | 0 | 42 | 24 | 120 | 3400 | 52 | 24 | 14 | Natural Minor |
-| ·Nuevo Tango | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
+| ·Nuevo Tango | `arco` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Natural Minor |
 | ·Electrotango | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 
 ### 쿠바
@@ -443,7 +443,7 @@ PULSE·16의 프리셋은 96 BPM이므로 **Reggaeton**이 맞습니다
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Bossa Nova | João Gilberto · A.C. Jobim | Getz/Gilberto | 나일론 · 로즈 · 업라이트 · 셰이커 |
+| Bossa Nova | João Gilberto · Antônio Carlos Jobim | Getz/Gilberto | 나일론 · 로즈 · 업라이트 · 셰이커 |
 | Pagode · Partido Alto | — | — | 카바키뉴(나일론) · 콩가 · **판데이루** |
 | Forró · Baião | Luiz Gonzaga | (확인 필요) | **아코디언 + 자붐부 + 아고고** |
 | Baile Funk · Bruxaria | — | — | 808 · 벨 · 셰이커 |

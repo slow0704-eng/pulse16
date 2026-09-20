@@ -216,7 +216,7 @@
 
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
-| Reggae One Drop | 75 | 12 | `deep` | `tight` | `tight` | `noise` | `wood` | -4/0/-3/0 |
+| Reggae One Drop | 75 | 12 | `deep` | `rimshot` | `tight` | `noise` | `wood` | -4/0/-3/0 |
 | Ska | 140 | 0 | `tight` | `crack` | `tight` | `noise` | `wood` | 0/2/1/2 |
 | ·Mento | 115 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Rocksteady | 90 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
@@ -301,7 +301,7 @@
 | ·Dancehall | 98 | 0 | `deep` | `body` | `tight` | `noise` | `analog` | -4/0/-2/0 |
 | ·Ragga | 100 | 0 | `punch` | `body` | `tight` | `noise` | `synth` | -2/0/-2/0 |
 | ·Digital Dancehall | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Dembow riddim | 100 | 0 | `wood` | `tight` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Dembow riddim | 100 | 0 | `wood` | `rimshot` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Bashment | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Afro-dancehall | 103 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 

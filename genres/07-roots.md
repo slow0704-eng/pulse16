@@ -428,8 +428,12 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 
 이 계열에서 트랙이 기본 역할과 다르게 쓰이는 경우입니다.
 
-- **Honky-tonk** — `snare` = **브러시 트레인 롤** (16분 전체, 2·4박 강세)
 - **Bluegrass** — `snare` = **만돌린 촙**. 드럼이 없는 편성이라 오프비트 강타가 스네어 역할
+
+> Honky-tonk 도 2026-09-19 까지 여기에 「브러시 트레인 롤(16분 전체)」로 적혀
+> 있었습니다. 출처에 그런 서술이 없어 **2·4박 백비트로 되돌렸고**, 그러면 스네어가
+> 기본 역할대로 쓰이는 것이라 이 목록에서 뺐습니다. 경위는 문서 끝
+> «이 곡들로 고친 것» 에 있습니다.
 
 ### Blues
 
@@ -442,7 +446,7 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 | ·Jump Blues | 160 | 50 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Blues Rock | 125 | 0 | `wood` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Country Blues | 90 | 0 | `wood` | `body` | `tight` | `tick` | `wood` | -2/0/-2/0 |
-| ·Electric Blues | 115 | 30 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
+| ·Electric Blues | 115 | 50 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 
 **베이스**
 
@@ -450,9 +454,9 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Chicago Blues | `finger` | 24 | 120 | 0 | 40 | 34 | 110 | 3600 | 54 | 26 | 16 | Minor Pentatonic |
 | ·Texas Blues | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Jump Blues | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Blues Rock | `finger` | 24 | 80 | 0 | 40 | 62 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Country Blues | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Jump Blues | `uprightslap` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Blues Rock | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Country Blues | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
 | ·Electric Blues | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
 
 ### Country
@@ -462,7 +466,7 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 | 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
 |---|---|---|---|---|---|---|---|---|
 | Honky-tonk | 130 | 0 | `wood` | `brush` | `tight` | `noise` | `wood` | 0/2/0/2 |
-| Bluegrass | 150 | 0 | `wood` | `rim` | `tight` | `noise` | `wood` | 1/3/1/2 |
+| Bluegrass | 150 | 0 | `wood` | `rimshot` | `tight` | `noise` | `wood` | 1/3/1/2 |
 | ·Old-time / Hillbilly | 130 | 0 | `wood` | `brush` | `tight` | `tick` | `wood` | -2/0/-2/0 |
 | ·Nashville Sound | 100 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Outlaw Country | 110 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
@@ -478,14 +482,14 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Honky-tonk | `upright` | 24 | 64 | 0 | 38 | 26 | 120 | 3800 | 48 | 24 | 14 | Major |
 | Bluegrass | `upright` | 24 | 56 | 0 | 34 | 22 | 125 | 3600 | 46 | 22 | 12 | Major |
-| ·Old-time / Hillbilly | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
-| ·Nashville Sound | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Old-time / Hillbilly | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Nashville Sound | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Outlaw Country | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Country Pop | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Country Pop | `thumb` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
 | ·Bro-country | `pick` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Countrypolitan | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Countrypolitan | `thumb` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Alt-country | `finger` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
-| ·Americana | `upright` | 24 | 80 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
+| ·Americana | `upright` | 24 | 340 | 0 | 40 | 30 | 120 | 4000 | 56 | 32 | 22 | Minor Pentatonic |
 
 ### Folk
 
@@ -501,9 +505,9 @@ snare  xXxxxXxxxXxxxXxx     16분 롤, 2·4박 강세
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Folk Revival | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
-| ·Indie Folk | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
-| ·Folk Rock | `upright` | 24 | 80 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Folk Revival | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
+| ·Indie Folk | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 22 | Major |
+| ·Folk Rock | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 28 | Major |
 
 ### Gospel · 지역 장르
 

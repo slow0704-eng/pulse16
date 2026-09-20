@@ -952,15 +952,15 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Death Metal | `pick` | 24 | 50 | 0 | 64 | 70 | 100 | 4000 | 52 | 34 | 18 | Natural Minor |
+| Death Metal | `pickmute` | 24 | 50 | 0 | 64 | 70 | 100 | 4000 | 52 | 34 | 18 | Natural Minor |
 | Nu Metal | `pick` | 24 | 180 | 0 | 54 | 62 | 85 | 3000 | 66 | 38 | 30 | Minor Pentatonic |
 | Doom | `finger` | 24 | 600 | 0 | 48 | 58 | 80 | 2400 | 72 | 36 | 22 | Natural Minor |
 | ·Heavy Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
-| ·Thrash Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Thrash Metal | `pickmute` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Black Metal | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Stoner Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Power Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
-| ·Metalcore | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Metalcore | `pickmute` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·NWOBHM | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
 | ·Sludge | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Stoner | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
@@ -981,7 +981,7 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Rock & Roll | `upright` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
+| ·Rock & Roll | `uprightslap` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Surf Rock | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Garage Rock | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Proto-punk | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
@@ -1365,7 +1365,7 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
 | Rock & Roll | Chuck Berry · Little Richard · Bill Haley & His Comets · Jerry Lee Lewis | (확인 필요) | **피아노 5/5곡** · 크런치 · 업라이트 · 색소폰 |
-| Surf Rock | Dick Dale · The Chantays · The Surfaris | (확인 필요) | **스프링 리버브 트레몰로 기타**가 선율 · EP·오르간은 배경 |
+| Surf Rock | Dick Dale · The Chantays · The Surfaris · The Ventures | (확인 필요) | **스프링 리버브 트레몰로 기타**가 선율 · EP·오르간은 배경 |
 | Garage Rock | The Kingsmen · The Sonics · ? and the Mysterians · The Troggs | (확인 필요) | 콤보 오르간 반복 · 퍼즈·크런치 · 탬버린 |
 | Proto-punk | The Stooges · MC5 · The Velvet Underground · The Modern Lovers | Fun House (확인 필요) | **피아노 8분 연타**(오르간은 1곡) · 크런치 · 4분 킥 |
 | Rhythm & Blues | Ray Charles | (확인 필요) | **혼 섹션** · 피아노 |
@@ -1410,7 +1410,7 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 | Stoner Rock | Kyuss · Queens of the Stone Age · Monster Magnet | Blues for the Red Sun | **퍼즈** 리프 · 베이스 유니즌 · 건반 없음 |
 | Stoner | Sleep · Electric Wizard | Dopesmoker | **하프타임 체감 50~65** · 극단 퍼즈 · 건반 없음 |
 | Power Metal | Helloween · Stratovarius · DragonForce | Keeper of the Seven Keys | 16분 더블킥 · 고음 클린 찬가 · 건반 2/4곡(북유럽·영국형) |
-| Nu Metal | Korn · Limp Bizkit · Linkin Park · Slipknot | Follow the Leader | 싱코페 킥 · 팜뮤트 · **스크래치·신스 텍스처** |
+| Nu Metal | Korn · Limp Bizkit · Linkin Park · Slipknot · Deftones | Follow the Leader | 싱코페 킥 · 팜뮤트 · **스크래치·신스 텍스처** |
 | Metalcore | Killswitch Engage · Bullet for My Valentine | Alive or Just Breathing | 빠른 절 ↔ 브레이크다운 · 타이트 |
 | Symphonic Metal | Nightwish · Within Temptation · Rhapsody | (확인 필요) | **오케스트라·합창 4/4곡** · 하이게인 받침 |
 

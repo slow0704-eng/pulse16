@@ -1571,7 +1571,7 @@ B 계열 §4 에 함께 놓여 있어 여기 적습니다.
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| Synthwave | Kavinsky · College · Perturbator | (확인 필요) | **아르페지오 신스 + 무그 베이스** · hall 클랩(게이트 감각) · 100 BPM 정박 · 리드는 보컬 |
+| Synthwave | Kavinsky · College · Perturbator · (80년대 영화음악 계보) | (확인 필요) | **아르페지오 신스 + 무그 베이스** · hall 클랩(게이트 감각) · 100 BPM 정박 · 리드는 보컬 |
 
 > Synthwave 는 [05-electronic.md](05-electronic.md) 의 표에도 한 줄이 있습니다.
 > 프리셋이 `keys:'lead'` 와 `bass:'moog'` 를 직접 적어 하위분기 기본값(`pad`)을

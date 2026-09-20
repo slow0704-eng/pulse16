@@ -1,10 +1,14 @@
 # PULSE·16 CI — 커밋할 때마다 도는 안전장치.
 #
-# 두 단계로 나눈 이유: 정적 검사는 Node 만 있으면 20초 안에 끝나는데,
-# 브라우저 검사는 크로미움을 받아야 해서 몇 분이 든다. 값싼 것을 먼저 돌려
-# 거기서 걸리면 비싼 것을 아예 시작하지 않는다(`needs: static`).
+# 두 단계로 나눈 이유: 정적 검사는 Node 만 있으면 몇 초에 끝나는데, 브라우저
+# 검사는 크로미움을 받아야 해서 몇 분이 든다. 값싼 것을 먼저 돌려 거기서
+# 걸리면 비싼 것을 아예 시작하지 않는다(`needs: static`).
 #
-# 검사 내용은 tools/ci/ 의 각 스크립트 머리말에 적혀 있다.
+# ⚠ 검사 목록을 여기에 적지 마라. 목록은 `tools/ci/all.mjs` 한 곳에 있다.
+#   예전에는 이 파일과 README 양쪽에 손으로 적혀 있었고, 그래서 갈라졌다 —
+#   README 대로 다 돌려도 세 검사가 빠져 CI 에서만 떨어지는 상태였다.
+#   검사를 더하려면 `all.mjs` 의 CHECKS 에 한 줄 넣으면 여기도 따라온다.
+#   각 검사가 무엇을 보장하는지는 `tools/ci/` 의 스크립트 머리말에 있다.
 
 name: CI
 
@@ -25,7 +29,7 @@ permissions:
 jobs:
   # ── 1단계 · 정적 검사 ── 외부 의존성 0. Node 만 있으면 된다.
   static:
-    name: 정적 검사 (문법 · 전역 충돌 · 로드 순서)
+    name: 정적 검사 (문법 · 전역 충돌 · 로드 순서 · 문서 동기)
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -35,41 +39,12 @@ jobs:
         with:
           node-version: '22'
 
-      - name: 문법 검사
-        run: node tools/ci/check-syntax.mjs
+      - name: 정적 검사 전부
+        run: node tools/ci/all.mjs --static
 
-      # 이 저장소에서 가장 중요한 검사다. 같은 이름을 두 파일에서 const 로
-      # 선언하면 브라우저가 그 뒤 스크립트를 전부 실행하지 않는다.
-      - name: 전역 이름 충돌 검사
-        run: node tools/ci/check-globals.mjs
-
-      - name: 로드 순서 · 지도 대조
-        run: node tools/ci/check-load-order.mjs
-
-      # 정의 없는 var() 는 색만 빠지는 게 아니라 **선언 전체를 무효화**한다.
-      # billboard.html 의 body 배경이 그렇게 통째로 날아가 있었다(흰 바탕).
-      - name: CSS 변수 검사
-        run: node tools/ci/check-css-vars.mjs
-
-      # 폼의 총 마디를 선율 길이가 못 나누면 섹션이 선율의 엉뚱한 자리에
-      # 얹힌다. 소리는 나므로 스모크도 회귀도 못 잡는다. 배정표의 오타도 본다.
-      - name: 곡 형식 · 선율 격자 검사
-        run: node tools/ci/check-song-length.mjs
-
-      # 엔진 이름을 잘못 적으면 예외도 안 나고 소리도 난다 — 다만 그 장르의
-      # 소리가 아니라 기본값이 난다(voice-keys.js 의 KENG[name]||KENG.pad).
-      # 2026-09-18 에 열한 건이 이 상태였다.
-      - name: kit 엔진 이름 검사
-        run: node tools/ci/check-kit-engines.mjs
-
-      # src/data/billboard.js · profiles.js · references.js 는 생성물이다. 원본(billboard/*.md ·
-      # genres/profiles/*.json · genres/*.md)을 고치고 다시 만들지 않으면 화면이 낡은 것을 보여 준다.
-      - name: 생성물이 원본과 일치하는가
-        run: node tools/build-refdata.mjs --check
-
-  # ── 2·3단계 · 브라우저 검사 ── static 이 통과했을 때만 돈다.
+  # ── 2단계 · 브라우저 검사 ── static 이 통과했을 때만 돈다.
   browser:
-    name: 브라우저 검사 (스모크 · 회귀)
+    name: 브라우저 검사 (스모크 · 회귀 · 프로파일 · 레이아웃)
     needs: static
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -107,21 +82,7 @@ jobs:
         working-directory: mcp/pulse-audit
         run: npx playwright install-deps chromium
 
-      - name: 스모크 테스트
-        run: node tools/ci/smoke.mjs
-
-      # 회귀 시험은 45초 재생 구간이 있어 2~3분 걸린다.
-      # --quick 을 붙이면 10초로 줄지만, CI 에서는 줄이지 않는다 —
-      # liveNodes 누수는 짧게 돌리면 안 드러난다.
-      - name: 회귀 시험
-        run: node tools/ci/regression.mjs
-
-      # 장르 프로파일(genres/profiles/*.json)과 melody.js 가 어긋나는지 본다.
-      # 프로파일이 아직 없으면 «검사할 것 없음» 으로 조용히 통과한다.
-      - name: 장르 프로파일 검사
-        run: node tools/ci/check-melody-profile.mjs
-
-      # «고르기 · Play · 첫 패드» 가 첫 화면 안에 있는가. 컨트롤을 하나 더
-      # 얹을 때마다 그리드가 조금씩 접힘선 아래로 밀려 내려간다 — 그걸 잰다.
-      - name: 레이아웃 · 접힘선 검사
-        run: node tools/ci/check-layout.mjs
+      # 회귀 시험의 45초 재생 구간은 CI 에서 줄이지 않는다 —
+      # liveNodes 누수는 짧게 돌리면 안 드러난다(--quick 은 손으로 볼 때만).
+      - name: 브라우저 검사 전부
+        run: node tools/ci/all.mjs --browser

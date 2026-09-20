@@ -1229,7 +1229,7 @@ PULSE·16의 Trap 프리셋은 1번 방식으로 되어 있습니다
 
 | 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
 |---|---|---|---|
-| **Phonk** | DJ Screw ※1 · SpaceGhostPurrp | (확인 필요) | 벨 · **lofi 스네어 + 카우벨** · tick 햇 · **145 BPM**(확인 142~156) |
+| **Phonk** | DJ Screw ※1 · SpaceGhostPurrp · (Memphis 계보 파생) | (확인 필요) | 벨 · **lofi 스네어 + 카우벨** · tick 햇 · **145 BPM**(확인 142~156) |
 | **Drift Phonk** | Kordhell · Freddie Dredd | (확인 필요) | 벨 · **카우벨**(정의 조건) · deep 킥 · 150 BPM · **2010년대 후반 러시아** |
 | Brazilian Phonk | MC GW ※2 | (확인 필요) | deep 킥 · **카우벨 톰** · 140 BPM · 탐보르장 골격 |
 

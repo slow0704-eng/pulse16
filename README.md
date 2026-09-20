@@ -69,14 +69,18 @@ python -m http.server 8000
 push·PR 마다 GitHub Actions 가 자동으로 돕니다(`.github/workflows/ci.yml`).
 손으로 돌릴 때는 아래와 같습니다.
 
-**정적 검사** — 외부 의존성 0, 몇 초면 끝납니다. 커밋 전에 이것만이라도 돌리세요.
+```
+node tools/ci/all.mjs            # 전부
+node tools/ci/all.mjs --static   # 브라우저 검사 빼고 — 몇 초. 커밋 전에 이것만이라도
+node tools/ci/all.mjs --list     # 무엇을 도는지만 보기
+```
 
-```
-node tools/ci/check-syntax.mjs        # 모든 .js/.mjs 문법
-node tools/ci/check-globals.mjs       # 전역 이름 충돌  ← 가장 중요
-node tools/ci/check-load-order.mjs    # HTML ↔ 디스크 ↔ ARCHITECTURE.md 지도
-node tools/ci/check-css-vars.mjs      # 정의 없는 var()
-```
+**검사 목록은 `tools/ci/all.mjs` 한 곳에만 있습니다.** 예전에는 이 README 와
+`ci.yml` 양쪽에 손으로 적혀 있었고, 그래서 갈라졌습니다 — README 대로 다 돌려도
+`check-kit-engines` · `check-song-length` · `build-refdata --check` 가 빠져 CI 에서
+떨어지곤 했습니다. 목록이 두 곳에 있으면 반드시 갈라집니다.
+
+아래는 그중 눈여겨볼 것들입니다.
 
 `check-css-vars.mjs` 는 눈으로만 보이는 부류를 잡습니다. 정의되지 않은 CSS
 변수는 색만 빠지는 게 아니라 **그 선언 전체가 계산 시점에 무효** 가 됩니다 —
@@ -85,18 +89,22 @@ node tools/ci/check-css-vars.mjs      # 정의 없는 var()
 아무것도 안 남습니다.
 
 `check-globals.mjs` 가 가장 중요합니다. 이 앱은 클래식 `<script>` 라 `src/` 의
-최상위 선언 485개가 **하나의 전역 렉시컬 스코프**를 공유합니다. 두 파일이 같은
+최상위 선언 전부가 **하나의 전역 렉시컬 스코프**를 공유합니다(몇 개인지는 검사가 찍어 줍니다 — 이 문서에 숫자를 적어 두면 낡습니다). 두 파일이 같은
 이름을 `const` 로 선언하면 브라우저가 그 뒤 스크립트를 전부 실행하지 않고
 화면이 백지가 됩니다. 새 전역을 추가하기 전에 이것을 돌리세요.
 
-**브라우저 검사** — 아래 MCP 서버의 `node_modules` 를 씁니다.
+`check-docs-sync.mjs` 는 **문서가 코드와 같은 말을 하는가**를 봅니다. `genres/` 의
+«PULSE·16 설정값» 표와 `patterns/` 의 16칸 패턴 블록은 프리셋 파일의 값을 옮겨 적은
+사본이라, 프리셋만 고치고 문서를 잊으면 조용히 갈라집니다. 갈라졌으면
+`node tools/sync-docs.mjs` 가 **수치만** 다시 찍어 냅니다 — 절 구성이나 `←` 한 줄
+설명 같은 사람이 쓴 글은 건드리지 않습니다.
+
+브라우저 검사 넷(`smoke` · `regression` · `check-melody-profile` · `check-layout`)은
+아래 MCP 서버의 `node_modules` 를 씁니다. 손으로 따로 부를 일이 있다면 회귀 시험의
+빠른 판만 기억해 두면 됩니다.
 
 ```
-node tools/ci/smoke.mjs               # 실제로 뜨는가 · 콘솔 에러 0건 · file:// · axe
-node tools/ci/regression.mjs          # docs/qa/01-신뢰성.md 의 결함 재발 검사
 node tools/ci/regression.mjs --quick  # 45초 재생 구간을 10초로 (손으로 볼 때만)
-node tools/ci/check-melody-profile.mjs  # 장르 프로파일 ↔ melody.js
-node tools/ci/check-layout.mjs        # 고르기·Play·첫 패드가 첫 화면 안에 있는가
 ```
 
 `check-layout.mjs` 는 «뭐가 자꾸 묻힌다» 를 숫자로 바꾼 것입니다. 컨트롤을

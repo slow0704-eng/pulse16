@@ -757,7 +757,7 @@
 | ·Philadelphia Soul | 118 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
 | ·Memphis Soul | 100 | 0 | `wood` | `body` | `tight` | `noise` | `wood` | -2/0/-2/0 |
 | ·Northern Soul | 130 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
-| ·Psychedelic Soul | 105 | 0 | `punch` | `body` | `tight` | `noise` | `analog` | -2/0/-2/0 |
+| ·Psychedelic Soul | 105 | 0 | `punch` | `body` | `tight` | `noise` | `conga` | -2/0/-2/0 |
 
 **베이스**
 
