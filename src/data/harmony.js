@@ -111,6 +111,23 @@ const PROG_NAMES = Object.keys(PROG);
    BLINE_KIT 과 granularity 를 맞췄다 — 전부 다 채우지는 않지만
    장르 문서에서 화성적 정체성이 뚜렷한 하위분기는 짚었다. */
 const PROG_KIT = {
+  /* ── 계열:분기 키 — 분기 이름이 계열마다 겹치는 자리에 쓴다 ──
+     2026-09-20 조사(장르 문서를 직접 열어 확인).
+
+     A:뿌리 — Rock and roll 문서가 「Minimal blues chord progressions such as
+       the **twelve-bar blues** are commonly used」라고 적는다. 12마디는 이
+       도구의 4·8·16 격자에 안 맞아 blues_16bar(태그 포함)·roots_ivv 로 옮긴다
+       (PROG 의 G 계열 주석과 같은 이유).
+       ⚠ 맨이름 `'뿌리'` 로 넣으면 B:뿌리(Traditional Pop·Brill Building)에도
+         걸리는데 시나트라 발라드는 12마디 블루스가 아니다. 그래서 계열 접두를 쓴다.
+
+     A:Psychedelic · Krautrock — Psychedelic rock 문서 「modal melodies and
+       **drones**」, Krautrock 문서 「long-form repetition, texture, and **drone**
+       elements rather than song structure」. 모달 2코드는 계열 기본값에 이미
+       있으므로 실질 추가는 **드론**(funk_one = 정지 화성) 하나다. */
+  'A:뿌리':['blues_16bar','roots_ivv'],
+  'A:Psychedelic · Krautrock':['modal_i_vii','modal_i_iv','funk_one'],
+
   'Metal':['modal_i_iv','blues_descend'],
   'Hard Rock':['modal_i_iv','blues_descend'],
   'Punk':['modal_i_iv','hh_loop_iv'],
@@ -181,10 +198,16 @@ const PROG_KIT_CAT = {
      표에 닿지 못한 것이다 — 같은 이유로 곡 형식 축(catFor 를 쓴다)은
      24갈래로 멀쩡했다. */
 function progPoolFor(name){
-  const sub = PROG_KIT[PRESET_SUB[name]];
-  if(sub) return sub;
   const cat = (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name];
-  return PROG_KIT_CAT[cat] || ['pop_four'];
+  const sub = PRESET_SUB[name];
+  /* `계열:분기` 를 먼저 본다 — **분기 이름이 계열마다 겹치기 때문이다.**
+     `뿌리` 는 A(Rock & Roll·Surf·Garage·Proto-punk) · B(Traditional Pop·Brill
+     Building) · D(Rhythm & Blues) 셋이 함께 쓴다. 12마디 블루스는 A·D 에는
+     맞고 B 에는 틀리므로, 맨이름 키로는 근거를 배정할 방법이 없었다.
+     곡 형식 축은 이 문제를 이미 풀어 두었다 — `SONG_FORM_POOL_SUB` 의 키가
+     `계열:분기` 다(arrange.js §formPoolFor 주석). 같은 모양을 여기에도 쓴다.
+     ⚠ 맨이름 키는 폴백으로 남긴다 — 지금 배정된 값이 하나도 바뀌지 않는다. */
+  return PROG_KIT[cat + ':' + sub] || PROG_KIT[sub] || PROG_KIT_CAT[cat] || ['pop_four'];
 }
 
 /** p 는 PROG 의 항목. bar 는 0부터. degs.length 로 되풀이한다 —
@@ -425,11 +448,12 @@ function compPoolFor(name){
        && !L.keys2.some(v => v)
        && typeof melodyPoolFor === 'function' && !(melodyPoolFor(name) || []).length)
     return [];
-  const sub = COMP_KIT[PRESET_SUB[name]];
-  if(sub) return sub;
   /* progPoolFor 와 같은 이유로 LIB.cat 이 먼저다 — PRESET_CAT 은 56종만 적힌
      예외표라 그것만 보면 계열 폴백이 건너뛰어지고 ['pop_pulse'] 로 떨어진다.
-     COMP_KIT_CAT 은 A~K·X 를 전부 덮고 있다. */
+     COMP_KIT_CAT 은 A~K·X 를 전부 덮고 있다.
+     그리고 `계열:분기` 키를 먼저 본다 — 아래 «'뿌리' 는 일부러 안 넣는다» 주석이
+     말하는 겹침 문제를 그 키가 풀어 준다. 맨이름 키는 폴백으로 남는다. */
   const cat = (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name];
-  return COMP_KIT_CAT[cat] || ['pop_pulse'];
+  const sub = PRESET_SUB[name];
+  return COMP_KIT[cat + ':' + sub] || COMP_KIT[sub] || COMP_KIT_CAT[cat] || ['pop_pulse'];
 }

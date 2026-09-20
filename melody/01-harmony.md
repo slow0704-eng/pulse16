@@ -269,3 +269,52 @@ chordSemis(rootDeg, scaleName)
 맞추려면 `MELODY` 98종을 **각각 특정 진행에 맞춰 다시 쓰는** 작업이
 필요한데, 이는 이번 보강(§ 00-analysis.md 의 RIFF·BLINE 확장)보다 훨씬
 큰 작업이라 이번 범위에는 넣지 않았습니다 — 다음 보강 대상으로 남깁니다.
+
+### 8-5. 하위분기 단위로 가르려면 — A 계열 시범 조사 (2026-09-20)
+
+「장르가 달라도 화성이 똑같다」는 지적에서 시작했습니다. 먼저 **배선 결함 둘**을
+고쳤고(계열 폴백에 닿지 못하던 문제 — 경위는 `patterns/00-harmony.md` §5-11),
+그다음 «하위분기마다 제 진행» 을 근거 있게 줄 수 있는지 **A 계열로 시범**했습니다.
+
+장르 문서 여덟을 직접 열었습니다 — Country rock · Rock and roll · Surf music ·
+Garage rock · Proto-punk · Post-punk · Krautrock · Psychedelic rock.
+
+> **가장 중요한 결과: 컴핑 축은 이 방법으로 채울 수 없습니다.**
+> **여덟 문서가 여덟 다 침묵했습니다.** Farfisa 오르간·일렉트릭 피아노가
+> «있다» 는 서술은 있어도 **언제 치는지**(8분·뒷박·패드·스탭)를 말한 문서가
+> 하나도 없습니다. 컴핑이 비어 있는 분기 16개 전체에 해당하는 이야기입니다.
+
+화성은 여덟 중 **둘만** 쓸 수 있었습니다.
+
+| 문서 | 인용 | 판정 |
+|---|---|---|
+| Rock and roll | 「Minimal blues chord progressions such as the **twelve-bar blues** are commonly used」 | 사용 |
+| Psychedelic rock | 「modal melodies and **drones**」 (+ 탐부라 드론 · 라가) · Krautrock 「long-form repetition, texture, and **drone** elements」 | 사용 |
+| Garage rock · Proto-punk | 「**three-chord** template」 | **모호** — 어느 코드인지 안 적습니다 |
+| Post-punk | 「three-chord progressions **에서 멀어졌다**」 | **반증** — 쓰는 것이 아닙니다 |
+| Country rock · Surf music | — | 침묵 |
+
+적용한 것은 둘뿐입니다. `A:뿌리` → `blues_16bar`·`roots_ivv`(12마디는 4·8·16
+격자에 안 맞아 §8-1 의 규칙대로 옮긴 것), `A:Psychedelic · Krautrock` → 모달
+둘 + `funk_one`(드론). 모달 2코드는 계열 기본값에 이미 있었으므로 **실질
+추가는 드론 하나**입니다. `A:루츠와의 교차`·`A:Post-punk 계보` 는 **근거 없음**
+으로 비워 두었습니다.
+
+#### 키 모양을 `계열:분기` 로 넓혔습니다
+
+`뿌리` 는 **A**(Rock & Roll·Surf·Garage·Proto-punk) · **B**(Traditional Pop·
+Brill Building) · **D**(Rhythm & Blues) 셋이 공유합니다. 12마디 블루스는 A·D 에는
+맞고 **B 에는 틀립니다** — 시나트라 발라드는 12마디 블루스가 아닙니다. 맨이름
+키로는 근거를 배정할 방법이 아예 없었습니다(`harmony.js` 가 「`'뿌리'` 는 일부러
+안 넣는다」고 적어 둔 이유가 이것입니다).
+
+곡 형식 축은 이 문제를 이미 풀어 두었습니다 — `SONG_FORM_POOL_SUB` 의 키가
+`계열:분기` 입니다. 같은 모양을 `PROG_KIT`·`COMP_KIT` 에도 들였고, **맨이름 키는
+폴백으로 남겨** 기존 배정은 하나도 바뀌지 않게 했습니다. 실측으로 확인했습니다 —
+**화성이 바뀐 프리셋 9종(의도한 그 9종), 컴핑이 바뀐 프리셋 0종.**
+
+#### 다음 판단의 근거
+
+명중률이 **화성 8분의 2, 컴핑 8분의 0** 입니다. 남은 B~G 33개 분기를 같은
+방법으로 돌릴지는 이 수치로 판단해야 합니다 — 특히 컴핑 축은 **장르 문서가
+아니라 다른 출처**(연주 교본·프로덕션 자료)가 아니면 채울 수 없습니다.
