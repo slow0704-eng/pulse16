@@ -411,6 +411,10 @@ LIB_NAMES.forEach(name => {
        그래서 프리셋 90개에 패턴을 넣고도 P.keys2 가 전부 빈 배열이었다(실측). */
     P.keys2=L.keys2.slice(); src.keys2=name;
     P.gtr2 =L.gtr2.slice();  src.gtr2 =name;
+    /* 빈 뱅크를 이 장르의 형제 프리셋으로 채운다 — 그때부터 곡 구조의 코러스
+       전환과 뱅크 셔플이 실제로 동작한다(sequencer.js fillEmptyBanks 주석).
+       위에서 pushUndo() 를 이미 불렀으므로 Ctrl+Z 로 네 뱅크가 통째로 돌아간다. */
+    fillEmptyBanks(name);
     /* 건반·기타 음색도 프리셋을 따라간다. 예전에는 드럼과 베이스만 따라가서
        Death Metal 을 불러도 기타가 clean 그대로였다. */
     if(L.kit.keys) eng.keys=L.kit.keys;
@@ -600,6 +604,12 @@ function switchBank(i){
   if(i===bank) return;
   pushUndo();
   bank=i; P=banks[i];
+  /* 사용자가 **직접** 들어간 뱅크는 이제 사용자의 것이다 — 자동 채우기가 다시
+     덮지 않도록 표시를 지운다(sequencer.js fillEmptyBanks 참고).
+     ⚠ 셔플이 자동으로 지나가는 gotoBank() 에서는 지우지 않는다. 거기서 지우면
+     틀어놓기만 해도 네 뱅크가 전부 «사용자 것» 이 되어, 장르를 바꿔도 코러스가
+     첫 장르의 패턴을 계속 물고 있게 된다. */
+  delete banks[i]._auto;
   document.querySelectorAll('.slot').forEach((s,j) => { s.dataset.on = j===i ? 1 : 0; });
   syncAll(); markDirty();
 }

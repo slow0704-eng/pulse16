@@ -413,6 +413,57 @@ function shufflePattern(){
 const bankFilled = b => TRACK_IDS.some(id => b.drums[id].some(v=>v))
                      || b.bass.some(v=>v>=0) || b.keys.some(v=>v) || b.gtr.some(v=>v>=0);
 const filledBanks = () => banks.map((b,i) => bankFilled(b) ? i : -1).filter(i => i>=0);
+
+/* ── 형제 프리셋으로 빈 뱅크 채우기 ────────────────────────────────
+   왜 필요한가. 뱅크 A~D 는 «곡의 구간» 으로 쓰라고 만든 기계장치인데,
+   앱 안에 B~D 를 채우는 경로가 **하나도 없었다.** 2026-09-20 에 여덟 장르를
+   실측하니 어느 장르에서도 채워진 뱅크는 A 하나뿐이었고(B·C·D 는 글자 하나까지
+   같은 빈 상태), 그래서 이런 일이 벌어지고 있었다.
+
+     · 기본 켜짐인 **곡 구조**의 코러스 전환(arrange.js 의 `bank:true`)이
+       shuffleBank() → null 로 **조용히 아무 일도 안 함**
+     · **패턴 셔플**의 기본 모드가 뱅크 모드인데, 켜면 동작 대신
+       「내용이 있는 뱅크가 하나뿐입니다」라는 오류 안내가 나옴
+     · manual.html 이 약속한 「섹션이 바뀌면 자동으로 다른 뱅크로 넘어갑니다」가
+       기본 사용자에게 **한 번도 일어나지 않음**
+
+   재료는 **같은 (계열, 분기) 쌍의 형제 프리셋**이다. 그 쌍이 음색 배정과 같은
+   단위라 악기가 어울리고, 뱅크 전환은 BPM·엔진·레벨을 바꾸지 않으므로
+   «같은 악기·같은 템포로 다른 구간» 이 된다. 형제가 넷 이상인 분기가 41개로
+   프리셋 294종(82%)을 덮고, 형제가 없는 12종은 예전처럼 빈 채 남는다.
+
+   ⚠ **사용자가 찍어 둔 뱅크는 절대 건드리지 않는다** — bankFilled() 로 비어
+     있는 것만 채우고, 지금 보고 있는 뱅크도 건너뛴다.
+   ⚠ **패턴만 베낀다.** src·eng·lvl·노브는 뱅크 밖 전역이라 여기서 만지면
+     «같은 악기로 다른 구간» 이 깨지고, src 를 쓰면 markChips() 의 칩
+     하이라이트까지 어긋난다. */
+function fillEmptyBanks(name){
+  if(!LIB[name]) return [];
+  const c=catOf(name), s=subOf(name);
+  const sibs=LIB_NAMES.filter(n => n!==name && catOf(n)===c && subOf(n)===s);
+  const done=[];
+  let k=0;
+  for(let i=0;i<banks.length;i++){
+    /* 지금 보고 있는 뱅크는 건드리지 않는다. 그 밖에는 «비어 있거나, 지난번에
+       우리가 자동으로 채운 것(_auto)» 만 다시 채운다.
+
+       _auto 가 없으면 장르를 바꿔도 C·D 가 첫 장르의 형제로 굳어, 코러스가
+       엉뚱한 장르로 튄다(2026-09-20 실측 — J-pop·Big Room 으로 옮겨도 C·D 의
+       킥이 글자 하나까지 그대로였다). 반대로 _auto 를 안 보고 무조건 덮으면
+       사용자가 찍어 둔 패턴이 장르 한 번에 날아간다. 그 사이를 가르는 표시다. */
+    if(i===bank || (bankFilled(banks[i]) && !banks[i]._auto)) continue;
+    const L=LIB[sibs[k]];
+    if(!L) break;                       // 형제가 떨어지면 나머지는 빈 채 둔다
+    const b=banks[i];
+    TRACKS.forEach(t => { b.drums[t.id]=L.drums[t.id].slice(); });
+    b.bass =L.bass.slice();  b.keys =L.keys.slice();  b.gtr  =L.gtr.slice();
+    b.keys2=L.keys2.slice(); b.gtr2 =L.gtr2.slice();
+    b._auto = true;                     // 사용자가 들어가 보면 switchBank 가 지운다
+    done.push(`${'ABCD'[i]}=${sibs[k]}`);
+    k++;
+  }
+  return done;
+}
 /** 실행취소·자동저장을 건드리지 않는 조용한 뱅크 전환 (셔플 전용) */
 function gotoBank(i){
   if(i===bank) return;

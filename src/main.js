@@ -20,6 +20,9 @@ if(!HAS_TONE){
     P.bass=L.bass.slice();
     P.keys=L.keys.slice(); P.gtr=L.gtr.slice();
     P.keys2=L.keys2.slice(); P.gtr2=L.gtr2.slice();   // 2번 트랙 — build.js 주석 참고
+    /* 칩을 한 번도 안 눌러도 곡 구조의 코러스 전환이 동작하도록 여기서도 채운다.
+       저장본을 복원한 경우에는 부르지 않는다 — 그쪽 뱅크는 사용자의 것이다. */
+    fillEmptyBanks('Boom Bap');
     applyTune(L.tune); applyBassCfg(L.bcfg);
     UI.savestat.textContent='자동 저장 준비됨';
   }else{
