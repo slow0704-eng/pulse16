@@ -399,6 +399,23 @@ Hot 100 1위 곡 실측(표본 5곡)에서 맞춘 값입니다.
 하위분기를 따로 적지 않으면 **계열 기본형을 물려받습니다** — 안 적는 것이
 곧 «출처가 이 분기를 따로 말하지 않았다» 는 기록입니다.
 
+### 조사했으나 바꾸지 않은 것 — 계열 F (2026-09-20)
+
+F 의 네 분기를 장르 문서로 훑었습니다. **코드는 한 줄도 바뀌지 않았고, 그것이
+결론입니다.** 안 적어 두면 다음 사람이 같은 네 문서를 다시 엽니다.
+
+| 분기 | 찾은 것 | 왜 안 바꿨나 |
+|---|---|---|
+| `F:Bebop 계보` | Bebop 문서 「a theme (a **'head'**) would be presented together at the **beginning and the end** of each piece, with improvisational solos」 · Head (music) 「the head, **several choruses of solos** and a **recapitulation of the head**」 | 출처가 확인해 준 것이 **이미 물려받고 있는 값**(계열 F 폴백 = `headSolos`)입니다. 같은 값을 분기에 또 적으면 바뀌는 프리셋이 0종인 데다, 위 §4 의 「안 적는 것이 곧 기록」 규약을 흐립니다 |
+| `F:Cool · West Coast` | Cool jazz **침묵**. West Coast jazz 「The music relied relatively more on **composition and arrangement** than on the individually improvised playing」 | 이 한 문장은 **형식을 지정하지 않고**, 오히려 즉흥 중심인 `headSolos` 와 **반대 방향**입니다. 대안 형식을 말해 주지 않으므로 붙일 것이 없습니다 |
+| `F:Fusion 계보` | Jazz fusion 「**Some** employ groove-based vamps fixed to a single key or a single chord … **Others** use elaborate chord progressions, unconventional time signatures」 | 출처가 **둘로 갈라** 적습니다. 하나를 고르는 순간 그것이 지어낸 차이입니다 |
+| `F:현대 갈래` | Smooth jazz **전면 침묵**. Acid jazz 「danceable grooves and **long, repetitive compositions**」 | 마디 수도 구간도 없는 한 줄이고, **분기의 절반인 Smooth Jazz 에는 근거가 전혀 없습니다.** `G:Gospel · 지역 장르` 와 같은 묶임 문제라 분기 배정이 성립하지 않습니다 |
+
+> **이 표가 §4 의 규약에 빈 칸을 하나 드러냅니다.** 「안 적음」은 원래
+> «출처가 이 분기를 따로 말하지 않았다» 를 뜻하는데, `F:Bebop 계보` 는
+> **출처가 말했고 그것이 물려받는 값과 같은** 제3의 상태입니다. 규약을 고치지
+> 않고 이 표로 대신 적어 둡니다.
+
 ### 조사하지 않은 것을 적어 둡니다
 
 이번 한 바퀴에서 출처를 찾은 것은 위 12종이고, 그것으로 72개 분기를 덮었습니다.
