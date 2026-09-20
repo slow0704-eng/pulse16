@@ -1358,6 +1358,55 @@
           "bank": false
         }
       }
+    },
+    "gospelVamp": {
+      "label": "가스펠 — 콜앤드리스폰스와 뱀프",
+      "cat": "band",
+      "confidence": "low",
+      "arc": "build",
+      "basis": "위키백과 Black gospel music — 「In traditional forms, sometimes called the Congregational Song (usually with a 12 or 16 bar form), there is a call and response between the soloist and choir」 · 「The soloist is expected to improvise lyrics during the vamp ... at the apex of the song」. Vamp (music) 은 「a vamp at the end of a song is often called a tag」이라 끝자리임을 확인해 주고 가스펠에서 쓰인다고 명시한다(chain vamps). ⚠ **뱀프의 마디 수는 어느 출처도 말하지 않는다** — 오히려 「보컬이 준비될 때까지 반복」·「길이가 불확정」이라고 적는다. 그래서 아웃트로 32마디는 **출처의 값이 아니라 «다른 구간의 두 배» 라는 내 선택**이다. 근거가 있는 것은 16마디 구간 쪽뿐이고(12는 4·8·16 격자에 안 맞아 blues12 와 같은 이유로 16으로 옮겼다), 확신도를 low 로 둔 이유가 이것이다. ⚠ 「modulate to a higher key at the apex」는 이 도구가 못 한다 — 근음이 곡 전체에 하나다(melody/01-harmony.md §7)",
+      "secs": [
+        { "k": "intro",  "bars": 16 },
+        { "k": "verse",  "bars": 16 },
+        { "k": "chorus", "bars": 16 },
+        { "k": "verse",  "bars": 16 },
+        { "k": "chorus", "bars": 16 },
+        { "k": "bridge", "bars": 16 },
+        { "k": "outro",  "bars": 32 }
+      ],
+      "rule": {
+        "_why": "일반 규칙은 아웃트로에서 악기를 빼고 잦아들게 한다. 가스펠의 뱀프는 정반대로 **곡의 절정**이다 — 소리스트가 그 위에서 즉흥하는 자리다. 그래서 아웃트로를 코러스만큼 키우고 건반 둘(오르간·합창)을 앞에 세운다. 브릿지는 콜앤드리스폰스가 가장 또렷한 자리로 두어 합창(keys2)을 올린다. bank 은 전 구간 false — 한 구조를 그대로 도는 형식이다",
+        "intro": {
+          "off": ["clap", "tom", "perc", "gtr2"],
+          "lvl": { "keys": 1.0, "bass": 0.9 },
+          "fillOut": true,
+          "bank": false
+        },
+        "verse": {
+          "off": ["clap", "ohat", "tom", "perc", "gtr2"],
+          "lvl": { "keys": 0.9, "keys2": 0.7, "bass": 0.95 },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": ["tom", "perc"],
+          "lvl": { "keys": 1.4, "keys2": 1.3, "snare": 1.2, "bass": 1.15, "clap": 1.15 },
+          "fillOut": true,
+          "bank": false
+        },
+        "bridge": {
+          "off": ["tom", "perc", "gtr2"],
+          "lvl": { "keys2": 1.45, "keys": 1.15, "snare": 1.1, "clap": 1.2 },
+          "fillOut": true,
+          "bank": false
+        },
+        "outro": {
+          "off": ["tom", "perc"],
+          "lvl": { "keys": 1.45, "keys2": 1.4, "snare": 1.2, "bass": 1.15, "clap": 1.2 },
+          "fillOut": true,
+          "bank": false
+        }
+      }
     }
   },
   "assignCat": {
@@ -1628,6 +1677,12 @@
         "grungeQuietLoud"
       ],
       "why": "사용자가 그런지에 대해 13구간 구간표를 직접 지정했다. 분기 전체(A:Alternative — Shoegaze·Dream Pop·Britpop 등 아홉)가 아니라 이 프리셋만 예외로 두는 이유는, 그 표가 한 곡의 구조이지 분기 전체를 조사한 결과가 아니기 때문이다(00-form.md §4 «프리셋 단위 예외» 규칙). 출처 미확인이라 형식의 확신도는 low 다"
+    },
+    "Gospel": {
+      "forms": [
+        "gospelVamp"
+      ],
+      "why": "2026-09-20 조사에서 Black gospel music 문서가 뱀프와 콜앤드리스폰스를 명시해 근거가 섰다. ⚠ 분기(G:Gospel · 지역 장르)에 걸지 않고 이 프리셋만 예외로 두는 이유는 **같은 분기에 Zydeco / Cajun 이 함께 있기 때문**이다 — 가스펠의 뱀프 형식을 자이데코에 씌울 근거는 없다. 분기 이름이 여러 장르를 묶는 자리에서는 프리셋 단위가 맞다(00-form.md §4)"
     }
   },
   "assignNote": "폼 풀은 프리셋 > 하위분기 > 계열 순으로 찾는다. 프리셋 단위 예외는 «그 프리셋만 계보와 다르다» 는 근거가 있을 때만 둔다 — MELODY_KIT_PRESET 이 하위분기 상속을 끊은 것과 같은 순서다."

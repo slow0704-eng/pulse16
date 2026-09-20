@@ -337,6 +337,40 @@ Hot 100 1위 곡 실측(표본 5곡)에서 맞춘 값입니다.
 `harmony.js` 의 `modal_i_iv_III_VI`(도수 0-3-2-5 = 단조 i-iv-III-VI)가 짝인데,
 진행 표에는 프리셋 단위가 없어 **`Alternative` 분기 전체가 함께 씁니다.**
 
+### ⑮ `gospelVamp` — 가스펠, 콜앤드리스폰스와 뱀프 (128마디)
+
+> 「In traditional forms, sometimes called the Congregational Song (usually with
+> a **12 or 16 bar form**), there is a **call and response** between the soloist
+> and choir」 · 「The soloist is expected to improvise lyrics during the **vamp**
+> … at the apex of the song」 — [Black gospel music](https://en.wikipedia.org/wiki/Black_gospel_music)
+>
+> 「a vamp at the end of a song is often called a **tag**」 · 뱀프는 「blues, jazz,
+> **gospel**, soul, and musical theater」에서 쓰인다 — [Vamp (music)](https://en.wikipedia.org/wiki/Vamp_(music))
+
+구간은 16마디로 잡았습니다 — 출처의 「12 or 16 bar」 중 12는 4·8·16 격자에
+안 맞아 `blues12` 와 같은 이유로 16으로 옮겼습니다. 브릿지를 콜앤드리스폰스가
+가장 또렷한 자리로 두고, **아웃트로 32마디가 뱀프**입니다.
+
+⚠ **뱀프의 마디 수는 어느 출처도 말하지 않습니다.** 오히려 「보컬이 준비될
+때까지 반복」·「길이가 불확정」이라고 적습니다. 32마디는 **출처의 값이 아니라
+«다른 구간의 두 배» 라는 제 선택**이고, 그래서 확신도가 `low` 입니다.
+
+⚠ 「**modulate to a higher key** at the apex」는 **이 도구가 못 합니다** —
+근음이 곡 전체에 하나입니다([../melody/01-harmony.md](../melody/01-harmony.md) §7).
+형식으로는 절정을 만들 수 있어도 조를 올리지는 못합니다.
+
+`rule` 은 일반 규칙을 뒤집습니다. 기본 규칙은 아웃트로에서 악기를 빼 잦아들게
+하는데, **가스펠의 뱀프는 정반대로 곡의 절정**입니다. 아웃트로를 코러스만큼
+키우고 오르간·합창을 앞에 세웠습니다.
+
+배정은 **`Gospel` 프리셋 하나**입니다. 분기(`G:Gospel · 지역 장르`)에 걸지 않은
+이유는 **같은 분기에 `Zydeco / Cajun` 이 함께 있기 때문**입니다 — 가스펠의 뱀프를
+자이데코에 씌울 근거가 없습니다.
+
+> 자이데코도 같은 날 찾아봤습니다 — [Zydeco](https://en.wikipedia.org/wiki/Zydeco)
+> 문서에 **구조도 화성도 한 줄이 없습니다.** 그래서 «미조사» 가 아니라
+> **«조사했으나 근거 없음»** 입니다. 계열 G 폴백을 그대로 씁니다.
+
 ---
 
 ## 4. 배정 — 하위분기 72개 → 곡 형식
@@ -373,8 +407,8 @@ Hot 100 1위 곡 실측(표본 5곡)에서 맞춘 값입니다.
 
 | 분기 | 물려받은 형식 | 왜 미심쩍은가 |
 |---|---|---|
-| G · Folk | `verseChorus` | 포크는 후렴 없이 절만 되풀이하는 **유절형**이 많습니다. 형식이 아예 다를 수 있습니다 |
-| G · Gospel · 지역 장르 | `verseChorus` | 가스펠의 **뱀프**(끝에서 한 구절을 계속 반복)는 유명하지만 출처를 확인하지 않았습니다 |
+| ~~G · Folk~~ | `verseChorus` | **2026-09-20 조사함 — 의심이 확인되지 않았습니다.** Folk music·Contemporary folk·Folk rock 셋을 열었는데 구조 서술은 「the most common form for **tunes** in folk music is **AABB**」 하나뿐이고, 그것은 춤곡 **선율**의 형태라 `melody.js` 의 프레이즈 결합 폼이지 `SONG_FORM` 이 아닙니다. 「유절형」은 어느 문서도 말하지 않습니다 — **근거 없음으로 그대로 둡니다** |
+| ~~G · Gospel · 지역 장르~~ | → `Gospel` 만 `gospelVamp` | **2026-09-20 조사해 근거가 섰습니다**(§3 ⑮). 다만 분기가 아니라 **프리셋 단위**로 걸었습니다 — 같은 분기의 `Zydeco / Cajun` 에 가스펠 뱀프를 씌울 근거가 없습니다. 자이데코 쪽은 **조사했으나 근거 없음**입니다 — Zydeco 문서에 구조·화성 서술이 한 줄도 없어 계열 폴백을 그대로 둡니다 |
 | H · 브라질 | `verseChorus` | 보사노바 스탠더드는 32마디 AABA 인 경우가 많습니다 — ②일 가능성이 높은데 확인하지 않았습니다 |
 | H · 멕시코 · 콜롬비아 · 아르헨티나 | `verseChorus` | 쿠바·푸에르토리코만 조사했습니다 |
 | I · 트리니다드 · 바베이도스 · 프랑스어권 | `verseChorus` | 소카·칼립소·주크의 형식을 확인하지 않았습니다 |
