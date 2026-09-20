@@ -65,11 +65,18 @@ const NL = s.includes('\r\n') ? '\r\n' : '\n';
 const MEL = Object.fromEntries(Object.entries(groups).map(([k, g]) => [k, g.pool]));
 for (const [after, pick, label] of [
   ['function melodyPoolFor', MEL, '선율'],
-  ['기타 리프 이름 목록', RIFF, '리프'],
-  ['베이스 라인 이름 목록', BASS, '베이스'],
+  /* 앵커는 코드 식별자여야 한다 — 전에는 한글 주석 문장이라 주석을 다듬으면
+     깨졌다. 함수는 그 주석 다음 줄이고 사이에 `};` 가 없어 결과가 같다. */
+  ['function riffPoolFor', RIFF, '리프'],
+  ['function blinePoolFor', BASS, '베이스'],
 ]) {
   const at = s.indexOf(after);
+  /* 형제 스크립트 둘에는 있는데 여기만 없던 가드다. 앵커를 못 찾으면 at 가 -1 이고
+     lastIndexOf('};', -1) 도 -1 이라, 막지 않으면 **파일 앞머리에 조용히 끼워
+     넣는다.** 예외도 안 나고 문법도 깨지지 않아 알아채기 어렵다. */
+  if (at < 0) throw new Error('못 찾음: ' + after);
   const close = s.lastIndexOf('};', at);
+  if (close < 0) throw new Error('닫는 괄호 못 찾음: ' + after);
   s = s.slice(0, close) + block(pick, label).join(NL) + NL + s.slice(close);
 }
 writeFileSync(file, s, 'utf8');

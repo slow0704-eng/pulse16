@@ -24,8 +24,13 @@ const { groups, batch, cat } = B;
 const q = s => "'" + s + "'";
 const ANCHOR = {
   pool:  { after: 'function melodyPoolFor', label: '선율' },
-  riff:  { after: '기타 리프 이름 목록',      label: '리프' },
-  bline: { after: '베이스 라인 이름 목록',    label: '베이스' },
+  /* 앵커는 **코드 식별자**여야 한다. 2026-09-20 까지 이 둘은 melody.js 안의
+     한글 JSDoc 문장(「기타 리프 이름 목록」·「베이스 라인 이름 목록」)이었다.
+     주석을 읽기 좋게 다듬기만 해도 여기서 throw 가 났다 — 문서 정리 작업이
+     생성기를 깨뜨리는 구조였다. 함수 선언은 그 주석 바로 다음 줄이고 둘 사이에
+     `};` 가 없으므로, lastIndexOf('};', at) 결과가 전과 완전히 같다. */
+  riff:  { after: 'function riffPoolFor',  label: '리프' },
+  bline: { after: 'function blinePoolFor', label: '베이스' },
 };
 
 const file = resolve('src/data/melody.js');

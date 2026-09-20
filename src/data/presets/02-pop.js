@@ -5,7 +5,18 @@
    장르마다 웹에서 실재·장르 분류를 확인한 곡 3~5곡(genres/02-pop.md «대표곡» 표)의
    템포·편성·드럼 골격과 대조해 어긋난 칸을 고쳤다. 곡의 선율이나 리프를 옮겨
    적은 곳은 없다 — 성질(템포 범위·건반 종류·기타 음색·베이스 역할·드럼 골격)만 맞췄다.
-   바꾼 이유는 genres/02-pop.md «이 곡들로 고친 것» 표와 patterns/02-pop.md 에 있다. */
+   바꾼 이유는 genres/02-pop.md «이 곡들로 고친 것» 표와 patterns/02-pop.md 에 있다.
+
+   ⚠ **이 파일의 `kit.bass` 칸은 기계가 덮어쓸 수 있다.**
+   `genres/profiles/_apply-02-B-pop.mjs` 가 배치표(`_batch-02-B-pop.mjs`)의 `eng`
+   배정을 여기에 써 넣는다. `_build.js:48` 이 `kit.bass` 로 `bcfg.eng` 를 덮으므로
+   실제로 울리는 값이 그것이다. 그래서 베이스 엔진을 손으로 고쳐도 그 스크립트를
+   다시 돌리면 배치표 쪽으로 되돌아간다 — **고칠 곳은 배치표**다.
+   (범용 `_apply.mjs` 는 인자로 받은 아무 프리셋 파일에나 같은 일을 한다.)
+
+   나머지 칸(bpm·swing·패턴·튠·bcfg 수치)은 손으로 쓰는 값이고, 이 파일이 정본이다 —
+   `genres/02-pop.md` 의 설정값 표와 `patterns/02-pop.md` 의 16칸 블록이 그 사본이라
+   `tools/ci/check-docs-sync.mjs` 가 둘을 대조한다. */
 'use strict';
 
 Object.assign(RAW, {

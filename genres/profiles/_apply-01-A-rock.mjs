@@ -51,8 +51,10 @@ const NL = s.includes('\r\n') ? '\r\n' : '\n';
 /* 각 함수 바로 앞의 `};` 앞에 끼운다 */
 for (const [after, pick] of [
   ['function melodyPoolFor', MEL],
-  ['기타 리프 이름 목록', RIFF],
-  ['베이스 라인 이름 목록', BASS],
+  /* 앵커는 코드 식별자여야 한다 — 전에는 한글 주석 문장이라 주석을 다듬으면
+     깨졌다. 함수는 그 주석 다음 줄이고 사이에 `};` 가 없어 결과가 같다. */
+  ['function riffPoolFor', RIFF],
+  ['function blinePoolFor', BASS],
 ]) {
   const at = s.indexOf(after);
   if (at < 0) throw new Error('못 찾음: ' + after);
