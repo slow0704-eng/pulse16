@@ -168,10 +168,23 @@ const PROG_KIT_CAT = {
     **절대 빈 배열을 주지 않는다** — 메탈·펑크처럼 건반을 꺼 두는
     계열도 진행 데이터 자체는 갖는다(호출부가 빈 배열로 인덱싱해
     깨지지 않도록). 건반을 낼지 말지는 프리셋의 kit.off 가 정한다. */
+/* 계열을 뽑는 순서를 arrange.js 의 catFor() 와 맞춘다 — **LIB.cat 이 먼저다.**
+
+   프리셋 357종 중 **301종이 계열을 자기 파일 안에 `cat:'A'` 로 직접 적어서**
+   PRESET_CAT 에 이름이 없다. 그래서 PRESET_CAT 만 보면 계열 폴백이 통째로
+   건너뛰어지고, 하위분기가 PROG_KIT 에 없는 **130종이 마지막 리터럴
+   ['pop_four'] 로 떨어졌다** — B 36 · E 37 · C 15 · I 13 · A 9 · J 9 · H 8 …
+   거의 모든 계열이 한 덩어리가 되어 «장르가 달라도 화성이 똑같다» 가 됐다
+   (2026-09-20 실측: 화성 진행 축의 가장 큰 무리가 132종).
+
+   ⚠ PROG_KIT_CAT 은 A~K·X 를 **전부 덮고 있었다.** 표가 없던 것이 아니라
+     표에 닿지 못한 것이다 — 같은 이유로 곡 형식 축(catFor 를 쓴다)은
+     24갈래로 멀쩡했다. */
 function progPoolFor(name){
   const sub = PROG_KIT[PRESET_SUB[name]];
   if(sub) return sub;
-  return PROG_KIT_CAT[PRESET_CAT[name]] || ['pop_four'];
+  const cat = (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name];
+  return PROG_KIT_CAT[cat] || ['pop_four'];
 }
 
 /** p 는 PROG 의 항목. bar 는 0부터. degs.length 로 되풀이한다 —
@@ -414,5 +427,9 @@ function compPoolFor(name){
     return [];
   const sub = COMP_KIT[PRESET_SUB[name]];
   if(sub) return sub;
-  return COMP_KIT_CAT[PRESET_CAT[name]] || ['pop_pulse'];
+  /* progPoolFor 와 같은 이유로 LIB.cat 이 먼저다 — PRESET_CAT 은 56종만 적힌
+     예외표라 그것만 보면 계열 폴백이 건너뛰어지고 ['pop_pulse'] 로 떨어진다.
+     COMP_KIT_CAT 은 A~K·X 를 전부 덮고 있다. */
+  const cat = (typeof LIB!=='undefined' && LIB[name] && LIB[name].cat) || PRESET_CAT[name];
+  return COMP_KIT_CAT[cat] || ['pop_pulse'];
 }
