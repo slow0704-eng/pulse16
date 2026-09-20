@@ -1297,6 +1297,67 @@
         }
       },
       "arc": "flat"
+    },
+    "grungeQuietLoud": {
+      "label": "조용함↔폭발 13구간 (그런지)",
+      "cat": "band",
+      "confidence": "low",
+      "arc": "build",
+      "basis": "⚠ 출처를 확인하지 않았다. 백과·학술 자료가 아니라 사용자가 적어 준 13구간 구간표를 그대로 옮긴 것이고, 어느 곡·어느 자료에서 온 표인지 이 저장소가 검증하지 않았다. 그래서 확신도를 low 로 둔다. 구조 자체는 계열 A 조사와 어긋나지 않는다 — 벌스-프리코러스-코러스가 최빈 형식이고(Summach) 기타 솔로가 가운데 코러스 뒤에 온다(위키백과 Song structure). 마디는 주어진 «4마디 루프 × 반복 횟수» 를 그대로 더한 168에서 아웃트로만 ×2→×4 로 늘려 176 으로 맞췄다 — 총 마디를 선율 길이(16·32·64)가 나누어야 하기 때문이다(check-song-length)",
+      "secs": [
+        { "k": "intro",     "bars": 16 },
+        { "k": "verse",     "bars": 16 },
+        { "k": "prechorus", "bars": 8 },
+        { "k": "chorus",    "bars": 16 },
+        { "k": "bridge",    "bars": 8 },
+        { "k": "verse",     "bars": 16 },
+        { "k": "prechorus", "bars": 8 },
+        { "k": "chorus",    "bars": 16 },
+        { "k": "bridge",    "bars": 16 },
+        { "k": "verse",     "bars": 16 },
+        { "k": "prechorus", "bars": 8 },
+        { "k": "chorus",    "bars": 16 },
+        { "k": "outro",     "bars": 16 }
+      ],
+      "rule": {
+        "_why": "⑫ rockVerseChorus 와 갈리는 자리는 셈여림이다. 벌스에서 기타를 0.55 까지 내려 «절제» 를 만들고(⑫는 0.85), 아웃트로는 1.3 으로 크게 유지한다(⑫는 0.9 로 잦아든다) — 지정이 «아웃트로는 폭발적 에너지를 유지한 채 리프 반복» 이었다. 브릿지 자리는 간주(리프 재현)와 기타 솔로가 함께 쓴다. ⚠ bank 은 전 구간 false 다: 이 형식은 «한 곡의 구조를 그대로» 재현하는 것이 목적이라, 코러스마다 다른 프리셋의 패턴으로 튀면 정반대가 된다",
+        "intro": {
+          "off": ["clap", "tom", "perc", "keys", "keys2", "gtr2"],
+          "lvl": { "gtr": 1.2, "bass": 0.9 },
+          "fillOut": true,
+          "bank": false
+        },
+        "verse": {
+          "off": ["clap", "ohat", "tom", "perc", "keys", "keys2", "gtr2"],
+          "lvl": { "gtr": 0.55, "snare": 0.8, "bass": 0.95 },
+          "fillOut": true,
+          "bank": false
+        },
+        "prechorus": {
+          "off": ["clap", "tom", "perc", "keys2", "gtr2"],
+          "lvl": { "gtr": 1.15, "snare": 1.1, "bass": 1.05 },
+          "fillOut": true,
+          "bank": false
+        },
+        "chorus": {
+          "off": ["tom", "perc"],
+          "lvl": { "gtr": 1.55, "gtr2": 1.35, "keys2": 1.2, "snare": 1.2, "bass": 1.15, "clap": 1.1, "chat": 1.15 },
+          "fillOut": true,
+          "bank": false
+        },
+        "bridge": {
+          "off": ["clap", "perc", "keys2", "gtr2"],
+          "lvl": { "gtr": 1.55, "keys": 0.55, "tom": 1.15, "snare": 1.05 },
+          "fillOut": true,
+          "bank": false
+        },
+        "outro": {
+          "off": ["clap", "ohat", "tom", "perc", "keys2"],
+          "lvl": { "gtr": 1.3, "bass": 1.0 },
+          "fillOut": false,
+          "bank": false
+        }
+      }
     }
   },
   "assignCat": {
@@ -1561,6 +1622,12 @@
         "aaba32"
       ],
       "why": "이 저장소 자신의 계열 A 조사가 Rock & Roll 의 핵심 포인트를 «12마디 블루스 구조» 라고 적는다(genres/01-rock.md). 같은 분기의 Surf Rock·Garage Rock·Proto-punk 에는 그런 서술이 없어 분기 전체가 아니라 이 프리셋만 예외로 둔다. AABA 도 함께 두는 것은 위키백과가 32마디 형식을 1950~60년대 록에 자주 쓰였다고 명시하기 때문이다"
+    },
+    "Grunge": {
+      "forms": [
+        "grungeQuietLoud"
+      ],
+      "why": "사용자가 그런지에 대해 13구간 구간표를 직접 지정했다. 분기 전체(A:Alternative — Shoegaze·Dream Pop·Britpop 등 아홉)가 아니라 이 프리셋만 예외로 두는 이유는, 그 표가 한 곡의 구조이지 분기 전체를 조사한 결과가 아니기 때문이다(00-form.md §4 «프리셋 단위 예외» 규칙). 출처 미확인이라 형식의 확신도는 low 다"
     }
   },
   "assignNote": "폼 풀은 프리셋 > 하위분기 > 계열 순으로 찾는다. 프리셋 단위 예외는 «그 프리셋만 계보와 다르다» 는 근거가 있을 때만 둔다 — MELODY_KIT_PRESET 이 하위분기 상속을 끊은 것과 같은 순서다."

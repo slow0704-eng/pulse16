@@ -184,8 +184,11 @@ Object.assign(RAW, {
   bass:'0---0---2---2---',
   keys:'0-------2-------',gtr:'0-2-4-2-0-2-4-2-'},
 'Grunge':{bpm:110,swing:0,cat:'A',gen:1,
+  /* chord 를 add9 에서 power 로 바꿨다 — 그런지의 기타는 3도를 뺀 파워코드이고,
+     「화성 진행」을 켜면 chordSemis() 가 이 종류로 구성음을 만든다. add9 는
+     1-3-5-9 라 퍼즈 기타에서 3도와 9도가 뭉쳐 그런지 음색이 되지 않는다. */
   kit:{kick:'punch',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',
-       keys:'pad',keys2:'strings',gtr:'fuzz',gtr2:'chorus',bass:'pick',chord:'add9',off:['keys']},
+       keys:'pad',keys2:'strings',gtr:'fuzz',gtr2:'chorus',bass:'pick',chord:'power',off:['keys']},
   tune:{kick:-2,snare:0,tom:-2,hat:0},
   bcfg:{eng:'reese',oct:24,semi:0,gate:80,glide:0,blend:54,drive:52,xover:120,tone:4000,
         sub:56,exc:32,duck:28,root:9,scale:'Natural Minor'},

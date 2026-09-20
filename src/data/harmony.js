@@ -40,6 +40,12 @@
 const PROG = {
   /* ── A. Rock — "모달 2코드 · 블루스 하강 · 12마디" (01-harmony.md §4 표) ── */
   modal_i_iv    :{label:'모달 2코드(i-IV)',        cat:'A', degs:[0,3,0,3]},
+  /* i-iv-III-VI. 단조에서 네 마디로 한 바퀴 도는 파워코드 순환이라
+     얼터너티브·그런지의 흔한 어법이다. 자연단음계 기준 도수로
+     0=i · 3=iv · 2=III · 5=VI (예: F단조면 F-B♭-A♭-D♭).
+     ⚠ 파워코드로 들으려면 프리셋의 chord 가 'power' 여야 한다 —
+       chordSemis() 가 그 종류로 구성음을 만든다. */
+  modal_i_iv_III_VI:{label:'모달 4코드(i-iv-III-VI)', cat:'A', degs:[0,3,2,5]},
   modal_i_vii   :{label:'모달 2코드(i-VII)',        cat:'A', degs:[0,6,0,6]},
   blues_descend :{label:'블루스 하강(i-VII-VI-V)',  cat:'A', degs:[0,6,5,4]},
 
@@ -108,7 +114,11 @@ const PROG_KIT = {
   'Metal':['modal_i_iv','blues_descend'],
   'Hard Rock':['modal_i_iv','blues_descend'],
   'Punk':['modal_i_iv','hh_loop_iv'],
-  'Alternative':['modal_i_vii','pop_50s'],
+  /* modal_i_iv_III_VI 를 더한다 — 단조 네 마디 파워코드 순환은 이 분기의
+     흔한 어법이다. ⚠ 진행 표에는 프리셋 단위가 없다(progPoolFor 는 하위분기·
+     계열까지만 본다). 그래서 이 진행은 Grunge 뿐 아니라 Alternative 분기
+     전체가 함께 쓴다 — 곡 형식과 달리 그런지 전용이 아니다. */
+  'Alternative':['modal_i_vii','pop_50s','modal_i_iv_III_VI'],
   'Post-punk 계보':['modal_i_iv','modal_i_vii'],
   'Bebop 계보':['jazz_251','jazz_circle'],
   'Latin Jazz':['jazz_251','latin_vamp8'],
