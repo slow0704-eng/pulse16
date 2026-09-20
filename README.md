@@ -34,26 +34,57 @@ python -m http.server 8000
 
 ## 문서
 
+**이 표가 저장소의 문서 색인입니다.** 여기 없는 문서는 없습니다 — 예전에는 이 절이
+절반만 담고 있어서 나머지가 [`genre-reference.md`](genre-reference.md) 를 통해서만
+닿았고, 그쪽 숫자는 낡아 있었습니다.
+
 **먼저 볼 것**
 
-- [`manual.html`](manual.html) — **사용자용 사용법과 동작 원리** (사이트 안 페이지. 앱 헤더의 「사용법」 버튼)
-- [`docs/시스템설명서.md`](docs/시스템설명서.md) — 아키텍처 · 런타임 · 신호 경로 · 성능 · 인터페이스
-- [`docs/시스템-비즈니스설명서.md`](docs/시스템-비즈니스설명서.md) — 장르 체계 · 음색 배정 · 변주 규칙 · 음악 이론 규칙
+| 문서 | 무엇 |
+|---|---|
+| [`manual.html`](manual.html) | **사용자용 사용법과 동작 원리**. 앱 헤더의 「사용법」 버튼 |
+| [`CLAUDE.md`](CLAUDE.md) | **이 저장소의 규칙** — 고치기 전에 읽으십시오 |
+| [`ARCHITECTURE.md`](ARCHITECTURE.md) | 파일 분리 구조 · 로드 순서 지도 · 알려진 위험 |
+| [`docs/시스템설명서.md`](docs/시스템설명서.md) | 아키텍처 · 런타임 · 신호 경로 · 성능 · 인터페이스 |
+| [`docs/시스템-비즈니스설명서.md`](docs/시스템-비즈니스설명서.md) | 장르 체계 · 음색 배정 · 변주 규칙 · 음악 이론 규칙 |
 
-**자료**
+**장르·음악 자료** — 프리셋의 근거가 되는 글입니다.
 
-- [`genres/`](genres/) — 세부장르별 특징과 대표 레퍼런스
-- [`genres/00-technique.md`](genres/00-technique.md) — 주법 변형 36종 · 프리셋 배정과 그 근거
-- [`melody/`](melody/) — 화성·선율 이론과 선율 라이브러리의 근거
-- [`patterns/`](patterns/) — 패턴 표기법과 리듬 자료
-- [`consulting/`](consulting/) — ISP · EA · ISMP
-- [`ARCHITECTURE.md`](ARCHITECTURE.md) — 파일 분리 구조와 알려진 위험
+| 문서 | 무엇 |
+|---|---|
+| [`genres/`](genres/) | 계열 A~K 의 세부장르 특징 · **PULSE·16 설정값** · 대표 아티스트 · **대표곡**(웹으로 실재를 확인한 것만) |
+| [`genres/00-tree.md`](genres/00-tree.md) | 대중음악 장르 계통도 |
+| [`genres/00-instruments.md`](genres/00-instruments.md) | 악기·엔진 사전 — 합성 수치와 고르는 기준 |
+| [`genres/00-technique.md`](genres/00-technique.md) | 주법 변형 36종 · 프리셋 배정과 근거 |
+| [`genres/00-form.md`](genres/00-form.md) | 곡 형식(섹션 배분)의 출처 |
+| [`genres/00-reference.md`](genres/00-reference.md) | ⚠ **2026-08 작업 일지** — 더는 데이터 원본이 아닙니다 |
+| [`genres/profiles/README.md`](genres/profiles/README.md) | 선율·리프·베이스 배정의 «왜». **곡·아티스트 이름을 여기 넣지 않는 이유** |
+| [`patterns/README.md`](patterns/README.md) | 16스텝 표기법 · 스윙 참조표 · 그리드 한계 |
+| [`patterns/`](patterns/) | 계열별 박자 자료. `genres/` 와 번호가 1:1 |
+| [`melody/README.md`](melody/README.md) | 선율 자료 진입점 |
+| [`melody/`](melody/) | 화성·선율 이론과 선율 라이브러리의 근거 |
+| [`billboard/README.md`](billboard/README.md) | 빌보드 Hot 100 · BB200 1위 자료(생성물의 원본) |
+| [`data/README.md`](data/README.md) | `data/genres.json` 필드 설명 |
 
-**측정 · 검토 기록**
+**측정 보고서** — 읽기·측정 전용. 값을 고치려면 하네스를 다시 돌리십시오.
 
-- [`docs/perf/`](docs/perf/) — 오디오 런타임 · 로딩과 전달 · WebAssembly 검토 · 외부 의존성
-- [`docs/음색/`](docs/음색/) — 엔진 파라미터 출처(STK 등)와 환산식
-- [`docs/qa/`](docs/qa/) — 신뢰성 검토
+| 문서 | 무엇 |
+|---|---|
+| [`docs/perf/`](docs/perf/) | 오디오 런타임 실측 · 로딩과 전달 · WebAssembly 검토 · 외부 의존성 전수 조사 |
+| [`docs/음색/01-STK차용.md`](docs/음색/01-STK차용.md) | 엔진 파라미터의 출처와 환산식 |
+| [`docs/qa/01-신뢰성.md`](docs/qa/01-신뢰성.md) | 실패 경로 보고서 — `regression.mjs` 가 이 문서를 근거로 돕니다 |
+| [`docs/ux/`](docs/ux/) | 체감 성능과 대기 심리 · 정보 구조와 접근성 · 프로듀서 관점 |
+| [`docs/tone-js-차용.md`](docs/tone-js-차용.md) · [`docs/mutable-차용.md`](docs/mutable-차용.md) | 외부 코드 조사 |
+| [`tools/측정결과-신규음색.md`](tools/측정결과-신규음색.md) | 새 음색의 배음 실측 결과 |
+
+**시점 기록** — 당시의 판단을 남긴 글입니다. **현행 명세가 아닙니다.**
+
+| 문서 | 무엇 |
+|---|---|
+| [`genre-reference.md`](genre-reference.md) | 옛 문서 색인(2026-08). 지금은 이 README 가 그 역할입니다 |
+| [`presets/audit.md`](presets/audit.md) · [`presets/roadmap.md`](presets/roadmap.md) | 프리셋 감사와 커버리지 — 2026-08 기준 |
+| [`ui-review.md`](ui-review.md) · [`audio-review.md`](audio-review.md) | UI·사운드 감사 기록 |
+| [`consulting/`](consulting/) | ISP · EA · ISMP — 음원 상품화로 확장하는 **미래 기획서**(2026-08). 현행 시스템 설명이 아닙니다 |
 
 ## 측정 먼저
 
