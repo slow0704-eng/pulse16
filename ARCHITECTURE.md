@@ -81,10 +81,12 @@ src/
     references.js           (생성물) 대표 아티스트·앨범. genres/*.md 의
                            «레퍼런스» 표에서 같은 이유로 굳힌다. 사람이 읽는
                            자료라 이름이 있다 — 앨범명은 미검증(00-reference.md)
-    songform.js             (생성물) 곡 형식 13종과 배정표. genres/forms/forms.json
-                           ← genres/00-form.md(출처 인용). 폼마다 total 이 다르고
-                           (32·48·64·96·128·224) melLen 이 그것을 나누는 가장 긴
-                           선율 길이다 — **폼이 선율 길이를 정한다**
+    songform.js             (생성물) 곡 형식과 배정표. genres/forms/forms.json
+                           ← genres/00-form.md(출처 인용). 폼마다 total(섹션 마디의
+                           합)이 다르고 melLen 이 그것을 나누는 가장 긴 선율 길이다
+                           — **폼이 선율 길이를 정한다**. 몇 종이고 total 이 무엇무엇
+                           인지는 여기 적지 않는다(적으면 낡는다 — 실제로 「13종」과
+                           「32·48·…」로 낡아 있었다). build-refdata 가 세어서 찍는다
     fills.js                필인 라이브러리(FILLS) · fillPoolFor()
     melody.js               선율·리프·베이스 라이브러리(MELODY·RIFF·BLINE).
                            16·32·64마디판을 함께 만든다 — buildLongP(표, plan)
@@ -152,9 +154,22 @@ tools/                 계측·검증 하네스 (헤드리스로 도는 독립 H
                        melOn 기본값이 true 가 된 뒤로는 render_wav 로도 선율이
                        나지만, 이쪽은 **어느 선율·리프·베이스가 걸렸는지 찍고**
                        --mel(고정) · --off(대조군) · --len(길이)을 줄 수 있다
+  sync-docs.mjs        프리셋 → genres/*.md 의 «설정값» 표와 patterns/*.md 의 16칸
+                       블록. 그 표들은 프리셋 파일을 손으로 옮겨 적은 **사본**이라
+                       잊으면 갈라진다. 수치만 다시 찍고 절 구성·`←` 설명 같은
+                       사람이 쓴 글은 건드리지 않는다. --dry 로 미리 본다
   ci/                  자동 검사 — 브라우저 없이, 외부 의존성 없이 도는 Node 스크립트
+    all.mjs            **검사 목록은 여기 한 곳에만 있다.** 예전에는 README 와
+                       ci.yml 양쪽에 손으로 적혀 있어서 갈라졌다 — README 대로 다
+                       돌려도 세 검사가 빠져 CI 에서만 떨어졌다.
+                       --static(브라우저 빼고 몇 초) · --browser · --list
     _lib.mjs           공용: 파일 훑기 · 주석/문자열 지우기 · 최상위 선언 수집 ·
                        HTML 의 <script src> · id 목록
+    check-docs-sync.mjs  문서의 설정값 표·패턴 블록이 프리셋 코드와 같은 말을
+                       하는가. 어긋나면 sync-docs.mjs 로 고친다. `←` 설명에 박힌
+                       수치도 본다(범위 표기 「140~180 BPM」은 정상으로 넘긴다)
+    check-kit-engines.mjs  kit 칸이 실재하는 엔진인가 · 건반 컴핑 두 표 대조
+    check-song-length.mjs  폼의 마디 수를 선율 길이가 나누는가
     check-syntax.mjs   src·tools·mcp 의 모든 .js/.mjs 를 node --check
     check-globals.mjs  **전역 이름 충돌** — 로드 순서대로 이어붙여 파서에게 묻고
                        (브라우저와 같은 규칙), 따로 전수 조사도 한다.

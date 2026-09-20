@@ -201,8 +201,16 @@ function parseRefFile(f) {
 const REF = {};
 const refMiss = [];
 let refRows = 0;
+/* 00-reference.md 는 레퍼런스 표가 아니라 **작업 일지**다 — 「1차 59건」·「2차 159건」
+   으로 끝나는, 2026-08 에 프리셋 오버라이드를 넣으며 근거를 적어 둔 글이다.
+   그런데 표 모양이 같아서 여기로 파싱되고 있었다. 105행 전부가 계열 파일에도 있고
+   이 문서에만 있는 프리셋은 0종인데, 85행은 속성 문구가 달랐다 — 계열 파일이 먼저
+   이기므로 **그 85행은 화면에 영원히 안 나왔다.** 게다가 내용이 낡아서, Heavy Metal
+   이 여기선 「갤럽」인데 계열 파일은 대표곡 교정으로 「곧은 8분(갤럽 아님)」이다.
+   빼기 전에 이 문서에만 있던 것(Deftones · The Ventures · full name Jobim · 괄호 주석
+   둘)을 계열 파일로 옮겼다. 그래서 빼도 잃는 것이 없다. */
 const refFiles = readdirSync(abs('genres'))
-  .filter(x => /^\d\d-.+\.md$/.test(x))
+  .filter(x => /^\d\d-.+\.md$/.test(x) && x !== '00-reference.md')
   .sort((a, b) => a.startsWith('00-') - b.startsWith('00-') || a.localeCompare(b));
 
 for (const f of refFiles) {
@@ -358,12 +366,16 @@ if (existsSync(abs(FDIR))) {
     sub[k] = { pool: v.forms, why: v.why };
   for (const [k, v] of Object.entries(fJson.assignPreset || {}))
     pre[k] = { pool: v.forms, why: v.why };
+  /* 이 목록을 손으로 적어 두면 낡는다. 실제로 낡아 있었다 — 헤더에 32·48 이
+     박혀 있었는데 둘 다 없는 값이고 80·192 가 빠져 있었다. 게다가 그 문장이
+     생성기의 템플릿 리터럴이라 **다시 돌려도 틀린 채로 재생산**됐다. 세어서 쓴다. */
+  const lens = [...new Set(Object.values(forms).map(f => f.total))].sort((a, b) => a - b);
   const sJs = `/* 생성물 — tools/build-refdata.mjs 가 genres/forms/forms.json 에서 만듭니다.
    손으로 고치지 마십시오 — 원본은 genres/forms/forms.json 이고
    그 값의 근거는 genres/00-form.md 에 출처와 함께 있습니다.
 
    total  섹션 마디의 합.   melLen  이 폼을 나누는 가장 긴 선율 길이.
-   ⚠ 폼마다 total 이 다릅니다(32·48·64·96·128·224). 예전에는 전부 64였고,
+   ⚠ 폼마다 total 이 다릅니다(${lens.join('·')}). 예전에는 전부 64였고,
      그것 때문에 12마디 블루스가 표현되지 못했습니다. */
 'use strict';
 
@@ -373,7 +385,6 @@ const SONG_FORM_POOL_PRESET = ${JSON.stringify(pre)};
 const SONG_FORM_POOL_CAT = ${JSON.stringify(fJson.assignCat)};
 `;
   if (emit('src/data/songform.js', sJs)) {
-    const lens = [...new Set(Object.values(forms).map(f => f.total))].sort((a, b) => a - b);
     console.log(`${OK} src/data/songform.js — 형식 ${Object.keys(forms).length}종 · `
       + `총 마디 ${lens.join('·')} · 분기 배정 ${Object.keys(sub).length}건`
       + `${Object.keys(pre).length ? ` · 프리셋 예외 ${Object.keys(pre).length}건` : ''}`);
