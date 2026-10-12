@@ -327,6 +327,7 @@ const PRESET_SUB = {
   "Stoner Rock":"Metal",
   "Surf Rock":"뿌리",
   "Symphonic Metal":"Metal",
+  "Swing / Big Band":"초기 재즈",
   "Synthwave":"Downtempo · Ambient · Retro",
   "Tango":"아르헨티나 · 남미 남부",
   "Tech House":"House 계열",
@@ -564,6 +565,12 @@ const TONE_KIT = {
   'Cool · West Coast'      :{scale:'Dorian', chord:'nine', keys:'piano',   gtr:'jazzbox',bass:'upright',
                             kick:'jazz',   snare:'brush',  chat:'foot',
                             lvl:{keys:0.62,bass:0.78,gtr:0.40}},
+  /* 2026-09-30 — 스윙·빅밴드. 워킹 업라이트와 브러시·페달 햇은 비밥 계보와 같고,
+     건반은 출처가 섹션으로 드는 브라스(「saxophones, trumpets, trombones」)다.
+     프리셋이 kit·bcfg·lvl 을 전부 직접 적지만 자리를 비워 두지 않는다(위 주석). */
+  '초기 재즈'              :{scale:'Major', chord:'sev', keys:'brassens', gtr:'jazzbox',bass:'upright', keys2:'sax',
+                            kick:'jazz',   snare:'brush',  chat:'sizzle', ohat:'foot',
+                            lvl:{keys:0.58,bass:0.78,gtr:0.40}},
   'Latin Jazz'             :{scale:'Dorian', chord:'nine', keys:'piano',   gtr:'nylon',  bass:'upright', perc:'clave', pperc:'x--x--x---x-x---',
                             gtr2:'jazzbox',kick:'jazz',   snare:'brush',  tom:'conga',
                             lvl:{keys:0.60,bass:0.78,perc:0.50}},

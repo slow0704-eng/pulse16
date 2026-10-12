@@ -41,6 +41,12 @@ let rootNote = 9, scaleName = 'Minor Pentatonic', baseOct = 24;
    'triad' 면 예전과 완전히 같다(pattern-codec.js CHORD 표). */
 let chordType = 'triad';
 
+/* 스윙이 걸리는 단위 — '16n'(홀수 16분 칸) 또는 '8n'(박 뒤 8분).
+   프리셋이 swingSub 로 정한다. 16칸 격자에서 재즈의 «딩, 딩-가-딩» 은
+   16분 스윙으로는 안 나온다 — 8분 칸(2·6·10·14)이 안 밀리기 때문이다.
+   노브의 뜻은 둘 다 같다: 50 이면 2:1 셋잇단(params.js swingShift). */
+let swingSub = '16n';
+
 /* ── 오디오 노드 (boot 에서 생성) ── */
 let ctx=null, mixBus=null, sumBus=null, busTrim=null, masterGain=null, satIn=null, satOut=null,
     noiseBus=null, pinkBus=null, metalBus=null, metalBP=null, CURVES=null,

@@ -101,7 +101,7 @@ function saveState(){
       v:1, banks:banks.map(b=>({drums:b.drums,bass:b.bass,keys:b.keys,gtr:b.gtr,
                            keys2:b.keys2,gtr2:b.gtr2})), bank,
       src, eng, probT, mute, lvl, rootNote, scaleName, baseOct,
-      keysOct, gtrOct, shufOn, knobs, sels, panels,
+      keysOct, gtrOct, shufOn, knobs, sels, panels, swingSub,
       len64:1,                 // 선율 길이 기본값 64루프 전환을 한 번 겪었다는 표식
     }));
     UI.savestat.textContent='자동 저장됨';
@@ -126,6 +126,7 @@ function loadState(){
     if(o.scaleName && SCALES[o.scaleName]) scaleName=o.scaleName;
     if(o.keysOct!=null) keysOct=o.keysOct;
     if(o.gtrOct !=null) gtrOct =o.gtrOct;
+    if(o.swingSub) setSwingSub(o.swingSub);
     if(o.shufOn){
       shufOn=true;
       UI.shuf.dataset.on='1'; UI.shuf.textContent='켜짐';

@@ -116,6 +116,7 @@ const FILL_KIT = {
   'Downtempo · Ambient · Retro':['ghost','brushswirl','silence'],
 
   'Bebop 계보'             :['rimroll','brushswirl','ghost'],
+  '초기 재즈'              :['rimroll','brushswirl','ghost'],   // 2026-09-30 스윙·빅밴드 — 형제와 같게
   'Latin Jazz'             :['percflurry','congaroll','rimroll'],
   'Fusion 계보'            :['ghost','tomsnare','snare16'],
   '현대 갈래'              :['rimroll','ghost','brushswirl'],

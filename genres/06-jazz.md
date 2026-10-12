@@ -25,6 +25,14 @@
 스윙 노브 50(2:1 비율)으로 근사하면 비슷해지지만, 빠른 템포에서는 어긋납니다.
 정확히 하려면 **12스텝(4박×3) 또는 24스텝** 모드가 필요합니다.
 
+> **2026-09-30 — 8분 스윙으로 근사합니다.** 예전에는 스윙이 홀수 16분 칸에만
+> 걸려서, 라이드의 박 뒤 8분(6·14칸)이 **전혀 밀리지 않았습니다.** 지금은 프리셋이
+> `swingSub:'8n'` 을 적으면 박 뒤 8분이 밀립니다(노브 50 = 2:1). 그래서
+> `Swing / Big Band` 프리셋을 만들 수 있게 됐습니다. **여전히 근사치입니다** —
+> 출처는 스윙 비율이 「in practice … less definitive」이고 「wider at slower tempos
+> and narrower at faster tempos」라고 적는데, 노브는 템포와 무관하게 한 값입니다.
+> 셋잇단 안쪽 음(«딩-가-딩» 의 «가» 를 셋으로 쪼갠 것)은 여전히 못 찍습니다.
+
 <!-- chart-auto:start -->
 
 **차트 1위 — 이 분기에서 나온 것** *(Hot 100 2곡 · Billboard 200 4장)*
@@ -208,6 +216,22 @@ blues**」. 그래서 16스텝 그리드와 비교적 잘 맞습니다.
 > 2026-09-19 에 이 표의 값을 **출처 기준으로 다시 맞췄습니다.** 바꾼 칸과 이유는
 > 위 레퍼런스 절의 주석에 적었습니다. 박자는 [../patterns/06-jazz.md](../patterns/06-jazz.md) 가 원본입니다.
 
+### 초기 재즈
+
+**드럼 — 킷 엔진 · 튠**
+
+| 장르 | BPM | Swing | Kick | Snare | Clap | Hat | Tom | 튠 K/S/T/H |
+|---|---|---|---|---|---|---|---|---|
+| ·Swing / Big Band | 124 | 50 | `jazz` | `brush` | `tight` | `sizzle` | `wood` | -2/0/-2/0 |
+
+**베이스**
+
+| 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| ·Swing / Big Band | `upright` | 24 | 340 | 0 | 40 | 32 | 120 | 4000 | 56 | 32 | 18 | Major |
+
+> Swing 칸의 50 은 **8분 단위**입니다(`swingSub:'8n'`) — 다른 줄의 스윙은 16분 단위입니다.
+
 ### Fusion 계보
 
 **드럼 — 킷 엔진 · 튠**
@@ -323,6 +347,10 @@ blues**」. 그래서 16스텝 그리드와 비교적 잘 맞습니다.
 
 | 프리셋 | 곡 | 아티스트 | 연도 | 구분 | BPM | 조성 | 출처 |
 |---|---|---|---|---|---|---|---|
+| Swing / Big Band | I've Got You Under My Skin | Frank Sinatra (편곡 Nelson Riddle) | 1956 | 대표 | 127 | — | [wikipedia.org](https://en.wikipedia.org/wiki/I%27ve_Got_You_Under_My_Skin) |
+| Swing / Big Band | Fly Me to the Moon | Frank Sinatra with Count Basie (편곡 Quincy Jones) | 1964 | 대표 | 119 | — | [wikipedia.org](https://en.wikipedia.org/wiki/Fly_Me_to_the_Moon) |
+| Swing / Big Band | In the Mood | Glenn Miller | 1939 | 대표 | 172 | — | [wikipedia.org](https://en.wikipedia.org/wiki/In_the_Mood) |
+| Swing / Big Band | One O'Clock Jump | Count Basie | 1937 | 대표 | 169 | — | [wikipedia.org](https://en.wikipedia.org/wiki/One_O%27Clock_Jump) |
 | Jazz Fusion | Bitches Brew (음반 단위) | Miles Davis | 1970 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Bitches_Brew) |
 | Jazz Fusion | The Inner Mounting Flame (음반 단위) | Mahavishnu Orchestra | 1971 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/The_Inner_Mounting_Flame) |
 | Jazz Fusion | Head Hunters (음반 단위) | Herbie Hancock | 1973 | 대표 | — | — | [wikipedia.org](https://en.wikipedia.org/wiki/Head_Hunters) |
@@ -428,9 +456,12 @@ blues**」. 그래서 16스텝 그리드와 비교적 잘 맞습니다.
 
 이 문서의 §1~§6 표는 **19종**을 다루는데 계열 F 프리셋은 **9종**이고 그중 넷이 라틴입니다.
 
-- **프리셋이 아예 없는 9종** — New Orleans / Dixieland · Swing / Big Band · **Bebop** ·
+- **프리셋이 아예 없는 것** — New Orleans / Dixieland · **Bebop** ·
   **Hard Bop** · **Cool Jazz** · Modal Jazz · Free Jazz · Avant-garde Jazz · Spiritual Jazz
 - **다른 계열 파일에 있는 3종** — Jump Blues(G) · Jazz-Funk(D) · Nu Jazz(E)
+
+(2026-09-30 — Swing / Big Band 는 8분 스윙이 엔진에 들어와 프리셋이 생겼습니다.
+이 절의 «19종 · 9종» 은 그 전의 수입니다 — 지금 수는 `node tools/counts.mjs` 에 물으십시오.)
 
 §2 의 이름이 «Bebop 계보» 인데 **정작 비밥 프리셋이 없고**, 그 자리에 있던 것이
 Soul Jazz 와 West Coast Jazz 였습니다. 이번에 뒤쪽을 갈라냈습니다.
@@ -443,6 +474,12 @@ Soul Jazz 와 West Coast Jazz 였습니다. 이번에 뒤쪽을 갈라냈습니�
 [00-reference.md](00-reference.md) 를 먼저 보십시오 —
 **이 목록을 AI 프롬프트에 그대로 넣으면 안 됩니다.**
 앨범명은 미검증이며 `(확인 필요)` 표시가 있습니다.
+
+### 초기 재즈
+
+| 프리셋 | 대표 아티스트 | 대표 앨범 | 뽑아낸 속성 |
+|---|---|---|---|
+| Swing / Big Band | Frank Sinatra · Count Basie · Glenn Miller | Songs for Swingin' Lovers! | 브라스 · 색소폰 · 업라이트 **워킹** · 라이드(sizzle 근사) · 스윙 50 **8분** |
 
 ### Bebop 계보
 

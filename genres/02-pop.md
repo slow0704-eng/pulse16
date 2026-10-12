@@ -99,7 +99,6 @@
 | Traditional Pop | 2014 | Partners | Barbra Streisand | BB200 |
 | Traditional Pop | 2016 | Encore: Movie Partners Sing Broadway | Barbra Streisand | BB200 |
 | Traditional Pop | 2019 | Someone You Loved | Lewis Capaldi | Hot 100 |
-| Traditional Pop | 2019 | All I Want for Christmas Is You | Mariah Carey | Hot 100 |
 | Traditional Pop | 2020 | Stuck with U | Ariana Grande and Justin Bieber | Hot 100 |
 | Traditional Pop | 2021 | Easy on Me | Adele | Hot 100 |
 | Traditional Pop | 2021 | 30 | Adele | BB200 |
@@ -167,6 +166,7 @@
 | Wall of Sound | 1965 | You've Lost That Lovin' Feelin' | The Righteous Brothers | Hot 100 |
 | Wall of Sound | 1966 | Lightnin' Strikes | Lou Christie | Hot 100 |
 | Wall of Sound | 1966 | (You're My) Soul and Inspiration | The Righteous Brothers | Hot 100 |
+| Wall of Sound ? | 2019 | All I Want for Christmas Is You | Mariah Carey | Hot 100 |
 | Novelty Song ? | 1960 | The Button-Down Mind of Bob Newhart | Bob Newhart | BB200 |
 | Novelty Song ? | 1961 | The Button-Down Mind Strikes Back! | Bob Newhart | BB200 |
 | Novelty Song ? | 1962 | The First Family | Vaughn Meader | BB200 |

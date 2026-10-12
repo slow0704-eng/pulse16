@@ -502,7 +502,7 @@ function boot(){
   /* ── 트랜스포트 ── */
   if(HAS_TONE){
     Tone.Transport.bpm.value = knob('bpm');
-    Tone.Transport.swingSubdivision = '16n';
+    Tone.Transport.swingSubdivision = swingSub;
     Tone.Transport.swing = knob('swing')/100;
     Tone.Transport.scheduleRepeat(onTick,'16n');
   }

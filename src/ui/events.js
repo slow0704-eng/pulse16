@@ -9,13 +9,13 @@
    전부 "값 표시 갱신 + 부수효과" 형태라 표로 묶습니다.
    표시용 <span>(id+'v')이 있으면 자동으로 갱신됩니다. */
 /** 노브 값 → 실제 스윙 비율(%).
-    fbLoop 의 shift = 16분 × (k/100) × 0.66 이므로
-    8분쌍 안에서의 위치 = (1 + 0.66k/100) / 2 → 50 + 0.33k.
+    swingShift() 가 스윙 단위(16분 또는 8분)의 뒷칸을 단위 × (2/3) × (k/100) 만큼 민다.
+    쌍 안에서의 위치 = (1 + 0.667k/100) / 2 → 50 + 0.33k. 단위가 달라도 비율은 같다.
     노브 50 이 2:1 셋잇단(≈67%) = 완전 셔플. */
 const swingPct = k => Math.round(50 + k*0.33);
 function updateSwingRead(){
   const k = knob('swing');
-  UI.swingpct.textContent = `${swingPct(k)}% ${k>=50 ? '셔플' : '스윙'}`;
+  UI.swingpct.textContent = `${swingPct(k)}% ${k>=50 ? '셔플' : '스윙'}${swingSub==='8n' ? ' · 8분' : ''}`;
 }
 
 const SLIDER_FX = {

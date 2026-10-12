@@ -66,3 +66,23 @@ function applyBassCfg(c){
 }
 function setBpm(v){ if(HAS_TONE && booted) Tone.Transport.bpm.rampTo(+v,0.05); }
 function setSwing(v){ if(HAS_TONE && booted) Tone.Transport.swing = +v/100; }
+function setSwingSub(v){
+  swingSub = v==='8n' ? '8n' : '16n';
+  if(HAS_TONE && booted) Tone.Transport.swingSubdivision = swingSub;
+  if(typeof updateSwingRead==='function') updateSwingRead();
+}
+/** 스텝 i 가 스윙으로 밀리는 시간(초). Tone.Transport._processTick() 과 같은 식이다
+    (arrange.js «Tone 스윙 vs 폴백 스윙» 주석):
+      k = 스윙 단위의 16분 칸 수(16n→1, 8n→2), 주기 2k 칸
+      r = i % 2k,  박 위(i%4===0)는 밀지 않는다
+      shift = spb·(k/4)·(2/3) · sin(π·r/2k) · 노브/100
+    16n 이면 홀수 칸만 spb/6·노브, 8n 이면 박 뒤 8분이 spb/3·노브 —
+    둘 다 노브 50 에서 2:1 셋잇단이다. 8n 에서 16분 칸(1·3)은 sin(π/4) 만큼
+    덜 밀린다(Tone 과 같게 둔다 — 두 경로가 갈라지면 안 된다). */
+function swingShift(i){
+  const k = swingSub==='8n' ? 2 : 1;
+  if(i%4===0) return 0;
+  const r = i % (2*k);
+  if(r===0) return 0;
+  return spb()*(k/4)*(2/3)*Math.sin(Math.PI*r/(2*k))*(knob('swing')/100);
+}

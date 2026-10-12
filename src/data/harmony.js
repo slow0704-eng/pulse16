@@ -138,6 +138,7 @@ const PROG_KIT = {
   'Alternative':['modal_i_vii','pop_50s','modal_i_iv_III_VI'],
   'Post-punk 계보':['modal_i_iv','modal_i_vii'],
   'Bebop 계보':['jazz_251','jazz_circle'],
+  '초기 재즈':['jazz_251','jazz_circle'],   // 2026-09-30 스윙·빅밴드 — 형제와 같게
   'Latin Jazz':['jazz_251','latin_vamp8'],
   'Fusion 계보':['jazz_circle','rnb_ii_v'],
   '현대 갈래':['jazz_251','pop_turn'],
@@ -399,6 +400,8 @@ const COMP_KIT = {
      옮기면서 이 표에 새 이름을 등록하지 않아, 그 프리셋이 계열 기본값으로 떨어져
      건반 리듬이 어긋나 있었다(두 표 일치 220종 → 219종). 값은 형제와 같다. */
   'Cool · West Coast':['jazz_comp'], 'Latin Jazz':['montuno','bossa_comp'],
+  /* 2026-09-30 — 스윙·빅밴드(초기 재즈). 컴핑 자리를 따로 말하는 출처를 못 찾아 형제와 같게 둔다 */
+  '초기 재즈':['jazz_comp'],
   'Fusion 계보':['jazz_comp'], '현대 갈래':['jazz_comp'],
   /* 컨트리만 4타로 옮긴다(§5-5 가 프리셋을 그렇게 고쳤다). 블루스는 8분이 맞다 —
      부기우기 「eight to the bar」. 포크는 **일부러 비워 둔다**: §5-8 이 `folk_strum` 의

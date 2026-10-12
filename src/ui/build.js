@@ -425,7 +425,7 @@ LIB_NAMES.forEach(name => {
     applyPresetLvl(L);
     applyTune(L.tune); applyBassCfg(L.bcfg);
     setKnob('bpm',  L.bpm);   setBpm(L.bpm);
-    setKnob('swing',L.swing); setSwing(L.swing);
+    setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub);
 
     TRACKS.forEach(t => { if(!L.smp || !L.smp[t.id]) smpSel[t.id]='synth'; });
     syncSmpSelects();

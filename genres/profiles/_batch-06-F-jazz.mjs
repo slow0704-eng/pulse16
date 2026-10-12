@@ -20,6 +20,7 @@ export const CAT = {
 };
 export const SUB = {
   'Jazz Fusion':'Fusion 계보','Soul Jazz':'Bebop 계보','West Coast Jazz':'Cool · West Coast',
+  'Swing / Big Band':'초기 재즈',
   'Smooth Jazz':'현대 갈래','Acid Jazz':'현대 갈래',
   'Latin Jazz':'Latin Jazz','Afro-Cuban Jazz':'Latin Jazz','Bossa Jazz':'Latin Jazz','Samba Jazz':'Latin Jazz',
   'Chicago Blues':'Blues','Texas Blues':'Blues','Jump Blues':'Blues','Blues Rock':'Blues',
@@ -59,6 +60,18 @@ export const groups = {
     pool: ['jazz_aaba', 'jazbal_aaba', 'jazz_aabb'], riff: ['jazz_gtr_swing', 'arp_swing'], bline: ['bwal_aaba', 'bwal_abab'],
     ev: '1950년대 미국 서해안 · 5곡', conf: 'high',
     why: '**비밥의 연장이 아니라 반작용이다** — 「West Coast jazz is often seen as a **subgenre of cool jazz**, which consisted of a calmer style **than bebop or hard bop**」이고 쿨 재즈 자체가 「**emerged as a reaction to bop**」이다. 그래서 Soul Jazz 와 한 무리에 둘 수 없다. 정의로 드는 것은 「relied relatively more on **composition and arrangement**」와 **피아노 없는 편성**이다 — 「formed an innovative and successful **piano-less quartet**」·「a rhythm section that **omitted the use of a piano, guitar, or any chordal instrument**」. 2번 건반은 **근거가 없는 층이다** — 프리셋에 적힌 `clarinet` 을 말하는 출처가 없고(있는 것은 프렌치 호른·튜바·첼로), 패턴이 비어 있어 **울리지도 않는다.** 소리에 영향이 없어 값은 그대로 두고 여기 적어만 둔다. 1번 건반의 피아노도 마찬가지로 두었다 — 출처가 특징으로 드는 것은 피아노 없는 편성이지만, 피아노가 있는 확인된 녹음도 있어 «틀렸다» 고 단정할 수 없다. 템포는 「moderate」·「relaxed」까지가 출처이고 **수치는 없다**',
+  },
+  /* 2026-09-30 — 8분 스윙(swingSub)이 엔진에 들어와 처음 만들었다.
+     선율 수치는 형제(비밥)와 다를 근거가 없어 같게 둔다 — 없는 차이를 숫자로 만들지 않는다. */
+  swingbb: {
+    anchor: 'Swing / Big Band', members: ['Swing / Big Band'],
+    mel: { density: [5, 7], leap: [0.20, 0.45], contour: 'zigzag', range: [4, 6], degrees: [0, 2, 4, 5, 6], rhythm: 'triplet-feel', repetition: 'low', voicing: 'single' },
+    bass: B('walking', 'mid', 'free'), lead: 'keys',
+    roles: { keys: 'brass', keys2: 'sax', gtr: 'comp', gtr2: 'none' },
+    chordType: 'sev', comping: 'ballad_pad',
+    pool: ['jazz_abab', 'jazz_aaba', 'jazz_aabb'], riff: ['jazz_gtr_swing', 'jazz_gtr_comp'], bline: ['bwal_abab', 'bwal_aaba'],
+    ev: '1930~1960년대 미국 · 4곡', conf: 'medium',
+    why: '**워킹 베이스와 라이드가 몸이다** — 「In swing jazz and jump blues, basslines are often created from a continuous sequence of quarter notes」이고, 편성은 「four sections: saxophones, trumpets, trombones, and a rhythm section」이라 1번 건반을 브라스로, 2번을 색소폰으로 뒀다. 템포는 확인한 녹음이 119·127(시나트라)과 169·172(빅밴드 기악)로 두 덩어리라 앞쪽에 맞췄다. 스윙 비율은 「twice as long … implying a triplet feel, but in practice the ratio is less definitive」라 노브 50(2:1)으로 두고 단위를 8분으로 했다. 선율 수치·화음 종류는 출처가 말하지 않아 형제와 같게 두었다 — 근거 없음',
   },
   fusion: {
     anchor: 'Jazz Fusion', members: ['Jazz Fusion'],

@@ -248,19 +248,15 @@ function sectionWantsBank(){
      s = (e % (2*swingTicks)) / (2*swingTicks)
      n = sin(s*PI) * swingAmount
      shift = seconds(2*swingTicks/3 ticks) * n
-   swingSubdivision 을 '16n' 으로 두면(graph.js:386) swingTicks = ppq/4 이고,
+   swingSubdivision 을 '16n' 으로 두면(기본값, state.js swingSub) swingTicks = ppq/4 이고,
    홀수(스윙 받는) 16분음표에서는 s=0.5, sin(0.5π)=1 이라 n=swingAmount 그대로.
    shift = seconds(ppq/6 ticks) = spb()/6 * swingAmount.
    즉 Tone 쪽 오프셋 = spb() * 0.16667 * (swing/100).
 
-   폴백(fbLoop, sequencer.js): shift = six*(swing/100)*0.66, six=spb()*0.25
-   = spb() * 0.165 * (swing/100).
-
-   0.165 vs 0.16667 — 상대 오차 1.0%. BPM 120·스윙 100 기준으로도
-   차이는 spb(0.5s)*0.0017 ≈ 0.83ms 뿐이다. **버그라고 부를 정도는 아니다**
-   (1% 오차, 1ms 미만) — 하지만 정확히 같지도 않다. 0.66 은 2/3(0.6667)의
-   반올림값으로 보인다. 정확히 맞추고 싶다면 0.66 을 1/6*4=0.66667 로
-   바꾸면 된다(사이드 이펙트는 없다 — 이 파일 소유가 아니라 여기 기록만 남긴다).
+   폴백(fbLoop, sequencer.js)은 예전에 six*(swing/100)*0.66 을 따로 계산해
+   Tone 과 1% 어긋나 있었다. 2026-09-30 — 8분 스윙(swingSub)을 들이면서
+   세 경로(Tone·fbLoop·voicesAt 의 baseSwing)가 전부 params.js 의
+   swingShift() 한 곳을 보게 했다. 그 함수가 위 Tone 공식 그대로다.
 
    ── 오프셋 단위를 초로, BPM 과 무관하게 고정한 이유 ──
    스윙(서브디비전 셔플)은 이미 spb() 에 비례해 tempo 를 따라간다(위 공식).

@@ -147,6 +147,77 @@
       }
     },
     {
+      "preset": "Swing / Big Band",
+      "sub": "초기 재즈",
+      "cat": "F",
+      "stage": "mine",
+      "melody": {
+        "density": {
+          "min": 5,
+          "max": 7
+        },
+        "leapRatio": {
+          "min": 0.2,
+          "max": 0.45
+        },
+        "contour": "zigzag",
+        "range": {
+          "min": 4,
+          "max": 6
+        },
+        "degrees": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "rhythm": "triplet-feel",
+        "cadence": {
+          "lastBarEmpty": false,
+          "endDegree": 0
+        },
+        "repetition": "low",
+        "voicing": "single",
+        "scale": "Minor Pentatonic"
+      },
+      "harmony": {
+        "chordType": "sev",
+        "comping": "ballad_pad"
+      },
+      "bass": {
+        "role": "walking",
+        "octaveJump": false,
+        "gate": "mid",
+        "kickRelation": "free",
+        "glide": "none"
+      },
+      "ensemble": {
+        "lead": "keys",
+        "off": [],
+        "roles": {
+          "keys": "brass",
+          "keys2": "sax",
+          "gtr": "comp",
+          "gtr2": "none"
+        },
+        "lvlHint": {}
+      },
+      "meta": {
+        "confidence": "medium",
+        "evidenceBasis": "1930~1960년대 미국 · 4곡",
+        "distinguishes": [],
+        "poolDecision": "own",
+        "shareWith": null,
+        "pool": [
+          "jazz_abab",
+          "jazz_aaba",
+          "jazz_aabb"
+        ],
+        "note": "**워킹 베이스와 라이드가 몸이다** — 「In swing jazz and jump blues, basslines are often created from a continuous sequence of quarter notes」이고, 편성은 「four sections: saxophones, trumpets, trombones, and a rhythm section」이라 1번 건반을 브라스로, 2번을 색소폰으로 뒀다. 템포는 확인한 녹음이 119·127(시나트라)과 169·172(빅밴드 기악)로 두 덩어리라 앞쪽에 맞췄다. 스윙 비율은 「twice as long … implying a triplet feel, but in practice the ratio is less definitive」라 노브 50(2:1)으로 두고 단위를 8분으로 했다. 선율 수치·화음 종류는 출처가 말하지 않아 형제와 같게 두었다 — 근거 없음"
+      }
+    },
+    {
       "preset": "Jazz Fusion",
       "sub": "Fusion 계보",
       "cat": "F",

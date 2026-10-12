@@ -1,9 +1,25 @@
-/* 프리셋 — Jazz (계열 F) · 9종
+/* 프리셋 — Jazz (계열 F)
    pulse16-mk16.html 에서 분리. RAW 는 _raw.js 가 먼저 만든다. */
 'use strict';
 
 Object.assign(RAW, {
 
+/* 스윙 · 빅밴드 — 2026-09-30. 8분 스윙(swingSub:'8n')이 들어와서 처음 만들 수 있게 됐다.
+   16분 스윙으로는 라이드의 «딩, 딩-가-딩» 에서 박 뒤 8분(6·14칸)이 안 밀린다.
+   라이드: 4분 + 2박·4박 뒤 8분 · 하이햇은 발로 2·4박 · 킥은 4분을 여리게(feathering) ·
+   워킹 베이스 4분 — 출처는 genres/06-jazz.md §1. 스네어는 출처가 자리를 말하지
+   않아 비워 둔다. ⚠ 라이드 전용 음색이 없어 chat 을 sizzle 로 근사한다. */
+'Swing / Big Band':{bpm:124,swing:50,swingSub:'8n',cat:'F',gen:1,
+  kit:{kick:'jazz',snare:'brush',clap:'tight',chat:'sizzle',ohat:'foot',tom:'wood',
+       keys:'brassens',keys2:'sax',gtr:'jazzbox',gtr2:'clean',bass:'upright',chord:'sev'},
+  tune:{kick:-2,snare:0,tom:-2,hat:0},
+  lvl:{keys:0.58,bass:0.78,gtr:0.4},
+  bcfg:{eng:'sub',oct:24,semi:0,gate:340,glide:0,blend:40,drive:32,xover:120,tone:4000,
+        sub:56,exc:32,duck:18,root:9,scale:'Major'},
+  kick:'x---x---x---x---',snare:'----------------',clap:'----------------',
+  chat:'x---x-x-x---x-x-',ohat:'----x-------x---',tom:'----------------',
+  bass:'0---2---4---5---',
+  keys:'0-------3-------',gtr:'----------------'},
 'Jazz Fusion':{bpm:130,swing:0,
   kit:{kick:'tight',snare:'body',clap:'tight',chat:'noise',ohat:'noise',tom:'analog',
        keys:'sax',keys2:'epbark',gtr:'jazzbox',gtr2:'wah',bass:'fretless',chord:'thirteen'},

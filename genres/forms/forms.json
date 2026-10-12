@@ -1468,9 +1468,10 @@
     },
     "B:Downtempo · Ambient · Retro": {
       "forms": [
-        "grooveHold"
+        "popVerseChorus",
+        "popVerseChorusBridge"
       ],
-      "why": "섹션이 바뀌지 않는 것이 이 분기의 성질이다"
+      "why": "이 칸에 걸리는 프리셋은 계열 B 의 Synthwave 하나뿐이다. 예전 값 grooveHold(«섹션이 바뀌지 않는 것이 이 분기의 성질») 는 같은 분기 E 쪽 앰비언트·다운템포의 성질이었고, Synthwave 에는 출처가 반대로 말한다 — 대표곡 Blinding Lights 의 위키백과 문서가 «scale-laddering verses» 와 «tension-filled chorus», 그리고 pre-chorus 를 따로 적는다. 그래서 계열 B 기본형으로 되돌렸다(2026-09-30). grooveHold 에서는 코러스가 한 번도 오지 않아 keys2(패드)가 곡 내내 꺼져 있었다"
     },
     "D:Funk": {
       "forms": [

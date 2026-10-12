@@ -150,12 +150,12 @@ function voicesAt(i,t){
   const jit=()=>H()*(Math.random()*2-1)*0.006;
   /* ── 그루브(arrange.js) ──
      grooveOn 이 꺼져 있으면(기본값) 항상 0/1 을 돌려줘 지금과 똑같이 들린다.
-     스윙은 홀수 스텝에만 걸린다(Tone.Transport.swing 도 fbLoop() 도 같다 —
-     실측 비교는 arrange.js 의 주석 참고). 이미 t 에 공통으로 걸린 그 스윙량을
-     여기서 트랙별 배율(grooveNow.swing)로 다시 조정한다 — 트랙마다 다른
-     스윙을 걸려면 "공통으로 걸린 만큼"을 알아야 빼고 다시 얹을 수 있다. */
-  const swung = i%2===1;
-  const baseSwing = swung ? spb()*(1/6)*(knob('swing')/100) : 0;
+     스윙은 swingSub 단위의 뒷칸에 걸린다(Tone.Transport.swing 도 fbLoop() 도
+     같은 swingShift() 를 본다 — 실측 비교는 arrange.js 의 주석 참고). 이미 t 에
+     공통으로 걸린 그 스윙량을 여기서 트랙별 배율(grooveNow.swing)로 다시
+     조정한다 — 트랙마다 다른 스윙을 걸려면 "공통으로 걸린 만큼"을 알아야
+     빼고 다시 얹을 수 있다. */
+  const baseSwing = swingShift(i);
   const groove = id => {
     if(!grooveOn || !grooveNow) return 0;
     const off = (grooveNow.off && grooveNow.off[id]) || 0;
@@ -400,7 +400,7 @@ function shufflePattern(){
   if(L.kit.chord) chordType=L.kit.chord;
   applyPresetLvl(L);
   applyTune(L.tune); applyBassCfg(L.bcfg);
-  setKnob('swing',L.swing); setSwing(L.swing);
+  setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub);
   if(patBpm==='follow'){ setKnob('bpm',L.bpm); setBpm(L.bpm); }
   /* 샘플은 건드리지 않는다 — 비동기 로딩이 재생 중에 끼어들면 끊긴다 */
   syncAll();
@@ -674,11 +674,11 @@ function onTick(time){
   if(step===0) onLoopWrap();
   Tone.Draw.schedule(()=>drawStep(i,skipped), time);
 }
-/** 폴백 스케줄러 — 140ms 앞까지 미리 채움. 홀수 스텝을 스윙만큼 뒤로 민다 */
+/** 폴백 스케줄러 — 140ms 앞까지 미리 채움. 스윙 뒷칸을 swingShift() 만큼 뒤로 민다 */
 function fbLoop(){
   while(fbNext < ctx.currentTime+0.14){
     const six=spb()*0.25;
-    const shift=(fbStep%2===1) ? six*(knob('swing')/100)*0.66 : 0;
+    const shift=swingShift(fbStep);
     const skipped=voicesAt(fbStep, fbNext+shift);
     drawQ.push({i:fbStep, t:fbNext+shift, s:skipped});
     fbStep=(fbStep+1)%STEPS; fbNext+=six;

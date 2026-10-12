@@ -1179,6 +1179,8 @@ const MELODY_KIT_PRESET = {
      근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
   /* 워킹 베이스에 스윙 */
   'West Coast Jazz'         :['jazz_aaba','jazbal_aaba','jazz_aabb'],
+  /* 스윙·빅밴드 — 선율 재료가 형제와 다를 근거가 없어 비밥과 같게 둔다 */
+  'Swing / Big Band'        :['jazz_abab','jazz_aaba','jazz_aabb'],
   'Soul Jazz'               :['jazz_abab','jazz_aaba','jazz_aabb'],
   /* 프렛리스에 13화음 */
   'Jazz Fusion'             :['jazz_aabb','jazbal_abab','jazz_abab'],
@@ -1893,6 +1895,7 @@ const RIFF_KIT_PRESET = {
      근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
   /* 워킹 베이스에 스윙 */
   'West Coast Jazz'         :['jazz_gtr_swing','arp_swing'],
+  'Swing / Big Band'        :['jazz_gtr_swing','jazz_gtr_comp'],
   'Soul Jazz'               :['jazz_gtr_swing','jazz_gtr_comp'],
   /* 프렛리스에 13화음 */
   'Jazz Fusion'             :['jazz_gtr_comp','funk_groove'],
@@ -2560,6 +2563,7 @@ const BLINE_KIT_PRESET = {
      근거: genres/profiles/*.json · 수치는 재료 실측에서 나왔다 */
   /* 워킹 베이스에 스윙 */
   'West Coast Jazz'         :['bwal_abab','bwal_aaba'],
+  'Swing / Big Band'        :['bwal_abab','bwal_aaba'],
   'Soul Jazz'               :['bwal_abab','bwal_aaba'],
   /* 프렛리스에 13화음 */
   'Jazz Fusion'             :['bwal_aabb','bfun_abab'],
