@@ -158,6 +158,21 @@ function boot(){
     if(t.id==='bass'){
       const dc=ctx.createBiquadFilter(); dc.type='highpass'; dc.frequency.value=16; dc.Q.value=0.5;
       chan.bass.connect(dc); link(dc,meterBass); dc.connect(panner.bass);
+    }else if(t.id==='gtr'){
+      /* ── 더블 트래킹(ADT) ──
+         락의 리듬 기타는 같은 파트를 두 번 녹음해 좌우 끝에 둔다. 두 테이크는 타이밍과
+         음정이 조금씩 어긋나서 넓게 들린다. 사본을 11ms 늦추고 0.5Hz 로 ±1.5ms 흔들어
+         그 어긋남을 흉내 낸다 — 1966년 애비 로드의 ADT 와 같은 방식이다.
+         gtrDbl=0 이면 사본 게인이 0, 원음 게인 1 이라 예전과 같다. */
+      dblDry = ctx.createGain();
+      chan.gtr.connect(dblDry).connect(panner.gtr);
+      const dl = ctx.createDelay(0.05); dl.delayTime.value = 0.011;
+      const lfo = ctx.createOscillator(); lfo.frequency.value = 0.5;
+      const lg = ctx.createGain(); lg.gain.value = 0.0015;
+      lfo.connect(lg).connect(dl.delayTime); lfo.start();
+      dblWet = ctx.createGain(); dblWet.gain.value = 0;
+      dblPan = ctx.createStereoPanner ? ctx.createStereoPanner() : ctx.createGain();
+      chan.gtr.connect(dl).connect(dblWet).connect(dblPan).connect(mixBus);
     }else{
       chan[t.id].connect(panner[t.id]);
     }
@@ -252,21 +267,26 @@ function boot(){
     bqf('lowpass',lpF,0.707),  bqf('lowpass',lpF,0.707), gnn(mk)];
 
   ampIn={};
-  ampIn.body_steel = wire([bqf('highpass',75,0.7),
+  /* 기타 앰프·몸통은 «출구를 받는 함수» 로 적는다(GAMP). 1번 기타는 아래에서
+     전부 chan.gtr 로 한 번에 만들고, 2번 기타는 쓰는 엔진만 chan.gtr2 로 따로 만든다
+     (gtr2Amp, voice-gtr.js). 예전에는 2번 기타가 앰프를 아예 안 거쳐서
+     gtr2:'hi' 가 왜곡도 캐비닛도 없는 생 현 소리였다 — docs/음색/02 §6. */
+  const GAMP={};
+  GAMP.body_steel = d => wire([bqf('highpass',75,0.7),
     bqf('peaking',100,3.5,5.0), bqf('peaking',205,2.5,3.5),
     bqf('peaking',400,2.0,2.0), bqf('peaking',2600,1.0,3.0),
-    bqf('lowpass',12000,0.707), chan.gtr]);
+    bqf('lowpass',12000,0.707), d]);
 
-  ampIn.body_nyl = wire([bqf('highpass',80,0.7),
+  GAMP.body_nyl = d => wire([bqf('highpass',80,0.7),
     bqf('peaking',115,3.0,4.5), bqf('peaking',210,2.2,3.0),
     bqf('peaking',430,1.8,1.5), bqf('lowshelf',300,0.7,1.5),
-    bqf('lowpass',5500,0.707), chan.gtr]);
+    bqf('lowpass',5500,0.707), d]);
 
   /* 밴조는 가죽 헤드라 저역이 통째로 없다. 200Hz 하이패스로 잘라내고
      헤드 공진(370Hz)과 브리지 대역(3kHz)을 세워야 그 소리가 난다. */
-  ampIn.body_banjo = wire([bqf('highpass',160,0.7), bqf('highpass',160,0.7),
+  GAMP.body_banjo = d => wire([bqf('highpass',160,0.7), bqf('highpass',160,0.7),
     bqf('peaking',370,2.6,4.5), bqf('peaking',1200,1.4,2.0),
-    bqf('peaking',3000,1.2,5.0), bqf('lowpass',9000,0.707), chan.gtr]);
+    bqf('peaking',3000,1.2,5.0), bqf('lowpass',9000,0.707), d]);
 
   /* ── 밴조 몸통 — 병렬 모달 뱅크 (docs/mutable-차용.md ★2) ──
      위 body_banjo(직렬 peaking)는 지우지 않고 남겨 둔다 — 대조 측정에 필요하고,
@@ -285,15 +305,17 @@ function boot(){
     [1200, 0.09, 0.45],   // 브리지 대역
     [3000, 0.06, 0.55],   // 톤링 쇳소리
   ];
+  GAMP.body_banjo_modal = d => {
   const banjoModalPre = wire([bqf('highpass',160,0.7), bqf('highpass',160,0.7)]);
   const banjoBank = modalBank(BANJO_MODAL_MODES,
-    wire([bqf('lowpass',9000,0.707), chan.gtr]), {dry:0.35, trim:-10.4});
+    wire([bqf('lowpass',9000,0.707), d]), {dry:0.35, trim:-10.4});
   /* 트림 −10.4dB : tools/measure-body.html 로 실측해 맞춘 값(RMS차 +1.4dB → −10.4
      로 내리니 목표 ±1.0dB 안에 들어옴). 고Q 병렬 뱅크가 레벨을 올리는 것을
      이렇게 실측으로 보정한다 — 과거 −7.9 LUFS 사고를 반복하지 않기 위함. */
   banjoModalPre.connect(banjoBank);
   banjoModalPre._modalBank = banjoBank._modalBank;   // 계측 하네스가 모드별 게인을 찾을 수 있게 (ampIn.*_modal 은 프리필터 노드라 원래 자리엔 없다)
-  ampIn.body_banjo_modal = banjoModalPre;
+  return banjoModalPre;
+  };
 
   /* 퍼즈 페달 → 앰프.
      하이게인(amp_hi)과 다른 점을 셋으로 만듭니다.
@@ -320,14 +342,13 @@ function boot(){
      머문다(광대역 T60 추정 9~11s, 설계 5.04s). 압축비를 더 낮추려면 드라이브를
      더 내려야 하는데, 그러면 클리핑이 얕아져 퍼즈의 정체성(홀수 배음·낮은
      크레스트)이 옅어진다 — 정직하게 "개선됐지만 미해결" 로 남긴다. */
-  gtrDrv.fz = gnn(4.0);
   /* 하이패스 160Hz 를 두 번 걸면 A2(110Hz) 기음이 −19.3dB 로 사라진다 —
      amp_hi 가 150→100 으로 이미 고쳤던 것과 같은 버그다.(측정 확인)
      퍼즈는 "저역이 얇아진다" 가 특징이지 "기음이 없다" 가 아니다. */
-  ampIn.amp_fuzz = wire([
+  GAMP.amp_fuzz = d => { const drv=gnn(4.0); if(d===chan.gtr) gtrDrv.fz=drv; return wire([
     bqf('highpass',100,0.7), bqf('highpass',100,0.7),
     bqf('peaking',1600,1.2,3.0),          // 입력 프레즌스 — 클리핑에 밝기를 준다
-    gtrDrv.fz, shp(TUBE.fz1),
+    drv, shp(TUBE.fz1),
     bqf('lowpass',7000,0.707),
     gnn(3.2), shp(TUBE.fz2),
     /* ⚠ 중역 스쿱은 왜곡 **뒤**에 와야 합니다. 앞에 두면 클리핑이 중역을
@@ -343,19 +364,19 @@ function boot(){
        (서스테인 폭주는 이 단 때문이 아닙니다 — 빼도 18.8초 그대로였습니다) */
     gnn(1.6), shp(TUBE.fz3),
     bqf('highpass',110,0.7), gnn(0.22),   // 드라이브를 낮춘 만큼(9.0→4.0) 출력 트림을 보충
-    ...cab(6200,90,-6.0,4.5,1.6), chan.gtr]);
+    ...cab(6200,90,-6.0,4.5,1.6), d]); };
 
   /* 사즈는 작고 얕은 나무통 — 저역이 거의 없고 중고역이 쨍합니다 */
-  ampIn.body_saz = wire([bqf('highpass',180,0.7),
+  GAMP.body_saz = d => wire([bqf('highpass',180,0.7),
     bqf('peaking',320,2.4,4.0), bqf('peaking',900,1.6,2.5),
-    bqf('peaking',2800,1.2,4.5), bqf('lowpass',9000,0.707), chan.gtr]);
+    bqf('peaking',2800,1.2,4.5), bqf('lowpass',9000,0.707), d]);
 
   /* 시타르 몸통은 박(tumba) — 통이 크고 비어 저역 공진이 낮게 하나,
      자와리 버즈 대역(2~4kHz)이 크게 남는다. */
-  ampIn.body_sitar = wire([bqf('highpass',110,0.7),
+  GAMP.body_sitar = d => wire([bqf('highpass',110,0.7),
     bqf('peaking',180,2.2,4.0), bqf('peaking',540,1.6,2.0),
     bqf('peaking',2600,1.0,5.5), bqf('peaking',4200,1.4,3.0),
-    bqf('lowpass',8000,0.707), chan.gtr]);
+    bqf('lowpass',8000,0.707), d]);
 
   /* ── 시타르 몸통 — 병렬 모달 뱅크 ──
      박(tumba)은 밴조 헤드보다 훨씬 크고 깊은 통이라 기본 공진이 오래 간다
@@ -372,13 +393,15 @@ function boot(){
     [2600, 0.08, 0.55],   // 자와리 버즈 대역과 겹치는 브라이트니스
     [4200, 0.05, 0.35],
   ];
+  GAMP.body_sitar_modal = d => {
   const sitarModalPre = wire([bqf('highpass',110,0.7)]);
   const sitarBank = modalBank(SITAR_MODAL_MODES,
-    wire([bqf('lowpass',8000,0.707), chan.gtr]), {dry:0.30, trim:-6.0});
+    wire([bqf('lowpass',8000,0.707), d]), {dry:0.30, trim:-6.0});
   /* 트림 −6.0dB : 실측으로 맞춘 값(RMS차 −2.1dB → −6.0 로 올리니 목표 안). */
   sitarModalPre.connect(sitarBank);
   sitarModalPre._modalBank = sitarBank._modalBank;
-  ampIn.body_sitar_modal = sitarModalPre;
+  return sitarModalPre;
+  };
 
   /* ── 베이스 앰프 · 업라이트 몸통 ──
      현 베이스 엔진은 합성 베이스와 달리 서브 오실레이터가 없다.
@@ -413,35 +436,35 @@ function boot(){
     bqf('peaking',400,1.4,-2.0), bqf('peaking',1100,1.0,1.5),
     bqf('lowpass',2600,0.707), chan.bass]);
 
-  ampIn.amp_cln = wire([bqf('peaking',5800,2.2,5.0), bqf('lowpass',8500,0.707),
+  GAMP.amp_cln = d => wire([bqf('peaking',5800,2.2,5.0), bqf('lowpass',8500,0.707),
     bqf('highpass',90,0.7), bqf('peaking',250,1.2,-2.0),
     gnn(1.15), shp(TUBE.cln), gnn(0.92),
     bqf('highpass',90,0.8), bqf('peaking',160,1.2,2.0),
-    bqf('peaking',3000,1.4,2.5), bqf('lowpass',6500,0.707), chan.gtr]);
+    bqf('peaking',3000,1.4,2.5), bqf('lowpass',6500,0.707), d]);
 
-  gtrDrv.cru = gnn(3.5);
-  ampIn.amp_cru = wire([bqf('peaking',3000,1.8,4.0), bqf('lowpass',6000,0.707),
+  GAMP.amp_cru = d => { const drv=gnn(3.5); if(d===chan.gtr) gtrDrv.cru=drv; return wire([bqf('peaking',3000,1.8,4.0), bqf('lowpass',6000,0.707),
     bqf('highpass',120,0.7), bqf('peaking',700,0.9,-3.0), bqf('peaking',2000,0.8,3.5),
-    gtrDrv.cru, shp(TUBE.cru), bqf('highpass',70,0.7), gnn(0.42),
-    ...cab(5500,85,-3.5,3.5,1.6), chan.gtr]);
+    drv, shp(TUBE.cru), bqf('highpass',70,0.7), gnn(0.42),
+    ...cab(5500,85,-3.5,3.5,1.6), d]); };
 
   /* 하이게인은 2단 캐스케이드 — 1단 비대칭(짝수배음), 2단 대칭(홀수배음).
      단간 필터가 없으면 하이게인이 아니라 잡음이 된다. */
-  gtrDrv.hi = gnn(4.0);
   /* 드라이브 앞 하이패스는 저역을 정리해 뭉개짐을 막는 게 목적인데
      150Hz 를 두 번 걸면 A2(110Hz)·E2(82Hz) 의 기음 자체가 사라진다.
      기음이 최강 배음보다 24dB 낮게 측정됐다 → 100Hz 로 낮춘다. */
-  ampIn.amp_hi = wire([
+  GAMP.amp_hi = d => { const drv=gnn(4.0); if(d===chan.gtr) gtrDrv.hi=drv; return wire([
     bqf('highpass',100,0.7), bqf('highpass',100,0.7),
     bqf('peaking',720,0.8,6.0), bqf('peaking',240,1.0,-4.0),
-    gtrDrv.hi, shp(TUBE.hi1),
+    drv, shp(TUBE.hi1),
     bqf('lowpass',8000,0.707), bqf('highpass',110,0.7),
     gnn(6.0), shp(TUBE.hi2),
     /* 출력 트림 — 예전엔 하이게인을 쓰는 프리셋이 없어 드러나지 않았다.
        TONE_KIT 이 Metal 계열에 hi 를 배정하자 마스터가 −7.9 LUFS 로 튀고
        트루피크가 +0.2 dBFS 로 클리핑했다.(측정 확인) 6dB 내린다. */
     bqf('lowpass',6000,0.707), bqf('highpass',70,0.7), gnn(0.22),
-    ...cab(5000,80,-5.0,4.5,1.78), chan.gtr]);
+    ...cab(5000,80,-5.0,4.5,1.78), d]); };
+  for(const k in GAMP) ampIn[k]=GAMP[k](chan.gtr);
+  gtrAmpDef=GAMP; ampIn2={};
 
   /* ── 기타 버스 이펙트 (Tone.js 를 그대로 씀) ──
      와·페이저·코러스는 장르 정체성인데 우리에게 통째로 없었습니다.

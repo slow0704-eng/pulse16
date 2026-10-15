@@ -921,7 +921,7 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Punk | `pick` | 24 | 60 | 0 | 56 | 52 | 120 | 4400 | 46 | 26 | 16 | Minor Pentatonic |
-| ·Pop Punk | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
+| ·Pop Punk | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 20 | 32 | 28 | Major |
 | ·Hardcore Punk | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Punk Rock | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Crust | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
@@ -955,7 +955,7 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 | Death Metal | `pickmute` | 24 | 50 | 0 | 64 | 70 | 100 | 4000 | 52 | 34 | 18 | Natural Minor |
 | Nu Metal | `pick` | 24 | 180 | 0 | 54 | 62 | 85 | 3000 | 66 | 38 | 30 | Minor Pentatonic |
 | Doom | `finger` | 24 | 600 | 0 | 48 | 58 | 80 | 2400 | 72 | 36 | 22 | Natural Minor |
-| ·Heavy Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Heavy Metal | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 20 | 32 | 28 | Natural Minor |
 | ·Thrash Metal | `pickmute` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Black Metal | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
 | ·Stoner Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Minor Pentatonic |
@@ -1032,9 +1032,9 @@ overdubbed»), Ride «Vapour Trail» 은 **이펙트 없는 12현 두 대**입�
 
 | 장르 | 엔진 | Oct | Length | Glide | Blend | Drive | X-Over | Tone | Sub | Exc | Duck | Scale |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| ·Grunge | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Grunge | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 20 | 32 | 28 | Natural Minor |
 | ·Indie Rock | `finger` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 22 | Major |
-| ·Shoegaze | `finger` | 24 | 320 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |
+| ·Shoegaze | `finger` | 24 | 320 | 0 | 54 | 52 | 120 | 4000 | 20 | 32 | 28 | Natural Minor |
 | ·Dream Pop | `finger` | 24 | 300 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Britpop | `pick` | 24 | 80 | 0 | 54 | 52 | 120 | 4000 | 56 | 32 | 28 | Major |
 | ·Noise Rock | `pick` | 24 | 80 | 0 | 54 | 62 | 120 | 4000 | 56 | 32 | 28 | Natural Minor |

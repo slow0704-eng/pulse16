@@ -9,7 +9,17 @@ function applyWidth(){
   if(!ctx) return;
   const w = knob('width')/100;
   ALLCH().forEach(t => { if(panner[t.id] && panner[t.id].pan) panner[t.id].pan.value=(t.pan||0)*w*1.6; });
+  /* 더블 트래킹 — 두 테이크를 좌우로 벌린다. 폭 노브를 따르되 끝(±0.85)을 넘지 않는다.
+     둘이 거의 같은 신호라 그대로 더하면 기타가 커지므로 각각 −3dB(√½) 씩 깎아 파워를 지킨다. */
+  if(dblWet){
+    const d = gtrDbl, sp = 0.85*Math.min(1, w*1.6)*d;
+    const g = 1/Math.sqrt(1+d*d);
+    dblDry.gain.value = g; dblWet.gain.value = d*g;
+    if(d>0 && panner.gtr.pan) panner.gtr.pan.value = -sp;   // 0 이면 위 루프의 기본 자리 그대로
+    if(dblPan.pan) dblPan.pan.value = sp;
+  }
 }
+function setGtrDbl(v){ gtrDbl = Math.max(0, Math.min(1, +v||0)); applyWidth(); }
 function applyRev(){
   if(!ctx) return;
   const r = knob('rev')/100;

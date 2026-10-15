@@ -425,7 +425,7 @@ LIB_NAMES.forEach(name => {
     applyPresetLvl(L);
     applyTune(L.tune); applyBassCfg(L.bcfg);
     setKnob('bpm',  L.bpm);   setBpm(L.bpm);
-    setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub);
+    setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub); setGtrDbl(L.gdbl);
 
     TRACKS.forEach(t => { if(!L.smp || !L.smp[t.id]) smpSel[t.id]='synth'; });
     syncSmpSelects();
@@ -534,9 +534,8 @@ function syncStrips(){
     장르마다 주인공이 다르다 — 메탈은 기타, 트랩은 808, 라틴은 타악기.
     하위분기가 lvl 을 안 정했으면 지금 볼륨을 그대로 둔다. */
 function applyPresetLvl(L){
-  if(!L.lvl) return;
-  for(const [id,v] of Object.entries(L.lvl)){
-    if(lvl[id]==null) continue;
+  for(const id of Object.keys(LVL_INIT)){
+    const v = (L.lvl && L.lvl[id]!=null) ? L.lvl[id] : LVL_INIT[id];
     lvl[id]=v;
     if(chan[id]) chan[id].gain.value=v;
   }

@@ -400,7 +400,7 @@ function shufflePattern(){
   if(L.kit.chord) chordType=L.kit.chord;
   applyPresetLvl(L);
   applyTune(L.tune); applyBassCfg(L.bcfg);
-  setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub);
+  setKnob('swing',L.swing); setSwing(L.swing); setSwingSub(L.swingSub); setGtrDbl(L.gdbl);
   if(patBpm==='follow'){ setKnob('bpm',L.bpm); setBpm(L.bpm); }
   /* 샘플은 건드리지 않는다 — 비동기 로딩이 재생 중에 끼어들면 끊긴다 */
   syncAll();

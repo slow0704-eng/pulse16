@@ -203,6 +203,14 @@ genres/profiles/       장르 프로파일 — 선율·리프·베이스 배정�
   *.json               근거 자료. 배치(하위분기) 하나 = 파일 하나.
                        ⚠ 런타임에 읽지 않습니다. 앱이 읽는 것은 melody.js 이고
                          이 JSON 은 근거이며, 둘이 어긋나면 CI 가 잡습니다
+tools/ref/             실제 음원 레퍼런스와 우리 렌더를 같은 자로 잰다(CI 밖, 손으로 돌림).
+                       받은 음원·스템은 저장소에 두지 않는다. 절차는
+                       docs/음색/02-락-레퍼런스-대조.md §1
+  render-solo.mjs      프리셋을 트랙별 솔로 + 전체로 녹음
+  feat.py              믹스 하나 — 라우드니스·대역 균형·스테레오 폭·템포
+  layers.py            층 구조 — Demucs 스템(레퍼런스)과 솔로(우리)를
+                       drums·bass·other 로 접어 대역·레벨·폭을 비교
+  cmp_layers.py        장르별 3곡 중앙값 vs 우리, 표로
 mcp/pulse-audit/       계측 MCP 서버 (harness · render_wav · audio_measure · a11y)
                        + tools/ci/ 의 브라우저 검사가 쓰는 node_modules 의 집
 .github/workflows/

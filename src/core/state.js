@@ -27,6 +27,10 @@ const mute   = Object.fromEntries([...TRACK_IDS.map(id => [id,false]), ...TONAL.
 const lvl    = Object.fromEntries([...TRACKS.map(t => [t.id,t.gain]),
                                    ['bass',0.72],['keys',0.58],['gtr',0.50],
                                    ['keys2',0.44],['gtr2',0.40]]);
+/* 프리셋이 적지 않은 칸은 이 값으로 되돌린다(build.js applyPresetLvl).
+   예전에는 적힌 칸만 바꿔서 앞 프리셋의 레벨이 다음 프리셋으로 샜다 —
+   Heavy Metal(gtr 0.62) 다음에 gtr 칸이 없는 프리셋을 부르면 0.62 가 남았다. */
+const LVL_INIT = {...lvl};
 const eng    = {kick:'deep',snare:'crack',clap:'tight',chat:'noise',ohat:'noise',tom:'wood',
                 perc:'shaker', bass:'sub', keys:'pad', gtr:'clean',
                 keys2:'strings', gtr2:'clean'};
@@ -47,6 +51,12 @@ let chordType = 'triad';
    노브의 뜻은 둘 다 같다: 50 이면 2:1 셋잇단(params.js swingShift). */
 let swingSub = '16n';
 
+/* 리듬 기타 더블 트래킹(ADT) 양 — 0 이면 꺼짐(예전과 같다), 1 이면 원음 왼쪽·사본 오른쪽.
+   프리셋이 gdbl 로 정한다. 2026-10-13 락 레퍼런스 12곡을 Demucs 로 갈라 재 보니
+   기타 스템의 사이드/미드가 장르별 중앙값 −4.8~0.0 dB(좌우 끝까지 벌린 두 테이크)였고 우리는 −16~−18 dB 였다
+   (docs/음색/02-락-레퍼런스-대조.md). 연결은 graph.js «더블 트래킹», 값은 params.js applyWidth. */
+let gtrDbl = 0;
+
 /* ── 오디오 노드 (boot 에서 생성) ── */
 let ctx=null, mixBus=null, sumBus=null, busTrim=null, masterGain=null, satIn=null, satOut=null,
     noiseBus=null, pinkBus=null, metalBus=null, metalBP=null, CURVES=null,
@@ -54,7 +64,8 @@ let ctx=null, mixBus=null, sumBus=null, busTrim=null, masterGain=null, satIn=nul
     tpClip=null,                      // 최종단 트루피크 실링
     convolver=null, revReturn=null, duckNode=null, lowGain=null, excGain=null,
     glueComp=null, limComp=null, meterOut=null, meterBass=null, widener=null,
-    sendMono=null;
+    sendMono=null,
+    dblDry=null, dblWet=null, dblPan=null;   // 리듬 기타 더블 트래킹 (graph.js)
 const chan={}, panner={}, send={}, IR={};
 
 /* ── 노드 재활용 풀 ── */
@@ -75,6 +86,7 @@ let openHat=null, bassRef=null, smpOpen=false;
 /* ── 건반·기타 ── */
 let keysOct=48, gtrOct=36;                 // 기준 옥타브 (MIDI)
 let TUBE=null, ampIn=null, keysWet=null;
+let ampIn2=null, gtrAmpDef=null;   // 2번 기타 앰프 — 쓰는 엔진만 만든다(gtr2Amp)
 const gtrDrv={};
 
 /** 최종단 트루피크 실링 커브.

@@ -125,6 +125,14 @@ function guitarVoice(t,deg,dur,e,vel){
    guitarVoice 는 gtrRef 하나로 모노를 지키므로, 2번 트랙이 같은 함수를 쓰면
    서로의 음을 죽입니다. 참조와 채널만 따로 두고 나머지는 같습니다. */
 let gtrRef2=null;
+/* 2번 기타의 앰프·몸통 — 처음 쓰는 엔진일 때 chan.gtr2 로 끝나는 체인을 한 벌 만든다.
+   1번 기타 것을 같이 쓰면 출구가 chan.gtr 라 팬·레벨·뮤트가 1번을 따라간다.
+   미리 다 만들지 않는 것은 앰프마다 25단 안팎이라 쓰지 않는 체인까지 상주시키지
+   않으려는 것이다. 음마다 앰프에 connect 하는 비용이 붙는다(docs/음색/02 §6). */
+function gtr2Amp(key){
+  if(!key || !gtrAmpDef || !gtrAmpDef[key]) return null;
+  return ampIn2[key] || (ampIn2[key]=gtrAmpDef[key](chan.gtr2));
+}
 function guitarVoice2(t,deg,dur,e,vel){        // vel — 선택 인자. guitarVoice 와 같은 계약
   const S=GTR[e]||GTR.clean;
   const midi=gtrOct+rootNote+knob('gsemi')+SCALES[scaleName][deg]+(S.shift||0);
@@ -143,7 +151,7 @@ function guitarVoice2(t,deg,dur,e,vel){        // vel — 선택 인자. guitarV
   const v=0.8*rnd(0.10*H())*(vel??1);
 
   const g=acqGain(); retire(g,'gain',end+0.05);
-  g.connect(chan.gtr2);              // 앰프를 안 거치고 2번 채널로 — 팬이 반대쪽
+  g.connect(gtr2Amp(S.amp)||chan.gtr2);   // 1번과 같은 앰프를 거치되 출구는 2번 채널
 
   const s2=ctx.createBufferSource();
   s2.buffer=buf;

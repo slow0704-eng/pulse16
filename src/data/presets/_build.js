@@ -56,7 +56,7 @@ for(const [n,p] of Object.entries(RAW)){
   const blankKeys = off.includes('keys'), blankGtr = off.includes('gtr');
 
   LIB[n] = {
-    bpm:p.bpm, swing:p.swing, swingSub:p.swingSub==='8n' ? '8n' : '16n', kit, bcfg, tune:p.tune, tone:!!p.tone,
+    bpm:p.bpm, swing:p.swing, swingSub:p.swingSub==='8n' ? '8n' : '16n', gdbl:+p.gdbl||0, kit, bcfg, tune:p.tune, tone:!!p.tone,
     cat:p.cat||null, gen:!!p.gen,
     prob:p.prob||null, smp:p.smp||null, bass:bpat(p.bass),
     keys: blankKeys ? new Array(STEPS).fill(0) : kpat(p.keys, kit.chord, bcfg.scale),
